@@ -10,7 +10,7 @@ function ProjectCard({ project }) {
           loading="lazy"
           className="w-full h-full object-cover object-top rounded-xl transition duration-300 ease-in-out"
           decoding="async"
-          fetchpriority="high"
+          
         />
       </div>
 

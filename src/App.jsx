@@ -1,15 +1,22 @@
 import './index.css'
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/home';
+import About from './pages/about';
+import Contact from './pages/contact';
+import ProjectDetail from './pages/projectDetails';
+import Layout from './components/layout';
 
 function App() {
   
   return (
-    <>
-      <div>
-         <h1 class="text-3xl font-bold underline">
-          Hello world!
-        </h1>
-      </div>
-    </>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/project/:id' element={<ProjectDetail />} />
+      </Route>
+    </Routes>
   )
 }
 

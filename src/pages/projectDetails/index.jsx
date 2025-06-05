@@ -25,7 +25,7 @@ function ProjectDetail() {
       <h2 className="text-3xl font-bold">{project.title}</h2>
       <button
         onClick={handleCopyLink}
-        className="bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-md text-sm"
+        className="bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-md text-sm cursor-pointer"
       >
         {copied ? "Link Copied!" : "Copy Link"}
       </button>
@@ -99,7 +99,7 @@ function ProjectDetail() {
         </a>
         <button
           onClick={() => navigate("/")}
-          className="ml-auto bg-gray-600 hover:bg-gray-700 px-4 py-2 rounded-md text-white"
+          className="ml-auto bg-gray-600 hover:bg-gray-700 px-4 py-2 rounded-md text-white cursor-pointer"
         >
           ← Back to Home
         </button>

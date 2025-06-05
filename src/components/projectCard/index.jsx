@@ -27,7 +27,7 @@ function ProjectCard({ project }) {
 
       <div className="flex gap-2">
         <Link to={`/project/${project.id}`}>
-          <button className="px-3 py-1 text-sm bg-emerald-500 hover:bg-emerald-600 rounded-md text-white">
+          <button className="px-5 py-2 text-ld  bg-emerald-500 hover:bg-emerald-600 rounded-md text-white cursor-pointer transition duration-200">
             View Project
           </button>
         </Link>

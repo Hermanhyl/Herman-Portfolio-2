@@ -1,22 +1,40 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { projects } from "../../data/projects/projects";
-
+import { useState } from "react";
 
 function ProjectDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const [copied, setCopied] = useState(false);
   const project = projects.find((p) => p.id === id);
+
+  const handleCopyLink = () => {
+    navigator.clipboard.writeText(window.location.href);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   if (!project) {
     return <div className="p-8 text-center text-red-500">Project not found.</div>;
   }
 
   return (
+    
     <div className="max-w-3xl mx-auto px-4 py-20">
-      <h2 className="text-3xl font-bold mb-4">{project.title}</h2>
+      <div className="flex justify-between items-center mb-4">
+      <h2 className="text-3xl font-bold">{project.title}</h2>
+      <button
+        onClick={handleCopyLink}
+        className="bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-md text-sm"
+      >
+        {copied ? "Link Copied!" : "Copy Link"}
+      </button>
+    </div>
+      
+      
       {project.authers && (
         <p className="text-gray-400 text-sm pb-5">
-          <span className="font-semibold text-white">Authors:</span> {project.authers}
+          <span className="font-semibold text-white">Code Authors:</span> {project.authers}
         </p>
       )}
       <p className="text-gray-300 text-lg mb-6">{project.description}</p>

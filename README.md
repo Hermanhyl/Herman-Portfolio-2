@@ -1,12 +1,41 @@
-# React + Vite
+# Hedeman Portfolio 2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website built with **React** and **Tailwind CSS**. This project showcases selected school projects and serves as an introduction to me as a developer.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Homepage** with project cards displaying three prior school projects
+- **About Page** introducing who I am and my background
+- **Contact Page** with a simple contact button that opens up the email for you and direct to my email
+- Each **Project Card** links to an individual article with information about that project
 
-## Expanding the ESLint configuration
+## 🛠 Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** (JavaScript only, no TypeScript)
+- **Tailwind CSS** for styling and layout
+- **Vite**
+
+This project is live and hosted via **Netlify**.  
+🔗 [View the Live Site](https://portfolio-herman-hylland.netlify.app/) 
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher recommended)
+- npm 
+
+### Installation
+
+1. Clone the repository:
+2. cd hedeman-portfolio-2
+3. npm install
+4. npm run dev
+
+## 👤 Author
+- Herman Hylland
+- LinkedIn: https://www.linkedin.com/in/herman-hylland/
+- Email: hermanhyl@hotmail.com
+
+
+

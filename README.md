@@ -2,6 +2,9 @@
 
 A personal portfolio website built with **React** and **Tailwind CSS**. This project showcases selected school projects and serves as an introduction to me as a developer.
 
+![image](https://github.com/user-attachments/assets/32051128-875f-4171-bb7a-1f672e95337c)
+
+
 ## ✨ Features
 
 - **Homepage** with project cards displaying three prior school projects

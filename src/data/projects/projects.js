@@ -1,13 +1,14 @@
 export const projects = [
     {
     id: "project1",
-    title: "Holidaze - Project Exam",
+    title: "Holidaze - Project Exam (A)",
     teaser: "Holidaze is a cozy booking app for slow-living getaways browse, book, and unwind in handpicked cabins and retreats.",
     description: "Holidaze is a collaborative frontend project built on the Noroff API, developed by Veronika Aas, Herman Hylland, and Madelen Sletteberg. \n\nIt offers a cozy, responsive booking experience for handpicked getaways focused on slow living from forest cabins to mountain retreats. Users can browse, book, and manage venues with ease through a warm, user-friendly interface.",
     images: ["/holidaze.png"],
     github: "https://github.com/maddipaddi/Fireside-Holidaze",
     live: "https://fireside-holidaze.netlify.app/",
-    technologies: ["Vanilla JavaScript", "Tailwind CSS", "HTML"],
+    figma: "https://www.figma.com/design/thqoG8jMTmJWJ0xvjoWJFX/PE2-Fireside-Holidaze?node-id=97-2&p=f&t=WNVw9oV9YS4fXdlk-0",
+    technologies: ["React", "Vite", "Prettier", "Tailwind CSS", "HTML"],
     authers:"Madelen Sletteberg, Herman Hylland, Veronika Aas",
     article: [
       {
@@ -19,12 +20,13 @@ export const projects = [
   
   {
     id: "project2",
-    title: "Auction - Semester Project 2 ",
+    title: "Auction - Semester Project 2 (A)",
     teaser: "Own The Bid is a fast-paced auction app where users can list, bid, and browse items with ease, no account needed to explore.",
     description: "Own The Bid is a web-based auction platform where users can register with a valid stud.noroff.no email to buy and sell items through timed listings. \n\n Registered users can create listings with images, descriptions, and deadlines, place bids on others' items, manage their avatar, and view their available credits. The platform also allows unregistered users to browse and search for listings.",
     images: ["/Action-semester-project.png"],
     github: "https://github.com/Hermanhyl/Semester-Project-2-Auction",
     live: "https://own-the-bid-main.netlify.app/",
+    figma: "https://www.figma.com/design/8AhvLrYMu6VoQhHefNQpUz/Semester-Project-2-auction?t=RmAPyAmZq0TLngla-0",
     technologies: ["Vanilla JavaScript", "Tailwind CSS", "HTML"],
     authers:"Herman Hylland",
     article: [
@@ -56,7 +58,8 @@ export const projects = [
     images: ["/ClicketyCart.png"],
     github: "https://github.com/Hermanhyl/Semester-Project-2-Auction",
     live: "https://own-the-bid-main.netlify.app/",
-    technologies: ["Vanilla JavaScript", "Tailwind CSS", "HTML"],
+    figma: "https://www.figma.com/design/R8wGWrRexwOTDaQnpFKNmn/Ecom-store?node-id=0-1&p=f&t=UlgGs9y5P55UgOu2-0",
+    technologies: ["React", "Tailwind CSS", "HTML"],
     authers:"Madelen Sletteberg, Herman Hylland",
     article: [
       {

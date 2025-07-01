@@ -30,7 +30,7 @@ function Header() {
       <div className="w-full px-6 md:px-16 py-4 flex justify-between items-center mx-auto relative">
         <Link to="/" className="text-2xl font-bold tracking-widest text-white">
           <span className="text-cyan-400">/</span>
-          <span className="hover:text-cyan-400 transition">PORTFOLIO</span>
+          <span className="hover:text-cyan-400 transition">HermanHylland</span>
         </Link>
 
         {/* Desktop Menu */}

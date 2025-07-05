@@ -1,6 +1,6 @@
 # Hedeman Portfolio 2
 
-A personal portfolio website built with **React** and **Tailwind CSS**. This project showcases selected school projects and serves as an introduction to me as a developer.
+A personal portfolio website built with **React** and **Tailwind CSS**. This project showcases selected school projects and serves as an introduction to me as a developer and UI/UX designer.
 
 ![image](https://github.com/user-attachments/assets/32051128-875f-4171-bb7a-1f672e95337c)
 

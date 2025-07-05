@@ -51,7 +51,7 @@ function ProjectDetail() {
       </div>
 
       {project.article && project.article.length > 0 ? (
-        <article className="space-y-10 mt-12">
+        <article className="space-y-10 mt-6">
           {project.article.map((section, index) => (
             <section key={index}>
               <h3 className="text-xl text-white font-bold mb-2">{section.heading}</h3>
@@ -96,6 +96,14 @@ function ProjectDetail() {
           className="bg-gray-700 hover:bg-gray-800 px-4 py-2 rounded-md text-white"
         >
           GitHub Repo
+        </a>
+        <a
+          href={project.figma}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-gray-700 hover:bg-gray-800 px-4 py-2 rounded-md text-white"
+        >
+          Figma File
         </a>
         <button
           onClick={() => navigate("/")}

@@ -1,7 +1,7 @@
 function Contact() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 py-20 text-white bg-gradient-to-b from-black via-gray-900 to-black">
-      <div className="max-w-xl w-full text-center backdrop-blur-md bg-white/10 p-8 rounded-2xl border border-white/20 shadow-lg">
+      <div className="animated-border max-w-xl w-full text-center backdrop-blur-md bg-white/10 p-8 rounded-2xl border border-white/20 shadow-lg relative z-10">
         <h1 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text">
           Contact Me
         </h1>

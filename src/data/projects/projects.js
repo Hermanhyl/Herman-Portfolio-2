@@ -12,8 +12,28 @@ export const projects = [
     authers:"Madelen Sletteberg, Herman Hylland, Veronika Aas",
     article: [
       {
-        heading: "Under Review",
-        content: "Note: This project is currently under review by our instructor. Once we receive feedback, we will update this section with any suggested improvements and reflect on how we’ve applied them to enhance the project further.",
+        heading: "Exam feedback",
+        content: "We have finaly gotten the result back of our final exam! We are so happy with how it turned out. We got an A on the project, and we are so proud of the work we put into it. We learned so much during this project, and we are excited to continue our journey in web development.",
+      },
+      {
+        heading: "Project Overview",
+        content: "Holidaze is a collaborative project that showcases our ability to work together as a team. We divided the tasks based on our strengths and interests, and we communicated effectively throughout the project. We used GitHub for version control, and we made sure to document our code and write clear commit messages. This helped us keep track of our progress and collaborate efficiently. \n\nThe project is built using React, Vite, Prettier, Tailwind CSS, and HTML. We also made sure to follow best practices for code quality and maintainability.File structure is organized, with components, styles, and assets separated for clarity. We used Tailwind CSS for styling, which allowed us to create a responsive and visually appealing design without writing custom CSS.",
+      },
+      {
+        heading: "Points of Improvement",
+        content: "While we are proud of the final product, we also recognize areas for improvement. One key aspect is the need for more comprehensive error handling. In the current version, some API calls do not have proper error handling, which could lead to a poor user experience if something goes wrong. We plan to implement try/catch blocks and display user-friendly error messages in future updates.\n\nAdditionally, we want to improve the accessibility of the application. While we have made some efforts to ensure that the app is usable by people with disabilities, there are still areas where we can enhance keyboard navigation and screen reader support.",
+      },
+      {
+        heading: "Responsibilities",
+        content: "We all participated in all the aspects of the project. We all took part in planing, creating the design, and implementing the functionality. We also made sure to communicate effectively throughout the project, and we used GitHub for version control. This helped us keep track of our progress and collaborate efficiently. \n\nWe also made sure to document our code and write clear commit messages. This helped us keep track of our progress and collaborate efficiently. We also made sure to follow best practices for code quality and maintainability.",
+      },
+      {
+        heading: "GitHub Repository",
+        content: "Please check out our GitHub repository for the project. Here you can find the source code, documentation, and instructions on how to run the project locally. We welcome any feedback or contributions from the community. You can find the button directing you to the repository at the bottom of this article. And instructions on how to create acount and use the application can be found in the README file. Feel free to explore the code, and if you have any questions or suggestions, don't hesitate to reach out! Thank you for your interest in our project!",
+      },
+      {
+        heading: "Figma",
+        content: "We have also created a Figma design for the project, which you can view by clicking the button below. The design showcases the user interface and user experience we aimed to achieve with Holidaze. It includes all the screens we implemented in the final product. We hope this gives you a better understanding of our design process and the thought that went into creating a cohesive and user-friendly application. \n\nIt is not prototyped, but it is a good representation of the final product. Reason for this is that we wanted to focus on the functionality of the application. The focuse was on the frontend development in this project, and we wanted to make sure that the design was implemented correctly. We are happy with the final result, and we hope you are too!",
       },
     ],
   },

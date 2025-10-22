@@ -104,4 +104,40 @@ export const projects = [
       },
     ],
   },
+
+  {
+    id: "project4",
+    title: "GoneFishing - Fishing Tracker App",
+    teaser: "GoneFishing is a modern fishing tracker app built with Next.js that helps anglers log catches, manage details, and track their fishing adventures.",
+    description:
+      "GoneFishing is a comprehensive fishing tracking application designed to help anglers document and manage their fishing activities with ease. \n\nBuilt with Next.js and featuring a clean, responsive interface, the app allows users to record detailed information about their catches including location, species, size, and conditions. With support for both light and dark themes, authentication, and customizable unit systems (metric/imperial), GoneFishing provides a seamless experience for fishing enthusiasts who want to maintain organized records of their adventures.",
+    images: ["/gonefishing.png"],
+    github: "https://github.com/Hermanhyl/gonefishing",
+    live: "https://gonefishing-2.netlify.app/",
+    figma: "",
+    technologies: ["Next.js", "React", "Supabase", "Tailwind CSS"],
+    authers: "Herman Hylland",
+    article: [
+      {
+        heading: "Project Overview",
+        content: "GoneFishing was created to solve a common problem among fishing enthusiasts: keeping track of catches in a simple, organized way. Instead of relying on handwritten notes or memory, anglers can now log every detail of their fishing trips digitally. The app provides an intuitive interface for recording fish species, size, weight, location, weather conditions, and personal notes about each catch.",
+      },
+      {
+        heading: "Key Features",
+        content: "The application includes several standout features that enhance the user experience. Theme management allows users to switch between light and dark modes, with preferences saved for consistency across sessions. The authentication system, powered by Supabase, ensures that each user's data remains private and secure while providing a seamless login experience. Additionally, the unit system provider enables users to choose between metric and imperial measurements, making the app accessible to anglers worldwide regardless of their preferred measurement system.",
+      },
+      {
+        heading: "Technical Implementation",
+        content: "Built with Next.js, the application leverages React's component-based architecture for maintainable and scalable code. Supabase serves as the backend, handling authentication and data storage with real-time capabilities. Tailwind CSS provides a modern, responsive design that works seamlessly across devices from mobile phones to desktop computers. The app uses Next.js's built-in routing for smooth navigation, and special attention was paid to preventing visual 'flashes' during page loads by applying theme settings immediately.",
+      },
+      {
+        heading: "Development Process",
+        content: "The development focused on creating an intuitive user experience while maintaining clean, efficient code. Responsive design was a priority from the start, ensuring the app works well whether users are logging catches from their phones by the water or reviewing their history on a larger screen at home. The dark mode implementation was carefully designed with a slate blue background that's easy on the eyes during early morning or late evening fishing sessions.",
+      },
+      {
+        heading: "Future Enhancements",
+        content: "While the current version provides solid functionality for tracking catches, there are several planned improvements. Future updates may include data visualization to show catch trends over time, social features to share catches with friends, integration with weather APIs for automatic condition logging, and photo uploads to document catches visually. The goal is to continue evolving GoneFishing into the most comprehensive fishing tracking solution available.",
+      },
+    ],
+  },
 ];

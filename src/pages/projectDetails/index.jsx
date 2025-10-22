@@ -44,7 +44,7 @@ function ProjectDetail() {
             key={index}
             src={src}
             alt={`Screenshot ${index + 1}`}
-            className="rounded-xl w-full object-cover max-h-[400px] md:max-h-[600px]"
+            className="rounded-xl w-full object-contain max-h-[400px] md:max-h-[600px]"
           />
         ))}
       </div>
@@ -92,14 +92,16 @@ function ProjectDetail() {
         >
           GitHub Repo
         </a>
-        <a
-          href={project.figma}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-gray-700 hover:bg-gray-800 px-4 py-2 rounded-md text-white whitespace-nowrap"
-        >
-          Figma File
-        </a>
+        {project.figma && (
+          <a
+            href={project.figma}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-700 hover:bg-gray-800 px-4 py-2 rounded-md text-white whitespace-nowrap"
+          >
+            Figma File
+          </a>
+        )}
         <button
           onClick={() => navigate("/")}
           className="ml-auto bg-gray-600 hover:bg-gray-700 px-4 py-2 rounded-md text-white cursor-pointer whitespace-nowrap"

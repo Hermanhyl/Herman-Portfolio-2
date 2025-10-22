@@ -136,7 +136,7 @@ function Contact() {
               <div className="grid grid-cols-3 gap-4">
 
                 <a
-                  href="https://www.linkedin.com/in/herman-hylland-86969718b/"
+                  href="https://www.linkedin.com/in/herman-hylland/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="animated-border backdrop-blur-md bg-white/10 p-6 rounded-xl border border-white/20 shadow-lg hover:bg-white/15 transition-all duration-300 transform hover:scale-110 flex flex-col items-center gap-2 group"
@@ -156,7 +156,7 @@ function Contact() {
                 </a>
 
                 <a
-                  href="https://www.instagram.com/"
+                  href="https://www.instagram.com/hermanhyl98/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="animated-border backdrop-blur-md bg-white/10 p-6 rounded-xl border border-white/20 shadow-lg hover:bg-white/15 transition-all duration-300 transform hover:scale-110 flex flex-col items-center gap-2 group"

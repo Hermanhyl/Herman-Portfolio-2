@@ -17,6 +17,7 @@ function About() {
     { icon: Award, value: '2', label: 'Years Front-End Study' },
     { icon: Code, value: '10+', label: 'Projects Completed' },
     { icon: Palette, value: '3', label: 'Years Design Study' },
+    { icon: GraduationCap, value: '2', label: 'Degrees Earned' },
   ];
 
   const timeline = [
@@ -91,7 +92,7 @@ function About() {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, index) => (
             <div key={index} className="animated-border backdrop-blur-md bg-white/10 p-6 rounded-xl text-center transform hover:scale-105 transition-all duration-300">
               <stat.icon className="w-10 h-10 mx-auto mb-3 text-emerald-400" />

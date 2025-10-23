@@ -1,5 +1,6 @@
 import { Heart, Code2, Mail, Linkedin, Github, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import VisitorCounter from '../../components/visitorCounter';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -107,9 +108,12 @@ function Footer() {
             <p className="flex items-center gap-2">
               &copy; {currentYear} Herman Hylland. All rights reserved.
             </p>
-            <p className="flex items-center gap-2">
-              Built with <Heart className="w-4 h-4 lg:w-5 lg:h-5 text-red-500 fill-red-500 animate-pulse" /> using React & Tailwind CSS
-            </p>
+            <div className="flex flex-col md:flex-row items-center gap-4">
+              <VisitorCounter />
+              <p className="flex items-center gap-2">
+                Built with <Heart className="w-4 h-4 lg:w-5 lg:h-5 text-red-500 fill-red-500 animate-pulse" /> using React & Tailwind CSS
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { ArrowRight, Sparkles, Code2, Palette } from 'lucide-react';
+import OptimizedImage from '../optimizedImage';
 
 export default function Hero() {
   return (
@@ -80,9 +81,10 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 animate-pulse"></div>
 
               {/* Profile Image */}
-              <img
+              <OptimizedImage
                 src="/profileImage.jpg"
                 alt="Herman Hylland"
+                eager={true}
                 className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-full shadow-2xl transform transition-transform duration-500 group-hover:scale-105"
               />
             </div>

@@ -1,6 +1,8 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { projects } from "../../data/projects/projects";
 import { useState } from "react";
+import PageTransition from "../../components/pageTransition";
+import OptimizedImage from "../../components/optimizedImage";
 import { ArrowLeft, ExternalLink, Github, Figma, Share2, Check, ChevronRight, Code2, Users, Calendar } from "lucide-react";
 
 function ProjectDetail() {
@@ -38,7 +40,8 @@ function ProjectDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white">
+    <PageTransition>
+      <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden py-20 px-4">
         {/* Animated background elements */}
@@ -172,9 +175,10 @@ function ProjectDetail() {
 
               {/* Main Image */}
               <div className="mb-4 rounded-xl overflow-hidden bg-gray-800">
-                <img
+                <OptimizedImage
                   src={project.images[selectedImage]}
                   alt={`${project.title} screenshot ${selectedImage + 1}`}
+                  eager={selectedImage === 0}
                   className="w-full h-auto object-contain max-h-[600px]"
                 />
               </div>
@@ -186,13 +190,14 @@ function ProjectDetail() {
                     <button
                       key={index}
                       onClick={() => setSelectedImage(index)}
+                      aria-label={`View image ${index + 1} of ${project.title}`}
                       className={`rounded-lg overflow-hidden transition-all duration-300 ${
                         selectedImage === index
                           ? 'ring-2 ring-emerald-400 scale-105'
                           : 'opacity-60 hover:opacity-100'
                       }`}
                     >
-                      <img
+                      <OptimizedImage
                         src={src}
                         alt={`Thumbnail ${index + 1}`}
                         className="w-full h-20 object-cover"
@@ -285,6 +290,7 @@ function ProjectDetail() {
         </div>
       </div>
     </div>
+    </PageTransition>
   );
 }
 

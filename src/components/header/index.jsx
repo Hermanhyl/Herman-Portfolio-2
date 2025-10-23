@@ -83,7 +83,7 @@ function Header() {
                 to={item.to}
                 aria-label={`Navigate to ${item.label} page`}
                 aria-current={isActive(item.to) ? 'page' : undefined}
-                className={`group relative px-5 py-2 rounded-lg transition-all duration-300 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-black ${
+                className={`group relative px-5 py-2 rounded-lg transition-all duration-300 flex items-center gap-2 focus:outline-none ${
                   isActive(item.to)
                     ? 'text-emerald-400'
                     : 'text-gray-300 hover:text-white'
@@ -134,7 +134,7 @@ function Header() {
                   onClick={() => setMenuOpen(false)}
                   aria-label={`Navigate to ${item.label} page`}
                   aria-current={isActive(item.to) ? 'page' : undefined}
-                  className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 ${
+                  className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 focus:outline-none ${
                     isActive(item.to)
                       ? 'bg-emerald-500/20 text-emerald-400'
                       : 'text-gray-300 hover:bg-white/10 hover:text-white'

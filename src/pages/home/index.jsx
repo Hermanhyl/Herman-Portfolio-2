@@ -1,11 +1,13 @@
 import Hero from "../../components/heroSection";
 import ProjectCard from "../../components/projectCard";
+import PageTransition from "../../components/pageTransition";
 import { projects } from "../../data/projects/projects";
 import { Briefcase, ChevronRight } from "lucide-react";
 
 function Home() {
   return (
-    <div className="bg-gradient-to-b from-black via-gray-900 to-black min-h-screen">
+    <PageTransition>
+      <div className="bg-gradient-to-b from-black via-gray-900 to-black min-h-screen">
       <Hero />
 
       {/* Projects Section */}
@@ -50,6 +52,7 @@ function Home() {
         </div>
       </section>
     </div>
+    </PageTransition>
   );
 }
 

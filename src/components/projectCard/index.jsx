@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import OptimizedImage from "../optimizedImage";
 
 function ProjectCard({ project }) {
   return (
@@ -10,12 +11,10 @@ function ProjectCard({ project }) {
         {/* Card content */}
         <div className="relative z-10 flex flex-col h-full">
           <div className="w-full h-72 md:h-80 lg:h-96 xl:h-[26rem] mb-5 overflow-hidden rounded-xl bg-gray-700">
-            <img
+            <OptimizedImage
               src={project.images[0]}
               alt={project.title}
-              loading="lazy"
               className="w-full h-full object-cover object-top rounded-xl transition duration-300 ease-in-out group-hover:scale-105"
-              decoding="async"
             />
           </div>
 

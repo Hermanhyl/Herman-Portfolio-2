@@ -1,4 +1,5 @@
 import { Code, Palette, Rocket, GraduationCap, Briefcase, Download, Award, Target } from 'lucide-react';
+import OptimizedImage from '../../components/optimizedImage';
 
 function About() {
   const skills = [
@@ -65,9 +66,10 @@ function About() {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="flex-shrink-0">
             <div className="animated-border p-1 rounded-full">
-              <img
+              <OptimizedImage
                 src="/profileImage.jpg"
                 alt="Profile"
+                eager={true}
                 className="w-48 h-48 md:w-56 md:h-56 object-cover rounded-full"
               />
             </div>

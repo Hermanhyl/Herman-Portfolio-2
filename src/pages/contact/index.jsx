@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github, Instagram, Send, User, MessageSquare } from 'lucide-react';
+import { Mail, Linkedin, Github, Instagram, Send, User, MessageSquare, CheckCircle, AlertCircle } from 'lucide-react';
 import { useState } from 'react';
 
 function Contact() {
@@ -7,12 +7,34 @@ function Contact() {
     email: '',
     message: ''
   });
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Create mailto link with form data
-    const mailtoLink = `mailto:hermanhyl@hotmail.com?subject=Portfolio Contact from ${formData.name}&body=${encodeURIComponent(formData.message)}%0D%0A%0D%0AFrom: ${formData.email}`;
-    window.location.href = mailtoLink;
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          'form-name': 'contact',
+          ...formData
+        }).toString()
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+        // Clear success message after 5 seconds
+        setTimeout(() => setSubmitStatus(null), 5000);
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
+    }
   };
 
   const handleChange = (e) => {
@@ -51,7 +73,33 @@ function Contact() {
               <MessageSquare className="w-6 h-6 text-emerald-400" />
               Send a Message
             </h2>
-            <form onSubmit={handleSubmit} className="space-y-4">
+
+            {/* Success Message */}
+            {submitStatus === 'success' && (
+              <div className="mb-4 p-4 bg-emerald-500/20 border border-emerald-500/50 rounded-lg flex items-center gap-3" role="alert">
+                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                <p className="text-emerald-300">Thank you! Your message has been sent successfully. I'll get back to you soon!</p>
+              </div>
+            )}
+
+            {/* Error Message */}
+            {submitStatus === 'error' && (
+              <div className="mb-4 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3" role="alert">
+                <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0" />
+                <p className="text-red-300">Oops! Something went wrong. Please try again or email me directly at hermanhyl@hotmail.com</p>
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit} className="space-y-4" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+              {/* Hidden inputs for Netlify Forms */}
+              <input type="hidden" name="form-name" value="contact" />
+              {/* Honeypot field for spam protection */}
+              <p className="hidden">
+                <label>
+                  Don't fill this out if you're human: <input name="bot-field" />
+                </label>
+              </p>
+
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                   Your Name
@@ -63,6 +111,7 @@ function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  aria-required="true"
                   className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition"
                   placeholder="John Doe"
                 />
@@ -78,6 +127,7 @@ function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
+                  aria-required="true"
                   className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition"
                   placeholder="john@example.com"
                 />
@@ -92,6 +142,7 @@ function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   required
+                  aria-required="true"
                   rows="5"
                   className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition resize-none"
                   placeholder="Tell me about your project..."
@@ -99,9 +150,10 @@ function Contact() {
               </div>
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                aria-label="Send message"
+                className="w-full bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 flex items-center justify-center gap-2"
               >
-                <Send className="w-5 h-5" />
+                <Send className="w-5 h-5" aria-hidden="true" />
                 Send Message
               </button>
             </form>
@@ -116,11 +168,12 @@ function Contact() {
 
               <a
                 href="mailto:hermanhyl@hotmail.com"
-                className="group animated-border block backdrop-blur-md bg-white/10 p-6 rounded-xl border border-white/20 shadow-lg hover:bg-white/15 transition-all duration-300 transform hover:scale-105"
+                aria-label="Send email to hermanhyl@hotmail.com"
+                className="group animated-border block backdrop-blur-md bg-white/10 p-6 rounded-xl border border-white/20 shadow-lg hover:bg-white/15 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900"
               >
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-emerald-500/20 rounded-lg group-hover:bg-emerald-500/30 transition">
-                    <Mail className="w-6 h-6 text-emerald-400" />
+                    <Mail className="w-6 h-6 text-emerald-400" aria-hidden="true" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-white">Email</h3>
@@ -139,9 +192,10 @@ function Contact() {
                   href="https://www.linkedin.com/in/herman-hylland/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="animated-border backdrop-blur-md bg-white/10 p-6 rounded-xl border border-white/20 shadow-lg hover:bg-white/15 transition-all duration-300 transform hover:scale-110 flex flex-col items-center gap-2 group"
+                  aria-label="Visit Herman Hylland's LinkedIn profile (opens in new tab)"
+                  className="animated-border backdrop-blur-md bg-white/10 p-6 rounded-xl border border-white/20 shadow-lg hover:bg-white/15 transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 flex flex-col items-center gap-2 group"
                 >
-                  <Linkedin className="w-8 h-8 text-blue-400 group-hover:text-blue-300 transition" />
+                  <Linkedin className="w-8 h-8 text-blue-400 group-hover:text-blue-300 transition" aria-hidden="true" />
                   <span className="text-sm font-medium">LinkedIn</span>
                 </a>
 
@@ -149,9 +203,10 @@ function Contact() {
                   href="https://github.com/Hermanhyl"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="animated-border backdrop-blur-md bg-white/10 p-6 rounded-xl border border-white/20 shadow-lg hover:bg-white/15 transition-all duration-300 transform hover:scale-110 flex flex-col items-center gap-2 group"
+                  aria-label="Visit Herman Hylland's GitHub profile (opens in new tab)"
+                  className="animated-border backdrop-blur-md bg-white/10 p-6 rounded-xl border border-white/20 shadow-lg hover:bg-white/15 transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-900 flex flex-col items-center gap-2 group"
                 >
-                  <Github className="w-8 h-8 text-gray-300 group-hover:text-white transition" />
+                  <Github className="w-8 h-8 text-gray-300 group-hover:text-white transition" aria-hidden="true" />
                   <span className="text-sm font-medium">GitHub</span>
                 </a>
 
@@ -159,9 +214,10 @@ function Contact() {
                   href="https://www.instagram.com/hermanhyl98/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="animated-border backdrop-blur-md bg-white/10 p-6 rounded-xl border border-white/20 shadow-lg hover:bg-white/15 transition-all duration-300 transform hover:scale-110 flex flex-col items-center gap-2 group"
+                  aria-label="Visit Herman Hylland's Instagram profile (opens in new tab)"
+                  className="animated-border backdrop-blur-md bg-white/10 p-6 rounded-xl border border-white/20 shadow-lg hover:bg-white/15 transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 focus:ring-offset-gray-900 flex flex-col items-center gap-2 group"
                 >
-                  <Instagram className="w-8 h-8 text-pink-400 group-hover:text-pink-300 transition" />
+                  <Instagram className="w-8 h-8 text-pink-400 group-hover:text-pink-300 transition" aria-hidden="true" />
                   <span className="text-sm font-medium">Instagram</span>
                 </a>
               </div>

@@ -1,5 +1,4 @@
 import { Code, Palette, Rocket, GraduationCap, Briefcase, Download, Award, Target } from 'lucide-react';
-import profileImage from '../../../public/profileImage.jpg';
 
 function About() {
   const skills = [
@@ -67,7 +66,7 @@ function About() {
           <div className="flex-shrink-0">
             <div className="animated-border p-1 rounded-full">
               <img
-                src={profileImage}
+                src="/profileImage.jpg"
                 alt="Profile"
                 className="w-48 h-48 md:w-56 md:h-56 object-cover rounded-full"
               />

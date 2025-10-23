@@ -49,15 +49,31 @@ function ProjectDetail() {
 
         <div className="max-w-6xl mx-auto relative z-10">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-base md:text-lg text-gray-400 mb-6">
-            <button onClick={() => navigate("/")} className="hover:text-emerald-400 transition-colors">
-              Home
-            </button>
-            <ChevronRight className="w-5 h-5" />
-            <span className="text-gray-300">Projects</span>
-            <ChevronRight className="w-5 h-5" />
-            <span className="text-emerald-400">{project.title}</span>
-          </div>
+          <nav aria-label="Breadcrumb">
+            <ol className="flex items-center gap-2 text-base md:text-lg text-gray-400 mb-6">
+              <li>
+                <button
+                  onClick={() => navigate("/")}
+                  aria-label="Navigate to home page"
+                  className="hover:text-emerald-400 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1"
+                >
+                  Home
+                </button>
+              </li>
+              <li aria-hidden="true">
+                <ChevronRight className="w-5 h-5" />
+              </li>
+              <li>
+                <span className="text-gray-300">Projects</span>
+              </li>
+              <li aria-hidden="true">
+                <ChevronRight className="w-5 h-5" />
+              </li>
+              <li aria-current="page">
+                <span className="text-emerald-400">{project.title}</span>
+              </li>
+            </ol>
+          </nav>
 
           {/* Title and Actions */}
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-8">
@@ -81,7 +97,8 @@ function ProjectDetail() {
             {/* Share Button */}
             <button
               onClick={handleCopyLink}
-              className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
+              aria-label={copied ? "Link copied to clipboard" : "Copy project link to clipboard"}
+              className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 ${
                 copied
                   ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/50'
                   : 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 hover:from-purple-500/30 hover:to-pink-500/30 text-white border border-purple-500/50 hover:border-purple-400 shadow-lg'
@@ -89,12 +106,12 @@ function ProjectDetail() {
             >
               {copied ? (
                 <>
-                  <Check className="w-5 h-5" />
+                  <Check className="w-5 h-5" aria-hidden="true" />
                   Link Copied!
                 </>
               ) : (
                 <>
-                  <Share2 className="w-5 h-5" />
+                  <Share2 className="w-5 h-5" aria-hidden="true" />
                   Share Project
                 </>
               )}
@@ -107,18 +124,20 @@ function ProjectDetail() {
               href={project.live}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+              aria-label={`View live demo of ${project.title} (opens in new tab)`}
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900"
             >
-              <ExternalLink className="w-5 h-5" />
+              <ExternalLink className="w-5 h-5" aria-hidden="true" />
               Live Demo
             </a>
             <a
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+              aria-label={`View source code for ${project.title} on GitHub (opens in new tab)`}
+              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-900"
             >
-              <Github className="w-5 h-5" />
+              <Github className="w-5 h-5" aria-hidden="true" />
               View Code
             </a>
             {project.figma && (
@@ -126,9 +145,10 @@ function ProjectDetail() {
                 href={project.figma}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+                aria-label={`View Figma design for ${project.title} (opens in new tab)`}
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900"
               >
-                <Figma className="w-5 h-5" />
+                <Figma className="w-5 h-5" aria-hidden="true" />
                 Figma Design
               </a>
             )}
@@ -222,13 +242,14 @@ function ProjectDetail() {
             )}
 
             {/* Navigation to Other Projects */}
-            <div className="animated-border backdrop-blur-md bg-white/10 p-6 rounded-2xl">
+            <nav aria-label="Project navigation" className="animated-border backdrop-blur-md bg-white/10 p-6 rounded-2xl">
               <h3 className="text-xl font-bold mb-4">More Projects</h3>
               <div className="space-y-3">
                 {prevProject && (
                   <button
                     onClick={() => navigate(`/project/${prevProject.id}`)}
-                    className="w-full text-left p-3 bg-white/5 hover:bg-white/10 rounded-lg transition-all duration-300 group"
+                    aria-label={`Navigate to previous project: ${prevProject.title}`}
+                    className="w-full text-left p-3 bg-white/5 hover:bg-white/10 rounded-lg transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900"
                   >
                     <div className="text-xs text-gray-400 mb-1">Previous</div>
                     <div className="text-emerald-400 group-hover:text-emerald-300 flex items-center gap-2">
@@ -239,7 +260,8 @@ function ProjectDetail() {
                 {nextProject && (
                   <button
                     onClick={() => navigate(`/project/${nextProject.id}`)}
-                    className="w-full text-left p-3 bg-white/5 hover:bg-white/10 rounded-lg transition-all duration-300 group"
+                    aria-label={`Navigate to next project: ${nextProject.title}`}
+                    className="w-full text-left p-3 bg-white/5 hover:bg-white/10 rounded-lg transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900"
                   >
                     <div className="text-xs text-gray-400 mb-1">Next</div>
                     <div className="text-emerald-400 group-hover:text-emerald-300 flex items-center gap-2">
@@ -248,14 +270,15 @@ function ProjectDetail() {
                   </button>
                 )}
               </div>
-            </div>
+            </nav>
 
             {/* Back to Projects */}
             <button
               onClick={() => navigate("/")}
-              className="w-full inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300"
+              aria-label="Back to all projects"
+              className="w-full inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900"
             >
-              <ArrowLeft className="w-5 h-5" />
+              <ArrowLeft className="w-5 h-5" aria-hidden="true" />
               Back to Projects
             </button>
           </div>

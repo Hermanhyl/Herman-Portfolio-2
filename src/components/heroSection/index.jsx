@@ -1,4 +1,3 @@
-import profileImage from '../../../public/profileImage.jpg';
 import { ArrowRight, Sparkles, Code2, Palette } from 'lucide-react';
 
 export default function Hero() {
@@ -82,7 +81,7 @@ export default function Hero() {
 
               {/* Profile Image */}
               <img
-                src={profileImage}
+                src="/profileImage.jpg"
                 alt="Herman Hylland"
                 className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-full shadow-2xl transform transition-transform duration-500 group-hover:scale-105"
               />

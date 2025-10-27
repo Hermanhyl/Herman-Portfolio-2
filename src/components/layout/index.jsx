@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import Header from "../header";
 import ScrollToTop from "../scrollToTop";
 import BackToTop from "../backToTop";
+import ChatBot from "../chatBot";
 
 /**
  * Layout component that provides the main structure for the application.
@@ -17,6 +18,7 @@ export default function Layout() {
     <div className="flex flex-col min-h-screen animated-bg text-white">
   <ScrollToTop />
   <BackToTop />
+  <ChatBot />
   {/* Skip to main content link for keyboard navigation */}
   <a
     href="#main-content"

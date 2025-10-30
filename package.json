@@ -22,9 +22,12 @@
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.6.2",
     "remark-gfm": "^4.0.1",
-    "tailwindcss": "^4.1.8"
+    "tailwindcss": "^4.1.8",
+    "vite-plugin-markdown": "^2.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/preset-react": "^7.28.5",
     "@eslint/js": "^9.25.0",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",

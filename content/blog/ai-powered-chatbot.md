@@ -1,8 +1,10 @@
 ---
 title: Building an AI-Powered Portfolio Assistant
 date: 2025-10-29T00:00:00.000Z
-featured: true
-excerpt: How I integrated OpenAI GPT-4o-mini into my portfolio to create an interactive AI assistant that answers questions about my skills and experience.
+featured: false
+excerpt: How I integrated OpenAI GPT-4o-mini into my portfolio to create an
+  interactive AI assistant that answers questions about my skills and
+  experience.
 readTime: 5 min read
 author: Herman Hylland
 tags:

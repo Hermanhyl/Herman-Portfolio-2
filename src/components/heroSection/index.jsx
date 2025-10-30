@@ -1,7 +1,25 @@
+import { useState, useEffect } from 'react';
 import { ArrowRight, Sparkles, Code2, Palette } from 'lucide-react';
 import OptimizedImage from '../optimizedImage';
 
 export default function Hero() {
+  const [displayedText, setDisplayedText] = useState('');
+  const fullText = 'Herman Hylland';
+
+  useEffect(() => {
+    let currentIndex = 0;
+    const typingInterval = setInterval(() => {
+      if (currentIndex <= fullText.length) {
+        setDisplayedText(fullText.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        clearInterval(typingInterval);
+      }
+    }, 100); // Speed of typing (100ms per character)
+
+    return () => clearInterval(typingInterval);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
       {/* Animated background elements */}
@@ -18,24 +36,25 @@ export default function Hero() {
           <div className="flex-1 text-center md:text-left space-y-6 md:space-y-8">
             {/* Badges */}
             <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-              <div className="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-500/50 px-4 py-2 rounded-full backdrop-blur-sm">
-                <Sparkles className="w-4 h-4 text-emerald-400" />
-                <span className="text-emerald-300 text-sm font-medium">Front-End Developer & Digital Designer</span>
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500/30 to-cyan-500/30 border-2 border-emerald-400/60 px-4 py-2 rounded-full backdrop-blur-sm shadow-lg shadow-emerald-500/20 transform transition-all duration-300 hover:scale-105">
+                <Sparkles className="w-4 h-4 text-emerald-300 animate-pulse" />
+                <span className="text-emerald-100 text-sm md:text-base font-bold">Front-End Developer & Digital Designer</span>
               </div>
-              <div className="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-500/50 px-4 py-2 rounded-full backdrop-blur-sm">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500/30 to-cyan-500/30 border-2 border-emerald-400/60 px-4 py-2 rounded-full backdrop-blur-sm shadow-lg shadow-emerald-500/20 transform transition-all duration-300 hover:scale-105">
                 <span className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-400"></span>
                 </span>
-                <span className="text-emerald-300 text-sm font-medium">Available for Work</span>
+                <span className="text-emerald-100 text-sm md:text-base font-bold">Available for Work</span>
               </div>
             </div>
 
             {/* Main Heading */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
-              <span className="block text-white mb-2">Hi, I'm</span>
-              <span className="block bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text">
-                Herman Hylland
+              <span className="text-white">Hi, I'm </span>
+              <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text whitespace-nowrap">
+                {displayedText}
+                <span className="animate-pulse">|</span>
               </span>
             </h1>
 

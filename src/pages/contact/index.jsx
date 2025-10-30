@@ -225,8 +225,8 @@ function Contact() {
 
             {/* Quick Info */}
             <div className="animated-border backdrop-blur-md bg-white/10 p-6 rounded-xl border border-white/20 shadow-lg">
-              <h3 className="font-semibold text-lg mb-3 text-emerald-400">Response Time</h3>
-              <p className="text-gray-300 text-sm">
+              <h3 className="font-semibold text-xl mb-3 text-emerald-400">Response Time</h3>
+              <p className="text-gray-300 text-base leading-relaxed">
                 I typically respond within 24-48 hours. Looking forward to hearing from you!
               </p>
             </div>

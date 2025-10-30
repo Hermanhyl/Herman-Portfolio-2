@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-import { Menu, X, Home, User, Mail, Code2 } from "lucide-react";
+import { Menu, X, Home, User, Mail, Code2, BookOpen } from "lucide-react";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -39,6 +39,7 @@ function Header() {
   const navItems = [
     { to: "/", label: "Home", icon: Home },
     { to: "/about", label: "About", icon: User },
+    { to: "/blog", label: "Blog", icon: BookOpen },
     { to: "/contact", label: "Contact", icon: Mail },
   ];
 

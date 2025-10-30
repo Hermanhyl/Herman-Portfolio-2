@@ -3,6 +3,7 @@ import { MessageCircle, X, Send, Loader2, Bot, User, Sparkles } from 'lucide-rea
 
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
@@ -13,6 +14,14 @@ export default function ChatBot() {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
+
+  // Animate button entrance after page load
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 1000); // Delay entrance by 1 second
+    return () => clearTimeout(timer);
+  }, []);
 
   // Auto-scroll to bottom when messages change
   const scrollToBottom = () => {
@@ -107,11 +116,12 @@ export default function ChatBot() {
   return (
     <>
       {/* Floating Chat Button */}
-      {!isOpen && (
+      {!isOpen && isVisible && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 group"
+          className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white rounded-full shadow-2xl transition-all duration-500 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 group animate-in fade-in slide-in-from-bottom-8 duration-700"
           aria-label="Open AI chat assistant"
+          style={{ animationDelay: '200ms' }}
         >
           <div className="relative">
             <MessageCircle className="w-6 h-6" />
@@ -125,7 +135,7 @@ export default function ChatBot() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 z-50 w-[380px] h-[600px] bg-gray-900 border border-white/10 rounded-2xl shadow-2xl flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-300">
+        <div className="fixed bottom-6 right-6 z-50 w-[380px] h-[600px] bg-gray-900 border border-white/10 rounded-2xl shadow-2xl flex flex-col animate-in fade-in slide-in-from-right-8 zoom-in-95 duration-500" style={{ animationTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)' }}>
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-white/10 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10">
             <div className="flex items-center gap-3">

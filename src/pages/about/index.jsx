@@ -1,4 +1,4 @@
-import { Code, Palette, Rocket, GraduationCap, Briefcase, Download, Award, Target } from 'lucide-react';
+import { Code, Palette, Rocket, GraduationCap, Briefcase, Download, Award, Target, Sparkles, Terminal, Layers, Brain } from 'lucide-react';
 import OptimizedImage from '../../components/optimizedImage';
 
 function About() {
@@ -56,6 +56,49 @@ function About() {
       icon: GraduationCap,
       color: 'pink'
     },
+  ];
+
+  const skillCategories = [
+    {
+      title: 'Development',
+      icon: Terminal,
+      color: 'emerald',
+      gradient: 'from-emerald-400 to-cyan-400',
+      skills: [
+        'React',
+        'JavaScript',
+        'TypeScript',
+        'Next.js',
+        'Supabase',
+        'Tailwind CSS',
+        'HTML',
+        'CSS',
+        'APIs'
+      ]
+    },
+    {
+      title: 'Design',
+      icon: Layers,
+      color: 'purple',
+      gradient: 'from-purple-400 to-pink-400',
+      skills: [
+        'UI/UX Design (Figma)',
+        'Digital Illustration',
+        '3D & Animation'
+      ]
+    },
+    {
+      title: 'AI & Tools',
+      icon: Brain,
+      color: 'cyan',
+      gradient: 'from-cyan-400 to-blue-400',
+      skills: [
+        'Claude API',
+        'AI Integration',
+        'Prompt Engineering',
+        'Claude Code'
+      ]
+    }
   ];
 
   return (
@@ -145,6 +188,52 @@ function About() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Skills Showcase Section */}
+        <div className="animated-border backdrop-blur-md bg-white/10 p-8 rounded-2xl">
+          <div className="flex items-center gap-3 mb-8">
+            <Sparkles className="w-7 h-7 text-emerald-400" />
+            <h2 className="text-3xl font-bold">Skills & Expertise</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {skillCategories.map((category, index) => {
+              const Icon = category.icon;
+              return (
+                <div
+                  key={index}
+                  className="group relative bg-gradient-to-br from-white/5 to-white/10 p-6 rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
+                >
+                  {/* Gradient overlay on hover */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-10 rounded-xl transition-opacity duration-300`}></div>
+
+                  <div className="relative">
+                    {/* Icon */}
+                    <div className={`inline-flex p-3 mb-4 rounded-lg bg-gradient-to-br ${category.gradient} bg-opacity-20`}>
+                      <Icon className={`w-8 h-8 bg-gradient-to-br ${category.gradient} text-transparent bg-clip-text`} style={{
+                        filter: 'drop-shadow(0 0 8px currentColor)'
+                      }} />
+                    </div>
+
+                    {/* Title */}
+                    <h3 className={`text-2xl font-bold mb-4 bg-gradient-to-r ${category.gradient} text-transparent bg-clip-text`}>
+                      {category.title}
+                    </h3>
+
+                    {/* Skills List */}
+                    <ul className="space-y-2">
+                      {category.skills.map((skill, skillIndex) => (
+                        <li key={skillIndex} className="flex items-start gap-2 text-gray-300">
+                          <span className={`mt-1.5 w-1.5 h-1.5 rounded-full bg-gradient-to-r ${category.gradient} flex-shrink-0`}></span>
+                          <span className="text-base">{skill}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
 

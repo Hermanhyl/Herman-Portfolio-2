@@ -12,11 +12,16 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.8",
+    "decap-cms-app": "^3.8.4",
+    "gray-matter": "^4.0.3",
     "lucide-react": "^0.513.0",
+    "netlify-identity-widget": "^1.9.2",
     "openai": "^6.7.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-markdown": "^10.1.0",
     "react-router-dom": "^7.6.2",
+    "remark-gfm": "^4.0.1",
     "tailwindcss": "^4.1.8"
   },
   "devDependencies": {

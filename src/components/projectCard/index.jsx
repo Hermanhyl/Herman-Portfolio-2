@@ -10,12 +10,14 @@ function ProjectCard({ project }) {
 
         {/* Card content */}
         <div className="relative z-10 flex flex-col h-full">
-          <div className="w-full h-72 md:h-80 lg:h-96 xl:h-[26rem] mb-5 overflow-hidden rounded-xl bg-gray-700">
+          <div className="w-full h-72 md:h-80 lg:h-96 xl:h-[26rem] mb-5 overflow-hidden rounded-xl bg-gray-700 relative">
             <OptimizedImage
               src={project.images[0]}
               alt={project.title}
-              className="w-full h-full object-cover object-top rounded-xl transition duration-300 ease-in-out group-hover:scale-105"
+              className="w-full h-full object-cover object-center rounded-xl transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:brightness-110"
             />
+            {/* Gradient overlay on hover for better text contrast */}
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none"></div>
           </div>
 
           <h3 className="text-xl lg:text-2xl font-semibold text-white group-hover:text-emerald-400 transition-colors duration-300 mb-3">

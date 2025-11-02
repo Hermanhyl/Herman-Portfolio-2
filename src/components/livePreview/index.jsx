@@ -38,7 +38,7 @@ function LivePreview({ url, fallbackImage, title }) {
       <iframe
         src={url}
         title={`Live preview of ${title}`}
-        className="absolute top-0 left-0 border-0 transition-transform duration-300 ease-in-out"
+        className="absolute top-0 left-0 border-0 transition-transform duration-300 ease-in-out bg-white"
         sandbox="allow-same-origin allow-scripts"
         loading="lazy"
         onLoad={() => setIsLoading(false)}
@@ -51,7 +51,8 @@ function LivePreview({ url, fallbackImage, title }) {
           width: '1400px', // Large viewport to capture more content
           height: '1050px', // Proportional height
           transform: 'scale(0.35)', // Scale down to fit
-          transformOrigin: 'top left'
+          transformOrigin: 'top left',
+          colorScheme: 'light' // Force light mode in iframe
         }}
       />
 

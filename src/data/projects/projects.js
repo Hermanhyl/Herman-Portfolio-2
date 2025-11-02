@@ -77,7 +77,7 @@ export const projects = [
       "ClicketyCart makes shopping fast, fun, and effortless. With a turbo-charged checkout and lightning-fast delivery, you get what you need—instantly. Whether you're browsing or buying on the go, we're quicker than you can say add to cart. 🛒💨 \n\nThis is the frontend for a fictional e-commerce store powered by the Noroff API, featuring a retro-inspired design and built with modern React functionality.",
     images: ["/ClicketyCart.png"],
     github: "https://github.com/Hermanhyl/Semester-Project-2-Auction",
-    live: "https://own-the-bid-main.netlify.app/",
+    live: "https://clicketycart.netlify.app/",
     figma: "https://www.figma.com/design/R8wGWrRexwOTDaQnpFKNmn/Ecom-store?node-id=0-1&p=f&t=UlgGs9y5P55UgOu2-0",
     technologies: ["React", "Tailwind CSS", "HTML"],
     authers:"Madelen Sletteberg, Herman Hylland",

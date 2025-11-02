@@ -34,11 +34,11 @@ function LivePreview({ url, fallbackImage, title }) {
         </div>
       )}
 
-      {/* Live iframe preview */}
+      {/* Live iframe preview - scaled to show more content */}
       <iframe
         src={url}
         title={`Live preview of ${title}`}
-        className="w-full h-full rounded-xl border-0 transition-transform duration-300 ease-in-out group-hover:scale-105"
+        className="absolute top-0 left-0 border-0 transition-transform duration-300 ease-in-out"
         sandbox="allow-same-origin allow-scripts"
         loading="lazy"
         onLoad={() => setIsLoading(false)}
@@ -48,8 +48,10 @@ function LivePreview({ url, fallbackImage, title }) {
         }}
         style={{
           pointerEvents: 'none', // Prevent interaction with iframe
-          transform: 'scale(1)',
-          transformOrigin: 'top center'
+          width: '1400px', // Large viewport to capture more content
+          height: '1050px', // Proportional height
+          transform: 'scale(0.35)', // Scale down to fit
+          transformOrigin: 'top left'
         }}
       />
 

@@ -110,7 +110,7 @@ function About() {
           <div className="flex-shrink-0">
             <div className="animated-border p-1 rounded-full">
               <OptimizedImage
-                src="/profileImage.jpg"
+                src="/profilepicture.jpg"
                 alt="Profile"
                 eager={true}
                 className="w-48 h-48 md:w-56 md:h-56 object-cover rounded-full"

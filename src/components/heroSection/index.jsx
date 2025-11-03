@@ -101,7 +101,7 @@ export default function Hero() {
 
               {/* Profile Image */}
               <OptimizedImage
-                src="/profileImage.jpg"
+                src="/profilepicture.jpg"
                 alt="Herman Hylland"
                 eager={true}
                 className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-full shadow-2xl transform transition-transform duration-500 group-hover:scale-105"

@@ -4,6 +4,7 @@ import PageTransition from '../../components/pageTransition';
 import ScrollReveal from '../../components/scrollReveal';
 import SectionHeader from '../../components/sectionHeader';
 import { SocialLink } from '../../components/socialLinks';
+import NetworkBackground from '../../components/networkBackground';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -50,7 +51,14 @@ function Contact() {
 
   return (
     <PageTransition>
-      <div className="min-h-screen flex flex-col items-center justify-center px-4 py-20 text-white bg-gradient-to-b from-black via-gray-900 to-black">
+      <div className="relative min-h-screen">
+        {/* Network Background Animation */}
+        <NetworkBackground />
+
+        {/* Semi-transparent overlay so dots show through */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-gray-900/70 to-black/80 z-[1]"></div>
+
+        <div className="relative min-h-screen flex flex-col items-center justify-center px-4 py-20 text-white z-[2]">
         <div className="max-w-5xl w-full space-y-12">
 
           {/* Header */}
@@ -228,6 +236,7 @@ function Contact() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </PageTransition>
   );

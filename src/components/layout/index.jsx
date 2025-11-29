@@ -15,7 +15,7 @@ import ChatBot from "../chatBot";
 
 export default function Layout() {
   return (
-    <div className="flex flex-col min-h-screen animated-bg text-white">
+    <div className="flex flex-col min-h-screen animated-bg text-white overflow-x-hidden">
   <ScrollToTop />
   <BackToTop />
   <ChatBot />

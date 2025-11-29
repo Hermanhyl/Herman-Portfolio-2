@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
-import { ArrowRight, Sparkles, Code2, Palette } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Sparkles, Code2, Palette, Github, Linkedin, Mail } from 'lucide-react';
 import OptimizedImage from '../optimizedImage';
 
 export default function Hero() {
   const [displayedText, setDisplayedText] = useState('');
+  const [showCursor, setShowCursor] = useState(true);
   const fullText = 'Herman Hylland';
 
   useEffect(() => {
@@ -14,8 +16,10 @@ export default function Hero() {
         currentIndex++;
       } else {
         clearInterval(typingInterval);
+        // Hide cursor 1.5 seconds after typing completes
+        setTimeout(() => setShowCursor(false), 1500);
       }
-    }, 100); // Speed of typing (100ms per character)
+    }, 100);
 
     return () => clearInterval(typingInterval);
   }, []);
@@ -54,7 +58,7 @@ export default function Hero() {
               <span className="text-white">Hi, I'm </span>
               <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text whitespace-nowrap">
                 {displayedText}
-                <span className="animate-pulse">|</span>
+                <span className={`transition-opacity duration-300 ${showCursor ? 'animate-pulse opacity-100' : 'opacity-0'}`}>|</span>
               </span>
             </h1>
 
@@ -77,19 +81,19 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 justify-center md:justify-start pt-4">
-              <a
-                href="/contact"
-                className="group inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              <Link
+                to="/contact"
+                className="group inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black"
               >
                 Let's Work Together
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a
-                href="/about"
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105"
+              </Link>
+              <Link
+                to="/about"
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-black"
               >
                 Learn More
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -97,7 +101,13 @@ export default function Hero() {
           <div className="flex-1 flex justify-center md:justify-end">
             <div className="relative group">
               {/* Glowing effect behind image */}
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 animate-pulse"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+
+              {/* Rotating gradient border */}
+              <div className="absolute -inset-1 sm:-inset-1.5 rounded-full bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 animate-spin-slow opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              {/* Inner background to create border effect */}
+              <div className="absolute inset-0.5 sm:inset-1 rounded-full bg-gray-900"></div>
 
               {/* Profile Image */}
               <OptimizedImage
@@ -106,6 +116,35 @@ export default function Hero() {
                 eager={true}
                 className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-full shadow-2xl transform transition-transform duration-500 group-hover:scale-105"
               />
+
+              {/* Social Links - positioned around the image */}
+              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3">
+                <a
+                  href="https://github.com/Hermanhyl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Herman's GitHub profile"
+                  className="p-3 bg-gray-800/90 hover:bg-emerald-500 border border-white/20 rounded-full text-gray-300 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/herman-hylland/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Herman's LinkedIn profile"
+                  className="p-3 bg-gray-800/90 hover:bg-cyan-500 border border-white/20 rounded-full text-gray-300 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <Link
+                  to="/contact"
+                  aria-label="Contact Herman via email"
+                  className="p-3 bg-gray-800/90 hover:bg-purple-500 border border-white/20 rounded-full text-gray-300 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+                >
+                  <Mail className="w-5 h-5" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

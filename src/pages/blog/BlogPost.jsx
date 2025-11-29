@@ -120,28 +120,38 @@ function BlogPost() {
 
           {/* Post Content */}
           <div className="prose prose-invert prose-lg max-w-none mb-12">
-            <ReactMarkdown
-              remarkPlugins={[remarkGfm]}
-              className="text-gray-300 leading-relaxed"
-              components={{
-                h2: ({node, ...props}) => <h2 className="text-3xl font-bold mt-8 mb-4 text-emerald-400" {...props} />,
-                h3: ({node, ...props}) => <h3 className="text-2xl font-bold mt-6 mb-3 text-cyan-400" {...props} />,
-                p: ({node, ...props}) => <p className="mb-4 text-gray-300 leading-relaxed" {...props} />,
-                ul: ({node, ...props}) => <ul className="list-disc list-inside mb-4 space-y-2 text-gray-300" {...props} />,
-                ol: ({node, ...props}) => <ol className="list-decimal list-inside mb-4 space-y-2 text-gray-300" {...props} />,
-                li: ({node, ...props}) => <li className="text-gray-300" {...props} />,
-                code: ({node, inline, ...props}) =>
-                  inline ? (
-                    <code className="bg-white/10 px-2 py-1 rounded text-emerald-300 text-sm" {...props} />
-                  ) : (
-                    <code className="block bg-white/5 p-4 rounded-xl text-emerald-300 text-sm overflow-x-auto" {...props} />
-                  ),
-                strong: ({node, ...props}) => <strong className="font-bold text-white" {...props} />,
-                a: ({node, ...props}) => <a className="text-emerald-400 hover:text-cyan-400 underline transition-colors" {...props} />,
-              }}
-            >
-              {post.content}
-            </ReactMarkdown>
+            {/* Check if content is HTML (from vite-plugin-markdown) or raw markdown */}
+            {post.content && post.content.includes('<') ? (
+              // Render HTML content directly with styling
+              <div
+                className="blog-content text-gray-300 leading-relaxed [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:mt-8 [&>h2]:mb-4 [&>h2]:text-emerald-400 [&>h3]:text-2xl [&>h3]:font-bold [&>h3]:mt-6 [&>h3]:mb-3 [&>h3]:text-cyan-400 [&>p]:mb-4 [&>p]:text-gray-300 [&>p]:leading-relaxed [&>ul]:list-disc [&>ul]:list-inside [&>ul]:mb-4 [&>ul]:space-y-2 [&>ol]:list-decimal [&>ol]:list-inside [&>ol]:mb-4 [&>ol]:space-y-2 [&>li]:text-gray-300 [&_code]:bg-white/10 [&_code]:px-2 [&_code]:py-1 [&_code]:rounded [&_code]:text-emerald-300 [&_code]:text-sm [&>pre]:bg-white/5 [&>pre]:p-4 [&>pre]:rounded-xl [&>pre]:overflow-x-auto [&_strong]:font-bold [&_strong]:text-white [&_a]:text-emerald-400 [&_a:hover]:text-cyan-400 [&_a]:underline [&_a]:transition-colors"
+                dangerouslySetInnerHTML={{ __html: post.content }}
+              />
+            ) : (
+              // Render raw markdown with ReactMarkdown
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                className="text-gray-300 leading-relaxed"
+                components={{
+                  h2: ({node, ...props}) => <h2 className="text-3xl font-bold mt-8 mb-4 text-emerald-400" {...props} />,
+                  h3: ({node, ...props}) => <h3 className="text-2xl font-bold mt-6 mb-3 text-cyan-400" {...props} />,
+                  p: ({node, ...props}) => <p className="mb-4 text-gray-300 leading-relaxed" {...props} />,
+                  ul: ({node, ...props}) => <ul className="list-disc list-inside mb-4 space-y-2 text-gray-300" {...props} />,
+                  ol: ({node, ...props}) => <ol className="list-decimal list-inside mb-4 space-y-2 text-gray-300" {...props} />,
+                  li: ({node, ...props}) => <li className="text-gray-300" {...props} />,
+                  code: ({node, inline, ...props}) =>
+                    inline ? (
+                      <code className="bg-white/10 px-2 py-1 rounded text-emerald-300 text-sm" {...props} />
+                    ) : (
+                      <code className="block bg-white/5 p-4 rounded-xl text-emerald-300 text-sm overflow-x-auto" {...props} />
+                    ),
+                  strong: ({node, ...props}) => <strong className="font-bold text-white" {...props} />,
+                  a: ({node, ...props}) => <a className="text-emerald-400 hover:text-cyan-400 underline transition-colors" {...props} />,
+                }}
+              >
+                {post.content}
+              </ReactMarkdown>
+            )}
           </div>
 
           {/* Share Section */}

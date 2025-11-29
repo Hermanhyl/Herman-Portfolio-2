@@ -3,14 +3,17 @@ import LivePreview from "../livePreview";
 
 function ProjectCard({ project }) {
   return (
-    <Link to={`/project/${project.id}`} className="block w-full h-full">
-      <div className="relative w-full h-full bg-gray-800 rounded-2xl p-5 lg:p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col group overflow-hidden cursor-pointer transform hover:scale-[1.02]">
-        {/* Animated glowing border */}
-        <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-emerald-400 via-pink-500 to-purple-500 blur-lg opacity-0 group-hover:opacity-100 animate-glow-spin pointer-events-none z-0"></div>
+    <Link
+      to={`/project/${project.id}`}
+      className="block w-full h-full focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black rounded-2xl group"
+    >
+      {/* Card container - visible border that highlights on hover */}
+      <div className="relative w-full h-full bg-gray-800 rounded-2xl border-2 border-gray-600 hover:border-emerald-500/70 shadow-md hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-300 flex flex-col cursor-pointer transform hover:scale-[1.02]">
 
-        {/* Card content */}
-        <div className="relative z-10 flex flex-col h-full">
-          <div className="w-full h-72 md:h-80 lg:h-96 xl:h-[26rem] mb-5 overflow-hidden rounded-xl bg-gray-700">
+        {/* Card content with proper padding */}
+        <div className="flex flex-col h-full p-6 lg:p-8">
+          {/* Live Preview */}
+          <div className="w-full h-72 md:h-80 lg:h-96 xl:h-[26rem] mb-6 overflow-hidden rounded-xl bg-gray-700">
             <LivePreview
               url={project.live}
               fallbackImage={project.images[0]}
@@ -18,14 +21,33 @@ function ProjectCard({ project }) {
             />
           </div>
 
+          {/* Title */}
           <h3 className="text-xl lg:text-2xl font-semibold text-white group-hover:text-emerald-400 transition-colors duration-300 mb-3">
             {project.title}
           </h3>
 
-          <div className="text-gray-400 group-hover:text-gray-200 mb-5 flex-grow space-y-2 transition-colors duration-300 text-sm lg:text-base">
+          {/* Technology badges */}
+          <div className="flex flex-wrap gap-2 mb-4">
+            {project.technologies.slice(0, 4).map((tech, index) => (
+              <span
+                key={index}
+                className="px-3 py-1 text-xs font-medium bg-white/5 border border-white/10 rounded-full text-gray-300 group-hover:border-emerald-500/30 group-hover:text-emerald-300 transition-all duration-300"
+              >
+                {tech}
+              </span>
+            ))}
+            {project.technologies.length > 4 && (
+              <span className="px-3 py-1 text-xs font-medium bg-white/5 border border-white/10 rounded-full text-gray-400">
+                +{project.technologies.length - 4}
+              </span>
+            )}
+          </div>
+
+          {/* Teaser text */}
+          <div className="text-gray-400 group-hover:text-gray-200 mb-6 flex-grow space-y-2 transition-colors duration-300 text-sm lg:text-base">
             {project.teaser
               ? project.teaser.split("\n\n").map((paragraph, index) => (
-                  <p key={index} className="transition-colors duration-300 leading-relaxed">
+                  <p key={index} className="transition-colors duration-300 leading-relaxed line-clamp-3">
                     {paragraph}
                   </p>
                 ))
@@ -37,8 +59,9 @@ function ProjectCard({ project }) {
             }
           </div>
 
+          {/* CTA Button */}
           <div className="inline-flex mt-auto">
-            <span className="px-6 py-2.5 text-sm lg:text-base bg-emerald-500 group-hover:bg-emerald-600 rounded-md text-white transition-colors duration-200 font-medium">
+            <span className="px-6 py-2.5 text-sm lg:text-base bg-gradient-to-r from-emerald-500 to-cyan-500 group-hover:from-emerald-600 group-hover:to-cyan-600 rounded-lg text-white transition-all duration-300 font-medium shadow-lg group-hover:shadow-emerald-500/25">
               View Project →
             </span>
           </div>

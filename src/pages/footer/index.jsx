@@ -7,7 +7,7 @@ function Footer() {
 
   const socialLinks = [
     {
-      href: "https://www.linkedin.com/in/herman-hylland-86969718b/",
+      href: "https://www.linkedin.com/in/herman-hylland/",
       icon: Linkedin,
       label: "LinkedIn",
       color: "hover:text-blue-400"
@@ -64,7 +64,7 @@ function Footer() {
                 <Link
                   key={link.to}
                   to={link.to}
-                  className="text-gray-400 hover:text-emerald-400 transition-colors duration-300 text-sm lg:text-base"
+                  className="text-gray-400 hover:text-emerald-400 transition-colors duration-300 text-sm lg:text-base focus:outline-none focus:text-emerald-400 rounded"
                 >
                   {link.label}
                 </Link>
@@ -85,7 +85,7 @@ function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.label}
-                    className={`p-3 lg:p-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-all duration-300 transform hover:scale-110 text-gray-400 ${social.color}`}
+                    className={`p-3 lg:p-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-all duration-300 transform hover:scale-110 text-gray-400 ${social.color} focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black`}
                   >
                     <Icon className="w-5 h-5 lg:w-6 lg:h-6" />
                   </a>
@@ -94,7 +94,7 @@ function Footer() {
             </div>
             <a
               href="mailto:hermanhyl@hotmail.com"
-              className="inline-flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors duration-300 text-sm lg:text-base mt-4"
+              className="inline-flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors duration-300 text-sm lg:text-base mt-4 focus:outline-none focus:text-emerald-400 rounded"
             >
               <Mail className="w-4 h-4 lg:w-5 lg:h-5" />
               hermanhyl@hotmail.com

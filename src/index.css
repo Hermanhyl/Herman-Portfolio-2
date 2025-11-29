@@ -152,6 +152,20 @@
   animation: fade-in-scale 0.5s ease-out forwards;
 }
 
+/* Floating animation for speech bubble */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
 /* Staggered animation delays for children */
 .stagger-1 { animation-delay: 0.1s; }
 .stagger-2 { animation-delay: 0.2s; }

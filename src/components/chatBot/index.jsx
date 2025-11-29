@@ -4,6 +4,8 @@ import { MessageCircle, X, Send, Loader2, Bot, User, Sparkles, RotateCcw } from 
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [showPromptBubble, setShowPromptBubble] = useState(false);
+  const [hasInteracted, setHasInteracted] = useState(false);
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
@@ -22,6 +24,33 @@ export default function ChatBot() {
     }, 1000);
     return () => clearTimeout(timer);
   }, []);
+
+  // Show prompt bubble after 30 seconds if user hasn't interacted with chat
+  useEffect(() => {
+    if (hasInteracted) return;
+
+    const promptTimer = setTimeout(() => {
+      if (!isOpen && !hasInteracted) {
+        setShowPromptBubble(true);
+      }
+    }, 30000); // 30 seconds
+
+    return () => clearTimeout(promptTimer);
+  }, [isOpen, hasInteracted]);
+
+  // Hide prompt bubble when chat is opened
+  const handleOpenChat = () => {
+    setIsOpen(true);
+    setShowPromptBubble(false);
+    setHasInteracted(true);
+  };
+
+  // Dismiss prompt bubble
+  const dismissPromptBubble = (e) => {
+    e.stopPropagation();
+    setShowPromptBubble(false);
+    setHasInteracted(true);
+  };
 
   // Prevent body scroll when chat is open on mobile
   useEffect(() => {
@@ -130,21 +159,74 @@ export default function ChatBot() {
     <>
       {/* Floating Chat Button */}
       {!isOpen && isVisible && (
-        <button
-          onClick={() => setIsOpen(true)}
-          className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 p-3 sm:p-4 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white rounded-full shadow-2xl transition-all duration-500 transform hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 group animate-in fade-in slide-in-from-bottom-8 duration-700"
-          aria-label="Open AI chat assistant"
-          style={{ animationDelay: '200ms' }}
-        >
-          <div className="relative">
-            <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
-            <Sparkles className="w-2.5 h-2.5 sm:w-3 sm:h-3 absolute -top-1 -right-1 text-yellow-300 animate-pulse" />
-          </div>
-          {/* Tooltip - hidden on mobile */}
-          <span className="hidden sm:block absolute bottom-full right-0 mb-2 px-3 py-1 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-            Ask AI about Herman
-          </span>
-        </button>
+        <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
+          {/* Speech Bubble Prompt */}
+          {showPromptBubble && (
+            <div className="absolute bottom-full right-0 mb-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
+              {/* Floating animation wrapper */}
+              <div className="animate-float">
+                {/* Glow effect behind bubble */}
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/30 via-cyan-500/30 to-purple-500/30 blur-xl rounded-2xl"></div>
+
+                <div className="relative backdrop-blur-md bg-gray-900/90 border border-white/20 rounded-2xl px-4 py-3 sm:px-5 sm:py-4 shadow-2xl min-w-[140px] sm:min-w-[280px] md:min-w-[320px]">
+                  {/* Gradient border effect */}
+                  <div className="absolute -inset-[1px] bg-gradient-to-r from-emerald-500 via-cyan-500 to-purple-500 rounded-2xl -z-10 opacity-60"></div>
+
+                  {/* Close button */}
+                  <button
+                    onClick={dismissPromptBubble}
+                    className="absolute -top-2 -right-2 w-6 h-6 bg-gray-800 hover:bg-gray-700 border border-white/20 text-gray-400 hover:text-white rounded-full flex items-center justify-center transition-all duration-200 shadow-lg"
+                    aria-label="Dismiss prompt"
+                  >
+                    <X className="w-3 h-3" />
+                  </button>
+
+                  {/* Message - different text for mobile vs desktop */}
+                  <div className="flex items-start gap-3">
+                    <div className="hidden sm:flex shrink-0 w-8 h-8 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full items-center justify-center">
+                      <Sparkles className="w-4 h-4 text-white" />
+                    </div>
+                    <div>
+                      {/* Mobile: Short text */}
+                      <p className="sm:hidden text-white text-sm font-medium">
+                        Ask AI! 💬
+                      </p>
+                      {/* Desktop: Full text */}
+                      <p className="hidden sm:block text-white text-sm md:text-base font-medium leading-relaxed">
+                        Hey there! 👋 Got questions about Herman's work or skills?
+                      </p>
+                      <p className="hidden sm:block text-gray-200 text-xs md:text-sm mt-1">
+                        I'm here to help - ask me anything!
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Speech bubble tail */}
+                  <div className="absolute -bottom-2 right-6 w-4 h-4 bg-gray-900/90 border-r border-b border-white/20 transform rotate-45"></div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Chat Button */}
+          <button
+            onClick={handleOpenChat}
+            className="p-3 sm:p-4 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white rounded-full shadow-2xl transition-all duration-500 transform hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 group animate-in fade-in slide-in-from-bottom-8 duration-700"
+            aria-label="Open AI chat assistant"
+            style={{ animationDelay: '200ms' }}
+          >
+            <div className="relative">
+              <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
+              <Sparkles className="w-2.5 h-2.5 sm:w-3 sm:h-3 absolute -top-1 -right-1 text-yellow-300 animate-pulse" />
+            </div>
+            {/* Tooltip - hidden on mobile and when prompt bubble is shown */}
+            {!showPromptBubble && (
+              <span className="hidden sm:block absolute bottom-full right-0 mb-2 px-3 py-1 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                Ask AI about Herman
+              </span>
+            )}
+          </button>
+        </div>
       )}
 
       {/* Chat Window - Full screen on mobile, floating on desktop */}

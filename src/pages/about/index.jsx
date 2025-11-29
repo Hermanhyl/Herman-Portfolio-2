@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
-import { Code, Palette, Rocket, GraduationCap, Briefcase, Download, Award, Sparkles, Terminal, Layers, Brain, ArrowRight, MapPin, Calendar } from 'lucide-react';
+import { Code, Palette, Rocket, GraduationCap, Briefcase, Award, Sparkles, Terminal, Layers, Brain, ArrowRight, MapPin, Calendar } from 'lucide-react';
 import OptimizedImage from '../../components/optimizedImage';
 import ScrollReveal from '../../components/scrollReveal';
 import GradientButton from '../../components/gradientButton';
+import CVDownloadButton from '../../components/cvDownloadButton';
 import AnimatedCounter from '../../components/animatedCounter';
 import AnimatedSkillBar from '../../components/animatedSkillBar';
 
@@ -124,10 +125,8 @@ function About() {
                 Bridging technology and art with 2+ years in frontend development and 3+ years in digital design. Creating accessible, interactive web experiences.
               </p>
 
-              <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-                <GradientButton href="/Herman_Hylland_CV.pdf" icon={Download}>
-                  Download CV
-                </GradientButton>
+              <div className="flex flex-wrap gap-4 justify-center lg:justify-start relative z-20">
+                <CVDownloadButton />
                 <GradientButton to="/contact" variant="secondary" icon={ArrowRight}>
                   Get In Touch
                 </GradientButton>

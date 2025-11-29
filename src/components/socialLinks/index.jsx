@@ -63,15 +63,23 @@ function SocialLink({ platform, variant = 'icon', size = 'md' }) {
 
   // Icon only variant (for header/footer)
   if (variant === 'icon') {
+    // Platform-specific hover backgrounds
+    const hoverBg = {
+      linkedin: 'hover:bg-blue-500/20 hover:border-blue-500/50',
+      github: 'hover:bg-white/20 hover:border-white/50',
+      instagram: 'hover:bg-pink-500/20 hover:border-pink-500/50',
+      email: 'hover:bg-emerald-500/20 hover:border-emerald-500/50',
+    };
+
     return (
       <a
         href={url}
         target={isExternal ? '_blank' : undefined}
         rel={isExternal ? 'noopener noreferrer' : undefined}
         aria-label={`${isExternal ? 'Visit' : 'Contact via'} ${label}${isExternal ? ' (opens in new tab)' : ''}`}
-        className={`p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 ${ringColor} focus:ring-offset-2 focus:ring-offset-black group`}
+        className={`p-2 rounded-xl bg-white/5 border border-white/10 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 focus:outline-none focus:ring-2 ${ringColor} focus:ring-offset-2 focus:ring-offset-black group ${hoverBg[platform] || 'hover:bg-white/10'}`}
       >
-        <Icon className={`${iconSize} ${color} ${hoverColor} transition-colors`} aria-hidden="true" />
+        <Icon className={`${iconSize} ${color} ${hoverColor} transition-colors duration-300`} aria-hidden="true" />
       </a>
     );
   }

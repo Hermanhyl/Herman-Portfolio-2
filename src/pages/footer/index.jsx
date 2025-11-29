@@ -10,19 +10,25 @@ function Footer() {
       href: "https://www.linkedin.com/in/herman-hylland/",
       icon: Linkedin,
       label: "LinkedIn",
-      color: "hover:text-blue-400"
+      hoverColor: "group-hover:text-blue-400",
+      hoverBg: "group-hover:bg-blue-500/20",
+      hoverBorder: "group-hover:border-blue-500/50"
     },
     {
       href: "https://github.com/Hermanhyl",
       icon: Github,
       label: "GitHub",
-      color: "hover:text-gray-300"
+      hoverColor: "group-hover:text-white",
+      hoverBg: "group-hover:bg-white/20",
+      hoverBorder: "group-hover:border-white/50"
     },
     {
       href: "https://www.instagram.com/hermanhyl98/",
       icon: Instagram,
       label: "Instagram",
-      color: "hover:text-pink-400"
+      hoverColor: "group-hover:text-pink-400",
+      hoverBg: "group-hover:bg-pink-500/20",
+      hoverBorder: "group-hover:border-pink-500/50"
     },
   ];
 
@@ -64,9 +70,9 @@ function Footer() {
                 <Link
                   key={link.to}
                   to={link.to}
-                  className="text-gray-400 hover:text-emerald-400 transition-colors duration-300 text-sm lg:text-base focus:outline-none focus:text-emerald-400 rounded"
+                  className="group text-gray-400 hover:text-emerald-400 transition-all duration-300 text-sm lg:text-base focus:outline-none focus:text-emerald-400 rounded inline-flex items-center justify-center gap-1"
                 >
-                  {link.label}
+                  <span className="group-hover:translate-x-1 transition-transform duration-300">{link.label}</span>
                 </Link>
               ))}
             </div>
@@ -75,7 +81,7 @@ function Footer() {
           {/* Social & Contact */}
           <div className="text-center md:text-right space-y-4">
             <h3 className="text-white font-semibold text-lg lg:text-xl mb-4">Connect</h3>
-            <div className="flex justify-center md:justify-end gap-4">
+            <div className="flex justify-center md:justify-end gap-3">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
                 return (
@@ -84,20 +90,20 @@ function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={social.label}
-                    className={`p-3 lg:p-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-all duration-300 transform hover:scale-110 text-gray-400 ${social.color} focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black`}
+                    aria-label={`Visit ${social.label} (opens in new tab)`}
+                    className={`group relative p-3 lg:p-4 bg-white/5 border border-white/10 rounded-xl transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 text-gray-400 ${social.hoverBg} ${social.hoverBorder} focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black`}
                   >
-                    <Icon className="w-5 h-5 lg:w-6 lg:h-6" />
+                    <Icon className={`w-5 h-5 lg:w-6 lg:h-6 transition-colors duration-300 ${social.hoverColor}`} />
                   </a>
                 );
               })}
             </div>
             <a
               href="mailto:hermanhyl@hotmail.com"
-              className="inline-flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors duration-300 text-sm lg:text-base mt-4 focus:outline-none focus:text-emerald-400 rounded"
+              className="group inline-flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-all duration-300 text-sm lg:text-base mt-4 focus:outline-none focus:text-emerald-400 rounded"
             >
-              <Mail className="w-4 h-4 lg:w-5 lg:h-5" />
-              hermanhyl@hotmail.com
+              <Mail className="w-4 h-4 lg:w-5 lg:h-5 group-hover:scale-110 transition-transform duration-300" />
+              <span className="group-hover:underline underline-offset-4">hermanhyl@hotmail.com</span>
             </a>
           </div>
         </div>

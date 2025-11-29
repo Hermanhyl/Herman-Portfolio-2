@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import OptimizedImage from '../optimizedImage';
 
 /**
  * LivePreview component - Displays a live iframe preview of a website
  * Falls back to static image if iframe fails to load
+ * Dynamically scales to fill container at any size
  *
  * @param {Object} props - Component props
  * @param {string} props.url - Live website URL to preview
@@ -13,6 +14,36 @@ import OptimizedImage from '../optimizedImage';
 function LivePreview({ url, fallbackImage, title }) {
   const [iframeError, setIframeError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [scale, setScale] = useState(0.35);
+  const containerRef = useRef(null);
+
+  // Base iframe dimensions (viewport size to capture)
+  const IFRAME_WIDTH = 1400;
+  const IFRAME_HEIGHT = 900;
+
+  // Calculate scale based on container size
+  useEffect(() => {
+    const calculateScale = () => {
+      if (!containerRef.current) return;
+
+      const containerWidth = containerRef.current.offsetWidth;
+      const containerHeight = containerRef.current.offsetHeight;
+
+      // Calculate scale to fill container while maintaining aspect ratio
+      const scaleX = containerWidth / IFRAME_WIDTH;
+      const scaleY = containerHeight / IFRAME_HEIGHT;
+
+      // Use the larger scale to ensure full coverage (cover behavior)
+      const newScale = Math.max(scaleX, scaleY);
+      setScale(newScale);
+    };
+
+    calculateScale();
+
+    // Recalculate on window resize
+    window.addEventListener('resize', calculateScale);
+    return () => window.removeEventListener('resize', calculateScale);
+  }, []);
 
   // If iframe fails or we have an error, show fallback image
   if (iframeError) {
@@ -26,15 +57,15 @@ function LivePreview({ url, fallbackImage, title }) {
   }
 
   return (
-    <div className="relative w-full h-full">
+    <div ref={containerRef} className="relative w-full h-full overflow-hidden rounded-xl">
       {/* Loading skeleton */}
       {isLoading && (
-        <div className="absolute inset-0 bg-gray-700 animate-pulse rounded-xl flex items-center justify-center">
+        <div className="absolute inset-0 bg-gray-700 animate-pulse rounded-xl flex items-center justify-center z-10">
           <div className="text-gray-400 text-sm">Loading preview...</div>
         </div>
       )}
 
-      {/* Live iframe preview - scaled to show more content */}
+      {/* Live iframe preview - dynamically scaled to fill container */}
       <iframe
         src={url}
         title={`Live preview of ${title}`}
@@ -47,16 +78,16 @@ function LivePreview({ url, fallbackImage, title }) {
           setIsLoading(false);
         }}
         style={{
-          pointerEvents: 'none', // Prevent interaction with iframe
-          width: '1400px', // Large viewport to capture more content
-          height: '1050px', // Proportional height
-          transform: 'scale(0.35)', // Scale down to fit
+          pointerEvents: 'none',
+          width: `${IFRAME_WIDTH}px`,
+          height: `${IFRAME_HEIGHT}px`,
+          transform: `scale(${scale})`,
           transformOrigin: 'top left',
-          colorScheme: 'light' // Force light mode in iframe
+          colorScheme: 'light'
         }}
       />
 
-      {/* Overlay to ensure no interaction and indicate it's a preview */}
+      {/* Overlay to ensure no interaction */}
       <div className="absolute inset-0 pointer-events-none rounded-xl" aria-hidden="true"></div>
     </div>
   );

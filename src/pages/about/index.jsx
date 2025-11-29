@@ -1,283 +1,335 @@
-import { Code, Palette, Rocket, GraduationCap, Briefcase, Download, Award, Target, Sparkles, Terminal, Layers, Brain } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Code, Palette, Rocket, GraduationCap, Briefcase, Download, Award, Sparkles, Terminal, Layers, Brain, ArrowRight, MapPin, Calendar } from 'lucide-react';
 import OptimizedImage from '../../components/optimizedImage';
+import ScrollReveal from '../../components/scrollReveal';
+import GradientButton from '../../components/gradientButton';
+import AnimatedCounter from '../../components/animatedCounter';
+import AnimatedSkillBar from '../../components/animatedSkillBar';
+
+// Data
+const skills = [
+  { name: 'React', level: 90, color: 'from-cyan-400 to-blue-500' },
+  { name: 'JavaScript', level: 85, color: 'from-yellow-400 to-orange-400' },
+  { name: 'Tailwind CSS', level: 92, color: 'from-cyan-400 to-emerald-400' },
+  { name: 'HTML/CSS', level: 95, color: 'from-orange-400 to-red-400' },
+  { name: 'Figma / UI Design', level: 88, color: 'from-purple-400 to-pink-400' },
+  { name: 'API Integration', level: 80, color: 'from-emerald-400 to-cyan-400' },
+];
+
+const stats = [
+  { icon: Award, value: '2+', label: 'Years Frontend' },
+  { icon: Code, value: '10+', label: 'Projects Built' },
+  { icon: Palette, value: '3+', label: 'Years Design' },
+  { icon: GraduationCap, value: '2', label: 'Degrees' },
+];
+
+const timeline = [
+  {
+    year: 'Feb 2025 - Present',
+    title: 'Customer Service Agent',
+    company: 'Foundever',
+    description: 'Handling insurance cases via phone support. Using Salesforce CRM for case management.',
+    icon: Briefcase,
+    type: 'work'
+  },
+  {
+    year: 'Aug 2023 - May 2025',
+    title: 'Front-End Development',
+    company: 'Noroff School of Technology',
+    description: '2-year vocational degree. Specialized in React, JavaScript, and modern web development.',
+    icon: GraduationCap,
+    type: 'education'
+  },
+  {
+    year: 'Sep 2022 - Mar 2023',
+    title: 'Visual Designer',
+    company: 'Nanopow',
+    description: 'UI/UX design and visual identity. Strategic decisions about color, imagery, and layout.',
+    icon: Palette,
+    type: 'work'
+  },
+  {
+    year: 'Aug 2019 - May 2022',
+    title: 'Bachelor in Animation & Digital Art',
+    company: 'Høgskolen i Innlandet',
+    description: 'Technical development with concept art, 3D design, and animation.',
+    icon: GraduationCap,
+    type: 'education'
+  },
+];
+
+const skillCategories = [
+  {
+    title: 'Development',
+    icon: Terminal,
+    gradient: 'from-emerald-400 to-cyan-400',
+    bgGradient: 'from-emerald-500/10 to-cyan-500/10',
+    borderColor: 'border-emerald-500/30 hover:border-emerald-400/50',
+    skills: ['React', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'HTML/CSS', 'REST APIs']
+  },
+  {
+    title: 'Design',
+    icon: Layers,
+    gradient: 'from-purple-400 to-pink-400',
+    bgGradient: 'from-purple-500/10 to-pink-500/10',
+    borderColor: 'border-purple-500/30 hover:border-purple-400/50',
+    skills: ['UI/UX Design', 'Figma', 'Adobe Suite', 'Digital Illustration', '3D & Animation']
+  },
+  {
+    title: 'AI & Tools',
+    icon: Brain,
+    gradient: 'from-cyan-400 to-blue-400',
+    bgGradient: 'from-cyan-500/10 to-blue-500/10',
+    borderColor: 'border-cyan-500/30 hover:border-cyan-400/50',
+    skills: ['Claude API', 'OpenAI API', 'AI Integration', 'Prompt Engineering', 'Git/GitHub']
+  }
+];
 
 function About() {
-  const skills = [
-    { name: 'React', level: 90, color: 'from-blue-400 to-cyan-400' },
-    { name: 'JavaScript', level: 75, color: 'from-yellow-400 to-orange-400' },
-    { name: 'Tailwind CSS', level: 90, color: 'from-cyan-400 to-blue-500' },
-    { name: 'HTML/CSS', level: 95, color: 'from-orange-400 to-red-400' },
-    { name: 'Figma / Adobe XD', level: 85, color: 'from-purple-400 to-pink-400' },
-    { name: 'Adobe Suite', level: 80, color: 'from-pink-400 to-purple-400' },
-    { name: 'API Integration', level: 75, color: 'from-emerald-400 to-cyan-400' },
-    { name: 'Visual Studio Code', level: 90, color: 'from-gray-400 to-blue-400' },
-  ];
-
-  const stats = [
-    { icon: Award, value: '2', label: 'Years Front-End Study' },
-    { icon: Code, value: '10+', label: 'Projects Completed' },
-    { icon: Palette, value: '3', label: 'Years Design Study' },
-    { icon: GraduationCap, value: '2', label: 'Degrees Earned' },
-  ];
-
-  const timeline = [
-    {
-      year: 'Feb 2025 - Present',
-      title: 'Customer Service Agent - Foundever',
-      description: 'Handling insurance cases for electronic devices via phone support. Using Salesforce CRM for case management and documentation.',
-      icon: Briefcase,
-      color: 'emerald'
-    },
-    {
-      year: 'Aug 2023 - May 2025',
-      title: 'Front-End Development Degree',
-      description: 'Noroff School of Technology and Digital Media - 2-year vocational education in Front-End Development. Specialized in React, JavaScript, and modern web development workflows.',
-      icon: GraduationCap,
-      color: 'cyan'
-    },
-    {
-      year: 'Sep 2022 - Mar 2023',
-      title: 'Visual Designer - Nanopow',
-      description: 'Developed UI/UX design and established visual identity for company website. Made strategic decisions about color palette, imagery, and layout using Squarespace CMS.',
-      icon: Palette,
-      color: 'purple'
-    },
-    {
-      year: 'Nov 2021 - Jun 2022',
-      title: 'Bachelor Thesis - VR Fire Safety Training',
-      description: 'Developed interactive VR simulation for fire safety training using Unreal Engine at Sykehuspartner. Focused on realistic scenarios and user experience in high-risk environments.',
-      icon: Code,
-      color: 'orange'
-    },
-    {
-      year: 'Aug 2019 - May 2022',
-      title: 'Bachelor in Animation & Digital Art',
-      description: 'Høgskolen i Innlandet - Combined technical development with concept art, 3D design, and animation. Built foundation in visual design and creative problem-solving.',
-      icon: GraduationCap,
-      color: 'pink'
-    },
-  ];
-
-  const skillCategories = [
-    {
-      title: 'Development',
-      icon: Terminal,
-      color: 'emerald',
-      gradient: 'from-emerald-400 to-cyan-400',
-      skills: [
-        'React',
-        'JavaScript',
-        'TypeScript',
-        'Next.js',
-        'Supabase',
-        'Tailwind CSS',
-        'HTML',
-        'CSS',
-        'APIs'
-      ]
-    },
-    {
-      title: 'Design',
-      icon: Layers,
-      color: 'purple',
-      gradient: 'from-purple-400 to-pink-400',
-      skills: [
-        'UI/UX Design (Figma)',
-        'Digital Illustration',
-        '3D & Animation'
-      ]
-    },
-    {
-      title: 'AI & Tools',
-      icon: Brain,
-      color: 'cyan',
-      gradient: 'from-cyan-400 to-blue-400',
-      skills: [
-        'Claude API',
-        'AI Integration',
-        'Prompt Engineering',
-        'Claude Code'
-      ]
-    }
-  ];
-
   return (
     <div className="relative min-h-screen w-full bg-gradient-to-b from-black via-gray-900 to-black px-4 py-20 text-white">
-      <div className="max-w-6xl mx-auto space-y-16">
+      <div className="max-w-6xl mx-auto space-y-20">
 
-        {/* Header Section with Profile Image */}
-        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-          <div className="flex-shrink-0">
-            <div className="animated-border p-1 rounded-full">
+        {/* Hero Section */}
+        <ScrollReveal>
+          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+            {/* Profile Image with rotating border */}
+            <div className="flex-shrink-0 relative group">
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 animate-spin-slow opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0.5 rounded-full bg-gray-900"></div>
               <OptimizedImage
                 src="/profilepicture.jpg"
-                alt="Profile"
+                alt="Herman Hylland - Front-End Developer"
                 eager={true}
-                className="w-48 h-48 md:w-56 md:h-56 object-cover rounded-full"
+                className="relative w-52 h-52 md:w-64 md:h-64 object-cover rounded-full"
               />
             </div>
+
+            {/* Hero Text */}
+            <div className="flex-1 text-center lg:text-left space-y-6">
+              <div className="space-y-2">
+                <p className="text-emerald-400 font-medium flex items-center justify-center lg:justify-start gap-2">
+                  <MapPin className="w-4 h-4" />
+                  Norway / Open to Germany
+                </p>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text leading-tight">
+                  Herman Hylland
+                </h1>
+                <p className="text-xl md:text-2xl text-gray-300">
+                  Front-End Developer & Digital Designer
+                </p>
+              </div>
+
+              <p className="text-gray-400 text-lg max-w-xl">
+                Bridging technology and art with 2+ years in frontend development and 3+ years in digital design. Creating accessible, interactive web experiences.
+              </p>
+
+              <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+                <GradientButton href="/Herman_Hylland_CV.pdf" icon={Download}>
+                  Download CV
+                </GradientButton>
+                <GradientButton to="/contact" variant="secondary" icon={ArrowRight}>
+                  Get In Touch
+                </GradientButton>
+              </div>
+            </div>
           </div>
-          <div className="flex-1 text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text">
-              About Me
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-6">
-              Front-End Developer & Digital Designer
-            </p>
-            <a
-              href="/Herman_Hylland_CV.pdf"
-              download
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
-            >
-              <Download className="w-5 h-5" />
-              Download CV
-            </a>
-          </div>
-        </div>
+        </ScrollReveal>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {stats.map((stat, index) => (
-            <div key={index} className="animated-border backdrop-blur-md bg-white/10 p-6 rounded-xl text-center transform hover:scale-105 transition-all duration-300">
-              <stat.icon className="w-10 h-10 mx-auto mb-3 text-emerald-400" />
-              <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-emerald-400 to-cyan-400 text-transparent bg-clip-text">
-                {stat.value}
-              </div>
-              <div className="text-gray-300">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-
-        {/* Introduction */}
-        <div className="animated-border backdrop-blur-md bg-white/10 p-8 rounded-2xl">
-          <div className="flex items-center gap-3 mb-6">
-            <Rocket className="w-7 h-7 text-emerald-400" />
-            <h2 className="text-3xl font-bold">My Journey</h2>
-          </div>
-          <div className="space-y-4 text-gray-100 text-lg">
-            <p>
-              Hi, I'm a 27-year-old front-end developer with a unique background that bridges technology and art. With a Bachelor's degree in Animation and Digital Art and a recent vocational degree in Front-End Development from Noroff, I bring both technical expertise and creative vision to every project.
-            </p>
-            <p>
-              I'm skilled in React, JavaScript, and modern front-end workflows, combining technical development with user-centered design. My experience includes building responsive web solutions, working with APIs, and contributing to team-based development of digital services. I'm comfortable using AI-assisted coding tools like Claude to enhance productivity and streamline development processes.
-            </p>
-            <p>
-              From designing UI/UX for startups like Nanopow to developing VR training simulations with Unreal Engine, my work reflects a passion for creating accessible, interactive, and visually engaging digital experiences. Each project in this portfolio demonstrates my growth as both a developer and designer.
-            </p>
-          </div>
-        </div>
-
-        {/* Skills Section */}
-        <div className="animated-border backdrop-blur-md bg-white/10 p-8 rounded-2xl">
-          <div className="flex items-center gap-3 mb-6">
-            <Code className="w-7 h-7 text-cyan-400" />
-            <h2 className="text-3xl font-bold">Technical Skills</h2>
-          </div>
-          <div className="space-y-6">
-            {skills.map((skill, index) => (
-              <div key={index}>
-                <div className="flex justify-between mb-2">
-                  <span className="font-semibold text-gray-200">{skill.name}</span>
-                  <span className="text-gray-400">{skill.level}%</span>
+        <ScrollReveal>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            {stats.map((stat, index) => (
+              <div
+                key={index}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 hover:border-emerald-500/30 p-6 rounded-2xl text-center transition-all duration-300 hover:transform hover:scale-105 hover:bg-white/10"
+              >
+                <stat.icon className="w-8 h-8 mx-auto mb-3 text-emerald-400 group-hover:scale-110 transition-transform" />
+                <div className="text-3xl md:text-4xl font-bold mb-1 bg-gradient-to-r from-emerald-400 to-cyan-400 text-transparent bg-clip-text">
+                  <AnimatedCounter value={stat.value} />
                 </div>
-                <div className="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
-                  <div
-                    className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 ease-out`}
-                    style={{ width: `${skill.level}%` }}
-                  />
-                </div>
+                <div className="text-gray-400 text-sm md:text-base">{stat.label}</div>
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
 
-        {/* Skills Showcase Section */}
-        <div className="animated-border backdrop-blur-md bg-white/10 p-8 rounded-2xl">
-          <div className="flex items-center gap-3 mb-8">
-            <Sparkles className="w-7 h-7 text-emerald-400" />
-            <h2 className="text-3xl font-bold">Skills & Expertise</h2>
+        {/* My Story Section */}
+        <ScrollReveal>
+          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-8 md:p-10">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+
+            <div className="relative">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-2 bg-emerald-500/20 rounded-lg">
+                  <Rocket className="w-6 h-6 text-emerald-400" />
+                </div>
+                <h2 className="text-2xl md:text-3xl font-bold">My Story</h2>
+              </div>
+
+              <div className="space-y-4 text-gray-300 text-lg leading-relaxed">
+                <p>
+                  I'm a <span className="text-white font-medium">27-year-old developer</span> with a unique background bridging technology and art. With a Bachelor's in Animation & Digital Art and a vocational degree in Front-End Development, I bring both technical expertise and creative vision to every project.
+                </p>
+                <p>
+                  Skilled in <span className="text-emerald-400">React, JavaScript, and modern frontend workflows</span>, I combine technical development with user-centered design. My experience spans building responsive web solutions, API integrations, and team-based development.
+                </p>
+                <p>
+                  From designing UI/UX for startups to developing VR training simulations, my work reflects a passion for creating <span className="text-cyan-400">accessible, interactive, and visually engaging</span> digital experiences.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        </ScrollReveal>
+
+        {/* Skills & Expertise */}
+        <div className="space-y-8">
+          <ScrollReveal>
+            <div className="text-center space-y-4">
+              <div className="inline-flex items-center gap-2 bg-purple-500/20 border border-purple-500/50 px-4 py-2 rounded-full">
+                <Sparkles className="w-4 h-4 text-purple-400" />
+                <span className="text-purple-300 text-sm font-medium">What I Work With</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold">Skills & Expertise</h2>
+            </div>
+          </ScrollReveal>
+
+          {/* Skill Categories */}
+          <div className="grid md:grid-cols-3 gap-6">
             {skillCategories.map((category, index) => {
               const Icon = category.icon;
               return (
-                <div
-                  key={index}
-                  className="group relative bg-gradient-to-br from-white/5 to-white/10 p-6 rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
-                >
-                  {/* Gradient overlay on hover */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-10 rounded-xl transition-opacity duration-300`}></div>
-
-                  <div className="relative">
-                    {/* Icon */}
-                    <div className={`inline-flex p-3 mb-4 rounded-lg bg-gradient-to-br ${category.gradient} bg-opacity-20`}>
-                      <Icon className={`w-8 h-8 bg-gradient-to-br ${category.gradient} text-transparent bg-clip-text`} style={{
-                        filter: 'drop-shadow(0 0 8px currentColor)'
-                      }} />
+                <ScrollReveal key={index} delay={index * 100}>
+                  <div className={`group h-full relative bg-gradient-to-br ${category.bgGradient} p-6 rounded-2xl border ${category.borderColor} transition-all duration-300 hover:transform hover:scale-[1.02]`}>
+                    <div className={`inline-flex p-3 mb-4 rounded-xl bg-gradient-to-br ${category.gradient}`}>
+                      <Icon className="w-6 h-6 text-white" />
                     </div>
 
-                    {/* Title */}
-                    <h3 className={`text-2xl font-bold mb-4 bg-gradient-to-r ${category.gradient} text-transparent bg-clip-text`}>
+                    <h3 className={`text-xl font-bold mb-4 bg-gradient-to-r ${category.gradient} text-transparent bg-clip-text`}>
                       {category.title}
                     </h3>
 
-                    {/* Skills List */}
                     <ul className="space-y-2">
                       {category.skills.map((skill, skillIndex) => (
-                        <li key={skillIndex} className="flex items-start gap-2 text-gray-300">
-                          <span className={`mt-1.5 w-1.5 h-1.5 rounded-full bg-gradient-to-r ${category.gradient} flex-shrink-0`}></span>
-                          <span className="text-base">{skill}</span>
+                        <li key={skillIndex} className="flex items-center gap-2 text-gray-300 group-hover:text-gray-200 transition-colors">
+                          <span className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${category.gradient}`}></span>
+                          {skill}
                         </li>
                       ))}
                     </ul>
                   </div>
-                </div>
+                </ScrollReveal>
               );
             })}
           </div>
-        </div>
 
-        {/* Timeline Section */}
-        <div className="animated-border backdrop-blur-md bg-white/10 p-8 rounded-2xl">
-          <div className="flex items-center gap-3 mb-8">
-            <GraduationCap className="w-7 h-7 text-purple-400" />
-            <h2 className="text-3xl font-bold">Education & Experience</h2>
-          </div>
-          <div className="space-y-6">
-            {timeline.map((item, index) => (
-              <div key={index} className="flex gap-6 group">
-                <div className="flex flex-col items-center">
-                  <div className={`p-3 rounded-full bg-${item.color}-500/20 border-2 border-${item.color}-500 group-hover:scale-110 transition-transform`}>
-                    <item.icon className={`w-6 h-6 text-${item.color}-400`} />
-                  </div>
-                  {index !== timeline.length - 1 && (
-                    <div className="w-0.5 h-full bg-gradient-to-b from-gray-600 to-transparent mt-2" />
-                  )}
+          {/* Skill Bars */}
+          <ScrollReveal>
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="p-2 bg-cyan-500/20 rounded-lg">
+                  <Code className="w-6 h-6 text-cyan-400" />
                 </div>
-                <div className="flex-1 pb-8">
-                  <div className="text-sm font-semibold text-gray-400 mb-1">{item.year}</div>
-                  <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                  <p className="text-gray-300">{item.description}</p>
-                </div>
+                <h3 className="text-xl font-bold">Proficiency Levels</h3>
               </div>
-            ))}
+
+              <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
+                {skills.map((skill, index) => (
+                  <AnimatedSkillBar
+                    key={index}
+                    name={skill.name}
+                    level={skill.level}
+                    color={skill.color}
+                    delay={index * 100}
+                  />
+                ))}
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+
+        {/* Timeline */}
+        <div className="space-y-8">
+          <ScrollReveal>
+            <div className="text-center space-y-4">
+              <div className="inline-flex items-center gap-2 bg-cyan-500/20 border border-cyan-500/50 px-4 py-2 rounded-full">
+                <Calendar className="w-4 h-4 text-cyan-400" />
+                <span className="text-cyan-300 text-sm font-medium">Career Path</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold">Experience & Education</h2>
+            </div>
+          </ScrollReveal>
+
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-emerald-500 via-cyan-500 to-purple-500 opacity-30"></div>
+
+            <div className="space-y-8">
+              {timeline.map((item, index) => {
+                const isLeft = index % 2 === 0;
+                const Icon = item.icon;
+                const isWork = item.type === 'work';
+
+                return (
+                  <ScrollReveal key={index} delay={index * 100}>
+                    <div className={`relative flex items-start gap-6 md:gap-0 ${isLeft ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                      {/* Content */}
+                      <div className={`flex-1 md:w-1/2 ${isLeft ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
+                        <div className={`group bg-white/5 hover:bg-white/10 backdrop-blur-sm border ${isWork ? 'border-emerald-500/20 hover:border-emerald-500/40' : 'border-purple-500/20 hover:border-purple-500/40'} rounded-2xl p-6 transition-all duration-300`}>
+                          <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium mb-3 ${isWork ? 'bg-emerald-500/20 text-emerald-300' : 'bg-purple-500/20 text-purple-300'}`}>
+                            {item.year}
+                          </span>
+                          <h3 className="text-xl font-bold text-white mb-1">{item.title}</h3>
+                          <p className={`font-medium mb-2 ${isWork ? 'text-emerald-400' : 'text-purple-400'}`}>{item.company}</p>
+                          <p className="text-gray-400 text-sm">{item.description}</p>
+                        </div>
+                      </div>
+
+                      {/* Icon */}
+                      <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 z-10">
+                        <div className={`p-3 rounded-full border-2 ${isWork ? 'bg-emerald-500/20 border-emerald-500' : 'bg-purple-500/20 border-purple-500'} transition-transform hover:scale-110`}>
+                          <Icon className={`w-5 h-5 ${isWork ? 'text-emerald-400' : 'text-purple-400'}`} />
+                        </div>
+                      </div>
+
+                      {/* Spacer for alternating layout */}
+                      <div className="hidden md:block flex-1 md:w-1/2"></div>
+                    </div>
+                  </ScrollReveal>
+                );
+              })}
+            </div>
           </div>
         </div>
 
-        {/* What I'm Looking For */}
-        <div className="animated-border backdrop-blur-md bg-white/10 p-8 rounded-2xl text-center">
-          <Briefcase className="w-12 h-12 mx-auto mb-4 text-emerald-400" />
-          <h2 className="text-3xl font-bold mb-4">Looking Forward</h2>
-          <p className="text-lg text-gray-100 max-w-2xl mx-auto">
-            I'm currently looking for opportunities in front-end development or digital design roles where I can continue to grow, collaborate, and contribute to meaningful projects. Let's build something amazing together!
-          </p>
-          <a
-            href="/contact"
-            className="inline-block mt-6 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
-          >
-            Get In Touch
-          </a>
-        </div>
+        {/* CTA Section */}
+        <ScrollReveal>
+          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-emerald-500/10 via-cyan-500/5 to-purple-500/10 p-10 md:p-14 text-center">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(16,185,129,0.1),transparent_50%)]"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(139,92,246,0.1),transparent_50%)]"></div>
+
+            <div className="relative space-y-6">
+              <div className="inline-flex p-4 bg-white/10 rounded-2xl mb-2">
+                <Briefcase className="w-10 h-10 text-emerald-400" />
+              </div>
+
+              <h2 className="text-3xl md:text-4xl font-bold">Let's Build Something Amazing</h2>
+
+              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+                I'm actively looking for frontend development or digital design opportunities where I can grow, collaborate, and contribute to meaningful projects.
+              </p>
+
+              <div className="flex flex-wrap gap-4 justify-center pt-4">
+                <GradientButton to="/contact" icon={ArrowRight} size="lg">
+                  Get In Touch
+                </GradientButton>
+                <GradientButton to="/" variant="secondary" size="lg">
+                  View My Work
+                </GradientButton>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
       </div>
     </div>
   );

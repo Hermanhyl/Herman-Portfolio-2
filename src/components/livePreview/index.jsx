@@ -69,7 +69,7 @@ function LivePreview({ url, fallbackImage, title }) {
       <iframe
         src={url}
         title={`Live preview of ${title}`}
-        className="absolute top-0 left-0 border-0 transition-transform duration-300 ease-in-out bg-white"
+        className="absolute top-1/2 left-1/2 border-0 transition-transform duration-300 ease-in-out bg-white"
         sandbox="allow-same-origin allow-scripts"
         loading="lazy"
         onLoad={() => setIsLoading(false)}
@@ -81,8 +81,8 @@ function LivePreview({ url, fallbackImage, title }) {
           pointerEvents: 'none',
           width: `${IFRAME_WIDTH}px`,
           height: `${IFRAME_HEIGHT}px`,
-          transform: `scale(${scale})`,
-          transformOrigin: 'top left',
+          transform: `translate(-50%, -50%) scale(${scale})`,
+          transformOrigin: 'center center',
           colorScheme: 'light'
         }}
       />

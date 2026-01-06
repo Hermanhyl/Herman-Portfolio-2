@@ -82,7 +82,7 @@ export const illustrations = [
   // Landscapes & Scenes
   { id: 22, src: "/Illustrasjoner portfolio/Space station perspective.png", title: "Space Station", category: "Landscapes & Scenes" },
   { id: 30, src: "/Illustrasjoner portfolio/Ship.jpg", title: "Ship", category: "Landscapes & Scenes" },
-  { id: 31, src: "/Illustrasjoner portfolio/Worlds End.png", title: "World's End", category: "Landscapes & Scenes" },
+  { id: 82, src: "/Illustrasjoner portfolio/Worlds End.png", title: "World's End", category: "Landscapes & Scenes" },
   { id: 63, src: "/Illustrasjoner portfolio/Cherry blussoms.png", title: "Cherry Blossoms", category: "Landscapes & Scenes" },
   { id: 64, src: "/Illustrasjoner portfolio/Batman city scape.png", title: "Batman City Scape", category: "Landscapes & Scenes" },
   { id: 62, src: "/Illustrasjoner portfolio/Spitfire.png", title: "Spitfire", category: "Landscapes & Scenes" },

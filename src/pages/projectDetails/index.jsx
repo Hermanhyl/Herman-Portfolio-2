@@ -3,7 +3,7 @@ import { projects } from "../../data/projects/projects";
 import { useState } from "react";
 import PageTransition from "../../components/pageTransition";
 import OptimizedImage from "../../components/optimizedImage";
-import { ArrowLeft, ExternalLink, Github, Figma, Share2, Check, ChevronRight, Code2, Users, Calendar } from "lucide-react";
+import { ArrowLeft, ExternalLink, Github, Figma, Share2, Check, ChevronRight, Code2, Users, Calendar, Linkedin } from "lucide-react";
 
 function ProjectDetail() {
   const { id } = useParams();
@@ -123,26 +123,30 @@ function ProjectDetail() {
 
           {/* Action Buttons */}
           <div className="flex flex-wrap gap-4">
-            <a
-              href={project.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`View live demo of ${project.title} (opens in new tab)`}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900"
-            >
-              <ExternalLink className="w-5 h-5" aria-hidden="true" />
-              Live Demo
-            </a>
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`View source code for ${project.title} on GitHub (opens in new tab)`}
-              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-900"
-            >
-              <Github className="w-5 h-5" aria-hidden="true" />
-              View Code
-            </a>
+            {project.live && (
+              <a
+                href={project.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View live demo of ${project.title} (opens in new tab)`}
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+              >
+                <ExternalLink className="w-5 h-5" aria-hidden="true" />
+                Live Demo
+              </a>
+            )}
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View source code for ${project.title} on GitHub (opens in new tab)`}
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+              >
+                <Github className="w-5 h-5" aria-hidden="true" />
+                View Code
+              </a>
+            )}
             {project.figma && (
               <a
                 href={project.figma}
@@ -153,6 +157,18 @@ function ProjectDetail() {
               >
                 <Figma className="w-5 h-5" aria-hidden="true" />
                 Figma Design
+              </a>
+            )}
+            {project.linkedin && (
+              <a
+                href={project.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View project trailer on LinkedIn (opens in new tab)`}
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-cyan-600 backdrop-blur-sm border border-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+              >
+                <Linkedin className="w-5 h-5" aria-hidden="true" />
+                Watch Trailer
               </a>
             )}
           </div>

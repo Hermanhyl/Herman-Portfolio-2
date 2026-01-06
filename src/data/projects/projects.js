@@ -1,6 +1,43 @@
 export const projects = [
   {
     id: "project1",
+    title: "Brann VRN - VR Fire Safety Simulator (A)",
+    teaser: "A VR fire safety training simulator built for Sysco's Drammen office, featuring realistic emergency scenarios and interactive safety training.",
+    description:
+      "Brann VRN is a Virtual Reality fire safety training simulator developed as a bachelor's degree project in collaboration with Sysco Partner. The project recreates Sysco's Drammen office in a 1:1 scale, providing immersive fire safety training experiences.\n\nAs the concept artist and UI/UX designer, I was responsible for creating the visual identity, infographics, UI elements, 3D modeling, texturing, and developing informational content about fire hazards and emergency procedures.",
+    images: ["/BrannVRn.jpg"],
+    github: "",
+    live: "",
+    linkedin: "https://www.linkedin.com/feed/update/urn:li:activity:6937388090256719874/",
+    figma: "",
+    technologies: ["Unity", "VR Development", "3D Modeling", "UI/UX Design", "Concept Art"],
+    authers: "Herman Hylland + 2 team members",
+    article: [
+      {
+        heading: "Project Overview",
+        content: "Brann VRN was developed as our bachelor's degree final project, earning an A grade. Working with Sysco Partner, we created a comprehensive VR fire safety training simulator. The client requested a 1:1 scale replica of their Drammen office, transformed into an interactive training environment where users can learn essential fire safety skills in a realistic but safe virtual setting.",
+      },
+      {
+        heading: "My Responsibilities",
+        content: "As the concept artist and UI/UX designer on the team, I was responsible for multiple creative and technical aspects of the project. This included developing the visual concept and art direction, designing all user interface elements and infographics, creating informational displays about fire hazards and safety procedures, 3D modeling of various objects, and applying textures and skins to assets. I also worked on making the virtual environment informative and visually clear for users navigating emergency scenarios.",
+      },
+      {
+        heading: "Key Features",
+        content: "The simulator includes several interactive training modules: fire extinguisher operation and proper usage techniques, fire hose handling procedures, identification of fire hazard objects in an office environment, emergency evacuation procedures when fire alarms activate, and guided escape routes from the office to the designated fire assembly point. We utilized 360-degree camera technology to capture real-world reference imagery of the actual escape routes from the office to the meeting point.",
+      },
+      {
+        heading: "Technical Implementation",
+        content: "Built in Unity for VR platforms, the project required careful attention to scale accuracy and realistic interaction design. The 1:1 recreation of the Sysco office demanded precise measurements and detailed modeling to ensure users would experience familiar surroundings. We incorporated 3D photography techniques to capture the real environment and integrated this with our virtual recreations for a seamless training experience.",
+      },
+      {
+        heading: "Learning Outcomes",
+        content: "This project provided invaluable experience in VR development, collaborative teamwork, and client communication. Working with a real company on a practical application taught us the importance of understanding user needs and translating safety requirements into engaging interactive experiences. The A grade reflects both the technical quality and the educational value of the final product.",
+      },
+    ],
+  },
+
+  {
+    id: "project-gonefishing",
     title: "GoneFishing - Fishing Tracker App",
     teaser: "GoneFishing is a modern fishing tracker app built with Next.js that helps anglers log catches, manage details, and track their fishing adventures.",
     description:

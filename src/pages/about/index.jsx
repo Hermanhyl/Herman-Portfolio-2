@@ -6,6 +6,7 @@ import GradientButton from '../../components/gradientButton';
 import CVDownloadButton from '../../components/cvDownloadButton';
 import AnimatedCounter from '../../components/animatedCounter';
 import AnimatedSkillBar from '../../components/animatedSkillBar';
+import ProjectsButton from '../../components/projectsButton';
 
 // Data
 const skills = [
@@ -127,6 +128,7 @@ function About() {
 
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start relative z-20">
                 <CVDownloadButton />
+                <ProjectsButton />
                 <GradientButton to="/contact" variant="secondary" icon={ArrowRight}>
                   Get In Touch
                 </GradientButton>
@@ -260,10 +262,10 @@ function About() {
           </ScrollReveal>
 
           <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-emerald-500 via-cyan-500 to-purple-500 opacity-30"></div>
+            {/* Timeline line - hidden on mobile, shown from md up */}
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-emerald-500 via-cyan-500 to-purple-500 opacity-30"></div>
 
-            <div className="space-y-8">
+            <div className="space-y-6 md:space-y-8">
               {timeline.map((item, index) => {
                 const isLeft = index % 2 === 0;
                 const Icon = item.icon;
@@ -271,9 +273,31 @@ function About() {
 
                 return (
                   <ScrollReveal key={index} delay={index * 100}>
-                    <div className={`relative flex items-start gap-6 md:gap-0 ${isLeft ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                    {/* Mobile layout - icon above card */}
+                    <div className="md:hidden">
+                      <div className="flex flex-col items-center">
+                        {/* Icon */}
+                        <div className={`p-3 rounded-full border-2 ${isWork ? 'bg-emerald-500/20 border-emerald-500' : 'bg-purple-500/20 border-purple-500'} mb-3`}>
+                          <Icon className={`w-5 h-5 ${isWork ? 'text-emerald-400' : 'text-purple-400'}`} />
+                        </div>
+                        {/* Connecting line */}
+                        <div className={`w-px h-4 ${isWork ? 'bg-emerald-500/50' : 'bg-purple-500/50'}`}></div>
+                        {/* Card */}
+                        <div className={`w-full group bg-white/5 hover:bg-white/10 backdrop-blur-sm border ${isWork ? 'border-emerald-500/20 hover:border-emerald-500/40' : 'border-purple-500/20 hover:border-purple-500/40'} rounded-2xl p-5 transition-all duration-300`}>
+                          <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium mb-3 ${isWork ? 'bg-emerald-500/20 text-emerald-300' : 'bg-purple-500/20 text-purple-300'}`}>
+                            {item.year}
+                          </span>
+                          <h3 className="text-lg font-bold text-white mb-1">{item.title}</h3>
+                          <p className={`font-medium mb-2 text-sm ${isWork ? 'text-emerald-400' : 'text-purple-400'}`}>{item.company}</p>
+                          <p className="text-gray-400 text-sm">{item.description}</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Desktop layout - alternating sides */}
+                    <div className={`hidden md:flex relative items-start ${isLeft ? 'flex-row' : 'flex-row-reverse'}`}>
                       {/* Content */}
-                      <div className={`flex-1 md:w-1/2 ${isLeft ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
+                      <div className={`flex-1 w-1/2 ${isLeft ? 'pr-12 text-right' : 'pl-12'}`}>
                         <div className={`group bg-white/5 hover:bg-white/10 backdrop-blur-sm border ${isWork ? 'border-emerald-500/20 hover:border-emerald-500/40' : 'border-purple-500/20 hover:border-purple-500/40'} rounded-2xl p-6 transition-all duration-300`}>
                           <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium mb-3 ${isWork ? 'bg-emerald-500/20 text-emerald-300' : 'bg-purple-500/20 text-purple-300'}`}>
                             {item.year}
@@ -285,14 +309,14 @@ function About() {
                       </div>
 
                       {/* Icon */}
-                      <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 z-10">
+                      <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
                         <div className={`p-3 rounded-full border-2 ${isWork ? 'bg-emerald-500/20 border-emerald-500' : 'bg-purple-500/20 border-purple-500'} transition-transform hover:scale-110`}>
                           <Icon className={`w-5 h-5 ${isWork ? 'text-emerald-400' : 'text-purple-400'}`} />
                         </div>
                       </div>
 
                       {/* Spacer for alternating layout */}
-                      <div className="hidden md:block flex-1 md:w-1/2"></div>
+                      <div className="flex-1 w-1/2"></div>
                     </div>
                   </ScrollReveal>
                 );
@@ -322,7 +346,7 @@ function About() {
                 <GradientButton to="/contact" icon={ArrowRight} size="lg">
                   Get In Touch
                 </GradientButton>
-                <GradientButton to="/" variant="secondary" size="lg">
+                <GradientButton to="/#projects" variant="secondary" size="lg">
                   View My Work
                 </GradientButton>
               </div>

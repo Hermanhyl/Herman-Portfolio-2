@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 /**
  * GradientButton component - Reusable gradient button/link
@@ -24,6 +24,7 @@ function GradientButton({
   onClick,
   ...props
 }) {
+  const navigate = useNavigate();
   const baseStyles = 'inline-flex items-center justify-center gap-2 font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black';
 
   const variants = {
@@ -46,8 +47,42 @@ function GradientButton({
     </>
   );
 
-  // Internal link
+  // Internal link with hash support (e.g., "/#projects" or "/page#section")
   if (to) {
+    // Check if it's a hash link (contains #)
+    if (to.includes('#')) {
+      const [path, hash] = to.split('#');
+
+      const handleHashClick = (e) => {
+        e.preventDefault();
+
+        // Navigate to the path first (if not already there)
+        const targetPath = path || '/';
+        if (window.location.pathname !== targetPath) {
+          navigate(targetPath);
+          // Wait for navigation to complete, then scroll
+          setTimeout(() => {
+            const element = document.getElementById(hash);
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }, 100);
+        } else {
+          // Already on the page, just scroll
+          const element = document.getElementById(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      };
+
+      return (
+        <button onClick={handleHashClick} className={`group ${combinedClassName}`} {...props}>
+          {content}
+        </button>
+      );
+    }
+
     return (
       <Link to={to} className={`group ${combinedClassName}`} {...props}>
         {content}

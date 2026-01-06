@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, Code2, Palette, Github, Linkedin, Mail, Instagram } from 'lucide-react';
 import OptimizedImage from '../optimizedImage';
+import ProjectsButton from '../projectsButton';
 
 export default function Hero() {
   const [displayedText, setDisplayedText] = useState('');
@@ -88,17 +89,7 @@ export default function Hero() {
                 Let's Work Together
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <button
-                onClick={() => {
-                  const projectsSection = document.getElementById("projects");
-                  if (projectsSection) {
-                    projectsSection.scrollIntoView({ behavior: "smooth", block: "start" });
-                  }
-                }}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 hover:from-purple-500/30 hover:to-pink-500/30 backdrop-blur-sm border border-purple-500/50 hover:border-purple-400 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-black"
-              >
-                Projects / Illustrations
-              </button>
+              <ProjectsButton />
               <Link
                 to="/about"
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-black"

@@ -229,11 +229,11 @@ export default function ChatBot() {
         </div>
       )}
 
-      {/* Chat Window - Full screen on mobile, floating on desktop */}
+      {/* Chat Window - Full screen on mobile (below navbar), floating on desktop */}
       {isOpen && (
         <div
-          className="fixed inset-0 sm:inset-auto sm:bottom-4 sm:right-4 md:bottom-6 md:right-6 z-50
-                     w-full h-full sm:w-[360px] sm:h-[500px] md:w-[380px] md:h-[550px] lg:h-[600px]
+          className="fixed top-16 left-0 right-0 bottom-0 sm:inset-auto sm:top-auto sm:bottom-4 sm:right-4 md:bottom-6 md:right-6 z-40
+                     w-full h-auto sm:w-[360px] sm:h-[500px] md:w-[380px] md:h-[550px] lg:h-[600px]
                      sm:max-h-[calc(100vh-2rem)] md:max-h-[calc(100vh-3rem)]
                      bg-gray-900 sm:border sm:border-white/10 sm:rounded-2xl shadow-2xl
                      flex flex-col animate-in fade-in sm:slide-in-from-right-8 sm:zoom-in-95 duration-300"
@@ -379,10 +379,10 @@ export default function ChatBot() {
         </div>
       )}
 
-      {/* Backdrop for mobile */}
+      {/* Backdrop for mobile - starts below navbar */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/50 z-40 sm:hidden animate-in fade-in duration-200"
+          className="fixed top-16 left-0 right-0 bottom-0 bg-black/50 z-30 sm:hidden animate-in fade-in duration-200"
           onClick={() => setIsOpen(false)}
           aria-hidden="true"
         />

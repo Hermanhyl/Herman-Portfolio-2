@@ -664,6 +664,7 @@ Co-Authored-By: Claude <noreply@anthropic.com>
 6. **Comment complex logic** - Help future developers understand
 7. **Consistent spacing** - Use Tailwind's spacing scale
 8. **Group related imports** - React, external libs, internal components
+9. **Follow DRY principle** - Don't Repeat Yourself. When the same UI element, button, or pattern appears in multiple places, extract it into a reusable component instead of duplicating code
 
 ### Component Checklist
 
@@ -757,6 +758,6 @@ This is a living document. Update it when new patterns emerge or standards chang
 
 ---
 
-**Last Updated:** 2025-11-02
+**Last Updated:** 2026-01-06
 **Maintainer:** Herman Hylland
 **AI Assistant:** Claude Code by Anthropic

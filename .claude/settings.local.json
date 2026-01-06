@@ -16,7 +16,9 @@
       "Bash(cmd /c dir \"C:\\Users\\GBT B560M_V3\\Documents\\CA\\Herman-Portfolio-2\\public\\hobbyist.jpg\")",
       "Bash(findstr:*)",
       "WebFetch(domain:github.com)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(dir \"C:\\Users\\GBT B560M_V3\\Documents\\CA\\Herman-Portfolio-2\" /b)",
+      "Bash(dir:*)"
     ],
     "deny": [],
     "ask": []

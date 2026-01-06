@@ -124,33 +124,39 @@ function Home() {
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-px h-20 bg-gradient-to-b from-transparent via-emerald-500 to-transparent opacity-50"></div>
 
           <ScrollReveal className="mb-12">
-            {/* Toggle Buttons */}
+            {/* Toggle Buttons with attention-grabbing animation */}
             <div className="flex justify-center mb-8 px-2">
-              <div className="inline-flex flex-col sm:flex-row bg-white/5 border border-white/10 rounded-xl p-1.5 backdrop-blur-sm w-full sm:w-auto">
-                <button
-                  onClick={() => setActiveView("projects")}
-                  aria-pressed={activeView === "projects"}
-                  className={`flex items-center justify-center gap-2 px-4 sm:px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base ${
-                    activeView === "projects"
-                      ? "bg-gradient-to-r from-emerald-500 to-cyan-500 text-white shadow-lg"
-                      : "text-gray-400 hover:text-white hover:bg-white/5"
-                  }`}
-                >
-                  <Briefcase className="w-4 h-4 sm:w-5 sm:h-5" aria-hidden="true" />
-                  My Projects
-                </button>
-                <button
-                  onClick={() => setActiveView("illustrations")}
-                  aria-pressed={activeView === "illustrations"}
-                  className={`flex items-center justify-center gap-2 px-4 sm:px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base ${
-                    activeView === "illustrations"
-                      ? "bg-gradient-to-r from-emerald-500 to-cyan-500 text-white shadow-lg"
-                      : "text-gray-400 hover:text-white hover:bg-white/5"
-                  }`}
-                >
-                  <PenTool className="w-4 h-4 sm:w-5 sm:h-5" aria-hidden="true" />
-                  My Illustrations
-                </button>
+              <div className="relative group">
+                {/* Animated pulsing glow effect behind the toggle */}
+                <div className="absolute -inset-2 bg-gradient-to-r from-emerald-500 via-cyan-500 to-purple-500 rounded-2xl blur-lg opacity-50 animate-glow-pulse"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-xl blur-md opacity-30 animate-glow-pulse-delayed"></div>
+
+                <div className="relative inline-flex flex-col sm:flex-row bg-gray-900/95 border-2 border-emerald-500/50 rounded-xl p-1.5 backdrop-blur-sm w-full sm:w-auto shadow-lg shadow-emerald-500/20">
+                  <button
+                    onClick={() => setActiveView("projects")}
+                    aria-pressed={activeView === "projects"}
+                    className={`flex items-center justify-center gap-2 px-4 sm:px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base ${
+                      activeView === "projects"
+                        ? "bg-gradient-to-r from-emerald-500 to-cyan-500 text-white shadow-lg shadow-emerald-500/30"
+                        : "text-gray-400 hover:text-white hover:bg-white/10"
+                    }`}
+                  >
+                    <Briefcase className={`w-4 h-4 sm:w-5 sm:h-5 ${activeView === "projects" ? "" : "animate-pulse"}`} aria-hidden="true" />
+                    My Projects
+                  </button>
+                  <button
+                    onClick={() => setActiveView("illustrations")}
+                    aria-pressed={activeView === "illustrations"}
+                    className={`flex items-center justify-center gap-2 px-4 sm:px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base ${
+                      activeView === "illustrations"
+                        ? "bg-gradient-to-r from-emerald-500 to-cyan-500 text-white shadow-lg shadow-emerald-500/30"
+                        : "text-gray-400 hover:text-white hover:bg-white/10"
+                    }`}
+                  >
+                    <PenTool className={`w-4 h-4 sm:w-5 sm:h-5 ${activeView === "illustrations" ? "" : "animate-pulse"}`} aria-hidden="true" />
+                    My Illustrations
+                  </button>
+                </div>
               </div>
             </div>
 

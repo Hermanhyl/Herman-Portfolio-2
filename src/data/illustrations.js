@@ -76,7 +76,7 @@ export const illustrations = [
   { id: 26, src: "/Illustrasjoner portfolio/Hound.jpg", title: "Hound", category: "Animals & Birds" },
   { id: 59, src: "/Illustrasjoner portfolio/Pitbull.png", title: "Pitbull", category: "Animals & Birds" },
   { id: 61, src: "/Illustrasjoner portfolio/I am the tiger.png", title: "I Am The Tiger", category: "Animals & Birds" },
-  { id: 70, src: "/Illustrasjoner portfolio/Blue bird.png", title: "Blue Bird", category: "Animals & Birds" },
+  { id: 70, src: "/Illustrasjoner portfolio/Blue bird.png", title: "Blue Bird", category: "Knights & Warriors" },
   { id: 78, src: "/Illustrasjoner portfolio/Raven sketch.png", title: "Raven Sketch", category: "Animals & Birds" },
 
   // Landscapes & Scenes

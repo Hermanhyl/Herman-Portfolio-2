@@ -39,7 +39,7 @@ export const projects = [
       },
       {
         heading: "Learning Outcomes",
-        content: "This project provided invaluable experience in VR development, collaborative teamwork, and client communication. Working with a real company on a practical application taught us the importance of understanding user needs and translating safety requirements into engaging interactive experiences. The A grade reflects both the technical quality and the educational value of the final product.\n\nWant to see the project in action? Click the 'Watch Trailer' button at the top of this page to view a video demonstration on LinkedIn.",
+        content: "This project was an incredibly rewarding experience that went far beyond traditional software development. We gained hands-on knowledge in VR development, collaborative teamwork, and professional client communication with Sykehuspartner. The fire station visit gave us real-world insights into emergency response that shaped our entire approach to the project.\n\nWorking on an educational tool taught us the importance of balancing technical accuracy with pedagogical effectiveness—creating something that not only looks and feels realistic but genuinely teaches users valuable safety skills. The collaboration between our team, the client, and the firefighters demonstrated how multidisciplinary input leads to a stronger final product. The A grade reflects both the technical quality and the meaningful educational impact of our work.\n\nWant to see the project in action? Click the 'Watch Trailer' button at the top of this page to view a video demonstration on LinkedIn.",
       },
     ],
   },

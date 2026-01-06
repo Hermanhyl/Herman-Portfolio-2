@@ -10,7 +10,7 @@ export const projects = [
     live: "",
     linkedin: "https://www.linkedin.com/feed/update/urn:li:activity:6937386481468510208/",
     figma: "",
-    technologies: ["Unity", "VR Development", "3D Modeling", "UI/UX Design", "Concept Art"],
+    technologies: ["Unreal Engine", "VR Development", "3D Modeling", "UI/UX Design", "Concept Art"],
     authers: "Herman Hylland + 2 team members",
     article: [
       {
@@ -27,7 +27,7 @@ export const projects = [
       },
       {
         heading: "Technical Implementation",
-        content: "Built in Unity for VR platforms, the project required careful attention to scale accuracy and realistic interaction design. The 1:1 recreation of the Sykehuspartner office demanded precise measurements and detailed modeling to ensure users would experience familiar surroundings. We incorporated 3D photography techniques to capture the real environment and integrated this with our virtual recreations for a seamless training experience.",
+        content: "Built in Unreal Engine for VR platforms, the project required careful attention to scale accuracy and realistic interaction design. The 1:1 recreation of the Sykehuspartner office demanded precise measurements and detailed modeling to ensure users would experience familiar surroundings. We incorporated 3D photography techniques to capture the real environment and integrated this with our virtual recreations for a seamless training experience.",
       },
       {
         heading: "Learning Outcomes",

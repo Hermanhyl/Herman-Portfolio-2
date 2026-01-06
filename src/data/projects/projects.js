@@ -225,9 +225,9 @@ export const projects = [
   {
     id: "project6",
     title: "GameHub - Where It All Began",
-    teaser: "My very first web development project—an online game marketplace that marks the beginning of my journey as a frontend developer.",
+    teaser: "My very first web development project—not a reflection of my skills today, but a reminder of where my journey began.",
     description:
-      "GameHub was my first ever coding project, created as a compulsory assignment early in my studies. While far from a polished product, it represents where my journey as a developer began and showcases how much I've grown since then.\n\nBuilt with vanilla HTML, CSS, and JavaScript, this e-commerce concept for video games taught me the fundamentals of web development—from structuring pages to handling user interactions.",
+      "GameHub was my first ever coding project, created as a compulsory assignment early in my studies. Important note: this project does not reflect my abilities as a developer today—it's included purely to show where I started and how far I've come since.\n\nBuilt with vanilla HTML, CSS, and JavaScript, this e-commerce concept for video games taught me the fundamentals of web development—from structuring pages to handling user interactions.",
     images: ["/gamehub.jpg"],
     github: "https://github.com/Hermanhyl/GameHub-CA-Project",
     live: "https://hermanhyl.github.io/GameHub-CA-Project/",
@@ -235,6 +235,10 @@ export const projects = [
     technologies: ["HTML", "CSS", "JavaScript"],
     authers: "Herman Hylland",
     article: [
+      {
+        heading: "Important Note",
+        content: "This project does not reflect my skills or abilities as a developer today. It is included in my portfolio solely to demonstrate my growth and journey—showing where I started versus where I am now. Please view my other projects to see my current capabilities as a frontend developer and UI/UX designer.",
+      },
       {
         heading: "The Beginning",
         content: "GameHub holds a special place in my portfolio—not because it's my best work, but because it's where everything started. This was my very first project as a developer, a compulsory assignment that threw us into the deep end of coding early in our studies. We were quickly made to try things out, experiment, and write our first lines of code.",

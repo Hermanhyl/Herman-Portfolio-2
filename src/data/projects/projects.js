@@ -217,7 +217,7 @@ export const projects = [
       },
       {
         heading: "How It Works",
-        content: "Getting started is simple: open the app and begin adding your monthly income entries. For each entry, you can specify the income source, amount, and month. The app automatically calculates social insurance deductions based on configurable rates and displays your net income.\n\nAll data can be exported to an Excel file for safekeeping or imported back when needed. The dashboard provides a clear year-based overview with charts showing your income trends over time. Switch between German and English with one click, and toggle dark mode for comfortable viewing in any lighting condition.",
+        content: "The app offers flexible file management for your income tracking. You can start fresh by creating a new Excel file from scratch, or load an existing Excel file to continue where you left off. When you load an existing file, all your previous entries are imported and displayed in the dashboard.\n\nAs you add new income entries—specifying the source, amount, and month—the app automatically calculates social insurance deductions and updates your totals. The dashboard reflects changes in real-time with updated charts and summaries.\n\nWhen you're done, you have full control over saving your data. You can save changes back to the same Excel file you loaded, overwriting it with your updates, or save to a new file to keep different versions. The Excel files are stored wherever you choose on your device, giving you complete ownership of your financial records. This means you can back them up, move them between devices, or organize them however you prefer.",
       },
       {
         heading: "Bilingual Support",

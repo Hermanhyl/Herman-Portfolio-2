@@ -231,7 +231,7 @@ export const projects = [
     images: ["/GameHub.jpg"],
     github: "https://github.com/Hermanhyl/GameHub-CA-Project",
     live: "https://hermanhyl.github.io/GameHub-CA-Project/",
-    figma: "",
+    figma: "https://www.figma.com/design/8gYmTlN6pQaNHcUsanX1sJ/Main-Working-File?node-id=28-12358&p=f&t=urereGhuipDAbHzu-0",
     technologies: ["HTML", "CSS", "JavaScript"],
     authers: "Herman Hylland",
     article: [

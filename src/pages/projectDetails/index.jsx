@@ -226,8 +226,22 @@ function ProjectDetail() {
 
             {/* Article Content */}
             {project.article && project.article.length > 0 && (
-              <div className="animated-border backdrop-blur-md bg-white/10 p-8 rounded-2xl">
-                <h2 className="text-2xl font-bold mb-6">About This Project</h2>
+              <div className="animated-border backdrop-blur-md bg-white/10 p-8 rounded-2xl relative">
+                <div className="flex justify-between items-start mb-6">
+                  <h2 className="text-2xl font-bold">About This Project</h2>
+                  {project.linkedin && (
+                    <a
+                      href={project.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Watch project trailer on LinkedIn (opens in new tab)"
+                      className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900 shadow-lg shadow-cyan-500/25"
+                    >
+                      <Linkedin className="w-4 h-4" aria-hidden="true" />
+                      Watch Trailer
+                    </a>
+                  )}
+                </div>
                 <article className="space-y-8">
                   {project.article.map((section, index) => (
                     <section key={index} className="space-y-3">

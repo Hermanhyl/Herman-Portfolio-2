@@ -192,7 +192,7 @@ export const projects = [
     teaser: "A productivity application combining a customizable focus timer with flexible weekly and monthly planning tools, featuring drag-and-drop scheduling.",
     description:
       "Timer & Planner is a productivity application that combines a customizable focus timer with flexible planning tools. Create session templates with configurable work/break intervals, manage your schedule across weekly and monthly views, and stay organized with color-coded activities.\n\nBuilt with React 19 and TypeScript, the app features drag-and-drop rescheduling, recurring activity options, and local storage persistence—all without requiring an account or cloud storage.",
-    images: ["/timer-planner.jpg"],
+    images: ["/ScheduelPlaner.jpg"],
     github: "https://github.com/Hermanhyl/Timer-Planner",
     live: "",
     figma: "",

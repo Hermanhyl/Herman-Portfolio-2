@@ -223,6 +223,10 @@ export const projects = [
         heading: "Bilingual Support",
         content: "The app features full bilingual support for German and English, making it accessible to users in different regions. The language toggle allows seamless switching between languages while preserving all functionality and data.",
       },
+      {
+        heading: "Summary",
+        content: "PIA Salary Tracker combines modern web technologies with a privacy-first approach to create a practical income management tool. Built with Next.js, React, and TypeScript, it demonstrates my ability to develop full-featured applications that solve real-world problems while respecting user privacy. The project showcases skills in data visualization, file handling, responsive design, and internationalization—all wrapped in a clean, intuitive interface.",
+      },
     ],
   },
 

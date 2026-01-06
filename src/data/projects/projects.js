@@ -187,6 +187,42 @@ export const projects = [
   },
 
   {
+    id: "project-timer-planner",
+    title: "Timer & Planner - Productivity App",
+    teaser: "A productivity application combining a customizable focus timer with flexible weekly and monthly planning tools, featuring drag-and-drop scheduling.",
+    description:
+      "Timer & Planner is a productivity application that combines a customizable focus timer with flexible planning tools. Create session templates with configurable work/break intervals, manage your schedule across weekly and monthly views, and stay organized with color-coded activities.\n\nBuilt with React 19 and TypeScript, the app features drag-and-drop rescheduling, recurring activity options, and local storage persistence—all without requiring an account or cloud storage.",
+    images: ["/timer-planner.jpg"],
+    github: "https://github.com/Hermanhyl/Timer-Planner",
+    live: "",
+    figma: "",
+    technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "dnd-kit"],
+    authers: "Herman Hylland",
+    article: [
+      {
+        heading: "Project Overview",
+        content: "Timer & Planner was built to combine two essential productivity tools into one seamless experience. Instead of switching between a timer app and a calendar, users can manage their focus sessions and schedule in a single interface. The app is designed to help users stay productive while maintaining full control over their data.",
+      },
+      {
+        heading: "Timer Features",
+        content: "The timer component offers customizable session templates with configurable work and break intervals. A visual circular progress display with gradient effects shows your progress, while audio alerts notify you when intervals transition or complete. The timer uses timestamp-based calculations for accurate timing, and all templates are saved locally for quick access.",
+      },
+      {
+        heading: "Planner Features",
+        content: "The planner includes a weekly grid view spanning 6 AM to 11 PM with intuitive drag-and-drop rescheduling powered by dnd-kit. A monthly calendar view with navigation controls helps you see the bigger picture. Activities can be color-coded with customizable categories and set to recur daily, weekly, monthly, or as one-time events.",
+      },
+      {
+        heading: "Technical Implementation",
+        content: "Built with React 19 and TypeScript for type safety, the app uses Vite for fast development and builds. Tailwind CSS 4 provides the styling foundation, while @dnd-kit enables smooth drag-and-drop interactions. All data persists in localStorage, and users can export/import their data as JSON files for backups or transferring between devices.",
+      },
+      {
+        heading: "Privacy & Data",
+        content: "Like my other recent projects, Timer & Planner prioritizes user privacy. All data stays on your device with no accounts required and no cloud storage. The JSON export/import feature gives you full control over your productivity data, letting you back it up or move it wherever you need.",
+      },
+    ],
+  },
+
+  {
     id: "project-pia-salary",
     title: "PIA Salary Tracker - Income Management App",
     teaser: "A privacy-focused income tracking application with automatic tax calculations, Excel import/export, and bilingual support—all data stored locally.",

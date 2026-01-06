@@ -14,7 +14,8 @@
       "Bash(copy:*)",
       "Bash(cmd /c copy:*)",
       "Bash(cmd /c dir \"C:\\Users\\GBT B560M_V3\\Documents\\CA\\Herman-Portfolio-2\\public\\hobbyist.jpg\")",
-      "Bash(findstr:*)"
+      "Bash(findstr:*)",
+      "WebFetch(domain:github.com)"
     ],
     "deny": [],
     "ask": []

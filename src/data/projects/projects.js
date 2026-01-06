@@ -221,4 +221,40 @@ export const projects = [
       },
     ],
   },
+
+  {
+    id: "project6",
+    title: "GameHub - Where It All Began",
+    teaser: "My very first web development project—an online game marketplace that marks the beginning of my journey as a frontend developer.",
+    description:
+      "GameHub was my first ever coding project, created as a compulsory assignment early in my studies. While far from a polished product, it represents where my journey as a developer began and showcases how much I've grown since then.\n\nBuilt with vanilla HTML, CSS, and JavaScript, this e-commerce concept for video games taught me the fundamentals of web development—from structuring pages to handling user interactions.",
+    images: ["/gamehub.jpg"],
+    github: "https://github.com/Hermanhyl/GameHub-CA-Project",
+    live: "https://hermanhyl.github.io/GameHub-CA-Project/",
+    figma: "",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    authers: "Herman Hylland",
+    article: [
+      {
+        heading: "The Beginning",
+        content: "GameHub holds a special place in my portfolio—not because it's my best work, but because it's where everything started. This was my very first project as a developer, a compulsory assignment that threw us into the deep end of coding early in our studies. We were quickly made to try things out, experiment, and write our first lines of code.",
+      },
+      {
+        heading: "A Humble Start",
+        content: "Looking back at this project now, I can clearly see how far I've come. The code is far from perfect, and the final result didn't match the original design I had envisioned. But that's exactly why I keep it in my portfolio—it's an honest representation of where I started. Every developer has a beginning, and this was mine.",
+      },
+      {
+        heading: "What I Learned",
+        content: "Despite its imperfections, GameHub taught me fundamental skills that I still use today. I learned how to structure HTML pages, style them with CSS, and add interactivity with JavaScript. I built features like a shopping cart, product pages, and checkout flow—all from scratch without any frameworks. These foundational concepts became the building blocks for everything that followed.",
+      },
+      {
+        heading: "Growth as a Developer",
+        content: "Comparing GameHub to my recent projects shows the progression I've made in frontend development and UI/UX design. From vanilla JavaScript to React, from basic CSS to Tailwind, from simple layouts to complex interactive experiences—each project since has built upon what I learned here. This growth is something I'm proud of, and GameHub serves as a reminder of how far dedication and continuous learning can take you.",
+      },
+      {
+        heading: "Why It's Still Here",
+        content: "I believe in showing the full journey, not just the highlights. GameHub demonstrates that everyone starts somewhere, and improvement comes through practice and persistence. If you're just starting out as a developer, take heart—your first project won't be perfect either, and that's completely okay. What matters is that you keep building, keep learning, and keep growing.",
+      },
+    ],
+  },
 ];

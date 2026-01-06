@@ -6,7 +6,15 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git push)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Read(//c/Users/GBT B560M_V3/Documents/Portfolio snippets/**)",
+      "Bash(cat:*)",
+      "Bash(find:*)",
+      "mcp__ide__getDiagnostics",
+      "Bash(copy:*)",
+      "Bash(cmd /c copy:*)",
+      "Bash(cmd /c dir \"C:\\Users\\GBT B560M_V3\\Documents\\CA\\Herman-Portfolio-2\\public\\hobbyist.jpg\")",
+      "Bash(findstr:*)"
     ],
     "deny": [],
     "ask": []

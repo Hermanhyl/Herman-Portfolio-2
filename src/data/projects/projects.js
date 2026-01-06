@@ -1,21 +1,21 @@
 export const projects = [
   {
     id: "project1",
-    title: "Brann VRN - VR Fire Safety Simulator (A)",
-    teaser: "A VR fire safety training simulator built for Sysco's Drammen office, featuring realistic emergency scenarios and interactive safety training.",
+    title: "Brann VR - VR Fire Safety Simulator (A)",
+    teaser: "A VR fire safety training simulator built for Sykehuspartner's Drammen office, featuring realistic emergency scenarios and interactive safety training.",
     description:
-      "Brann VRN is a Virtual Reality fire safety training simulator developed as a bachelor's degree project in collaboration with Sysco Partner. The project recreates Sysco's Drammen office in a 1:1 scale, providing immersive fire safety training experiences.\n\nAs the concept artist and UI/UX designer, I was responsible for creating the visual identity, infographics, UI elements, 3D modeling, texturing, and developing informational content about fire hazards and emergency procedures.",
+      "Brann VR is a Virtual Reality fire safety training simulator developed as a bachelor's degree project in collaboration with Sykehuspartner. The project recreates Sykehuspartner's Drammen office in a 1:1 scale, providing immersive fire safety training experiences.\n\nAs the concept artist and UI/UX designer, I was responsible for creating the visual identity, infographics, UI elements, 3D modeling, texturing, and developing informational content about fire hazards and emergency procedures.",
     images: ["/BrannVRn.jpg"],
     github: "",
     live: "",
-    linkedin: "https://www.linkedin.com/feed/update/urn:li:activity:6937388090256719874/",
+    linkedin: "https://www.linkedin.com/feed/update/urn:li:activity:6937386481468510208/",
     figma: "",
     technologies: ["Unity", "VR Development", "3D Modeling", "UI/UX Design", "Concept Art"],
     authers: "Herman Hylland + 2 team members",
     article: [
       {
         heading: "Project Overview",
-        content: "Brann VRN was developed as our bachelor's degree final project, earning an A grade. Working with Sysco Partner, we created a comprehensive VR fire safety training simulator. The client requested a 1:1 scale replica of their Drammen office, transformed into an interactive training environment where users can learn essential fire safety skills in a realistic but safe virtual setting.",
+        content: "Brann VR was developed as our bachelor's degree final project, earning an A grade. Working with Sykehuspartner, we created a comprehensive VR fire safety training simulator. The client requested a 1:1 scale replica of their Drammen office, transformed into an interactive training environment where users can learn essential fire safety skills in a realistic but safe virtual setting.",
       },
       {
         heading: "My Responsibilities",
@@ -27,7 +27,7 @@ export const projects = [
       },
       {
         heading: "Technical Implementation",
-        content: "Built in Unity for VR platforms, the project required careful attention to scale accuracy and realistic interaction design. The 1:1 recreation of the Sysco office demanded precise measurements and detailed modeling to ensure users would experience familiar surroundings. We incorporated 3D photography techniques to capture the real environment and integrated this with our virtual recreations for a seamless training experience.",
+        content: "Built in Unity for VR platforms, the project required careful attention to scale accuracy and realistic interaction design. The 1:1 recreation of the Sykehuspartner office demanded precise measurements and detailed modeling to ensure users would experience familiar surroundings. We incorporated 3D photography techniques to capture the real environment and integrated this with our virtual recreations for a seamless training experience.",
       },
       {
         heading: "Learning Outcomes",

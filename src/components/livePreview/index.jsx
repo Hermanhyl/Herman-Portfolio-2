@@ -45,8 +45,8 @@ function LivePreview({ url, fallbackImage, title }) {
     return () => window.removeEventListener('resize', calculateScale);
   }, []);
 
-  // If iframe fails or we have an error, show fallback image
-  if (iframeError) {
+  // If no URL, iframe fails, or we have an error, show fallback image
+  if (!url || iframeError) {
     return (
       <OptimizedImage
         src={fallbackImage}

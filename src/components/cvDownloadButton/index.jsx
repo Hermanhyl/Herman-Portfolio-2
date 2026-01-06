@@ -14,12 +14,12 @@ function CVDownloadButton() {
   const cvOptions = [
     {
       label: 'English',
-      href: '/CV_Herman_Hylland_Frontend_English.pdf',
+      href: '/CV/CV_Herman_Hylland_English.pdf',
       icon: '🇬🇧',
     },
     {
       label: 'Norsk',
-      href: '/CV_Herman_Hylland_Frontend_Norsk.pdf',
+      href: '/CV/CV_Herman_Hylland_Norsk.pdf',
       icon: '🇳🇴',
     },
   ];

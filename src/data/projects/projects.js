@@ -224,6 +224,42 @@ export const projects = [
 
   {
     id: "project6",
+    title: "Community Science Museum - Second Steps",
+    teaser: "My second project as a student—not a reflection of my skills today, but another milestone in my development journey.",
+    description:
+      "The Community Science Museum website was my second compulsory assignment at Noroff. Important note: THIS PROJECT DOES NOT REFLECT MY ABILITIES AS A DEVELOPER TODAY—it's included to showcase my learning curve and the journey I've been through.\n\nBuilt with HTML and CSS, this project focused on creating an accessible, responsive website for a science museum targeting younger audiences while maintaining professionalism.",
+    images: ["/science-museum.jpg"],
+    github: "https://github.com/Hermanhyl/Semester-Project",
+    live: "https://hermanhyl.github.io/Semester-Project/",
+    figma: "",
+    technologies: ["HTML", "CSS"],
+    authers: "Herman Hylland",
+    article: [
+      {
+        heading: "Important Note",
+        content: "This project does not reflect my skills or abilities as a developer today. Like GameHub, it is included in my portfolio to demonstrate my growth and journey—showing my progression as I continued learning. Please view my other projects to see my current capabilities as a frontend developer and UI/UX designer.",
+      },
+      {
+        heading: "The Second Step",
+        content: "After GameHub, the Community Science Museum was my second major project at Noroff. It represented the next step in my learning journey, building upon the fundamentals I had just started to grasp. While still early in my development, this project pushed me to think more about accessibility and responsive design.",
+      },
+      {
+        heading: "Project Goals",
+        content: "The brief was to create a modern, accessible website for a community science museum. The challenge was to appeal to younger audiences without being patronizing—finding the right balance between excitement and professionalism. This taught me early lessons about considering the target audience when making design decisions.",
+      },
+      {
+        heading: "What I Learned",
+        content: "This project deepened my understanding of HTML structure and CSS styling. I learned about creating responsive layouts that work across different devices, implementing accessibility standards, and organizing code in a more maintainable way. Each challenge I faced helped build the foundation for the developer I would become.",
+      },
+      {
+        heading: "Part of the Journey",
+        content: "I believe in showing the full learning process, not just the polished end results. This project, along with GameHub, demonstrates that growth takes time and every step matters. Comparing these early projects to my recent work shows the value of persistence and continuous learning in becoming a better developer.",
+      },
+    ],
+  },
+
+  {
+    id: "project7",
     title: "GameHub - Where It All Began",
     teaser: "My very first web development project—not a reflection of my skills today, but a reminder of where my journey began.",
     description:

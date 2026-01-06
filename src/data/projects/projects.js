@@ -228,7 +228,7 @@ export const projects = [
     teaser: "My second project as a student—not a reflection of my skills today, but another milestone in my development journey.",
     description:
       "The Community Science Museum website was my second compulsory assignment at Noroff. Important note: THIS PROJECT DOES NOT REFLECT MY ABILITIES AS A DEVELOPER TODAY—it's included to showcase my learning curve and the journey I've been through.\n\nBuilt with HTML and CSS, this project focused on creating an accessible, responsive website for a science museum targeting younger audiences while maintaining professionalism.",
-    images: ["/science-museum.jpg"],
+    images: ["/SCM.jpg"],
     github: "https://github.com/Hermanhyl/Semester-Project",
     live: "https://hermanhyl.github.io/Semester-Project/",
     figma: "https://www.figma.com/design/1yLOguDPoCrwqg3vVzLV5B/Semester-Project-1?t=VVdJeGinDyZeJPV7-0",

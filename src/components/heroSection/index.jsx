@@ -97,7 +97,7 @@ export default function Hero() {
                 }}
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 hover:from-purple-500/30 hover:to-pink-500/30 backdrop-blur-sm border border-purple-500/50 hover:border-purple-400 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-black"
               >
-                Projects
+                Projects / Illustrations
               </button>
               <Link
                 to="/about"

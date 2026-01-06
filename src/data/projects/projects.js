@@ -1,10 +1,10 @@
 export const projects = [
   {
     id: "project1",
-    title: "Brann VR - VR Fire Safety Simulator (A)",
+    title: "Brann VRn - VR Fire Safety Simulator (A)",
     teaser: "A VR fire safety training simulator built for Sykehuspartner's Drammen office, featuring realistic emergency scenarios and interactive safety training.",
     description:
-      "Brann VR is a Virtual Reality fire safety training simulator developed as a bachelor's degree project in collaboration with Sykehuspartner. The project recreates Sykehuspartner's Drammen office in a 1:1 scale, providing immersive fire safety training experiences.\n\nAs the concept artist and UI/UX designer, I was responsible for creating the visual identity, infographics, UI elements, 3D modeling, texturing, and developing informational content about fire hazards and emergency procedures.",
+      "Brann VRn is a Virtual Reality fire safety training simulator developed as a bachelor's degree project in collaboration with Sykehuspartner. The project recreates Sykehuspartner's Drammen office in a 1:1 scale, providing immersive fire safety training experiences.\n\nAs the concept artist and UI/UX designer, I was responsible for creating the visual identity, infographics, UI elements, 3D modeling, texturing, and developing informational content about fire hazards and emergency procedures.",
     images: ["/BrannVRn.jpg"],
     github: "",
     live: "",
@@ -15,7 +15,7 @@ export const projects = [
     article: [
       {
         heading: "Project Overview",
-        content: "Brann VR was developed as our bachelor's degree final project, earning an A grade. Working with Sykehuspartner, we created a comprehensive VR fire safety training simulator. The client requested a 1:1 scale replica of their Drammen office, transformed into an interactive training environment where users can learn essential fire safety skills in a realistic but safe virtual setting.",
+        content: "Brann VRn was developed as our bachelor's degree final project, earning an A grade. Working with Sykehuspartner, we created a comprehensive VR fire safety training simulator. The client requested a 1:1 scale replica of their Drammen office, transformed into an interactive training environment where users can learn essential fire safety skills in a realistic but safe virtual setting.",
       },
       {
         heading: "Team & Responsibilities",

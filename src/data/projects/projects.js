@@ -26,6 +26,10 @@ export const projects = [
         content: "The simulator includes several interactive training modules: fire extinguisher operation and proper usage techniques, fire hose handling procedures, identification of fire hazard objects in an office environment, emergency evacuation procedures when fire alarms activate, and guided escape routes from the office to the designated fire assembly point. We utilized 360-degree camera technology to capture real-world reference imagery of the actual escape routes from the office to the meeting point.",
       },
       {
+        heading: "Pedagogical Design",
+        content: "As an educational tool, the simulator needed to be more than just visually accurate—it had to effectively teach users about fire safety equipment and emergency procedures. A core focus of my work was designing clear, intuitive visuals and UI components that would help users absorb information naturally while immersed in the virtual environment.\n\nI created informational graphics and text displays explaining how different fire safety equipment works, including fire extinguishers, fire hoses, and alarm systems. These educational elements were carefully integrated into the environment so users could learn at their own pace, reading about equipment functionality before practicing hands-on. The pedagogical approach ensured that users not only experienced emergency scenarios but truly understood the reasoning behind proper safety procedures.",
+      },
+      {
         heading: "Technical Implementation",
         content: "Built in Unreal Engine for VR platforms, the project required careful attention to scale accuracy and realistic interaction design. The 1:1 recreation of the Sykehuspartner office demanded precise measurements and detailed modeling to ensure users would experience familiar surroundings. We incorporated 3D photography techniques to capture the real environment and integrated this with our virtual recreations for a seamless training experience.",
       },

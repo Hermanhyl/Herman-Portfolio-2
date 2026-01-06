@@ -227,7 +227,7 @@ export const projects = [
     title: "GameHub - Where It All Began",
     teaser: "My very first web development project—not a reflection of my skills today, but a reminder of where my journey began.",
     description:
-      "GameHub was my first ever coding project, created as a compulsory assignment early in my studies. Important note: this project does not reflect my abilities as a developer today—it's included purely to show where I started and how far I've come since.\n\nBuilt with vanilla HTML, CSS, and JavaScript, this e-commerce concept for video games taught me the fundamentals of web development—from structuring pages to handling user interactions.",
+      "GameHub was my first ever coding project, created as a compulsory assignment early in my studies. Important note: THIS PROJECT DOES NOT REFLECT MY ABILITIES AS A DEVELOPER TODAY—it's included purely to show where I started and how far I've come since.\n\nBuilt with vanilla HTML, CSS, and JavaScript, this e-commerce concept for video games taught me the fundamentals of web development—from structuring pages to handling user interactions.",
     images: ["/GameHub.jpg"],
     github: "https://github.com/Hermanhyl/GameHub-CA-Project",
     live: "https://hermanhyl.github.io/GameHub-CA-Project/",

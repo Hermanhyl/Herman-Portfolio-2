@@ -125,7 +125,7 @@ export const projects = [
     github: "https://github.com/maddipaddi/Fireside-Holidaze",
     live: "https://fireside-holidaze.netlify.app/",
     figma: "https://www.figma.com/design/thqoG8jMTmJWJ0xvjoWJFX/PE2-Fireside-Holidaze?node-id=97-2&p=f&t=WNVw9oV9YS4fXdlk-0",
-    technologies: ["React", "Vite", "Prettier", "Tailwind CSS", "HTML"],
+    technologies: ["React", "Vite", "Prettier", "Tailwind CSS", "HTML", "Figma"],
     authers:"Madelen Sletteberg, Herman Hylland, Veronika Aas",
     article: [
       {
@@ -164,7 +164,7 @@ export const projects = [
     github: "https://github.com/Hermanhyl/Semester-Project-2-Auction",
     live: "https://own-the-bid-main.netlify.app/",
     figma: "https://www.figma.com/design/8AhvLrYMu6VoQhHefNQpUz/Semester-Project-2-auction?t=RmAPyAmZq0TLngla-0",
-    technologies: ["Vanilla JavaScript", "Tailwind CSS", "HTML"],
+    technologies: ["Vanilla JavaScript", "Tailwind CSS", "HTML", "Figma"],
     authers:"Herman Hylland",
     article: [
       {
@@ -196,7 +196,7 @@ export const projects = [
     github: "https://github.com/Hermanhyl/Semester-Project-2-Auction",
     live: "https://clicketycart.netlify.app/",
     figma: "https://www.figma.com/design/R8wGWrRexwOTDaQnpFKNmn/Ecom-store?node-id=0-1&p=f&t=UlgGs9y5P55UgOu2-0",
-    technologies: ["React", "Tailwind CSS", "HTML"],
+    technologies: ["React", "Tailwind CSS", "HTML", "Figma"],
     authers:"Madelen Sletteberg, Herman Hylland",
     article: [
       {
@@ -232,7 +232,7 @@ export const projects = [
     github: "https://github.com/Hermanhyl/Semester-Project",
     live: "https://hermanhyl.github.io/Semester-Project/",
     figma: "https://www.figma.com/design/1yLOguDPoCrwqg3vVzLV5B/Semester-Project-1?t=VVdJeGinDyZeJPV7-0",
-    technologies: ["HTML", "CSS"],
+    technologies: ["HTML", "CSS", "Figma"],
     authers: "Herman Hylland",
     article: [
       {
@@ -268,7 +268,7 @@ export const projects = [
     github: "https://github.com/Hermanhyl/GameHub-CA-Project",
     live: "https://hermanhyl.github.io/GameHub-CA-Project/",
     figma: "https://www.figma.com/design/8gYmTlN6pQaNHcUsanX1sJ/Main-Working-File?node-id=28-12358&p=f&t=urereGhuipDAbHzu-0",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["HTML", "CSS", "JavaScript", "Figma"],
     authers: "Herman Hylland",
     article: [
       {

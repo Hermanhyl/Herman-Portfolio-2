@@ -194,7 +194,7 @@ export const projects = [
       "Timer & Planner is a productivity application that combines a customizable focus timer with flexible planning tools. Create session templates with configurable work/break intervals, manage your schedule across weekly and monthly views, and stay organized with color-coded activities.\n\nBuilt with React 19 and TypeScript, the app features drag-and-drop rescheduling, recurring activity options, and local storage persistence—all without requiring an account or cloud storage.",
     images: ["/ScheduelPlaner.jpg"],
     github: "https://github.com/Hermanhyl/Timer-Planner",
-    live: "",
+    live: "https://time-planer.netlify.app/",
     figma: "",
     technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "dnd-kit"],
     authers: "Herman Hylland",

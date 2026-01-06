@@ -45,6 +45,42 @@ export const projects = [
   },
 
   {
+    id: "project-pia-salary",
+    title: "PIA Salary Tracker - Income Management App",
+    teaser: "A privacy-focused income tracking application with automatic tax calculations, Excel import/export, and bilingual support—all data stored locally.",
+    description:
+      "PIA Salary Tracker is a web-based income tracking application designed for managing monthly earnings with automatic tax and social insurance calculations. Built with a strong focus on privacy, all data is stored locally in Excel files without requiring cloud services.\n\nThe app features a clean dashboard with year-based income overview, data visualization charts, dark mode support, and a bilingual interface supporting both German and English.",
+    images: ["/pia-salary.jpg"],
+    github: "https://github.com/Hermanhyl/PIA_Salary_Tracker",
+    live: "",
+    figma: "",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Recharts"],
+    authers: "Herman Hylland",
+    article: [
+      {
+        heading: "Project Overview",
+        content: "PIA Salary Tracker was built to solve a real-world need—tracking income across multiple sources while maintaining complete privacy. Unlike cloud-based solutions, this app stores all data locally in Excel files, giving users full control over their financial information.",
+      },
+      {
+        heading: "Key Features",
+        content: "The application includes a comprehensive dashboard with year-based income overview and trend visualization using Recharts. It supports multiple income sources, automatic calculation of social insurance deductions based on configurable rates, and Excel import/export for data persistence. The app also features duplicate entry protection, alerting users when attempting to add entries for months that already exist.",
+      },
+      {
+        heading: "Technical Implementation",
+        content: "Built with Next.js 16 using the App Router, React 19, and TypeScript for type safety. The UI is styled with Tailwind CSS and shadcn/ui components for a polished, modern look. The xlsx library handles all Excel file operations, while Recharts powers the income trend visualizations. The app is fully responsive across desktop, tablet, and mobile devices.",
+      },
+      {
+        heading: "Privacy-First Design",
+        content: "A core principle of this project was privacy. All financial data stays on the user's device—there's no cloud storage, no accounts to create, and no data leaving the browser. Users can save their data to Excel files and load them back whenever needed, maintaining full ownership of their sensitive financial information.",
+      },
+      {
+        heading: "Bilingual Support",
+        content: "The app features full bilingual support for German and English, making it accessible to users in different regions. The language toggle allows seamless switching between languages while preserving all functionality and data.",
+      },
+    ],
+  },
+
+  {
     id: "project-gonefishing",
     title: "GoneFishing - Fishing Tracker App",
     teaser: "GoneFishing is a modern fishing tracker app built with Next.js that helps anglers log catches, manage details, and track their fishing adventures.",

@@ -216,6 +216,10 @@ export const projects = [
         content: "A core principle of this project was privacy. All financial data stays on the user's device—there's no cloud storage, no accounts to create, and no data leaving the browser. Users can save their data to Excel files and load them back whenever needed, maintaining full ownership of their sensitive financial information.",
       },
       {
+        heading: "How It Works",
+        content: "Getting started is simple: open the app and begin adding your monthly income entries. For each entry, you can specify the income source, amount, and month. The app automatically calculates social insurance deductions based on configurable rates and displays your net income.\n\nAll data can be exported to an Excel file for safekeeping or imported back when needed. The dashboard provides a clear year-based overview with charts showing your income trends over time. Switch between German and English with one click, and toggle dark mode for comfortable viewing in any lighting condition.",
+      },
+      {
         heading: "Bilingual Support",
         content: "The app features full bilingual support for German and English, making it accessible to users in different regions. The language toggle allows seamless switching between languages while preserving all functionality and data.",
       },

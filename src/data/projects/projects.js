@@ -231,7 +231,7 @@ export const projects = [
     images: ["/science-museum.jpg"],
     github: "https://github.com/Hermanhyl/Semester-Project",
     live: "https://hermanhyl.github.io/Semester-Project/",
-    figma: "",
+    figma: "https://www.figma.com/design/1yLOguDPoCrwqg3vVzLV5B/Semester-Project-1?t=VVdJeGinDyZeJPV7-0",
     technologies: ["HTML", "CSS"],
     authers: "Herman Hylland",
     article: [

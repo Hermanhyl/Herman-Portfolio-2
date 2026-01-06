@@ -31,7 +31,7 @@ export const projects = [
       },
       {
         heading: "Learning Outcomes",
-        content: "This project provided invaluable experience in VR development, collaborative teamwork, and client communication. Working with a real company on a practical application taught us the importance of understanding user needs and translating safety requirements into engaging interactive experiences. The A grade reflects both the technical quality and the educational value of the final product.",
+        content: "This project provided invaluable experience in VR development, collaborative teamwork, and client communication. Working with a real company on a practical application taught us the importance of understanding user needs and translating safety requirements into engaging interactive experiences. The A grade reflects both the technical quality and the educational value of the final product.\n\nWant to see the project in action? Click the 'Watch Trailer' button at the top of this page to view a video demonstration on LinkedIn.",
       },
     ],
   },

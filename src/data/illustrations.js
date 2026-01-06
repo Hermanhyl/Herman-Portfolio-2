@@ -90,7 +90,7 @@ export const illustrations = [
   // Sketches & Studies
   { id: 43, src: "/Illustrasjoner portfolio/Deadly.jpg", title: "Deadly", category: "Sketches & Studies" },
   { id: 44, src: "/Illustrasjoner portfolio/Smoke.png", title: "Smoke", category: "Sketches & Studies" },
-  { id: 45, src: "/Illustrasjoner portfolio/Perspective Treining.png", title: "Perspective Training", category: "Sketches & Studies" },
+  { id: 45, src: "/Illustrasjoner portfolio/Perspective Treining.png", title: "Perspective Training", category: "Landscapes & Scenes" },
   { id: 46, src: "/Illustrasjoner portfolio/Fun Characters Mash.png", title: "Fun Characters", category: "Sketches & Studies" },
   { id: 47, src: "/Illustrasjoner portfolio/Interests.png", title: "Interests", category: "Sketches & Studies" },
   { id: 48, src: "/Illustrasjoner portfolio/Untitled_Artwork (2).png", title: "Untitled Artwork", category: "Sketches & Studies" },

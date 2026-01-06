@@ -192,7 +192,7 @@ export const projects = [
     teaser: "A privacy-focused income tracking application with automatic tax calculations, Excel import/export, and bilingual support—all data stored locally.",
     description:
       "PIA Salary Tracker is a web-based income tracking application designed for managing monthly earnings with automatic tax and social insurance calculations. Built with a strong focus on privacy, all data is stored locally in Excel files without requiring cloud services.\n\nThe app features a clean dashboard with year-based income overview, data visualization charts, dark mode support, and a bilingual interface supporting both German and English.",
-    images: ["/pia-salary.jpg"],
+    images: ["/SaleryTracker.jpg"],
     github: "https://github.com/Hermanhyl/PIA_Salary_Tracker",
     live: "https://salerytracker.netlify.app/",
     figma: "",

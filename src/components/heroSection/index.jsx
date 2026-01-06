@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Code2, Palette, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowRight, Sparkles, Code2, Palette, Github, Linkedin, Mail, Instagram } from 'lucide-react';
 import OptimizedImage from '../optimizedImage';
 
 export default function Hero() {
@@ -136,6 +136,15 @@ export default function Hero() {
                   className="p-3 bg-gray-800/90 hover:bg-cyan-500 border border-white/20 rounded-full text-gray-300 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg focus:outline-none focus:ring-2 focus:ring-cyan-400"
                 >
                   <Linkedin className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://www.instagram.com/hermanhyl98/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Herman's Instagram profile"
+                  className="p-3 bg-gray-800/90 hover:bg-pink-500 border border-white/20 rounded-full text-gray-300 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
+                >
+                  <Instagram className="w-5 h-5" />
                 </a>
                 <Link
                   to="/contact"

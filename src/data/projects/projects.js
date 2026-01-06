@@ -11,15 +11,15 @@ export const projects = [
     linkedin: "https://www.linkedin.com/feed/update/urn:li:activity:6937386481468510208/",
     figma: "",
     technologies: ["Unreal Engine", "VR Development", "3D Modeling", "UI/UX Design", "Concept Art"],
-    authers: "Herman Hylland + 2 team members",
+    authers: "Herman Hylland, Axel Gardarsson, Deniz Javeid",
     article: [
       {
         heading: "Project Overview",
         content: "Brann VR was developed as our bachelor's degree final project, earning an A grade. Working with Sykehuspartner, we created a comprehensive VR fire safety training simulator. The client requested a 1:1 scale replica of their Drammen office, transformed into an interactive training environment where users can learn essential fire safety skills in a realistic but safe virtual setting.",
       },
       {
-        heading: "My Responsibilities",
-        content: "As the concept artist and UI/UX designer on the team, I was responsible for multiple creative and technical aspects of the project. This included developing the visual concept and art direction, designing all user interface elements and infographics, creating informational displays about fire hazards and safety procedures, 3D modeling of various objects, and applying textures and skins to assets. I also worked on making the virtual environment informative and visually clear for users navigating emergency scenarios.",
+        heading: "Team & Responsibilities",
+        content: "Our team consisted of three members with distinct roles: I served as the concept artist and UI/UX designer, responsible for developing the visual concept and art direction, designing all user interface elements and infographics, creating informational displays about fire hazards and safety procedures, and applying textures and skins to assets. Axel Gardarsson handled all 3D modeling, building the detailed environment and objects. Deniz Javeid was our programmer, implementing all the VR interactions and functionality in Unreal Engine.",
       },
       {
         heading: "Key Features",

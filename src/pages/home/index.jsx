@@ -125,30 +125,30 @@ function Home() {
 
           <ScrollReveal className="mb-12">
             {/* Toggle Buttons */}
-            <div className="flex justify-center mb-8">
-              <div className="inline-flex bg-white/5 border border-white/10 rounded-xl p-1.5 backdrop-blur-sm">
+            <div className="flex justify-center mb-8 px-2">
+              <div className="inline-flex flex-col sm:flex-row bg-white/5 border border-white/10 rounded-xl p-1.5 backdrop-blur-sm w-full sm:w-auto">
                 <button
                   onClick={() => setActiveView("projects")}
                   aria-pressed={activeView === "projects"}
-                  className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  className={`flex items-center justify-center gap-2 px-4 sm:px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base ${
                     activeView === "projects"
                       ? "bg-gradient-to-r from-emerald-500 to-cyan-500 text-white shadow-lg"
                       : "text-gray-400 hover:text-white hover:bg-white/5"
                   }`}
                 >
-                  <Briefcase className="w-5 h-5" aria-hidden="true" />
+                  <Briefcase className="w-4 h-4 sm:w-5 sm:h-5" aria-hidden="true" />
                   My Projects
                 </button>
                 <button
                   onClick={() => setActiveView("illustrations")}
                   aria-pressed={activeView === "illustrations"}
-                  className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  className={`flex items-center justify-center gap-2 px-4 sm:px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base ${
                     activeView === "illustrations"
                       ? "bg-gradient-to-r from-emerald-500 to-cyan-500 text-white shadow-lg"
                       : "text-gray-400 hover:text-white hover:bg-white/5"
                   }`}
                 >
-                  <PenTool className="w-5 h-5" aria-hidden="true" />
+                  <PenTool className="w-4 h-4 sm:w-5 sm:h-5" aria-hidden="true" />
                   My Illustrations
                 </button>
               </div>
@@ -263,14 +263,14 @@ function Home() {
           {activeView === "illustrations" && (
             <>
               {/* Featured Illustration Carousel */}
-              <div className="w-full mb-12">
-                <div className="relative max-w-lg mx-auto">
+              <div className="w-full mb-8 sm:mb-12 px-2 sm:px-0">
+                <div className="relative max-w-xs sm:max-w-sm md:max-w-lg mx-auto">
                   <div
-                    className="animated-border backdrop-blur-md bg-white/5 p-3 rounded-2xl cursor-pointer"
+                    className="animated-border backdrop-blur-md bg-white/5 p-2 sm:p-3 rounded-xl sm:rounded-2xl cursor-pointer"
                     onClick={() => openLightbox(carouselIndex)}
                   >
                     <div
-                      className="relative aspect-square rounded-xl overflow-hidden bg-gray-900 select-none"
+                      className="relative aspect-square rounded-lg sm:rounded-xl overflow-hidden bg-gray-900 select-none"
                       onContextMenu={(e) => e.preventDefault()}
                     >
                       <img
@@ -286,48 +286,45 @@ function Home() {
                       />
                       {/* Watermark */}
                       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                        <span className="text-white/10 text-2xl md:text-4xl font-bold rotate-[-20deg] select-none">
+                        <span className="text-white/10 text-lg sm:text-2xl md:text-4xl font-bold rotate-[-20deg] select-none">
                           Herman Hylland
                         </span>
                       </div>
                     </div>
-                    <div className="mt-3 text-center">
-                      <p className="text-white font-medium">{filteredIllustrations[carouselIndex]?.title}</p>
-                      <p className="text-gray-400 text-sm">{filteredIllustrations[carouselIndex]?.category}</p>
+                    <div className="mt-2 sm:mt-3 text-center">
+                      <p className="text-white font-medium text-sm sm:text-base">{filteredIllustrations[carouselIndex]?.title}</p>
+                      <p className="text-gray-400 text-xs sm:text-sm">{filteredIllustrations[carouselIndex]?.category}</p>
                     </div>
                   </div>
                   {/* Animated navigation dots */}
-                  <div className="flex justify-center items-center gap-3 mt-4">
-                    <div className="relative flex items-center gap-3">
+                  <div className="flex justify-center items-center gap-2 sm:gap-3 mt-3 sm:mt-4">
+                    <div className="relative flex items-center">
                       {[0, 1, 2, 3].map((dotIndex) => (
                         <button
                           key={dotIndex}
                           onClick={() => setCarouselIndex(dotIndex)}
                           aria-label={`View illustration ${dotIndex + 1}`}
-                          className="w-3 h-3 rounded-full bg-white/20 hover:bg-white/40 transition-colors duration-300"
+                          className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 mx-1 sm:mx-1.5 ${
+                            carouselIndex % 4 === dotIndex
+                              ? 'bg-emerald-400 shadow-lg shadow-emerald-400/50'
+                              : 'bg-white/20 hover:bg-white/40'
+                          }`}
                         />
                       ))}
-                      {/* Animated moving dot */}
-                      <div
-                        className="absolute w-3 h-3 rounded-full bg-emerald-400 shadow-lg shadow-emerald-400/50 transition-all duration-500 ease-in-out"
-                        style={{
-                          left: `${(carouselIndex % 4) * 24}px`,
-                        }}
-                      />
                     </div>
-                    <span className="text-gray-400 text-sm ml-2">+{filteredIllustrations.length - 4} more</span>
+                    <span className="text-gray-400 text-xs sm:text-sm ml-1 sm:ml-2">+{filteredIllustrations.length - 4} more</span>
                   </div>
                 </div>
               </div>
 
               {/* Category Filter */}
-              <div className="w-full mb-8">
-                <div className="flex flex-wrap justify-center gap-2 md:gap-3">
+              <div className="w-full mb-6 sm:mb-8 px-2 sm:px-0">
+                <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2 md:gap-3">
                   {illustrationCategories.map((category) => (
                     <button
                       key={category}
                       onClick={() => setSelectedCategory(category)}
-                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 ${
+                      className={`px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-lg font-medium text-xs sm:text-sm md:text-base transition-all duration-300 transform hover:scale-105 ${
                         selectedCategory === category
                           ? 'bg-gradient-to-r from-emerald-500 to-cyan-500 text-white shadow-lg'
                           : 'bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 hover:text-white'
@@ -338,7 +335,7 @@ function Home() {
                     </button>
                   ))}
                 </div>
-                <div className="text-center mt-4 text-gray-400 text-sm">
+                <div className="text-center mt-3 sm:mt-4 text-gray-400 text-xs sm:text-sm">
                   {selectedCategory === "All"
                     ? `${illustrations.length} illustrations`
                     : `${filteredIllustrations.length} illustrations in ${selectedCategory}`
@@ -346,14 +343,14 @@ function Home() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 md:gap-4 w-full">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-3 md:gap-4 w-full px-1 sm:px-0">
                 {filteredIllustrations.map((illustration, index) => (
                   <button
                     key={illustration.id}
                     onClick={() => openLightbox(index)}
                     onContextMenu={(e) => e.preventDefault()}
                     aria-label={`View ${illustration.title} in fullscreen`}
-                    className="group relative aspect-square rounded-xl overflow-hidden cursor-pointer bg-gray-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-black select-none"
+                    className="group relative aspect-square rounded-lg sm:rounded-xl overflow-hidden cursor-pointer bg-gray-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-black select-none"
                   >
                     <img
                       src={illustration.src}
@@ -364,14 +361,14 @@ function Home() {
                     />
                     {/* Watermark */}
                     <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                      <span className="text-white/10 text-xs md:text-sm font-bold rotate-[-20deg] select-none">
+                      <span className="text-white/10 text-[8px] sm:text-xs md:text-sm font-bold rotate-[-20deg] select-none">
                         Herman Hylland
                       </span>
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3 md:p-4">
-                      <span className="text-white font-medium text-xs md:text-sm line-clamp-2">{illustration.title}</span>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2 sm:p-3 md:p-4">
+                      <span className="text-white font-medium text-[10px] sm:text-xs md:text-sm line-clamp-2">{illustration.title}</span>
                     </div>
-                    <div className="absolute inset-0 ring-2 ring-emerald-400/0 group-hover:ring-emerald-400/50 rounded-xl transition-all duration-300"></div>
+                    <div className="absolute inset-0 ring-2 ring-emerald-400/0 group-hover:ring-emerald-400/50 rounded-lg sm:rounded-xl transition-all duration-300"></div>
                   </button>
                 ))}
               </div>

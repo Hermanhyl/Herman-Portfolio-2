@@ -11,6 +11,8 @@ tags:
   - Recharts
   - Excel
   - Privacy
+projectLink: /project/project-pia-salary
+projectLabel: View PIA Salary Tracker Project
 ---
 
 PIA Salary Tracker was built to solve a real problem: tracking income across multiple sources while keeping sensitive financial data completely private. Unlike cloud-based solutions, every piece of data stays on your device.

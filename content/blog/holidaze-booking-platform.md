@@ -11,6 +11,8 @@ tags:
   - Figma
   - Team Project
   - Noroff API
+projectLink: /project/project3
+projectLabel: View Holidaze Project
 ---
 
 Holidaze represents the culmination of our frontend development studies at Noroff—a collaborative project that earned an A grade and taught us invaluable lessons about teamwork, code quality, and building real-world applications.

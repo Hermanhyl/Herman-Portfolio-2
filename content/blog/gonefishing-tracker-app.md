@@ -10,6 +10,8 @@ tags:
   - React
   - Supabase
   - Tailwind CSS
+projectLink: /project/project-gonefishing
+projectLabel: View GoneFishing Project
 ---
 
 GoneFishing started as a simple idea: what if anglers could easily track their catches without relying on handwritten notes or memory? The result is a modern fishing tracking application that helps users document every detail of their fishing adventures.

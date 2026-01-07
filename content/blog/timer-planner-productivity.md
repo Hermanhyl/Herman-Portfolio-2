@@ -11,6 +11,8 @@ tags:
   - Tailwind CSS
   - dnd-kit
   - Productivity
+projectLink: /project/project-timer-planner
+projectLabel: View Timer & Planner Project
 ---
 
 Timer & Planner was born from a simple frustration: why do I need separate apps for timing focus sessions and planning my schedule? The result is a unified productivity tool that keeps everything in one place.

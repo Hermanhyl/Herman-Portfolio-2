@@ -10,6 +10,8 @@ tags:
   - CSS
   - Figma
   - Learning Journey
+projectLink: /project/project6
+projectLabel: View Science Museum Project
 ---
 
 The Community Science Museum website was my second compulsory assignment at Noroff. I want to be upfront: this project does not reflect my abilities as a developer today. It's included in my portfolio to show my learning journey—where I came from and how far I've traveled since.

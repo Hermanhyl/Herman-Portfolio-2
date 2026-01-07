@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Calendar, Clock, Share2, Linkedin, Twitter, Link2, BookOpen } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, Share2, Linkedin, Twitter, Link2, BookOpen, ExternalLink } from 'lucide-react';
 import { getPostById, blogPosts } from '../../data/blog/posts';
 import PageTransition from '../../components/pageTransition';
 import ScrollReveal from '../../components/scrollReveal';
@@ -127,6 +127,19 @@ function BlogPost() {
                   <span className="font-medium">By {post.author}</span>
                 </div>
               </div>
+
+              {/* Project Link Button */}
+              {post.projectLink && (
+                <div className="pt-4">
+                  <Link
+                    to={post.projectLink}
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-black cursor-pointer"
+                  >
+                    <ExternalLink className="w-5 h-5" />
+                    {post.projectLabel || 'View Project'}
+                  </Link>
+                </div>
+              )}
             </header>
           </ScrollReveal>
 

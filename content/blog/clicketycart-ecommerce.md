@@ -10,6 +10,8 @@ tags:
   - Tailwind CSS
   - Figma
   - E-Commerce
+projectLink: /project/project5
+projectLabel: View ClicketyCart Project
 ---
 
 ClicketyCart is what happens when you combine modern React development with retro-inspired design. Built as a project assignment with Madelen Sletteberg, this e-commerce frontend makes shopping feel fast, fun, and effortless.

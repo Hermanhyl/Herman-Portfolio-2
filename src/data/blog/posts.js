@@ -139,7 +139,9 @@ function loadDynamicPosts() {
           readTime: attributes.readTime || '5 min read',
           tags: Array.isArray(attributes.tags) ? attributes.tags : [],
           featured: attributes.featured || false,
-          author: attributes.author || 'Herman Hylland'
+          author: attributes.author || 'Herman Hylland',
+          projectLink: attributes.projectLink || null,
+          projectLabel: attributes.projectLabel || 'View Project'
         };
       } catch (parseError) {
         console.error(`Error parsing ${filepath}:`, parseError);

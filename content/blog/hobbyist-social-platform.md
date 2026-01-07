@@ -10,6 +10,8 @@ tags:
   - Supabase
   - Tailwind CSS
   - UI/UX Design
+projectLink: /project/project2
+projectLabel: View Hobbyist Project
 ---
 
 In a world where digital interactions often feel shallow, Hobbyist was born from a simple idea: meaningful connections come from shared experiences. Unlike dating apps, this platform focuses on building genuine friendships through activities people actually enjoy.

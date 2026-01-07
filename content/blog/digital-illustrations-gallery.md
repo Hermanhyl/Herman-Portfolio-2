@@ -11,6 +11,8 @@ tags:
   - Passion Project
   - Character Design
   - Creative Expression
+projectLink: /?view=illustrations
+projectLabel: View Illustrations Gallery
 ---
 
 While my professional focus is frontend development and UI/UX design, digital illustration is so much more than a hobby to me—it's the creative outlet I always fall back to. No matter how busy life gets, I find myself returning to my iPad and Procreate, losing hours in the flow of creating something from nothing. My portfolio features over 80 illustrations, and this collection represents years of passionate practice and creative expression.

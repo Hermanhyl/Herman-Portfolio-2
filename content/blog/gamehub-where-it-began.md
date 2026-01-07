@@ -10,6 +10,8 @@ tags:
   - CSS
   - JavaScript
   - Learning Journey
+projectLink: /project/project7
+projectLabel: View GameHub Project
 ---
 
 GameHub holds a special place in my portfolio—not because it's my best work, but because it's where everything started. This was my very first project as a developer, and I'm keeping it here as a reminder of how every journey begins somewhere.

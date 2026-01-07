@@ -11,6 +11,8 @@ tags:
   - UI/UX Design
   - 3D Modeling
   - Education
+projectLink: /project/project1
+projectLabel: View BrannVRn Project
 ---
 
 BrannVRn was our bachelor's degree final project—a Virtual Reality fire safety training simulator developed in collaboration with Sykehuspartner. The project earned an A grade and taught us invaluable lessons about VR development, teamwork, and educational design.

@@ -10,6 +10,8 @@ tags:
   - Tailwind CSS
   - Noroff API
   - Figma
+projectLink: /project/project4
+projectLabel: View Own The Bid Project
 ---
 
 Own The Bid started as my semester project—a web-based auction platform where users can list items, place bids, and compete in timed auctions. What made this project special was the iterative improvement process after submission.

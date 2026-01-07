@@ -99,6 +99,6 @@ export const illustrations = [
   { id: 54, src: "/Illustrasjoner portfolio/Poses.png", title: "Poses", category: "Sketches & Studies" },
   { id: 58, src: "/Illustrasjoner portfolio/Consept sketch.png", title: "Concept Sketch", category: "Sketches & Studies" },
   { id: 72, src: "/Illustrasjoner portfolio/Gradiant training.png", title: "Gradient Training", category: "Sketches & Studies" },
-  { id: 75, src: "/Illustrasjoner portfolio/Untitled_Artwork 27.png", title: "Untitled Artwork 27", category: "Sketches & Studies" },
+  { id: 75, src: "/Illustrasjoner portfolio/Untitled_Artwork 27.png", title: "Lioness", category: "Sketches & Studies" },
   { id: 77, src: "/Illustrasjoner portfolio/Skuffende.png", title: "Skuffende", category: "Sketches & Studies" },
 ];

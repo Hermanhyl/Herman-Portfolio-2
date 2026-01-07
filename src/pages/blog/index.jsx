@@ -57,7 +57,7 @@ function Blog() {
           {/* Admin Button - Fixed Position */}
           <button
             onClick={handleAdminClick}
-            className="fixed bottom-6 left-6 z-50 p-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 group"
+            className="fixed bottom-6 left-6 z-50 p-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 group cursor-pointer"
             aria-label={user ? "Manage blog posts" : "Login to manage blog"}
             title={user ? "Manage blog posts" : "Login to manage blog"}
           >

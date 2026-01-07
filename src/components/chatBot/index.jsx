@@ -175,7 +175,7 @@ export default function ChatBot() {
                   {/* Close button */}
                   <button
                     onClick={dismissPromptBubble}
-                    className="absolute -top-2 -right-2 w-6 h-6 bg-gray-800 hover:bg-gray-700 border border-white/20 text-gray-400 hover:text-white rounded-full flex items-center justify-center transition-all duration-200 shadow-lg"
+                    className="absolute -top-2 -right-2 w-6 h-6 bg-gray-800 hover:bg-gray-700 border border-white/20 text-gray-400 hover:text-white rounded-full flex items-center justify-center transition-all duration-200 shadow-lg cursor-pointer"
                     aria-label="Dismiss prompt"
                   >
                     <X className="w-3 h-3" />
@@ -211,7 +211,7 @@ export default function ChatBot() {
           {/* Chat Button */}
           <button
             onClick={handleOpenChat}
-            className="p-3 sm:p-4 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white rounded-full shadow-2xl transition-all duration-500 transform hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 group animate-in fade-in slide-in-from-bottom-8 duration-700"
+            className="p-3 sm:p-4 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white rounded-full shadow-2xl transition-all duration-500 transform hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 group animate-in fade-in slide-in-from-bottom-8 duration-700 cursor-pointer"
             aria-label="Open AI chat assistant"
             style={{ animationDelay: '200ms' }}
           >
@@ -260,7 +260,7 @@ export default function ChatBot() {
               {messages.length > 1 && (
                 <button
                   onClick={clearChat}
-                  className="p-2 text-gray-400 hover:text-emerald-400 hover:bg-white/10 rounded-lg transition-all"
+                  className="p-2 text-gray-400 hover:text-emerald-400 hover:bg-white/10 rounded-lg transition-all cursor-pointer"
                   aria-label="Clear conversation"
                   title="Clear conversation"
                 >
@@ -269,7 +269,7 @@ export default function ChatBot() {
               )}
               <button
                 onClick={() => setIsOpen(false)}
-                className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-all"
+                className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-all cursor-pointer"
                 aria-label="Close chat"
               >
                 <X className="w-5 h-5 sm:w-5 sm:h-5" />
@@ -339,7 +339,7 @@ export default function ChatBot() {
                   <button
                     key={index}
                     onClick={() => handleQuickAction(action)}
-                    className="w-full text-left p-2.5 sm:p-3 bg-white/5 hover:bg-white/10 active:bg-white/15 border border-white/10 rounded-xl text-sm text-gray-300 transition-all duration-300 hover:border-emerald-500/50"
+                    className="w-full text-left p-2.5 sm:p-3 bg-white/5 hover:bg-white/10 active:bg-white/15 border border-white/10 rounded-xl text-sm text-gray-300 transition-all duration-300 hover:border-emerald-500/50 cursor-pointer"
                   >
                     {action}
                   </button>
@@ -369,7 +369,7 @@ export default function ChatBot() {
               <button
                 onClick={() => handleSendMessage()}
                 disabled={!inputValue.trim() || isLoading}
-                className="px-3 sm:px-4 py-2.5 sm:py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 active:from-emerald-700 active:to-cyan-700 text-white rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none focus:outline-none focus:ring-2 focus:ring-emerald-500 shrink-0"
+                className="px-3 sm:px-4 py-2.5 sm:py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 active:from-emerald-700 active:to-cyan-700 text-white rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none focus:outline-none focus:ring-2 focus:ring-emerald-500 shrink-0 cursor-pointer"
                 aria-label="Send message"
               >
                 <Send className="w-4 h-4 sm:w-5 sm:h-5" />

@@ -135,7 +135,7 @@ function Home() {
                   <button
                     onClick={() => setActiveView("projects")}
                     aria-pressed={activeView === "projects"}
-                    className={`flex items-center justify-center gap-2 px-4 sm:px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base ${
+                    className={`flex items-center justify-center gap-2 px-4 sm:px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base cursor-pointer ${
                       activeView === "projects"
                         ? "bg-gradient-to-r from-emerald-500 to-cyan-500 text-white shadow-lg shadow-emerald-500/30"
                         : "text-gray-400 hover:text-white hover:bg-white/10"
@@ -147,7 +147,7 @@ function Home() {
                   <button
                     onClick={() => setActiveView("illustrations")}
                     aria-pressed={activeView === "illustrations"}
-                    className={`flex items-center justify-center gap-2 px-4 sm:px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base ${
+                    className={`flex items-center justify-center gap-2 px-4 sm:px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base cursor-pointer ${
                       activeView === "illustrations"
                         ? "bg-gradient-to-r from-emerald-500 to-cyan-500 text-white shadow-lg shadow-emerald-500/30"
                         : "text-gray-400 hover:text-white hover:bg-white/10"
@@ -191,7 +191,7 @@ function Home() {
                 {searchQuery && (
                   <button
                     onClick={() => setSearchQuery("")}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition"
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition cursor-pointer"
                     aria-label="Clear search"
                   >
                     <X className="w-5 h-5" />
@@ -205,7 +205,7 @@ function Home() {
                 <button
                   key={tech}
                   onClick={() => setSelectedTech(selectedTech === tech ? null : tech)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 ${
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 cursor-pointer ${
                     selectedTech === tech
                       ? 'bg-gradient-to-r from-emerald-500 to-cyan-500 text-white shadow-lg'
                       : 'bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 hover:text-white'
@@ -222,7 +222,7 @@ function Home() {
                 {hasActiveFilters ? (
                   <>
                     <span>Showing {filteredProjects.length} of {projects.length} projects</span>
-                    <button onClick={clearFilters} className="flex items-center gap-1 text-emerald-400 hover:text-emerald-300 transition" aria-label="Clear all filters">
+                    <button onClick={clearFilters} className="flex items-center gap-1 text-emerald-400 hover:text-emerald-300 transition cursor-pointer" aria-label="Clear all filters">
                       <X className="w-4 h-4" />
                       Clear filters
                     </button>
@@ -310,7 +310,7 @@ function Home() {
                           key={dotIndex}
                           onClick={() => setCarouselIndex(dotIndex)}
                           aria-label={`View illustration ${dotIndex + 1}`}
-                          className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 mx-1 sm:mx-1.5 ${
+                          className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 mx-1 sm:mx-1.5 cursor-pointer ${
                             carouselIndex % 4 === dotIndex
                               ? 'bg-emerald-400 shadow-lg shadow-emerald-400/50'
                               : 'bg-white/20 hover:bg-white/40'
@@ -330,7 +330,7 @@ function Home() {
                     <button
                       key={category}
                       onClick={() => setSelectedCategory(category)}
-                      className={`px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-lg font-medium text-xs sm:text-sm md:text-base transition-all duration-300 transform hover:scale-105 ${
+                      className={`px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-lg font-medium text-xs sm:text-sm md:text-base transition-all duration-300 transform hover:scale-105 cursor-pointer ${
                         selectedCategory === category
                           ? 'bg-gradient-to-r from-emerald-500 to-cyan-500 text-white shadow-lg'
                           : 'bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 hover:text-white'

@@ -29,7 +29,7 @@ function ProjectDetail() {
           <h2 className="text-2xl font-bold text-red-400 mb-4">Project not found</h2>
           <button
             onClick={() => navigate("/")}
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 cursor-pointer"
           >
             <ArrowLeft className="w-5 h-5" />
             Back to Home
@@ -58,7 +58,7 @@ function ProjectDetail() {
                 <button
                   onClick={() => navigate("/")}
                   aria-label="Navigate to home page"
-                  className="hover:text-emerald-400 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1"
+                  className="hover:text-emerald-400 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1 cursor-pointer"
                 >
                   Home
                 </button>
@@ -101,7 +101,7 @@ function ProjectDetail() {
             <button
               onClick={handleCopyLink}
               aria-label={copied ? "Link copied to clipboard" : "Copy project link to clipboard"}
-              className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 ${
+              className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 cursor-pointer ${
                 copied
                   ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/50'
                   : 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 hover:from-purple-500/30 hover:to-pink-500/30 text-white border border-purple-500/50 hover:border-purple-400 shadow-lg'
@@ -219,7 +219,7 @@ function ProjectDetail() {
                       key={index}
                       onClick={() => setSelectedImage(index)}
                       aria-label={`View image ${index + 1} of ${project.title}`}
-                      className={`rounded-lg overflow-hidden transition-all duration-300 ${
+                      className={`rounded-lg overflow-hidden transition-all duration-300 cursor-pointer ${
                         selectedImage === index
                           ? 'ring-2 ring-emerald-400 scale-105'
                           : 'opacity-60 hover:opacity-100'
@@ -310,7 +310,7 @@ function ProjectDetail() {
                   <button
                     onClick={() => navigate(`/project/${prevProject.id}`)}
                     aria-label={`Navigate to previous project: ${prevProject.title}`}
-                    className="w-full text-left p-3 bg-white/5 hover:bg-white/10 rounded-lg transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+                    className="w-full text-left p-3 bg-white/5 hover:bg-white/10 rounded-lg transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 cursor-pointer"
                   >
                     <div className="text-xs text-gray-400 mb-1">Previous</div>
                     <div className="text-emerald-400 group-hover:text-emerald-300 flex items-center gap-2">
@@ -322,7 +322,7 @@ function ProjectDetail() {
                   <button
                     onClick={() => navigate(`/project/${nextProject.id}`)}
                     aria-label={`Navigate to next project: ${nextProject.title}`}
-                    className="w-full text-left p-3 bg-white/5 hover:bg-white/10 rounded-lg transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+                    className="w-full text-left p-3 bg-white/5 hover:bg-white/10 rounded-lg transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 cursor-pointer"
                   >
                     <div className="text-xs text-gray-400 mb-1">Next</div>
                     <div className="text-emerald-400 group-hover:text-emerald-300 flex items-center gap-2">
@@ -345,7 +345,7 @@ function ProjectDetail() {
                 }, 100);
               }}
               aria-label="Back to all projects"
-              className="w-full inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+              className="w-full inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 cursor-pointer"
             >
               <ArrowLeft className="w-5 h-5" aria-hidden="true" />
               Back to Projects

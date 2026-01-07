@@ -107,7 +107,7 @@ function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className={`md:hidden p-2 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-black ${
+          className={`md:hidden p-2 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-black cursor-pointer ${
             menuOpen
               ? 'bg-emerald-500/20 text-emerald-400'
               : 'text-gray-300 hover:bg-white/10'

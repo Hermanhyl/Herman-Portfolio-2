@@ -1,6 +1,6 @@
 ---
 title: Building an AI-Powered Portfolio Assistant
-date: 2024-12-24T00:00:00.000Z
+date: 2025-12-24T00:00:00.000Z
 featured: false
 excerpt: How I integrated OpenAI GPT-4o-mini into my portfolio to create an
   interactive AI assistant that answers questions about my skills and

@@ -1,6 +1,6 @@
 ---
 title: "GoneFishing: Building a Modern Fishing Tracker App"
-date: 2025-01-06T00:00:00.000Z
+date: 2026-01-06T00:00:00.000Z
 featured: false
 excerpt: "Creating a comprehensive fishing tracking application with Next.js, Supabase, and a focus on user experience across all devices."
 readTime: 5 min read

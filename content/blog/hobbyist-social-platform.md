@@ -1,6 +1,6 @@
 ---
 title: "Hobbyist: Designing a Social Platform for Genuine Connections"
-date: 2025-01-05T00:00:00.000Z
+date: 2026-01-05T00:00:00.000Z
 featured: false
 excerpt: "Building a social platform that connects people through shared hobbies and activities, focusing on friendship rather than dating."
 readTime: 5 min read

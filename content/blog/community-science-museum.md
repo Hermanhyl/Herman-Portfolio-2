@@ -1,6 +1,6 @@
 ---
 title: "Community Science Museum: My Second Step in Web Development"
-date: 2024-12-28T00:00:00.000Z
+date: 2025-12-28T00:00:00.000Z
 featured: false
 excerpt: "Reflecting on my second major project at Noroff—an early milestone that taught me about accessibility and responsive design."
 readTime: 4 min read

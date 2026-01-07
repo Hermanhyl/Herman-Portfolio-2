@@ -1,6 +1,6 @@
 ---
 title: "From Figma to Code: My Workflow"
-date: 2024-12-22T00:00:00.000Z
+date: 2025-12-22T00:00:00.000Z
 featured: false
 excerpt: How I bridge the gap between design and development to create pixel-perfect, responsive web interfaces.
 readTime: 6 min read

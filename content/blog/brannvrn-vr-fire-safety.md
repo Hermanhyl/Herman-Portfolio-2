@@ -1,6 +1,6 @@
 ---
 title: "BrannVRn: Building a VR Fire Safety Training Simulator"
-date: 2025-01-07T00:00:00.000Z
+date: 2026-01-07T00:00:00.000Z
 featured: true
 excerpt: "How our team developed an A-graded VR fire safety training simulator for Sykehuspartner, combining immersive technology with educational design."
 readTime: 6 min read

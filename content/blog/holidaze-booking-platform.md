@@ -1,6 +1,6 @@
 ---
 title: "Holidaze: A Collaborative Journey to an A-Grade Booking Platform"
-date: 2025-01-04T00:00:00.000Z
+date: 2026-01-04T00:00:00.000Z
 featured: false
 excerpt: "How our team of three built a cozy booking platform for slow-living getaways, earning an A on our final exam project."
 readTime: 6 min read

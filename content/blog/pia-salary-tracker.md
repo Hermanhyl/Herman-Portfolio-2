@@ -1,6 +1,6 @@
 ---
 title: "PIA Salary Tracker: Privacy-First Income Management"
-date: 2025-01-01T00:00:00.000Z
+date: 2026-01-01T00:00:00.000Z
 featured: false
 excerpt: "Building an income tracking app that stores all data locally in Excel files, with automatic tax calculations and bilingual support."
 readTime: 5 min read

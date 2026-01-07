@@ -1,6 +1,6 @@
 ---
 title: "Own The Bid: Building an Auction Platform with Vanilla JavaScript"
-date: 2025-01-03T00:00:00.000Z
+date: 2026-01-03T00:00:00.000Z
 featured: false
 excerpt: "Creating a full-featured auction platform using vanilla JavaScript, and the improvements I made after initial feedback."
 readTime: 5 min read

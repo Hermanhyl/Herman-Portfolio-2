@@ -1,6 +1,6 @@
 ---
 title: "Timer & Planner: Combining Focus Sessions with Smart Scheduling"
-date: 2025-01-02T00:00:00.000Z
+date: 2026-01-02T00:00:00.000Z
 featured: false
 excerpt: "Building a privacy-focused productivity app that combines customizable timers with drag-and-drop weekly and monthly planning."
 readTime: 5 min read

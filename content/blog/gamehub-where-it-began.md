@@ -1,6 +1,6 @@
 ---
 title: "GameHub: Where My Developer Journey Began"
-date: 2024-12-25T00:00:00.000Z
+date: 2025-12-25T00:00:00.000Z
 featured: false
 excerpt: "My very first coding project—a reminder of humble beginnings and the growth that comes from persistence."
 readTime: 4 min read

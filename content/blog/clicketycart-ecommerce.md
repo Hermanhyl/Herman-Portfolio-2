@@ -1,6 +1,6 @@
 ---
 title: "ClicketyCart: A Retro-Styled E-Commerce Experience"
-date: 2024-12-30T00:00:00.000Z
+date: 2025-12-30T00:00:00.000Z
 featured: false
 excerpt: "Building a fun, retro-inspired e-commerce frontend with React, and the improvements made after submission."
 readTime: 4 min read

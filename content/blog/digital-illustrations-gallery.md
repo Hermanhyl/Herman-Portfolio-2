@@ -1,6 +1,6 @@
 ---
 title: "My Creative Side: Digital Illustration as Passion and Purpose"
-date: 2025-01-07T12:00:00.000Z
+date: 2026-01-07T12:00:00.000Z
 featured: false
 excerpt: "Showcasing my creative and illustrative side—a lifelong passion I always return to, and my dream of combining illustration with my professional work."
 readTime: 7 min read

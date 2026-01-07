@@ -170,13 +170,13 @@ function About() {
 
               <div className="space-y-4 text-gray-300 text-lg leading-relaxed">
                 <p>
-                  I'm a <span className="text-white font-medium">27-year-old developer</span> with a unique background bridging technology and art. With a Bachelor's in Animation & Digital Art and a vocational degree in Front-End Development, I bring both technical expertise and creative vision to every project.
+                  I'm a <span className="text-white font-medium">UX designer and frontend developer</span> with a background in game development, animation, and visual communication. Passionate about creating <span className="text-emerald-400">engaging, educational experiences</span> through user-centered design and creative storytelling.
                 </p>
                 <p>
-                  Skilled in <span className="text-emerald-400">React, JavaScript, and modern frontend workflows</span>, I combine technical development with user-centered design. My experience spans building responsive web solutions, API integrations, and team-based development.
+                  My profile uniquely <span className="text-white font-medium">bridges design and development</span>—combining artistic expertise from The Game School with technical skills from frontend development. This allows me to work seamlessly across the full product lifecycle, <span className="text-cyan-400">from concept to code</span>.
                 </p>
                 <p>
-                  From designing UI/UX for startups to developing VR training simulations, my work reflects a passion for creating <span className="text-cyan-400">accessible, interactive, and visually engaging</span> digital experiences.
+                  From developing <span className="text-emerald-400">VR training simulations</span> for the healthcare sector to building modern web applications, my work reflects a commitment to creating <span className="text-cyan-400">visually appealing products</span> that reflect the users' needs—making content accessible and inspiring through thoughtful UX and visual design.
                 </p>
               </div>
             </div>

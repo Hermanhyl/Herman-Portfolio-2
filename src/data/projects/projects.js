@@ -9,6 +9,7 @@ export const projects = [
     github: "",
     live: "",
     linkedin: "https://www.linkedin.com/feed/update/urn:li:activity:6937386481468510208/",
+    report: "/BrannVRn/BrannVRn_Rapport_Bachelor.pdf",
     figma: "",
     technologies: ["Unreal Engine", "VR Development", "3D Modeling", "UI/UX Design", "Concept Art"],
     authers: "Herman Hylland, Axel Gardarsson, Deniz Javeid",

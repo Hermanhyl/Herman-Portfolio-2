@@ -3,7 +3,7 @@ import { projects } from "../../data/projects/projects";
 import { useState } from "react";
 import PageTransition from "../../components/pageTransition";
 import OptimizedImage from "../../components/optimizedImage";
-import { ArrowLeft, ExternalLink, Github, Figma, Share2, Check, ChevronRight, Code2, Users, Calendar, Linkedin } from "lucide-react";
+import { ArrowLeft, ExternalLink, Github, Figma, Share2, Check, ChevronRight, Code2, Users, Calendar, Linkedin, FileText } from "lucide-react";
 
 function ProjectDetail() {
   const { id } = useParams();
@@ -171,6 +171,18 @@ function ProjectDetail() {
                 Watch Trailer
               </a>
             )}
+            {project.report && (
+              <a
+                href={project.report}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Read bachelor report for ${project.title} (opens in new tab)`}
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-orange-600 backdrop-blur-sm border border-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+              >
+                <FileText className="w-5 h-5" aria-hidden="true" />
+                Read Report
+              </a>
+            )}
           </div>
         </div>
       </div>
@@ -227,20 +239,34 @@ function ProjectDetail() {
             {/* Article Content */}
             {project.article && project.article.length > 0 && (
               <div className="animated-border backdrop-blur-md bg-white/10 p-8 rounded-2xl relative">
-                <div className="flex justify-between items-start mb-6">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
                   <h2 className="text-2xl font-bold">About This Project</h2>
-                  {project.linkedin && (
-                    <a
-                      href={project.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Watch project trailer on LinkedIn (opens in new tab)"
-                      className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900 shadow-lg shadow-cyan-500/25"
-                    >
-                      <Linkedin className="w-4 h-4" aria-hidden="true" />
-                      Watch Trailer
-                    </a>
-                  )}
+                  <div className="flex flex-wrap gap-2">
+                    {project.linkedin && (
+                      <a
+                        href={project.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Watch project trailer on LinkedIn (opens in new tab)"
+                        className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900 shadow-lg shadow-cyan-500/25"
+                      >
+                        <Linkedin className="w-4 h-4" aria-hidden="true" />
+                        Watch Trailer
+                      </a>
+                    )}
+                    {project.report && (
+                      <a
+                        href={project.report}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Read bachelor report (opens in new tab)"
+                        className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-semibold px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-gray-900 shadow-lg shadow-orange-500/25"
+                      >
+                        <FileText className="w-4 h-4" aria-hidden="true" />
+                        Read Report
+                      </a>
+                    )}
+                  </div>
                 </div>
                 <article className="space-y-8">
                   {project.article.map((section, index) => (

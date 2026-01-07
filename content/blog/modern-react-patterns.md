@@ -1,6 +1,6 @@
 ---
 title: Modern React Patterns I Use Daily
-date: 2024-12-26T00:00:00.000Z
+date: 2024-12-23T00:00:00.000Z
 featured: false
 excerpt: A look at the React patterns and practices that have improved my development workflow and code quality.
 readTime: 4 min read

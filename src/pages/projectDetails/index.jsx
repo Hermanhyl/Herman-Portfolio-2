@@ -209,7 +209,7 @@ function ProjectDetail() {
               <Link
                 to={project.blogPost}
                 aria-label={`Read blog post about ${project.title}`}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 shadow-lg shadow-purple-500/25"
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-purple-500 backdrop-blur-sm border border-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900"
               >
                 <BookOpen className="w-5 h-5" aria-hidden="true" />
                 Read Blog Post

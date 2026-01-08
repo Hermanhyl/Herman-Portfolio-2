@@ -5,7 +5,7 @@ export const projects = [
     teaser: "UX Process & Learning Design in action: A VR fire safety simulator where I designed the complete user experience and pedagogical framework—transforming complex safety procedures into intuitive, educational interactions.",
     description:
       "BrannVRn is a Virtual Reality fire safety training simulator developed as a bachelor's degree project in collaboration with Sykehuspartner. The project recreates Sykehuspartner's Drammen office in a 1:1 scale, providing immersive fire safety training experiences.\n\nAs the concept artist and UI/UX designer, I was responsible for creating the visual identity, infographics, UI elements, 3D modeling, texturing, and developing informational content about fire hazards and emergency procedures.",
-    images: ["/BrannVRn.jpg"],
+    images: ["/BrannVRn/Thumbnail/HighresScreenshot00005.png"],
     youtube: "https://www.youtube.com/watch?v=1rR3RqYXKDQ",
     gallery: [
       "/BrannVRn/Images/screenshot-01.png",
@@ -91,9 +91,9 @@ export const projects = [
   {
     id: "project-gonefishing",
     title: "GoneFishing - Fishing Tracker App",
-    teaser: "GoneFishing is a modern fishing tracker app built with Next.js that helps anglers log catches, manage details, and track their fishing adventures.",
+    teaser: "User Research in Practice: A fishing tracker app built through conversations with real anglers—addressing pain points in existing apps through iterative design and community feedback.",
     description:
-      "GoneFishing is a comprehensive fishing tracking application designed to help anglers document and manage their fishing activities with ease. \n\nBuilt with Next.js and featuring a clean, responsive interface, the app allows users to record detailed information about their catches including location, species, size, and conditions. With support for both light and dark themes, authentication, and customizable unit systems (metric/imperial), GoneFishing provides a seamless experience for fishing enthusiasts who want to maintain organized records of their adventures.",
+      "GoneFishing is a comprehensive fishing tracking application born from real user research within the fishing community. By talking directly with fishermen about their frustrations with existing apps, I identified key pain points and designed solutions that actually matter to anglers.\n\nBuilt with Next.js and featuring a clean, responsive interface, the app addresses real needs: photo logging, detailed weather tracking, catch statistics, and an overall view of your fishing history—features that emerged directly from user feedback.",
     images: ["/gonefishing.png"],
     blogPost: "/blog/gonefishing-tracker-app",
     github: "https://github.com/Hermanhyl/gonefishing",
@@ -104,23 +104,31 @@ export const projects = [
     article: [
       {
         heading: "Project Overview",
-        content: "GoneFishing was created to solve a common problem among fishing enthusiasts: keeping track of catches in a simple, organized way. Instead of relying on handwritten notes or memory, anglers can now log every detail of their fishing trips digitally. The app provides an intuitive interface for recording fish species, size, weight, location, weather conditions, and personal notes about each catch.",
+        content: "GoneFishing started with a simple question: what do fishermen actually need from a catch tracking app? Rather than assuming I knew the answer, I went directly to the source—talking with anglers in the fishing community to understand their real experiences, frustrations, and wishes.\n\nThis user-centered approach shaped every feature in the app. Instead of building what I thought was useful, I built what fishermen told me they needed. The result is an application designed around genuine pain points rather than assumptions.",
+      },
+      {
+        heading: "User Research: Learning from the Community",
+        content: "The most valuable part of this project was the research phase. I had conversations with multiple fishermen—from casual weekend anglers to dedicated enthusiasts—asking about their current methods for tracking catches and what frustrated them about existing solutions.\n\nKey insights from these conversations:\n\n• No photo support: Several anglers mentioned that their current apps didn't allow image uploads, making it impossible to document catches visually—a feature many considered essential\n• Poor weather logging: Existing apps either lacked weather tracking entirely or made it too cumbersome to record conditions accurately\n• Missing statistics: Fishermen wanted to see patterns in their catches over time, but most apps offered no analytics or overview features\n• No comprehensive view: Users expressed frustration at not being able to see their complete fishing history at a glance\n• Cluttered interfaces: Many existing apps were overloaded with features that got in the way of the core task—quickly logging a catch\n\nThese pain points became the foundation for GoneFishing's feature set.",
+      },
+      {
+        heading: "From Research to Design",
+        content: "Translating user feedback into design decisions required careful prioritization. Not every wish could be implemented immediately, but the core frustrations needed addressing.\n\nHow user research shaped the design:\n\n• Image support was built in from the start, allowing anglers to attach photos to each catch entry\n• Weather conditions are easy to log with intuitive controls for temperature, wind, and conditions\n• A statistics dashboard provides the overview users were missing—total catches, species breakdown, and trends over time\n• The interface stays clean and focused, respecting users' time when they're out on the water\n• Both metric and imperial units accommodate the international fishing community\n\nThis wasn't about adding features for the sake of it—every capability traces back to something a real user expressed needing.",
       },
       {
         heading: "Key Features",
-        content: "The application includes several standout features that enhance the user experience. Theme management allows users to switch between light and dark modes, with preferences saved for consistency across sessions. The authentication system, powered by Supabase, ensures that each user's data remains private and secure while providing a seamless login experience. Additionally, the unit system provider enables users to choose between metric and imperial measurements, making the app accessible to anglers worldwide regardless of their preferred measurement system.",
+        content: "The application includes features that directly address the pain points discovered during research:\n\n• Photo logging: Document your catches visually with image uploads for each entry\n• Comprehensive weather tracking: Record temperature, wind conditions, and weather state easily\n• Catch statistics: View your fishing history with meaningful analytics and trends\n• Overall catch view: See all your catches in an organized, filterable format\n• Theme management: Light and dark modes for different conditions—the dark theme using a slate blue background that's easy on the eyes during early morning or late evening sessions\n• Unit flexibility: Switch between metric and imperial measurements based on your preference\n• Secure authentication: Your data stays private with Supabase-powered authentication",
       },
       {
         heading: "Technical Implementation",
-        content: "Built with Next.js, the application leverages React's component-based architecture for maintainable and scalable code. Supabase serves as the backend, handling authentication and data storage with real-time capabilities. Tailwind CSS provides a modern, responsive design that works seamlessly across devices from mobile phones to desktop computers. The app uses Next.js's built-in routing for smooth navigation, and special attention was paid to preventing visual 'flashes' during page loads by applying theme settings immediately.",
+        content: "Built with Next.js, the application leverages React's component-based architecture for maintainable and scalable code. Supabase serves as the backend, handling authentication and data storage with real-time capabilities. Tailwind CSS provides a modern, responsive design that works seamlessly across devices—crucial for an app that needs to work equally well on a phone by the water or a desktop at home.\n\nSpecial attention was paid to the mobile experience, recognizing that most catch logging happens in the field. The interface is optimized for quick entries with minimal taps, respecting the context in which it's used.",
       },
       {
-        heading: "Development Process",
-        content: "The development focused on creating an intuitive user experience while maintaining clean, efficient code. Responsive design was a priority from the start, ensuring the app works well whether users are logging catches from their phones by the water or reviewing their history on a larger screen at home. The dark mode implementation was carefully designed with a slate blue background that's easy on the eyes during early morning or late evening fishing sessions.",
+        heading: "UX Lessons Learned",
+        content: "This project reinforced several important UX principles:\n\n• Talk to users early: Assumptions about what users need are often wrong. Direct conversations revealed pain points I never would have guessed\n• Prioritize based on frequency: The features users mentioned most often became the highest priority—photo support and statistics came up in nearly every conversation\n• Context matters: Understanding that anglers log catches while fishing—often in challenging conditions—influenced decisions about interface simplicity and button sizes\n• Existing solutions aren't sacred: Just because other apps do something a certain way doesn't mean it's right. User frustrations with competitors became opportunities for differentiation\n\nThe research-first approach took more time upfront but resulted in a more focused, useful application.",
       },
       {
         heading: "Future Enhancements",
-        content: "While the current version provides solid functionality for tracking catches, there are several planned improvements. Future updates may include data visualization to show catch trends over time, social features to share catches with friends, integration with weather APIs for automatic condition logging, and photo uploads to document catches visually. The goal is to continue evolving GoneFishing into the most comprehensive fishing tracking solution available.",
+        content: "Based on ongoing feedback from users, planned improvements include:\n\n• Advanced data visualization showing catch trends over seasons and locations\n• Social features to share catches with the fishing community\n• Integration with weather APIs for automatic condition logging\n• Location-based insights showing your most successful fishing spots\n• Export functionality for backing up your fishing history\n\nThe goal is to continue evolving GoneFishing based on real user needs—maintaining the research-driven approach that shaped its foundation.",
       },
     ],
   },
@@ -128,9 +136,9 @@ export const projects = [
   {
     id: "project2",
     title: "Hobbyist - Social Activity Platform",
-    teaser: "Hobbyist is a social platform that connects people through shared hobbies and activities, helping users find genuine friendships and activity partners.",
+    teaser: "UX-Centered Design: A social platform shaped by conversations with friends and potential users—focusing on simplicity, intuitive navigation, and genuine human connection.",
     description:
-      "Hobbyist is a social platform designed to help people make real connections through shared interests and activities. Unlike dating apps, Hobbyist focuses on building genuine friendships and finding activity partners. \n\nWhether you're looking for a hiking buddy, board game partner, or cooking class companion, Hobbyist connects you with locals who share your passions. The platform features a warm, inviting design with an intuitive interface that makes discovering and joining activities effortless.",
+      "Hobbyist is a social platform designed to help people make real connections through shared interests and activities. The design process involved gathering insights from friends and potential users about what they'd want from such a platform.\n\nTheir feedback shaped everything from the simple navigation structure to how activities are displayed—resulting in a clean, organized interface that puts connection first, not complexity.",
     images: ["/hobbyist.jpg"],
     blogPost: "/blog/hobbyist-social-platform",
     github: "https://github.com/Hermanhyl/Hobbyist",
@@ -141,23 +149,35 @@ export const projects = [
     article: [
       {
         heading: "Project Overview",
-        content: "Hobbyist was born from the idea that meaningful connections come from shared experiences. In a world where digital interactions often feel shallow, this platform brings people together through activities they genuinely enjoy. The app makes it easy to browse local activities, connect with like-minded individuals, and build real friendships around common interests.",
+        content: "Hobbyist was born from the idea that meaningful connections come from shared experiences. In a world where digital interactions often feel shallow, this platform brings people together through activities they genuinely enjoy.\n\nBefore diving into development, I spent time talking with friends and people in my network about what they'd actually want from a platform like this. These conversations shaped the direction of the project—not just what features to include, but how to present them in a way that feels natural and welcoming.",
+      },
+      {
+        heading: "Gathering User Insights",
+        content: "While this wasn't a formal user study, the informal conversations I had proved invaluable. I asked people about their experiences with social apps, what frustrated them, and what they'd hope to find in a hobby-focused platform.\n\nCommon themes emerged:\n\n• Simplicity over complexity: People wanted to find activities quickly without navigating through endless menus and options\n• Clear information hierarchy: Users expressed wanting to see the most important details—what, when, where—at a glance\n• Messaging that feels natural: Communication features should be straightforward, not buried or overcomplicated\n• Organized presentation: Activities should be easy to browse and filter without feeling overwhelming\n• Welcoming atmosphere: The platform should feel friendly and approachable, not intimidating for newcomers\n\nThese insights became guiding principles for every design decision.",
+      },
+      {
+        heading: "Designing for Simplicity",
+        content: "One of the clearest takeaways from my conversations was the desire for simplicity. People didn't want another app cluttered with buttons, notifications, and features competing for attention.\n\nThis shaped the interface in several ways:\n\n• Clean navigation: Essential functions are easy to find without hunting through menus\n• Focused screens: Each view has a clear purpose without unnecessary distractions\n• Intuitive flow: Moving through the app feels natural—browse activities, see details, connect with people\n• Minimal clicks: Getting from discovery to connection requires as few steps as possible\n\nThe goal was an app that feels effortless to use, where users spend their energy on connecting with others rather than figuring out the interface.",
+      },
+      {
+        heading: "Information Display",
+        content: "How information is presented matters as much as what information is shown. Based on feedback about wanting key details visible immediately, I designed activity cards and profiles to surface the essentials:\n\n• Activity type and description front and center\n• Date, time, and location clearly visible\n• Participant count and availability at a glance\n• User interests displayed prominently on profiles\n\nThe warm coral and orange color scheme wasn't just an aesthetic choice—it creates visual hierarchy and helps guide users' attention to what matters most.",
       },
       {
         heading: "Key Features",
-        content: "The platform includes comprehensive activity browsing and filtering, user profiles showcasing interests and preferred activities, and a clean dashboard for managing connections and upcoming events. Users can explore a wide range of hobby categories from outdoor adventures like hiking and cycling to creative pursuits like photography and cooking classes. The warm coral and orange color scheme creates an inviting, friendly atmosphere that reflects the platform's community-focused mission.",
-      },
-      {
-        heading: "Technical Implementation",
-        content: "Built with React and Vite for optimal performance, Hobbyist leverages Supabase for authentication and real-time database functionality. Tailwind CSS powers the responsive design, ensuring a seamless experience across all devices. The architecture prioritizes scalability and maintainability, with clean component separation and efficient state management.",
+        content: "The platform includes features that emerged from understanding what users actually need:\n\n• Activity browsing with intuitive filtering by category, location, and availability\n• User profiles showcasing interests and preferred activities\n• Clean dashboard for managing connections and upcoming events\n• Straightforward messaging for coordinating with activity partners\n• Wide range of hobby categories from outdoor adventures to creative pursuits\n\nEach feature was evaluated against the simplicity principle—if it added complexity without clear value, it didn't make the cut.",
       },
       {
         heading: "Design Philosophy",
-        content: "The design intentionally moves away from the typical dating app aesthetic. The warm gradient backgrounds, friendly typography, and inclusive imagery emphasize community and genuine connection. Every design decision reinforces the core message: this is a space for making real friends through shared activities, not romantic matchmaking.",
+        content: "The design intentionally moves away from the typical dating app aesthetic. The warm gradient backgrounds, friendly typography, and inclusive imagery emphasize community and genuine connection.\n\nEvery design decision reinforces the core message: this is a space for making real friends through shared activities, not romantic matchmaking. The interface should feel like an invitation to join a community, not a transaction to complete.",
+      },
+      {
+        heading: "UX Lessons Applied",
+        content: "This project reinforced important UX principles:\n\n• Listen before building: Even informal conversations reveal insights you wouldn't discover on your own\n• Simplicity requires discipline: It's tempting to add features, but restraint often serves users better\n• Context shapes design: Understanding how and why people would use the platform influenced everything from button placement to color choices\n• Warmth can be designed: Visual design choices—colors, typography, spacing—contribute to how welcoming an app feels\n\nThe feedback-informed approach resulted in a more focused, user-friendly platform than I would have created based on assumptions alone.",
       },
       {
         heading: "Future Development",
-        content: "Planned features include activity scheduling and RSVP functionality, group chat capabilities for activity participants, integration with calendar apps, location-based activity recommendations, and a rating system for activities and organizers. The goal is to create a comprehensive platform that makes finding and participating in hobby groups as easy as possible.",
+        content: "Planned features—informed by ongoing feedback—include activity scheduling and RSVP functionality, group chat capabilities for activity participants, integration with calendar apps, and location-based activity recommendations.\n\nThe goal is to continue evolving Hobbyist based on real user needs while maintaining the simplicity and warmth that define the current experience.",
       },
     ],
   },

@@ -187,7 +187,7 @@ function Home() {
               description={
                 activeView === "projects"
                   ? "A collection of projects showcasing my skills in front-end development, UI/UX design, and creative problem-solving."
-                  : "A collection of personal illustrations and digital artwork created by me, exploring various styles and creative techniques."
+                  : "Digital illustrations demonstrating my grasp of color theory, visual composition, and design language—creative skills I apply across both illustration and UI/UX design work."
               }
             />
           </ScrollReveal>

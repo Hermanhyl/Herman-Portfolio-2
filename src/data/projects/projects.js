@@ -2,7 +2,7 @@ export const projects = [
   {
     id: "project1",
     title: "BrannVRn - VR Fire Safety Simulator (A)",
-    teaser: "A VR fire safety training simulator built for Sykehuspartner's Drammen office, featuring realistic emergency scenarios and interactive safety training.",
+    teaser: "UX Process & Learning Design in action: A VR fire safety simulator where I designed the complete user experience and pedagogical framework—transforming complex safety procedures into intuitive, educational interactions.",
     description:
       "BrannVRn is a Virtual Reality fire safety training simulator developed as a bachelor's degree project in collaboration with Sykehuspartner. The project recreates Sykehuspartner's Drammen office in a 1:1 scale, providing immersive fire safety training experiences.\n\nAs the concept artist and UI/UX designer, I was responsible for creating the visual identity, infographics, UI elements, 3D modeling, texturing, and developing informational content about fire hazards and emergency procedures.",
     images: ["/BrannVRn.jpg"],
@@ -11,7 +11,7 @@ export const projects = [
     linkedin: "https://www.linkedin.com/feed/update/urn:li:activity:6937386481468510208/",
     report: "/BrannVRn/BrannVRn_Rapport_Bachelor.pdf",
     figma: "",
-    technologies: ["Unreal Engine", "VR Development", "3D Modeling", "UI/UX Design", "Concept Art"],
+    technologies: ["Learning Design", "UI/UX Design", "Unreal Engine", "VR Development", "3D Modeling"],
     authers: "Herman Hylland, Axel Gardarsson, Deniz Javeid",
     article: [
       {

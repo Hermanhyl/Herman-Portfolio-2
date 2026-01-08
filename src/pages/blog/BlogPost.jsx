@@ -9,11 +9,19 @@ import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { formatDateLong } from '../../utils/formatDate';
+import useDocumentMeta from '../../hooks/useDocumentMeta';
 
 function BlogPost() {
   const { id } = useParams();
   const post = getPostById(id);
   const [copySuccess, setCopySuccess] = useState(false);
+
+  useDocumentMeta({
+    title: post?.title || 'Blog Post',
+    description: post?.excerpt || 'Read this blog post from Herman Hylland.',
+    url: `https://hermanhylland.netlify.app/blog/${id}`,
+    type: 'article'
+  });
 
   if (!post) {
     return (
@@ -192,21 +200,21 @@ function BlogPost() {
                 <div className="flex gap-3">
                   <button
                     onClick={shareOnLinkedIn}
-                    className="p-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-all duration-300 transform hover:scale-105 group focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black"
+                    className="p-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-all duration-300 transform hover:scale-105 group focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black cursor-pointer"
                     aria-label="Share on LinkedIn"
                   >
                     <Linkedin className="w-5 h-5 text-gray-400 group-hover:text-[#0077B5]" />
                   </button>
                   <button
                     onClick={shareOnTwitter}
-                    className="p-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-all duration-300 transform hover:scale-105 group focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black"
+                    className="p-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-all duration-300 transform hover:scale-105 group focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black cursor-pointer"
                     aria-label="Share on Twitter"
                   >
                     <Twitter className="w-5 h-5 text-gray-400 group-hover:text-[#1DA1F2]" />
                   </button>
                   <button
                     onClick={copyLink}
-                    className="p-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-all duration-300 transform hover:scale-105 group relative focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black"
+                    className="p-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-all duration-300 transform hover:scale-105 group relative focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black cursor-pointer"
                     aria-label="Copy link"
                   >
                     <Link2 className="w-5 h-5 text-gray-400 group-hover:text-emerald-400" />

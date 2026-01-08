@@ -18,7 +18,8 @@
       "WebFetch(domain:github.com)",
       "Bash(npm run build:*)",
       "Bash(dir \"C:\\Users\\GBT B560M_V3\\Documents\\CA\\Herman-Portfolio-2\" /b)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(node scripts/generate-rss.js:*)"
     ],
     "deny": [],
     "ask": []

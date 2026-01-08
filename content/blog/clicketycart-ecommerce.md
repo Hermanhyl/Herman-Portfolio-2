@@ -58,9 +58,35 @@ Some interactive elements weren't properly wrapped in semantic form elements. Co
 - Keyboard navigation
 - Overall HTML semantics
 
-## Design with Figma
+## My Design Process
 
-The complete design lives in Figma, including all page layouts and component designs. Having this upfront planning made development smoother and ensured the retro aesthetic was consistent throughout.
+Before any development began, I followed my structured design workflow to ensure ClicketyCart was well-planned and cohesive.
+
+### 1. Mind Mapping & Information Architecture
+The process started with mapping out the complete e-commerce flow: homepage, product listings, individual product pages, shopping cart, checkout, and confirmation. I identified how users would navigate between pages and what paths lead to conversion.
+
+### 2. Ideation & Concept Exploration
+For ClicketyCart, ideation focused on finding the right balance between retro aesthetics and modern e-commerce UX. We explored different visual directions—neon signs, pixel art, vintage typography—before landing on our playful, speed-focused concept.
+
+### 3. Wireframing
+Low-fidelity wireframes mapped out the structure: product grid layouts, cart functionality placement, checkout form flow. No styling yet—just boxes and content hierarchy to get the user experience right.
+
+### 4. Style Guide Development
+The retro theme required a carefully crafted style guide:
+- **Typography**: Fonts that evoke retro vibes while remaining readable
+- **Color Palette**: Bold, fun colors that support the playful brand
+- **Button Styles**: Prominent CTAs for "Add to Cart" and checkout actions
+- **Spacing System**: Consistent rhythm throughout the shopping experience
+- **Component Library**: Product cards, cart items, form elements
+
+### 5. High-Fidelity Design (Mobile First)
+Following mobile-first principles, I designed the complete mobile shopping experience first. Product browsing, cart management, and checkout all needed to work seamlessly on phones before expanding to larger screens.
+
+### 6. Desktop Adaptation
+Desktop designs took advantage of additional space with multi-column product grids, persistent cart previews, and expanded product detail layouts.
+
+### 7. Prototyping
+An interactive prototype simulated the complete shopping journey: browsing products, adding to cart, adjusting quantities, and completing checkout. This caught UX friction points before development.
 
 ## Collaboration
 

@@ -4,6 +4,7 @@ import { useState } from "react";
 import PageTransition from "../../components/pageTransition";
 import OptimizedImage from "../../components/optimizedImage";
 import { ArrowLeft, ExternalLink, Github, Figma, Share2, Check, ChevronRight, Code2, Users, Calendar, Linkedin, FileText } from "lucide-react";
+import useDocumentMeta from "../../hooks/useDocumentMeta";
 
 function ProjectDetail() {
   const { id } = useParams();
@@ -11,6 +12,13 @@ function ProjectDetail() {
   const [copied, setCopied] = useState(false);
   const [selectedImage, setSelectedImage] = useState(0);
   const project = projects.find((p) => p.id === id);
+
+  useDocumentMeta({
+    title: project?.title || 'Project',
+    description: project?.teaser || 'View this project by Herman Hylland.',
+    url: `https://hermanhylland.netlify.app/project/${id}`,
+    image: project?.images?.[0] ? `https://hermanhylland.netlify.app${project.images[0]}` : undefined
+  });
 
   const currentIndex = projects.findIndex((p) => p.id === id);
   const nextProject = projects[currentIndex + 1];

@@ -73,15 +73,35 @@ This project was about understanding fundamentals. Without React or Vue abstract
 
 These lessons made me a better developer, even as I've since moved to React for most projects.
 
-## Design with Figma
+## My Design Process
 
-The complete design was planned in Figma before development, including:
+Before writing any code, I followed a structured design workflow in Figma that I use for all my projects.
 
-- All page layouts and components
-- Responsive breakpoints
-- Interaction states
+### 1. Mind Mapping & Information Architecture
+I started with a mind map to outline all the pages needed—home, listings, individual auction pages, user profiles, login/register—and how they interconnect. This helped identify the complete user journey from browsing to bidding to winning.
 
-This upfront planning made development smoother and ensured design consistency.
+### 2. Ideation & Concept Exploration
+During ideation, I explored different visual approaches for an auction platform. Should it feel exclusive and premium? Playful and exciting? I settled on a clean, professional look that builds trust while maintaining the excitement of competitive bidding.
+
+### 3. Wireframing
+Simple wireframes came next—rough layouts showing where content would live without any styling. This phase focused on user flow and content hierarchy: where does the bid button go? How do users track their active bids? What information is most important on a listing card?
+
+### 4. Style Guide Development
+I created a comprehensive style guide including:
+- **Typography**: Font hierarchy for headings, body text, prices, and bid amounts
+- **Color Palette**: Colors that convey trust and urgency for auction contexts
+- **Button Styles**: Primary actions (place bid), secondary actions, and states
+- **Spacing System**: Consistent margins and padding throughout
+- **Component Library**: Cards, forms, navigation elements
+
+### 5. High-Fidelity Design (Mobile First)
+Following mobile-first principles, I designed the complete mobile experience first. Every screen—from browsing auctions on a phone to placing a bid—was designed to work perfectly on small screens before considering desktop.
+
+### 6. Desktop Adaptation
+With mobile complete, I expanded to desktop layouts, utilizing the extra space for multi-column listing grids, sidebar filters, and enhanced auction detail views.
+
+### 7. Prototyping
+Finally, I built an interactive prototype simulating key flows: browsing listings, viewing auction details, placing bids, and managing user profiles. This revealed UX issues before development began.
 
 ## Key Takeaways
 

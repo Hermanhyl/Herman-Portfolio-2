@@ -5,8 +5,15 @@ import ScrollReveal from '../../components/scrollReveal';
 import SectionHeader from '../../components/sectionHeader';
 import { SocialLink } from '../../components/socialLinks';
 import NetworkBackground from '../../components/networkBackground';
+import useDocumentMeta from '../../hooks/useDocumentMeta';
 
 function Contact() {
+  useDocumentMeta({
+    title: 'Contact',
+    description: 'Get in touch with Herman Hylland for frontend development, UI/UX design projects, or collaboration opportunities.',
+    url: 'https://hermanhylland.netlify.app/contact'
+  });
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',

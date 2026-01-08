@@ -26,7 +26,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black overflow-hidden pt-20 pb-28 md:pb-24 px-4 sm:px-6 lg:px-8">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -35,10 +35,10 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto w-full">
-        <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16 lg:gap-20">
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-20">
 
           {/* Text Section */}
-          <div className="flex-1 text-center md:text-left space-y-6 md:space-y-8">
+          <div className="flex-1 min-w-0 text-center md:text-left space-y-6 md:space-y-8">
             {/* Badges */}
             <div className="flex flex-wrap gap-3 justify-center md:justify-start">
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500/30 to-cyan-500/30 border-2 border-emerald-400/60 px-4 py-2 rounded-full backdrop-blur-sm shadow-lg shadow-emerald-500/20 transform transition-all duration-300 hover:scale-105">
@@ -99,28 +99,31 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Image Section */}
-          <div className="flex-1 flex justify-center md:justify-end">
-            <div className="relative group">
+          {/* Image Section - shows first on mobile (order-first), second on desktop (md:order-last) */}
+          <div className="order-first md:order-last flex-shrink-0 flex justify-center p-2">
+            {/* Fixed aspect ratio container for perfect circle - scales down on small screens */}
+            <div className="relative group w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96">
               {/* Glowing effect behind image */}
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
 
-              {/* Rotating gradient border */}
-              <div className="absolute -inset-1 sm:-inset-1.5 rounded-full bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 animate-spin-slow opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
+              {/* Rotating gradient border - slightly larger than container */}
+              <div className="absolute -inset-1 rounded-full bg-conic-gradient animate-spin-slow opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-              {/* Inner background to create border effect */}
-              <div className="absolute inset-0.5 sm:inset-1 rounded-full bg-gray-900"></div>
+              {/* Static dark background circle */}
+              <div className="absolute inset-0 rounded-full bg-gray-900"></div>
 
-              {/* Profile Image */}
-              <OptimizedImage
-                src="/profilepicture.jpg"
-                alt="Herman Hylland"
-                eager={true}
-                className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-full shadow-2xl transform transition-transform duration-500 group-hover:scale-105"
-              />
+              {/* Profile Image - inset to show border */}
+              <div className="absolute inset-[6px] rounded-full overflow-hidden">
+                <OptimizedImage
+                  src="/profilepicture.jpg"
+                  alt="Herman Hylland"
+                  eager={true}
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
               {/* Social Links - positioned around the image */}
-              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3">
+              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3 z-20">
                 <a
                   href="https://github.com/Hermanhyl"
                   target="_blank"
@@ -159,13 +162,13 @@ export default function Hero() {
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Scroll indicator - hidden on small screens to avoid overlap with profile image */}
-        <div className="hidden md:flex absolute bottom-8 left-1/2 transform -translate-x-1/2 flex-col items-center gap-2 animate-bounce">
-          <span className="text-gray-400 text-sm">Scroll to explore</span>
-          <div className="w-6 h-10 border-2 border-gray-600 rounded-full flex items-start justify-center p-2">
-            <div className="w-1.5 h-3 bg-emerald-400 rounded-full"></div>
-          </div>
+      {/* Scroll indicator - positioned at bottom of section, visible on medium screens and up */}
+      <div className="hidden md:flex absolute bottom-6 left-1/2 transform -translate-x-1/2 flex-col items-center gap-2 animate-bounce z-20">
+        <span className="text-gray-400 text-sm">Scroll to explore</span>
+        <div className="w-6 h-10 border-2 border-gray-600 rounded-full flex items-start justify-center p-2">
+          <div className="w-1.5 h-3 bg-emerald-400 rounded-full"></div>
         </div>
       </div>
     </section>

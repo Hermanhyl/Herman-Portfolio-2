@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Code, Palette, Rocket, GraduationCap, Briefcase, Award, Sparkles, Terminal, Layers, Brain, ArrowRight, MapPin, Calendar } from 'lucide-react';
+import useDocumentMeta from '../../hooks/useDocumentMeta';
 import OptimizedImage from '../../components/optimizedImage';
 import ScrollReveal from '../../components/scrollReveal';
 import GradientButton from '../../components/gradientButton';
@@ -88,6 +89,12 @@ const skillCategories = [
 ];
 
 function About() {
+  useDocumentMeta({
+    title: 'About Me',
+    description: 'Learn about Herman Hylland - a frontend developer and UI/UX designer with 2+ years of experience building modern web applications with React and Tailwind CSS.',
+    url: 'https://hermanhylland.netlify.app/about'
+  });
+
   return (
     <div className="relative min-h-screen w-full bg-gradient-to-b from-black via-gray-900 to-black px-4 py-20 text-white">
       <div className="max-w-6xl mx-auto space-y-20">

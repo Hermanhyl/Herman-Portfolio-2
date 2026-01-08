@@ -41,6 +41,36 @@ Using Prettier and agreed-upon conventions meant our code looked unified despite
 - **Noroff API**: Backend functionality for venues and bookings
 - **Figma**: Comprehensive design planning
 
+## My Design Process
+
+Every project I work on follows a structured design workflow that ensures the final product is well-thought-out and user-centered.
+
+### 1. Mind Mapping & Information Architecture
+I start by creating a mind map to gather all the pages needed and visualize how they interconnect. For Holidaze, this meant mapping out the user journey from landing page to venue discovery to booking confirmation, identifying which pages link to others and which stand alone.
+
+### 2. Ideation & Concept Exploration
+Next comes the ideation phase where we bounced ideas around—exploring different approaches for the booking flow, considering various visual directions that could evoke that "cozy cabin" feeling. We discussed what would work best for our target audience seeking slow-living getaways.
+
+### 3. Wireframing
+With our direction set, I moved to simple wireframes—low-fidelity layouts focusing purely on structure and content hierarchy. No colors, no fancy fonts—just boxes and placeholder text to nail down the user flow and page layouts.
+
+### 4. Style Guide Development
+Before diving into high-fidelity designs, I established a comprehensive style guide including:
+- **Typography**: Font choices for headings (H1-H6), body text, and UI elements with specific sizes
+- **Color Palette**: Primary, secondary, and accent colors that evoke warmth and relaxation
+- **Button Styles**: Primary, secondary, and ghost button designs with hover/active states
+- **Spacing System**: Consistent margins and padding rules
+- **Layout Grid**: Column structure and breakpoint definitions
+
+### 5. High-Fidelity Design (Mobile First)
+Following the mobile-first concept, I designed the complete mobile experience first. This ensures the core content and functionality work on the smallest screens before scaling up. Every screen was designed to show exactly how the finished product would look.
+
+### 6. Desktop Adaptation
+Once mobile was solid, I expanded the designs to desktop, taking advantage of the extra screen real estate for multi-column layouts, larger imagery, and enhanced navigation.
+
+### 7. Prototyping
+Finally, I created an interactive prototype in Figma simulating the user journey—page transitions, button interactions, form behaviors, and animations. This let us test the experience before writing any code.
+
 ## Key Features
 
 ### Venue Browsing

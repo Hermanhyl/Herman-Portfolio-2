@@ -47,6 +47,35 @@ DOM manipulation, event listeners, and the challenge of making interactive featu
 ### Problem-Solving
 The most valuable lesson: when something doesn't work, keep trying until it does.
 
+## My Design Process
+
+Even as my first project, I started with design in Figma—a practice that has become foundational to my workflow.
+
+### 1. Mind Mapping & Information Architecture
+I began by sketching out all the pages GameHub would need: homepage, product listings, individual game pages, cart, and checkout. Even without much experience, I understood the importance of planning the site structure and user navigation flow.
+
+### 2. Ideation & Concept Exploration
+During ideation, I explored what a gaming e-commerce site should feel like. Should it be dark and edgy? Bright and playful? I experimented with different directions before settling on the aesthetic I wanted to pursue.
+
+### 3. Wireframing
+Basic wireframes helped me plan where content would live—hero sections, product grids, navigation placement. Simple boxes and placeholder text focused on structure before styling.
+
+### 4. Style Guide Development
+I created my first style guide with:
+- **Typography**: Font choices for headings and body text
+- **Color Palette**: Colors that felt appropriate for gaming
+- **Button Styles**: Basic button designs
+- **Spacing**: Attempt at consistent margins and padding
+
+### 5. High-Fidelity Design (Mobile First)
+Following mobile-first principles (which I was just learning), I designed mobile layouts first before expanding to desktop. This was challenging but taught me responsive thinking early.
+
+### 6. Desktop Adaptation
+Desktop designs added multi-column layouts and took advantage of larger screen real estate.
+
+### 7. Prototyping
+A simple prototype linked pages together to visualize the user journey.
+
 ## The Design Gap
 
 My Figma design was more ambitious than my implementation skills at the time. This taught me an important lesson about the gap between vision and execution—and the work required to close it.

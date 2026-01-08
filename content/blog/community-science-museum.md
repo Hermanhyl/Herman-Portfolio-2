@@ -46,6 +46,37 @@ These early lessons planted seeds that continue to influence my work today.
 ### Design Considerations
 Thinking about the target audience (young visitors to a science museum) taught me that design isn't just about aesthetics—it's about communication and appropriateness.
 
+## My Design Process
+
+Even as an early project, I followed a design-first approach in Figma that established habits I still use today.
+
+### 1. Mind Mapping & Information Architecture
+I started by mapping out all the pages the museum website would need—homepage, exhibitions, events, about, contact—and how visitors would navigate between them. This helped me understand the complete site structure before designing anything.
+
+### 2. Ideation & Concept Exploration
+The ideation phase involved exploring how to make science exciting for young audiences without being childish. I considered different visual directions: bright and playful vs. sleek and futuristic, settling on an approach that felt educational yet engaging.
+
+### 3. Wireframing
+Simple wireframes helped me plan content placement: where the hero section would be, how to display exhibition cards, what information visitors need most prominently. Just basic shapes and text—no styling yet.
+
+### 4. Style Guide Development
+I created a basic style guide including:
+- **Typography**: Kid-friendly but readable fonts for different heading levels
+- **Color Palette**: Colors that feel scientific and exciting
+- **Button Styles**: Clear call-to-action designs
+- **Spacing Rules**: Consistent margins and padding
+
+### 5. High-Fidelity Design (Mobile First)
+Following mobile-first principles, I designed the mobile experience first—ensuring content was accessible on phones before scaling up. This was one of my first experiences with this methodology.
+
+### 6. Desktop Adaptation
+Desktop designs expanded the layouts with multi-column grids and larger imagery while maintaining the same content hierarchy.
+
+### 7. Prototyping
+A simple prototype linked the pages together to simulate the visitor journey through the website.
+
+This early design process, though simpler than my current workflow, taught me the value of planning before coding.
+
 ## Building on GameHub
 
 This project came after GameHub, my first-ever project. Comparing the two showed my early progress:

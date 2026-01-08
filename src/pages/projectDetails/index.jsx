@@ -245,17 +245,16 @@ function ProjectDetail() {
                 Project Showcase
               </h2>
 
-              {/* Video Player - if project has video, otherwise show image */}
-              {project.video ? (
-                <div className="mb-4 rounded-xl overflow-hidden bg-gray-900">
-                  <video
-                    controls
-                    className="w-full h-auto max-h-[600px]"
-                    preload="metadata"
-                  >
-                    <source src={project.video} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+              {/* YouTube Video - if project has youtube link */}
+              {project.youtube ? (
+                <div className="mb-4 rounded-xl overflow-hidden bg-gray-900 aspect-video">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${project.youtube.split('v=')[1]}`}
+                    title={`${project.title} video`}
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
                 </div>
               ) : (
                 <div className="mb-4 rounded-xl overflow-hidden bg-gray-800">

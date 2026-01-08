@@ -6,6 +6,7 @@ export const projects = [
     description:
       "BrannVRn is a Virtual Reality fire safety training simulator developed as a bachelor's degree project in collaboration with Sykehuspartner. The project recreates Sykehuspartner's Drammen office in a 1:1 scale, providing immersive fire safety training experiences.\n\nAs the concept artist and UI/UX designer, I was responsible for creating the visual identity, infographics, UI elements, 3D modeling, texturing, and developing informational content about fire hazards and emergency procedures.",
     images: ["/BrannVRn.jpg"],
+    youtube: "https://www.youtube.com/watch?v=1rR3RqYXKDQ",
     gallery: [
       "/BrannVRn/Images/screenshot-01.png",
       "/BrannVRn/Images/screenshot-02.png",

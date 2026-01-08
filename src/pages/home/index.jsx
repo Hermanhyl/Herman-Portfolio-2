@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import Hero from "../../components/heroSection";
 import ProjectCard from "../../components/projectCard";
 import PageTransition from "../../components/pageTransition";
@@ -12,7 +12,7 @@ import IllustrationLightbox from "../../components/illustrationLightbox";
 import { projects } from "../../data/projects/projects";
 import { illustrations, illustrationCategories } from "../../data/illustrations";
 import { getRecentPosts } from "../../data/blog/posts";
-import { Briefcase, ChevronRight, Search, X, GraduationCap, Sparkles, MapPin, Palette, BookOpen, ArrowRight, PenTool, Instagram } from "lucide-react";
+import { Briefcase, ChevronRight, Search, X, GraduationCap, Sparkles, MapPin, Palette, BookOpen, ArrowRight, PenTool, Instagram, Github } from "lucide-react";
 
 // Status items data
 const statusItems = [
@@ -31,6 +31,8 @@ function Home() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [carouselIndex, setCarouselIndex] = useState(0);
   const [isCarouselTransitioning, setIsCarouselTransitioning] = useState(false);
+
+  const sectionRef = useRef(null);
 
   const latestPosts = getRecentPosts(2);
 
@@ -95,6 +97,14 @@ function Home() {
 
   const hasActiveFilters = searchQuery || selectedTech;
 
+  const switchToIllustrations = () => {
+    setActiveView("illustrations");
+    // Scroll to the top of the section with a small delay to ensure view has switched
+    setTimeout(() => {
+      sectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 50);
+  };
+
   return (
     <PageTransition>
       <div className="bg-gradient-to-b from-black via-gray-900 to-black min-h-screen">
@@ -120,7 +130,7 @@ function Home() {
         </section>
 
         {/* Projects Section */}
-        <section id="projects" className="relative px-4 sm:px-6 lg:px-8 xl:px-12 py-20 flex flex-col items-center w-full mx-auto" style={{ maxWidth: '1600px' }}>
+        <section ref={sectionRef} id="projects" className="relative px-4 sm:px-6 lg:px-8 xl:px-12 py-20 flex flex-col items-center w-full mx-auto" style={{ maxWidth: '1600px' }}>
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-px h-20 bg-gradient-to-b from-transparent via-emerald-500 to-transparent opacity-50"></div>
 
           <ScrollReveal className="mb-12">
@@ -251,16 +261,25 @@ function Home() {
                 </div>
               )}
 
-              <div className="mt-16">
+              <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
                 <a
                   href="https://github.com/Hermanhyl"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors duration-300 animate-pulse-subtle"
+                  className="group inline-flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors duration-300"
                 >
+                  <Github className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                   <span className="text-lg font-medium bg-gradient-to-r from-gray-400 via-emerald-300 to-gray-400 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">View more on GitHub</span>
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
+                <button
+                  onClick={switchToIllustrations}
+                  className="group inline-flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors duration-300 cursor-pointer"
+                >
+                  <Palette className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                  <span className="text-lg font-medium bg-gradient-to-r from-gray-400 via-purple-400 to-gray-400 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">Explore My Illustrations</span>
+                  <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
               </div>
             </>
           )}
@@ -379,18 +398,26 @@ function Home() {
                 ))}
               </div>
 
-              <div className="mt-16">
+              <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
                 <a
                   href="https://www.instagram.com/hermanhyl98/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="View more illustrations on Instagram (opens in new tab)"
-                  className="group inline-flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors duration-300"
+                  className="group inline-flex items-center gap-2 text-gray-400 hover:text-pink-400 transition-colors duration-300"
                 >
-                  <Instagram className="w-5 h-5 animate-pulse" aria-hidden="true" />
-                  <span className="text-lg font-medium bg-gradient-to-r from-gray-400 via-emerald-300 to-gray-400 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">View more on Instagram</span>
+                  <Instagram className="w-5 h-5 group-hover:rotate-12 transition-transform" aria-hidden="true" />
+                  <span className="text-lg font-medium bg-gradient-to-r from-gray-400 via-pink-400 to-gray-400 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">View more on Instagram</span>
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
+                <button
+                  onClick={() => setActiveView("projects")}
+                  className="group inline-flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors duration-300 cursor-pointer"
+                >
+                  <Briefcase className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                  <span className="text-lg font-medium bg-gradient-to-r from-gray-400 via-emerald-300 to-gray-400 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">View My Projects</span>
+                  <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
               </div>
 
               {/* Lightbox */}

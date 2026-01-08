@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Code2, Palette, Github, Linkedin, Mail, Instagram } from 'lucide-react';
+import { ArrowRight, Sparkles, Code2, Palette, PenTool, Github, Linkedin, Mail, Instagram } from 'lucide-react';
 import OptimizedImage from '../optimizedImage';
 import ProjectsButton from '../projectsButton';
 
@@ -77,6 +77,10 @@ export default function Hero() {
               <div className="flex items-center gap-2">
                 <Palette className="w-5 h-5 text-purple-400" />
                 <span>UI/UX Design</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <PenTool className="w-5 h-5 text-pink-400" />
+                <span>Illustrations</span>
               </div>
             </div>
 

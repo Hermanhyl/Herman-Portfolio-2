@@ -354,7 +354,7 @@ function ProjectDetail() {
             {/* Article Content */}
             {project.article && project.article.length > 0 && (
               <div className="animated-border backdrop-blur-md bg-white/10 p-8 rounded-2xl relative">
-                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+                <div className="flex flex-col gap-4 mb-6">
                   <h2 className="text-2xl font-bold">About This Project</h2>
                   <div className="flex flex-wrap gap-2">
                     {project.blogPost && (

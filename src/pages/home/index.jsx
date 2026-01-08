@@ -105,6 +105,14 @@ function Home() {
     }, 50);
   };
 
+  const switchToProjects = () => {
+    setActiveView("projects");
+    // Scroll to the top of the section with a small delay to ensure view has switched
+    setTimeout(() => {
+      sectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 50);
+  };
+
   return (
     <PageTransition>
       <div className="bg-gradient-to-b from-black via-gray-900 to-black min-h-screen">
@@ -411,7 +419,7 @@ function Home() {
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <button
-                  onClick={() => setActiveView("projects")}
+                  onClick={switchToProjects}
                   className="group inline-flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors duration-300 cursor-pointer"
                 >
                   <Briefcase className="w-5 h-5 group-hover:rotate-12 transition-transform" />

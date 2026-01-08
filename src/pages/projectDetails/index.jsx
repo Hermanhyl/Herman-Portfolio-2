@@ -1,9 +1,9 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { projects } from "../../data/projects/projects";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PageTransition from "../../components/pageTransition";
 import OptimizedImage from "../../components/optimizedImage";
-import { ArrowLeft, ExternalLink, Github, Figma, Share2, Check, ChevronRight, Code2, Users, Calendar, Linkedin, FileText } from "lucide-react";
+import { ArrowLeft, ExternalLink, Github, Figma, Share2, Check, ChevronRight, Code2, Users, Calendar, Linkedin, FileText, BookOpen, Images } from "lucide-react";
 import useDocumentMeta from "../../hooks/useDocumentMeta";
 
 function ProjectDetail() {
@@ -11,7 +11,19 @@ function ProjectDetail() {
   const navigate = useNavigate();
   const [copied, setCopied] = useState(false);
   const [selectedImage, setSelectedImage] = useState(0);
+  const [galleryIndex, setGalleryIndex] = useState(0);
   const project = projects.find((p) => p.id === id);
+
+  // Auto-rotate gallery carousel
+  useEffect(() => {
+    if (!project?.gallery || project.gallery.length === 0) return;
+
+    const interval = setInterval(() => {
+      setGalleryIndex((prev) => (prev + 1) % project.gallery.length);
+    }, 2500); // 2.5 seconds per image for fairly fast rotation
+
+    return () => clearInterval(interval);
+  }, [project?.gallery]);
 
   useDocumentMeta({
     title: project?.title || 'Project',
@@ -75,7 +87,21 @@ function ProjectDetail() {
                 <ChevronRight className="w-5 h-5" />
               </li>
               <li>
-                <span className="text-gray-300">Projects</span>
+                <button
+                  onClick={() => {
+                    navigate("/");
+                    setTimeout(() => {
+                      const projectsSection = document.getElementById("projects");
+                      if (projectsSection) {
+                        projectsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+                      }
+                    }, 100);
+                  }}
+                  aria-label="Navigate to projects section"
+                  className="hover:text-emerald-400 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1 cursor-pointer"
+                >
+                  Projects
+                </button>
               </li>
               <li aria-hidden="true">
                 <ChevronRight className="w-5 h-5" />
@@ -179,6 +205,16 @@ function ProjectDetail() {
                 Watch Trailer
               </a>
             )}
+            {project.blogPost && (
+              <Link
+                to={project.blogPost}
+                aria-label={`Read blog post about ${project.title}`}
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 shadow-lg shadow-purple-500/25"
+              >
+                <BookOpen className="w-5 h-5" aria-hidden="true" />
+                Read Blog Post
+              </Link>
+            )}
             {project.report && (
               <a
                 href={project.report}
@@ -209,15 +245,28 @@ function ProjectDetail() {
                 Project Showcase
               </h2>
 
-              {/* Main Image */}
-              <div className="mb-4 rounded-xl overflow-hidden bg-gray-800">
-                <OptimizedImage
-                  src={project.images[selectedImage]}
-                  alt={`${project.title} screenshot ${selectedImage + 1}`}
-                  eager={selectedImage === 0}
-                  className="w-full h-auto object-contain max-h-[600px]"
-                />
-              </div>
+              {/* Video Player - if project has video, otherwise show image */}
+              {project.video ? (
+                <div className="mb-4 rounded-xl overflow-hidden bg-gray-900">
+                  <video
+                    controls
+                    className="w-full h-auto max-h-[600px]"
+                    preload="metadata"
+                  >
+                    <source src={project.video} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              ) : (
+                <div className="mb-4 rounded-xl overflow-hidden bg-gray-800">
+                  <OptimizedImage
+                    src={project.images[selectedImage]}
+                    alt={`${project.title} screenshot ${selectedImage + 1}`}
+                    eager={selectedImage === 0}
+                    className="w-full h-auto object-contain max-h-[600px]"
+                  />
+                </div>
+              )}
 
               {/* Image Thumbnails */}
               {project.images.length > 1 && (
@@ -244,12 +293,81 @@ function ProjectDetail() {
               )}
             </div>
 
+            {/* Image Gallery Carousel */}
+            {project.gallery && project.gallery.length > 0 && (
+              <div className="animated-border backdrop-blur-md bg-white/10 p-6 rounded-2xl">
+                <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                  <Images className="w-6 h-6 text-purple-400" />
+                  Project Gallery
+                </h2>
+
+                {/* Main Image Display */}
+                <div className="relative rounded-xl overflow-hidden bg-gray-900 aspect-video flex items-center justify-center">
+                  <img
+                    key={galleryIndex}
+                    src={project.gallery[galleryIndex]}
+                    alt={`Gallery image ${galleryIndex + 1}`}
+                    className="max-w-full max-h-full object-contain"
+                  />
+
+                  {/* Navigation arrows */}
+                  <button
+                    onClick={() => setGalleryIndex((prev) => (prev - 1 + project.gallery.length) % project.gallery.length)}
+                    className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/60 hover:bg-black/80 rounded-full flex items-center justify-center text-white transition-all duration-300 cursor-pointer"
+                    aria-label="Previous image"
+                  >
+                    ‹
+                  </button>
+                  <button
+                    onClick={() => setGalleryIndex((prev) => (prev + 1) % project.gallery.length)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/60 hover:bg-black/80 rounded-full flex items-center justify-center text-white transition-all duration-300 cursor-pointer"
+                    aria-label="Next image"
+                  >
+                    ›
+                  </button>
+
+                  {/* Progress indicator */}
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-sm px-4 py-2 rounded-full">
+                    <span className="text-white text-sm font-medium">
+                      {galleryIndex + 1} / {project.gallery.length}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Dot indicators */}
+                <div className="mt-4 flex justify-center gap-2 flex-wrap">
+                  {project.gallery.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setGalleryIndex(index)}
+                      aria-label={`Go to image ${index + 1}`}
+                      className={`w-2.5 h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                        galleryIndex === index
+                          ? 'bg-purple-400 scale-125'
+                          : 'bg-gray-600 hover:bg-gray-400'
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Article Content */}
             {project.article && project.article.length > 0 && (
               <div className="animated-border backdrop-blur-md bg-white/10 p-8 rounded-2xl relative">
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
                   <h2 className="text-2xl font-bold">About This Project</h2>
                   <div className="flex flex-wrap gap-2">
+                    {project.blogPost && (
+                      <Link
+                        to={project.blogPost}
+                        aria-label="Read full blog post about this project"
+                        className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 shadow-lg shadow-purple-500/25"
+                      >
+                        <BookOpen className="w-4 h-4" aria-hidden="true" />
+                        Read Blog Post
+                      </Link>
+                    )}
                     {project.linkedin && (
                       <a
                         href={project.linkedin}

@@ -19,7 +19,8 @@
       "Bash(npm run build:*)",
       "Bash(dir \"C:\\Users\\GBT B560M_V3\\Documents\\CA\\Herman-Portfolio-2\" /b)",
       "Bash(dir:*)",
-      "Bash(node scripts/generate-rss.js:*)"
+      "Bash(node scripts/generate-rss.js:*)",
+      "WebFetch(domain:localhost)"
     ],
     "deny": [],
     "ask": []

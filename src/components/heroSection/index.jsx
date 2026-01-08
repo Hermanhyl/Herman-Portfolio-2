@@ -43,7 +43,7 @@ export default function Hero() {
             <div className="flex flex-wrap gap-3 justify-center md:justify-start">
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500/30 to-cyan-500/30 border-2 border-emerald-400/60 px-4 py-2 rounded-full backdrop-blur-sm shadow-lg shadow-emerald-500/20 transform transition-all duration-300 hover:scale-105">
                 <Sparkles className="w-4 h-4 text-emerald-300 animate-pulse" />
-                <span className="text-emerald-100 text-sm md:text-base font-bold">Front-End Developer & Digital Designer</span>
+                <span className="text-emerald-100 text-sm md:text-base font-bold">UI/UX Designer & Front-End Developer</span>
               </div>
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500/30 to-cyan-500/30 border-2 border-emerald-400/60 px-4 py-2 rounded-full backdrop-blur-sm shadow-lg shadow-emerald-500/20 transform transition-all duration-300 hover:scale-105">
                 <span className="relative flex h-3 w-3">

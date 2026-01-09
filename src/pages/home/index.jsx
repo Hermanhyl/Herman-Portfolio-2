@@ -12,7 +12,7 @@ import IllustrationLightbox from "../../components/illustrationLightbox";
 import { projects } from "../../data/projects/projects";
 import { illustrations, illustrationCategories } from "../../data/illustrations";
 import { getRecentPosts } from "../../data/blog/posts";
-import { Briefcase, ChevronRight, Search, X, GraduationCap, Sparkles, MapPin, Palette, BookOpen, ArrowRight, PenTool, Instagram, Github } from "lucide-react";
+import { Briefcase, ChevronRight, Search, X, GraduationCap, Sparkles, MapPin, Palette, BookOpen, ArrowRight, PenTool, Instagram, Github, Youtube } from "lucide-react";
 
 // Status items data
 const statusItems = [
@@ -348,6 +348,30 @@ function Home() {
                     <span className="text-gray-400 text-xs sm:text-sm ml-1 sm:ml-2">+{filteredIllustrations.length - 4} more</span>
                   </div>
                 </div>
+              </div>
+
+              {/* YouTube Speedpaints Link */}
+              <div className="w-full mb-8 sm:mb-10">
+                <a
+                  href="https://www.youtube.com/@The_Art_Knight/featured"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Watch speedpainting videos on YouTube (opens in new tab)"
+                  className="group flex items-center justify-center gap-4 sm:gap-5 mx-auto max-w-md px-6 sm:px-8 py-5 sm:py-6 rounded-2xl bg-red-600/80 hover:bg-red-600/90 shadow-lg shadow-red-500/20 hover:shadow-red-500/30 transition-all duration-300 hover:scale-[1.02]"
+                >
+                  <div className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/20 group-hover:bg-white/30 transition-all duration-300">
+                    <Youtube className="w-6 h-6 sm:w-7 sm:h-7 text-white group-hover:scale-110 transition-all duration-300" />
+                  </div>
+                  <div className="flex flex-col items-start">
+                    <span className="text-white font-semibold text-sm sm:text-base">
+                      Watch Speedpaints on YouTube
+                    </span>
+                    <span className="text-white/70 text-xs sm:text-sm">
+                      See the creative process behind my illustrations
+                    </span>
+                  </div>
+                  <ChevronRight className="w-5 h-5 text-white/70 group-hover:text-white group-hover:translate-x-1 transition-all duration-300" />
+                </a>
               </div>
 
               {/* Category Filter */}

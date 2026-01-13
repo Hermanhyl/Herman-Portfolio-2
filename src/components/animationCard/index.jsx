@@ -2,13 +2,25 @@ import { Link } from "react-router-dom";
 import { Play, Clock } from "lucide-react";
 
 /**
+ * Helper function to extract YouTube video ID from various YouTube URL formats
+ */
+function getYouTubeId(url) {
+  if (!url) return null;
+  const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([^?&]+)/);
+  return match ? match[1] : null;
+}
+
+/**
  * AnimationCard component for displaying animation pieces in a grid
- * Uses the video itself as the preview
+ * Uses the video itself as the preview, or YouTube thumbnail for YouTube videos
  *
  * @param {Object} props - Component props
  * @param {Object} props.animation - Animation data object
  */
 function AnimationCard({ animation }) {
+  const youtubeId = getYouTubeId(animation.video);
+  const isYouTube = !!youtubeId;
+
   return (
     <Link
       to={`/animation/${animation.id}`}
@@ -18,14 +30,22 @@ function AnimationCard({ animation }) {
         <div className="flex flex-col h-full p-6 lg:p-8">
           {/* Video preview */}
           <div className="relative w-full h-56 md:h-64 lg:h-72 mb-6 overflow-hidden rounded-xl bg-gray-900">
-            <video
-              src={animation.video}
-              muted
-              loop
-              playsInline
-              autoPlay
-              className="w-full h-full object-contain"
-            />
+            {isYouTube ? (
+              <img
+                src={`https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`}
+                alt={animation.title}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <video
+                src={animation.video}
+                muted
+                loop
+                playsInline
+                autoPlay
+                className="w-full h-full object-contain"
+              />
+            )}
             {/* Play button overlay */}
             <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-all duration-300">
               <div className="w-16 h-16 rounded-full bg-purple-500/80 group-hover:bg-purple-500 flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-lg shadow-purple-500/50">

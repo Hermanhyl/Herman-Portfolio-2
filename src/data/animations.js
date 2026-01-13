@@ -6,13 +6,13 @@ export const animations = [
     description: "This animation demonstrates walk and run cycle fundamentals using DUIK rigging in Adobe After Effects. The focus is on showcasing the rigging and animation workflow rather than the illustration itself, which was adapted from a free-licensed source.",
     video: "/Animasjoner/Angela_walk_run.mp4",
     gallery: [
-      "/Animasjoner/images/Walking/Skjermbilde 2026-01-10 125427.png",
-      "/Animasjoner/images/Walking/Skjermbilde 2026-01-10 121907.png",
-      "/Animasjoner/images/Walking/Skjermbilde 2026-01-10 155608.png",
+      "/Animasjoner/images/Walking/Angela_Illustrator.png",
+      "/Animasjoner/images/Walking/Angela_RIG.png",
+      "/Animasjoner/images/Walking/Angela_After_Effects.png",
     ],
     software: ["After Effects", "DUIK", "Adobe Illustrator"],
     duration: "Loop",
-    year: "2024",
+    year: "2026",
     article: [
       {
         heading: "Project Overview",
@@ -45,7 +45,7 @@ export const animations = [
     gallery: [],
     software: ["After Effects", "DUIK", "Adobe Illustrator"],
     duration: "Loop",
-    year: "2024",
+    year: "2026",
     article: [
       {
         heading: "Project Overview",
@@ -74,7 +74,7 @@ export const animations = [
     gallery: [],
     software: ["After Effects", "DUIK", "Adobe Illustrator"],
     duration: "Loop",
-    year: "2024",
+    year: "2026",
     article: [
       {
         heading: "Project Overview",
@@ -91,6 +91,114 @@ export const animations = [
       {
         heading: "Room for Improvement",
         content: "As with the other animations in this series, this piece is not fully polished. The focus was on demonstrating the rigging workflow and showing the variety of animations possible with a single rig, rather than creating a production-ready piece.\n\nThere's room to improve by applying more of the 12 principles of animation—such as adding more secondary motion, refining the easing, or incorporating anticipation and follow-through more deliberately. I'm aware of these principles and how they could enhance the animation, but for this portfolio demonstration, the priority was showcasing the technical workflow and rig versatility.",
+      },
+    ],
+  },
+  {
+    id: "animation-lake-scene",
+    title: "Lake Scene - Day to Night",
+    teaser: "A scenic animation showcasing environment animation techniques using the Puppet Pin tool and layer compositing in After Effects.",
+    description: "This animation demonstrates a different approach to After Effects animation—instead of character rigging with DUIK, this piece uses the Puppet Pin tool and layer compositing to bring a lake scene illustration to life with a day-to-night transition.",
+    video: "/Animasjoner/Illustrator_lake.mp4",
+    gallery: [],
+    software: ["After Effects", "Puppet Pin Tool", "Adobe Illustrator"],
+    duration: "Loop",
+    year: "2026",
+    article: [
+      {
+        heading: "Project Overview",
+        content: "This animation takes a different approach from the Angela character animations. Rather than using DUIK rigging for character movement, this piece focuses on environment animation—bringing a scenic lake illustration to life using the Puppet Pin tool, layer compositing, and lighting adjustments to simulate a day-to-night transition.",
+      },
+      {
+        heading: "Illustration Preparation",
+        content: "As with the character animations, the workflow began in Adobe Illustrator. The illustration was separated into individual layers—each element that needed to move or be composited separately got its own layer.\n\nThis included separating:\n\n• Background sky and distant elements\n• Clouds (multiple layers for depth)\n• Water/lake surface\n• Foreground elements\n• Any objects that needed animation\n\nProper layer separation in Illustrator is essential for After Effects animation, whether you're rigging a character or animating a scene.",
+      },
+      {
+        heading: "Animation Techniques",
+        content: "Instead of bone-based rigging, this animation uses several different techniques:\n\n• Puppet Pin Tool - Used to create organic, flowing movements on elements without needing a full rig. The pins act as control points that can be keyframed to deform and animate the artwork.\n\n• Layer Compositing - Background elements like clouds were composited and animated in loops, creating a sense of movement and atmosphere in the scene.\n\n• Brightness/Contrast Adjustments - An adjustment layer was added to gradually shift the lighting, simulating the transition from day to night. This creates a dynamic, evolving mood throughout the animation.",
+      },
+      {
+        heading: "Day to Night Transition",
+        content: "The standout feature of this animation is the lighting transition. By animating brightness and contrast values over time, the scene gradually darkens to simulate nighttime approaching. This technique demonstrates how After Effects can be used not just for movement, but for creating atmosphere and mood changes within a single composition.\n\nThis kind of environmental storytelling through lighting is commonly used in motion graphics, explainer videos, and animated backgrounds for games or apps.",
+      },
+    ],
+  },
+  {
+    id: "animation-3d-fire-scene",
+    title: "3D Fire Scene",
+    teaser: "A 3D rendered scene showcasing VFX flames, textures on 3D objects, and dynamic lighting effects created in Unreal Engine.",
+    description: "This 3D scene demonstrates VFX fire effects, texture application on 3D objects, and lighting techniques in Unreal Engine. The focus is on exploring how these elements work together to create visual impact.",
+    video: "/Animasjoner/3D scenes/comp4_fire_(2).mp4",
+    gallery: [],
+    software: ["Unreal Engine", "VFX", "Material Editor"],
+    duration: "Loop",
+    year: "2021",
+    article: [
+      {
+        heading: "Project Overview",
+        content: "This 3D scene was created as a showcase of what can be done with Unreal Engine. The focus was on exploring VFX flames, applying textures to 3D objects, and understanding how lighting and movement work together to create visual impact in a real-time environment.",
+      },
+      {
+        heading: "VFX & Textures",
+        content: "The centerpiece of this scene is the VFX flame effect, demonstrating particle-based fire in Unreal Engine. Beyond the flames, the scene also explores texture application on 3D objects—understanding how materials and textures interact with lighting is fundamental to creating convincing 3D environments.\n\nKey elements include:\n\n• VFX flame particles with dynamic movement\n• Textures applied to scene objects\n• Material properties that respond to the fire's light",
+      },
+      {
+        heading: "Lighting & Movement",
+        content: "The fire serves as the primary light source, creating dynamic illumination across the scene. Playing with light effects and movement was a key part of this exploration—understanding how flickering light interacts with textured surfaces and how movement adds life to a static environment.\n\nThis demonstrates how lighting can define the entire mood of a scene and how VFX elements contribute to the overall atmosphere.",
+      },
+      {
+        heading: "Learning Outcomes",
+        content: "This project was part of my journey learning Unreal Engine and real-time 3D graphics. While I primarily focus on 2D illustration and front-end development, understanding 3D tools provides valuable perspective on visual design, lighting principles, and the technical aspects of modern game engines.\n\nThe skills learned here—composition, lighting, particle effects—translate across different mediums and inform my approach to visual design in all my work.",
+      },
+    ],
+  },
+  {
+    id: "animation-3d-cinematic-scene",
+    title: "3D Cinematic Scene",
+    teaser: "A school project showcasing camera movements, lighting effects, and sound design in Unreal Engine.",
+    description: "This cinematic scene was created as a school project at Høgskolen i Innlandet (game school). The assignment was to showcase a specific item through a cinematic presentation, demonstrating camera movements, lighting, and sound in Unreal Engine.",
+    video: "https://youtu.be/x-7Xy671wp8",
+    gallery: [],
+    software: ["Unreal Engine", "Sequencer"],
+    duration: "Cinematic",
+    year: "2021",
+    article: [
+      {
+        heading: "Project Overview",
+        content: "This cinematic scene was created as a school project during my time at Høgskolen i Innlandet (game school). The assignment was to showcase one specific item through a cinematic presentation in Unreal Engine. The scene demonstrates camera movements, lighting effects, and sound design working together to highlight the featured item.",
+      },
+      {
+        heading: "Camera Movements",
+        content: "A key focus of this project was exploring camera work inside Unreal Engine. Using the Sequencer, I created camera movements that guide the viewer's attention toward the showcased item. Understanding how to move a camera effectively is essential for creating engaging cinematics in games and other visual media.",
+      },
+      {
+        heading: "Lighting & Sound",
+        content: "Beyond camera work, the scene also incorporates lighting effects and sound design. The lighting helps establish mood and draws focus to the item being showcased, while sound adds another layer to the presentation.\n\nThis project served as an introduction to combining these elements—camera, light, and sound—into a cohesive cinematic experience within a game engine environment.",
+      },
+    ],
+  },
+  {
+    id: "animation-3d-gallery-scene",
+    title: "3D Gallery Environment",
+    teaser: "An interactive gallery experience in Unreal Engine highlighting ocean plastic pollution and efforts toward a cleaner future.",
+    description: "This 3D gallery environment was created in Unreal Engine to raise awareness about plastic pollution in the oceans. Set on an island surrounded by ocean, visitors enter a gallery showcasing both the problem and the hopeful efforts to address it.",
+    video: "https://youtu.be/BRM_sBgA31o",
+    gallery: [],
+    software: ["Unreal Engine", "Material Editor"],
+    duration: "Walkthrough",
+    year: "2021",
+    article: [
+      {
+        heading: "Project Overview",
+        content: "This project is a gallery experience built in Unreal Engine, focusing on the issue of plastic pollution in our oceans. The gallery presents both sides of the story—highlighting how trash has become a major problem in marine environments, while also showcasing a brighter future where we are actively working to collect and reduce this pollution.\n\nThe experience is set on an island surrounded by ocean, and visitors can enter the gallery to explore the theme through various visual elements.",
+      },
+      {
+        heading: "The Gallery Experience",
+        content: "Inside the gallery, visitors encounter a mix of different elements:\n\n• Illustrations displayed in various forms throughout the space\n• 3D objects related to the ocean pollution theme\n• Textured surfaces simulating water and other environmental elements\n\nThe goal was to create an immersive experience where the player can explore and reflect on the impact of plastic pollution, while also seeing the positive steps being taken to address the problem.",
+      },
+      {
+        heading: "Combining 3D Elements",
+        content: "This project involved bringing together multiple elements within Unreal Engine—3D objects, illustrations, and textured materials all working together to tell the story. The water textures, environmental props, and gallery displays were assembled to create a cohesive space that supports the narrative.\n\nIt was an exercise in scene composition, material application, and using a game engine environment to communicate a meaningful message.",
       },
     ],
   },

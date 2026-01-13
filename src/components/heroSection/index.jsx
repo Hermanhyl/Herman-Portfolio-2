@@ -119,7 +119,7 @@ export default function Hero() {
               {/* Profile Image - inset to show border */}
               <div className="absolute inset-[6px] rounded-full overflow-hidden">
                 <OptimizedImage
-                  src="/profilepicture.jpg"
+                  src="/Profil/Bruk_denne.jpg"
                   alt="Herman Hylland"
                   eager={true}
                   className="w-full h-full object-cover"

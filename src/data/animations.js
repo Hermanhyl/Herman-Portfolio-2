@@ -178,6 +178,31 @@ export const animations = [
     ],
   },
   {
+    id: "animation-3d-castle-scene",
+    title: "3D Castle Scene",
+    teaser: "A scene showcasing 3D object composition, lighting, and camera movements in Unreal Engine.",
+    description: "This castle scene demonstrates assembling 3D objects into a cohesive environment in Unreal Engine, with a focus on lighting, camera movements, and subtle environmental details like grass movement and flame VFX.",
+    video: "https://youtu.be/FR3DRIF1rF8",
+    gallery: [],
+    software: ["Unreal Engine"],
+    duration: "Cinematic",
+    year: "2021",
+    article: [
+      {
+        heading: "Project Overview",
+        content: "This project is a simple showcase of putting together a scene in Unreal Engine. The goal was to demonstrate the ability to assemble 3D objects into a cohesive environment and present it through different camera angles and movements.",
+      },
+      {
+        heading: "Scene Composition",
+        content: "The castle scene was built by combining various 3D objects to create the environment. The focus was on arranging elements in a visually appealing way and using lighting to set the mood. Small details like grass movement and flame VFX add life to the scene.",
+      },
+      {
+        heading: "Camera & Lighting",
+        content: "The main emphasis of this project is on lighting and camera work. Different camera movements showcase the scene from various angles, while the lighting helps establish atmosphere and highlight key areas of the environment.\n\nThis is a fairly basic project, but it demonstrates fundamental skills in working with a game engine—composing scenes, setting up lighting, and creating simple cinematics.",
+      },
+    ],
+  },
+  {
     id: "animation-3d-gallery-scene",
     title: "3D Gallery Environment",
     teaser: "An interactive gallery experience in Unreal Engine highlighting ocean plastic pollution and efforts toward a cleaner future.",

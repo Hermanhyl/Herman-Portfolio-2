@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import { Play, Clock } from "lucide-react";
 
 /**
@@ -21,14 +20,6 @@ function getYouTubeId(url) {
 function AnimationCard({ animation }) {
   const youtubeId = getYouTubeId(animation.video);
   const isYouTube = !!youtubeId;
-  const [imgError, setImgError] = useState(false);
-
-  // YouTube thumbnail URLs - try maxres first, fall back to hqdefault
-  const thumbnailUrl = isYouTube
-    ? imgError
-      ? `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`
-      : `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`
-    : null;
 
   return (
     <Link
@@ -41,10 +32,9 @@ function AnimationCard({ animation }) {
           <div className="relative w-full h-56 md:h-64 lg:h-72 mb-6 overflow-hidden rounded-xl bg-gray-900">
             {isYouTube ? (
               <img
-                src={thumbnailUrl}
+                src={`https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`}
                 alt={animation.title}
                 className="w-full h-full object-cover"
-                onError={() => setImgError(true)}
               />
             ) : (
               <video

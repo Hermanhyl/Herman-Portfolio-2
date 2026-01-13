@@ -4,6 +4,7 @@ import Home from './pages/home';
 import About from './pages/about';
 import Contact from './pages/contact';
 import ProjectDetail from './pages/projectDetails';
+import AnimationDetail from './pages/animationDetails';
 import Blog from './pages/blog';
 import BlogPost from './pages/blog/BlogPost';
 import Layout from './components/layout';
@@ -21,6 +22,7 @@ function App() {
           <Route path='/blog' element={<Blog />} />
           <Route path='/blog/:id' element={<BlogPost />} />
           <Route path='/project/:id' element={<ProjectDetail />} />
+          <Route path='/animation/:id' element={<AnimationDetail />} />
         </Route>
       </Routes>
     </ErrorBoundary>

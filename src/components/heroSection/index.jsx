@@ -65,7 +65,7 @@ export default function Hero() {
 
             {/* Subtitle */}
             <p className="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl mx-auto md:mx-0">
-              I create beautiful, accessible, and user-friendly web experiences. Combining technical skills with creative design to bring ideas to life.
+              Welcome to my portfolio. I create beautiful, accessible, and user-friendly web experiences—combining technical skills with creative design to bring ideas to life.
             </p>
 
             {/* Key Points */}

@@ -48,7 +48,10 @@
     "exploreIllustrations": "Utforsk mine illustrasjoner",
     "viewCode": "Se kode",
     "viewLive": "Se live",
-    "viewArticle": "Les artikkel"
+    "viewArticle": "Les artikkel",
+    "backToProjects": "Tilbake til prosjekter",
+    "viewProject": "Se prosjekt",
+    "noTeaser": "Ingen beskrivelse tilgjengelig."
   },
   "illustrations": {
     "title": "Mine illustrasjoner",
@@ -61,6 +64,8 @@
     "viewOnInstagram": "Se mer på Instagram",
     "viewProjects": "Se mine prosjekter",
     "viewIllustrations": "Se illustrasjoner",
+    "illustrationsCount": "illustrasjoner",
+    "illustrationsIn": "illustrasjoner i",
     "categories": {
       "all": "Alle",
       "portraits": "Portretter",
@@ -76,7 +81,10 @@
     "title": "Animasjoner",
     "comingSoon": "Animasjoner kommer snart",
     "comingSoonDesc": "Jeg jobber med å legge til min animasjonsportefølje. Kom tilbake snart for å se mine motion graphics og animerte kunstverk!",
-    "viewAnimation": "Se animasjon"
+    "viewAnimation": "Se animasjon",
+    "animationsCount": "animasjoner",
+    "backToAnimations": "Tilbake til animasjoner",
+    "noDescription": "Ingen beskrivelse tilgjengelig."
   },
   "blog": {
     "title": "Fra bloggen",
@@ -91,21 +99,64 @@
     "title": "Om meg",
     "subtitle": "UI/UX-designer & Frontend-utvikler",
     "bio": "Jeg er en lidenskapelig utvikler og designer basert i Norge, som kombinerer tekniske ferdigheter med kreativ visjon for å bygge vakre, funksjonelle nettopplevelser.",
+    "location": "Norge / Åpen for Tyskland",
+    "role": "Frontend-utvikler & Digital designer",
+    "heroDescription": "Brobygger mellom teknologi og kunst med 2+ års erfaring innen frontend-utvikling og 3+ års erfaring innen digital design. Skaper tilgjengelige, interaktive nettopplevelser.",
+    "getInTouch": "Ta kontakt",
+    "myStory": "Min historie",
+    "storyP1": "Jeg er en <highlight>UX-designer og frontend-utvikler</highlight> med bakgrunn fra spillutvikling, animasjon og visuell kommunikasjon. Lidenskapelig opptatt av å skape <accent1>engasjerende, lærerike opplevelser</accent1> gjennom brukersentrert design og kreativ historiefortelling.",
+    "storyP2": "Min profil <highlight>brobygger unikt mellom design og utvikling</highlight>—kombinerer kunstnerisk ekspertise fra Spillskolen med tekniske ferdigheter fra frontend-utvikling. Dette lar meg jobbe sømløst gjennom hele produktlivssyklusen, <accent2>fra konsept til kode</accent2>.",
+    "storyP3": "Fra å utvikle <accent1>VR-treningssimuleringer</accent1> for helsesektoren til å bygge moderne webapplikasjoner, gjenspeiler arbeidet mitt en forpliktelse til å skape <accent2>visuelt tiltalende produkter</accent2> som reflekterer brukernes behov—gjør innhold tilgjengelig og inspirerende gjennom gjennomtenkt UX og visuell design.",
+    "skillsExpertise": "Ferdigheter & Ekspertise",
+    "whatIWorkWith": "Hva jeg jobber med",
+    "proficiencyLevels": "Kompetansenivåer",
+    "careerPath": "Karrierevei",
+    "experienceEducation": "Erfaring & Utdanning",
+    "ctaTitle": "La oss bygge noe fantastisk",
+    "ctaDescription": "Jeg ser aktivt etter muligheter innen frontend-utvikling eller digital design hvor jeg kan vokse, samarbeide og bidra til meningsfulle prosjekter.",
+    "viewMyWork": "Se mitt arbeid",
     "skills": "Ferdigheter & Teknologier",
     "experience": "Erfaring & Utdanning",
     "stats": {
-      "projects": "Fullførte prosjekter",
-      "years": "Års erfaring",
-      "technologies": "Teknologier"
+      "yearsFrontend": "År Frontend",
+      "projectsBuilt": "Prosjekter bygget",
+      "yearsDesign": "År Design",
+      "degrees": "Utdanninger"
+    },
+    "skillCategories": {
+      "development": "Utvikling",
+      "design": "Design",
+      "aiTools": "AI & Verktøy"
+    },
+    "timeline": {
+      "customerService": "Kundeserviceagent",
+      "customerServiceDesc": "Håndtering av forsikringssaker via telefonstøtte. Bruker Salesforce CRM for sakshåndtering.",
+      "frontendDev": "Frontend-utvikling",
+      "frontendDevDesc": "2-årig yrkesfaglig utdanning. Spesialisert i React, JavaScript og moderne webutvikling.",
+      "visualDesigner": "Visuell designer",
+      "visualDesignerDesc": "UI/UX-design og visuell identitet. Strategiske beslutninger om farge, bildebruk og layout.",
+      "bachelorAnim": "Bachelor i Animasjon & Digital kunst",
+      "bachelorAnimDesc": "Teknisk utvikling med konseptkunst, 3D-design og animasjon."
     }
   },
   "contact": {
-    "title": "Ta kontakt",
-    "subtitle": "Har du et prosjekt i tankene? La oss snakke om hvordan vi kan samarbeide.",
+    "title": "La oss koble sammen",
+    "subtitle": "Jeg er alltid åpen for å diskutere nye prosjekter, kreative ideer eller muligheter til å være en del av din visjon.",
+    "available": "Tilgjengelig for muligheter",
+    "sendMessage": "Send en melding",
+    "getInTouch": "Ta kontakt",
+    "followMe": "Følg meg",
+    "responseTime": "Svartid",
+    "responseDesc": "Jeg svarer vanligvis innen 24-48 timer. Ser frem til å høre fra deg!",
+    "successMessage": "Takk! Meldingen din er sendt. Jeg kommer tilbake til deg snart!",
+    "errorMessage": "Oops! Noe gikk galt. Vennligst prøv igjen eller send meg en e-post direkte.",
     "form": {
-      "name": "Navn",
-      "email": "E-post",
+      "name": "Ditt navn",
+      "namePlaceholder": "Ola Nordmann",
+      "email": "Din e-post",
+      "emailPlaceholder": "ola@eksempel.no",
       "message": "Melding",
+      "messagePlaceholder": "Fortell meg om prosjektet ditt...",
       "send": "Send melding",
       "sending": "Sender...",
       "success": "Meldingen ble sendt!",
@@ -125,7 +176,529 @@
     "more": "mer"
   },
   "footer": {
+    "quickLinks": "Hurtiglenker",
+    "connect": "Kontakt",
+    "tagline": "Frontend-utvikler & Digital designer som skaper vakre nettopplevelser.",
     "rights": "Alle rettigheter forbeholdt",
-    "builtWith": "Bygget med React & Tailwind CSS"
+    "builtWith": "Bygget med"
+  },
+  "projectDetails": {
+    "notFound": "Prosjekt ikke funnet",
+    "projects": "Prosjekter",
+    "shareProject": "Del prosjekt",
+    "liveDemo": "Live demo",
+    "figmaDesign": "Figma-design",
+    "watchTrailer": "Se trailer",
+    "readBlogPost": "Les blogginnlegg",
+    "readReport": "Les rapport",
+    "projectShowcase": "Prosjektvisning",
+    "projectGallery": "Prosjektgalleri",
+    "aboutThisProject": "Om dette prosjektet",
+    "techStack": "Teknologier",
+    "moreProjects": "Flere prosjekter"
+  },
+  "animationDetails": {
+    "notFound": "Animasjon ikke funnet",
+    "animations": "Animasjoner",
+    "shareAnimation": "Del animasjon",
+    "animation": "Animasjon",
+    "processGallery": "Prosessgalleri",
+    "aboutThisAnimation": "Om denne animasjonen",
+    "toolsUsed": "Verktøy brukt",
+    "moreAnimations": "Flere animasjoner"
+  },
+  "projectData": {
+    "project1": {
+      "title": "BrannVRn - VR Brannsikkerhetssimulator (A)",
+      "teaser": "UX-prosess & læringsdesign i praksis: En VR brannsikkerhetssimulator hvor jeg designet hele brukeropplevelsen og det pedagogiske rammeverket—transformerte komplekse sikkerhetsprosedyrer til intuitive, lærerike interaksjoner.",
+      "description": "BrannVRn er en Virtual Reality brannsikkerhetstreningssimulator utviklet som et bachelorprosjekt i samarbeid med Sykehuspartner. Prosjektet gjenskaper Sykehuspartners Drammen-kontor i 1:1 skala, og gir oppslukende brannsikkerhetsopplæring.\n\nSom konseptkunstner og UI/UX-designer var jeg ansvarlig for å skape den visuelle identiteten, infografikk, UI-elementer, 3D-modellering, teksturering og utvikling av informasjonsinnhold om brannfarer og nødprosedyrer.",
+      "article": {
+        "0": {
+          "heading": "Prosjektoversikt",
+          "content": "BrannVRn ble utviklet som vårt avsluttende bachelorprosjekt og fikk karakteren A. I samarbeid med Sykehuspartner skapte vi en omfattende VR brannsikkerhetstreningssimulator. Kunden ønsket en 1:1 kopi av deres Drammen-kontor, transformert til et interaktivt treningsmiljø hvor brukere kan lære essensielle brannsikkerhetsferdigheter i en realistisk, men trygg virtuell setting."
+        },
+        "1": {
+          "heading": "Min rolle: UI/UX-designer & Konseptkunstner",
+          "content": "Som UI/UX-designer og konseptkunstner i vårt tremannsteam, var mine ansvarsområder sentrert rundt den komplette brukeropplevelsen og visuell kommunikasjon:\n\n• Utvikle det visuelle konseptet og kunstnerisk retning for hele simulatoren\n• Designe alle brukergrensesnittelementer med fokus på VR-brukervennlighet og tilgjengelighet\n• Lage informative infografikker som kommuniserer komplekse sikkerhetsprosedyrer tydelig\n• Designe pedagogiske visninger som veileder brukere gjennom læring i eget tempo\n• Sikre visuell konsistens på tvers av alle interaktive elementer\n• Teksturere og skinnlegge 3D-ressurser for å skape et oppslukende miljø\n\nMin hovedutfordring var å oversette kompleks brannsikkerhetskunnskap til intuitive, lærbare interaksjoner—sikre at brukere ikke bare opplever simulatoren, men virkelig forstår og husker sikkerhetsprosedyrene."
+        },
+        "2": {
+          "heading": "Læringsdesign: Hjertet av prosjektet",
+          "content": "Dette var ikke bare en visuell simulering—det var et pedagogisk verktøy som måtte genuint lære folk livreddende ferdigheter. Læringsdesign-tilnærmingen var sentral for hver beslutning jeg tok.\n\nViktige pedagogiske prinsipper jeg anvendte:\n\n• Progressiv avsløring: Informasjon avdekkes i etapper, forhindrer kognitiv overbelastning mens forståelse bygges systematisk\n• Lær-deretter-øv-flyt: Brukere leser først om utstyrsfunksjonalitet, deretter øver de umiddelbart praktisk—forsterker læring gjennom handling\n• Kontekstuell læring: Pedagogisk innhold plasseres nøyaktig der brukere trenger det, integrert naturlig i miljøet i stedet for å avbryte opplevelsen\n• Flere læringsmodaliteter: Visuelle diagrammer, tekstforklaringer og praktisk øvelse imøtekommer forskjellige læringsstiler\n\nMålet var å skape en opplevelse hvor brukere naturlig absorberer sikkerhetskunnskap mens de er nedsenket i det virtuelle miljøet, slik at læringen føles uanstrengt i stedet for tvunget."
+        },
+        "3": {
+          "heading": "Hva vi lærte av brannmenn",
+          "content": "En av de mest verdifulle erfaringene var å tilbringe en dag på den lokale brannstasjonen, i direkte konsultasjon med brannmenn. Deres virkelige ekspertise formet fundamentalt vår designtilnærming.\n\nViktige innsikter som påvirket prosjektet:\n\n• Brannadferd: Forståelse av hvordan brann sprer seg, hvilke områder som blir farlige først, og hvorfor visse rømningsveier prioriteres over andre\n• Utstyrsprioriteter: Lære hvilket utstyr som skal brukes i forskjellige scenarioer og den kritiske beslutningsprosessen brannmenn følger\n• Vanlige feil: Oppdage hva utrent folk typisk gjør feil i nødsituasjoner—informasjon som direkte formet vårt veiledningsdesign\n• Psykologiske faktorer: Forstå hvordan panikk påvirker beslutningstaking og hvordan riktig trening kan overstyre fryktresponser\n\nDette samarbeidet sikret at simulatoren vår lærer det som faktisk betyr noe i nødsituasjoner—ikke bare lærebokprosedyrer, men den praktiske kunnskapen som redder liv."
+        },
+        "4": {
+          "heading": "Hovedfunksjoner",
+          "content": "Simulatoren inkluderer flere interaktive treningsmoduler:\n\n• Brannslukkeroperasjon og riktige bruksteknikker\n• Håndteringsprosedyrer for brannslange\n• Identifisering av brannfarlige objekter i et kontormiljø\n• Nødevakueringsprosedyrer når brannalarmer aktiveres\n• Guidede rømningsveier fra kontoret til utpekt møtepunkt\n\nVi brukte 360-graders kamerateknologi for å fange virkelige referansebilder av de faktiske rømningsveiene, noe som sikrer at brukere lærer de eksakte rutene de ville ta i en virkelig nødsituasjon."
+        },
+        "5": {
+          "heading": "UX-utfordringer i VR",
+          "content": "Å designe for VR presenterte unike UX-utfordringer som presset ferdighetene mine i nye retninger:\n\n• Romlig UI-design: I motsetning til tradisjonelle skjermer, må informasjon eksistere i 3D-rom. Jeg designet UI-elementer som føles naturlige å samhandle med mens man har på seg et headset\n• Lesbarhet på avstand: Tekst og grafikk måtte forbli lesbare på varierende avstander i det virtuelle miljøet\n• Komforthensyn: Unngå UI-plasseringer som forårsaker nakkesmerter eller bevegelsesubehag under langvarig bruk\n• Intuitive interaksjoner: Skape affordanser som kommuniserer hvordan objekter kan manipuleres uten eksplisitte instruksjoner\n\nDisse utfordringene lærte meg at gode UX-designprinsipper er universelle, men deres anvendelse må tilpasses hvert mediums unike begrensninger og muligheter."
+        },
+        "6": {
+          "heading": "Teknisk implementering",
+          "content": "Bygget i Unreal Engine for VR-plattformer, krevde prosjektet nøye oppmerksomhet på skalanøyaktighet og realistisk interaksjonsdesign. 1:1-gjenskapelsen av Sykehuspartner-kontoret krevde presise målinger og detaljert modellering for å sikre at brukere ville oppleve kjente omgivelser. Vi inkorporerte 3D-fotografiteknikker for å fange det virkelige miljøet og integrerte dette med våre virtuelle gjenskapelser for en sømløs treningsopplevelse."
+        },
+        "7": {
+          "heading": "Viktige lærdommer",
+          "content": "Dette prosjektet ga dype lærdommer som fortsetter å forme min tilnærming til design:\n\n• Brukerundersøkelser er essensielle: Brannmannkonsultasjonen transformerte vår forståelse av hva brukere faktisk trenger å lære—antakelser er ikke nok\n• Læringsdesign krever empati: Å forstå hvordan folk absorberer og beholder informasjon er like viktig som informasjonen selv\n• Tverrfaglig samarbeid styrker resultater: Å jobbe med fageksperter (brannmenn), kunder (Sykehuspartner) og et teknisk team produserte resultater ingen av oss kunne oppnå alene\n• Design for impact, ikke bare estetikk: A-karakteren reflekterte at vi skapte noe som genuint underviser, ikke bare noe som ser imponerende ut\n\nDette prosjektet beviste at de beste pedagogiske verktøyene balanserer teknisk nøyaktighet med pedagogisk effektivitet—skaper opplevelser som ikke bare ser og føles realistiske, men genuint overfører verdifulle ferdigheter til brukere."
+        }
+      }
+    },
+    "project-gonefishing": {
+      "title": "GoneFishing - Fiskesporingsapp",
+      "teaser": "Brukerundersøkelser i praksis: En fiskesporingsapp bygget gjennom samtaler med ekte fiskere—adresserer smertepunkter i eksisterende apper gjennom iterativ design og tilbakemeldinger fra fellesskapet.",
+      "description": "GoneFishing er en omfattende fiskesporingsapplikasjon født fra ekte brukerundersøkelser innen fiskefellesskapet. Ved å snakke direkte med fiskere om deres frustrasjoner med eksisterende apper, identifiserte jeg viktige smertepunkter og designet løsninger som faktisk betyr noe for fiskere.\n\nBygget med Next.js og med et rent, responsivt grensesnitt, adresserer appen virkelige behov: bildelogging, detaljert værsoring, fangststatistikk og en samlet oversikt over fiskehistorikken din—funksjoner som fremkom direkte fra brukertilbakemeldinger.",
+      "article": {
+        "0": {
+          "heading": "Prosjektoversikt",
+          "content": "GoneFishing startet med et enkelt spørsmål: hva trenger fiskere faktisk fra en fangstporingsapp? I stedet for å anta at jeg visste svaret, gikk jeg direkte til kilden—snakket med fiskere i fiskefellesskapet for å forstå deres virkelige erfaringer, frustrasjoner og ønsker.\n\nDenne brukersentrerte tilnærmingen formet hver funksjon i appen. I stedet for å bygge det jeg trodde var nyttig, bygde jeg det fiskere fortalte meg at de trengte."
+        },
+        "1": {
+          "heading": "Brukerundersøkelser: Lære fra fellesskapet",
+          "content": "Den mest verdifulle delen av dette prosjektet var undersøkelsesfasen. Jeg hadde samtaler med flere fiskere—fra tilfeldige helgefiskere til dedikerte entusiaster—spurte om deres nåværende metoder for å spore fangster og hva som frustrerte dem med eksisterende løsninger.\n\nViktige innsikter fra disse samtalene:\n\n• Ingen bildestøtte: Flere fiskere nevnte at deres nåværende apper ikke tillot bildeopplastinger, noe som gjorde det umulig å dokumentere fangster visuelt\n• Dårlig værlogging: Eksisterende apper manglet enten værsoring helt eller gjorde det for tungvint å registrere forhold nøyaktig\n• Manglende statistikk: Fiskere ønsket å se mønstre i fangstene sine over tid, men de fleste apper tilbød ingen analyser\n• Ingen samlet oversikt: Brukere uttrykte frustrasjon over å ikke kunne se hele fiskehistorikken sin med ett blikk"
+        },
+        "2": {
+          "heading": "Fra forskning til design",
+          "content": "Å oversette brukertilbakemeldinger til designbeslutninger krevde nøye prioritering. Ikke alle ønsker kunne implementeres umiddelbart, men kjernefrustrasjoner måtte adresseres.\n\nHvordan brukerundersøkelser formet designet:\n\n• Bildestøtte ble bygget inn fra starten, slik at fiskere kan legge ved bilder til hver fangstoppføring\n• Værforhold er enkle å logge med intuitive kontroller for temperatur, vind og forhold\n• Et statistikkdashbord gir oversikten brukere manglet—totale fangster, artsfordeling og trender over tid\n• Grensesnittet forblir rent og fokusert, respekterer brukernes tid når de er ute på vannet"
+        },
+        "3": {
+          "heading": "Hovedfunksjoner",
+          "content": "Applikasjonen inkluderer funksjoner som direkte adresserer smertepunktene oppdaget under forskning:\n\n• Bildelogging: Dokumenter fangstene dine visuelt med bildeopplastinger for hver oppføring\n• Omfattende værsoring: Registrer temperatur, vindforhold og værtilstand enkelt\n• Fangststatistikk: Se fiskehistorikken din med meningsfulle analyser og trender\n• Samlet fangstoversikt: Se alle fangstene dine i et organisert, filtrerbart format\n• Temahåndtering: Lys og mørk modus for forskjellige forhold\n• Enhetsfleksibilitet: Bytt mellom metriske og imperiale målinger basert på preferanse\n• Sikker autentisering: Dataene dine forblir private med Supabase-drevet autentisering"
+        },
+        "4": {
+          "heading": "Teknisk implementering",
+          "content": "Bygget med Next.js, utnytter applikasjonen Reacts komponentbaserte arkitektur for vedlikeholdbar og skalerbar kode. Supabase fungerer som backend, håndterer autentisering og datalagring med sanntidskapasiteter. Tailwind CSS gir et moderne, responsivt design som fungerer sømløst på tvers av enheter—avgjørende for en app som må fungere like bra på en telefon ved vannet eller en stasjonær PC hjemme."
+        },
+        "5": {
+          "heading": "UX-lærdommer",
+          "content": "Dette prosjektet forsterket flere viktige UX-prinsipper:\n\n• Snakk med brukere tidlig: Antakelser om hva brukere trenger er ofte feil. Direkte samtaler avslørte smertepunkter jeg aldri ville ha gjettet\n• Prioriter basert på frekvens: Funksjonene brukere nevnte oftest ble høyeste prioritet—bildestøtte og statistikk kom opp i nesten hver samtale\n• Kontekst betyr noe: Forståelse av at fiskere logger fangster mens de fisker—ofte under utfordrende forhold—påvirket beslutninger om grensesnittets enkelhet"
+        },
+        "6": {
+          "heading": "Fremtidige forbedringer",
+          "content": "Basert på pågående tilbakemeldinger fra brukere, inkluderer planlagte forbedringer:\n\n• Avansert datavisualisering som viser fangsttrender over sesonger og lokasjoner\n• Sosiale funksjoner for å dele fangster med fiskefellesskapet\n• Integrasjon med vær-APIer for automatisk tilstandslogging\n• Lokasjonsbaserte innsikter som viser dine mest vellykkede fiskesteder\n• Eksportfunksjonalitet for sikkerhetskopiering av fiskehistorikken din"
+        }
+      }
+    },
+    "project2": {
+      "title": "Hobbyist - Sosial aktivitetsplattform",
+      "teaser": "UX-sentrert design: En sosial plattform formet av samtaler med venner og potensielle brukere—fokuserer på enkelhet, intuitiv navigasjon og ekte menneskelig tilknytning.",
+      "description": "Hobbyist er en sosial plattform designet for å hjelpe folk med å skape ekte forbindelser gjennom delte interesser og aktiviteter. Designprosessen involverte innsamling av innsikt fra venner og potensielle brukere om hva de ville ønske fra en slik plattform.\n\nTilbakemeldingene deres formet alt fra den enkle navigasjonsstrukturen til hvordan aktiviteter vises—resulterte i et rent, organisert grensesnitt som setter tilknytning først, ikke kompleksitet.",
+      "article": {
+        "0": {
+          "heading": "Prosjektoversikt",
+          "content": "Hobbyist ble født fra ideen om at meningsfulle forbindelser kommer fra delte opplevelser. I en verden hvor digitale interaksjoner ofte føles overfladiske, bringer denne plattformen folk sammen gjennom aktiviteter de virkelig liker.\n\nFør jeg dykket inn i utviklingen, brukte jeg tid på å snakke med venner og folk i nettverket mitt om hva de faktisk ville ønske fra en plattform som denne."
+        },
+        "1": {
+          "heading": "Innsamling av brukerinnsikt",
+          "content": "Selv om dette ikke var en formell brukerstudie, viste de uformelle samtalene seg uvurderlige. Jeg spurte folk om deres erfaringer med sosiale apper, hva som frustrerte dem, og hva de ville håpe å finne i en hobbyfokusert plattform.\n\nFellesnevnere dukket opp:\n\n• Enkelhet over kompleksitet: Folk ønsket å finne aktiviteter raskt uten å navigere gjennom endeløse menyer\n• Tydelig informasjonshierarki: Brukere uttrykte ønske om å se de viktigste detaljene—hva, når, hvor—med ett blikk\n• Meldinger som føles naturlige: Kommunikasjonsfunksjoner bør være enkle, ikke begravd eller overkompliserte\n• Organisert presentasjon: Aktiviteter bør være enkle å bla gjennom og filtrere uten å føles overveldende"
+        },
+        "2": {
+          "heading": "Design for enkelhet",
+          "content": "En av de klareste lærdommene fra samtalene mine var ønsket om enkelhet. Folk ønsket ikke enda en app full av knapper, varsler og funksjoner som konkurrerer om oppmerksomhet.\n\nDette formet grensesnittet på flere måter:\n\n• Ren navigasjon: Essensielle funksjoner er enkle å finne uten å lete gjennom menyer\n• Fokuserte skjermer: Hver visning har et klart formål uten unødvendige distraksjoner\n• Intuitiv flyt: Å bevege seg gjennom appen føles naturlig—bla gjennom aktiviteter, se detaljer, koble med folk\n• Minimale klikk: Å gå fra oppdagelse til tilknytning krever så få steg som mulig"
+        },
+        "3": {
+          "heading": "Informasjonsvisning",
+          "content": "Hvordan informasjon presenteres betyr like mye som hvilken informasjon som vises. Basert på tilbakemeldinger om å ville ha nøkkeldetaljer synlige umiddelbart, designet jeg aktivitetskort og profiler for å fremheve det essensielle:\n\n• Aktivitetstype og beskrivelse i sentrum\n• Dato, tid og sted tydelig synlig\n• Deltakerantall og tilgjengelighet med ett blikk\n• Brukerinteresser fremhevet på profiler"
+        },
+        "4": {
+          "heading": "Hovedfunksjoner",
+          "content": "Plattformen inkluderer funksjoner som fremkom fra forståelse av hva brukere faktisk trenger:\n\n• Aktivitetsblaing med intuitiv filtrering etter kategori, lokasjon og tilgjengelighet\n• Brukerprofiler som viser interesser og foretrukne aktiviteter\n• Rent dashbord for håndtering av forbindelser og kommende arrangementer\n• Enkel meldingsfunksjon for koordinering med aktivitetspartnere\n• Bredt utvalg av hobbykategorier fra utendørsaktiviteter til kreative sysler"
+        },
+        "5": {
+          "heading": "Designfilosofi",
+          "content": "Designet beveger seg bevisst bort fra den typiske datingapp-estetikken. De varme gradientbakgrunnene, vennlige typografien og inkluderende bildene vektlegger fellesskap og ekte tilknytning.\n\nHver designbeslutning forsterker kjernebudskapet: dette er et sted for å skaffe ekte venner gjennom delte aktiviteter, ikke romantisk matchmaking."
+        },
+        "6": {
+          "heading": "UX-lærdommer anvendt",
+          "content": "Dette prosjektet forsterket viktige UX-prinsipper:\n\n• Lytt før du bygger: Selv uformelle samtaler avslører innsikter du ikke ville oppdaget på egen hånd\n• Enkelhet krever disiplin: Det er fristende å legge til funksjoner, men tilbakeholdenhet tjener ofte brukere bedre\n• Kontekst former design: Forståelse av hvordan og hvorfor folk ville bruke plattformen påvirket alt fra knappeplassering til fargevalg"
+        },
+        "7": {
+          "heading": "Fremtidig utvikling",
+          "content": "Planlagte funksjoner—informert av pågående tilbakemeldinger—inkluderer aktivitetsplanlegging og RSVP-funksjonalitet, gruppechat-kapasiteter for aktivitetsdeltakere, integrasjon med kalenderapper og lokasjonsbaserte aktivitetsanbefalinger.\n\nMålet er å fortsette å utvikle Hobbyist basert på virkelige brukerbehov mens vi opprettholder enkelheten og varmen som definerer den nåværende opplevelsen."
+        }
+      }
+    },
+    "project3": {
+      "title": "Holidaze - Prosjekteksamen (A)",
+      "teaser": "Holidaze er en koselig bookingapp for slow-living-opphold—bla, book og slapp av i håndplukkede hytter og retreater.",
+      "description": "Holidaze er et samarbeidsprosjekt bygget på Noroff API, utviklet av Veronika Aas, Herman Hylland og Madelen Sletteberg.\n\nDen tilbyr en koselig, responsiv bookingopplevelse for håndplukkede opphold fokusert på slow living fra skogshytter til fjellretretter. Brukere kan bla, booke og administrere steder med letthet gjennom et varmt, brukervennlig grensesnitt.",
+      "article": {
+        "0": {
+          "heading": "Eksamenstilbakemelding",
+          "content": "Vi har endelig fått resultatet tilbake fra vår avsluttende eksamen! Vi er så glade for hvordan det ble. Vi fikk A på prosjektet, og vi er så stolte av arbeidet vi la ned i det. Vi lærte så mye under dette prosjektet, og vi gleder oss til å fortsette vår reise innen webutvikling."
+        },
+        "1": {
+          "heading": "Prosjektoversikt",
+          "content": "Holidaze er et samarbeidsprosjekt som viser vår evne til å jobbe sammen som et team. Vi fordelte oppgavene basert på våre styrker og interesser, og vi kommuniserte effektivt gjennom hele prosjektet. Vi brukte GitHub for versjonskontroll, og vi sørget for å dokumentere koden vår og skrive tydelige commit-meldinger.\n\nProsjektet er bygget med React, Vite, Prettier, Tailwind CSS og HTML. Vi fulgte også beste praksis for kodekvalitet og vedlikeholdbarhet."
+        },
+        "2": {
+          "heading": "Forbedringspunkter",
+          "content": "Selv om vi er stolte av sluttproduktet, erkjenner vi også områder for forbedring. Et nøkkelaspekt er behovet for mer omfattende feilhåndtering. I den nåværende versjonen har noen API-kall ikke riktig feilhåndtering, noe som kan føre til en dårlig brukeropplevelse hvis noe går galt.\n\nI tillegg ønsker vi å forbedre tilgjengeligheten til applikasjonen. Selv om vi har gjort noen anstrengelser for å sikre at appen er brukbar for personer med funksjonshemminger, er det fortsatt områder hvor vi kan forbedre tastaturnavigasjon og skjermleserstøtte."
+        },
+        "3": {
+          "heading": "Ansvarsområder",
+          "content": "Vi deltok alle i alle aspekter av prosjektet. Vi tok alle del i planlegging, opprettelse av design og implementering av funksjonalitet. Vi sørget også for å kommunisere effektivt gjennom hele prosjektet, og vi brukte GitHub for versjonskontroll."
+        },
+        "4": {
+          "heading": "GitHub Repository",
+          "content": "Sjekk ut vårt GitHub-repository for prosjektet. Her finner du kildekoden, dokumentasjon og instruksjoner om hvordan du kjører prosjektet lokalt. Vi ønsker velkommen tilbakemeldinger eller bidrag fra fellesskapet."
+        },
+        "5": {
+          "heading": "Figma",
+          "content": "Vi har også laget et Figma-design for prosjektet, som du kan se ved å klikke på 'Figma Design'-knappen øverst på siden. Designet viser brukergrensesnittet og brukeropplevelsen vi ønsket å oppnå med Holidaze. Det inkluderer alle skjermene vi implementerte i sluttproduktet."
+        }
+      }
+    },
+    "project4": {
+      "title": "Auksjon - Semesterprosjekt 2 (A)",
+      "teaser": "Own The Bid er en rask auksjonsapp hvor brukere kan liste, by og bla gjennom gjenstander med letthet, ingen konto nødvendig for å utforske.",
+      "description": "Own The Bid er en nettbasert auksjonsplattform hvor brukere kan registrere seg med en gyldig stud.noroff.no e-post for å kjøpe og selge gjenstander gjennom tidsbestemte oppføringer.\n\nRegistrerte brukere kan opprette oppføringer med bilder, beskrivelser og frister, legge inn bud på andres gjenstander, administrere sin avatar og se tilgjengelige kreditter.",
+      "article": {
+        "0": {
+          "heading": "Forbedringer",
+          "content": "Siden jeg fullførte den opprinnelige versjonen av auksjonsnettstedet mitt, har jeg tatt meg tid til å gå tilbake og forbedre prosjektet basert på både tilbakemeldinger fra instruktøren min og min egen voksende forståelse av beste praksis for webutvikling."
+        },
+        "1": {
+          "heading": "Riktig feilhåndtering",
+          "content": "En oppdatering var implementeringen av robust feilhåndtering gjennom hele applikasjonen. Tidligere manglet appen konsistente responser på API-feil eller brukersidefeil. Jeg har nå lagt til tydelige try/catch-blokker, meningsfulle feilmeldinger for brukere og konsolllogging der det er passende."
+        },
+        "2": {
+          "heading": "Klistret footer-fiks",
+          "content": "I den opprinnelige versjonen ville footeren noen ganger vises merkelig midt på skjermen eller for høyt over bunnen, avhengig av innholdshøyden. For å fikse dette justerte jeg layouten, slik at footeren nå pålitelig forblir nederst i visningsvinduet, selv på sider med lite innhold."
+        },
+        "3": {
+          "heading": "Inputvalidering",
+          "content": "En annen viktig forbedring var tillegg av inputvalidering på tvers av brukerskjemaer, som registrering, innlogging og opprettelse av oppføringer. I den opprinnelige versjonen ble brukerinput ikke grundig sjekket. Jeg har nå implementert riktig valideringslogikk for å sikre at påkrevde felt er fylt ut riktig."
+        }
+      }
+    },
+    "project-timer-planner": {
+      "title": "Timer & Planner - Produktivitetsapp",
+      "teaser": "En produktivitetsapplikasjon som kombinerer en tilpassbar fokustimer med fleksible ukentlige og månedlige planleggingsverktøy, med dra-og-slipp-planlegging.",
+      "description": "Timer & Planner er en produktivitetsapplikasjon som kombinerer en tilpassbar fokustimer med fleksible planleggingsverktøy. Lag øktmaler med konfigurerbare arbeids-/pauseintervaller, administrer timeplanen din på tvers av ukentlige og månedlige visninger, og hold deg organisert med fargekodede aktiviteter.\n\nBygget med React 19 og TypeScript, har appen dra-og-slipp-omplanlegging, gjentakende aktivitetsalternativer og lokal lagringsutholdighet—alt uten å kreve en konto eller skylagring.",
+      "article": {
+        "0": {
+          "heading": "Prosjektoversikt",
+          "content": "Timer & Planner ble bygget for å kombinere to essensielle produktivitetsverktøy til én sømløs opplevelse. I stedet for å bytte mellom en timer-app og en kalender, kan brukere administrere fokusøktene og timeplanen sin i ett enkelt grensesnitt."
+        },
+        "1": {
+          "heading": "Timer-funksjoner",
+          "content": "Timer-komponenten tilbyr tilpassbare øktmaler med konfigurerbare arbeids- og pauseintervaller. En visuell sirkulær fremdriftsvisning med gradienteffekter viser fremgangen din, mens lydvarsler gir beskjed når intervaller går over eller fullføres."
+        },
+        "2": {
+          "heading": "Planner-funksjoner",
+          "content": "Planleggeren inkluderer en ukentlig rutenettvisning fra kl. 06:00 til 23:00 med intuitiv dra-og-slipp-omplanlegging drevet av dnd-kit. En månedlig kalendervisning med navigasjonskontroller hjelper deg med å se det større bildet. Aktiviteter kan fargekodes med tilpassbare kategorier."
+        },
+        "3": {
+          "heading": "Teknisk implementering",
+          "content": "Bygget med React 19 og TypeScript for typesikkerhet, bruker appen Vite for rask utvikling og bygging. Tailwind CSS 4 gir stylinggrunnlaget, mens @dnd-kit muliggjør jevne dra-og-slipp-interaksjoner. All data lagres i localStorage."
+        },
+        "4": {
+          "heading": "Personvern & Data",
+          "content": "Som mine andre nylige prosjekter, prioriterer Timer & Planner brukernes personvern. All data forblir på enheten din uten at det kreves kontoer og ingen skylagring. JSON eksport/import-funksjonen gir deg full kontroll over produktivitetsdataene dine."
+        }
+      }
+    },
+    "project-pia-salary": {
+      "title": "PIA Lønnssporer - Inntektshåndteringsapp",
+      "teaser": "En personvernfokusert inntektsporingsapplikasjon med automatiske skatteberegninger, Excel import/eksport og tospråklig støtte—all data lagres lokalt.",
+      "description": "PIA Lønnssporer er en nettbasert inntektsporingsapplikasjon designet for å administrere månedlige inntekter med automatiske skatte- og trygdeberegninger. Bygget med et sterkt fokus på personvern, lagres all data lokalt i Excel-filer uten å kreve skytjenester.",
+      "article": {
+        "0": {
+          "heading": "Prosjektoversikt",
+          "content": "PIA Lønnssporer ble bygget for å løse et virkelig behov—spore inntekt på tvers av flere kilder samtidig som fullstendig personvern opprettholdes. I motsetning til skybaserte løsninger lagrer denne appen all data lokalt i Excel-filer, noe som gir brukere full kontroll over finansiell informasjon."
+        },
+        "1": {
+          "heading": "Hovedfunksjoner",
+          "content": "Applikasjonen inkluderer et omfattende dashbord med årsbasert inntektsoversikt og trendvisualisering ved hjelp av Recharts. Den støtter flere inntektskilder, automatisk beregning av trygdeavgifter basert på konfigurerbare satser, og Excel import/eksport for datautholdighet."
+        },
+        "2": {
+          "heading": "Teknisk implementering",
+          "content": "Bygget med Next.js 16 ved bruk av App Router, React 19 og TypeScript for typesikkerhet. UI-et er stylet med Tailwind CSS og shadcn/ui-komponenter for et polert, moderne utseende. xlsx-biblioteket håndterer alle Excel-filoperasjoner."
+        },
+        "3": {
+          "heading": "Personvernførst-design",
+          "content": "Et kjerneprinsipp i dette prosjektet var personvern. All finansiell data forblir på brukerens enhet—det er ingen skylagring, ingen kontoer å opprette, og ingen data forlater nettleseren."
+        },
+        "4": {
+          "heading": "Hvordan det fungerer",
+          "content": "Appen tilbyr fleksibel filhåndtering for inntektssporingen din. Du kan starte på nytt ved å opprette en ny Excel-fil fra bunnen av, eller laste inn en eksisterende Excel-fil for å fortsette der du slapp."
+        },
+        "5": {
+          "heading": "Tospråklig støtte",
+          "content": "Appen har full tospråklig støtte for tysk og engelsk, noe som gjør den tilgjengelig for brukere i forskjellige regioner. Språkbytteren tillater sømløs veksling mellom språk."
+        },
+        "6": {
+          "heading": "Oppsummering",
+          "content": "PIA Lønnssporer kombinerer moderne nettteknologier med en personvernførst-tilnærming for å skape et praktisk inntektshåndteringsverktøy. Bygget med Next.js, React og TypeScript, demonstrerer det min evne til å utvikle fullt utstyrte applikasjoner som løser virkelige problemer."
+        }
+      }
+    },
+    "project5": {
+      "title": "CliketyCart - Prosjektoppgave",
+      "teaser": "ClicketyCart er en retro-stil nettbutikk med rask utsjekking, umiddelbar levering og jevn shopping drevet av Noroff API.",
+      "description": "ClicketyCart gjør shopping raskt, morsomt og uanstrengt. Med en turboladet utsjekking og lynrask levering, får du det du trenger—umiddelbart.\n\nDette er frontenden for en fiktiv nettbutikk drevet av Noroff API, med et retro-inspirert design og bygget med moderne React-funksjonalitet.",
+      "article": {
+        "0": {
+          "heading": "Forbedringer",
+          "content": "Etter å ha fullført og levert ClicketyCart shoppingnettstedet, gikk jeg tilbake til prosjektet for å gjøre noen meningsfulle forbedringer basert på beste praksis og porteføljeklarhet."
+        },
+        "1": {
+          "heading": "Lagt til JSDoc-dokumentasjon",
+          "content": "I den opprinnelige versjonen av prosjektet var ingen av funksjonene dokumentert. For å forbedre klarhet og vedlikeholdbarhet la jeg til JSDoc-kommentarer på tvers av alle kjerne JavaScript-funksjoner."
+        },
+        "2": {
+          "heading": "Klikkbar logo-omdirigering",
+          "content": "Jeg oppdaterte header-logoen slik at den nå fungerer som en lenke tilbake til hjemmesiden. Selv om dette er en vanlig brukeropplevelsesforventning, manglet den i den opprinnelige versjonen."
+        },
+        "3": {
+          "heading": "README-bildeforhåndsvisning",
+          "content": "For å bedre presentere prosjektet på GitHub og gjøre det mer porteføljevennlig, la jeg til et skjermbilde av applikasjonen i README.md-filen."
+        },
+        "4": {
+          "heading": "Forbedret skjematilgjengelighet",
+          "content": "Et av tilgjengelighetsproblemene jeg oppdaget i den opprinnelige versjonen var at noen interaktive elementer—spesielt skjemainput—ikke var riktig pakket inn i <form>-elementer. Vi korrigerte dette ved å sikre at alle inputfelt er riktig strukturert innenfor semantiske skjematagger."
+        }
+      }
+    },
+    "project6": {
+      "title": "Community Science Museum - Andre skritt",
+      "teaser": "Mitt andre prosjekt som student—ikke en refleksjon av mine ferdigheter i dag, men en annen milepæl i min utviklingsreise.",
+      "description": "Community Science Museum-nettstedet var min andre obligatoriske oppgave ved Noroff. Viktig merknad: DETTE PROSJEKTET REFLEKTERER IKKE MINE EVNER SOM UTVIKLER I DAG—det er inkludert for å vise min læringskurve og reisen jeg har vært gjennom.\n\nBygget med HTML og CSS, fokuserte dette prosjektet på å lage et tilgjengelig, responsivt nettsted for et vitenskapsmuseum rettet mot yngre publikum samtidig som profesjonalitet opprettholdes.",
+      "article": {
+        "0": {
+          "heading": "Viktig merknad",
+          "content": "Dette prosjektet reflekterer ikke mine ferdigheter eller evner som utvikler i dag. Som GameHub er det inkludert i porteføljen min for å demonstrere min vekst og reise—viser min progresjon mens jeg fortsatte å lære."
+        },
+        "1": {
+          "heading": "Det andre steget",
+          "content": "Etter GameHub var Community Science Museum mitt andre store prosjekt ved Noroff. Det representerte neste steg i min læringsreise, bygget på det grunnleggende jeg nettopp hadde begynt å forstå."
+        },
+        "2": {
+          "heading": "Prosjektmål",
+          "content": "Oppdraget var å lage et moderne, tilgjengelig nettsted for et vitenskapsmuseum. Utfordringen var å appellere til yngre publikum uten å være nedlatende—finne riktig balanse mellom spenning og profesjonalitet."
+        },
+        "3": {
+          "heading": "Hva jeg lærte",
+          "content": "Dette prosjektet fordypet min forståelse av HTML-struktur og CSS-styling. Jeg lærte om å lage responsive layouter som fungerer på tvers av forskjellige enheter, implementere tilgjengelighetsstandarder og organisere kode på en mer vedlikeholdbar måte."
+        },
+        "4": {
+          "heading": "Del av reisen",
+          "content": "Jeg tror på å vise hele læringsprosessen, ikke bare de polerte sluttresultatene. Dette prosjektet, sammen med GameHub, demonstrerer at vekst tar tid og hvert steg betyr noe."
+        }
+      }
+    },
+    "project7": {
+      "title": "GameHub - Der det hele startet",
+      "teaser": "Mitt aller første webutviklingsprosjekt—ikke en refleksjon av mine ferdigheter i dag, men en påminnelse om hvor reisen min begynte.",
+      "description": "GameHub var mitt aller første kodeprosjekt, laget som en obligatorisk oppgave tidlig i studiene mine. Viktig merknad: DETTE PROSJEKTET REFLEKTERER IKKE MINE EVNER SOM UTVIKLER I DAG—det er inkludert utelukkende for å vise hvor jeg startet og hvor langt jeg har kommet siden.\n\nBygget med vanilla HTML, CSS og JavaScript, lærte dette e-handelskonseptet for videospill meg det grunnleggende innen webutvikling.",
+      "article": {
+        "0": {
+          "heading": "Viktig merknad",
+          "content": "Dette prosjektet reflekterer ikke mine ferdigheter eller evner som utvikler i dag. Det er inkludert i porteføljen min utelukkende for å demonstrere min vekst og reise—viser hvor jeg startet versus hvor jeg er nå."
+        },
+        "1": {
+          "heading": "Begynnelsen",
+          "content": "GameHub har en spesiell plass i porteføljen min—ikke fordi det er mitt beste arbeid, men fordi det er hvor alt startet. Dette var mitt aller første prosjekt som utvikler, en obligatorisk oppgave som kastet oss ut på dypt vann tidlig i studiene."
+        },
+        "2": {
+          "heading": "En ydmyk start",
+          "content": "Når jeg ser tilbake på dette prosjektet nå, kan jeg tydelig se hvor langt jeg har kommet. Koden er langt fra perfekt, og sluttresultatet matchet ikke det opprinnelige designet jeg hadde forestilt meg. Men det er nettopp derfor jeg beholder det i porteføljen min."
+        },
+        "3": {
+          "heading": "Hva jeg lærte",
+          "content": "Til tross for ufullkommenhetene, lærte GameHub meg grunnleggende ferdigheter jeg fortsatt bruker i dag. Jeg lærte hvordan jeg strukturerer HTML-sider, styler dem med CSS og legger til interaktivitet med JavaScript."
+        },
+        "4": {
+          "heading": "Vekst som utvikler",
+          "content": "Å sammenligne GameHub med mine nylige prosjekter viser progresjonen jeg har gjort innen frontend-utvikling og UI/UX-design. Fra vanilla JavaScript til React, fra basic CSS til Tailwind, fra enkle layouter til komplekse interaktive opplevelser."
+        },
+        "5": {
+          "heading": "Hvorfor det fortsatt er her",
+          "content": "Jeg tror på å vise hele reisen, ikke bare høydepunktene. GameHub demonstrerer at alle starter et sted, og forbedring kommer gjennom øvelse og utholdenhet."
+        }
+      }
+    }
+  },
+  "animationData": {
+    "animation-angela-walk-run": {
+      "title": "Angela - Gå- & løpesyklus",
+      "teaser": "En karakteranimasjon som viser gå- og løpesykluser, laget i After Effects med DUIK-rigging på en Illustrator-forberedt vektorillustrasjon.",
+      "description": "Denne animasjonen demonstrerer gå- og løpesyklusfundamenter ved bruk av DUIK-rigging i Adobe After Effects. Fokuset er på å vise rigging- og animasjonsarbeidsflyten snarere enn selve illustrasjonen.",
+      "article": {
+        "0": {
+          "heading": "Prosjektoversikt",
+          "content": "Denne animasjonen fokuserer på å demonstrere rigging- og animasjonsferdigheter snarere enn illustrasjon. Målet var å vise den tekniske arbeidsflyten med å forberede kunstverk for animasjon og bringe en karakter til liv gjennom gå- og løpesykluser ved bruk av bransjestandard verktøy."
+        },
+        "1": {
+          "heading": "Illustrasjonskilde & Forberedelse",
+          "content": "Grunnillustrasjonen ble hentet fra Freepik under en fri lisens. Selv om det ikke er mitt originale kunstverk, var modifikasjoner nødvendige for å gjøre den animasjonsklarr.\n\nViktige forberedelsesteg i Adobe Illustrator:\n\n• Separere illustrasjonen i individuelle lag for hver kroppsdel\n• Sikre at alle lag er riktig sekvensert for animasjonshierarkiet\n• Avrunde leddområder (knær, albuer, skuldre) for å skape overlappende former"
+        },
+        "2": {
+          "heading": "Rigging med DUIK",
+          "content": "DUIK er et kraftig rigging-tillegg for After Effects som muliggjør beinbasert karakteranimasjon. Etter å ha importert den forberedte Illustrator-filen, brukte jeg DUIK til å:\n\n• Lage en beinstruktur for karakterens lemmer\n• Sette opp invers kinematikk (IK) for naturlig ben- og armbevegelse\n• Etablere riktige foreldre-barn-forhold mellom kroppsdeler\n• Konfigurere kontrollere for effektiv animasjonsarbeidsflyt"
+        },
+        "3": {
+          "heading": "Prosjektorganisering & Grunntilstand",
+          "content": "En nøkkeldel av arbeidsflyten min er å opprettholde en ren prosjektstruktur i After Effects. Jeg organiserte kunstverket i separate mapper:\n\n• Originalt kunstverk - den importerte Illustrator-filen, urørt\n• Rig-komposisjon - en duplikat hvor all rigging ble anvendt\n• Animasjonskomposisjoner - separate komposisjoner for hver animasjon\n\nKritisk viktig, i rig-komposisjonen sørget jeg for at alle bein, posisjoner og rotasjoner er nullstilt for å matche nøyaktig hvordan illustrasjonen opprinnelig ble importert."
+        },
+        "4": {
+          "heading": "Animasjonsprosess",
+          "content": "Med riggen på plass animerte jeg gå- og løpesyklusene ved å sette keyframes for karakterens bevegelse. Gå- og løpesykluser er grunnleggende animasjonsøvelser som demonstrerer timing, vekt og momentum.\n\nMerk: Denne illustrasjonen og riggen er bevisst ikke perfekte—formålet er å demonstrere animasjons- og riggingarbeidsflyten snarere enn å skape et polert ferdig stykke."
+        }
+      }
+    },
+    "animation-angela-waving": {
+      "title": "Angela - Vinker",
+      "teaser": "En karakteranimasjon som utforsker armbevegelse og gest, laget med samme DUIK-rigg for å demonstrere variert animasjon på et enkelt karakteroppsett.",
+      "description": "Bygget på samme riggede karakter, fokuserer denne animasjonen spesifikt på overkroppsbevegelse og uttrykksfull gest. Den demonstrerer hvordan en enkelt rigg kan produsere mangfoldig animasjon gjennom forskjellige keyframe-tilnærminger.",
+      "article": {
+        "0": {
+          "heading": "Prosjektoversikt",
+          "content": "Denne animasjonen bruker samme Angela-karakterrigg fra Gå- & løpesyklusprosjektet. Målet her var å utforske en annen type bevegelse—en enkel vinkegest—for å demonstrere allsidigheten til en godt konstruert rigg og øve på å animere overkropps- og armbevegelser spesifikt."
+        },
+        "1": {
+          "heading": "Samme rigg, annen bevegelse",
+          "content": "En av fordelene med karakterrigging er gjenbrukbarhet. I stedet for å lage en ny karakter fra bunnen av, gjenbruker denne animasjonen den eksisterende DUIK-riggen bygget i After Effects.\n\nGrunnillustrasjonen var samme frilisensierte ressurs fra Freepik, forberedt i Adobe Illustrator med separerte lag og avrundede ledd."
+        },
+        "2": {
+          "heading": "Animere vinken",
+          "content": "En vinkegest kan virke enkel, men den involverer flere animasjonshensyn:\n\n• Armrotasjon fra skulderleddet\n• Sekundær bevegelse i hånd og fingre\n• Subtil kroppsbevegelse for å støtte gesten\n• Timing som føles naturlig og vennlig\n\nDenne animasjonen fokuserer på overkroppen, holder bena relativt statiske mens armen utfører vinkebevegelsen."
+        },
+        "3": {
+          "heading": "Læringsutbytte",
+          "content": "Dette stykket demonstrerer at når du har en fungerende rigg, kan du produsere flere animasjoner relativt raskt. Tidsinvesteringen i rigging lønner seg når du skaper en serie animasjoner for samme karakter."
+        }
+      }
+    },
+    "animation-angela-scratching": {
+      "title": "Angela - Klør seg i hodet",
+      "teaser": "En karakterhandlingsanimasjon som demonstrerer mangfoldet av bevegelser mulig med en godt forberedt DUIK-rigg i After Effects.",
+      "description": "Denne animasjonen viser en tenkegest—å klø seg i hodet—ved bruk av samme riggede karakter. Den demonstrerer hvordan investering av tid i riktig riggingforberedelse muliggjør rask oppretting av varierte animasjoner.",
+      "article": {
+        "0": {
+          "heading": "Prosjektoversikt",
+          "content": "Dette er den tredje animasjonen laget med Angela-karakterriggen, og demonstrerer en ettertenksom klø-seg-i-hodet-gest. Som Gå- & løpesyklus- og Vinker-animasjonene bruker dette stykket samme DUIK-rigg i After Effects."
+        },
+        "1": {
+          "heading": "Verdien av riggforberedelse",
+          "content": "Alle tre Angela-animasjonene deler samme fundament: en karakterillustrasjon fra Freepik, forberedt i Adobe Illustrator med separerte lag, og rigget i After Effects med DUIK med en nullstilt grunntilstand.\n\nDenne forhåndsinvesteringen i forberedelse og organisering lønner seg betydelig."
+        },
+        "2": {
+          "heading": "Karakterhandling",
+          "content": "Denne animasjonen fokuserer på karakterhandling—å bringe personlighet til liv gjennom bevegelse. En klø-seg-i-hodet-gest formidler tanke, forvirring eller ettertanke. Det er en relaterbar menneskelig handling som hjelper seere med å koble seg til karakteren.\n\nNøkkelelementer i denne animasjonen:\n\n• Armbevegelsebue som når opp til hodet\n• Håndinteraksjon med hodet/håret\n• Subtil kroppsforskyvning for å støtte gesten\n• Timing som antyder et tankefullt humør"
+        },
+        "3": {
+          "heading": "Rom for forbedring",
+          "content": "Som med de andre animasjonene i denne serien er dette stykket ikke fullt polert. Fokuset var på å demonstrere riggingarbeidsflyten og vise mangfoldet av animasjoner mulig med en enkelt rigg, snarere enn å skape et produksjonsklart stykke."
+        }
+      }
+    },
+    "animation-lake-scene": {
+      "title": "Innsjøscene - Dag til natt",
+      "teaser": "En seerisk animasjon som viser miljøanimasjonsteknikker ved bruk av Puppet Pin-verktøyet og lagkomposisjon i After Effects.",
+      "description": "Denne animasjonen demonstrerer en annen tilnærming til After Effects-animasjon—i stedet for karakterrigging med DUIK, bruker dette stykket Puppet Pin-verktøyet og lagkomposisjon for å bringe en innsjøsceneillustrasjon til liv med en dag-til-natt-overgang.",
+      "article": {
+        "0": {
+          "heading": "Prosjektoversikt",
+          "content": "Denne animasjonen tar en annen tilnærming enn Angela-karakteranimasjonene. I stedet for å bruke DUIK-rigging for karakterbevegelse, fokuserer dette stykket på miljøanimasjon—bringe en seerisk innsjøillustrasjon til liv ved bruk av Puppet Pin-verktøyet, lagkomposisjon og lysjusteringer for å simulere en dag-til-natt-overgang."
+        },
+        "1": {
+          "heading": "Illustrasjonsforberedelse",
+          "content": "Som med karakteranimasjonene begynte arbeidsflyten i Adobe Illustrator. Illustrasjonen ble separert i individuelle lag—hvert element som trengte å bevege seg eller komposisjoneres separat fikk sitt eget lag.\n\nDette inkluderte separering av:\n\n• Bakgrunnshimmel og fjerne elementer\n• Skyer (flere lag for dybde)\n• Vann/innsjøoverflate\n• Forgrunnselementer"
+        },
+        "2": {
+          "heading": "Animasjonsteknikker",
+          "content": "I stedet for beinbasert rigging bruker denne animasjonen flere forskjellige teknikker:\n\n• Puppet Pin-verktøy - Brukes til å skape organiske, flytende bevegelser på elementer uten å trenge en full rigg\n\n• Lagkomposisjon - Bakgrunnselementer som skyer ble komposisjonert og animert i løkker\n\n• Lysstyrke/Kontrast-justeringer - Et justeringslag ble lagt til for gradvis å skifte belysningen, simulere overgangen fra dag til natt"
+        },
+        "3": {
+          "heading": "Dag til natt-overgang",
+          "content": "Den fremtredende funksjonen i denne animasjonen er lysovergangen. Ved å animere lysstyrke- og kontrastverdier over tid, mørkner scenen gradvis for å simulere at natten nærmer seg. Denne teknikken demonstrerer hvordan After Effects kan brukes ikke bare for bevegelse, men for å skape atmosfære og stemningsendringer."
+        }
+      }
+    },
+    "animation-3d-fire-scene": {
+      "title": "3D Brannscene",
+      "teaser": "En 3D-rendret scene som viser VFX-flammer, teksturer på 3D-objekter og dynamiske lyseffekter laget i Unreal Engine.",
+      "description": "Denne 3D-scenen demonstrerer VFX-branneffekter, teksturanvendelse på 3D-objekter og belysningisteknikker i Unreal Engine. Fokuset er på å utforske hvordan disse elementene fungerer sammen for å skape visuell effekt.",
+      "article": {
+        "0": {
+          "heading": "Prosjektoversikt",
+          "content": "Denne 3D-scenen ble laget som en visning av hva som kan gjøres med Unreal Engine. Fokuset var på å utforske VFX-flammer, anvende teksturer på 3D-objekter og forstå hvordan belysning og bevegelse fungerer sammen for å skape visuell effekt i et sanntidsmiljø."
+        },
+        "1": {
+          "heading": "VFX & Teksturer",
+          "content": "Senterpunktet i denne scenen er VFX-flammeeffekten, som demonstrerer partikkelbasert ild i Unreal Engine. Utover flammene utforsker scenen også teksturanvendelse på 3D-objekter—forståelse av hvordan materialer og teksturer samhandler med belysning er fundamentalt for å skape overbevisende 3D-miljøer."
+        },
+        "2": {
+          "heading": "Belysning & Bevegelse",
+          "content": "Ilden fungerer som den primære lyskilden, og skaper dynamisk belysning over scenen. Å leke med lyseffekter og bevegelse var en nøkkeldel av denne utforskningen—forstå hvordan flakkende lys samhandler med teksturerte overflater og hvordan bevegelse tilfører liv til et statisk miljø."
+        },
+        "3": {
+          "heading": "Læringsutbytte",
+          "content": "Dette prosjektet var del av min reise med å lære Unreal Engine og sanntids 3D-grafikk. Selv om jeg primært fokuserer på 2D-illustrasjon og frontend-utvikling, gir forståelse av 3D-verktøy verdifull innsikt i visuell design, belysningsprinsipper og de tekniske aspektene ved moderne spillmotorer."
+        }
+      }
+    },
+    "animation-3d-cinematic-scene": {
+      "title": "3D Cinematisk scene",
+      "teaser": "Et skoleprosjekt som viser kamerabevegelser, lyseffekter og lyddesign i Unreal Engine.",
+      "description": "Denne cinematiske scenen ble laget som et skoleprosjekt ved Høgskolen i Innlandet (spillskolen). Oppgaven var å vise frem en spesifikk gjenstand gjennom en cinematisk presentasjon, demonstrere kamerabevegelser, belysning og lyd i Unreal Engine.",
+      "article": {
+        "0": {
+          "heading": "Prosjektoversikt",
+          "content": "Denne cinematiske scenen ble laget som et skoleprosjekt under min tid ved Høgskolen i Innlandet (spillskolen). Oppgaven var å vise frem én spesifikk gjenstand gjennom en cinematisk presentasjon i Unreal Engine."
+        },
+        "1": {
+          "heading": "Kamerabevegelser",
+          "content": "Et hovedfokus i dette prosjektet var å utforske kameraarbeid inne i Unreal Engine. Ved bruk av Sequencer skapte jeg kamerabevegelser som leder seerens oppmerksomhet mot den utstilte gjenstanden."
+        },
+        "2": {
+          "heading": "Belysning & Lyd",
+          "content": "Utover kameraarbeid inkorporerer scenen også lyseffekter og lyddesign. Belysningen bidrar til å etablere stemning og trekker fokus til gjenstanden som vises, mens lyd tilfører et ekstra lag til presentasjonen."
+        }
+      }
+    },
+    "animation-3d-castle-scene": {
+      "title": "3D Slottscene",
+      "teaser": "En scene som viser 3D-objektkomposisjon, belysning og kamerabevegelser i Unreal Engine.",
+      "description": "Denne slottscenen demonstrerer sammensetning av 3D-objekter til et sammenhengende miljø i Unreal Engine, med fokus på belysning, kamerabevegelser og subtile miljødetaljer som gressbevegelse og flamme-VFX.",
+      "article": {
+        "0": {
+          "heading": "Prosjektoversikt",
+          "content": "Dette prosjektet er en enkel visning av å sette sammen en scene i Unreal Engine. Målet var å demonstrere evnen til å sette sammen 3D-objekter til et sammenhengende miljø og presentere det gjennom forskjellige kameravinkler og bevegelser."
+        },
+        "1": {
+          "heading": "Scenekomposisjon",
+          "content": "Slottscenen ble bygget ved å kombinere ulike 3D-objekter for å skape miljøet. Fokuset var på å arrangere elementer på en visuelt tiltalende måte og bruke belysning for å sette stemningen. Små detaljer som gressbevegelse og flamme-VFX tilfører liv til scenen."
+        },
+        "2": {
+          "heading": "Kamera & Belysning",
+          "content": "Hovedvekten i dette prosjektet er på belysning og kameraarbeid. Forskjellige kamerabevegelser viser scenen fra ulike vinkler, mens belysningen bidrar til å etablere atmosfære og fremheve nøkkelområder i miljøet.\n\nDette er et ganske grunnleggende prosjekt, men det demonstrerer fundamentale ferdigheter i å jobbe med en spillmotor."
+        }
+      }
+    },
+    "animation-3d-gallery-scene": {
+      "title": "3D Gallerimiljø",
+      "teaser": "En interaktiv galleriopplevelse i Unreal Engine som fremhever plastforurensning i havet og innsats mot en renere fremtid.",
+      "description": "Dette 3D-gallerimiljøet ble laget i Unreal Engine for å øke bevisstheten om plastforurensning i havene. Plassert på en øy omgitt av hav, går besøkende inn i et galleri som viser både problemet og de håpefulle anstrengelsene for å adressere det.",
+      "article": {
+        "0": {
+          "heading": "Prosjektoversikt",
+          "content": "Dette prosjektet er en galleriopplevelse bygget i Unreal Engine, med fokus på problemet med plastforurensning i havene våre. Galleriet presenterer begge sider av historien—fremhever hvordan søppel har blitt et stort problem i marine miljøer, samtidig som det viser en lysere fremtid der vi aktivt jobber for å samle inn og redusere denne forurensningen."
+        },
+        "1": {
+          "heading": "Galleriopplevelsen",
+          "content": "Inne i galleriet møter besøkende en blanding av forskjellige elementer:\n\n• Illustrasjoner vist i ulike former gjennom rommet\n• 3D-objekter relatert til havforurensningtemaet\n• Teksturerte overflater som simulerer vann og andre miljøelementer\n\nMålet var å skape en oppslukende opplevelse hvor spilleren kan utforske og reflektere over påvirkningen av plastforurensning."
+        },
+        "2": {
+          "heading": "Kombinere 3D-elementer",
+          "content": "Dette prosjektet involverte å bringe sammen flere elementer innen Unreal Engine—3D-objekter, illustrasjoner og teksturerte materialer som alle jobber sammen for å fortelle historien. Det var en øvelse i scenekomposisjon, materialanvendelse og bruk av et spillmotormiljø for å kommunisere et meningsfullt budskap."
+        }
+      }
+    }
   }
 }

@@ -1,4 +1,5 @@
 import { useParams, useNavigate, Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { projects } from "../../data/projects/projects";
 import { useState, useEffect } from "react";
 import PageTransition from "../../components/pageTransition";
@@ -7,12 +8,28 @@ import { ArrowLeft, ExternalLink, Github, Figma, Share2, Check, ChevronRight, Co
 import useDocumentMeta from "../../hooks/useDocumentMeta";
 
 function ProjectDetail() {
+  const { t } = useTranslation();
   const { id } = useParams();
   const navigate = useNavigate();
   const [copied, setCopied] = useState(false);
   const [selectedImage, setSelectedImage] = useState(0);
   const [galleryIndex, setGalleryIndex] = useState(0);
   const project = projects.find((p) => p.id === id);
+
+  // Get translated content with fallbacks to static data
+  const title = t(`projectData.${id}.title`, { defaultValue: project?.title || '' });
+  const description = t(`projectData.${id}.description`, { defaultValue: project?.description || '' });
+  const teaser = t(`projectData.${id}.teaser`, { defaultValue: project?.teaser || '' });
+
+  // Get translated article sections
+  const getArticle = () => {
+    if (!project?.article) return [];
+    return project.article.map((section, index) => ({
+      heading: t(`projectData.${id}.article.${index}.heading`, { defaultValue: section.heading }),
+      content: t(`projectData.${id}.article.${index}.content`, { defaultValue: section.content }),
+    }));
+  };
+  const article = getArticle();
 
   // Auto-rotate gallery carousel
   useEffect(() => {
@@ -26,8 +43,8 @@ function ProjectDetail() {
   }, [project?.gallery]);
 
   useDocumentMeta({
-    title: project?.title || 'Project',
-    description: project?.teaser || 'View this project by Herman Hylland.',
+    title: title || 'Project',
+    description: teaser || 'View this project by Herman Hylland.',
     url: `https://hermanhylland.netlify.app/project/${id}`,
     image: project?.images?.[0] ? `https://hermanhylland.netlify.app${project.images[0]}` : undefined
   });
@@ -46,13 +63,13 @@ function ProjectDetail() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="animated-border backdrop-blur-md bg-white/10 p-8 rounded-2xl text-center">
-          <h2 className="text-2xl font-bold text-red-400 mb-4">Project not found</h2>
+          <h2 className="text-2xl font-bold text-red-400 mb-4">{t('projectDetails.notFound', { defaultValue: 'Project not found' })}</h2>
           <button
             onClick={() => navigate("/")}
             className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 cursor-pointer"
           >
             <ArrowLeft className="w-5 h-5" />
-            Back to Home
+            {t('common.backToHome')}
           </button>
         </div>
       </div>
@@ -80,7 +97,7 @@ function ProjectDetail() {
                   aria-label="Navigate to home page"
                   className="hover:text-emerald-400 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1 cursor-pointer"
                 >
-                  Home
+                  {t('nav.home')}
                 </button>
               </li>
               <li aria-hidden="true">
@@ -100,14 +117,14 @@ function ProjectDetail() {
                   aria-label="Navigate to projects section"
                   className="hover:text-emerald-400 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1 cursor-pointer"
                 >
-                  Projects
+                  {t('projectDetails.projects', { defaultValue: 'Projects' })}
                 </button>
               </li>
               <li aria-hidden="true">
                 <ChevronRight className="w-5 h-5" />
               </li>
               <li aria-current="page">
-                <span className="text-emerald-400">{project.title}</span>
+                <span className="text-emerald-400">{title}</span>
               </li>
             </ol>
           </nav>
@@ -116,9 +133,9 @@ function ProjectDetail() {
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-8">
             <div className="flex-1">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 pb-2 bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text">
-                {project.title}
+                {title}
               </h1>
-              <p className="text-xl text-gray-300 mb-4">{project.description}</p>
+              <p className="text-xl text-gray-300 mb-4">{description}</p>
 
               {/* Meta Info */}
               <div className="flex flex-wrap gap-4 text-base md:text-lg text-gray-400">
@@ -144,12 +161,12 @@ function ProjectDetail() {
               {copied ? (
                 <>
                   <Check className="w-5 h-5" aria-hidden="true" />
-                  Link Copied!
+                  {t('common.copied')}
                 </>
               ) : (
                 <>
                   <Share2 className="w-5 h-5" aria-hidden="true" />
-                  Share Project
+                  {t('projectDetails.shareProject', { defaultValue: 'Share Project' })}
                 </>
               )}
             </button>
@@ -162,11 +179,11 @@ function ProjectDetail() {
                 href={project.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`View live demo of ${project.title} (opens in new tab)`}
+                aria-label={`View live demo of ${title} (opens in new tab)`}
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900"
               >
                 <ExternalLink className="w-5 h-5" aria-hidden="true" />
-                Live Demo
+                {t('projectDetails.liveDemo', { defaultValue: 'Live Demo' })}
               </a>
             )}
             {project.github && (
@@ -174,11 +191,11 @@ function ProjectDetail() {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`View source code for ${project.title} on GitHub (opens in new tab)`}
+                aria-label={`View source code for ${title} on GitHub (opens in new tab)`}
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-900"
               >
                 <Github className="w-5 h-5" aria-hidden="true" />
-                View Code
+                {t('projects.viewCode')}
               </a>
             )}
             {project.figma && (
@@ -186,11 +203,11 @@ function ProjectDetail() {
                 href={project.figma}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`View Figma design for ${project.title} (opens in new tab)`}
+                aria-label={`View Figma design for ${title} (opens in new tab)`}
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900"
               >
                 <Figma className="w-5 h-5" aria-hidden="true" />
-                Figma Design
+                {t('projectDetails.figmaDesign', { defaultValue: 'Figma Design' })}
               </a>
             )}
             {project.linkedin && (
@@ -202,17 +219,17 @@ function ProjectDetail() {
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-cyan-600 backdrop-blur-sm border border-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900"
               >
                 <Linkedin className="w-5 h-5" aria-hidden="true" />
-                Watch Trailer
+                {t('projectDetails.watchTrailer', { defaultValue: 'Watch Trailer' })}
               </a>
             )}
             {project.blogPost && (
               <Link
                 to={project.blogPost}
-                aria-label={`Read blog post about ${project.title}`}
+                aria-label={`Read blog post about ${title}`}
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-purple-500 backdrop-blur-sm border border-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900"
               >
                 <BookOpen className="w-5 h-5" aria-hidden="true" />
-                Read Blog Post
+                {t('projectDetails.readBlogPost', { defaultValue: 'Read Blog Post' })}
               </Link>
             )}
             {project.report && (
@@ -220,11 +237,11 @@ function ProjectDetail() {
                 href={project.report}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`Read bachelor report for ${project.title} (opens in new tab)`}
+                aria-label={`Read bachelor report for ${title} (opens in new tab)`}
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-orange-600 backdrop-blur-sm border border-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-gray-900"
               >
                 <FileText className="w-5 h-5" aria-hidden="true" />
-                Read Report
+                {t('projectDetails.readReport', { defaultValue: 'Read Report' })}
               </a>
             )}
           </div>
@@ -242,7 +259,7 @@ function ProjectDetail() {
             <div className="animated-border backdrop-blur-md bg-white/10 p-6 rounded-2xl">
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <Code2 className="w-6 h-6 text-emerald-400" />
-                Project Showcase
+                {t('projectDetails.projectShowcase', { defaultValue: 'Project Showcase' })}
               </h2>
 
               {/* YouTube Video - if project has youtube link */}
@@ -297,7 +314,7 @@ function ProjectDetail() {
               <div className="animated-border backdrop-blur-md bg-white/10 p-6 rounded-2xl">
                 <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                   <Images className="w-6 h-6 text-purple-400" />
-                  Project Gallery
+                  {t('projectDetails.projectGallery', { defaultValue: 'Project Gallery' })}
                 </h2>
 
                 {/* Main Image Display */}
@@ -352,10 +369,10 @@ function ProjectDetail() {
             )}
 
             {/* Article Content */}
-            {project.article && project.article.length > 0 && (
+            {article && article.length > 0 && (
               <div className="animated-border backdrop-blur-md bg-white/10 p-8 rounded-2xl relative">
                 <div className="flex flex-col gap-4 mb-6">
-                  <h2 className="text-2xl font-bold">About This Project</h2>
+                  <h2 className="text-2xl font-bold">{t('projectDetails.aboutThisProject', { defaultValue: 'About This Project' })}</h2>
                   <div className="flex flex-wrap gap-2">
                     {project.blogPost && (
                       <Link
@@ -364,7 +381,7 @@ function ProjectDetail() {
                         className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 shadow-lg shadow-purple-500/25"
                       >
                         <BookOpen className="w-4 h-4" aria-hidden="true" />
-                        Read Blog Post
+                        {t('projectDetails.readBlogPost', { defaultValue: 'Read Blog Post' })}
                       </Link>
                     )}
                     {project.linkedin && (
@@ -376,7 +393,7 @@ function ProjectDetail() {
                         className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900 shadow-lg shadow-cyan-500/25"
                       >
                         <Linkedin className="w-4 h-4" aria-hidden="true" />
-                        Watch Trailer
+                        {t('projectDetails.watchTrailer', { defaultValue: 'Watch Trailer' })}
                       </a>
                     )}
                     {project.report && (
@@ -388,13 +405,13 @@ function ProjectDetail() {
                         className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-semibold px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-gray-900 shadow-lg shadow-orange-500/25"
                       >
                         <FileText className="w-4 h-4" aria-hidden="true" />
-                        Read Report
+                        {t('projectDetails.readReport', { defaultValue: 'Read Report' })}
                       </a>
                     )}
                   </div>
                 </div>
                 <article className="space-y-8">
-                  {project.article.map((section, index) => (
+                  {article.map((section, index) => (
                     <section key={index} className="space-y-3">
                       <h3 className="text-xl font-bold text-emerald-400">{section.heading}</h3>
                       <p className="text-gray-300 text-lg leading-relaxed whitespace-pre-line">
@@ -413,7 +430,7 @@ function ProjectDetail() {
             {/* Technologies */}
             {project.technologies && (
               <div className="animated-border backdrop-blur-md bg-white/10 p-6 rounded-2xl">
-                <h3 className="text-xl font-bold mb-4">Tech Stack</h3>
+                <h3 className="text-xl font-bold mb-4">{t('projectDetails.techStack', { defaultValue: 'Tech Stack' })}</h3>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, index) => (
                     <span
@@ -429,29 +446,29 @@ function ProjectDetail() {
 
             {/* Navigation to Other Projects */}
             <nav aria-label="Project navigation" className="animated-border backdrop-blur-md bg-white/10 p-6 rounded-2xl">
-              <h3 className="text-xl font-bold mb-4">More Projects</h3>
+              <h3 className="text-xl font-bold mb-4">{t('projectDetails.moreProjects', { defaultValue: 'More Projects' })}</h3>
               <div className="space-y-3">
                 {prevProject && (
                   <button
                     onClick={() => navigate(`/project/${prevProject.id}`)}
-                    aria-label={`Navigate to previous project: ${prevProject.title}`}
+                    aria-label={`Navigate to previous project: ${t(`projectData.${prevProject.id}.title`, { defaultValue: prevProject.title })}`}
                     className="w-full text-left p-3 bg-white/5 hover:bg-white/10 rounded-lg transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 cursor-pointer"
                   >
-                    <div className="text-xs text-gray-400 mb-1">Previous</div>
+                    <div className="text-xs text-gray-400 mb-1">{t('common.previous', { defaultValue: 'Previous' })}</div>
                     <div className="text-emerald-400 group-hover:text-emerald-300 flex items-center gap-2">
-                      ← {prevProject.title}
+                      ← {t(`projectData.${prevProject.id}.title`, { defaultValue: prevProject.title })}
                     </div>
                   </button>
                 )}
                 {nextProject && (
                   <button
                     onClick={() => navigate(`/project/${nextProject.id}`)}
-                    aria-label={`Navigate to next project: ${nextProject.title}`}
+                    aria-label={`Navigate to next project: ${t(`projectData.${nextProject.id}.title`, { defaultValue: nextProject.title })}`}
                     className="w-full text-left p-3 bg-white/5 hover:bg-white/10 rounded-lg transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 cursor-pointer"
                   >
-                    <div className="text-xs text-gray-400 mb-1">Next</div>
+                    <div className="text-xs text-gray-400 mb-1">{t('common.next', { defaultValue: 'Next' })}</div>
                     <div className="text-emerald-400 group-hover:text-emerald-300 flex items-center gap-2">
-                      {nextProject.title} →
+                      {t(`projectData.${nextProject.id}.title`, { defaultValue: nextProject.title })} →
                     </div>
                   </button>
                 )}
@@ -473,7 +490,7 @@ function ProjectDetail() {
               className="w-full inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 cursor-pointer"
             >
               <ArrowLeft className="w-5 h-5" aria-hidden="true" />
-              Back to Projects
+              {t('projects.backToProjects')}
             </button>
           </div>
         </div>

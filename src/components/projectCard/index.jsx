@@ -1,7 +1,14 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import LivePreview from "../livePreview";
 
 function ProjectCard({ project }) {
+  const { t } = useTranslation();
+
+  // Get translated content, falling back to static data if translation doesn't exist
+  const title = t(`projectData.${project.id}.title`, { defaultValue: project.title });
+  const teaser = t(`projectData.${project.id}.teaser`, { defaultValue: project.teaser });
+
   return (
     <Link
       to={`/project/${project.id}`}
@@ -17,13 +24,13 @@ function ProjectCard({ project }) {
             <LivePreview
               url={project.live}
               fallbackImage={project.images[0]}
-              title={project.title}
+              title={title}
             />
           </div>
 
           {/* Title */}
           <h3 className="text-xl lg:text-2xl font-semibold text-white group-hover:text-emerald-400 transition-colors duration-300 mb-3">
-            {project.title}
+            {title}
           </h3>
 
           {/* Technology badges */}
@@ -45,15 +52,15 @@ function ProjectCard({ project }) {
 
           {/* Teaser text */}
           <div className="text-gray-400 group-hover:text-gray-200 mb-6 flex-grow space-y-2 transition-colors duration-300 text-sm lg:text-base">
-            {project.teaser
-              ? project.teaser.split("\n\n").map((paragraph, index) => (
+            {teaser
+              ? teaser.split("\n\n").map((paragraph, index) => (
                   <p key={index} className="transition-colors duration-300 leading-relaxed line-clamp-3">
                     {paragraph}
                   </p>
                 ))
               : (
                   <p className="italic text-gray-500 group-hover:text-gray-300 transition-colors duration-300">
-                    No teaser available.
+                    {t('projects.noTeaser', { defaultValue: 'No teaser available.' })}
                   </p>
                 )
             }
@@ -62,7 +69,7 @@ function ProjectCard({ project }) {
           {/* CTA Button */}
           <div className="inline-flex mt-auto">
             <span className="px-6 py-2.5 text-sm lg:text-base bg-gradient-to-r from-emerald-500 to-cyan-500 group-hover:from-emerald-600 group-hover:to-cyan-600 rounded-lg text-white transition-all duration-300 font-medium shadow-lg group-hover:shadow-emerald-500/25">
-              View Project →
+              {t('projects.viewProject', { defaultValue: 'View Project' })} →
             </span>
           </div>
         </div>

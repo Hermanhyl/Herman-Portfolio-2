@@ -1,4 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { animations } from "../../data/animations";
 import { useState } from "react";
 import PageTransition from "../../components/pageTransition";
@@ -7,15 +8,31 @@ import { ArrowLeft, Share2, Check, ChevronRight, Play, Clock, Calendar, Clapperb
 import useDocumentMeta from "../../hooks/useDocumentMeta";
 
 function AnimationDetail() {
+  const { t } = useTranslation();
   const { id } = useParams();
   const navigate = useNavigate();
   const [copied, setCopied] = useState(false);
   const [galleryIndex, setGalleryIndex] = useState(0);
   const animation = animations.find((a) => a.id === id);
 
+  // Get translated content with fallbacks
+  const title = t(`animationData.${id}.title`, { defaultValue: animation?.title || '' });
+  const description = t(`animationData.${id}.description`, { defaultValue: animation?.description || '' });
+  const teaser = t(`animationData.${id}.teaser`, { defaultValue: animation?.teaser || '' });
+
+  // Get translated article sections
+  const getArticle = () => {
+    if (!animation?.article) return [];
+    return animation.article.map((section, index) => ({
+      heading: t(`animationData.${id}.article.${index}.heading`, { defaultValue: section.heading }),
+      content: t(`animationData.${id}.article.${index}.content`, { defaultValue: section.content }),
+    }));
+  };
+  const article = getArticle();
+
   useDocumentMeta({
-    title: animation?.title || 'Animation',
-    description: animation?.teaser || 'View this animation by Herman Hylland.',
+    title: title || 'Animation',
+    description: teaser || 'View this animation by Herman Hylland.',
     url: `https://hermanhylland.netlify.app/animation/${id}`,
     image: animation?.thumbnail ? `https://hermanhylland.netlify.app${animation.thumbnail}` : undefined
   });
@@ -44,13 +61,13 @@ function AnimationDetail() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="animated-border backdrop-blur-md bg-white/10 p-8 rounded-2xl text-center">
-          <h2 className="text-2xl font-bold text-red-400 mb-4">Animation not found</h2>
+          <h2 className="text-2xl font-bold text-red-400 mb-4">{t('animationDetails.notFound', { defaultValue: 'Animation not found' })}</h2>
           <button
             onClick={() => navigate("/")}
             className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 cursor-pointer"
           >
             <ArrowLeft className="w-5 h-5" />
-            Back to Home
+            {t('common.backToHome')}
           </button>
         </div>
       </div>
@@ -78,7 +95,7 @@ function AnimationDetail() {
                     aria-label="Navigate to home page"
                     className="hover:text-purple-400 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1 cursor-pointer"
                   >
-                    Home
+                    {t('nav.home')}
                   </button>
                 </li>
                 <li aria-hidden="true">
@@ -90,14 +107,14 @@ function AnimationDetail() {
                     aria-label="Navigate to animations section"
                     className="hover:text-purple-400 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1 cursor-pointer"
                   >
-                    Animations
+                    {t('animationDetails.animations', { defaultValue: 'Animations' })}
                   </button>
                 </li>
                 <li aria-hidden="true">
                   <ChevronRight className="w-5 h-5" />
                 </li>
                 <li aria-current="page">
-                  <span className="text-purple-400">{animation.title}</span>
+                  <span className="text-purple-400">{title}</span>
                 </li>
               </ol>
             </nav>
@@ -106,9 +123,9 @@ function AnimationDetail() {
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-8">
               <div className="flex-1">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 pb-2 bg-gradient-to-r from-purple-400 via-pink-400 to-rose-500 text-transparent bg-clip-text">
-                  {animation.title}
+                  {title}
                 </h1>
-                <p className="text-xl text-gray-300 mb-4">{animation.description}</p>
+                <p className="text-xl text-gray-300 mb-4">{description}</p>
 
                 {/* Meta Info */}
                 <div className="flex flex-wrap gap-4 text-base md:text-lg text-gray-400">
@@ -140,12 +157,12 @@ function AnimationDetail() {
                 {copied ? (
                   <>
                     <Check className="w-5 h-5" aria-hidden="true" />
-                    Link Copied!
+                    {t('common.copied')}
                   </>
                 ) : (
                   <>
                     <Share2 className="w-5 h-5" aria-hidden="true" />
-                    Share Animation
+                    {t('animationDetails.shareAnimation', { defaultValue: 'Share Animation' })}
                   </>
                 )}
               </button>
@@ -164,7 +181,7 @@ function AnimationDetail() {
               <div className="animated-border backdrop-blur-md bg-white/10 p-6 rounded-2xl">
                 <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                   <Play className="w-6 h-6 text-purple-400" />
-                  Animation
+                  {t('animationDetails.animation', { defaultValue: 'Animation' })}
                 </h2>
 
                 {animation.video ? (
@@ -206,7 +223,7 @@ function AnimationDetail() {
                 <div className="animated-border backdrop-blur-md bg-white/10 p-6 rounded-2xl">
                   <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                     <Images className="w-6 h-6 text-pink-400" />
-                    Process Gallery
+                    {t('animationDetails.processGallery', { defaultValue: 'Process Gallery' })}
                   </h2>
 
                   <div className="relative rounded-xl overflow-hidden bg-gray-900 aspect-video flex items-center justify-center">
@@ -258,11 +275,11 @@ function AnimationDetail() {
               )}
 
               {/* Article Content */}
-              {animation.article && animation.article.length > 0 && (
+              {article && article.length > 0 && (
                 <div className="animated-border backdrop-blur-md bg-white/10 p-8 rounded-2xl">
-                  <h2 className="text-2xl font-bold mb-6">About This Animation</h2>
+                  <h2 className="text-2xl font-bold mb-6">{t('animationDetails.aboutThisAnimation', { defaultValue: 'About This Animation' })}</h2>
                   <article className="space-y-8">
-                    {animation.article.map((section, index) => (
+                    {article.map((section, index) => (
                       <section key={index} className="space-y-3">
                         <h3 className="text-xl font-bold text-purple-400">{section.heading}</h3>
                         <p className="text-gray-300 text-lg leading-relaxed whitespace-pre-line">
@@ -283,7 +300,7 @@ function AnimationDetail() {
                 <div className="animated-border backdrop-blur-md bg-white/10 p-6 rounded-2xl">
                   <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
                     <Clapperboard className="w-5 h-5 text-purple-400" />
-                    Tools Used
+                    {t('animationDetails.toolsUsed', { defaultValue: 'Tools Used' })}
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {animation.software.map((tool, index) => (
@@ -301,29 +318,29 @@ function AnimationDetail() {
               {/* Navigation to Other Animations */}
               {animations.length > 1 && (
                 <nav aria-label="Animation navigation" className="animated-border backdrop-blur-md bg-white/10 p-6 rounded-2xl">
-                  <h3 className="text-xl font-bold mb-4">More Animations</h3>
+                  <h3 className="text-xl font-bold mb-4">{t('animationDetails.moreAnimations', { defaultValue: 'More Animations' })}</h3>
                   <div className="space-y-3">
                     {prevAnimation && (
                       <button
                         onClick={() => navigate(`/animation/${prevAnimation.id}`)}
-                        aria-label={`Navigate to previous animation: ${prevAnimation.title}`}
+                        aria-label={`Navigate to previous animation: ${t(`animationData.${prevAnimation.id}.title`, { defaultValue: prevAnimation.title })}`}
                         className="w-full text-left p-3 bg-white/5 hover:bg-white/10 rounded-lg transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 cursor-pointer"
                       >
-                        <div className="text-xs text-gray-400 mb-1">Previous</div>
+                        <div className="text-xs text-gray-400 mb-1">{t('common.previous', { defaultValue: 'Previous' })}</div>
                         <div className="text-purple-400 group-hover:text-purple-300 flex items-center gap-2">
-                          ← {prevAnimation.title}
+                          ← {t(`animationData.${prevAnimation.id}.title`, { defaultValue: prevAnimation.title })}
                         </div>
                       </button>
                     )}
                     {nextAnimation && (
                       <button
                         onClick={() => navigate(`/animation/${nextAnimation.id}`)}
-                        aria-label={`Navigate to next animation: ${nextAnimation.title}`}
+                        aria-label={`Navigate to next animation: ${t(`animationData.${nextAnimation.id}.title`, { defaultValue: nextAnimation.title })}`}
                         className="w-full text-left p-3 bg-white/5 hover:bg-white/10 rounded-lg transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 cursor-pointer"
                       >
-                        <div className="text-xs text-gray-400 mb-1">Next</div>
+                        <div className="text-xs text-gray-400 mb-1">{t('common.next', { defaultValue: 'Next' })}</div>
                         <div className="text-purple-400 group-hover:text-purple-300 flex items-center gap-2">
-                          {nextAnimation.title} →
+                          {t(`animationData.${nextAnimation.id}.title`, { defaultValue: nextAnimation.title })} →
                         </div>
                       </button>
                     )}
@@ -338,7 +355,7 @@ function AnimationDetail() {
                 className="w-full inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 cursor-pointer"
               >
                 <ArrowLeft className="w-5 h-5" aria-hidden="true" />
-                Back to Animations
+                {t('animations.backToAnimations')}
               </button>
             </div>
           </div>

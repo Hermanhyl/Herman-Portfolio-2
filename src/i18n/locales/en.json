@@ -48,7 +48,8 @@
     "exploreIllustrations": "Explore My Illustrations",
     "viewCode": "View Code",
     "viewLive": "View Live",
-    "viewArticle": "View Article"
+    "viewArticle": "View Article",
+    "backToProjects": "Back to Projects"
   },
   "illustrations": {
     "title": "My Illustrations",
@@ -61,6 +62,8 @@
     "viewOnInstagram": "View more on Instagram",
     "viewProjects": "View My Projects",
     "viewIllustrations": "View Illustrations",
+    "illustrationsCount": "illustrations",
+    "illustrationsIn": "illustrations in",
     "categories": {
       "all": "All",
       "portraits": "Portraits",
@@ -76,7 +79,10 @@
     "title": "Animations",
     "comingSoon": "Animations Coming Soon",
     "comingSoonDesc": "I'm working on adding my animation portfolio. Check back soon to see my motion graphics and animated artwork!",
-    "viewAnimation": "View Animation"
+    "viewAnimation": "View Animation",
+    "animationsCount": "animations",
+    "backToAnimations": "Back to Animations",
+    "noDescription": "No description available."
   },
   "blog": {
     "title": "From the Blog",
@@ -91,21 +97,64 @@
     "title": "About Me",
     "subtitle": "UI/UX Designer & Frontend Developer",
     "bio": "I'm a passionate developer and designer based in Norway, combining technical skills with creative vision to build beautiful, functional web experiences.",
+    "location": "Norway / Open to Germany",
+    "role": "Front-End Developer & Digital Designer",
+    "heroDescription": "Bridging technology and art with 2+ years in frontend development and 3+ years in digital design. Creating accessible, interactive web experiences.",
+    "getInTouch": "Get In Touch",
+    "myStory": "My Story",
+    "storyP1": "I'm a <highlight>UX designer and frontend developer</highlight> with a background in game development, animation, and visual communication. Passionate about creating <accent1>engaging, educational experiences</accent1> through user-centered design and creative storytelling.",
+    "storyP2": "My profile uniquely <highlight>bridges design and development</highlight>—combining artistic expertise from The Game School with technical skills from frontend development. This allows me to work seamlessly across the full product lifecycle, <accent2>from concept to code</accent2>.",
+    "storyP3": "From developing <accent1>VR training simulations</accent1> for the healthcare sector to building modern web applications, my work reflects a commitment to creating <accent2>visually appealing products</accent2> that reflect the users' needs—making content accessible and inspiring through thoughtful UX and visual design.",
+    "skillsExpertise": "Skills & Expertise",
+    "whatIWorkWith": "What I Work With",
+    "proficiencyLevels": "Proficiency Levels",
+    "careerPath": "Career Path",
+    "experienceEducation": "Experience & Education",
+    "ctaTitle": "Let's Build Something Amazing",
+    "ctaDescription": "I'm actively looking for frontend development or digital design opportunities where I can grow, collaborate, and contribute to meaningful projects.",
+    "viewMyWork": "View My Work",
     "skills": "Skills & Technologies",
     "experience": "Experience & Education",
     "stats": {
-      "projects": "Projects Completed",
-      "years": "Years Experience",
-      "technologies": "Technologies"
+      "yearsFrontend": "Years Frontend",
+      "projectsBuilt": "Projects Built",
+      "yearsDesign": "Years Design",
+      "degrees": "Degrees"
+    },
+    "skillCategories": {
+      "development": "Development",
+      "design": "Design",
+      "aiTools": "AI & Tools"
+    },
+    "timeline": {
+      "customerService": "Customer Service Agent",
+      "customerServiceDesc": "Handling insurance cases via phone support. Using Salesforce CRM for case management.",
+      "frontendDev": "Front-End Development",
+      "frontendDevDesc": "2-year vocational degree. Specialized in React, JavaScript, and modern web development.",
+      "visualDesigner": "Visual Designer",
+      "visualDesignerDesc": "UI/UX design and visual identity. Strategic decisions about color, imagery, and layout.",
+      "bachelorAnim": "Bachelor in Animation & Digital Art",
+      "bachelorAnimDesc": "Technical development with concept art, 3D design, and animation."
     }
   },
   "contact": {
-    "title": "Get in Touch",
-    "subtitle": "Have a project in mind? Let's talk about how we can work together.",
+    "title": "Let's Connect",
+    "subtitle": "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.",
+    "available": "Available for Opportunities",
+    "sendMessage": "Send a Message",
+    "getInTouch": "Get in Touch",
+    "followMe": "Follow Me",
+    "responseTime": "Response Time",
+    "responseDesc": "I typically respond within 24-48 hours. Looking forward to hearing from you!",
+    "successMessage": "Thank you! Your message has been sent successfully. I'll get back to you soon!",
+    "errorMessage": "Oops! Something went wrong. Please try again or email me directly.",
     "form": {
-      "name": "Name",
-      "email": "Email",
+      "name": "Your Name",
+      "namePlaceholder": "John Doe",
+      "email": "Your Email",
+      "emailPlaceholder": "john@example.com",
       "message": "Message",
+      "messagePlaceholder": "Tell me about your project...",
       "send": "Send Message",
       "sending": "Sending...",
       "success": "Message sent successfully!",
@@ -125,7 +174,529 @@
     "more": "more"
   },
   "footer": {
+    "quickLinks": "Quick Links",
+    "connect": "Connect",
+    "tagline": "Front-End Developer & Digital Designer crafting beautiful web experiences.",
     "rights": "All rights reserved",
-    "builtWith": "Built with React & Tailwind CSS"
+    "builtWith": "Built with"
+  },
+  "projectDetails": {
+    "notFound": "Project not found",
+    "projects": "Projects",
+    "shareProject": "Share Project",
+    "liveDemo": "Live Demo",
+    "figmaDesign": "Figma Design",
+    "watchTrailer": "Watch Trailer",
+    "readBlogPost": "Read Blog Post",
+    "readReport": "Read Report",
+    "projectShowcase": "Project Showcase",
+    "projectGallery": "Project Gallery",
+    "aboutThisProject": "About This Project",
+    "techStack": "Tech Stack",
+    "moreProjects": "More Projects"
+  },
+  "animationDetails": {
+    "notFound": "Animation not found",
+    "animations": "Animations",
+    "shareAnimation": "Share Animation",
+    "animation": "Animation",
+    "processGallery": "Process Gallery",
+    "aboutThisAnimation": "About This Animation",
+    "toolsUsed": "Tools Used",
+    "moreAnimations": "More Animations"
+  },
+  "projectData": {
+    "project1": {
+      "title": "BrannVRn - VR Fire Safety Simulator (A)",
+      "teaser": "UX Process & Learning Design in action: A VR fire safety simulator where I designed the complete user experience and pedagogical framework—transforming complex safety procedures into intuitive, educational interactions.",
+      "description": "BrannVRn is a Virtual Reality fire safety training simulator developed as a bachelor's degree project in collaboration with Sykehuspartner. The project recreates Sykehuspartner's Drammen office in a 1:1 scale, providing immersive fire safety training experiences.\n\nAs the concept artist and UI/UX designer, I was responsible for creating the visual identity, infographics, UI elements, 3D modeling, texturing, and developing informational content about fire hazards and emergency procedures.",
+      "article": {
+        "0": {
+          "heading": "Project Overview",
+          "content": "BrannVRn was developed as our bachelor's degree final project, earning an A grade. Working with Sykehuspartner, we created a comprehensive VR fire safety training simulator. The client requested a 1:1 scale replica of their Drammen office, transformed into an interactive training environment where users can learn essential fire safety skills in a realistic but safe virtual setting."
+        },
+        "1": {
+          "heading": "My Role: UI/UX Designer & Concept Artist",
+          "content": "As the UI/UX designer and concept artist on our three-person team, my responsibilities centered on the complete user experience and visual communication:\n\n• Developing the visual concept and art direction for the entire simulator\n• Designing all user interface elements with a focus on VR usability and accessibility\n• Creating informational infographics that communicate complex safety procedures clearly\n• Designing educational displays that guide users through learning at their own pace\n• Ensuring visual consistency across all interactive elements\n• Texturing and skinning 3D assets to create an immersive environment\n\nMy core challenge was translating complex fire safety knowledge into intuitive, learnable interactions—ensuring users don't just experience the simulator, but genuinely understand and retain the safety procedures."
+        },
+        "2": {
+          "heading": "Learning Design: The Heart of the Project",
+          "content": "This wasn't just a visual simulation—it was an educational tool that needed to genuinely teach people life-saving skills. The learning design approach was central to every decision I made.\n\nKey pedagogical principles I applied:\n\n• Progressive disclosure: Information is revealed in stages, preventing cognitive overload while building understanding systematically\n• Learn-then-practice flow: Users first read about equipment functionality, then immediately practice hands-on—reinforcing learning through action\n• Contextual learning: Educational content is placed exactly where users need it, integrated naturally into the environment rather than interrupting the experience\n• Multiple learning modalities: Visual diagrams, text explanations, and hands-on practice accommodate different learning styles\n\nThe goal was creating an experience where users naturally absorb safety knowledge while immersed in the virtual environment, making the learning feel effortless rather than forced."
+        },
+        "3": {
+          "heading": "What We Learned from Firefighters",
+          "content": "One of the most valuable experiences was spending a day at the local fire station, consulting directly with firefighters. Their real-world expertise fundamentally shaped our design approach.\n\nKey insights that influenced the project:\n\n• Fire behavior: Understanding how fire spreads, which areas become dangerous first, and why certain escape routes are prioritized over others\n• Equipment priorities: Learning which equipment to use in different scenarios and the critical decision-making process firefighters follow\n• Common mistakes: Discovering what untrained people typically do wrong in emergencies—information that directly shaped our tutorial design\n• Psychological factors: Understanding how panic affects decision-making and how proper training can override fear responses\n\nThis collaboration ensured our simulator teaches what actually matters in emergencies—not just textbook procedures, but the practical knowledge that saves lives. The firefighters' feedback on our early designs helped us prioritize the most critical learning objectives."
+        },
+        "4": {
+          "heading": "Key Features",
+          "content": "The simulator includes several interactive training modules:\n\n• Fire extinguisher operation and proper usage techniques\n• Fire hose handling procedures\n• Identification of fire hazard objects in an office environment\n• Emergency evacuation procedures when fire alarms activate\n• Guided escape routes from the office to the designated fire assembly point\n\nWe utilized 360-degree camera technology to capture real-world reference imagery of the actual escape routes, ensuring users learn the exact paths they would take in a real emergency."
+        },
+        "5": {
+          "heading": "UX Challenges in VR",
+          "content": "Designing for VR presented unique UX challenges that pushed my skills in new directions:\n\n• Spatial UI design: Unlike traditional screens, information needs to exist in 3D space. I designed UI elements that feel natural to interact with while wearing a headset\n• Readability at distance: Text and graphics needed to remain legible across varying distances within the virtual environment\n• Comfort considerations: Avoiding UI placements that cause neck strain or motion discomfort during extended use\n• Intuitive interactions: Creating affordances that communicate how objects can be manipulated without explicit instructions\n\nThese challenges taught me that good UX design principles are universal, but their application must adapt to each medium's unique constraints and opportunities."
+        },
+        "6": {
+          "heading": "Technical Implementation",
+          "content": "Built in Unreal Engine for VR platforms, the project required careful attention to scale accuracy and realistic interaction design. The 1:1 recreation of the Sykehuspartner office demanded precise measurements and detailed modeling to ensure users would experience familiar surroundings. We incorporated 3D photography techniques to capture the real environment and integrated this with our virtual recreations for a seamless training experience."
+        },
+        "7": {
+          "heading": "Key Takeaways",
+          "content": "This project delivered profound lessons that continue to shape my approach to design:\n\n• User research is essential: The firefighter consultation transformed our understanding of what users actually need to learn—assumptions aren't enough\n• Learning design requires empathy: Understanding how people absorb and retain information is as important as the information itself\n• Cross-functional collaboration strengthens outcomes: Working with subject matter experts (firefighters), clients (Sykehuspartner), and a technical team produced results none of us could achieve alone\n• Design for impact, not just aesthetics: The A grade reflected that we created something that genuinely teaches, not just something that looks impressive\n\nThis project proved that the best educational tools balance technical accuracy with pedagogical effectiveness—creating experiences that don't just look and feel realistic, but genuinely transfer valuable skills to users."
+        }
+      }
+    },
+    "project-gonefishing": {
+      "title": "GoneFishing - Fishing Tracker App",
+      "teaser": "User Research in Practice: A fishing tracker app built through conversations with real anglers—addressing pain points in existing apps through iterative design and community feedback.",
+      "description": "GoneFishing is a comprehensive fishing tracking application born from real user research within the fishing community. By talking directly with fishermen about their frustrations with existing apps, I identified key pain points and designed solutions that actually matter to anglers.\n\nBuilt with Next.js and featuring a clean, responsive interface, the app addresses real needs: photo logging, detailed weather tracking, catch statistics, and an overall view of your fishing history—features that emerged directly from user feedback.",
+      "article": {
+        "0": {
+          "heading": "Project Overview",
+          "content": "GoneFishing started with a simple question: what do fishermen actually need from a catch tracking app? Rather than assuming I knew the answer, I went directly to the source—talking with anglers in the fishing community to understand their real experiences, frustrations, and wishes.\n\nThis user-centered approach shaped every feature in the app. Instead of building what I thought was useful, I built what fishermen told me they needed. The result is an application designed around genuine pain points rather than assumptions."
+        },
+        "1": {
+          "heading": "User Research: Learning from the Community",
+          "content": "The most valuable part of this project was the research phase. I had conversations with multiple fishermen—from casual weekend anglers to dedicated enthusiasts—asking about their current methods for tracking catches and what frustrated them about existing solutions.\n\nKey insights from these conversations:\n\n• No photo support: Several anglers mentioned that their current apps didn't allow image uploads, making it impossible to document catches visually—a feature many considered essential\n• Poor weather logging: Existing apps either lacked weather tracking entirely or made it too cumbersome to record conditions accurately\n• Missing statistics: Fishermen wanted to see patterns in their catches over time, but most apps offered no analytics or overview features\n• No comprehensive view: Users expressed frustration at not being able to see their complete fishing history at a glance\n• Cluttered interfaces: Many existing apps were overloaded with features that got in the way of the core task—quickly logging a catch\n\nThese pain points became the foundation for GoneFishing's feature set."
+        },
+        "2": {
+          "heading": "From Research to Design",
+          "content": "Translating user feedback into design decisions required careful prioritization. Not every wish could be implemented immediately, but the core frustrations needed addressing.\n\nHow user research shaped the design:\n\n• Image support was built in from the start, allowing anglers to attach photos to each catch entry\n• Weather conditions are easy to log with intuitive controls for temperature, wind, and conditions\n• A statistics dashboard provides the overview users were missing—total catches, species breakdown, and trends over time\n• The interface stays clean and focused, respecting users' time when they're out on the water\n• Both metric and imperial units accommodate the international fishing community\n\nThis wasn't about adding features for the sake of it—every capability traces back to something a real user expressed needing."
+        },
+        "3": {
+          "heading": "Key Features",
+          "content": "The application includes features that directly address the pain points discovered during research:\n\n• Photo logging: Document your catches visually with image uploads for each entry\n• Comprehensive weather tracking: Record temperature, wind conditions, and weather state easily\n• Catch statistics: View your fishing history with meaningful analytics and trends\n• Overall catch view: See all your catches in an organized, filterable format\n• Theme management: Light and dark modes for different conditions—the dark theme using a slate blue background that's easy on the eyes during early morning or late evening sessions\n• Unit flexibility: Switch between metric and imperial measurements based on your preference\n• Secure authentication: Your data stays private with Supabase-powered authentication"
+        },
+        "4": {
+          "heading": "Technical Implementation",
+          "content": "Built with Next.js, the application leverages React's component-based architecture for maintainable and scalable code. Supabase serves as the backend, handling authentication and data storage with real-time capabilities. Tailwind CSS provides a modern, responsive design that works seamlessly across devices—crucial for an app that needs to work equally well on a phone by the water or a desktop at home.\n\nSpecial attention was paid to the mobile experience, recognizing that most catch logging happens in the field. The interface is optimized for quick entries with minimal taps, respecting the context in which it's used."
+        },
+        "5": {
+          "heading": "UX Lessons Learned",
+          "content": "This project reinforced several important UX principles:\n\n• Talk to users early: Assumptions about what users need are often wrong. Direct conversations revealed pain points I never would have guessed\n• Prioritize based on frequency: The features users mentioned most often became the highest priority—photo support and statistics came up in nearly every conversation\n• Context matters: Understanding that anglers log catches while fishing—often in challenging conditions—influenced decisions about interface simplicity and button sizes\n• Existing solutions aren't sacred: Just because other apps do something a certain way doesn't mean it's right. User frustrations with competitors became opportunities for differentiation\n\nThe research-first approach took more time upfront but resulted in a more focused, useful application."
+        },
+        "6": {
+          "heading": "Future Enhancements",
+          "content": "Based on ongoing feedback from users, planned improvements include:\n\n• Advanced data visualization showing catch trends over seasons and locations\n• Social features to share catches with the fishing community\n• Integration with weather APIs for automatic condition logging\n• Location-based insights showing your most successful fishing spots\n• Export functionality for backing up your fishing history\n\nThe goal is to continue evolving GoneFishing based on real user needs—maintaining the research-driven approach that shaped its foundation."
+        }
+      }
+    },
+    "project2": {
+      "title": "Hobbyist - Social Activity Platform",
+      "teaser": "UX-Centered Design: A social platform shaped by conversations with friends and potential users—focusing on simplicity, intuitive navigation, and genuine human connection.",
+      "description": "Hobbyist is a social platform designed to help people make real connections through shared interests and activities. The design process involved gathering insights from friends and potential users about what they'd want from such a platform.\n\nTheir feedback shaped everything from the simple navigation structure to how activities are displayed—resulting in a clean, organized interface that puts connection first, not complexity.",
+      "article": {
+        "0": {
+          "heading": "Project Overview",
+          "content": "Hobbyist was born from the idea that meaningful connections come from shared experiences. In a world where digital interactions often feel shallow, this platform brings people together through activities they genuinely enjoy.\n\nBefore diving into development, I spent time talking with friends and people in my network about what they'd actually want from a platform like this. These conversations shaped the direction of the project—not just what features to include, but how to present them in a way that feels natural and welcoming."
+        },
+        "1": {
+          "heading": "Gathering User Insights",
+          "content": "While this wasn't a formal user study, the informal conversations I had proved invaluable. I asked people about their experiences with social apps, what frustrated them, and what they'd hope to find in a hobby-focused platform.\n\nCommon themes emerged:\n\n• Simplicity over complexity: People wanted to find activities quickly without navigating through endless menus and options\n• Clear information hierarchy: Users expressed wanting to see the most important details—what, when, where—at a glance\n• Messaging that feels natural: Communication features should be straightforward, not buried or overcomplicated\n• Organized presentation: Activities should be easy to browse and filter without feeling overwhelming\n• Welcoming atmosphere: The platform should feel friendly and approachable, not intimidating for newcomers\n\nThese insights became guiding principles for every design decision."
+        },
+        "2": {
+          "heading": "Designing for Simplicity",
+          "content": "One of the clearest takeaways from my conversations was the desire for simplicity. People didn't want another app cluttered with buttons, notifications, and features competing for attention.\n\nThis shaped the interface in several ways:\n\n• Clean navigation: Essential functions are easy to find without hunting through menus\n• Focused screens: Each view has a clear purpose without unnecessary distractions\n• Intuitive flow: Moving through the app feels natural—browse activities, see details, connect with people\n• Minimal clicks: Getting from discovery to connection requires as few steps as possible\n\nThe goal was an app that feels effortless to use, where users spend their energy on connecting with others rather than figuring out the interface."
+        },
+        "3": {
+          "heading": "Information Display",
+          "content": "How information is presented matters as much as what information is shown. Based on feedback about wanting key details visible immediately, I designed activity cards and profiles to surface the essentials:\n\n• Activity type and description front and center\n• Date, time, and location clearly visible\n• Participant count and availability at a glance\n• User interests displayed prominently on profiles\n\nThe warm coral and orange color scheme wasn't just an aesthetic choice—it creates visual hierarchy and helps guide users' attention to what matters most."
+        },
+        "4": {
+          "heading": "Key Features",
+          "content": "The platform includes features that emerged from understanding what users actually need:\n\n• Activity browsing with intuitive filtering by category, location, and availability\n• User profiles showcasing interests and preferred activities\n• Clean dashboard for managing connections and upcoming events\n• Straightforward messaging for coordinating with activity partners\n• Wide range of hobby categories from outdoor adventures to creative pursuits\n\nEach feature was evaluated against the simplicity principle—if it added complexity without clear value, it didn't make the cut."
+        },
+        "5": {
+          "heading": "Design Philosophy",
+          "content": "The design intentionally moves away from the typical dating app aesthetic. The warm gradient backgrounds, friendly typography, and inclusive imagery emphasize community and genuine connection.\n\nEvery design decision reinforces the core message: this is a space for making real friends through shared activities, not romantic matchmaking. The interface should feel like an invitation to join a community, not a transaction to complete."
+        },
+        "6": {
+          "heading": "UX Lessons Applied",
+          "content": "This project reinforced important UX principles:\n\n• Listen before building: Even informal conversations reveal insights you wouldn't discover on your own\n• Simplicity requires discipline: It's tempting to add features, but restraint often serves users better\n• Context shapes design: Understanding how and why people would use the platform influenced everything from button placement to color choices\n• Warmth can be designed: Visual design choices—colors, typography, spacing—contribute to how welcoming an app feels\n\nThe feedback-informed approach resulted in a more focused, user-friendly platform than I would have created based on assumptions alone."
+        },
+        "7": {
+          "heading": "Future Development",
+          "content": "Planned features—informed by ongoing feedback—include activity scheduling and RSVP functionality, group chat capabilities for activity participants, integration with calendar apps, and location-based activity recommendations.\n\nThe goal is to continue evolving Hobbyist based on real user needs while maintaining the simplicity and warmth that define the current experience."
+        }
+      }
+    },
+    "project3": {
+      "title": "Holidaze - Project Exam (A)",
+      "teaser": "Holidaze is a cozy booking app for slow-living getaways—browse, book, and unwind in handpicked cabins and retreats.",
+      "description": "Holidaze is a collaborative frontend project built on the Noroff API, developed by Veronika Aas, Herman Hylland, and Madelen Sletteberg.\n\nIt offers a cozy, responsive booking experience for handpicked getaways focused on slow living from forest cabins to mountain retreats. Users can browse, book, and manage venues with ease through a warm, user-friendly interface.",
+      "article": {
+        "0": {
+          "heading": "Exam Feedback",
+          "content": "We have finally gotten the result back of our final exam! We are so happy with how it turned out. We got an A on the project, and we are so proud of the work we put into it. We learned so much during this project, and we are excited to continue our journey in web development."
+        },
+        "1": {
+          "heading": "Project Overview",
+          "content": "Holidaze is a collaborative project that showcases our ability to work together as a team. We divided the tasks based on our strengths and interests, and we communicated effectively throughout the project. We used GitHub for version control, and we made sure to document our code and write clear commit messages. This helped us keep track of our progress and collaborate efficiently.\n\nThe project is built using React, Vite, Prettier, Tailwind CSS, and HTML. We also made sure to follow best practices for code quality and maintainability. File structure is organized, with components, styles, and assets separated for clarity. We used Tailwind CSS for styling, which allowed us to create a responsive and visually appealing design without writing custom CSS."
+        },
+        "2": {
+          "heading": "Points of Improvement",
+          "content": "While we are proud of the final product, we also recognize areas for improvement. One key aspect is the need for more comprehensive error handling. In the current version, some API calls do not have proper error handling, which could lead to a poor user experience if something goes wrong. We plan to implement try/catch blocks and display user-friendly error messages in future updates.\n\nAdditionally, we want to improve the accessibility of the application. While we have made some efforts to ensure that the app is usable by people with disabilities, there are still areas where we can enhance keyboard navigation and screen reader support."
+        },
+        "3": {
+          "heading": "Responsibilities",
+          "content": "We all participated in all the aspects of the project. We all took part in planning, creating the design, and implementing the functionality. We also made sure to communicate effectively throughout the project, and we used GitHub for version control. This helped us keep track of our progress and collaborate efficiently.\n\nWe also made sure to document our code and write clear commit messages. This helped us keep track of our progress and collaborate efficiently. We also made sure to follow best practices for code quality and maintainability."
+        },
+        "4": {
+          "heading": "GitHub Repository",
+          "content": "Please check out our GitHub repository for the project. Here you can find the source code, documentation, and instructions on how to run the project locally. We welcome any feedback or contributions from the community. You can access the repository using the 'View Code' button at the top of the page. Instructions on how to create an account and use the application can be found in the README file. Feel free to explore the code, and if you have any questions or suggestions, don't hesitate to reach out! Thank you for your interest in our project!"
+        },
+        "5": {
+          "heading": "Figma",
+          "content": "We have also created a Figma design for the project, which you can view by clicking the 'Figma Design' button at the top of the page. The design showcases the user interface and user experience we aimed to achieve with Holidaze. It includes all the screens we implemented in the final product. We hope this gives you a better understanding of our design process and the thought that went into creating a cohesive and user-friendly application.\n\nIt is not prototyped, but it is a good representation of the final product. Reason for this is that we wanted to focus on the functionality of the application. The focus was on the frontend development in this project, and we wanted to make sure that the design was implemented correctly. We are happy with the final result, and we hope you are too!"
+        }
+      }
+    },
+    "project4": {
+      "title": "Auction - Semester Project 2 (A)",
+      "teaser": "Own The Bid is a fast-paced auction app where users can list, bid, and browse items with ease, no account needed to explore.",
+      "description": "Own The Bid is a web-based auction platform where users can register with a valid stud.noroff.no email to buy and sell items through timed listings.\n\nRegistered users can create listings with images, descriptions, and deadlines, place bids on others' items, manage their avatar, and view their available credits. The platform also allows unregistered users to browse and search for listings.",
+      "article": {
+        "0": {
+          "heading": "Improvements",
+          "content": "Since completing the initial version of my auction website, I have taken time to revisit and improve the project based on both feedback from my instructor and my own growing understanding of web development best practices. These improvements reflect my continued learning and commitment to writing clean, maintainable, and professional code."
+        },
+        "1": {
+          "heading": "Proper Error Handling",
+          "content": "An update was the implementation of robust error handling throughout the application. Previously, the app lacked consistent responses to API failures or user-side issues. I have now added clear try/catch blocks, meaningful error messages for users, and console logging where appropriate. This ensures a more reliable and user-friendly experience while also making development and testing more efficient."
+        },
+        "2": {
+          "heading": "Sticky Footer Fix",
+          "content": "In the original version, the footer would sometimes appear awkwardly in the middle of the screen or too far above the bottom, depending on the content height. To fix this, I adjusted the layout, so the footer now reliably stays at the bottom of the viewport, even on pages with little content. This small but important change improves the visual consistency and professionalism of the site."
+        },
+        "3": {
+          "heading": "Input Validation",
+          "content": "Another important improvement was the addition of input validation across user forms, such as registration, login, and listing creation. In the initial version, user input wasn't thoroughly checked, which could lead to incomplete or invalid data being submitted. I've now implemented proper validation logic to ensure required fields are filled out correctly and that input formats are appropriate. This not only improves data integrity but also helps guide the user experience in a clearer and more user-friendly way."
+        }
+      }
+    },
+    "project-timer-planner": {
+      "title": "Timer & Planner - Productivity App",
+      "teaser": "A productivity application combining a customizable focus timer with flexible weekly and monthly planning tools, featuring drag-and-drop scheduling.",
+      "description": "Timer & Planner is a productivity application that combines a customizable focus timer with flexible planning tools. Create session templates with configurable work/break intervals, manage your schedule across weekly and monthly views, and stay organized with color-coded activities.\n\nBuilt with React 19 and TypeScript, the app features drag-and-drop rescheduling, recurring activity options, and local storage persistence—all without requiring an account or cloud storage.",
+      "article": {
+        "0": {
+          "heading": "Project Overview",
+          "content": "Timer & Planner was built to combine two essential productivity tools into one seamless experience. Instead of switching between a timer app and a calendar, users can manage their focus sessions and schedule in a single interface. The app is designed to help users stay productive while maintaining full control over their data."
+        },
+        "1": {
+          "heading": "Timer Features",
+          "content": "The timer component offers customizable session templates with configurable work and break intervals. A visual circular progress display with gradient effects shows your progress, while audio alerts notify you when intervals transition or complete. The timer uses timestamp-based calculations for accurate timing, and all templates are saved locally for quick access."
+        },
+        "2": {
+          "heading": "Planner Features",
+          "content": "The planner includes a weekly grid view spanning 6 AM to 11 PM with intuitive drag-and-drop rescheduling powered by dnd-kit. A monthly calendar view with navigation controls helps you see the bigger picture. Activities can be color-coded with customizable categories and set to recur daily, weekly, monthly, or as one-time events."
+        },
+        "3": {
+          "heading": "Technical Implementation",
+          "content": "Built with React 19 and TypeScript for type safety, the app uses Vite for fast development and builds. Tailwind CSS 4 provides the styling foundation, while @dnd-kit enables smooth drag-and-drop interactions. All data persists in localStorage, and users can export/import their data as JSON files for backups or transferring between devices."
+        },
+        "4": {
+          "heading": "Privacy & Data",
+          "content": "Like my other recent projects, Timer & Planner prioritizes user privacy. All data stays on your device with no accounts required and no cloud storage. The JSON export/import feature gives you full control over your productivity data, letting you back it up or move it wherever you need."
+        }
+      }
+    },
+    "project-pia-salary": {
+      "title": "PIA Salary Tracker - Income Management App",
+      "teaser": "A privacy-focused income tracking application with automatic tax calculations, Excel import/export, and bilingual support—all data stored locally.",
+      "description": "PIA Salary Tracker is a web-based income tracking application designed for managing monthly earnings with automatic tax and social insurance calculations. Built with a strong focus on privacy, all data is stored locally in Excel files without requiring cloud services.\n\nThe app features a clean dashboard with year-based income overview, data visualization charts, dark mode support, and a bilingual interface supporting both German and English.",
+      "article": {
+        "0": {
+          "heading": "Project Overview",
+          "content": "PIA Salary Tracker was built to solve a real-world need—tracking income across multiple sources while maintaining complete privacy. Unlike cloud-based solutions, this app stores all data locally in Excel files, giving users full control over their financial information."
+        },
+        "1": {
+          "heading": "Key Features",
+          "content": "The application includes a comprehensive dashboard with year-based income overview and trend visualization using Recharts. It supports multiple income sources, automatic calculation of social insurance deductions based on configurable rates, and Excel import/export for data persistence. The app also features duplicate entry protection, alerting users when attempting to add entries for months that already exist."
+        },
+        "2": {
+          "heading": "Technical Implementation",
+          "content": "Built with Next.js 16 using the App Router, React 19, and TypeScript for type safety. The UI is styled with Tailwind CSS and shadcn/ui components for a polished, modern look. The xlsx library handles all Excel file operations, while Recharts powers the income trend visualizations. The app is fully responsive across desktop, tablet, and mobile devices."
+        },
+        "3": {
+          "heading": "Privacy-First Design",
+          "content": "A core principle of this project was privacy. All financial data stays on the user's device—there's no cloud storage, no accounts to create, and no data leaving the browser. Users can save their data to Excel files and load them back whenever needed, maintaining full ownership of their sensitive financial information."
+        },
+        "4": {
+          "heading": "How It Works",
+          "content": "The app offers flexible file management for your income tracking. You can start fresh by creating a new Excel file from scratch, or load an existing Excel file to continue where you left off. When you load an existing file, all your previous entries are imported and displayed in the dashboard.\n\nAs you add new income entries—specifying the source, amount, and month—the app automatically calculates social insurance deductions and updates your totals. The dashboard reflects changes in real-time with updated charts and summaries.\n\nWhen you're done, you have full control over saving your data. You can save changes back to the same Excel file you loaded, overwriting it with your updates, or save to a new file to keep different versions. The Excel files are stored wherever you choose on your device, giving you complete ownership of your financial records. This means you can back them up, move them between devices, or organize them however you prefer."
+        },
+        "5": {
+          "heading": "Bilingual Support",
+          "content": "The app features full bilingual support for German and English, making it accessible to users in different regions. The language toggle allows seamless switching between languages while preserving all functionality and data."
+        },
+        "6": {
+          "heading": "Summary",
+          "content": "PIA Salary Tracker combines modern web technologies with a privacy-first approach to create a practical income management tool. Built with Next.js, React, and TypeScript, it demonstrates my ability to develop full-featured applications that solve real-world problems while respecting user privacy. The project showcases skills in data visualization, file handling, responsive design, and internationalization—all wrapped in a clean, intuitive interface."
+        }
+      }
+    },
+    "project5": {
+      "title": "CliketyCart - Project Assignment",
+      "teaser": "ClicketyCart is a retro-style eCom store with fast checkout, instant delivery, and smooth shopping powered by the Noroff API.",
+      "description": "ClicketyCart makes shopping fast, fun, and effortless. With a turbo-charged checkout and lightning-fast delivery, you get what you need—instantly. Whether you're browsing or buying on the go, we're quicker than you can say add to cart.\n\nThis is the frontend for a fictional e-commerce store powered by the Noroff API, featuring a retro-inspired design and built with modern React functionality.",
+      "article": {
+        "0": {
+          "heading": "Improvements",
+          "content": "After completing and submitting the ClicketyCart shopping website, I revisited the project to make a few meaningful improvements based on best practices and portfolio readiness. Although we did not receive extensive direct feedback from our instructor for this specific project, me and Madelen Sletteberg identified areas where the codebase, user experience, and project presentation could be strengthened."
+        },
+        "1": {
+          "heading": "Added JSDoc Documentation",
+          "content": "In the original version of the project, none of the functions were documented. To improve clarity and maintainability, I added JSDoc comments across all core JavaScript functions. JSDoc helps define the purpose, expected parameters, and return values of each function, making it easier for others (and my future self) to understand the logic behind the code. This is especially valuable when collaborating or revisiting the code after some time, and it's a standard practice in professional development environments."
+        },
+        "2": {
+          "heading": "Clickable Logo Redirect",
+          "content": "I updated the header logo so that it now functions as a link back to the homepage. While this is a common user experience expectation, it was missing from the original version. By making the logo clickable, users can now easily return to the starting point of the application without needing to use the browser's back button or look for a separate navigation link. It's a small change that improves usability and aligns the interface with familiar web navigation patterns."
+        },
+        "3": {
+          "heading": "README Image Preview",
+          "content": "To better present the project on GitHub and make it more portfolio-friendly, I added a screenshot of the application to the README.md file. This gives visitors a quick visual overview of the project before even cloning or running it. It also responds directly to a suggestion made by our teacher for the portfolio assignment: to enhance each displayed project with a preview image that communicates the look and feel of the work at a glance."
+        },
+        "4": {
+          "heading": "Improved Form Accessibility",
+          "content": "One of the accessibility issues I discovered in the original version was that some interactive elements — particularly form inputs — were not properly wrapped in <form> elements. This could lead to inconsistent behaviour and decreased accessibility, especially for users relying on screen readers or keyboard navigation. We corrected this by ensuring all input fields are properly structured within semantic form tags, improving both functionality and compliance with accessibility standards."
+        }
+      }
+    },
+    "project6": {
+      "title": "Community Science Museum - Second Steps",
+      "teaser": "My second project as a student—not a reflection of my skills today, but another milestone in my development journey.",
+      "description": "The Community Science Museum website was my second compulsory assignment at Noroff. Important note: THIS PROJECT DOES NOT REFLECT MY ABILITIES AS A DEVELOPER TODAY—it's included to showcase my learning curve and the journey I've been through.\n\nBuilt with HTML and CSS, this project focused on creating an accessible, responsive website for a science museum targeting younger audiences while maintaining professionalism.",
+      "article": {
+        "0": {
+          "heading": "Important Note",
+          "content": "This project does not reflect my skills or abilities as a developer today. Like GameHub, it is included in my portfolio to demonstrate my growth and journey—showing my progression as I continued learning. Please view my other projects to see my current capabilities as a frontend developer and UI/UX designer."
+        },
+        "1": {
+          "heading": "The Second Step",
+          "content": "After GameHub, the Community Science Museum was my second major project at Noroff. It represented the next step in my learning journey, building upon the fundamentals I had just started to grasp. While still early in my development, this project pushed me to think more about accessibility and responsive design."
+        },
+        "2": {
+          "heading": "Project Goals",
+          "content": "The brief was to create a modern, accessible website for a community science museum. The challenge was to appeal to younger audiences without being patronizing—finding the right balance between excitement and professionalism. This taught me early lessons about considering the target audience when making design decisions."
+        },
+        "3": {
+          "heading": "What I Learned",
+          "content": "This project deepened my understanding of HTML structure and CSS styling. I learned about creating responsive layouts that work across different devices, implementing accessibility standards, and organizing code in a more maintainable way. Each challenge I faced helped build the foundation for the developer I would become."
+        },
+        "4": {
+          "heading": "Part of the Journey",
+          "content": "I believe in showing the full learning process, not just the polished end results. This project, along with GameHub, demonstrates that growth takes time and every step matters. Comparing these early projects to my recent work shows the value of persistence and continuous learning in becoming a better developer."
+        }
+      }
+    },
+    "project7": {
+      "title": "GameHub - Where It All Began",
+      "teaser": "My very first web development project—not a reflection of my skills today, but a reminder of where my journey began.",
+      "description": "GameHub was my first ever coding project, created as a compulsory assignment early in my studies. Important note: THIS PROJECT DOES NOT REFLECT MY ABILITIES AS A DEVELOPER TODAY—it's included purely to show where I started and how far I've come since.\n\nBuilt with vanilla HTML, CSS, and JavaScript, this e-commerce concept for video games taught me the fundamentals of web development—from structuring pages to handling user interactions.",
+      "article": {
+        "0": {
+          "heading": "Important Note",
+          "content": "This project does not reflect my skills or abilities as a developer today. It is included in my portfolio solely to demonstrate my growth and journey—showing where I started versus where I am now. Please view my other projects to see my current capabilities as a frontend developer and UI/UX designer."
+        },
+        "1": {
+          "heading": "The Beginning",
+          "content": "GameHub holds a special place in my portfolio—not because it's my best work, but because it's where everything started. This was my very first project as a developer, a compulsory assignment that threw us into the deep end of coding early in our studies. We were quickly made to try things out, experiment, and write our first lines of code."
+        },
+        "2": {
+          "heading": "A Humble Start",
+          "content": "Looking back at this project now, I can clearly see how far I've come. The code is far from perfect, and the final result didn't match the original design I had envisioned. But that's exactly why I keep it in my portfolio—it's an honest representation of where I started. Every developer has a beginning, and this was mine."
+        },
+        "3": {
+          "heading": "What I Learned",
+          "content": "Despite its imperfections, GameHub taught me fundamental skills that I still use today. I learned how to structure HTML pages, style them with CSS, and add interactivity with JavaScript. I built features like a shopping cart, product pages, and checkout flow—all from scratch without any frameworks. These foundational concepts became the building blocks for everything that followed."
+        },
+        "4": {
+          "heading": "Growth as a Developer",
+          "content": "Comparing GameHub to my recent projects shows the progression I've made in frontend development and UI/UX design. From vanilla JavaScript to React, from basic CSS to Tailwind, from simple layouts to complex interactive experiences—each project since has built upon what I learned here. This growth is something I'm proud of, and GameHub serves as a reminder of how far dedication and continuous learning can take you."
+        },
+        "5": {
+          "heading": "Why It's Still Here",
+          "content": "I believe in showing the full journey, not just the highlights. GameHub demonstrates that everyone starts somewhere, and improvement comes through practice and persistence. If you're just starting out as a developer, take heart—your first project won't be perfect either, and that's completely okay. What matters is that you keep building, keep learning, and keep growing."
+        }
+      }
+    }
+  },
+  "animationData": {
+    "animation-angela-walk-run": {
+      "title": "Angela - Walk & Run Cycle",
+      "teaser": "A character animation showcasing walk and run cycles, created in After Effects using DUIK rigging on an Illustrator-prepared vector illustration.",
+      "description": "This animation demonstrates walk and run cycle fundamentals using DUIK rigging in Adobe After Effects. The focus is on showcasing the rigging and animation workflow rather than the illustration itself, which was adapted from a free-licensed source.",
+      "article": {
+        "0": {
+          "heading": "Project Overview",
+          "content": "This animation focuses on demonstrating rigging and animation skills rather than illustration. The goal was to showcase the technical workflow of preparing artwork for animation and bringing a character to life through walk and run cycles using industry-standard tools."
+        },
+        "1": {
+          "heading": "Illustration Source & Preparation",
+          "content": "The base illustration was sourced from Freepik under a free license. While not my original artwork, modifications were required to make it animation-ready.\n\nKey preparation steps in Adobe Illustrator:\n\n• Separating the illustration into individual layers for each body part\n• Ensuring all layers are properly sequenced for the animation hierarchy\n• Rounding joint areas (knees, elbows, shoulders) to create overlapping shapes\n\nIn an ideal animation workflow, you would strive for perfectly circular joint overlaps to prevent visual artifacts during rotation—this ensures smooth bending without gaps or unwanted intersections when limbs move.\n\nHowever, this was not fully achieved in this animation. Since the primary focus was on the rigging process and animation workflow rather than creating a polished character, the illustration preparation was done more quickly. The joints aren't perfectly rounded, and you may notice some minor imperfections. This was a deliberate trade-off—the goal was to demonstrate the complete pipeline from illustration prep to rigging to final animation, not to create a flawless piece of artwork."
+        },
+        "2": {
+          "heading": "Rigging with DUIK",
+          "content": "DUIK is a powerful rigging plugin for After Effects that enables bone-based character animation. After importing the prepared Illustrator file, I used DUIK to:\n\n• Create a bone structure for the character's limbs\n• Set up inverse kinematics (IK) for natural leg and arm movement\n• Establish proper parent-child relationships between body parts\n• Configure controllers for efficient animation workflow\n\nThe rigging process transforms a static illustration into a puppetable character that can be posed and animated frame by frame."
+        },
+        "3": {
+          "heading": "Project Organization & Base State",
+          "content": "A key part of my workflow is maintaining a clean project structure in After Effects. I organized the artwork into separate folders:\n\n• Original artwork - the imported Illustrator file, untouched\n• Rig composition - a duplicate where all the rigging was applied\n• Animation compositions - separate comps for each animation\n\nCrucially, in the rig composition, I made sure all bones, positions, and rotations are zeroed out to match exactly how the illustration was originally imported. This creates a 'base state' or neutral pose that I can always return to.\n\nThis organization serves two purposes: reusability and safety. Having a base state makes it much easier when animating—you can always reset to the natural position if something goes wrong or if you want to start a new animation from scratch. It's a best practice that saves time and prevents frustration during the animation process."
+        },
+        "4": {
+          "heading": "Animation Process",
+          "content": "With the rig in place, I animated the walk and run cycles by keyframing the character's movement. Walk and run cycles are foundational animation exercises that demonstrate timing, weight, and momentum.\n\nNote: This illustration and rig are intentionally not perfect—the purpose is to demonstrate the animation and rigging workflow rather than create a polished final piece. The focus is on showing competency with the tools and techniques used in character animation."
+        }
+      }
+    },
+    "animation-angela-waving": {
+      "title": "Angela - Waving",
+      "teaser": "A character animation exploring arm movement and gesture, created using the same DUIK rig to demonstrate varied animation on a single character setup.",
+      "description": "Building on the same rigged character, this animation focuses specifically on upper body movement and expressive gesture. It demonstrates how a single rig can produce diverse animations through different keyframe approaches.",
+      "article": {
+        "0": {
+          "heading": "Project Overview",
+          "content": "This animation uses the same Angela character rig from the Walk & Run Cycle project. The goal here was to explore a different type of movement—a simple waving gesture—to demonstrate the versatility of a well-constructed rig and to practice animating upper body and arm movements specifically."
+        },
+        "1": {
+          "heading": "Same Rig, Different Movement",
+          "content": "One of the advantages of character rigging is reusability. Rather than creating a new character from scratch, this animation reuses the existing DUIK rig built in After Effects.\n\nThe base illustration was the same free-licensed asset from Freepik, prepared in Adobe Illustrator with separated layers and rounded joints. While the preparation wasn't perfect (as noted in the Walk & Run project), the rig still allows for a range of different animations.\n\nThis is where the project organization from the Walk & Run project pays off. Because I kept the original artwork separate, maintained a rig composition with all bones zeroed out to the base state, and created separate compositions for each animation—I could simply duplicate the rig comp and start animating this new movement without affecting the other animations. The zeroed-out base state meant I had a clean starting point for this completely different gesture."
+        },
+        "2": {
+          "heading": "Animating the Wave",
+          "content": "A waving gesture may seem simple, but it involves several animation considerations:\n\n• Arm rotation from the shoulder joint\n• Secondary motion in the hand and fingers\n• Subtle body movement to support the gesture\n• Timing that feels natural and friendly\n\nThis animation focuses on the upper body, keeping the legs relatively static while the arm performs the waving motion. It's a good exercise in isolating movement to specific body parts while maintaining overall character balance."
+        },
+        "3": {
+          "heading": "Learning Outcome",
+          "content": "This piece demonstrates that once you have a functioning rig, you can produce multiple animations relatively quickly. The time investment in rigging pays off when creating a series of animations for the same character—whether for a game, explainer video, or portfolio piece like this one."
+        }
+      }
+    },
+    "animation-angela-scratching": {
+      "title": "Angela - Scratching Head",
+      "teaser": "A character acting animation demonstrating the variety of movements possible with a well-prepared DUIK rig in After Effects.",
+      "description": "This animation showcases a thinking gesture—scratching the head—using the same rigged character. It demonstrates how investing time in proper rigging preparation enables quick creation of varied animations.",
+      "article": {
+        "0": {
+          "heading": "Project Overview",
+          "content": "This is the third animation created using the Angela character rig, demonstrating a contemplative scratching head gesture. Like the Walk & Run Cycle and Waving animations, this piece uses the same DUIK rig in After Effects, further showcasing the variety of movements that become possible once you've invested in proper rigging preparation."
+        },
+        "1": {
+          "heading": "The Value of Rig Preparation",
+          "content": "All three Angela animations share the same foundation: a character illustration from Freepik, prepared in Adobe Illustrator with separated layers, and rigged in After Effects using DUIK with a zeroed-out base state.\n\nThis upfront investment in preparation and organization pays off significantly. Once the rig is built and properly structured—with the original artwork preserved, bones zeroed out, and separate compositions for each animation—creating new movements becomes much faster and more efficient. The scratching head animation could be started immediately from the neutral base pose without any additional setup work."
+        },
+        "2": {
+          "heading": "Character Acting",
+          "content": "This animation focuses on character acting—bringing personality to life through movement. A scratching head gesture conveys thought, confusion, or contemplation. It's a relatable human action that helps viewers connect with the character.\n\nKey elements in this animation:\n\n• Arm movement arc reaching up to the head\n• Hand interaction with the head/hair\n• Subtle body shift to support the gesture\n• Timing that suggests a thoughtful mood"
+        },
+        "3": {
+          "heading": "Room for Improvement",
+          "content": "As with the other animations in this series, this piece is not fully polished. The focus was on demonstrating the rigging workflow and showing the variety of animations possible with a single rig, rather than creating a production-ready piece.\n\nThere's room to improve by applying more of the 12 principles of animation—such as adding more secondary motion, refining the easing, or incorporating anticipation and follow-through more deliberately. I'm aware of these principles and how they could enhance the animation, but for this portfolio demonstration, the priority was showcasing the technical workflow and rig versatility."
+        }
+      }
+    },
+    "animation-lake-scene": {
+      "title": "Lake Scene - Day to Night",
+      "teaser": "A scenic animation showcasing environment animation techniques using the Puppet Pin tool and layer compositing in After Effects.",
+      "description": "This animation demonstrates a different approach to After Effects animation—instead of character rigging with DUIK, this piece uses the Puppet Pin tool and layer compositing to bring a lake scene illustration to life with a day-to-night transition.",
+      "article": {
+        "0": {
+          "heading": "Project Overview",
+          "content": "This animation takes a different approach from the Angela character animations. Rather than using DUIK rigging for character movement, this piece focuses on environment animation—bringing a scenic lake illustration to life using the Puppet Pin tool, layer compositing, and lighting adjustments to simulate a day-to-night transition."
+        },
+        "1": {
+          "heading": "Illustration Preparation",
+          "content": "As with the character animations, the workflow began in Adobe Illustrator. The illustration was separated into individual layers—each element that needed to move or be composited separately got its own layer.\n\nThis included separating:\n\n• Background sky and distant elements\n• Clouds (multiple layers for depth)\n• Water/lake surface\n• Foreground elements\n• Any objects that needed animation\n\nProper layer separation in Illustrator is essential for After Effects animation, whether you're rigging a character or animating a scene."
+        },
+        "2": {
+          "heading": "Animation Techniques",
+          "content": "Instead of bone-based rigging, this animation uses several different techniques:\n\n• Puppet Pin Tool - Used to create organic, flowing movements on elements without needing a full rig. The pins act as control points that can be keyframed to deform and animate the artwork.\n\n• Layer Compositing - Background elements like clouds were composited and animated in loops, creating a sense of movement and atmosphere in the scene.\n\n• Brightness/Contrast Adjustments - An adjustment layer was added to gradually shift the lighting, simulating the transition from day to night. This creates a dynamic, evolving mood throughout the animation."
+        },
+        "3": {
+          "heading": "Day to Night Transition",
+          "content": "The standout feature of this animation is the lighting transition. By animating brightness and contrast values over time, the scene gradually darkens to simulate nighttime approaching. This technique demonstrates how After Effects can be used not just for movement, but for creating atmosphere and mood changes within a single composition.\n\nThis kind of environmental storytelling through lighting is commonly used in motion graphics, explainer videos, and animated backgrounds for games or apps."
+        }
+      }
+    },
+    "animation-3d-fire-scene": {
+      "title": "3D Fire Scene",
+      "teaser": "A 3D rendered scene showcasing VFX flames, textures on 3D objects, and dynamic lighting effects created in Unreal Engine.",
+      "description": "This 3D scene demonstrates VFX fire effects, texture application on 3D objects, and lighting techniques in Unreal Engine. The focus is on exploring how these elements work together to create visual impact.",
+      "article": {
+        "0": {
+          "heading": "Project Overview",
+          "content": "This 3D scene was created as a showcase of what can be done with Unreal Engine. The focus was on exploring VFX flames, applying textures to 3D objects, and understanding how lighting and movement work together to create visual impact in a real-time environment."
+        },
+        "1": {
+          "heading": "VFX & Textures",
+          "content": "The centerpiece of this scene is the VFX flame effect, demonstrating particle-based fire in Unreal Engine. Beyond the flames, the scene also explores texture application on 3D objects—understanding how materials and textures interact with lighting is fundamental to creating convincing 3D environments.\n\nKey elements include:\n\n• VFX flame particles with dynamic movement\n• Textures applied to scene objects\n• Material properties that respond to the fire's light"
+        },
+        "2": {
+          "heading": "Lighting & Movement",
+          "content": "The fire serves as the primary light source, creating dynamic illumination across the scene. Playing with light effects and movement was a key part of this exploration—understanding how flickering light interacts with textured surfaces and how movement adds life to a static environment.\n\nThis demonstrates how lighting can define the entire mood of a scene and how VFX elements contribute to the overall atmosphere."
+        },
+        "3": {
+          "heading": "Learning Outcomes",
+          "content": "This project was part of my journey learning Unreal Engine and real-time 3D graphics. While I primarily focus on 2D illustration and front-end development, understanding 3D tools provides valuable perspective on visual design, lighting principles, and the technical aspects of modern game engines.\n\nThe skills learned here—composition, lighting, particle effects—translate across different mediums and inform my approach to visual design in all my work."
+        }
+      }
+    },
+    "animation-3d-cinematic-scene": {
+      "title": "3D Cinematic Scene",
+      "teaser": "A school project showcasing camera movements, lighting effects, and sound design in Unreal Engine.",
+      "description": "This cinematic scene was created as a school project at Høgskolen i Innlandet (game school). The assignment was to showcase a specific item through a cinematic presentation, demonstrating camera movements, lighting, and sound in Unreal Engine.",
+      "article": {
+        "0": {
+          "heading": "Project Overview",
+          "content": "This cinematic scene was created as a school project during my time at Høgskolen i Innlandet (game school). The assignment was to showcase one specific item through a cinematic presentation in Unreal Engine. The scene demonstrates camera movements, lighting effects, and sound design working together to highlight the featured item."
+        },
+        "1": {
+          "heading": "Camera Movements",
+          "content": "A key focus of this project was exploring camera work inside Unreal Engine. Using the Sequencer, I created camera movements that guide the viewer's attention toward the showcased item. Understanding how to move a camera effectively is essential for creating engaging cinematics in games and other visual media."
+        },
+        "2": {
+          "heading": "Lighting & Sound",
+          "content": "Beyond camera work, the scene also incorporates lighting effects and sound design. The lighting helps establish mood and draws focus to the item being showcased, while sound adds another layer to the presentation.\n\nThis project served as an introduction to combining these elements—camera, light, and sound—into a cohesive cinematic experience within a game engine environment."
+        }
+      }
+    },
+    "animation-3d-castle-scene": {
+      "title": "3D Castle Scene",
+      "teaser": "A scene showcasing 3D object composition, lighting, and camera movements in Unreal Engine.",
+      "description": "This castle scene demonstrates assembling 3D objects into a cohesive environment in Unreal Engine, with a focus on lighting, camera movements, and subtle environmental details like grass movement and flame VFX.",
+      "article": {
+        "0": {
+          "heading": "Project Overview",
+          "content": "This project is a simple showcase of putting together a scene in Unreal Engine. The goal was to demonstrate the ability to assemble 3D objects into a cohesive environment and present it through different camera angles and movements."
+        },
+        "1": {
+          "heading": "Scene Composition",
+          "content": "The castle scene was built by combining various 3D objects to create the environment. The focus was on arranging elements in a visually appealing way and using lighting to set the mood. Small details like grass movement and flame VFX add life to the scene."
+        },
+        "2": {
+          "heading": "Camera & Lighting",
+          "content": "The main emphasis of this project is on lighting and camera work. Different camera movements showcase the scene from various angles, while the lighting helps establish atmosphere and highlight key areas of the environment.\n\nThis is a fairly basic project, but it demonstrates fundamental skills in working with a game engine—composing scenes, setting up lighting, and creating simple cinematics."
+        }
+      }
+    },
+    "animation-3d-gallery-scene": {
+      "title": "3D Gallery Environment",
+      "teaser": "An interactive gallery experience in Unreal Engine highlighting ocean plastic pollution and efforts toward a cleaner future.",
+      "description": "This 3D gallery environment was created in Unreal Engine to raise awareness about plastic pollution in the oceans. Set on an island surrounded by ocean, visitors enter a gallery showcasing both the problem and the hopeful efforts to address it.",
+      "article": {
+        "0": {
+          "heading": "Project Overview",
+          "content": "This project is a gallery experience built in Unreal Engine, focusing on the issue of plastic pollution in our oceans. The gallery presents both sides of the story—highlighting how trash has become a major problem in marine environments, while also showcasing a brighter future where we are actively working to collect and reduce this pollution.\n\nThe experience is set on an island surrounded by ocean, and visitors can enter the gallery to explore the theme through various visual elements."
+        },
+        "1": {
+          "heading": "The Gallery Experience",
+          "content": "Inside the gallery, visitors encounter a mix of different elements:\n\n• Illustrations displayed in various forms throughout the space\n• 3D objects related to the ocean pollution theme\n• Textured surfaces simulating water and other environmental elements\n\nThe goal was to create an immersive experience where the player can explore and reflect on the impact of plastic pollution, while also seeing the positive steps being taken to address the problem."
+        },
+        "2": {
+          "heading": "Combining 3D Elements",
+          "content": "This project involved bringing together multiple elements within Unreal Engine—3D objects, illustrations, and textured materials all working together to tell the story. The water textures, environmental props, and gallery displays were assembled to create a cohesive space that supports the narrative.\n\nIt was an exercise in scene composition, material application, and using a game engine environment to communicate a meaningful message."
+        }
+      }
+    }
   }
 }

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Play, Clock } from "lucide-react";
 
 /**
@@ -18,8 +19,13 @@ function getYouTubeId(url) {
  * @param {Object} props.animation - Animation data object
  */
 function AnimationCard({ animation }) {
+  const { t } = useTranslation();
   const youtubeId = getYouTubeId(animation.video);
   const isYouTube = !!youtubeId;
+
+  // Get translated content with fallbacks
+  const title = t(`animationData.${animation.id}.title`, { defaultValue: animation.title });
+  const teaser = t(`animationData.${animation.id}.teaser`, { defaultValue: animation.teaser });
 
   return (
     <Link
@@ -33,7 +39,7 @@ function AnimationCard({ animation }) {
             {isYouTube ? (
               <img
                 src={`https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`}
-                alt={animation.title}
+                alt={title}
                 className="w-full h-full object-cover"
               />
             ) : (
@@ -63,7 +69,7 @@ function AnimationCard({ animation }) {
 
           {/* Title */}
           <h3 className="text-xl lg:text-2xl font-semibold text-white group-hover:text-purple-400 transition-colors duration-300 mb-3">
-            {animation.title}
+            {title}
           </h3>
 
           {/* Software/tools badges */}
@@ -85,13 +91,13 @@ function AnimationCard({ animation }) {
 
           {/* Teaser text */}
           <p className="text-gray-400 group-hover:text-gray-200 mb-6 flex-grow transition-colors duration-300 text-sm lg:text-base leading-relaxed line-clamp-3">
-            {animation.teaser || "No description available."}
+            {teaser || t('animations.noDescription', { defaultValue: 'No description available.' })}
           </p>
 
           {/* CTA Button */}
           <div className="inline-flex mt-auto">
             <span className="px-6 py-2.5 text-sm lg:text-base bg-gradient-to-r from-purple-500 to-pink-500 group-hover:from-purple-600 group-hover:to-pink-600 rounded-lg text-white transition-all duration-300 font-medium shadow-lg group-hover:shadow-purple-500/25">
-              View Animation →
+              {t('animations.viewAnimation', { defaultValue: 'View Animation' })} →
             </span>
           </div>
         </div>

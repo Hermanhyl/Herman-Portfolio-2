@@ -1,13 +1,15 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { ArrowRight, Sparkles, Code2, Palette, PenTool, Github, Linkedin, Mail, Instagram } from 'lucide-react';
 import OptimizedImage from '../optimizedImage';
 import ProjectsButton from '../projectsButton';
 
 export default function Hero() {
+  const { t } = useTranslation();
   const [displayedText, setDisplayedText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
-  const fullText = 'Herman Hylland';
+  const fullText = t('hero.name');
 
   useEffect(() => {
     let currentIndex = 0;
@@ -43,20 +45,20 @@ export default function Hero() {
             <div className="flex flex-wrap gap-3 justify-center md:justify-start">
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500/30 to-cyan-500/30 border-2 border-emerald-400/60 px-4 py-2 rounded-full backdrop-blur-sm shadow-lg shadow-emerald-500/20 transform transition-all duration-300 hover:scale-105">
                 <Sparkles className="w-4 h-4 text-emerald-300 animate-pulse" />
-                <span className="text-emerald-100 text-sm md:text-base font-bold">UI/UX Designer & Front-End Developer</span>
+                <span className="text-emerald-100 text-sm md:text-base font-bold">{t('hero.badge')}</span>
               </div>
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500/30 to-cyan-500/30 border-2 border-emerald-400/60 px-4 py-2 rounded-full backdrop-blur-sm shadow-lg shadow-emerald-500/20 transform transition-all duration-300 hover:scale-105">
                 <span className="relative flex h-3 w-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-400"></span>
                 </span>
-                <span className="text-emerald-100 text-sm md:text-base font-bold">Available for Work</span>
+                <span className="text-emerald-100 text-sm md:text-base font-bold">{t('hero.available')}</span>
               </div>
             </div>
 
             {/* Main Heading */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
-              <span className="text-white">Hi, I'm </span>
+              <span className="text-white">{t('hero.greeting')} </span>
               <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text whitespace-nowrap">
                 {displayedText}
                 <span className={`transition-opacity duration-300 ${showCursor ? 'animate-pulse opacity-100' : 'opacity-0'}`}>|</span>
@@ -65,22 +67,22 @@ export default function Hero() {
 
             {/* Subtitle */}
             <p className="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl mx-auto md:mx-0">
-              Welcome to my portfolio. I create beautiful, accessible, and user-friendly web experiences—combining technical skills with creative design to bring ideas to life.
+              {t('hero.subtitle')}
             </p>
 
             {/* Key Points */}
             <div className="flex flex-wrap gap-4 justify-center md:justify-start text-gray-400">
               <div className="flex items-center gap-2">
                 <Code2 className="w-5 h-5 text-emerald-400" />
-                <span>React & Modern JS</span>
+                <span>{t('hero.skills.react')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Palette className="w-5 h-5 text-purple-400" />
-                <span>UI/UX Design</span>
+                <span>{t('hero.skills.uiux')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <PenTool className="w-5 h-5 text-pink-400" />
-                <span>Illustrations</span>
+                <span>{t('hero.skills.illustrations')}</span>
               </div>
             </div>
 
@@ -90,7 +92,7 @@ export default function Hero() {
                 to="/contact"
                 className="group inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black"
               >
-                Let's Work Together
+                {t('hero.cta')}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <ProjectsButton />
@@ -98,7 +100,7 @@ export default function Hero() {
                 to="/about"
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-black"
               >
-                Learn More
+                {t('hero.learnMore')}
               </Link>
             </div>
           </div>
@@ -170,7 +172,7 @@ export default function Hero() {
 
       {/* Scroll indicator - positioned at bottom of section, visible on medium screens and up */}
       <div className="hidden md:flex absolute bottom-6 left-1/2 transform -translate-x-1/2 flex-col items-center gap-2 animate-bounce z-20">
-        <span className="text-gray-400 text-sm">Scroll to explore</span>
+        <span className="text-gray-400 text-sm">{t('hero.scrollToExplore')}</span>
         <div className="w-6 h-10 border-2 border-gray-600 rounded-full flex items-start justify-center p-2">
           <div className="w-1.5 h-3 bg-emerald-400 rounded-full"></div>
         </div>

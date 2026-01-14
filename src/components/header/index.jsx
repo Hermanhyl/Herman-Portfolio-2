@@ -1,12 +1,15 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Menu, X, Home, User, Mail, Code2, BookOpen } from "lucide-react";
+import LanguageSwitcher from "../languageSwitcher";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const menuRef = useRef();
   const location = useLocation();
+  const { t } = useTranslation();
 
   // Track scroll position for header styling
   useEffect(() => {
@@ -37,10 +40,10 @@ function Header() {
   }, [menuOpen]);
 
   const navItems = [
-    { to: "/", label: "Home", icon: Home },
-    { to: "/about", label: "About", icon: User },
-    { to: "/blog", label: "Blog", icon: BookOpen },
-    { to: "/contact", label: "Contact", icon: Mail },
+    { to: "/", label: t("nav.home"), icon: Home },
+    { to: "/about", label: t("nav.about"), icon: User },
+    { to: "/blog", label: t("nav.blog"), icon: BookOpen },
+    { to: "/contact", label: t("nav.contact"), icon: Mail },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -103,6 +106,7 @@ function Header() {
               </Link>
             );
           })}
+          <LanguageSwitcher />
         </nav>
 
         {/* Mobile Menu Button */}
@@ -149,6 +153,9 @@ function Header() {
                 </Link>
               );
             })}
+            <div className="px-4 py-3 border-t border-white/10 mt-2">
+              <LanguageSwitcher />
+            </div>
           </nav>
         )}
       </div>

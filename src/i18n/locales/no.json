@@ -1,0 +1,131 @@
+{
+  "nav": {
+    "home": "Hjem",
+    "about": "Om meg",
+    "blog": "Blogg",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "greeting": "Hei, jeg er",
+    "name": "Herman Hylland",
+    "badge": "UI/UX-designer & Frontend-utvikler",
+    "available": "Tilgjengelig for arbeid",
+    "subtitle": "Velkommen til min portefølje. Jeg skaper vakre, tilgjengelige og brukervennlige nettopplevelser—ved å kombinere tekniske ferdigheter med kreativ design for å bringe ideer til liv.",
+    "cta": "La oss samarbeide",
+    "viewProjects": "Se prosjekter",
+    "learnMore": "Les mer",
+    "scrollToExplore": "Scroll for å utforske",
+    "skills": {
+      "react": "React & Moderne JS",
+      "uiux": "UI/UX-design",
+      "illustrations": "Illustrasjoner"
+    }
+  },
+  "status": {
+    "title": "Hva jeg holder på med",
+    "degree": "Fullført Frontend-utviklerutdanning",
+    "degreeDate": "Mai 2025",
+    "ai": "Bygger AI-drevne verktøy",
+    "aiSub": "med Claude API & OpenAI API",
+    "open": "Åpen for UX/Frontend-stillinger",
+    "openSub": "i Norge",
+    "exploring": "Utforsker AI + Design-arbeidsflyter",
+    "exploringSub": "Moderne kreative verktøy"
+  },
+  "projects": {
+    "title": "Mine prosjekter",
+    "badge": "Utvalgte arbeider",
+    "description": "En samling prosjekter som viser mine ferdigheter innen frontend-utvikling, UI/UX-design og kreativ problemløsning.",
+    "myProjects": "Mine prosjekter",
+    "myIllustrations": "Mine illustrasjoner",
+    "searchPlaceholder": "Søk etter prosjekter etter navn eller beskrivelse...",
+    "showing": "Viser",
+    "of": "av",
+    "projectsLabel": "prosjekter",
+    "clearFilters": "Fjern filtre",
+    "noResults": "Ingen prosjekter funnet som matcher kriteriene dine",
+    "viewOnGithub": "Se mer på GitHub",
+    "exploreIllustrations": "Utforsk mine illustrasjoner",
+    "viewCode": "Se kode",
+    "viewLive": "Se live",
+    "viewArticle": "Les artikkel"
+  },
+  "illustrations": {
+    "title": "Mine illustrasjoner",
+    "badge": "Kreativ kunst",
+    "description": "Digitale illustrasjoner som demonstrerer min forståelse av fargelære, visuell komposisjon og designspråk—kreative ferdigheter jeg bruker i både illustrasjon og UI/UX-designarbeid.",
+    "illustrations": "Illustrasjoner",
+    "animations": "Animasjoner",
+    "watchSpeedpaints": "Se Speedpaints på YouTube",
+    "speedpaintsSub": "Se den kreative prosessen bak mine illustrasjoner",
+    "viewOnInstagram": "Se mer på Instagram",
+    "viewProjects": "Se mine prosjekter",
+    "viewIllustrations": "Se illustrasjoner",
+    "categories": {
+      "all": "Alle",
+      "portraits": "Portretter",
+      "characters": "Karakterer",
+      "dragons": "Drager & Skapninger",
+      "knights": "Riddere & Krigere",
+      "animals": "Dyr & Fugler",
+      "landscapes": "Landskap & Scener",
+      "sketches": "Skisser & Studier"
+    }
+  },
+  "animations": {
+    "title": "Animasjoner",
+    "comingSoon": "Animasjoner kommer snart",
+    "comingSoonDesc": "Jeg jobber med å legge til min animasjonsportefølje. Kom tilbake snart for å se mine motion graphics og animerte kunstverk!",
+    "viewAnimation": "Se animasjon"
+  },
+  "blog": {
+    "title": "Fra bloggen",
+    "badge": "Siste innsikt",
+    "description": "Tanker om utvikling, design og AI",
+    "viewAll": "Se alle innlegg",
+    "readMore": "Les mer",
+    "minRead": "min å lese",
+    "backToBlog": "Tilbake til bloggen"
+  },
+  "about": {
+    "title": "Om meg",
+    "subtitle": "UI/UX-designer & Frontend-utvikler",
+    "bio": "Jeg er en lidenskapelig utvikler og designer basert i Norge, som kombinerer tekniske ferdigheter med kreativ visjon for å bygge vakre, funksjonelle nettopplevelser.",
+    "skills": "Ferdigheter & Teknologier",
+    "experience": "Erfaring & Utdanning",
+    "stats": {
+      "projects": "Fullførte prosjekter",
+      "years": "Års erfaring",
+      "technologies": "Teknologier"
+    }
+  },
+  "contact": {
+    "title": "Ta kontakt",
+    "subtitle": "Har du et prosjekt i tankene? La oss snakke om hvordan vi kan samarbeide.",
+    "form": {
+      "name": "Navn",
+      "email": "E-post",
+      "message": "Melding",
+      "send": "Send melding",
+      "sending": "Sender...",
+      "success": "Meldingen ble sendt!",
+      "error": "Kunne ikke sende meldingen. Vennligst prøv igjen."
+    },
+    "availability": "For tiden tilgjengelig for frilansarbeid og heltidsstillinger.",
+    "location": "Basert i Norge"
+  },
+  "common": {
+    "loading": "Laster...",
+    "error": "Noe gikk galt",
+    "backToHome": "Tilbake til hjem",
+    "share": "Del",
+    "copied": "Lenke kopiert!",
+    "next": "Neste",
+    "previous": "Forrige",
+    "more": "mer"
+  },
+  "footer": {
+    "rights": "Alle rettigheter forbeholdt",
+    "builtWith": "Bygget med React & Tailwind CSS"
+  }
+}

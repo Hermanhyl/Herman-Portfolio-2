@@ -1,0 +1,131 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Herman Hylland",
+    "badge": "UI/UX Designer & Front-End Developer",
+    "available": "Available for Work",
+    "subtitle": "Welcome to my portfolio. I create beautiful, accessible, and user-friendly web experiences—combining technical skills with creative design to bring ideas to life.",
+    "cta": "Let's Work Together",
+    "viewProjects": "View Projects",
+    "learnMore": "Learn More",
+    "scrollToExplore": "Scroll to explore",
+    "skills": {
+      "react": "React & Modern JS",
+      "uiux": "UI/UX Design",
+      "illustrations": "Illustrations"
+    }
+  },
+  "status": {
+    "title": "What I'm Currently Doing",
+    "degree": "Completed Frontend Development degree",
+    "degreeDate": "May 2025",
+    "ai": "Building AI-powered tools",
+    "aiSub": "with Claude API & OpenAI API",
+    "open": "Open to UX/Frontend roles",
+    "openSub": "in Norway",
+    "exploring": "Exploring AI + Design workflows",
+    "exploringSub": "Modern creative tools"
+  },
+  "projects": {
+    "title": "My Projects",
+    "badge": "Featured Work",
+    "description": "A collection of projects showcasing my skills in front-end development, UI/UX design, and creative problem-solving.",
+    "myProjects": "My Projects",
+    "myIllustrations": "My Illustrations",
+    "searchPlaceholder": "Search projects by name or description...",
+    "showing": "Showing",
+    "of": "of",
+    "projectsLabel": "projects",
+    "clearFilters": "Clear filters",
+    "noResults": "No projects found matching your criteria",
+    "viewOnGithub": "View more on GitHub",
+    "exploreIllustrations": "Explore My Illustrations",
+    "viewCode": "View Code",
+    "viewLive": "View Live",
+    "viewArticle": "View Article"
+  },
+  "illustrations": {
+    "title": "My Illustrations",
+    "badge": "Creative Art",
+    "description": "Digital illustrations demonstrating my grasp of color theory, visual composition, and design language—creative skills I apply across both illustration and UI/UX design work.",
+    "illustrations": "Illustrations",
+    "animations": "Animations",
+    "watchSpeedpaints": "Watch Speedpaints on YouTube",
+    "speedpaintsSub": "See the creative process behind my illustrations",
+    "viewOnInstagram": "View more on Instagram",
+    "viewProjects": "View My Projects",
+    "viewIllustrations": "View Illustrations",
+    "categories": {
+      "all": "All",
+      "portraits": "Portraits",
+      "characters": "Characters",
+      "dragons": "Dragons & Creatures",
+      "knights": "Knights & Warriors",
+      "animals": "Animals & Birds",
+      "landscapes": "Landscapes & Scenes",
+      "sketches": "Sketches & Studies"
+    }
+  },
+  "animations": {
+    "title": "Animations",
+    "comingSoon": "Animations Coming Soon",
+    "comingSoonDesc": "I'm working on adding my animation portfolio. Check back soon to see my motion graphics and animated artwork!",
+    "viewAnimation": "View Animation"
+  },
+  "blog": {
+    "title": "From the Blog",
+    "badge": "Latest Insights",
+    "description": "Thoughts on development, design, and AI",
+    "viewAll": "View All Posts",
+    "readMore": "Read More",
+    "minRead": "min read",
+    "backToBlog": "Back to Blog"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "UI/UX Designer & Frontend Developer",
+    "bio": "I'm a passionate developer and designer based in Norway, combining technical skills with creative vision to build beautiful, functional web experiences.",
+    "skills": "Skills & Technologies",
+    "experience": "Experience & Education",
+    "stats": {
+      "projects": "Projects Completed",
+      "years": "Years Experience",
+      "technologies": "Technologies"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have a project in mind? Let's talk about how we can work together.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Failed to send message. Please try again."
+    },
+    "availability": "Currently available for freelance work and full-time positions.",
+    "location": "Based in Norway"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "backToHome": "Back to Home",
+    "share": "Share",
+    "copied": "Link Copied!",
+    "next": "Next",
+    "previous": "Previous",
+    "more": "more"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "builtWith": "Built with React & Tailwind CSS"
+  }
+}

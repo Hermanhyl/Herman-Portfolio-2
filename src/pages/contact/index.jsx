@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Mail, Send, MessageSquare, CheckCircle, AlertCircle, Clock, Sparkles } from 'lucide-react';
 import PageTransition from '../../components/pageTransition';
 import ScrollReveal from '../../components/scrollReveal';
@@ -8,6 +9,8 @@ import NetworkBackground from '../../components/networkBackground';
 import useDocumentMeta from '../../hooks/useDocumentMeta';
 
 function Contact() {
+  const { t } = useTranslation();
+
   useDocumentMeta({
     title: 'Contact',
     description: 'Get in touch with Herman Hylland for frontend development, UI/UX design projects, or collaboration opportunities.',
@@ -77,13 +80,13 @@ function Contact() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
                 </span>
-                <span className="text-emerald-300 text-sm font-medium">Available for Opportunities</span>
+                <span className="text-emerald-300 text-sm font-medium">{t('contact.available')}</span>
               </div>
 
               <SectionHeader
                 icon={Sparkles}
-                title="Let's Connect"
-                description="I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision."
+                title={t('contact.title')}
+                description={t('contact.subtitle')}
               />
             </div>
           </ScrollReveal>
@@ -95,14 +98,14 @@ function Contact() {
               <div className="animated-border backdrop-blur-md bg-white/10 p-8 rounded-2xl border border-white/20 shadow-lg relative z-10 h-full">
                 <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                   <MessageSquare className="w-6 h-6 text-emerald-400" />
-                  Send a Message
+                  {t('contact.sendMessage')}
                 </h2>
 
                 {/* Success Message */}
                 {submitStatus === 'success' && (
                   <div className="mb-4 p-4 bg-emerald-500/20 border border-emerald-500/50 rounded-lg flex items-center gap-3" role="alert">
                     <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                    <p className="text-emerald-300">Thank you! Your message has been sent successfully. I'll get back to you soon!</p>
+                    <p className="text-emerald-300">{t('contact.successMessage')}</p>
                   </div>
                 )}
 
@@ -110,7 +113,7 @@ function Contact() {
                 {submitStatus === 'error' && (
                   <div className="mb-4 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3 animate-in fade-in slide-in-from-top-2 duration-300" role="alert">
                     <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0" />
-                    <p className="text-red-300">Oops! Something went wrong. Please try again or email me directly.</p>
+                    <p className="text-red-300">{t('contact.errorMessage')}</p>
                   </div>
                 )}
 
@@ -126,7 +129,7 @@ function Contact() {
 
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                      Your Name
+                      {t('contact.form.name')}
                     </label>
                     <input
                       type="text"
@@ -138,13 +141,13 @@ function Contact() {
                       aria-required="true"
                       disabled={submitStatus === 'loading'}
                       className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition disabled:opacity-50 disabled:cursor-not-allowed"
-                      placeholder="John Doe"
+                      placeholder={t('contact.form.namePlaceholder')}
                     />
                   </div>
 
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                      Your Email
+                      {t('contact.form.email')}
                     </label>
                     <input
                       type="email"
@@ -156,13 +159,13 @@ function Contact() {
                       aria-required="true"
                       disabled={submitStatus === 'loading'}
                       className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition disabled:opacity-50 disabled:cursor-not-allowed"
-                      placeholder="john@example.com"
+                      placeholder={t('contact.form.emailPlaceholder')}
                     />
                   </div>
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                      Message
+                      {t('contact.form.message')}
                     </label>
                     <textarea
                       id="message"
@@ -174,14 +177,14 @@ function Contact() {
                       disabled={submitStatus === 'loading'}
                       rows="5"
                       className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition resize-none disabled:opacity-50 disabled:cursor-not-allowed"
-                      placeholder="Tell me about your project..."
+                      placeholder={t('contact.form.messagePlaceholder')}
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={submitStatus === 'loading'}
-                    aria-label={submitStatus === 'loading' ? 'Sending message...' : 'Send message'}
+                    aria-label={submitStatus === 'loading' ? t('contact.form.sending') : t('contact.form.send')}
                     className="w-full bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none cursor-pointer"
                   >
                     {submitStatus === 'loading' ? (
@@ -190,12 +193,12 @@ function Contact() {
                           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
-                        Sending...
+                        {t('contact.form.sending')}
                       </>
                     ) : (
                       <>
                         <Send className="w-5 h-5" aria-hidden="true" />
-                        Send Message
+                        {t('contact.form.send')}
                       </>
                     )}
                   </button>
@@ -209,7 +212,7 @@ function Contact() {
               {/* Direct Contact Card */}
               <ScrollReveal delay={200}>
                 <div className="space-y-4">
-                  <h2 className="text-2xl font-bold">Get in Touch</h2>
+                  <h2 className="text-2xl font-bold">{t('contact.getInTouch')}</h2>
                   <SocialLink platform="email" variant="full" />
                 </div>
               </ScrollReveal>
@@ -217,7 +220,7 @@ function Contact() {
               {/* Social Media Links */}
               <ScrollReveal delay={300}>
                 <div>
-                  <h2 className="text-2xl font-bold mb-4">Follow Me</h2>
+                  <h2 className="text-2xl font-bold mb-4">{t('contact.followMe')}</h2>
                   <div className="grid grid-cols-3 gap-4">
                     <SocialLink platform="linkedin" variant="card" />
                     <SocialLink platform="github" variant="card" />
@@ -233,10 +236,10 @@ function Contact() {
                     <div className="p-2 bg-emerald-500/20 rounded-lg">
                       <Clock className="w-5 h-5 text-emerald-400" />
                     </div>
-                    <h3 className="font-semibold text-xl text-emerald-400">Response Time</h3>
+                    <h3 className="font-semibold text-xl text-emerald-400">{t('contact.responseTime')}</h3>
                   </div>
                   <p className="text-gray-300 text-base leading-relaxed">
-                    I typically respond within 24-48 hours. Looking forward to hearing from you!
+                    {t('contact.responseDesc')}
                   </p>
                 </div>
               </ScrollReveal>

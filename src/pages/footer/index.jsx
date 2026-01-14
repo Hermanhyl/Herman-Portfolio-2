@@ -1,8 +1,10 @@
 import { Heart, Code2, Mail, Linkedin, Github, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import VisitorCounter from '../../components/visitorCounter';
 
 function Footer() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
@@ -33,9 +35,9 @@ function Footer() {
   ];
 
   const quickLinks = [
-    { to: "/", label: "Home" },
-    { to: "/about", label: "About" },
-    { to: "/contact", label: "Contact" },
+    { to: "/", label: t('nav.home') },
+    { to: "/about", label: t('nav.about') },
+    { to: "/contact", label: t('nav.contact') },
   ];
 
   return (
@@ -58,13 +60,13 @@ function Footer() {
               </span>
             </div>
             <p className="text-gray-400 text-sm lg:text-base leading-relaxed">
-              Front-End Developer & Digital Designer crafting beautiful web experiences.
+              {t('footer.tagline')}
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="text-center space-y-4">
-            <h3 className="text-white font-semibold text-lg lg:text-xl mb-4">Quick Links</h3>
+            <h3 className="text-white font-semibold text-lg lg:text-xl mb-4">{t('footer.quickLinks')}</h3>
             <div className="flex flex-col gap-2">
               {quickLinks.map((link) => (
                 <Link
@@ -80,7 +82,7 @@ function Footer() {
 
           {/* Social & Contact */}
           <div className="text-center md:text-right space-y-4">
-            <h3 className="text-white font-semibold text-lg lg:text-xl mb-4">Connect</h3>
+            <h3 className="text-white font-semibold text-lg lg:text-xl mb-4">{t('footer.connect')}</h3>
             <div className="flex justify-center md:justify-end gap-3">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
@@ -112,12 +114,12 @@ function Footer() {
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-gray-400 text-sm lg:text-base">
             <p className="flex items-center gap-2">
-              &copy; {currentYear} Herman Hylland. All rights reserved.
+              &copy; {currentYear} Herman Hylland. {t('footer.rights')}.
             </p>
             <div className="flex flex-col md:flex-row items-center gap-4">
               <VisitorCounter />
               <p className="flex items-center gap-2">
-                Built with <Heart className="w-4 h-4 lg:w-5 lg:h-5 text-red-500 fill-red-500 animate-pulse" /> using React & Tailwind CSS
+                {t('footer.builtWith')} <Heart className="w-4 h-4 lg:w-5 lg:h-5 text-red-500 fill-red-500 animate-pulse" /> React & Tailwind CSS
               </p>
             </div>
           </div>

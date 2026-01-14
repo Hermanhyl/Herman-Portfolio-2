@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Hero from "../../components/heroSection";
 import ProjectCard from "../../components/projectCard";
 import PageTransition from "../../components/pageTransition";
@@ -17,15 +18,16 @@ import { animations } from "../../data/animations";
 import { getRecentPosts } from "../../data/blog/posts";
 import { Briefcase, ChevronRight, Search, X, GraduationCap, Sparkles, MapPin, Palette, BookOpen, ArrowRight, PenTool, Instagram, Github, Youtube, Play, Image } from "lucide-react";
 
-// Status items data
-const statusItems = [
-  { icon: GraduationCap, title: "Completed Frontend Development degree", subtitle: "May 2025", color: "emerald" },
-  { icon: Sparkles, title: "Building AI-powered tools", subtitle: "with Claude API & OpenAI API", color: "cyan" },
-  { icon: MapPin, title: "Open to UX/Frontend roles", subtitle: "in Norway", color: "purple" },
-  { icon: Palette, title: "Exploring AI + Design workflows", subtitle: "Modern creative tools", color: "pink" },
-];
-
 function Home() {
+  const { t } = useTranslation();
+
+  // Status items data - using translations
+  const statusItems = [
+    { icon: GraduationCap, title: t("status.degree"), subtitle: t("status.degreeDate"), color: "emerald" },
+    { icon: Sparkles, title: t("status.ai"), subtitle: t("status.aiSub"), color: "cyan" },
+    { icon: MapPin, title: t("status.open"), subtitle: t("status.openSub"), color: "purple" },
+    { icon: Palette, title: t("status.exploring"), subtitle: t("status.exploringSub"), color: "pink" },
+  ];
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTech, setSelectedTech] = useState(null);
@@ -149,7 +151,7 @@ function Home() {
               <div className="flex items-center gap-3 mb-8 justify-center md:justify-start">
                 <Sparkles className="w-7 h-7 text-emerald-400 animate-pulse" />
                 <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text pb-1.5 leading-tight">
-                  What I'm Currently Doing
+                  {t("status.title")}
                 </h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -184,7 +186,7 @@ function Home() {
                     }`}
                   >
                     <Briefcase className={`w-4 h-4 sm:w-5 sm:h-5 ${activeView === "projects" ? "" : "animate-pulse"}`} aria-hidden="true" />
-                    My Projects
+                    {t("projects.myProjects")}
                   </button>
                   <button
                     onClick={() => setActiveView("illustrations")}
@@ -196,7 +198,7 @@ function Home() {
                     }`}
                   >
                     <PenTool className={`w-4 h-4 sm:w-5 sm:h-5 ${activeView === "illustrations" ? "" : "animate-pulse"}`} aria-hidden="true" />
-                    My Illustrations
+                    {t("projects.myIllustrations")}
                   </button>
                 </div>
               </div>
@@ -205,13 +207,13 @@ function Home() {
             {/* Section Header - Changes based on active view */}
             <SectionHeader
               icon={activeView === "projects" ? Briefcase : PenTool}
-              badge={activeView === "projects" ? "Featured Work" : "Creative Art"}
+              badge={activeView === "projects" ? t("projects.badge") : t("illustrations.badge")}
               badgeColor="purple"
-              title={activeView === "projects" ? "My Projects" : "My Illustrations"}
+              title={activeView === "projects" ? t("projects.title") : t("illustrations.title")}
               description={
                 activeView === "projects"
-                  ? "A collection of projects showcasing my skills in front-end development, UI/UX design, and creative problem-solving."
-                  : "Digital illustrations demonstrating my grasp of color theory, visual composition, and design language—creative skills I apply across both illustration and UI/UX design work."
+                  ? t("projects.description")
+                  : t("illustrations.description")
               }
             />
           </ScrollReveal>
@@ -224,7 +226,7 @@ function Home() {
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" aria-hidden="true" />
                 <input
                   type="text"
-                  placeholder="Search projects by name or description..."
+                  placeholder={t("projects.searchPlaceholder")}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-12 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition"
@@ -263,14 +265,14 @@ function Home() {
               <div className="flex items-center gap-3">
                 {hasActiveFilters ? (
                   <>
-                    <span>Showing {filteredProjects.length} of {projects.length} projects</span>
+                    <span>{t("projects.showing")} {filteredProjects.length} {t("projects.of")} {projects.length} {t("projects.projectsLabel")}</span>
                     <button onClick={clearFilters} className="flex items-center gap-1 text-emerald-400 hover:text-emerald-300 transition cursor-pointer" aria-label="Clear all filters">
                       <X className="w-4 h-4" />
-                      Clear filters
+                      {t("projects.clearFilters")}
                     </button>
                   </>
                 ) : (
-                  <span>{projects.length} projects</span>
+                  <span>{projects.length} {t("projects.projectsLabel")}</span>
                 )}
               </div>
             </div>
@@ -288,8 +290,8 @@ function Home() {
                 </div>
               ) : (
                 <div className="text-center py-20">
-                  <p className="text-xl text-gray-400 mb-4">No projects found matching your criteria</p>
-                  <GradientButton onClick={clearFilters}>Clear filters</GradientButton>
+                  <p className="text-xl text-gray-400 mb-4">{t("projects.noResults")}</p>
+                  <GradientButton onClick={clearFilters}>{t("projects.clearFilters")}</GradientButton>
                 </div>
               )}
 
@@ -301,7 +303,7 @@ function Home() {
                   className="group inline-flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors duration-300"
                 >
                   <Github className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-                  <span className="text-lg font-medium bg-gradient-to-r from-gray-400 via-emerald-300 to-gray-400 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">View more on GitHub</span>
+                  <span className="text-lg font-medium bg-gradient-to-r from-gray-400 via-emerald-300 to-gray-400 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">{t("projects.viewOnGithub")}</span>
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <button
@@ -309,7 +311,7 @@ function Home() {
                   className="group inline-flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors duration-300 cursor-pointer"
                 >
                   <Palette className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-                  <span className="text-lg font-medium bg-gradient-to-r from-gray-400 via-purple-400 to-gray-400 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">Explore My Illustrations</span>
+                  <span className="text-lg font-medium bg-gradient-to-r from-gray-400 via-purple-400 to-gray-400 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">{t("projects.exploreIllustrations")}</span>
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
@@ -332,7 +334,7 @@ function Home() {
                     }`}
                   >
                     <Image className="w-4 h-4" aria-hidden="true" />
-                    Illustrations
+                    {t("illustrations.illustrations")}
                   </button>
                   <button
                     onClick={() => setIllustrationsSubView("animations")}
@@ -344,7 +346,7 @@ function Home() {
                     }`}
                   >
                     <Play className="w-4 h-4" aria-hidden="true" />
-                    Animations
+                    {t("illustrations.animations")}
                   </button>
                 </div>
               </div>
@@ -402,7 +404,7 @@ function Home() {
                         />
                       ))}
                     </div>
-                    <span className="text-gray-400 text-xs sm:text-sm ml-1 sm:ml-2">+{filteredIllustrations.length - 4} more</span>
+                    <span className="text-gray-400 text-xs sm:text-sm ml-1 sm:ml-2">+{filteredIllustrations.length - 4} {t("common.more")}</span>
                   </div>
                 </div>
               </div>
@@ -421,10 +423,10 @@ function Home() {
                   </div>
                   <div className="flex flex-col items-start">
                     <span className="text-white font-semibold text-sm sm:text-base">
-                      Watch Speedpaints on YouTube
+                      {t("illustrations.watchSpeedpaints")}
                     </span>
                     <span className="text-white/70 text-xs sm:text-sm">
-                      See the creative process behind my illustrations
+                      {t("illustrations.speedpaintsSub")}
                     </span>
                   </div>
                   <ChevronRight className="w-5 h-5 text-white/70 group-hover:text-white group-hover:translate-x-1 transition-all duration-300" />
@@ -451,8 +453,8 @@ function Home() {
                 </div>
                 <div className="text-center mt-3 sm:mt-4 text-gray-400 text-xs sm:text-sm">
                   {selectedCategory === "All"
-                    ? `${illustrations.length} illustrations`
-                    : `${filteredIllustrations.length} illustrations in ${selectedCategory}`
+                    ? `${illustrations.length} ${t("illustrations.illustrationsCount")}`
+                    : `${filteredIllustrations.length} ${t("illustrations.illustrationsIn")} ${selectedCategory}`
                   }
                 </div>
               </div>
@@ -496,7 +498,7 @@ function Home() {
                   className="group inline-flex items-center gap-2 text-gray-400 hover:text-pink-400 transition-colors duration-300"
                 >
                   <Instagram className="w-5 h-5 group-hover:rotate-12 transition-transform" aria-hidden="true" />
-                  <span className="text-lg font-medium bg-gradient-to-r from-gray-400 via-pink-400 to-gray-400 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">View more on Instagram</span>
+                  <span className="text-lg font-medium bg-gradient-to-r from-gray-400 via-pink-400 to-gray-400 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">{t("illustrations.viewOnInstagram")}</span>
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <button
@@ -504,7 +506,7 @@ function Home() {
                   className="group inline-flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors duration-300 cursor-pointer"
                 >
                   <Briefcase className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-                  <span className="text-lg font-medium bg-gradient-to-r from-gray-400 via-emerald-300 to-gray-400 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">View My Projects</span>
+                  <span className="text-lg font-medium bg-gradient-to-r from-gray-400 via-emerald-300 to-gray-400 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">{t("illustrations.viewProjects")}</span>
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
@@ -527,7 +529,7 @@ function Home() {
                   <>
                     <div className="w-full mb-6 text-center">
                       <p className="text-gray-400">
-                        {animations.length} animation{animations.length !== 1 ? 's' : ''}
+                        {animations.length} {t("animations.animationsCount")}
                       </p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 w-full">
@@ -540,9 +542,9 @@ function Home() {
                   <div className="text-center py-16">
                     <div className="animated-border backdrop-blur-md bg-white/10 p-8 rounded-2xl inline-block">
                       <Play className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-                      <h3 className="text-xl font-semibold text-white mb-2">Animations Coming Soon</h3>
+                      <h3 className="text-xl font-semibold text-white mb-2">{t("animations.comingSoon")}</h3>
                       <p className="text-gray-400 max-w-md">
-                        I'm working on adding my animation portfolio. Check back soon to see my motion graphics and animated artwork!
+                        {t("animations.comingSoonDesc")}
                       </p>
                     </div>
                   </div>
@@ -554,7 +556,7 @@ function Home() {
                     className="group inline-flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors duration-300 cursor-pointer"
                   >
                     <Image className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-                    <span className="text-lg font-medium bg-gradient-to-r from-gray-400 via-purple-400 to-gray-400 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">View Illustrations</span>
+                    <span className="text-lg font-medium bg-gradient-to-r from-gray-400 via-purple-400 to-gray-400 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">{t("illustrations.viewIllustrations")}</span>
                     <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
                   <button
@@ -562,7 +564,7 @@ function Home() {
                     className="group inline-flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors duration-300 cursor-pointer"
                   >
                     <Briefcase className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-                    <span className="text-lg font-medium bg-gradient-to-r from-gray-400 via-emerald-300 to-gray-400 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">View My Projects</span>
+                    <span className="text-lg font-medium bg-gradient-to-r from-gray-400 via-emerald-300 to-gray-400 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">{t("illustrations.viewProjects")}</span>
                     <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
@@ -577,10 +579,10 @@ function Home() {
           <ScrollReveal className="w-full mb-12">
             <SectionHeader
               icon={BookOpen}
-              badge="Latest Insights"
+              badge={t("blog.badge")}
               badgeColor="emerald"
-              title="From the Blog"
-              description="Thoughts on development, design, and AI"
+              title={t("blog.title")}
+              description={t("blog.description")}
             />
           </ScrollReveal>
 
@@ -594,7 +596,7 @@ function Home() {
 
           <ScrollReveal delay={300}>
             <GradientButton to="/blog" icon={ArrowRight} size="lg">
-              View All Posts
+              {t("blog.viewAll")}
             </GradientButton>
           </ScrollReveal>
         </section>

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Code, Palette, Rocket, GraduationCap, Briefcase, Award, Sparkles, Terminal, Layers, Brain, ArrowRight, MapPin, Calendar } from 'lucide-react';
 import useDocumentMeta from '../../hooks/useDocumentMeta';
 import OptimizedImage from '../../components/optimizedImage';
@@ -9,7 +10,7 @@ import AnimatedCounter from '../../components/animatedCounter';
 import AnimatedSkillBar from '../../components/animatedSkillBar';
 import ProjectsButton from '../../components/projectsButton';
 
-// Data
+// Skills data (not translatable - technical terms)
 const skills = [
   { name: 'React', level: 90, color: 'from-cyan-400 to-blue-500' },
   { name: 'JavaScript', level: 85, color: 'from-yellow-400 to-orange-400' },
@@ -19,81 +20,86 @@ const skills = [
   { name: 'API Integration', level: 80, color: 'from-emerald-400 to-cyan-400' },
 ];
 
-const stats = [
-  { icon: Award, value: '2+', label: 'Years Frontend' },
-  { icon: Code, value: '10+', label: 'Projects Built' },
-  { icon: Palette, value: '3+', label: 'Years Design' },
-  { icon: GraduationCap, value: '2', label: 'Degrees' },
-];
-
-const timeline = [
-  {
-    year: 'Feb 2025 - Present',
-    title: 'Customer Service Agent',
-    company: 'Foundever',
-    description: 'Handling insurance cases via phone support. Using Salesforce CRM for case management.',
-    icon: Briefcase,
-    type: 'work'
-  },
-  {
-    year: 'Aug 2023 - May 2025',
-    title: 'Front-End Development',
-    company: 'Noroff School of Technology',
-    description: '2-year vocational degree. Specialized in React, JavaScript, and modern web development.',
-    icon: GraduationCap,
-    type: 'education'
-  },
-  {
-    year: 'Sep 2022 - Mar 2023',
-    title: 'Visual Designer',
-    company: 'Nanopow',
-    description: 'UI/UX design and visual identity. Strategic decisions about color, imagery, and layout.',
-    icon: Palette,
-    type: 'work'
-  },
-  {
-    year: 'Aug 2019 - May 2022',
-    title: 'Bachelor in Animation & Digital Art',
-    company: 'Høgskolen i Innlandet',
-    description: 'Technical development with concept art, 3D design, and animation.',
-    icon: GraduationCap,
-    type: 'education'
-  },
-];
-
-const skillCategories = [
-  {
-    title: 'Development',
-    icon: Terminal,
-    gradient: 'from-emerald-400 to-cyan-400',
-    bgGradient: 'from-emerald-500/10 to-cyan-500/10',
-    borderColor: 'border-emerald-500/30 hover:border-emerald-400/50',
-    skills: ['React', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'HTML/CSS', 'REST APIs']
-  },
-  {
-    title: 'Design',
-    icon: Layers,
-    gradient: 'from-purple-400 to-pink-400',
-    bgGradient: 'from-purple-500/10 to-pink-500/10',
-    borderColor: 'border-purple-500/30 hover:border-purple-400/50',
-    skills: ['UI/UX Design', 'Figma', 'Adobe Suite', 'Digital Illustration', '3D & Animation']
-  },
-  {
-    title: 'AI & Tools',
-    icon: Brain,
-    gradient: 'from-cyan-400 to-blue-400',
-    bgGradient: 'from-cyan-500/10 to-blue-500/10',
-    borderColor: 'border-cyan-500/30 hover:border-cyan-400/50',
-    skills: ['Claude API', 'OpenAI API', 'AI Integration', 'Prompt Engineering', 'Git/GitHub']
-  }
-];
-
 function About() {
+  const { t } = useTranslation();
+
   useDocumentMeta({
     title: 'About Me',
     description: 'Learn about Herman Hylland - a frontend developer and UI/UX designer with 2+ years of experience building modern web applications with React and Tailwind CSS.',
     url: 'https://hermanhylland.netlify.app/about'
   });
+
+  // Stats data - using translations
+  const stats = [
+    { icon: Award, value: '2+', label: t('about.stats.yearsFrontend') },
+    { icon: Code, value: '10+', label: t('about.stats.projectsBuilt') },
+    { icon: Palette, value: '3+', label: t('about.stats.yearsDesign') },
+    { icon: GraduationCap, value: '2', label: t('about.stats.degrees') },
+  ];
+
+  // Skill categories - using translations
+  const skillCategories = [
+    {
+      title: t('about.skillCategories.development'),
+      icon: Terminal,
+      gradient: 'from-emerald-400 to-cyan-400',
+      bgGradient: 'from-emerald-500/10 to-cyan-500/10',
+      borderColor: 'border-emerald-500/30 hover:border-emerald-400/50',
+      skills: ['React', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'HTML/CSS', 'REST APIs']
+    },
+    {
+      title: t('about.skillCategories.design'),
+      icon: Layers,
+      gradient: 'from-purple-400 to-pink-400',
+      bgGradient: 'from-purple-500/10 to-pink-500/10',
+      borderColor: 'border-purple-500/30 hover:border-purple-400/50',
+      skills: ['UI/UX Design', 'Figma', 'Adobe Suite', 'Digital Illustration', '3D & Animation']
+    },
+    {
+      title: t('about.skillCategories.aiTools'),
+      icon: Brain,
+      gradient: 'from-cyan-400 to-blue-400',
+      bgGradient: 'from-cyan-500/10 to-blue-500/10',
+      borderColor: 'border-cyan-500/30 hover:border-cyan-400/50',
+      skills: ['Claude API', 'OpenAI API', 'AI Integration', 'Prompt Engineering', 'Git/GitHub']
+    }
+  ];
+
+  // Timeline data - using translations
+  const timeline = [
+    {
+      year: 'Feb 2025 - Present',
+      title: t('about.timeline.customerService'),
+      company: 'Foundever',
+      description: t('about.timeline.customerServiceDesc'),
+      icon: Briefcase,
+      type: 'work'
+    },
+    {
+      year: 'Aug 2023 - May 2025',
+      title: t('about.timeline.frontendDev'),
+      company: 'Noroff School of Technology',
+      description: t('about.timeline.frontendDevDesc'),
+      icon: GraduationCap,
+      type: 'education'
+    },
+    {
+      year: 'Sep 2022 - Mar 2023',
+      title: t('about.timeline.visualDesigner'),
+      company: 'Nanopow',
+      description: t('about.timeline.visualDesignerDesc'),
+      icon: Palette,
+      type: 'work'
+    },
+    {
+      year: 'Aug 2019 - May 2022',
+      title: t('about.timeline.bachelorAnim'),
+      company: 'Høgskolen i Innlandet',
+      description: t('about.timeline.bachelorAnimDesc'),
+      icon: GraduationCap,
+      type: 'education'
+    },
+  ];
 
   return (
     <div className="relative min-h-screen w-full bg-gradient-to-b from-black via-gray-900 to-black px-4 py-20 text-white">
@@ -119,25 +125,25 @@ function About() {
               <div className="space-y-2">
                 <p className="text-emerald-400 font-medium flex items-center justify-center lg:justify-start gap-2">
                   <MapPin className="w-4 h-4" />
-                  Norway / Open to Germany
+                  {t('about.location')}
                 </p>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text leading-tight">
                   Herman Hylland
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300">
-                  Front-End Developer & Digital Designer
+                  {t('about.role')}
                 </p>
               </div>
 
               <p className="text-gray-400 text-lg max-w-xl">
-                Bridging technology and art with 2+ years in frontend development and 3+ years in digital design. Creating accessible, interactive web experiences.
+                {t('about.heroDescription')}
               </p>
 
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start relative z-20">
                 <CVDownloadButton />
                 <ProjectsButton />
                 <GradientButton to="/contact" variant="secondary" icon={ArrowRight}>
-                  Get In Touch
+                  {t('about.getInTouch')}
                 </GradientButton>
               </div>
             </div>
@@ -172,19 +178,37 @@ function About() {
                 <div className="p-2 bg-emerald-500/20 rounded-lg">
                   <Rocket className="w-6 h-6 text-emerald-400" />
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold">My Story</h2>
+                <h2 className="text-2xl md:text-3xl font-bold">{t('about.myStory')}</h2>
               </div>
 
               <div className="space-y-4 text-gray-300 text-lg leading-relaxed">
-                <p>
-                  I'm a <span className="text-white font-medium">UX designer and frontend developer</span> with a background in game development, animation, and visual communication. Passionate about creating <span className="text-emerald-400">engaging, educational experiences</span> through user-centered design and creative storytelling.
-                </p>
-                <p>
-                  My profile uniquely <span className="text-white font-medium">bridges design and development</span>—combining artistic expertise from The Game School with technical skills from frontend development. This allows me to work seamlessly across the full product lifecycle, <span className="text-cyan-400">from concept to code</span>.
-                </p>
-                <p>
-                  From developing <span className="text-emerald-400">VR training simulations</span> for the healthcare sector to building modern web applications, my work reflects a commitment to creating <span className="text-cyan-400">visually appealing products</span> that reflect the users' needs—making content accessible and inspiring through thoughtful UX and visual design.
-                </p>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: t('about.storyP1')
+                      .replace(/<highlight>/g, '<span class="text-white font-medium">')
+                      .replace(/<\/highlight>/g, '</span>')
+                      .replace(/<accent1>/g, '<span class="text-emerald-400">')
+                      .replace(/<\/accent1>/g, '</span>')
+                  }}
+                />
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: t('about.storyP2')
+                      .replace(/<highlight>/g, '<span class="text-white font-medium">')
+                      .replace(/<\/highlight>/g, '</span>')
+                      .replace(/<accent2>/g, '<span class="text-cyan-400">')
+                      .replace(/<\/accent2>/g, '</span>')
+                  }}
+                />
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: t('about.storyP3')
+                      .replace(/<accent1>/g, '<span class="text-emerald-400">')
+                      .replace(/<\/accent1>/g, '</span>')
+                      .replace(/<accent2>/g, '<span class="text-cyan-400">')
+                      .replace(/<\/accent2>/g, '</span>')
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -196,9 +220,9 @@ function About() {
             <div className="text-center space-y-4">
               <div className="inline-flex items-center gap-2 bg-purple-500/20 border border-purple-500/50 px-4 py-2 rounded-full">
                 <Sparkles className="w-4 h-4 text-purple-400" />
-                <span className="text-purple-300 text-sm font-medium">What I Work With</span>
+                <span className="text-purple-300 text-sm font-medium">{t('about.whatIWorkWith')}</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold">Skills & Expertise</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">{t('about.skillsExpertise')}</h2>
             </div>
           </ScrollReveal>
 
@@ -238,7 +262,7 @@ function About() {
                 <div className="p-2 bg-cyan-500/20 rounded-lg">
                   <Code className="w-6 h-6 text-cyan-400" />
                 </div>
-                <h3 className="text-xl font-bold">Proficiency Levels</h3>
+                <h3 className="text-xl font-bold">{t('about.proficiencyLevels')}</h3>
               </div>
 
               <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
@@ -262,9 +286,9 @@ function About() {
             <div className="text-center space-y-4">
               <div className="inline-flex items-center gap-2 bg-cyan-500/20 border border-cyan-500/50 px-4 py-2 rounded-full">
                 <Calendar className="w-4 h-4 text-cyan-400" />
-                <span className="text-cyan-300 text-sm font-medium">Career Path</span>
+                <span className="text-cyan-300 text-sm font-medium">{t('about.careerPath')}</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold">Experience & Education</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">{t('about.experienceEducation')}</h2>
             </div>
           </ScrollReveal>
 
@@ -343,18 +367,18 @@ function About() {
                 <Briefcase className="w-10 h-10 text-emerald-400" />
               </div>
 
-              <h2 className="text-3xl md:text-4xl font-bold">Let's Build Something Amazing</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">{t('about.ctaTitle')}</h2>
 
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                I'm actively looking for frontend development or digital design opportunities where I can grow, collaborate, and contribute to meaningful projects.
+                {t('about.ctaDescription')}
               </p>
 
               <div className="flex flex-wrap gap-4 justify-center pt-4">
                 <GradientButton to="/contact" icon={ArrowRight} size="lg">
-                  Get In Touch
+                  {t('about.getInTouch')}
                 </GradientButton>
                 <GradientButton to="/#projects" variant="secondary" size="lg">
-                  View My Work
+                  {t('about.viewMyWork')}
                 </GradientButton>
               </div>
             </div>

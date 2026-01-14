@@ -1,4 +1,5 @@
 import { useNavigate, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Briefcase } from 'lucide-react';
 
 /**
@@ -12,6 +13,7 @@ import { Briefcase } from 'lucide-react';
  * @param {string} props.className - Additional CSS classes
  */
 function ProjectsButton({ size = 'lg', className = '' }) {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -46,7 +48,7 @@ function ProjectsButton({ size = 'lg', className = '' }) {
       className={`inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 hover:from-purple-500/30 hover:to-pink-500/30 backdrop-blur-sm border border-purple-500/50 hover:border-purple-400 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-black cursor-pointer ${sizes[size]} ${className}`}
     >
       <Briefcase className="w-5 h-5" aria-hidden="true" />
-      Projects / Illustrations
+      {t('hero.viewProjects')}
     </button>
   );
 }

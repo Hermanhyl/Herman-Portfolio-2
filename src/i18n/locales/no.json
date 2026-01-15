@@ -162,11 +162,11 @@
       "customerService": "Kundeserviceagent",
       "customerServiceDesc": "Håndtering av forsikringssaker via telefonstøtte. Bruker Salesforce CRM for sakshåndtering.",
       "frontendDev": "Frontend-utvikling",
-      "frontendDevDesc": "2-årig yrkesfaglig utdanning. Spesialisert i React, JavaScript og moderne webutvikling.",
+      "frontendDevDesc": "2-årig yrkesfaglig utdanning. Spesialisert i React, JavaScript, moderne webutvikling og UI/UX-design.",
       "visualDesigner": "Visuell designer",
       "visualDesignerDesc": "UI/UX-design og visuell identitet. Strategiske beslutninger om farge, bildebruk og layout.",
       "bachelorAnim": "Bachelor i Animasjon & Digital kunst",
-      "bachelorAnimDesc": "Teknisk utvikling med konseptkunst, 3D-design og animasjon."
+      "bachelorAnimDesc": "Teknisk utvikling med konseptkunst, 3D-design, animasjon og motion graphics."
     }
   },
   "contact": {

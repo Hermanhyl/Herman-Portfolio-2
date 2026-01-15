@@ -160,11 +160,11 @@
       "customerService": "Customer Service Agent",
       "customerServiceDesc": "Handling insurance cases via phone support. Using Salesforce CRM for case management.",
       "frontendDev": "Front-End Development",
-      "frontendDevDesc": "2-year vocational degree. Specialized in React, JavaScript, and modern web development.",
+      "frontendDevDesc": "2-year vocational degree. Specialized in React, JavaScript, modern web development, and UI/UX design.",
       "visualDesigner": "Visual Designer",
       "visualDesignerDesc": "UI/UX design and visual identity. Strategic decisions about color, imagery, and layout.",
       "bachelorAnim": "Bachelor in Animation & Digital Art",
-      "bachelorAnimDesc": "Technical development with concept art, 3D design, and animation."
+      "bachelorAnimDesc": "Technical development with concept art, 3D design, animation, and motion graphics."
     }
   },
   "contact": {

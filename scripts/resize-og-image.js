@@ -13,7 +13,12 @@ sharp(inputPath)
     fit: 'cover',
     position: 'center'
   })
-  .jpeg({ quality: 90 })
+  .flatten({ background: { r: 0, g: 0, b: 0 } }) // Ensure no transparency
+  .jpeg({
+    quality: 85,
+    progressive: true,  // Better for web
+    mozjpeg: true       // Better compression
+  })
   .toFile(outputPath)
   .then(() => {
     console.log('OG image created successfully: public/og-image.jpg (1200x630)');

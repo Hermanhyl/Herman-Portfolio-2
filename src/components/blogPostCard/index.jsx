@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Clock, Calendar, ArrowRight, FileText, BookOpen } from 'lucide-react';
 import { formatDate } from '../../utils/formatDate';
 
@@ -17,6 +18,9 @@ import { formatDate } from '../../utils/formatDate';
  * @param {string} props.colorScheme - Color scheme: 'emerald' | 'purple'
  */
 function BlogPostCard({ post, variant = 'default', colorScheme = 'emerald' }) {
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language?.startsWith('no') ? 'no' : 'en';
+
   const colors = {
     emerald: {
       gradient: 'from-emerald-500/30 via-cyan-500/20 to-purple-500/30',
@@ -75,7 +79,7 @@ function BlogPostCard({ post, variant = 'default', colorScheme = 'emerald' }) {
             <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
-                {formatDate(post.date)}
+                {formatDate(post.date, currentLang)}
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
@@ -84,7 +88,7 @@ function BlogPostCard({ post, variant = 'default', colorScheme = 'emerald' }) {
             </div>
 
             <div className="flex items-center gap-2 mt-6 text-emerald-400 font-semibold group-hover:gap-4 transition-all">
-              Read More
+              {t('blog.readMore')}
               <ArrowRight className="w-5 h-5" />
             </div>
           </div>
@@ -135,7 +139,7 @@ function BlogPostCard({ post, variant = 'default', colorScheme = 'emerald' }) {
             </div>
             <div className="flex items-center gap-1">
               <Calendar className="w-3 h-3" />
-              {formatDate(post.date)}
+              {formatDate(post.date, currentLang)}
             </div>
           </div>
         </div>
@@ -179,11 +183,11 @@ function BlogPostCard({ post, variant = 'default', colorScheme = 'emerald' }) {
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
-              {formatDate(post.date)}
+              {formatDate(post.date, currentLang)}
             </div>
           </div>
           <span className="text-emerald-400 font-medium group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
-            Read <ArrowRight className="w-4 h-4" />
+            {t('blog.read')} <ArrowRight className="w-4 h-4" />
           </span>
         </div>
       </Link>
@@ -210,7 +214,7 @@ function BlogPostCard({ post, variant = 'default', colorScheme = 'emerald' }) {
           <div className="p-4 bg-white/10 backdrop-blur-sm rounded-2xl mb-3 group-hover:scale-110 transition-transform duration-300">
             <FileText className={`w-10 h-10 ${colorSet.icon}`} />
           </div>
-          <span className="text-white/70 text-sm font-medium uppercase tracking-wider">Blog Post</span>
+          <span className="text-white/70 text-sm font-medium uppercase tracking-wider">{t('blog.blogPost')}</span>
         </div>
       </div>
 
@@ -245,11 +249,11 @@ function BlogPostCard({ post, variant = 'default', colorScheme = 'emerald' }) {
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
-              {formatDate(post.date)}
+              {formatDate(post.date, currentLang)}
             </div>
           </div>
           <span className="text-emerald-400 font-medium group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
-            Read <ArrowRight className="w-4 h-4" />
+            {t('blog.read')} <ArrowRight className="w-4 h-4" />
           </span>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Code, Palette, Rocket, GraduationCap, Briefcase, Award, Sparkles, Terminal, Layers, Brain, ArrowRight, MapPin, Calendar } from 'lucide-react';
+import { Code, Palette, Rocket, GraduationCap, Briefcase, Award, Sparkles, Terminal, Layers, Brain, ArrowRight, MapPin, Calendar, FolderKanban, PenTool, Film } from 'lucide-react';
 import useDocumentMeta from '../../hooks/useDocumentMeta';
 import OptimizedImage from '../../components/optimizedImage';
 import ScrollReveal from '../../components/scrollReveal';
@@ -113,7 +113,7 @@ function About() {
               <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 animate-spin-slow opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute inset-0.5 rounded-full bg-gray-900"></div>
               <OptimizedImage
-                src="/profilepicture.jpg"
+                src="/Profil/Bruk_denne.jpg"
                 alt="Herman Hylland - Front-End Developer"
                 eager={true}
                 className="relative w-52 h-52 md:w-64 md:h-64 object-cover rounded-full"
@@ -209,6 +209,43 @@ function About() {
                       .replace(/<\/accent2>/g, '</span>')
                   }}
                 />
+              </div>
+
+              {/* Explore My Work Buttons */}
+              <div className="pt-6 border-t border-white/10 mt-8">
+                <h3 className="text-lg font-semibold text-white mb-4">{t('about.exploreMyWork')}</h3>
+                <div className="flex flex-wrap gap-4">
+                  <Link
+                    to="/#projects"
+                    className="group inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 hover:from-emerald-500/30 hover:to-cyan-500/30 border border-emerald-500/30 hover:border-emerald-400/50 px-5 py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
+                  >
+                    <div className="p-2 bg-emerald-500/20 rounded-lg group-hover:bg-emerald-500/30 transition-colors">
+                      <FolderKanban className="w-5 h-5 text-emerald-400" />
+                    </div>
+                    <span className="text-white font-medium">{t('about.myProjects')}</span>
+                    <ArrowRight className="w-4 h-4 text-emerald-400 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  <Link
+                    to="/#illustrations"
+                    className="group inline-flex items-center gap-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 hover:from-purple-500/30 hover:to-pink-500/30 border border-purple-500/30 hover:border-purple-400/50 px-5 py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
+                  >
+                    <div className="p-2 bg-purple-500/20 rounded-lg group-hover:bg-purple-500/30 transition-colors">
+                      <PenTool className="w-5 h-5 text-purple-400" />
+                    </div>
+                    <span className="text-white font-medium">{t('about.myIllustrations')}</span>
+                    <ArrowRight className="w-4 h-4 text-purple-400 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  <Link
+                    to="/#animations"
+                    className="group inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 hover:from-cyan-500/30 hover:to-blue-500/30 border border-cyan-500/30 hover:border-cyan-400/50 px-5 py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
+                  >
+                    <div className="p-2 bg-cyan-500/20 rounded-lg group-hover:bg-cyan-500/30 transition-colors">
+                      <Film className="w-5 h-5 text-cyan-400" />
+                    </div>
+                    <span className="text-white font-medium">{t('about.myAnimations')}</span>
+                    <ArrowRight className="w-4 h-4 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

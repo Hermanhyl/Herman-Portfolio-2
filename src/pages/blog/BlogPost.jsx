@@ -1,11 +1,12 @@
 import { useParams, Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { ArrowLeft, Calendar, Clock, Share2, Linkedin, Twitter, Link2, BookOpen, ExternalLink } from 'lucide-react';
-import { getPostById, blogPosts } from '../../data/blog/posts';
+import { getPostById, getBlogPosts } from '../../data/blog/posts';
 import PageTransition from '../../components/pageTransition';
 import ScrollReveal from '../../components/scrollReveal';
 import BlogPostCard from '../../components/blogPostCard';
 import GradientButton from '../../components/gradientButton';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { formatDateLong } from '../../utils/formatDate';
@@ -13,12 +14,16 @@ import useDocumentMeta from '../../hooks/useDocumentMeta';
 
 function BlogPost() {
   const { id } = useParams();
-  const post = getPostById(id);
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language?.startsWith('no') ? 'no' : 'en';
+
+  const post = useMemo(() => getPostById(id, currentLang), [id, currentLang]);
+  const blogPosts = useMemo(() => getBlogPosts(currentLang), [currentLang]);
   const [copySuccess, setCopySuccess] = useState(false);
 
   useDocumentMeta({
-    title: post?.title || 'Blog Post',
-    description: post?.excerpt || 'Read this blog post from Herman Hylland.',
+    title: post?.title || t('blog.postNotFoundTitle'),
+    description: post?.excerpt || t('blog.postNotFoundDescription'),
     url: `https://hermanhylland.netlify.app/blog/${id}`,
     type: 'article'
   });
@@ -32,10 +37,10 @@ function BlogPost() {
               <div className="p-6 bg-white/10 backdrop-blur-sm rounded-2xl inline-block mb-4">
                 <BookOpen className="w-16 h-16 text-gray-400" />
               </div>
-              <h1 className="text-4xl font-bold text-gray-300">Post Not Found</h1>
-              <p className="text-gray-400">The blog post you're looking for doesn't exist.</p>
+              <h1 className="text-4xl font-bold text-gray-300">{t('blog.postNotFoundTitle')}</h1>
+              <p className="text-gray-400">{t('blog.postNotFoundDescription')}</p>
               <GradientButton to="/blog" icon={ArrowLeft}>
-                Back to Blog
+                {t('blog.backToBlog')}
               </GradientButton>
             </div>
           </ScrollReveal>
@@ -83,7 +88,7 @@ function BlogPost() {
               className="inline-flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors mb-8 group"
             >
               <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-              Back to Blog
+              {t('blog.backToBlog')}
             </Link>
           </ScrollReveal>
 
@@ -125,14 +130,14 @@ function BlogPost() {
               <div className="flex flex-wrap items-center gap-6 text-gray-400">
                 <div className="flex items-center gap-2">
                   <Calendar className="w-5 h-5" />
-                  <span>{formatDateLong(post.date)}</span>
+                  <span>{formatDateLong(post.date, currentLang)}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="w-5 h-5" />
                   <span>{post.readTime}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="font-medium">By {post.author}</span>
+                  <span className="font-medium">{t('blog.by')} {post.author}</span>
                 </div>
               </div>
 
@@ -144,7 +149,7 @@ function BlogPost() {
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-black cursor-pointer"
                   >
                     <ExternalLink className="w-5 h-5" />
-                    {post.projectLabel || 'View Project'}
+                    {post.projectLabel || t('blog.viewProject')}
                   </Link>
                 </div>
               )}
@@ -154,15 +159,12 @@ function BlogPost() {
           {/* Post Content */}
           <ScrollReveal delay={300}>
             <div className="prose prose-invert prose-lg max-w-none mb-12">
-              {/* Check if content is HTML (from vite-plugin-markdown) or raw markdown */}
               {post.content && post.content.includes('<') ? (
-                // Render HTML content directly with styling
                 <div
                   className="blog-content text-gray-300 leading-relaxed [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:mt-8 [&>h2]:mb-4 [&>h2]:text-emerald-400 [&>h3]:text-2xl [&>h3]:font-bold [&>h3]:mt-6 [&>h3]:mb-3 [&>h3]:text-cyan-400 [&>p]:mb-4 [&>p]:text-gray-300 [&>p]:leading-relaxed [&>ul]:list-disc [&>ul]:list-inside [&>ul]:mb-4 [&>ul]:space-y-2 [&>ol]:list-decimal [&>ol]:list-inside [&>ol]:mb-4 [&>ol]:space-y-2 [&>li]:text-gray-300 [&_code]:bg-white/10 [&_code]:px-2 [&_code]:py-1 [&_code]:rounded [&_code]:text-emerald-300 [&_code]:text-sm [&>pre]:bg-white/5 [&>pre]:p-4 [&>pre]:rounded-xl [&>pre]:overflow-x-auto [&_strong]:font-bold [&_strong]:text-white [&_a]:text-emerald-400 [&_a:hover]:text-cyan-400 [&_a]:underline [&_a]:transition-colors"
                   dangerouslySetInnerHTML={{ __html: post.content }}
                 />
               ) : (
-                // Render raw markdown with ReactMarkdown
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   className="text-gray-300 leading-relaxed"
@@ -195,32 +197,32 @@ function BlogPost() {
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                 <h3 className="text-xl font-semibold text-emerald-400 flex items-center gap-2">
                   <Share2 className="w-5 h-5" />
-                  Share this post
+                  {t('blog.shareThisPost')}
                 </h3>
                 <div className="flex gap-3">
                   <button
                     onClick={shareOnLinkedIn}
                     className="p-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-all duration-300 transform hover:scale-105 group focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black cursor-pointer"
-                    aria-label="Share on LinkedIn"
+                    aria-label={t('blog.shareOnLinkedIn')}
                   >
                     <Linkedin className="w-5 h-5 text-gray-400 group-hover:text-[#0077B5]" />
                   </button>
                   <button
                     onClick={shareOnTwitter}
                     className="p-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-all duration-300 transform hover:scale-105 group focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black cursor-pointer"
-                    aria-label="Share on Twitter"
+                    aria-label={t('blog.shareOnTwitter')}
                   >
                     <Twitter className="w-5 h-5 text-gray-400 group-hover:text-[#1DA1F2]" />
                   </button>
                   <button
                     onClick={copyLink}
                     className="p-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-all duration-300 transform hover:scale-105 group relative focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black cursor-pointer"
-                    aria-label="Copy link"
+                    aria-label={t('blog.copyLink')}
                   >
                     <Link2 className="w-5 h-5 text-gray-400 group-hover:text-emerald-400" />
                     {copySuccess && (
                       <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-emerald-500 text-white text-xs px-3 py-1 rounded-lg whitespace-nowrap">
-                        Link copied!
+                        {t('blog.linkCopied')}
                       </span>
                     )}
                   </button>
@@ -233,7 +235,7 @@ function BlogPost() {
           {relatedPosts.length > 0 && (
             <div className="mt-16 pt-8 border-t border-white/10">
               <ScrollReveal>
-                <h2 className="text-3xl font-bold mb-8 text-emerald-400">Read Next</h2>
+                <h2 className="text-3xl font-bold mb-8 text-emerald-400">{t('blog.readNext')}</h2>
               </ScrollReveal>
               <div className="grid md:grid-cols-2 gap-6">
                 {relatedPosts.map((relatedPost, index) => (

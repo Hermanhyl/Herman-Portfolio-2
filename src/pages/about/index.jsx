@@ -216,7 +216,7 @@ function About() {
                 <h3 className="text-lg font-semibold text-white mb-4">{t('about.exploreMyWork')}</h3>
                 <div className="flex flex-wrap gap-4">
                   <Link
-                    to="/#projects"
+                    to="/?view=projects#projects"
                     className="group inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 hover:from-emerald-500/30 hover:to-cyan-500/30 border border-emerald-500/30 hover:border-emerald-400/50 px-5 py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
                   >
                     <div className="p-2 bg-emerald-500/20 rounded-lg group-hover:bg-emerald-500/30 transition-colors">
@@ -226,7 +226,7 @@ function About() {
                     <ArrowRight className="w-4 h-4 text-emerald-400 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <Link
-                    to="/#illustrations"
+                    to="/?view=illustrations#projects"
                     className="group inline-flex items-center gap-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 hover:from-purple-500/30 hover:to-pink-500/30 border border-purple-500/30 hover:border-purple-400/50 px-5 py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
                   >
                     <div className="p-2 bg-purple-500/20 rounded-lg group-hover:bg-purple-500/30 transition-colors">
@@ -236,7 +236,7 @@ function About() {
                     <ArrowRight className="w-4 h-4 text-purple-400 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <Link
-                    to="/#animations"
+                    to="/?view=illustrations&subview=animations#projects"
                     className="group inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 hover:from-cyan-500/30 hover:to-blue-500/30 border border-cyan-500/30 hover:border-cyan-400/50 px-5 py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
                   >
                     <div className="p-2 bg-cyan-500/20 rounded-lg group-hover:bg-cyan-500/30 transition-colors">

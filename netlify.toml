@@ -3,7 +3,9 @@
   publish = "dist"
   functions = "netlify/functions"
 
+# SPA fallback for client-side routing
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false

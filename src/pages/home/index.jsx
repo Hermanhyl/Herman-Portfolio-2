@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect, useRef } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Hero from "../../components/heroSection";
 import ProjectCard from "../../components/projectCard";
@@ -20,6 +20,7 @@ import { Briefcase, ChevronRight, Search, X, GraduationCap, Sparkles, MapPin, Pa
 
 function Home() {
   const { t } = useTranslation();
+  const location = useLocation();
 
   // Status items data - using translations
   const statusItems = [
@@ -91,6 +92,16 @@ function Home() {
   useEffect(() => {
     setCarouselIndex(0);
   }, [selectedCategory]);
+
+  // Handle scroll to projects section when navigating from another page with hash
+  useEffect(() => {
+    if (location.hash === '#projects' && sectionRef.current) {
+      // Small delay to ensure the page has rendered
+      setTimeout(() => {
+        sectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  }, [location.hash]);
 
   const openLightbox = (index) => {
     setLightboxIndex(index);

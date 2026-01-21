@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect, useRef } from "react";
 import { useSearchParams, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Hero from "../../components/heroSection";
+import FeaturedProjects from "../../components/featuredProjects";
 import ProjectCard from "../../components/projectCard";
 import PageTransition from "../../components/pageTransition";
 import ScrollReveal from "../../components/scrollReveal";
@@ -154,6 +155,9 @@ function Home() {
     <PageTransition>
       <div className="bg-gradient-to-b from-black via-gray-900 to-black min-h-screen">
         <Hero />
+
+        {/* Featured Projects Section */}
+        <FeaturedProjects />
 
         {/* What I'm Currently Doing Section */}
         <section className="relative px-4 sm:px-6 lg:px-8 xl:px-12 py-16 flex flex-col items-center w-full mx-auto" style={{ maxWidth: '1400px' }}>

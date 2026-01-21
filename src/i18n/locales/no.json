@@ -6,19 +6,30 @@
     "contact": "Kontakt"
   },
   "hero": {
-    "greeting": "Hei, jeg er",
-    "name": "Herman Hylland",
-    "badge": "UI/UX-designer & Frontend-utvikler",
+    "headline": "UX-designer & Frontend-utvikler",
+    "subheadline": "Jeg designer brukeropplevelser — så bygger jeg dem.",
+    "credibility": "Fra animasjon og design til kode — jeg bringer en visuell historiefortellers blikk til produktdesign.",
     "available": "Tilgjengelig for arbeid",
-    "subtitle": "Velkommen til min portefølje. Jeg skaper vakre, tilgjengelige og brukervennlige nettopplevelser. Ved å kombinere tekniske ferdigheter med kreativ design bringer jeg ideer til liv.",
-    "cta": "La oss samarbeide",
-    "viewProjects": "Se prosjekter",
-    "learnMore": "Les mer",
-    "scrollToExplore": "Scroll for å utforske",
-    "skills": {
-      "react": "React & Moderne JS",
-      "uiux": "UI/UX-design",
-      "illustrations": "Illustrasjoner"
+    "cta": "Se prosjekter",
+    "ctaSecondary": "Ta kontakt",
+    "scrollToExplore": "Scroll for å utforske"
+  },
+  "featuredProjects": {
+    "badge": "Utvalgte arbeider",
+    "title": "Fremhevede prosjekter",
+    "viewCaseStudy": "Se casestudie",
+    "viewAll": "Se alle prosjekter",
+    "brannvrn": {
+      "tagline": "VR-brannsikkerhetstrening for sykehusansatte",
+      "description": "Designet en VR-simulering som lærer sykehusansatte hvordan de skal reagere på brannkrisesituasjoner — uten risiko. Utviklet gjennom brukerundersøkelser med brannfolk og helsearbeidere."
+    },
+    "hobbyist": {
+      "tagline": "Sosial plattform for hobbybaserte forbindelser",
+      "description": "Designet og bygget en sosial app som hjelper folk med å finne andre som deler hobbyene deres — enten det er fotturer, brettspill eller matlaging. Ingen swiping, bare ekte forbindelser."
+    },
+    "gonefishing": {
+      "tagline": "En personlig loggbok for sportsfiskere",
+      "description": "Designet og utviklet en PWA som lar fiskere logge fangster, spore steder og registrere forhold — tilgjengelig offline for bruk på vannet."
     }
   },
   "status": {
@@ -226,6 +237,13 @@
     "aboutThisProject": "Om dette prosjektet",
     "techStack": "Teknologier",
     "moreProjects": "Flere prosjekter"
+  },
+  "caseStudy": {
+    "role": "Rolle",
+    "team": "Team",
+    "client": "Klient",
+    "timeline": "Tidsramme",
+    "outcome": "Resultat"
   },
   "animationDetails": {
     "notFound": "Animasjon ikke funnet",

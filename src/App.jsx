@@ -7,6 +7,9 @@ import ProjectDetail from './pages/projectDetails';
 import AnimationDetail from './pages/animationDetails';
 import Blog from './pages/blog';
 import BlogPost from './pages/blog/BlogPost';
+import BrannVRnCaseStudy from './pages/caseStudy/brannvrn';
+import HobbyistCaseStudy from './pages/caseStudy/hobbyist';
+import GoneFishingCaseStudy from './pages/caseStudy/gonefishing';
 import Layout from './components/layout';
 import ErrorBoundary from './components/errorBoundary';
 
@@ -23,6 +26,9 @@ function App() {
           <Route path='/blog/:id' element={<BlogPost />} />
           <Route path='/project/:id' element={<ProjectDetail />} />
           <Route path='/animation/:id' element={<AnimationDetail />} />
+          <Route path='/case-study/brannvrn' element={<BrannVRnCaseStudy />} />
+          <Route path='/case-study/hobbyist' element={<HobbyistCaseStudy />} />
+          <Route path='/case-study/gonefishing' element={<GoneFishingCaseStudy />} />
         </Route>
       </Routes>
     </ErrorBoundary>

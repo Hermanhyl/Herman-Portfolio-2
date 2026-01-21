@@ -6,19 +6,30 @@
     "contact": "Contact"
   },
   "hero": {
-    "greeting": "Hi, I'm",
-    "name": "Herman Hylland",
-    "badge": "UI/UX Designer & Front-End Developer",
+    "headline": "UX Designer & Frontend Developer",
+    "subheadline": "I design user experiences — then I build them.",
+    "credibility": "From animation and design to code — I bring a visual storyteller's eye to product design.",
     "available": "Available for Work",
-    "subtitle": "Welcome to my portfolio. I create beautiful, accessible, and user-friendly web experiences. Combining technical skills with creative design, I bring ideas to life.",
-    "cta": "Let's Work Together",
-    "viewProjects": "View Projects",
-    "learnMore": "Learn More",
-    "scrollToExplore": "Scroll to explore",
-    "skills": {
-      "react": "React & Modern JS",
-      "uiux": "UI/UX Design",
-      "illustrations": "Illustrations"
+    "cta": "View Projects",
+    "ctaSecondary": "Get in Touch",
+    "scrollToExplore": "Scroll to explore"
+  },
+  "featuredProjects": {
+    "badge": "Selected Work",
+    "title": "Featured Projects",
+    "viewCaseStudy": "View Case Study",
+    "viewAll": "View All Projects",
+    "brannvrn": {
+      "tagline": "VR fire safety training for hospital staff",
+      "description": "Designed a VR simulation that teaches hospital employees how to respond to fire emergencies — without the risk. Built through user research with firefighters and healthcare workers."
+    },
+    "hobbyist": {
+      "tagline": "Social platform for hobby-based connections",
+      "description": "Designed and built a social app that helps people find others who share their hobbies — whether that's hiking, board games, or cooking. No swiping, just genuine connections."
+    },
+    "gonefishing": {
+      "tagline": "A personal logbook for anglers",
+      "description": "Designed and developed a PWA that lets fishermen log catches, track locations, and record conditions — available offline for use on the water."
     }
   },
   "status": {
@@ -224,6 +235,13 @@
     "aboutThisProject": "About This Project",
     "techStack": "Tech Stack",
     "moreProjects": "More Projects"
+  },
+  "caseStudy": {
+    "role": "Role",
+    "team": "Team",
+    "client": "Client",
+    "timeline": "Timeline",
+    "outcome": "Outcome"
   },
   "animationDetails": {
     "notFound": "Animation not found",

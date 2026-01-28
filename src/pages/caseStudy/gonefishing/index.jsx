@@ -1,5 +1,6 @@
 import PageTransition from '../../../components/pageTransition';
 import OptimizedImage from '../../../components/optimizedImage';
+import BackButton from '../../../components/backButton';
 import useDocumentMeta from '../../../hooks/useDocumentMeta';
 
 export default function GoneFishingCaseStudy() {
@@ -14,7 +15,7 @@ export default function GoneFishingCaseStudy() {
       <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white">
 
         {/* Section 1: Case Study Hero */}
-        <section className="relative overflow-hidden min-h-[80vh] flex items-center">
+        <section className="relative overflow-hidden">
           {/* Background gradient */}
           <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-gray-900" />
 
@@ -24,8 +25,11 @@ export default function GoneFishingCaseStudy() {
             <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
           </div>
 
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 w-full">
-            <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
+          {/* Back button - top left */}
+          <BackButton position="top" />
+
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 lg:py-24 w-full">
+            <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 lg:items-center">
 
               {/* Image Side - shows first on mobile */}
               <div className="order-first lg:order-last lg:w-[55%] w-full">
@@ -119,26 +123,26 @@ export default function GoneFishingCaseStudy() {
             {/* Key insights - 2x2 grid of cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 text-left">
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
-                <span className="text-3xl font-bold text-emerald-400/80 mb-3 block">01</span>
-                <p className="text-gray-200 leading-relaxed text-base font-medium">
+                <span className="text-3xl font-bold text-emerald-400 mb-3 block">01</span>
+                <p className="text-white leading-relaxed text-lg">
                   Location matters more than species — anglers want to remember exact spots, not just "the lake"
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
-                <span className="text-3xl font-bold text-emerald-400/80 mb-3 block">02</span>
-                <p className="text-gray-200 leading-relaxed text-base font-medium">
+                <span className="text-3xl font-bold text-emerald-400 mb-3 block">02</span>
+                <p className="text-white leading-relaxed text-lg">
                   Conditions tell the story — weather, water temperature, time of day all affect what works
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
-                <span className="text-3xl font-bold text-emerald-400/80 mb-3 block">03</span>
-                <p className="text-gray-200 leading-relaxed text-base font-medium">
+                <span className="text-3xl font-bold text-emerald-400 mb-3 block">03</span>
+                <p className="text-white leading-relaxed text-lg">
                   Photos are essential — a catch without a photo might as well not have happened
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
-                <span className="text-3xl font-bold text-emerald-400/80 mb-3 block">04</span>
-                <p className="text-gray-200 leading-relaxed text-base font-medium">
+                <span className="text-3xl font-bold text-emerald-400 mb-3 block">04</span>
+                <p className="text-white leading-relaxed text-lg">
                   Offline is non-negotiable — cell signal is unreliable on the water, the app must work without it
                 </p>
               </div>
@@ -250,20 +254,20 @@ export default function GoneFishingCaseStudy() {
             {/* Key takeaways */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-12">
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6 text-left">
-                <span className="text-3xl font-bold text-emerald-400/80 mb-3 block">01</span>
-                <p className="text-gray-200 leading-relaxed text-base font-medium">
+                <span className="text-3xl font-bold text-emerald-400 mb-3 block">01</span>
+                <p className="text-white leading-relaxed text-lg">
                   Building for yourself means you can't fake understanding the user
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6 text-left">
-                <span className="text-3xl font-bold text-emerald-400/80 mb-3 block">02</span>
-                <p className="text-gray-200 leading-relaxed text-base font-medium">
+                <span className="text-3xl font-bold text-emerald-400 mb-3 block">02</span>
+                <p className="text-white leading-relaxed text-lg">
                   Offline-first architecture requires thinking differently about data flow
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6 text-left">
-                <span className="text-3xl font-bold text-emerald-400/80 mb-3 block">03</span>
-                <p className="text-gray-200 leading-relaxed text-base font-medium">
+                <span className="text-3xl font-bold text-emerald-400 mb-3 block">03</span>
+                <p className="text-white leading-relaxed text-lg">
                   PWAs can deliver native-like experiences without app store friction
                 </p>
               </div>
@@ -294,6 +298,9 @@ export default function GoneFishingCaseStudy() {
                 </svg>
               </a>
             </div>
+
+            {/* Back button - bottom */}
+            <BackButton position="bottom" />
           </div>
         </section>
 

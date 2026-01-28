@@ -3,11 +3,11 @@ import OptimizedImage from '../../../components/optimizedImage';
 import BackButton from '../../../components/backButton';
 import useDocumentMeta from '../../../hooks/useDocumentMeta';
 
-export default function BrannVRnCaseStudy() {
+export default function HolidazeCaseStudy() {
   useDocumentMeta({
-    title: 'BrannVRn Case Study',
-    description: 'A VR fire safety simulator that teaches hospital staff to respond to emergencies — without the risk.',
-    url: 'https://hermanhylland.netlify.app/case-study/brannvrn',
+    title: 'Holidaze Case Study',
+    description: 'A cozy booking app for slow-living getaways — browse, book, and unwind in handpicked cabins and retreats.',
+    url: 'https://hermanhylland.netlify.app/case-study/holidaze',
   });
 
   return (
@@ -32,56 +32,48 @@ export default function BrannVRnCaseStudy() {
             <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 lg:items-center">
 
               {/* Image Side - shows first on mobile */}
-              <div className="order-first lg:order-last lg:w-[55%] w-full">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/50">
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 via-cyan-500 to-purple-500 rounded-2xl opacity-50 blur-sm" />
-                  <div className="relative rounded-2xl overflow-hidden bg-gray-900">
-                    <OptimizedImage
-                      src="/BrannVRn/Images/screenshot-01.png"
-                      alt="BrannVRn VR environment showing the office space"
-                      eager={true}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                </div>
+              <div className="order-first lg:order-last lg:w-[60%] w-full">
+                <OptimizedImage
+                  src="/Holidaze/Natural-Titanium.png"
+                  alt="Holidaze booking platform interface"
+                  eager={true}
+                  className="w-full h-auto"
+                />
               </div>
 
               {/* Content Side */}
               <div className="lg:w-[45%] space-y-5 text-center lg:text-left">
                 {/* Tags - inline with separators */}
                 <p className="text-sm font-medium text-emerald-400 tracking-wide">
-                  UX Design • User Research • VR
+                  React • Vite • Tailwind CSS • Figma
                 </p>
 
                 {/* Title */}
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight">
-                  BrannVRn
+                  Holidaze
                 </h1>
 
                 {/* Tagline */}
                 <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-                  A VR fire safety simulator that teaches hospital staff to respond to emergencies — without the risk.
+                  A cozy booking app for slow-living getaways — browse, book, and unwind in handpicked cabins and retreats.
                 </p>
 
                 {/* Metadata - clean typography, no boxes */}
                 <div className="pt-4 space-y-2 text-sm md:text-base">
                   <p>
                     <span className="text-emerald-400 font-semibold">Role:</span>{' '}
-                    <span className="text-gray-300">UI/UX Designer & Concept Artist</span>
+                    <span className="text-gray-300">Frontend Developer & UI Designer</span>
                   </p>
                   <p>
                     <span className="text-emerald-400 font-semibold">Team:</span>{' '}
                     <span className="text-gray-300">3 people</span>
                     <span className="text-gray-600 mx-3">•</span>
-                    <span className="text-emerald-400 font-semibold">Client:</span>{' '}
-                    <span className="text-gray-300">Sykehuspartner</span>
+                    <span className="text-emerald-400 font-semibold">Type:</span>{' '}
+                    <span className="text-gray-300">Project Exam</span>
                   </p>
                   <p>
-                    <span className="text-emerald-400 font-semibold">Timeline:</span>{' '}
-                    <span className="text-gray-300">6 months</span>
-                    <span className="text-gray-600 mx-3">•</span>
                     <span className="text-emerald-400 font-semibold">Outcome:</span>{' '}
-                    <span className="text-gray-300">A grade, delivered to client</span>
+                    <span className="text-gray-300">A grade</span>
                   </p>
                 </div>
               </div>
@@ -100,53 +92,53 @@ export default function BrannVRnCaseStudy() {
 
             {/* Body text */}
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              Hospital employees need fire safety training, but real drills are disruptive and risky. Sykehuspartner wanted a way to train staff in realistic emergency scenarios — letting them practice using fire extinguishers, following evacuation routes, and making quick decisions — all without any real danger.
+              We were tasked with building a modern accommodation booking platform using the Noroff API. The goal was to create an experience that felt warm and inviting — not like a generic booking site, but something that matched the slow-living escapes it showcased. We also needed to work effectively as a three-person team with clear communication and version control.
             </p>
           </div>
         </section>
 
-        {/* Section 3: Research */}
+        {/* Section 3: Our Approach */}
         <section className="relative py-16 md:py-24">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-              Research
+              Our Approach
             </p>
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              What We Learned from Firefighters
+              Collaboration First
             </h2>
 
             {/* Intro paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-12">
-              We spent a day at the local fire station consulting directly with firefighters. Their real-world expertise shaped our entire design approach.
+              As a team of three, we divided tasks based on strengths while staying involved in all aspects — planning, design, and development. Clear communication and disciplined GitHub workflows kept us aligned throughout.
             </p>
 
-            {/* Key insights - 2x2 grid of cards */}
+            {/* Key points - 2x2 grid of cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-12 text-left">
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">01</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Untrained people make predictable mistakes — we designed our tutorials around preventing these
+                  Divided tasks by strength, but everyone touched design, code, and planning
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">02</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Panic overrides knowledge, so repetition and muscle memory matter more than information
+                  Used GitHub with clear commit messages and documentation to stay in sync
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">03</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Escape routes need to be learned spatially, not just memorized from a floor plan
+                  Built in React with Tailwind CSS for fast, consistent styling
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">04</span>
                 <p className="text-white leading-relaxed text-lg">
-                  The right equipment depends on the situation — we taught decision-making, not just procedures
+                  Focused on functionality first, with design implemented from our Figma mockups
                 </p>
               </div>
             </div>
@@ -154,8 +146,8 @@ export default function BrannVRnCaseStudy() {
             {/* Image */}
             <div className="rounded-2xl overflow-hidden">
               <OptimizedImage
-                src="/BrannVRn/Images/process-01.jpg"
-                alt="Research process at the fire station"
+                src="/holidaze.png"
+                alt="Holidaze Figma design mockup showing the visual style"
                 className="w-full h-auto"
               />
             </div>
@@ -172,12 +164,12 @@ export default function BrannVRnCaseStudy() {
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Learning That Feels Effortless
+              Warm, Cozy, and Easy to Use
             </h2>
 
             {/* Intro paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-16">
-              This wasn't just a simulation — it was an educational tool that needed to teach life-saving skills. Every design decision focused on helping users absorb knowledge naturally while immersed in the experience.
+              The visual design needed to reflect the product — peaceful getaways, not corporate travel. We used warm colors, soft typography, and generous whitespace to create a calm browsing experience.
             </p>
           </div>
 
@@ -186,15 +178,15 @@ export default function BrannVRnCaseStudy() {
             {/* Principle 1 */}
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-3">Progressive Disclosure</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">Inviting Visual Language</h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                  Information is revealed in stages to prevent overload. Users learn one concept at a time before moving forward.
+                  Earthy tones, rounded corners, and cozy imagery create an atmosphere that matches the slow-living retreats users are booking.
                 </p>
               </div>
-              <div className="rounded-2xl overflow-hidden">
+              <div className="rounded-2xl overflow-hidden max-w-md mx-auto">
                 <OptimizedImage
-                  src="/BrannVRn/Images/tutorial-01.png"
-                  alt="Tutorial showing staged information disclosure"
+                  src="/Holidaze/holidaze.jpg"
+                  alt="Holidaze homepage showing the visual style"
                   className="w-full h-auto"
                 />
               </div>
@@ -203,15 +195,15 @@ export default function BrannVRnCaseStudy() {
             {/* Principle 2 */}
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-3">Contextual Learning</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">Clear Booking Flow</h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                  Educational content appears exactly where it's needed — integrated into the environment rather than interrupting the experience.
+                  Users can browse, view details, and book with minimal friction. The interface guides them step by step without overwhelming.
                 </p>
               </div>
               <div className="rounded-2xl overflow-hidden">
                 <OptimizedImage
-                  src="/BrannVRn/Images/infographic-firehose.png"
-                  alt="In-environment information panel for fire hose"
+                  src="/holidaze.png"
+                  alt="Holidaze booking flow and venue detail page"
                   className="w-full h-auto"
                 />
               </div>
@@ -220,15 +212,15 @@ export default function BrannVRnCaseStudy() {
             {/* Principle 3 */}
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-3">Learn Then Practice</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">Responsive Across Devices</h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                  Users read about equipment first, then immediately use it hands-on — reinforcing knowledge through action.
+                  Built mobile-first with Tailwind, ensuring the experience feels native whether you're browsing on your phone or desktop.
                 </p>
               </div>
               <div className="rounded-2xl overflow-hidden">
                 <OptimizedImage
-                  src="/BrannVRn/Images/screenshot-03.png"
-                  alt="User practicing with fire safety equipment"
+                  src="/Holidaze/Midnight.png"
+                  alt="Holidaze mobile responsive design"
                   className="w-full h-auto"
                 />
               </div>
@@ -246,42 +238,65 @@ export default function BrannVRnCaseStudy() {
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              A Training Tool That Teaches
+              A Project We're Proud Of
             </h2>
 
             {/* Body paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-12">
-              We delivered a fully functional VR fire safety simulator to Sykehuspartner. The project received an A grade and demonstrated that VR can effectively teach complex safety procedures in a way that's engaging, memorable, and risk-free. The experience taught me that the best educational tools balance technical accuracy with genuine empathy for how people learn under pressure.
+              We delivered a fully functional booking platform that earned an A grade. More importantly, we learned how to collaborate effectively as a team — dividing work, communicating clearly, and maintaining code quality throughout. The project also highlighted areas for growth, including better error handling and accessibility improvements we'd prioritize in future work.
             </p>
 
-            {/* Key takeaways */}
+            {/* Takeaway cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-12">
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
+                <span className="text-3xl font-bold text-emerald-400 mb-3 block">01</span>
                 <p className="text-white text-lg leading-relaxed">
-                  User research transforms assumptions into real insight
+                  Team collaboration requires clear communication and disciplined workflows
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
+                <span className="text-3xl font-bold text-emerald-400 mb-3 block">02</span>
                 <p className="text-white text-lg leading-relaxed">
-                  Learning design requires empathy for how people absorb information
+                  Consistent styling frameworks like Tailwind accelerate development
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
+                <span className="text-3xl font-bold text-emerald-400 mb-3 block">03</span>
                 <p className="text-white text-lg leading-relaxed">
-                  Cross-functional collaboration produces better outcomes
+                  Recognizing areas for improvement is part of delivering good work
                 </p>
               </div>
             </div>
 
-            {/* Video embed */}
-            <div className="rounded-2xl overflow-hidden aspect-video">
-              <iframe
-                src="https://www.youtube.com/embed/1rR3RqYXKDQ"
-                title="BrannVRn project trailer"
-                className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+            {/* Action buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
+              <a
+                href="https://fireside-holidaze.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              >
+                View Live Site
+                <span aria-hidden="true">→</span>
+              </a>
+              <a
+                href="https://github.com/maddipaddi/Fireside-Holidaze"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105"
+              >
+                View GitHub
+                <span aria-hidden="true">→</span>
+              </a>
+              <a
+                href="https://www.figma.com/design/thqoG8jMTmJWJ0xvjoWJFX/PE2-Fireside-Holidaze?node-id=97-2&p=f&t=WNVw9oV9YS4fXdlk-0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105"
+              >
+                View Figma
+                <span aria-hidden="true">→</span>
+              </a>
             </div>
 
             {/* Back button - bottom */}

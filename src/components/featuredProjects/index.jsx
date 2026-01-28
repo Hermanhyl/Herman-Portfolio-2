@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ChevronRight, BookOpen } from 'lucide-react';
 import OptimizedImage from '../optimizedImage';
 import ScrollReveal from '../scrollReveal';
 
@@ -140,11 +140,12 @@ export default function FeaturedProjects() {
       {/* View All Projects Link */}
       <ScrollReveal className="mt-12 md:mt-16">
         <Link
-          to="/projects"
-          className="group inline-flex items-center gap-3 text-gray-400 hover:text-white transition-colors duration-300"
+          to="/work"
+          className="group inline-flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors duration-300"
         >
-          <span className="text-lg font-medium">{t('featuredProjects.viewAll')}</span>
-          <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+          <BookOpen className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+          <span className="text-lg font-medium bg-gradient-to-r from-gray-400 via-emerald-300 to-gray-400 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">{t('featuredProjects.viewAll')}</span>
+          <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
         </Link>
       </ScrollReveal>
     </section>

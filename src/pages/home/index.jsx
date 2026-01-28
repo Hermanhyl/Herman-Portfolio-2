@@ -7,29 +7,20 @@ import ProjectCard from "../../components/projectCard";
 import PageTransition from "../../components/pageTransition";
 import ScrollReveal from "../../components/scrollReveal";
 import SectionHeader from "../../components/sectionHeader";
-import StatusCard from "../../components/statusCard";
 import BlogPostCard from "../../components/blogPostCard";
 import GradientButton from "../../components/gradientButton";
-import OptimizedImage from "../../components/optimizedImage";
 import IllustrationLightbox from "../../components/illustrationLightbox";
 import AnimationCard from "../../components/animationCard";
 import { projects } from "../../data/projects/projects";
 import { illustrations, illustrationCategories } from "../../data/illustrations";
 import { animations } from "../../data/animations";
 import { getRecentPosts } from "../../data/blog/posts";
-import { Briefcase, ChevronRight, Search, X, GraduationCap, Sparkles, MapPin, Palette, BookOpen, ArrowRight, PenTool, Instagram, Github, Youtube, Play, Image } from "lucide-react";
+import { ChevronRight, Search, X, Palette, BookOpen, ArrowRight, PenTool, Instagram, Github, Youtube, Play } from "lucide-react";
 
 function Home() {
   const { t } = useTranslation();
   const location = useLocation();
 
-  // Status items data - using translations
-  const statusItems = [
-    { icon: GraduationCap, title: t("status.degree"), subtitle: t("status.degreeDate"), color: "emerald" },
-    { icon: Sparkles, title: t("status.ai"), subtitle: t("status.aiSub"), color: "cyan" },
-    { icon: MapPin, title: t("status.open"), subtitle: t("status.openSub"), color: "purple" },
-    { icon: Palette, title: t("status.exploring"), subtitle: t("status.exploringSub"), color: "pink" },
-  ];
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTech, setSelectedTech] = useState(null);
@@ -44,23 +35,16 @@ function Home() {
   const latestPosts = getRecentPosts(2);
 
   // Derive view state from URL parameters for proper browser history support
-  const activeView = searchParams.get("view") || "projects";
-  const illustrationsSubView = searchParams.get("subview") || "illustrations";
+  const activeView = searchParams.get("view") || "articles";
 
-  // Helper functions to update URL (and thus state) when toggling views
+  // Helper function to update URL (and thus state) when toggling views
   const setActiveView = (view) => {
-    if (view === "projects") {
+    if (view === "articles") {
       setSearchParams({});
-    } else {
-      setSearchParams({ view: "illustrations" });
-    }
-  };
-
-  const setIllustrationsSubView = (subview) => {
-    if (subview === "illustrations") {
+    } else if (view === "illustrations") {
       setSearchParams({ view: "illustrations" });
     } else {
-      setSearchParams({ view: "illustrations", subview: "animations" });
+      setSearchParams({ view: "animations" });
     }
   };
 
@@ -71,7 +55,7 @@ function Home() {
 
   // Auto-rotate carousel for illustrations with smooth fade transition
   useEffect(() => {
-    if (activeView !== "illustrations" || illustrationsSubView !== "illustrations") return;
+    if (activeView !== "illustrations") return;
 
     const interval = setInterval(() => {
       // Start fade out
@@ -87,7 +71,7 @@ function Home() {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [activeView, illustrationsSubView, filteredIllustrations.length]);
+  }, [activeView, filteredIllustrations.length]);
 
   // Reset carousel when category changes
   useEffect(() => {
@@ -143,8 +127,16 @@ function Home() {
     }, 50);
   };
 
-  const switchToProjects = () => {
-    setActiveView("projects");
+  const switchToArticles = () => {
+    setActiveView("articles");
+    // Scroll to the top of the section with a small delay to ensure view has switched
+    setTimeout(() => {
+      sectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 50);
+  };
+
+  const switchToAnimations = () => {
+    setActiveView("animations");
     // Scroll to the top of the section with a small delay to ensure view has switched
     setTimeout(() => {
       sectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -158,25 +150,6 @@ function Home() {
 
         {/* Featured Projects Section */}
         <FeaturedProjects />
-
-        {/* What I'm Currently Doing Section */}
-        <section className="relative px-4 sm:px-6 lg:px-8 xl:px-12 py-16 flex flex-col items-center w-full mx-auto" style={{ maxWidth: '1400px' }}>
-          <ScrollReveal className="w-full">
-            <div className="animated-border backdrop-blur-md bg-white/10 p-8 md:p-10 rounded-2xl">
-              <div className="flex items-center gap-3 mb-8 justify-center md:justify-start">
-                <Sparkles className="w-7 h-7 text-emerald-400 animate-pulse" />
-                <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text pb-1.5 leading-tight">
-                  {t("status.title")}
-                </h2>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {statusItems.map((item, index) => (
-                  <StatusCard key={index} {...item} />
-                ))}
-              </div>
-            </div>
-          </ScrollReveal>
-        </section>
 
         {/* Projects Section */}
         <section ref={sectionRef} id="projects" className="relative px-4 sm:px-6 lg:px-8 xl:px-12 py-20 flex flex-col items-center w-full mx-auto" style={{ maxWidth: '1600px' }}>
@@ -192,28 +165,40 @@ function Home() {
 
                 <div className="relative inline-flex flex-col sm:flex-row bg-gray-900/95 border-2 border-emerald-500/50 rounded-xl p-1.5 backdrop-blur-sm w-full sm:w-auto shadow-lg shadow-emerald-500/20">
                   <button
-                    onClick={() => setActiveView("projects")}
-                    aria-pressed={activeView === "projects"}
-                    className={`flex items-center justify-center gap-2 px-4 sm:px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base cursor-pointer ${
-                      activeView === "projects"
+                    onClick={() => setActiveView("articles")}
+                    aria-pressed={activeView === "articles"}
+                    className={`flex items-center justify-center gap-2 px-3 sm:px-5 py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base cursor-pointer ${
+                      activeView === "articles"
                         ? "bg-gradient-to-r from-emerald-500 to-cyan-500 text-white shadow-lg shadow-emerald-500/30"
                         : "text-gray-400 hover:text-white hover:bg-white/10"
                     }`}
                   >
-                    <Briefcase className={`w-4 h-4 sm:w-5 sm:h-5 ${activeView === "projects" ? "" : "animate-pulse"}`} aria-hidden="true" />
-                    {t("projects.myProjects")}
+                    <BookOpen className={`w-4 h-4 sm:w-5 sm:h-5 ${activeView === "articles" ? "" : "animate-pulse"}`} aria-hidden="true" />
+                    {t("projects.articles")}
                   </button>
                   <button
                     onClick={() => setActiveView("illustrations")}
                     aria-pressed={activeView === "illustrations"}
-                    className={`flex items-center justify-center gap-2 px-4 sm:px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base cursor-pointer ${
+                    className={`flex items-center justify-center gap-2 px-3 sm:px-5 py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base cursor-pointer ${
                       activeView === "illustrations"
                         ? "bg-gradient-to-r from-emerald-500 to-cyan-500 text-white shadow-lg shadow-emerald-500/30"
                         : "text-gray-400 hover:text-white hover:bg-white/10"
                     }`}
                   >
                     <PenTool className={`w-4 h-4 sm:w-5 sm:h-5 ${activeView === "illustrations" ? "" : "animate-pulse"}`} aria-hidden="true" />
-                    {t("projects.myIllustrations")}
+                    {t("projects.illustrations")}
+                  </button>
+                  <button
+                    onClick={() => setActiveView("animations")}
+                    aria-pressed={activeView === "animations"}
+                    className={`flex items-center justify-center gap-2 px-3 sm:px-5 py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base cursor-pointer ${
+                      activeView === "animations"
+                        ? "bg-gradient-to-r from-emerald-500 to-cyan-500 text-white shadow-lg shadow-emerald-500/30"
+                        : "text-gray-400 hover:text-white hover:bg-white/10"
+                    }`}
+                  >
+                    <Play className={`w-4 h-4 sm:w-5 sm:h-5 ${activeView === "animations" ? "" : "animate-pulse"}`} aria-hidden="true" />
+                    {t("projects.animations")}
                   </button>
                 </div>
               </div>
@@ -221,20 +206,19 @@ function Home() {
 
             {/* Section Header - Changes based on active view */}
             <SectionHeader
-              icon={activeView === "projects" ? Briefcase : PenTool}
-              badge={activeView === "projects" ? t("projects.badge") : t("illustrations.badge")}
-              badgeColor="purple"
-              title={activeView === "projects" ? t("projects.title") : t("illustrations.title")}
+              title={activeView === "articles" ? t("projects.title") : activeView === "illustrations" ? t("illustrations.title") : t("animations.title")}
               description={
-                activeView === "projects"
+                activeView === "articles"
                   ? t("projects.description")
-                  : t("illustrations.description")
+                  : activeView === "illustrations"
+                  ? t("illustrations.description")
+                  : ""
               }
             />
           </ScrollReveal>
 
-          {/* Filter Section - Only show for projects */}
-          {activeView === "projects" && (
+          {/* Filter Section - Only show for articles */}
+          {activeView === "articles" && (
           <div className="w-full space-y-6 mb-12">
             <div className="max-w-2xl mx-auto">
               <div className="relative">
@@ -294,8 +278,8 @@ function Home() {
           </div>
           )}
 
-          {/* Projects Grid - Only show when projects view is active */}
-          {activeView === "projects" && (
+          {/* Articles Grid - Only show when articles view is active */}
+          {activeView === "articles" && (
             <>
               {filteredProjects.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 xl:gap-12 w-full">
@@ -336,39 +320,6 @@ function Home() {
           {/* Illustrations Grid - Only show when illustrations view is active */}
           {activeView === "illustrations" && (
             <>
-              {/* Sub-toggle for Illustrations/Animations */}
-              <div className="flex justify-center mb-8 sm:mb-10">
-                <div className="inline-flex bg-gray-800/80 border border-purple-500/30 rounded-xl p-1 backdrop-blur-sm">
-                  <button
-                    onClick={() => setIllustrationsSubView("illustrations")}
-                    aria-pressed={illustrationsSubView === "illustrations"}
-                    className={`flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-lg font-medium transition-all duration-300 text-sm cursor-pointer ${
-                      illustrationsSubView === "illustrations"
-                        ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/30"
-                        : "text-gray-400 hover:text-white hover:bg-white/10"
-                    }`}
-                  >
-                    <Image className="w-4 h-4" aria-hidden="true" />
-                    {t("illustrations.illustrations")}
-                  </button>
-                  <button
-                    onClick={() => setIllustrationsSubView("animations")}
-                    aria-pressed={illustrationsSubView === "animations"}
-                    className={`flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-lg font-medium transition-all duration-300 text-sm cursor-pointer ${
-                      illustrationsSubView === "animations"
-                        ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/30"
-                        : "text-gray-400 hover:text-white hover:bg-white/10"
-                    }`}
-                  >
-                    <Play className="w-4 h-4" aria-hidden="true" />
-                    {t("illustrations.animations")}
-                  </button>
-                </div>
-              </div>
-
-              {/* Illustrations Content */}
-              {illustrationsSubView === "illustrations" && (
-              <>
               {/* Featured Illustration Carousel */}
               <div className="w-full mb-8 sm:mb-12 px-2 sm:px-0">
                 <div className="relative max-w-xs sm:max-w-sm md:max-w-lg mx-auto">
@@ -517,11 +468,11 @@ function Home() {
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <button
-                  onClick={switchToProjects}
+                  onClick={switchToArticles}
                   className="group inline-flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors duration-300 cursor-pointer"
                 >
-                  <Briefcase className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-                  <span className="text-lg font-medium bg-gradient-to-r from-gray-400 via-emerald-300 to-gray-400 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">{t("illustrations.viewProjects")}</span>
+                  <BookOpen className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                  <span className="text-lg font-medium bg-gradient-to-r from-gray-400 via-emerald-300 to-gray-400 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">{t("projects.articles")}</span>
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
@@ -534,57 +485,55 @@ function Home() {
                 onClose={() => setLightboxOpen(false)}
                 onNavigate={setLightboxIndex}
               />
-              </>
-              )}
+            </>
+          )}
 
-              {/* Animations Content */}
-              {illustrationsSubView === "animations" && (
-              <>
-                {animations.length > 0 ? (
-                  <>
-                    <div className="w-full mb-6 text-center">
-                      <p className="text-gray-400">
-                        {animations.length} {t("animations.animationsCount")}
-                      </p>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 w-full">
-                      {animations.map((animation) => (
-                        <AnimationCard key={animation.id} animation={animation} />
-                      ))}
-                    </div>
-                  </>
-                ) : (
-                  <div className="text-center py-16">
-                    <div className="animated-border backdrop-blur-md bg-white/10 p-8 rounded-2xl inline-block">
-                      <Play className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-                      <h3 className="text-xl font-semibold text-white mb-2">{t("animations.comingSoon")}</h3>
-                      <p className="text-gray-400 max-w-md">
-                        {t("animations.comingSoonDesc")}
-                      </p>
-                    </div>
+          {/* Animations Grid - Only show when animations view is active */}
+          {activeView === "animations" && (
+            <>
+              {animations.length > 0 ? (
+                <>
+                  <div className="w-full mb-6 text-center">
+                    <p className="text-gray-400">
+                      {animations.length} {t("animations.animationsCount")}
+                    </p>
                   </div>
-                )}
-
-                <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
-                  <button
-                    onClick={() => setIllustrationsSubView("illustrations")}
-                    className="group inline-flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors duration-300 cursor-pointer"
-                  >
-                    <Image className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-                    <span className="text-lg font-medium bg-gradient-to-r from-gray-400 via-purple-400 to-gray-400 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">{t("illustrations.viewIllustrations")}</span>
-                    <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </button>
-                  <button
-                    onClick={switchToProjects}
-                    className="group inline-flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors duration-300 cursor-pointer"
-                  >
-                    <Briefcase className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-                    <span className="text-lg font-medium bg-gradient-to-r from-gray-400 via-emerald-300 to-gray-400 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">{t("illustrations.viewProjects")}</span>
-                    <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 w-full">
+                    {animations.map((animation) => (
+                      <AnimationCard key={animation.id} animation={animation} />
+                    ))}
+                  </div>
+                </>
+              ) : (
+                <div className="text-center py-16">
+                  <div className="animated-border backdrop-blur-md bg-white/10 p-8 rounded-2xl inline-block">
+                    <Play className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold text-white mb-2">{t("animations.comingSoon")}</h3>
+                    <p className="text-gray-400 max-w-md">
+                      {t("animations.comingSoonDesc")}
+                    </p>
+                  </div>
                 </div>
-              </>
               )}
+
+              <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
+                <button
+                  onClick={switchToIllustrations}
+                  className="group inline-flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors duration-300 cursor-pointer"
+                >
+                  <PenTool className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                  <span className="text-lg font-medium bg-gradient-to-r from-gray-400 via-purple-400 to-gray-400 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">{t("projects.illustrations")}</span>
+                  <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+                <button
+                  onClick={switchToArticles}
+                  className="group inline-flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors duration-300 cursor-pointer"
+                >
+                  <BookOpen className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                  <span className="text-lg font-medium bg-gradient-to-r from-gray-400 via-emerald-300 to-gray-400 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">{t("projects.articles")}</span>
+                  <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </div>
             </>
           )}
         </section>

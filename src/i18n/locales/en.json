@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Home",
+    "work": "Work",
     "about": "About",
     "blog": "Blog",
     "contact": "Contact"
@@ -16,9 +17,9 @@
   },
   "featuredProjects": {
     "badge": "Selected Work",
-    "title": "Featured Projects",
+    "title": "Featured Work",
     "viewCaseStudy": "View Case Study",
-    "viewAll": "View All Projects",
+    "viewAll": "View all my work",
     "brannvrn": {
       "tagline": "VR fire safety training for hospital staff",
       "description": "Designed a VR simulation that teaches hospital employees how to respond to fire emergencies — without the risk. Built through user research with firefighters and healthcare workers."
@@ -32,6 +33,11 @@
       "description": "Designed and developed a PWA that lets fishermen log catches, track locations, and record conditions — available offline for use on the water."
     }
   },
+  "work": {
+    "title": "My Work",
+    "description": "A collection of projects showcasing my journey in UX design and frontend development. Each project represents real problem-solving through user research, design thinking, and technical implementation.",
+    "viewProject": "View Project"
+  },
   "status": {
     "title": "What I'm Currently Doing",
     "degree": "Completed Frontend Development degree",
@@ -44,11 +50,12 @@
     "exploringSub": "Modern creative tools"
   },
   "projects": {
-    "title": "My Projects",
+    "title": "Articles",
     "badge": "Featured Work",
     "description": "A collection of projects showcasing my skills in front-end development, UI/UX design, and creative problem-solving.",
-    "myProjects": "My Projects",
-    "myIllustrations": "My Illustrations",
+    "articles": "Articles",
+    "illustrations": "Illustrations",
+    "animations": "Animations",
     "searchPlaceholder": "Search projects by name or description...",
     "showing": "Showing",
     "of": "of",
@@ -63,7 +70,7 @@
     "backToProjects": "Back to Projects"
   },
   "illustrations": {
-    "title": "My Illustrations",
+    "title": "Illustrations",
     "badge": "Creative Art",
     "description": "Digital illustrations demonstrating my grasp of color theory, visual composition, and design language—creative skills I apply across both illustration and UI/UX design work.",
     "illustrations": "Illustrations",

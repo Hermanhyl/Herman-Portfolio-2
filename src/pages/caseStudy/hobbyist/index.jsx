@@ -1,5 +1,6 @@
 import PageTransition from '../../../components/pageTransition';
 import OptimizedImage from '../../../components/optimizedImage';
+import BackButton from '../../../components/backButton';
 import useDocumentMeta from '../../../hooks/useDocumentMeta';
 
 export default function HobbyistCaseStudy() {
@@ -14,7 +15,7 @@ export default function HobbyistCaseStudy() {
       <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white">
 
         {/* Section 1: Case Study Hero */}
-        <section className="relative overflow-hidden min-h-[80vh] flex items-center">
+        <section className="relative overflow-hidden">
           {/* Background gradient */}
           <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-gray-900" />
 
@@ -24,8 +25,11 @@ export default function HobbyistCaseStudy() {
             <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
           </div>
 
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 w-full">
-            <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
+          {/* Back button - top left */}
+          <BackButton position="top" />
+
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 lg:py-24 w-full">
+            <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 lg:items-center">
 
               {/* Image Side - shows first on mobile */}
               <div className="order-first lg:order-last lg:w-[55%] w-full">
@@ -36,7 +40,7 @@ export default function HobbyistCaseStudy() {
                       src="/hobbyist.jpg"
                       alt="Hobbyist app mockup showing Make Real Friends Through Shared Activities"
                       eager={true}
-                      className="w-full h-auto aspect-[4/3] object-cover"
+                      className="w-full h-auto"
                     />
                   </div>
                 </div>
@@ -119,26 +123,26 @@ export default function HobbyistCaseStudy() {
             {/* Key insights - 2x2 grid of cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 text-left">
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
-                <span className="text-3xl font-bold text-emerald-400/80 mb-3 block">01</span>
-                <p className="text-gray-200 leading-relaxed text-base font-medium">
+                <span className="text-3xl font-bold text-emerald-400 mb-3 block">01</span>
+                <p className="text-white leading-relaxed text-lg">
                   Dating app mechanics feel wrong for friendships — swiping creates pressure and awkwardness
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
-                <span className="text-3xl font-bold text-emerald-400/80 mb-3 block">02</span>
-                <p className="text-gray-200 leading-relaxed text-base font-medium">
+                <span className="text-3xl font-bold text-emerald-400 mb-3 block">02</span>
+                <p className="text-white leading-relaxed text-lg">
                   People want to do activities together, not just chat — the hobby should be the focus, not the profile
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
-                <span className="text-3xl font-bold text-emerald-400/80 mb-3 block">03</span>
-                <p className="text-gray-200 leading-relaxed text-base font-medium">
+                <span className="text-3xl font-bold text-emerald-400 mb-3 block">03</span>
+                <p className="text-white leading-relaxed text-lg">
                   Trust matters — users need to feel safe meeting strangers around shared interests
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
-                <span className="text-3xl font-bold text-emerald-400/80 mb-3 block">04</span>
-                <p className="text-gray-200 leading-relaxed text-base font-medium">
+                <span className="text-3xl font-bold text-emerald-400 mb-3 block">04</span>
+                <p className="text-white leading-relaxed text-lg">
                   Scheduling is a barrier — even interested people fail to connect if coordinating is too hard
                 </p>
               </div>
@@ -232,7 +236,47 @@ export default function HobbyistCaseStudy() {
           </div>
         </section>
 
-        {/* Section 5: The Result */}
+        {/* Section 5: AI Integration */}
+        <section className="relative py-16 md:py-24">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            {/* Section label */}
+            <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
+              AI Integration
+            </p>
+
+            {/* Subheading */}
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              An AI Concierge for Activities
+            </h2>
+
+            {/* Intro paragraph */}
+            <p className="text-lg text-gray-400 leading-relaxed mb-16">
+              Finding the right activity shouldn't feel like work. I integrated an AI chat feature that acts as a personal concierge — helping users discover activities based on their interests, availability, and location. It's a conversational way to explore options without endless scrolling and filtering.
+            </p>
+          </div>
+
+          {/* Feature block */}
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="space-y-6">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-white mb-3">Natural Conversation</h3>
+                <p className="text-gray-400 max-w-2xl mx-auto">
+                  Users can chat naturally — "I want to do something outdoors this weekend" or "Find me a board game group near Dresden" — and the AI suggests relevant activities. It learns from preferences over time, making recommendations more personal the more you use it.
+                </p>
+              </div>
+              <div className="rounded-2xl overflow-hidden max-w-xs mx-auto">
+                <OptimizedImage
+                  src="/Hobbyist/AI_chat.jpg"
+                  alt="AI Buddy Chat interface showing a conversation about finding activities"
+                  className="w-full h-auto"
+                  style={{ imageRendering: 'crisp-edges' }}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 6: The Result */}
         <section className="relative py-16 md:py-24">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
@@ -253,20 +297,20 @@ export default function HobbyistCaseStudy() {
             {/* Key takeaways */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-12">
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6 text-left">
-                <span className="text-3xl font-bold text-emerald-400/80 mb-3 block">01</span>
-                <p className="text-gray-200 leading-relaxed text-base font-medium">
+                <span className="text-3xl font-bold text-emerald-400 mb-3 block">01</span>
+                <p className="text-white leading-relaxed text-lg">
                   Designing for social interaction requires understanding psychology, not just usability
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6 text-left">
-                <span className="text-3xl font-bold text-emerald-400/80 mb-3 block">02</span>
-                <p className="text-gray-200 leading-relaxed text-base font-medium">
+                <span className="text-3xl font-bold text-emerald-400 mb-3 block">02</span>
+                <p className="text-white leading-relaxed text-lg">
                   Personal projects let you own the entire process — research, design, and code
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6 text-left">
-                <span className="text-3xl font-bold text-emerald-400/80 mb-3 block">03</span>
-                <p className="text-gray-200 leading-relaxed text-base font-medium">
+                <span className="text-3xl font-bold text-emerald-400 mb-3 block">03</span>
+                <p className="text-white leading-relaxed text-lg">
                   Building in public keeps momentum and invites feedback
                 </p>
               </div>
@@ -284,6 +328,9 @@ export default function HobbyistCaseStudy() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </a>
+
+            {/* Back button - bottom */}
+            <BackButton position="bottom" />
           </div>
         </section>
 

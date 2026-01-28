@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Hjem",
+    "work": "Arbeid",
     "about": "Om meg",
     "blog": "Blogg",
     "contact": "Kontakt"
@@ -16,9 +17,9 @@
   },
   "featuredProjects": {
     "badge": "Utvalgte arbeider",
-    "title": "Fremhevede prosjekter",
+    "title": "Utvalgte arbeider",
     "viewCaseStudy": "Se casestudie",
-    "viewAll": "Se alle prosjekter",
+    "viewAll": "Se alt mitt arbeid",
     "brannvrn": {
       "tagline": "VR-brannsikkerhetstrening for sykehusansatte",
       "description": "Designet en VR-simulering som lærer sykehusansatte hvordan de skal reagere på brannkrisesituasjoner — uten risiko. Utviklet gjennom brukerundersøkelser med brannfolk og helsearbeidere."
@@ -32,6 +33,11 @@
       "description": "Designet og utviklet en PWA som lar fiskere logge fangster, spore steder og registrere forhold — tilgjengelig offline for bruk på vannet."
     }
   },
+  "work": {
+    "title": "Mitt arbeid",
+    "description": "En samling prosjekter som viser min reise innen UX-design og frontend-utvikling. Hvert prosjekt representerer reell problemløsning gjennom brukerundersøkelser, designtenkning og teknisk implementering.",
+    "viewProject": "Se prosjekt"
+  },
   "status": {
     "title": "Hva jeg holder på med",
     "degree": "Fullført Frontend-utviklerutdanning",
@@ -44,11 +50,12 @@
     "exploringSub": "Moderne kreative verktøy"
   },
   "projects": {
-    "title": "Mine prosjekter",
+    "title": "Artikler",
     "badge": "Utvalgte arbeider",
     "description": "En samling prosjekter som viser mine ferdigheter innen frontend-utvikling, UI/UX-design og kreativ problemløsning.",
-    "myProjects": "Mine prosjekter",
-    "myIllustrations": "Mine illustrasjoner",
+    "articles": "Artikler",
+    "illustrations": "Illustrasjoner",
+    "animations": "Animasjoner",
     "searchPlaceholder": "Søk etter prosjekter etter navn eller beskrivelse...",
     "showing": "Viser",
     "of": "av",
@@ -65,7 +72,7 @@
     "noTeaser": "Ingen beskrivelse tilgjengelig."
   },
   "illustrations": {
-    "title": "Mine illustrasjoner",
+    "title": "Illustrasjoner",
     "badge": "Kreativ kunst",
     "description": "Digitale illustrasjoner som demonstrerer min forståelse av fargelære, visuell komposisjon og designspråk—kreative ferdigheter jeg bruker i både illustrasjon og UI/UX-designarbeid.",
     "illustrations": "Illustrasjoner",

@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Menu, X, Home, User, Mail, Code2, BookOpen } from "lucide-react";
+import { Menu, X, Home, User, Mail, Code2, BookOpen, Briefcase } from "lucide-react";
 import LanguageSwitcher from "../languageSwitcher";
 
 function Header() {
@@ -41,6 +41,7 @@ function Header() {
 
   const navItems = [
     { to: "/", label: t("nav.home"), icon: Home },
+    { to: "/work", label: t("nav.work"), icon: Briefcase },
     { to: "/about", label: t("nav.about"), icon: User },
     { to: "/blog", label: t("nav.blog"), icon: BookOpen },
     { to: "/contact", label: t("nav.contact"), icon: Mail },
@@ -78,7 +79,7 @@ function Header() {
         </Link>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center gap-2 lg:gap-4" aria-label="Main navigation">
+        <nav className="hidden lg:flex items-center gap-1 xl:gap-3" aria-label="Main navigation">
           {navItems.map((item) => {
             const Icon = item.icon;
             return (
@@ -87,16 +88,16 @@ function Header() {
                 to={item.to}
                 aria-label={`Navigate to ${item.label} page`}
                 aria-current={isActive(item.to) ? 'page' : undefined}
-                className={`group relative px-5 py-2 rounded-lg transition-all duration-300 flex items-center gap-2 focus:outline-none ${
+                className={`group relative px-3 xl:px-4 py-2 rounded-lg transition-all duration-300 flex items-center gap-1.5 xl:gap-2 focus:outline-none ${
                   isActive(item.to)
                     ? 'text-emerald-400'
                     : 'text-gray-300 hover:text-white'
                 }`}
               >
-                <Icon className={`w-5 h-5 lg:w-6 lg:h-6 transition-transform duration-300 group-hover:scale-110 ${
+                <Icon className={`w-4 h-4 xl:w-5 xl:h-5 transition-transform duration-300 group-hover:scale-110 ${
                   isActive(item.to) ? 'text-emerald-400' : ''
                 }`} aria-hidden="true" />
-                <span className="font-semibold text-base lg:text-lg">{item.label}</span>
+                <span className="font-semibold text-sm xl:text-base">{item.label}</span>
                 {isActive(item.to) && (
                   <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full"></div>
                 )}
@@ -111,7 +112,7 @@ function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className={`md:hidden p-2 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-black cursor-pointer ${
+          className={`lg:hidden p-2 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-black cursor-pointer ${
             menuOpen
               ? 'bg-emerald-500/20 text-emerald-400'
               : 'text-gray-300 hover:bg-white/10'
@@ -128,7 +129,7 @@ function Header() {
           <nav
             ref={menuRef}
             aria-label="Mobile navigation"
-            className="absolute top-full right-6 mt-4 w-64 bg-gray-900/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-2 flex flex-col md:hidden z-50 animate-in fade-in slide-in-from-top-2 duration-300"
+            className="absolute top-full right-6 mt-4 w-64 bg-gray-900/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-2 flex flex-col lg:hidden z-50 animate-in fade-in slide-in-from-top-2 duration-300"
           >
             {navItems.map((item) => {
               const Icon = item.icon;

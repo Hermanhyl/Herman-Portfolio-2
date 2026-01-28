@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: "project1",
-    title: "BrannVRn - VR Fire Safety Simulator (A)",
+    title: "BrannVRn",
     teaser: "UX Process & Learning Design in action: A VR fire safety simulator where I designed the complete user experience and pedagogical framework—transforming complex safety procedures into intuitive, educational interactions.",
     description:
       "BrannVRn is a Virtual Reality fire safety training simulator developed as a bachelor's degree project in collaboration with Sykehuspartner. The project recreates Sykehuspartner's Drammen office in a 1:1 scale, providing immersive fire safety training experiences.\n\nAs the concept artist and UI/UX designer, I was responsible for creating the visual identity, infographics, UI elements, 3D modeling, texturing, and developing informational content about fire hazards and emergency procedures.",

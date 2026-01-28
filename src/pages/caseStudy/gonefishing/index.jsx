@@ -1,11 +1,9 @@
-import { useNavigate } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
 import PageTransition from '../../../components/pageTransition';
 import OptimizedImage from '../../../components/optimizedImage';
+import BackButton from '../../../components/backButton';
 import useDocumentMeta from '../../../hooks/useDocumentMeta';
 
 export default function GoneFishingCaseStudy() {
-  const navigate = useNavigate();
   useDocumentMeta({
     title: 'GoneFishing Case Study',
     description: 'A personal logbook for anglers — track catches, locations, and conditions, available offline on the water.',
@@ -17,7 +15,7 @@ export default function GoneFishingCaseStudy() {
       <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white">
 
         {/* Section 1: Case Study Hero */}
-        <section className="relative overflow-hidden min-h-[80vh] flex items-center">
+        <section className="relative overflow-hidden">
           {/* Background gradient */}
           <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-gray-900" />
 
@@ -28,16 +26,9 @@ export default function GoneFishingCaseStudy() {
           </div>
 
           {/* Back button - top left */}
-          <button
-            onClick={() => navigate(-1)}
-            className="absolute top-24 left-4 sm:left-6 lg:left-8 z-20 inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300 group"
-            aria-label="Go back to previous page"
-          >
-            <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-300" />
-            <span className="text-sm font-medium">Back</span>
-          </button>
+          <BackButton position="top" />
 
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 w-full">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 lg:pb-24 w-full">
             <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
 
               {/* Image Side - shows first on mobile */}

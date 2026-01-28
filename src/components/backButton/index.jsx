@@ -26,10 +26,9 @@ export default function BackButton({ position = 'top' }) {
   }
 
   // Top position - glass button style
-  // On mobile: appears below navbar with margin below to separate from content
-  // On lg+: absolute positioning in top left, below navbar
+  // Stays in document flow on all screen sizes to prevent overlap with hero content
   return (
-    <div className="px-4 sm:px-6 lg:px-8 pt-20 pb-4 lg:absolute lg:top-24 lg:left-8 xl:left-12 lg:p-0 z-20">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-28 pb-6 z-20">
       <button
         onClick={() => navigate(-1)}
         className="inline-flex items-center gap-2.5 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-gray-300 hover:text-white transition-all duration-300 group"

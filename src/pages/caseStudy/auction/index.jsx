@@ -31,7 +31,7 @@ export default function AuctionCaseStudy() {
           {/* Back button - top left */}
           <BackButton position="top" />
 
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 lg:py-24 w-full">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 lg:pb-24 w-full">
             <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 lg:items-center">
 
               {/* Image Side - shows first on mobile */}

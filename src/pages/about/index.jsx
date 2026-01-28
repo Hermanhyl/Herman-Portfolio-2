@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Code, Palette, Rocket, GraduationCap, Briefcase, Award, Sparkles, Terminal, Layers, Brain, ArrowRight, MapPin, Calendar, FolderKanban, PenTool, Film } from 'lucide-react';
+import { Code, Palette, Rocket, GraduationCap, Briefcase, Award, Sparkles, Terminal, Layers, Brain, ArrowRight, MapPin, Calendar, FolderKanban, PenTool, Film, BookOpen } from 'lucide-react';
 import useDocumentMeta from '../../hooks/useDocumentMeta';
 import OptimizedImage from '../../components/optimizedImage';
 import ScrollReveal from '../../components/scrollReveal';
@@ -216,17 +216,27 @@ function About() {
                 <h3 className="text-lg font-semibold text-white mb-4">{t('about.exploreMyWork')}</h3>
                 <div className="flex flex-wrap gap-4">
                   <Link
-                    to="/?view=projects#projects"
+                    to="/work"
                     className="group inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 hover:from-emerald-500/30 hover:to-cyan-500/30 border border-emerald-500/30 hover:border-emerald-400/50 px-5 py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
                   >
                     <div className="p-2 bg-emerald-500/20 rounded-lg group-hover:bg-emerald-500/30 transition-colors">
-                      <FolderKanban className="w-5 h-5 text-emerald-400" />
+                      <Briefcase className="w-5 h-5 text-emerald-400" />
                     </div>
-                    <span className="text-white font-medium">{t('about.myProjects')}</span>
+                    <span className="text-white font-medium">{t('about.myWork')}</span>
                     <ArrowRight className="w-4 h-4 text-emerald-400 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <Link
-                    to="/?view=illustrations#projects"
+                    to="/work?view=articles"
+                    className="group inline-flex items-center gap-3 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 hover:from-blue-500/30 hover:to-indigo-500/30 border border-blue-500/30 hover:border-blue-400/50 px-5 py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
+                  >
+                    <div className="p-2 bg-blue-500/20 rounded-lg group-hover:bg-blue-500/30 transition-colors">
+                      <BookOpen className="w-5 h-5 text-blue-400" />
+                    </div>
+                    <span className="text-white font-medium">{t('about.myArticles')}</span>
+                    <ArrowRight className="w-4 h-4 text-blue-400 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  <Link
+                    to="/work?view=illustrations"
                     className="group inline-flex items-center gap-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 hover:from-purple-500/30 hover:to-pink-500/30 border border-purple-500/30 hover:border-purple-400/50 px-5 py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
                   >
                     <div className="p-2 bg-purple-500/20 rounded-lg group-hover:bg-purple-500/30 transition-colors">
@@ -236,7 +246,7 @@ function About() {
                     <ArrowRight className="w-4 h-4 text-purple-400 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <Link
-                    to="/?view=illustrations&subview=animations#projects"
+                    to="/work?view=animations"
                     className="group inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 hover:from-cyan-500/30 hover:to-blue-500/30 border border-cyan-500/30 hover:border-cyan-400/50 px-5 py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
                   >
                     <div className="p-2 bg-cyan-500/20 rounded-lg group-hover:bg-cyan-500/30 transition-colors">

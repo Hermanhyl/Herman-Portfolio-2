@@ -1,0 +1,167 @@
+{
+  "featuredProjects": {
+    "badge": "Utvalgte arbeider",
+    "title": "Utvalgte arbeider",
+    "viewCaseStudy": "Se case studie",
+    "viewAll": "Se alt mitt arbeid",
+    "brannvrn": {
+      "tagline": "VR-brannsikkerhetstrening for sykehusansatte",
+      "description": "Designet en VR-simulering som lærer sykehusansatte hvordan de skal reagere på brannkrisesituasjoner — uten risiko. Utviklet gjennom brukerundersøkelser med brannfolk og helsearbeidere."
+    },
+    "hobbyist": {
+      "tagline": "Sosial plattform for hobbybaserte forbindelser",
+      "description": "Designet og bygget en sosial app som hjelper folk med å finne andre som deler hobbyene deres — enten det er fotturer, brettspill eller matlaging. Ingen swiping, bare ekte forbindelser."
+    },
+    "gonefishing": {
+      "tagline": "En personlig loggbok for sportsfiskere",
+      "description": "Designet og utviklet en PWA som lar fiskere logge fangster, spore steder og registrere forhold — tilgjengelig offline for bruk på vannet."
+    }
+  },
+  "work": {
+    "title": "Mitt arbeid",
+    "description": "En samling prosjekter som viser min reise innen UX-design og frontend-utvikling. Hvert prosjekt representerer reell problemløsning gjennom brukerundersøkelser, designtenkning og teknisk implementering.",
+    "viewProject": "Se prosjekt",
+    "caseStudies": "Case studier",
+    "cards": {
+      "brannvrn": {
+        "teaser": "UX-prosess og læringsdesign i praksis: En VR-brannsikkerhetssimulator der jeg designet hele brukeropplevelsen og det pedagogiske rammeverket – og omgjorde komplekse sikkerhetsprosedyrer til intuitive, lærerike interaksjoner."
+      },
+      "gonefishing": {
+        "teaser": "Brukerundersøkelser i praksis: En fiskelogg-app bygget gjennom samtaler med ekte fiskere – som adresserer smertepunkter i eksisterende apper gjennom iterativ design og tilbakemeldinger fra brukere."
+      },
+      "hobbyist": {
+        "teaser": "UX-sentrert design: En sosial plattform formet av samtaler med venner og potensielle brukere – med fokus på enkelhet, intuitiv navigasjon og ekte menneskelige forbindelser."
+      },
+      "holidaze": {
+        "teaser": "Holidaze er en koselig bookingapp for slow living-opplevelser – bla gjennom, book og slapp av i håndplukkede hytter og retreats."
+      },
+      "auction": {
+        "teaser": "Own The Bid er en auksjonsapp i raskt tempo der brukere kan legge ut, by og bla gjennom varer med letthet, ingen konto nødvendig for å utforske."
+      },
+      "timerPlanner": {
+        "teaser": "En produktivitetsapp som kombinerer en tilpassbar fokustimer med fleksible uke- og månedsplanleggingsverktøy, med dra-og-slipp-planlegging."
+      },
+      "piaSalary": {
+        "teaser": "En personvernfokusert inntektssporingsapp med automatiske skatteberegninger, Excel-import/-eksport og tospråklig støtte – alle data lagres lokalt."
+      },
+      "clicketycart": {
+        "teaser": "ClicketyCart er en nettbutikk i retrostil med rask utsjekking, lynrask levering og smidig shopping drevet av Noroff API."
+      },
+      "communityScience": {
+        "teaser": "Mitt andre prosjekt som student – ikke en refleksjon av mine ferdigheter i dag, men nok en milepæl i min utviklingsreise."
+      },
+      "gamehub": {
+        "teaser": "Mitt aller første webutviklingsprosjekt – ikke en refleksjon av mine ferdigheter i dag, men en påminnelse om hvor reisen min begynte."
+      }
+    }
+  },
+  "about": {
+    "title": "Om meg",
+    "subtitle": "UI/UX-designer & Frontend-utvikler",
+    "bio": "Jeg er en lidenskapelig utvikler og designer basert i Norge, som kombinerer tekniske ferdigheter med kreativ visjon for å bygge vakre, funksjonelle nettopplevelser.",
+    "location": "Norge / Åpen for Tyskland",
+    "role": "Frontend-utvikler & Digital designer",
+    "heroDescription": "Brobygger mellom teknologi og kunst med 2+ års erfaring innen frontend-utvikling og 3+ års erfaring innen digital design. Skaper tilgjengelige, interaktive nettopplevelser.",
+    "getInTouch": "Ta kontakt",
+    "myStory": "Min historie",
+    "storyP1": "Jeg er en <highlight>UX-designer og frontend-utvikler</highlight> med bakgrunn fra spillutvikling, animasjon og visuell kommunikasjon. Lidenskapelig opptatt av å skape <accent1>engasjerende, lærerike opplevelser</accent1> gjennom brukersentrert design og kreativ historiefortelling.",
+    "storyP2": "Min profil <highlight>brobygger unikt mellom design og utvikling</highlight>—kombinerer kunstnerisk ekspertise fra Spillskolen med tekniske ferdigheter fra frontend-utvikling. Dette lar meg jobbe sømløst gjennom hele produktlivssyklusen, <accent2>fra konsept til kode</accent2>.",
+    "storyP3": "Fra å utvikle <accent1>VR-treningssimuleringer</accent1> for helsesektoren til å bygge moderne webapplikasjoner, gjenspeiler arbeidet mitt en forpliktelse til å skape <accent2>visuelt tiltalende produkter</accent2> som reflekterer brukernes behov—gjør innhold tilgjengelig og inspirerende gjennom gjennomtenkt UX og visuell design.",
+    "skillsExpertise": "Ferdigheter & Ekspertise",
+    "whatIWorkWith": "Hva jeg jobber med",
+    "proficiencyLevels": "Kompetansenivåer",
+    "careerPath": "Karrierevei",
+    "experienceEducation": "Erfaring & Utdanning",
+    "ctaTitle": "La oss bygge noe fantastisk",
+    "ctaDescription": "Jeg ser aktivt etter muligheter innen frontend-utvikling eller digital design hvor jeg kan vokse, samarbeide og bidra til meningsfulle prosjekter.",
+    "viewMyWork": "Se mitt arbeid",
+    "exploreMyWork": "Utforsk mitt arbeid",
+    "myProjects": "Mine prosjekter",
+    "myIllustrations": "Mine illustrasjoner",
+    "myAnimations": "Mine animasjoner",
+    "skills": "Ferdigheter & Teknologier",
+    "experience": "Erfaring & Utdanning",
+    "stats": {
+      "yearsFrontend": "År Frontend",
+      "projectsBuilt": "Prosjekter bygget",
+      "yearsDesign": "År Design",
+      "degrees": "Utdanninger"
+    },
+    "skillCategories": {
+      "development": "Utvikling",
+      "design": "Design",
+      "aiTools": "AI & Verktøy"
+    },
+    "timeline": {
+      "customerService": "Kundeserviceagent",
+      "customerServiceDesc": "Håndtering av forsikringssaker via telefonstøtte. Bruker Salesforce CRM for sakshåndtering.",
+      "frontendDev": "Frontend-utvikling",
+      "frontendDevDesc": "2-årig yrkesfaglig utdanning. Spesialisert i React, JavaScript, moderne webutvikling og UI/UX-design.",
+      "visualDesigner": "Visuell designer",
+      "visualDesignerDesc": "UI/UX-design og visuell identitet. Strategiske beslutninger om farge, bildebruk og layout.",
+      "bachelorAnim": "Bachelor i Animasjon & Digital kunst",
+      "bachelorAnimDesc": "Teknisk utvikling med konseptkunst, 3D-design, animasjon og motion graphics."
+    }
+  },
+  "contact": {
+    "title": "La oss koble sammen",
+    "subtitle": "Jeg er alltid åpen for å diskutere nye prosjekter, kreative ideer eller muligheter til å være en del av din visjon.",
+    "available": "Tilgjengelig for muligheter",
+    "sendMessage": "Send en melding",
+    "getInTouch": "Ta kontakt",
+    "followMe": "Følg meg",
+    "responseTime": "Svartid",
+    "responseDesc": "Jeg svarer vanligvis innen 24-48 timer. Ser frem til å høre fra deg!",
+    "successMessage": "Takk! Meldingen din er sendt. Jeg kommer tilbake til deg snart!",
+    "errorMessage": "Oops! Noe gikk galt. Vennligst prøv igjen eller send meg en e-post direkte.",
+    "form": {
+      "name": "Ditt navn",
+      "namePlaceholder": "Ola Nordmann",
+      "email": "Din e-post",
+      "emailPlaceholder": "ola@eksempel.no",
+      "message": "Melding",
+      "messagePlaceholder": "Fortell meg om prosjektet ditt...",
+      "send": "Send melding",
+      "sending": "Sender...",
+      "success": "Meldingen ble sendt!",
+      "error": "Kunne ikke sende meldingen. Vennligst prøv igjen."
+    },
+    "availability": "For tiden tilgjengelig for frilansarbeid og heltidsstillinger.",
+    "location": "Basert i Norge"
+  },
+  "blog": {
+    "title": "Fra bloggen",
+    "pageTitle": "Mine innsikter",
+    "badge": "Blogg & Innsikt",
+    "description": "Tanker om utvikling, design og AI",
+    "viewAll": "Se alle innlegg",
+    "viewAllPosts": "Se alle innlegg",
+    "readMore": "Les mer",
+    "read": "Les",
+    "minRead": "min å lese",
+    "backToBlog": "Tilbake til bloggen",
+    "searchPlaceholder": "Søk etter innlegg etter tittel, emner eller innhold...",
+    "clearSearch": "Tøm søk",
+    "featuredPost": "Fremhevet innlegg",
+    "recentPosts": "Nylige innlegg",
+    "searchResults": "Søkeresultater",
+    "noResults": "Ingen resultater funnet",
+    "resultsFound": "{{count}} resultater funnet",
+    "noPostsFound": "Ingen innlegg funnet",
+    "tryDifferentKeywords": "Prøv å søke etter andre nøkkelord eller bla gjennom alle innlegg.",
+    "managePosts": "Administrer blogginnlegg",
+    "adminLogin": "Admin-innlogging",
+    "addNewPost": "Legg til nytt innlegg",
+    "postNotFoundTitle": "Innlegg ikke funnet",
+    "postNotFoundDescription": "Blogginnlegget du leter etter finnes ikke.",
+    "by": "Av",
+    "viewProject": "Se prosjekt",
+    "shareThisPost": "Del dette innlegget",
+    "shareOnLinkedIn": "Del på LinkedIn",
+    "shareOnTwitter": "Del på Twitter",
+    "copyLink": "Kopier lenke",
+    "linkCopied": "Lenke kopiert!",
+    "readNext": "Les neste",
+    "blogPost": "Blogginnlegg"
+  }
+}

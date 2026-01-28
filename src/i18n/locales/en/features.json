@@ -1,0 +1,87 @@
+{
+  "projects": {
+    "title": "Articles",
+    "badge": "Featured Work",
+    "description": "A collection of projects showcasing my skills in front-end development, UI/UX design, and creative problem-solving.",
+    "articles": "Articles",
+    "illustrations": "Illustrations",
+    "animations": "Animations",
+    "searchPlaceholder": "Search projects by name or description...",
+    "showing": "Showing",
+    "of": "of",
+    "projectsLabel": "projects",
+    "clearFilters": "Clear filters",
+    "noResults": "No projects found matching your criteria",
+    "viewOnGithub": "View more on GitHub",
+    "exploreIllustrations": "Explore My Illustrations",
+    "viewCode": "View Code",
+    "viewLive": "View Live",
+    "viewArticle": "View Article",
+    "backToProjects": "Back to Projects"
+  },
+  "illustrations": {
+    "title": "Illustrations",
+    "badge": "Creative Art",
+    "description": "Digital illustrations demonstrating my grasp of color theory, visual composition, and design language—creative skills I apply across both illustration and UI/UX design work.",
+    "illustrations": "Illustrations",
+    "animations": "Animations",
+    "watchSpeedpaints": "Watch Speedpaints on YouTube",
+    "speedpaintsSub": "See the creative process behind my illustrations",
+    "viewOnInstagram": "View more on Instagram",
+    "viewProjects": "View My Projects",
+    "viewIllustrations": "View Illustrations",
+    "illustrationsCount": "illustrations",
+    "illustrationsIn": "illustrations in",
+    "categories": {
+      "all": "All",
+      "portraits": "Portraits",
+      "characters": "Characters",
+      "dragons": "Dragons & Creatures",
+      "knights": "Knights & Warriors",
+      "animals": "Animals & Birds",
+      "landscapes": "Landscapes & Scenes",
+      "sketches": "Sketches & Studies"
+    }
+  },
+  "animations": {
+    "title": "Animations",
+    "comingSoon": "Animations Coming Soon",
+    "comingSoonDesc": "I'm working on adding my animation portfolio. Check back soon to see my motion graphics and animated artwork!",
+    "viewAnimation": "View Animation",
+    "animationsCount": "animations",
+    "backToAnimations": "Back to Animations",
+    "noDescription": "No description available."
+  },
+  "projectDetails": {
+    "notFound": "Project not found",
+    "projects": "Projects",
+    "shareProject": "Share Project",
+    "liveDemo": "Live Demo",
+    "figmaDesign": "Figma Design",
+    "watchTrailer": "Watch Trailer",
+    "readBlogPost": "Read Blog Post",
+    "readReport": "Read Report",
+    "projectShowcase": "Project Showcase",
+    "projectGallery": "Project Gallery",
+    "aboutThisProject": "About This Project",
+    "techStack": "Tech Stack",
+    "moreProjects": "More Projects"
+  },
+  "caseStudy": {
+    "role": "Role",
+    "team": "Team",
+    "client": "Client",
+    "timeline": "Timeline",
+    "outcome": "Outcome"
+  },
+  "animationDetails": {
+    "notFound": "Animation not found",
+    "animations": "Animations",
+    "shareAnimation": "Share Animation",
+    "animation": "Animation",
+    "processGallery": "Process Gallery",
+    "aboutThisAnimation": "About This Animation",
+    "toolsUsed": "Tools Used",
+    "moreAnimations": "More Animations"
+  }
+}

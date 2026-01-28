@@ -1,0 +1,89 @@
+{
+  "projects": {
+    "title": "Artikler",
+    "badge": "Utvalgte arbeider",
+    "description": "En samling prosjekter som viser mine ferdigheter innen frontend-utvikling, UI/UX-design og kreativ problemløsning.",
+    "articles": "Artikler",
+    "illustrations": "Illustrasjoner",
+    "animations": "Animasjoner",
+    "searchPlaceholder": "Søk etter prosjekter etter navn eller beskrivelse...",
+    "showing": "Viser",
+    "of": "av",
+    "projectsLabel": "prosjekter",
+    "clearFilters": "Fjern filtre",
+    "noResults": "Ingen prosjekter funnet som matcher kriteriene dine",
+    "viewOnGithub": "Se mer på GitHub",
+    "exploreIllustrations": "Utforsk mine illustrasjoner",
+    "viewCode": "Se kode",
+    "viewLive": "Se live",
+    "viewArticle": "Les artikkel",
+    "backToProjects": "Tilbake til prosjekter",
+    "viewProject": "Se prosjekt",
+    "noTeaser": "Ingen beskrivelse tilgjengelig."
+  },
+  "illustrations": {
+    "title": "Illustrasjoner",
+    "badge": "Kreativ kunst",
+    "description": "Digitale illustrasjoner som demonstrerer min forståelse av fargelære, visuell komposisjon og designspråk—kreative ferdigheter jeg bruker i både illustrasjon og UI/UX-designarbeid.",
+    "illustrations": "Illustrasjoner",
+    "animations": "Animasjoner",
+    "watchSpeedpaints": "Se Speedpaints på YouTube",
+    "speedpaintsSub": "Se den kreative prosessen bak mine illustrasjoner",
+    "viewOnInstagram": "Se mer på Instagram",
+    "viewProjects": "Se mine prosjekter",
+    "viewIllustrations": "Se illustrasjoner",
+    "illustrationsCount": "illustrasjoner",
+    "illustrationsIn": "illustrasjoner i",
+    "categories": {
+      "all": "Alle",
+      "portraits": "Portretter",
+      "characters": "Karakterer",
+      "dragons": "Drager & Skapninger",
+      "knights": "Riddere & Krigere",
+      "animals": "Dyr & Fugler",
+      "landscapes": "Landskap & Scener",
+      "sketches": "Skisser & Studier"
+    }
+  },
+  "animations": {
+    "title": "Animasjoner",
+    "comingSoon": "Animasjoner kommer snart",
+    "comingSoonDesc": "Jeg jobber med å legge til min animasjonsportefølje. Kom tilbake snart for å se mine motion graphics og animerte kunstverk!",
+    "viewAnimation": "Se animasjon",
+    "animationsCount": "animasjoner",
+    "backToAnimations": "Tilbake til animasjoner",
+    "noDescription": "Ingen beskrivelse tilgjengelig."
+  },
+  "projectDetails": {
+    "notFound": "Prosjekt ikke funnet",
+    "projects": "Prosjekter",
+    "shareProject": "Del prosjekt",
+    "liveDemo": "Live demo",
+    "figmaDesign": "Figma-design",
+    "watchTrailer": "Se trailer",
+    "readBlogPost": "Les blogginnlegg",
+    "readReport": "Les rapport",
+    "projectShowcase": "Prosjektvisning",
+    "projectGallery": "Prosjektgalleri",
+    "aboutThisProject": "Om dette prosjektet",
+    "techStack": "Teknologier",
+    "moreProjects": "Flere prosjekter"
+  },
+  "caseStudy": {
+    "role": "Rolle",
+    "team": "Team",
+    "client": "Klient",
+    "timeline": "Tidsramme",
+    "outcome": "Resultat"
+  },
+  "animationDetails": {
+    "notFound": "Animasjon ikke funnet",
+    "animations": "Animasjoner",
+    "shareAnimation": "Del animasjon",
+    "animation": "Animasjon",
+    "processGallery": "Prosessgalleri",
+    "aboutThisAnimation": "Om denne animasjonen",
+    "toolsUsed": "Verktøy brukt",
+    "moreAnimations": "Flere animasjoner"
+  }
+}

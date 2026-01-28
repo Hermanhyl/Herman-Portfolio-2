@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "home": "Home",
+    "work": "Work",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headline": "UX Designer & Frontend Developer",
+    "subheadline": "I design user experiences — then I build them.",
+    "credibility": "From animation and design to code — I bring a visual storyteller's eye to product design.",
+    "available": "Available for Work",
+    "cta": "View Projects",
+    "ctaSecondary": "Get in Touch",
+    "scrollToExplore": "Scroll to explore",
+    "viewArticles": "View Articles"
+  },
+  "status": {
+    "title": "What I'm Currently Doing",
+    "degree": "Completed Frontend Development degree",
+    "degreeDate": "May 2025",
+    "ai": "Building AI-powered tools",
+    "aiSub": "with Claude API & OpenAI API",
+    "open": "Open to UX/Frontend roles",
+    "openSub": "in Norway",
+    "exploring": "Exploring AI + Design workflows",
+    "exploringSub": "Modern creative tools"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "backToHome": "Back to Home",
+    "share": "Share",
+    "copied": "Link Copied!",
+    "next": "Next",
+    "previous": "Previous",
+    "more": "more"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "connect": "Connect",
+    "tagline": "Front-End Developer & Digital Designer crafting beautiful web experiences.",
+    "rights": "All rights reserved",
+    "builtWith": "Built with"
+  }
+}

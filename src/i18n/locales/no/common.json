@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "home": "Hjem",
+    "work": "Arbeid",
+    "about": "Om meg",
+    "blog": "Blogg",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "headline": "UX-designer & Frontend-utvikler",
+    "subheadline": "Jeg designer brukeropplevelser — så bygger jeg dem.",
+    "credibility": "Fra animasjon og design til kode — jeg bringer en visuell historiefortellers blikk til produktdesign.",
+    "available": "Tilgjengelig for arbeid",
+    "cta": "Se prosjekter",
+    "ctaSecondary": "Ta kontakt",
+    "scrollToExplore": "Scroll for å utforske",
+    "viewArticles": "Se artikler"
+  },
+  "status": {
+    "title": "Hva jeg holder på med",
+    "degree": "Fullført Frontend-utviklerutdanning",
+    "degreeDate": "Mai 2025",
+    "ai": "Bygger AI-drevne verktøy",
+    "aiSub": "med Claude API & OpenAI API",
+    "open": "Åpen for UX/Frontend-stillinger",
+    "openSub": "i Norge",
+    "exploring": "Utforsker AI + Design-arbeidsflyter",
+    "exploringSub": "Moderne kreative verktøy"
+  },
+  "common": {
+    "loading": "Laster...",
+    "error": "Noe gikk galt",
+    "backToHome": "Tilbake til hjem",
+    "share": "Del",
+    "copied": "Lenke kopiert!",
+    "next": "Neste",
+    "previous": "Forrige",
+    "more": "mer"
+  },
+  "footer": {
+    "quickLinks": "Hurtiglenker",
+    "connect": "Kontakt",
+    "tagline": "Frontend-utvikler & Digital designer som skaper vakre nettopplevelser.",
+    "rights": "Alle rettigheter forbeholdt",
+    "builtWith": "Bygget med"
+  }
+}

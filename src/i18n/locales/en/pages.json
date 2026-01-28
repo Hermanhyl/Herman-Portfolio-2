@@ -1,0 +1,167 @@
+{
+  "featuredProjects": {
+    "badge": "Selected Work",
+    "title": "Featured Work",
+    "viewCaseStudy": "View Case Study",
+    "viewAll": "View all my work",
+    "brannvrn": {
+      "tagline": "VR fire safety training for hospital staff",
+      "description": "Designed a VR simulation that teaches hospital employees how to respond to fire emergencies — without the risk. Built through user research with firefighters and healthcare workers."
+    },
+    "hobbyist": {
+      "tagline": "Social platform for hobby-based connections",
+      "description": "Designed and built a social app that helps people find others who share their hobbies — whether that's hiking, board games, or cooking. No swiping, just genuine connections."
+    },
+    "gonefishing": {
+      "tagline": "A personal logbook for anglers",
+      "description": "Designed and developed a PWA that lets fishermen log catches, track locations, and record conditions — available offline for use on the water."
+    }
+  },
+  "work": {
+    "title": "My Work",
+    "description": "A collection of projects showcasing my journey in UX design and frontend development. Each project represents real problem-solving through user research, design thinking, and technical implementation.",
+    "viewProject": "View Project",
+    "caseStudies": "Case Studies",
+    "cards": {
+      "brannvrn": {
+        "teaser": "UX Process & Learning Design in action: A VR fire safety simulator where I designed the complete user experience and pedagogical framework—transforming complex safety procedures into intuitive, educational interactions."
+      },
+      "gonefishing": {
+        "teaser": "User Research in Practice: A fishing tracker app built through conversations with real anglers—addressing pain points in existing apps through iterative design and community feedback."
+      },
+      "hobbyist": {
+        "teaser": "UX-Centered Design: A social platform shaped by conversations with friends and potential users—focusing on simplicity, intuitive navigation, and genuine human connection."
+      },
+      "holidaze": {
+        "teaser": "Holidaze is a cozy booking app for slow-living getaways—browse, book, and unwind in handpicked cabins and retreats."
+      },
+      "auction": {
+        "teaser": "Own The Bid is a fast-paced auction app where users can list, bid, and browse items with ease, no account needed to explore."
+      },
+      "timerPlanner": {
+        "teaser": "A productivity application combining a customizable focus timer with flexible weekly and monthly planning tools, featuring drag-and-drop scheduling."
+      },
+      "piaSalary": {
+        "teaser": "A privacy-focused income tracking application with automatic tax calculations, Excel import/export, and bilingual support—all data stored locally."
+      },
+      "clicketycart": {
+        "teaser": "ClicketyCart is a retro-style eCom store with fast checkout, instant delivery, and smooth shopping powered by the Noroff API."
+      },
+      "communityScience": {
+        "teaser": "My second project as a student—not a reflection of my skills today, but another milestone in my development journey."
+      },
+      "gamehub": {
+        "teaser": "My very first web development project—not a reflection of my skills today, but a reminder of where my journey began."
+      }
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "UI/UX Designer & Frontend Developer",
+    "bio": "I'm a passionate developer and designer based in Norway, combining technical skills with creative vision to build beautiful, functional web experiences.",
+    "location": "Norway / Open to Germany",
+    "role": "Front-End Developer & Digital Designer",
+    "heroDescription": "Bridging technology and art with 2+ years in frontend development and 3+ years in digital design. Creating accessible, interactive web experiences.",
+    "getInTouch": "Get In Touch",
+    "myStory": "My Story",
+    "storyP1": "I'm a <highlight>UX designer and frontend developer</highlight> with a background in game development, animation, and visual communication. Passionate about creating <accent1>engaging, educational experiences</accent1> through user-centered design and creative storytelling.",
+    "storyP2": "My profile uniquely <highlight>bridges design and development</highlight>—combining artistic expertise from The Game School with technical skills from frontend development. This allows me to work seamlessly across the full product lifecycle, <accent2>from concept to code</accent2>.",
+    "storyP3": "From developing <accent1>VR training simulations</accent1> for the healthcare sector to building modern web applications, my work reflects a commitment to creating <accent2>visually appealing products</accent2> that reflect the users' needs—making content accessible and inspiring through thoughtful UX and visual design.",
+    "skillsExpertise": "Skills & Expertise",
+    "whatIWorkWith": "What I Work With",
+    "proficiencyLevels": "Proficiency Levels",
+    "careerPath": "Career Path",
+    "experienceEducation": "Experience & Education",
+    "ctaTitle": "Let's Build Something Amazing",
+    "ctaDescription": "I'm actively looking for frontend development or digital design opportunities where I can grow, collaborate, and contribute to meaningful projects.",
+    "viewMyWork": "View My Work",
+    "exploreMyWork": "Explore My Work",
+    "myProjects": "My Projects",
+    "myIllustrations": "My Illustrations",
+    "myAnimations": "My Animations",
+    "skills": "Skills & Technologies",
+    "experience": "Experience & Education",
+    "stats": {
+      "yearsFrontend": "Years Frontend",
+      "projectsBuilt": "Projects Built",
+      "yearsDesign": "Years Design",
+      "degrees": "Degrees"
+    },
+    "skillCategories": {
+      "development": "Development",
+      "design": "Design",
+      "aiTools": "AI & Tools"
+    },
+    "timeline": {
+      "customerService": "Customer Service Agent",
+      "customerServiceDesc": "Handling insurance cases via phone support. Using Salesforce CRM for case management.",
+      "frontendDev": "Front-End Development",
+      "frontendDevDesc": "2-year vocational degree. Specialized in React, JavaScript, modern web development, and UI/UX design.",
+      "visualDesigner": "Visual Designer",
+      "visualDesignerDesc": "UI/UX design and visual identity. Strategic decisions about color, imagery, and layout.",
+      "bachelorAnim": "Bachelor in Animation & Digital Art",
+      "bachelorAnimDesc": "Technical development with concept art, 3D design, animation, and motion graphics."
+    }
+  },
+  "contact": {
+    "title": "Let's Connect",
+    "subtitle": "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.",
+    "available": "Available for Opportunities",
+    "sendMessage": "Send a Message",
+    "getInTouch": "Get in Touch",
+    "followMe": "Follow Me",
+    "responseTime": "Response Time",
+    "responseDesc": "I typically respond within 24-48 hours. Looking forward to hearing from you!",
+    "successMessage": "Thank you! Your message has been sent successfully. I'll get back to you soon!",
+    "errorMessage": "Oops! Something went wrong. Please try again or email me directly.",
+    "form": {
+      "name": "Your Name",
+      "namePlaceholder": "John Doe",
+      "email": "Your Email",
+      "emailPlaceholder": "john@example.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Failed to send message. Please try again."
+    },
+    "availability": "Currently available for freelance work and full-time positions.",
+    "location": "Based in Norway"
+  },
+  "blog": {
+    "title": "From the Blog",
+    "pageTitle": "My Insights",
+    "badge": "Blog & Insights",
+    "description": "Thoughts on development, design, and AI",
+    "viewAll": "View All Posts",
+    "viewAllPosts": "View All Posts",
+    "readMore": "Read More",
+    "read": "Read",
+    "minRead": "min read",
+    "backToBlog": "Back to Blog",
+    "searchPlaceholder": "Search posts by title, tags, or content...",
+    "clearSearch": "Clear search",
+    "featuredPost": "Featured Post",
+    "recentPosts": "Recent Posts",
+    "searchResults": "Search Results",
+    "noResults": "No results found",
+    "resultsFound": "{{count}} results found",
+    "noPostsFound": "No posts found",
+    "tryDifferentKeywords": "Try searching for different keywords or browse all posts.",
+    "managePosts": "Manage blog posts",
+    "adminLogin": "Admin Login",
+    "addNewPost": "Add New Post",
+    "postNotFoundTitle": "Post Not Found",
+    "postNotFoundDescription": "The blog post you're looking for doesn't exist.",
+    "by": "By",
+    "viewProject": "View Project",
+    "shareThisPost": "Share this post",
+    "shareOnLinkedIn": "Share on LinkedIn",
+    "shareOnTwitter": "Share on Twitter",
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied!",
+    "readNext": "Read Next",
+    "blogPost": "Blog Post"
+  }
+}

@@ -1,12 +1,11 @@
-import { useNavigate, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Briefcase } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 
 /**
- * ProjectsButton - Reusable button that navigates to the Projects/Illustrations section
+ * ProjectsButton - Reusable button that navigates to the Articles section
  *
- * Uses purple/pink gradient styling and handles both same-page scrolling
- * and cross-page navigation with scroll.
+ * Uses purple/pink gradient styling and navigates to /work?view=articles.
  *
  * @param {Object} props - Component props
  * @param {string} props.size - 'sm' | 'md' | 'lg' - Button size variant
@@ -14,8 +13,6 @@ import { Briefcase } from 'lucide-react';
  */
 function ProjectsButton({ size = 'lg', className = '' }) {
   const { t } = useTranslation();
-  const navigate = useNavigate();
-  const location = useLocation();
 
   const sizes = {
     sm: 'px-4 py-2 text-sm',
@@ -23,33 +20,14 @@ function ProjectsButton({ size = 'lg', className = '' }) {
     lg: 'px-8 py-4 text-base',
   };
 
-  const handleClick = () => {
-    if (location.pathname === '/') {
-      // Already on home page, just scroll
-      const projectsSection = document.getElementById('projects');
-      if (projectsSection) {
-        projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    } else {
-      // Navigate to home page, then scroll
-      navigate('/');
-      setTimeout(() => {
-        const projectsSection = document.getElementById('projects');
-        if (projectsSection) {
-          projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 100);
-    }
-  };
-
   return (
-    <button
-      onClick={handleClick}
+    <Link
+      to="/work?view=articles"
       className={`inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 hover:from-purple-500/30 hover:to-pink-500/30 backdrop-blur-sm border border-purple-500/50 hover:border-purple-400 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-black cursor-pointer ${sizes[size]} ${className}`}
     >
-      <Briefcase className="w-5 h-5" aria-hidden="true" />
-      {t('hero.viewProjects')}
-    </button>
+      <BookOpen className="w-5 h-5" aria-hidden="true" />
+      {t('hero.viewArticles')}
+    </Link>
   );
 }
 

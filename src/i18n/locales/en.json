@@ -36,7 +36,8 @@
   "work": {
     "title": "My Work",
     "description": "A collection of projects showcasing my journey in UX design and frontend development. Each project represents real problem-solving through user research, design thinking, and technical implementation.",
-    "viewProject": "View Project"
+    "viewProject": "View Project",
+    "caseStudies": "Case Studies"
   },
   "status": {
     "title": "What I'm Currently Doing",

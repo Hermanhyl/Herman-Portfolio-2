@@ -18,7 +18,7 @@
   "featuredProjects": {
     "badge": "Utvalgte arbeider",
     "title": "Utvalgte arbeider",
-    "viewCaseStudy": "Se casestudie",
+    "viewCaseStudy": "Se case studie",
     "viewAll": "Se alt mitt arbeid",
     "brannvrn": {
       "tagline": "VR-brannsikkerhetstrening for sykehusansatte",
@@ -36,7 +36,8 @@
   "work": {
     "title": "Mitt arbeid",
     "description": "En samling prosjekter som viser min reise innen UX-design og frontend-utvikling. Hvert prosjekt representerer reell problemløsning gjennom brukerundersøkelser, designtenkning og teknisk implementering.",
-    "viewProject": "Se prosjekt"
+    "viewProject": "Se prosjekt",
+    "caseStudies": "Case studier"
   },
   "status": {
     "title": "Hva jeg holder på med",

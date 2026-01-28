@@ -424,7 +424,7 @@ function About() {
                 <GradientButton to="/contact" icon={ArrowRight} size="lg">
                   {t('about.getInTouch')}
                 </GradientButton>
-                <GradientButton to="/#projects" variant="secondary" size="lg">
+                <GradientButton to="/work" variant="secondary" size="lg">
                   {t('about.viewMyWork')}
                 </GradientButton>
               </div>

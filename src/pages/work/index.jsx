@@ -26,6 +26,20 @@ const caseStudyPaths = {
   'project7': '/case-study/gamehub',
 };
 
+// Map project IDs to translation keys for teasers
+const projectTranslationKeys = {
+  'project1': 'brannvrn',
+  'project-gonefishing': 'gonefishing',
+  'project2': 'hobbyist',
+  'project3': 'holidaze',
+  'project4': 'auction',
+  'project-timer-planner': 'timerPlanner',
+  'project-pia-salary': 'piaSalary',
+  'project5': 'clicketycart',
+  'project6': 'communityScience',
+  'project7': 'gamehub',
+};
+
 /**
  * Work card component with alternating layout
  */
@@ -38,6 +52,10 @@ function WorkCard({ project, index }) {
 
   // Get the case study path for this project
   const caseStudyPath = caseStudyPaths[project.id] || `/case-study/${project.id}`;
+
+  // Get the translation key for this project's teaser
+  const translationKey = projectTranslationKeys[project.id];
+  const teaser = translationKey ? t(`work.cards.${translationKey}.teaser`) : (project.teaser || project.description);
 
   return (
     <ScrollReveal delay={index * 100}>
@@ -81,7 +99,7 @@ function WorkCard({ project, index }) {
 
             {/* Teaser/Description */}
             <p className="text-base md:text-lg text-gray-300 leading-relaxed line-clamp-4">
-              {project.teaser || project.description}
+              {teaser}
             </p>
 
             {/* CTA */}

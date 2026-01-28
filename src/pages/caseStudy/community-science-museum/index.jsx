@@ -2,6 +2,7 @@ import PageTransition from '../../../components/pageTransition';
 import OptimizedImage from '../../../components/optimizedImage';
 import BackButton from '../../../components/backButton';
 import useDocumentMeta from '../../../hooks/useDocumentMeta';
+import { useTranslation } from 'react-i18next';
 
 export default function CommunityScienceMuseumCaseStudy() {
   useDocumentMeta({
@@ -9,6 +10,8 @@ export default function CommunityScienceMuseumCaseStudy() {
     description: 'An accessible, responsive museum website designed for younger audiences — my second project at Noroff and an early step in my development journey.',
     url: 'https://hermanhylland.netlify.app/case-study/community-science-museum',
   });
+
+  const { t } = useTranslation();
 
   return (
     <PageTransition>
@@ -50,7 +53,7 @@ export default function CommunityScienceMuseumCaseStudy() {
               <div className="lg:w-[45%] space-y-5 text-center lg:text-left">
                 {/* Tags - inline with separators */}
                 <p className="text-sm font-medium text-emerald-400 tracking-wide">
-                  HTML • CSS • Accessibility
+                  {t('cs.communityScience.tags')}
                 </p>
 
                 {/* Title */}
@@ -60,25 +63,25 @@ export default function CommunityScienceMuseumCaseStudy() {
 
                 {/* Tagline */}
                 <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-                  An accessible, responsive museum website designed for younger audiences — my second project at Noroff and an early step in my development journey.
+                  {t('cs.communityScience.tagline')}
                 </p>
 
                 {/* Metadata - clean typography, no boxes */}
                 <div className="pt-4 space-y-2 text-sm md:text-base">
                   <p>
-                    <span className="text-emerald-400 font-semibold">Role:</span>{' '}
-                    <span className="text-gray-300">Frontend Developer (Student)</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.role')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.communityScience.roleValue')}</span>
                   </p>
                   <p>
-                    <span className="text-emerald-400 font-semibold">Type:</span>{' '}
-                    <span className="text-gray-300">School Assignment</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.type')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.communityScience.typeValue')}</span>
                     <span className="text-gray-600 mx-3">•</span>
-                    <span className="text-emerald-400 font-semibold">Stack:</span>{' '}
-                    <span className="text-gray-300">HTML, CSS</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.stack')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.communityScience.stackValue')}</span>
                   </p>
                   <p>
-                    <span className="text-emerald-400 font-semibold">Context:</span>{' '}
-                    <span className="text-gray-300">Second project at Noroff</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.context')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.communityScience.contextValue')}</span>
                   </p>
                 </div>
 
@@ -86,7 +89,7 @@ export default function CommunityScienceMuseumCaseStudy() {
                 <div className="pt-4">
                   <div className="inline-block bg-amber-500/10 border border-amber-500/30 rounded-lg px-4 py-2">
                     <p className="text-amber-400 text-sm font-medium">
-                      Early learning project — included to show my growth, not my current abilities.
+                      {t('cs.communityScience.noteBadge')}
                     </p>
                   </div>
                 </div>
@@ -101,12 +104,12 @@ export default function CommunityScienceMuseumCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-4">
-              The Brief
+              {t('cs.common.theBrief')}
             </p>
 
             {/* Body text */}
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              Create a modern, accessible website for a community science museum. The target audience was younger visitors, but the design couldn't be childish — it needed to balance excitement with professionalism. This was my first real challenge in thinking about who I was designing for, not just what I was building.
+              {t('cs.communityScience.briefText')}
             </p>
           </div>
         </section>
@@ -116,17 +119,17 @@ export default function CommunityScienceMuseumCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-              What I Was Learning
+              {t('cs.common.whatIWasLearning')}
             </p>
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Building Foundations
+              {t('cs.communityScience.learningHeading')}
             </h2>
 
             {/* Intro paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-12">
-              This was only my second web project. I was still grasping the basics — but each challenge taught me something I'd carry forward.
+              {t('cs.communityScience.learningIntro')}
             </p>
 
             {/* Key lessons - 2x2 grid of cards */}
@@ -134,25 +137,25 @@ export default function CommunityScienceMuseumCaseStudy() {
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">01</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Responsive layouts — making a site work across screen sizes, not just on my laptop
+                  {t('cs.communityScience.lesson1')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">02</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Accessibility basics — semantic HTML, alt text, thinking about users beyond myself
+                  {t('cs.communityScience.lesson2')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">03</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Audience awareness — design decisions should reflect who will actually use the site
+                  {t('cs.communityScience.lesson3')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">04</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Code organization — structuring CSS in a way I could understand later
+                  {t('cs.communityScience.lesson4')}
                 </p>
               </div>
             </div>
@@ -173,17 +176,17 @@ export default function CommunityScienceMuseumCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-              Why It's Here
+              {t('cs.common.whyItsHere')}
             </p>
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Showing the Full Journey
+              {t('cs.communityScience.journeyHeading')}
             </h2>
 
             {/* Body paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed">
-              I include early projects like this one because growth matters. Comparing this to my recent work — Hobbyist, GoneFishing, Timer & Planner — shows what consistent learning looks like over time. Every developer starts somewhere, and I believe in being honest about that journey rather than hiding it.
+              {t('cs.communityScience.journeyText')}
             </p>
           </div>
         </section>
@@ -198,7 +201,7 @@ export default function CommunityScienceMuseumCaseStudy() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
-                View Live Site
+                {t('cs.common.viewLiveSite')}
                 <span aria-hidden="true">→</span>
               </a>
               <a
@@ -207,7 +210,7 @@ export default function CommunityScienceMuseumCaseStudy() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105"
               >
-                View GitHub
+                {t('cs.common.viewGithub')}
                 <span aria-hidden="true">→</span>
               </a>
               <a
@@ -216,7 +219,7 @@ export default function CommunityScienceMuseumCaseStudy() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105"
               >
-                View Figma
+                {t('cs.common.viewFigma')}
                 <span aria-hidden="true">→</span>
               </a>
             </div>

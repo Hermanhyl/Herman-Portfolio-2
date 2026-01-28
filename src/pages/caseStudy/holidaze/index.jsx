@@ -2,8 +2,11 @@ import PageTransition from '../../../components/pageTransition';
 import OptimizedImage from '../../../components/optimizedImage';
 import BackButton from '../../../components/backButton';
 import useDocumentMeta from '../../../hooks/useDocumentMeta';
+import { useTranslation } from 'react-i18next';
 
 export default function HolidazeCaseStudy() {
+  const { t } = useTranslation();
+
   useDocumentMeta({
     title: 'Holidaze Case Study',
     description: 'A cozy booking app for slow-living getaways — browse, book, and unwind in handpicked cabins and retreats.',
@@ -45,7 +48,7 @@ export default function HolidazeCaseStudy() {
               <div className="lg:w-[45%] space-y-5 text-center lg:text-left">
                 {/* Tags - inline with separators */}
                 <p className="text-sm font-medium text-emerald-400 tracking-wide">
-                  React • Vite • Tailwind CSS • Figma
+                  {t('cs.holidaze.tags')}
                 </p>
 
                 {/* Title */}
@@ -55,25 +58,25 @@ export default function HolidazeCaseStudy() {
 
                 {/* Tagline */}
                 <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-                  A cozy booking app for slow-living getaways — browse, book, and unwind in handpicked cabins and retreats.
+                  {t('cs.holidaze.tagline')}
                 </p>
 
                 {/* Metadata - clean typography, no boxes */}
                 <div className="pt-4 space-y-2 text-sm md:text-base">
                   <p>
-                    <span className="text-emerald-400 font-semibold">Role:</span>{' '}
-                    <span className="text-gray-300">Frontend Developer & UI Designer</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.role')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.holidaze.roleValue')}</span>
                   </p>
                   <p>
-                    <span className="text-emerald-400 font-semibold">Team:</span>{' '}
-                    <span className="text-gray-300">3 people</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.team')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.holidaze.teamValue')}</span>
                     <span className="text-gray-600 mx-3">•</span>
-                    <span className="text-emerald-400 font-semibold">Type:</span>{' '}
-                    <span className="text-gray-300">Project Exam</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.type')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.holidaze.typeValue')}</span>
                   </p>
                   <p>
-                    <span className="text-emerald-400 font-semibold">Outcome:</span>{' '}
-                    <span className="text-gray-300">A grade</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.outcome')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.holidaze.outcomeValue')}</span>
                   </p>
                 </div>
               </div>
@@ -87,12 +90,12 @@ export default function HolidazeCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-4">
-              The Challenge
+              {t('cs.common.theChallenge')}
             </p>
 
             {/* Body text */}
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              We were tasked with building a modern accommodation booking platform using the Noroff API. The goal was to create an experience that felt warm and inviting — not like a generic booking site, but something that matched the slow-living escapes it showcased. We also needed to work effectively as a three-person team with clear communication and version control.
+              {t('cs.holidaze.challengeText')}
             </p>
           </div>
         </section>
@@ -102,17 +105,17 @@ export default function HolidazeCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-              Our Approach
+              {t('cs.common.ourApproach')}
             </p>
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Collaboration First
+              {t('cs.holidaze.discoveryHeading')}
             </h2>
 
             {/* Intro paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-12">
-              As a team of three, we divided tasks based on strengths while staying involved in all aspects — planning, design, and development. Clear communication and disciplined GitHub workflows kept us aligned throughout.
+              {t('cs.holidaze.discoveryIntro')}
             </p>
 
             {/* Key points - 2x2 grid of cards */}
@@ -120,25 +123,25 @@ export default function HolidazeCaseStudy() {
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">01</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Divided tasks by strength, but everyone touched design, code, and planning
+                  {t('cs.holidaze.insight1')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">02</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Used GitHub with clear commit messages and documentation to stay in sync
+                  {t('cs.holidaze.insight2')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">03</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Built in React with Tailwind CSS for fast, consistent styling
+                  {t('cs.holidaze.insight3')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">04</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Focused on functionality first, with design implemented from our Figma mockups
+                  {t('cs.holidaze.insight4')}
                 </p>
               </div>
             </div>
@@ -159,17 +162,17 @@ export default function HolidazeCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-              Design Approach
+              {t('cs.common.designApproach')}
             </p>
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Warm, Cozy, and Easy to Use
+              {t('cs.holidaze.designHeading')}
             </h2>
 
             {/* Intro paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-16">
-              The visual design needed to reflect the product — peaceful getaways, not corporate travel. We used warm colors, soft typography, and generous whitespace to create a calm browsing experience.
+              {t('cs.holidaze.designIntro')}
             </p>
           </div>
 
@@ -178,9 +181,9 @@ export default function HolidazeCaseStudy() {
             {/* Principle 1 */}
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-3">Inviting Visual Language</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">{t('cs.holidaze.principle1Title')}</h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                  Earthy tones, rounded corners, and cozy imagery create an atmosphere that matches the slow-living retreats users are booking.
+                  {t('cs.holidaze.principle1Desc')}
                 </p>
               </div>
               <div className="rounded-2xl overflow-hidden max-w-md mx-auto">
@@ -195,9 +198,9 @@ export default function HolidazeCaseStudy() {
             {/* Principle 2 */}
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-3">Clear Booking Flow</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">{t('cs.holidaze.principle2Title')}</h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                  Users can browse, view details, and book with minimal friction. The interface guides them step by step without overwhelming.
+                  {t('cs.holidaze.principle2Desc')}
                 </p>
               </div>
               <div className="rounded-2xl overflow-hidden">
@@ -212,9 +215,9 @@ export default function HolidazeCaseStudy() {
             {/* Principle 3 */}
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-3">Responsive Across Devices</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">{t('cs.holidaze.principle3Title')}</h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                  Built mobile-first with Tailwind, ensuring the experience feels native whether you're browsing on your phone or desktop.
+                  {t('cs.holidaze.principle3Desc')}
                 </p>
               </div>
               <div className="rounded-2xl overflow-hidden">
@@ -233,17 +236,17 @@ export default function HolidazeCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-              The Result
+              {t('cs.common.theResult')}
             </p>
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              A Project We're Proud Of
+              {t('cs.holidaze.resultHeading')}
             </h2>
 
             {/* Body paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-12">
-              We delivered a fully functional booking platform that earned an A grade. More importantly, we learned how to collaborate effectively as a team — dividing work, communicating clearly, and maintaining code quality throughout. The project also highlighted areas for growth, including better error handling and accessibility improvements we'd prioritize in future work.
+              {t('cs.holidaze.resultText')}
             </p>
 
             {/* Takeaway cards */}
@@ -251,19 +254,19 @@ export default function HolidazeCaseStudy() {
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">01</span>
                 <p className="text-white text-lg leading-relaxed">
-                  Team collaboration requires clear communication and disciplined workflows
+                  {t('cs.holidaze.takeaway1')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">02</span>
                 <p className="text-white text-lg leading-relaxed">
-                  Consistent styling frameworks like Tailwind accelerate development
+                  {t('cs.holidaze.takeaway2')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">03</span>
                 <p className="text-white text-lg leading-relaxed">
-                  Recognizing areas for improvement is part of delivering good work
+                  {t('cs.holidaze.takeaway3')}
                 </p>
               </div>
             </div>
@@ -276,7 +279,7 @@ export default function HolidazeCaseStudy() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
-                View Live Site
+                {t('cs.common.viewLiveSite')}
                 <span aria-hidden="true">→</span>
               </a>
               <a
@@ -285,7 +288,7 @@ export default function HolidazeCaseStudy() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105"
               >
-                View GitHub
+                {t('cs.common.viewGithub')}
                 <span aria-hidden="true">→</span>
               </a>
               <a
@@ -294,7 +297,7 @@ export default function HolidazeCaseStudy() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105"
               >
-                View Figma
+                {t('cs.common.viewFigma')}
                 <span aria-hidden="true">→</span>
               </a>
             </div>

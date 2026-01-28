@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import PageTransition from '../../../components/pageTransition';
 import OptimizedImage from '../../../components/optimizedImage';
 import BackButton from '../../../components/backButton';
@@ -9,6 +10,8 @@ export default function BrannVRnCaseStudy() {
     description: 'A VR fire safety simulator that teaches hospital staff to respond to emergencies — without the risk.',
     url: 'https://hermanhylland.netlify.app/case-study/brannvrn',
   });
+
+  const { t } = useTranslation();
 
   return (
     <PageTransition>
@@ -50,7 +53,7 @@ export default function BrannVRnCaseStudy() {
               <div className="lg:w-[45%] space-y-5 text-center lg:text-left">
                 {/* Tags - inline with separators */}
                 <p className="text-sm font-medium text-emerald-400 tracking-wide">
-                  UX Design • User Research • VR
+                  {t('cs.brannvrn.tags')}
                 </p>
 
                 {/* Title */}
@@ -60,28 +63,28 @@ export default function BrannVRnCaseStudy() {
 
                 {/* Tagline */}
                 <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-                  A VR fire safety simulator that teaches hospital staff to respond to emergencies — without the risk.
+                  {t('cs.brannvrn.tagline')}
                 </p>
 
                 {/* Metadata - clean typography, no boxes */}
                 <div className="pt-4 space-y-2 text-sm md:text-base">
                   <p>
-                    <span className="text-emerald-400 font-semibold">Role:</span>{' '}
-                    <span className="text-gray-300">UI/UX Designer & Concept Artist</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.role')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.brannvrn.roleValue')}</span>
                   </p>
                   <p>
-                    <span className="text-emerald-400 font-semibold">Team:</span>{' '}
-                    <span className="text-gray-300">3 people</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.team')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.brannvrn.teamValue')}</span>
                     <span className="text-gray-600 mx-3">•</span>
-                    <span className="text-emerald-400 font-semibold">Client:</span>{' '}
-                    <span className="text-gray-300">Sykehuspartner</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.client')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.brannvrn.clientValue')}</span>
                   </p>
                   <p>
-                    <span className="text-emerald-400 font-semibold">Timeline:</span>{' '}
-                    <span className="text-gray-300">6 months</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.timeline')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.brannvrn.timelineValue')}</span>
                     <span className="text-gray-600 mx-3">•</span>
-                    <span className="text-emerald-400 font-semibold">Outcome:</span>{' '}
-                    <span className="text-gray-300">A grade, delivered to client</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.outcome')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.brannvrn.outcomeValue')}</span>
                   </p>
                 </div>
               </div>
@@ -95,12 +98,12 @@ export default function BrannVRnCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-4">
-              The Challenge
+              {t('cs.common.theChallenge')}
             </p>
 
             {/* Body text */}
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              Hospital employees need fire safety training, but real drills are disruptive and risky. Sykehuspartner wanted a way to train staff in realistic emergency scenarios — letting them practice using fire extinguishers, following evacuation routes, and making quick decisions — all without any real danger.
+              {t('cs.brannvrn.challengeText')}
             </p>
           </div>
         </section>
@@ -110,17 +113,17 @@ export default function BrannVRnCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-              Research
+              {t('cs.common.research')}
             </p>
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              What We Learned from Firefighters
+              {t('cs.brannvrn.discoveryHeading')}
             </h2>
 
             {/* Intro paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-12">
-              We spent a day at the local fire station consulting directly with firefighters. Their real-world expertise shaped our entire design approach.
+              {t('cs.brannvrn.discoveryIntro')}
             </p>
 
             {/* Key insights - 2x2 grid of cards */}
@@ -128,25 +131,25 @@ export default function BrannVRnCaseStudy() {
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">01</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Untrained people make predictable mistakes — we designed our tutorials around preventing these
+                  {t('cs.brannvrn.insight1')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">02</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Panic overrides knowledge, so repetition and muscle memory matter more than information
+                  {t('cs.brannvrn.insight2')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">03</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Escape routes need to be learned spatially, not just memorized from a floor plan
+                  {t('cs.brannvrn.insight3')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">04</span>
                 <p className="text-white leading-relaxed text-lg">
-                  The right equipment depends on the situation — we taught decision-making, not just procedures
+                  {t('cs.brannvrn.insight4')}
                 </p>
               </div>
             </div>
@@ -167,17 +170,17 @@ export default function BrannVRnCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-              Design Approach
+              {t('cs.common.designApproach')}
             </p>
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Learning That Feels Effortless
+              {t('cs.brannvrn.designHeading')}
             </h2>
 
             {/* Intro paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-16">
-              This wasn't just a simulation — it was an educational tool that needed to teach life-saving skills. Every design decision focused on helping users absorb knowledge naturally while immersed in the experience.
+              {t('cs.brannvrn.designIntro')}
             </p>
           </div>
 
@@ -186,9 +189,9 @@ export default function BrannVRnCaseStudy() {
             {/* Principle 1 */}
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-3">Progressive Disclosure</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">{t('cs.brannvrn.principle1Title')}</h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                  Information is revealed in stages to prevent overload. Users learn one concept at a time before moving forward.
+                  {t('cs.brannvrn.principle1Desc')}
                 </p>
               </div>
               <div className="rounded-2xl overflow-hidden">
@@ -203,9 +206,9 @@ export default function BrannVRnCaseStudy() {
             {/* Principle 2 */}
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-3">Contextual Learning</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">{t('cs.brannvrn.principle2Title')}</h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                  Educational content appears exactly where it's needed — integrated into the environment rather than interrupting the experience.
+                  {t('cs.brannvrn.principle2Desc')}
                 </p>
               </div>
               <div className="rounded-2xl overflow-hidden">
@@ -220,9 +223,9 @@ export default function BrannVRnCaseStudy() {
             {/* Principle 3 */}
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-3">Learn Then Practice</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">{t('cs.brannvrn.principle3Title')}</h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                  Users read about equipment first, then immediately use it hands-on — reinforcing knowledge through action.
+                  {t('cs.brannvrn.principle3Desc')}
                 </p>
               </div>
               <div className="rounded-2xl overflow-hidden">
@@ -241,34 +244,34 @@ export default function BrannVRnCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-              The Result
+              {t('cs.common.theResult')}
             </p>
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              A Training Tool That Teaches
+              {t('cs.brannvrn.resultHeading')}
             </h2>
 
             {/* Body paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-12">
-              We delivered a fully functional VR fire safety simulator to Sykehuspartner. The project received an A grade and demonstrated that VR can effectively teach complex safety procedures in a way that's engaging, memorable, and risk-free. The experience taught me that the best educational tools balance technical accuracy with genuine empathy for how people learn under pressure.
+              {t('cs.brannvrn.resultText')}
             </p>
 
             {/* Key takeaways */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-12">
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <p className="text-white text-lg leading-relaxed">
-                  User research transforms assumptions into real insight
+                  {t('cs.brannvrn.takeaway1')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <p className="text-white text-lg leading-relaxed">
-                  Learning design requires empathy for how people absorb information
+                  {t('cs.brannvrn.takeaway2')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <p className="text-white text-lg leading-relaxed">
-                  Cross-functional collaboration produces better outcomes
+                  {t('cs.brannvrn.takeaway3')}
                 </p>
               </div>
             </div>

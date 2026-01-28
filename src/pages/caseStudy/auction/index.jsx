@@ -2,6 +2,7 @@ import PageTransition from '../../../components/pageTransition';
 import OptimizedImage from '../../../components/optimizedImage';
 import BackButton from '../../../components/backButton';
 import useDocumentMeta from '../../../hooks/useDocumentMeta';
+import { useTranslation } from 'react-i18next';
 
 export default function AuctionCaseStudy() {
   useDocumentMeta({
@@ -9,6 +10,8 @@ export default function AuctionCaseStudy() {
     description: 'A web-based auction platform where users can create listings, place bids, and manage their credits in real-time.',
     url: 'https://hermanhylland.netlify.app/case-study/auction',
   });
+
+  const { t } = useTranslation();
 
   return (
     <PageTransition>
@@ -45,7 +48,7 @@ export default function AuctionCaseStudy() {
               <div className="lg:w-[45%] space-y-5 text-center lg:text-left">
                 {/* Tags - inline with separators */}
                 <p className="text-sm font-medium text-emerald-400 tracking-wide">
-                  UX Design • Frontend Development • JavaScript
+                  {t('cs.auction.tags')}
                 </p>
 
                 {/* Title */}
@@ -55,25 +58,25 @@ export default function AuctionCaseStudy() {
 
                 {/* Tagline */}
                 <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-                  A web-based auction platform where users can create listings, place bids, and manage their credits in real-time.
+                  {t('cs.auction.tagline')}
                 </p>
 
                 {/* Metadata - clean typography, no boxes */}
                 <div className="pt-4 space-y-2 text-sm md:text-base">
                   <p>
-                    <span className="text-emerald-400 font-semibold">Role:</span>{' '}
-                    <span className="text-gray-300">UX Designer & Frontend Developer</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.role')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.auction.roleValue')}</span>
                   </p>
                   <p>
-                    <span className="text-emerald-400 font-semibold">Type:</span>{' '}
-                    <span className="text-gray-300">Semester Project</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.type')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.auction.typeValue')}</span>
                     <span className="text-gray-600 mx-3">•</span>
-                    <span className="text-emerald-400 font-semibold">Stack:</span>{' '}
-                    <span className="text-gray-300">JavaScript, HTML, CSS</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.stack')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.auction.stackValue')}</span>
                   </p>
                   <p>
-                    <span className="text-emerald-400 font-semibold">Outcome:</span>{' '}
-                    <span className="text-gray-300">A grade</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.outcome')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.auction.outcomeValue')}</span>
                   </p>
                 </div>
               </div>
@@ -87,12 +90,12 @@ export default function AuctionCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-4">
-              The Challenge
+              {t('cs.common.theChallenge')}
             </p>
 
             {/* Body text */}
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              Build a fully functional auction platform where users can register, create timed listings with images and descriptions, and bid on items. The site needed to handle real-time credit management and provide a smooth experience for both registered users and casual browsers.
+              {t('cs.auction.challengeText')}
             </p>
           </div>
         </section>
@@ -102,17 +105,17 @@ export default function AuctionCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-              Discovery
+              {t('cs.common.discovery')}
             </p>
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Understanding Auction Behavior
+              {t('cs.auction.discoveryHeading')}
             </h2>
 
             {/* Intro paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-12">
-              Auction platforms create urgency and competition. I needed to understand what makes users trust a listing, how they decide to bid, and what information they need to act quickly.
+              {t('cs.auction.discoveryIntro')}
             </p>
 
             {/* Key insights - 2x2 grid of cards */}
@@ -120,25 +123,25 @@ export default function AuctionCaseStudy() {
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">01</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Trust is everything — users need to see clear images, descriptions, and seller info before risking credits
+                  {t('cs.auction.insight1')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">02</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Time pressure drives action — visible deadlines and countdowns create urgency to bid now
+                  {t('cs.auction.insight2')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">03</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Credits must feel tangible — users need to always know their balance and what they can afford
+                  {t('cs.auction.insight3')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">04</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Browsing before committing — unregistered users should explore freely to build interest
+                  {t('cs.auction.insight4')}
                 </p>
               </div>
             </div>
@@ -159,17 +162,17 @@ export default function AuctionCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-              Design Approach
+              {t('cs.common.designApproach')}
             </p>
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Designed for Trust and Speed
+              {t('cs.auction.designHeading')}
             </h2>
 
             {/* Intro paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-16">
-              Every design decision focused on helping users make confident bidding decisions quickly.
+              {t('cs.auction.designIntro')}
             </p>
           </div>
 
@@ -178,9 +181,9 @@ export default function AuctionCaseStudy() {
             {/* Principle 1 */}
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-3">Clear Listing Information</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">{t('cs.auction.principle1Title')}</h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                  Each listing shows images, description, current bid, time remaining, and seller details — everything needed to decide at a glance.
+                  {t('cs.auction.principle1Desc')}
                 </p>
               </div>
               <div className="flex justify-center">
@@ -197,9 +200,9 @@ export default function AuctionCaseStudy() {
             {/* Principle 2 */}
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-3">Visible Credit Balance</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">{t('cs.auction.principle2Title')}</h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                  Users always see their available credits, so they know what they can bid without checking a separate page.
+                  {t('cs.auction.principle2Desc')}
                 </p>
               </div>
               <div className="flex justify-center">
@@ -216,9 +219,9 @@ export default function AuctionCaseStudy() {
             {/* Principle 3 */}
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-3">Frictionless Browsing</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">{t('cs.auction.principle3Title')}</h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                  Unregistered users can search and view listings freely. Registration is only required to bid, lowering the barrier to exploration.
+                  {t('cs.auction.principle3Desc')}
                 </p>
               </div>
               <div className="rounded-2xl overflow-hidden">
@@ -237,17 +240,17 @@ export default function AuctionCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-              The Result
+              {t('cs.common.theResult')}
             </p>
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              A Platform That Builds Confidence
+              {t('cs.auction.resultHeading')}
             </h2>
 
             {/* Body paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-12">
-              The project earned an A grade. After submission, I revisited the code to improve error handling and form validation — ensuring users get clear feedback when something goes wrong. It reinforced that good UX extends into the details: how errors are communicated, how forms guide input, how layouts stay consistent.
+              {t('cs.auction.resultText')}
             </p>
 
             {/* Takeaway cards */}
@@ -255,19 +258,19 @@ export default function AuctionCaseStudy() {
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6 text-left">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">01</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Auction UX is about enabling fast, confident decisions
+                  {t('cs.auction.takeaway1')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6 text-left">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">02</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Trust signals — images, seller info, clear deadlines — reduce hesitation
+                  {t('cs.auction.takeaway2')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6 text-left">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">03</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Post-launch iteration is part of the design process
+                  {t('cs.auction.takeaway3')}
                 </p>
               </div>
             </div>
@@ -280,7 +283,7 @@ export default function AuctionCaseStudy() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
-                View Live Site
+                {t('cs.common.viewLiveSite')}
                 <span aria-hidden="true">→</span>
               </a>
               <a
@@ -289,7 +292,7 @@ export default function AuctionCaseStudy() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105"
               >
-                View GitHub
+                {t('cs.common.viewGithub')}
                 <span aria-hidden="true">→</span>
               </a>
               <a
@@ -298,7 +301,7 @@ export default function AuctionCaseStudy() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105"
               >
-                View Figma
+                {t('cs.common.viewFigma')}
                 <span aria-hidden="true">→</span>
               </a>
             </div>

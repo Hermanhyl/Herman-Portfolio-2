@@ -2,6 +2,7 @@ import PageTransition from '../../../components/pageTransition';
 import OptimizedImage from '../../../components/optimizedImage';
 import BackButton from '../../../components/backButton';
 import useDocumentMeta from '../../../hooks/useDocumentMeta';
+import { useTranslation } from 'react-i18next';
 
 export default function HobbyistCaseStudy() {
   useDocumentMeta({
@@ -9,6 +10,8 @@ export default function HobbyistCaseStudy() {
     description: 'A social platform that helps people find others who share their hobbies — no swiping, just genuine connections.',
     url: 'https://hermanhylland.netlify.app/case-study/hobbyist',
   });
+
+  const { t } = useTranslation();
 
   return (
     <PageTransition>
@@ -50,7 +53,7 @@ export default function HobbyistCaseStudy() {
               <div className="lg:w-[45%] space-y-5 text-center lg:text-left">
                 {/* Tags - inline with separators */}
                 <p className="text-sm font-medium text-emerald-400 tracking-wide">
-                  UX Design • Frontend Development • React
+                  {t('cs.hobbyist.tags')}
                 </p>
 
                 {/* Title */}
@@ -60,25 +63,25 @@ export default function HobbyistCaseStudy() {
 
                 {/* Tagline */}
                 <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-                  A social platform that helps people find others who share their hobbies — no swiping, just genuine connections.
+                  {t('cs.hobbyist.tagline')}
                 </p>
 
                 {/* Metadata - clean typography, no boxes */}
                 <div className="pt-4 space-y-2 text-sm md:text-base">
                   <p>
-                    <span className="text-emerald-400 font-semibold">Role:</span>{' '}
-                    <span className="text-gray-300">UX Designer & Frontend Developer</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.role')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.hobbyist.roleValue')}</span>
                   </p>
                   <p>
-                    <span className="text-emerald-400 font-semibold">Type:</span>{' '}
-                    <span className="text-gray-300">Personal Project</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.type')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.hobbyist.typeValue')}</span>
                     <span className="text-gray-600 mx-3">•</span>
-                    <span className="text-emerald-400 font-semibold">Status:</span>{' '}
-                    <span className="text-gray-300">In development</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.status')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.hobbyist.statusValue')}</span>
                   </p>
                   <p>
-                    <span className="text-emerald-400 font-semibold">Stack:</span>{' '}
-                    <span className="text-gray-300">React, TypeScript, Tailwind CSS</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.stack')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.hobbyist.stackValue')}</span>
                   </p>
                 </div>
               </div>
@@ -92,12 +95,12 @@ export default function HobbyistCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-4">
-              The Challenge
+              {t('cs.common.theChallenge')}
             </p>
 
             {/* Body text */}
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              Making friends as an adult is hard — especially around specific hobbies. Dating apps have solved matching for romance, but there's no good way to find a hiking buddy, a board game group, or someone to practice a language with. Hobbyist aims to fill that gap with activity-first connections.
+              {t('cs.hobbyist.challengeText')}
             </p>
           </div>
         </section>
@@ -107,17 +110,17 @@ export default function HobbyistCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-              Discovery
+              {t('cs.common.discovery')}
             </p>
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Understanding the Problem Space
+              {t('cs.hobbyist.discoveryHeading')}
             </h2>
 
             {/* Intro paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-12">
-              Before designing, I explored why existing solutions fall short. What makes finding hobby partners different from dating or general social networking?
+              {t('cs.hobbyist.discoveryIntro')}
             </p>
 
             {/* Key insights - 2x2 grid of cards */}
@@ -125,25 +128,25 @@ export default function HobbyistCaseStudy() {
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">01</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Dating app mechanics feel wrong for friendships — swiping creates pressure and awkwardness
+                  {t('cs.hobbyist.insight1')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">02</span>
                 <p className="text-white leading-relaxed text-lg">
-                  People want to do activities together, not just chat — the hobby should be the focus, not the profile
+                  {t('cs.hobbyist.insight2')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">03</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Trust matters — users need to feel safe meeting strangers around shared interests
+                  {t('cs.hobbyist.insight3')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">04</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Scheduling is a barrier — even interested people fail to connect if coordinating is too hard
+                  {t('cs.hobbyist.insight4')}
                 </p>
               </div>
             </div>
@@ -164,17 +167,17 @@ export default function HobbyistCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-              Design Approach
+              {t('cs.common.designApproach')}
             </p>
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Activity-First, Not Profile-First
+              {t('cs.hobbyist.designHeading')}
             </h2>
 
             {/* Intro paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-16">
-              Instead of browsing people and hoping they share your interests, Hobbyist flips the model. You browse activities and find people through the things you want to do together.
+              {t('cs.hobbyist.designIntro')}
             </p>
           </div>
 
@@ -183,9 +186,9 @@ export default function HobbyistCaseStudy() {
             {/* Principle 1 */}
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-3">Activities as the Core</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">{t('cs.hobbyist.principle1Title')}</h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                  Users create or browse activities — like "Sunday morning hike" or "Board game night" — and join based on interest. The activity is the anchor, not the person.
+                  {t('cs.hobbyist.principle1Desc')}
                 </p>
               </div>
               <div className="rounded-2xl overflow-hidden max-w-xs mx-auto">
@@ -201,9 +204,9 @@ export default function HobbyistCaseStudy() {
             {/* Principle 2 */}
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-3">Built-in Safety</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">{t('cs.hobbyist.principle2Title')}</h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                  Meeting strangers can feel risky. Hobbyist includes safety tips, optional identity verification, and activity reviews to build trust over time.
+                  {t('cs.hobbyist.principle2Desc')}
                 </p>
               </div>
               <div className="rounded-2xl overflow-hidden max-w-xs mx-auto">
@@ -219,9 +222,9 @@ export default function HobbyistCaseStudy() {
             {/* Principle 3 */}
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-3">Simple Coordination</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">{t('cs.hobbyist.principle3Title')}</h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                  Once matched to an activity, users have a clear path to confirm attendance, message the group, and see logistics — reducing the friction that kills plans.
+                  {t('cs.hobbyist.principle3Desc')}
                 </p>
               </div>
               <div className="rounded-2xl overflow-hidden max-w-xs mx-auto">
@@ -241,17 +244,17 @@ export default function HobbyistCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-              AI Integration
+              {t('cs.common.aiIntegration')}
             </p>
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              An AI Concierge for Activities
+              {t('cs.hobbyist.aiHeading')}
             </h2>
 
             {/* Intro paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-16">
-              Finding the right activity shouldn't feel like work. I integrated an AI chat feature that acts as a personal concierge — helping users discover activities based on their interests, availability, and location. It's a conversational way to explore options without endless scrolling and filtering.
+              {t('cs.hobbyist.aiIntro')}
             </p>
           </div>
 
@@ -259,9 +262,9 @@ export default function HobbyistCaseStudy() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-3">Natural Conversation</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">{t('cs.hobbyist.aiFeatureTitle')}</h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                  Users can chat naturally — "I want to do something outdoors this weekend" or "Find me a board game group near Dresden" — and the AI suggests relevant activities. It learns from preferences over time, making recommendations more personal the more you use it.
+                  {t('cs.hobbyist.aiFeatureDesc')}
                 </p>
               </div>
               <div className="rounded-2xl overflow-hidden max-w-xs mx-auto">
@@ -281,17 +284,17 @@ export default function HobbyistCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-              The Result
+              {t('cs.common.theResult')}
             </p>
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              A Platform Taking Shape
+              {t('cs.hobbyist.resultHeading')}
             </h2>
 
             {/* Body paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-12">
-              Hobbyist is currently in development, with core features designed and built in React and TypeScript. The project has pushed me to think deeply about social dynamics, trust, and how digital products can facilitate real-world connection. It's also been a hands-on exercise in building a full product — from UX research and design through to frontend implementation.
+              {t('cs.hobbyist.resultText')}
             </p>
 
             {/* Key takeaways */}
@@ -299,19 +302,19 @@ export default function HobbyistCaseStudy() {
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6 text-left">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">01</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Designing for social interaction requires understanding psychology, not just usability
+                  {t('cs.hobbyist.takeaway1')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6 text-left">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">02</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Personal projects let you own the entire process — research, design, and code
+                  {t('cs.hobbyist.takeaway2')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6 text-left">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">03</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Building in public keeps momentum and invites feedback
+                  {t('cs.hobbyist.takeaway3')}
                 </p>
               </div>
             </div>
@@ -323,7 +326,7 @@ export default function HobbyistCaseStudy() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
-              View Live Demo
+              {t('cs.common.viewLiveDemo')}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>

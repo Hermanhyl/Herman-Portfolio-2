@@ -2,8 +2,11 @@ import PageTransition from '../../../components/pageTransition';
 import OptimizedImage from '../../../components/optimizedImage';
 import BackButton from '../../../components/backButton';
 import useDocumentMeta from '../../../hooks/useDocumentMeta';
+import { useTranslation } from 'react-i18next';
 
 export default function ClicketyCartCaseStudy() {
+  const { t } = useTranslation();
+
   useDocumentMeta({
     title: 'ClicketyCart Case Study',
     description: 'A retro-inspired e-commerce storefront with a fast, playful checkout experience — built to make online shopping feel effortless.',
@@ -50,7 +53,7 @@ export default function ClicketyCartCaseStudy() {
               <div className="lg:w-[45%] space-y-5 text-center lg:text-left">
                 {/* Tags - inline with separators */}
                 <p className="text-sm font-medium text-emerald-400 tracking-wide">
-                  UX Design • Frontend Development • React
+                  {t('cs.clicketycart.tags')}
                 </p>
 
                 {/* Title */}
@@ -60,25 +63,25 @@ export default function ClicketyCartCaseStudy() {
 
                 {/* Tagline */}
                 <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-                  A retro-inspired e-commerce storefront with a fast, playful checkout experience — built to make online shopping feel effortless.
+                  {t('cs.clicketycart.tagline')}
                 </p>
 
                 {/* Metadata - clean typography, no boxes */}
                 <div className="pt-4 space-y-2 text-sm md:text-base">
                   <p>
-                    <span className="text-emerald-400 font-semibold">Role:</span>{' '}
-                    <span className="text-gray-300">UX Designer & Frontend Developer</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.role')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.clicketycart.roleValue')}</span>
                   </p>
                   <p>
-                    <span className="text-emerald-400 font-semibold">Team:</span>{' '}
-                    <span className="text-gray-300">Herman Hylland, Madelen Sletteberg</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.team')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.clicketycart.teamValue')}</span>
                   </p>
                   <p>
-                    <span className="text-emerald-400 font-semibold">Stack:</span>{' '}
-                    <span className="text-gray-300">React, JavaScript, Noroff API</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.stack')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.clicketycart.stackValue')}</span>
                     <span className="text-gray-600 mx-3">•</span>
-                    <span className="text-emerald-400 font-semibold">Type:</span>{' '}
-                    <span className="text-gray-300">Project Assignment</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.type')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.clicketycart.typeValue')}</span>
                   </p>
                 </div>
               </div>
@@ -92,12 +95,12 @@ export default function ClicketyCartCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-4">
-              The Challenge
+              {t('cs.common.theChallenge')}
             </p>
 
             {/* Body text */}
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              Build a functional e-commerce frontend that connects to the Noroff API — handling products, cart management, and checkout. Beyond the technical requirements, we wanted to create something with personality: a retro-inspired design that makes shopping feel quick and fun, not like a chore.
+              {t('cs.clicketycart.challengeText')}
             </p>
           </div>
         </section>
@@ -107,17 +110,17 @@ export default function ClicketyCartCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-              Discovery
+              {t('cs.common.discovery')}
             </p>
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              What Makes Online Shopping Feel Good
+              {t('cs.clicketycart.discoveryHeading')}
             </h2>
 
             {/* Intro paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-12">
-              E-commerce is a solved problem technically, but most stores feel interchangeable. We explored what makes a shopping experience memorable and frictionless.
+              {t('cs.clicketycart.discoveryIntro')}
             </p>
 
             {/* Key insights - 2x2 grid of cards */}
@@ -125,25 +128,25 @@ export default function ClicketyCartCaseStudy() {
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">01</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Speed is trust — slow interfaces make users doubt whether their actions registered
+                  {t('cs.clicketycart.insight1')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">02</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Personality differentiates — a distinctive visual style makes a store memorable
+                  {t('cs.clicketycart.insight2')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">03</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Navigation should be invisible — users expect the logo to go home, the cart to show items, no surprises
+                  {t('cs.clicketycart.insight3')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">04</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Accessibility is baseline — forms need proper structure, interactions need keyboard support
+                  {t('cs.clicketycart.insight4')}
                 </p>
               </div>
             </div>
@@ -164,17 +167,17 @@ export default function ClicketyCartCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-              Design Approach
+              {t('cs.common.designApproach')}
             </p>
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Fast, Fun, and Familiar
+              {t('cs.clicketycart.designHeading')}
             </h2>
 
             {/* Intro paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-16">
-              We balanced a playful retro aesthetic with e-commerce conventions users already know. The design stands out visually while the interactions feel intuitive.
+              {t('cs.clicketycart.designIntro')}
             </p>
           </div>
 
@@ -183,9 +186,9 @@ export default function ClicketyCartCaseStudy() {
             {/* Principle 1 */}
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-3">Retro Visual Identity</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">{t('cs.clicketycart.principle1Title')}</h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                  Bold colors, playful typography, and vintage-inspired elements give ClicketyCart a personality that stands apart from generic storefronts.
+                  {t('cs.clicketycart.principle1Desc')}
                 </p>
               </div>
               <div className="flex justify-center">
@@ -202,9 +205,9 @@ export default function ClicketyCartCaseStudy() {
             {/* Principle 2 */}
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-3">Streamlined Checkout</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">{t('cs.clicketycart.principle2Title')}</h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                  Cart updates instantly, totals are always visible, and checkout flows in a clear sequence. No surprises, no friction.
+                  {t('cs.clicketycart.principle2Desc')}
                 </p>
               </div>
               <div className="flex justify-center">
@@ -221,9 +224,9 @@ export default function ClicketyCartCaseStudy() {
             {/* Principle 3 */}
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-3">Expected Navigation Patterns</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">{t('cs.clicketycart.principle3Title')}</h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                  The logo links home, the cart icon shows item count, categories are one click away. Users never have to think about how to get around.
+                  {t('cs.clicketycart.principle3Desc')}
                 </p>
               </div>
               <div className="flex justify-center">
@@ -244,17 +247,17 @@ export default function ClicketyCartCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-              The Result
+              {t('cs.common.theResult')}
             </p>
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              A Store With Character
+              {t('cs.clicketycart.resultHeading')}
             </h2>
 
             {/* Body paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-12">
-              We delivered a fully functional e-commerce frontend with a distinctive visual identity. After submission, I revisited the project to improve accessibility — wrapping inputs in proper form elements — and added documentation for maintainability. Small details like making the logo clickable reinforced that good UX often means meeting expectations users don't consciously notice.
+              {t('cs.clicketycart.resultText')}
             </p>
 
             {/* Takeaway cards */}
@@ -262,19 +265,19 @@ export default function ClicketyCartCaseStudy() {
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6 text-left">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">01</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Visual personality and usability aren't trade-offs — you can have both
+                  {t('cs.clicketycart.takeaway1')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6 text-left">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">02</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Accessibility fixes are often small but impact real users significantly
+                  {t('cs.clicketycart.takeaway2')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6 text-left">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">03</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Revisiting projects after submission builds better habits than moving on immediately
+                  {t('cs.clicketycart.takeaway3')}
                 </p>
               </div>
             </div>
@@ -287,7 +290,7 @@ export default function ClicketyCartCaseStudy() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
-                View Live Site
+                {t('cs.common.viewLiveSite')}
                 <span aria-hidden="true">→</span>
               </a>
               <a
@@ -296,7 +299,7 @@ export default function ClicketyCartCaseStudy() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105"
               >
-                View GitHub
+                {t('cs.common.viewGithub')}
                 <span aria-hidden="true">→</span>
               </a>
               <a
@@ -305,7 +308,7 @@ export default function ClicketyCartCaseStudy() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105"
               >
-                View Figma
+                {t('cs.common.viewFigma')}
                 <span aria-hidden="true">→</span>
               </a>
             </div>

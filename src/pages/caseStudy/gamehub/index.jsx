@@ -2,8 +2,11 @@ import PageTransition from '../../../components/pageTransition';
 import OptimizedImage from '../../../components/optimizedImage';
 import BackButton from '../../../components/backButton';
 import useDocumentMeta from '../../../hooks/useDocumentMeta';
+import { useTranslation } from 'react-i18next';
 
 export default function GameHubCaseStudy() {
+  const { t } = useTranslation();
+
   useDocumentMeta({
     title: 'GameHub Case Study',
     description: 'My very first web development project — where it all began.',
@@ -50,7 +53,7 @@ export default function GameHubCaseStudy() {
               <div className="lg:w-[45%] space-y-5 text-center lg:text-left">
                 {/* Tags - inline with separators */}
                 <p className="text-sm font-medium text-emerald-400 tracking-wide">
-                  HTML • CSS • JavaScript
+                  {t('cs.gamehub.tags')}
                 </p>
 
                 {/* Title */}
@@ -60,25 +63,25 @@ export default function GameHubCaseStudy() {
 
                 {/* Tagline */}
                 <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-                  A video game e-commerce concept — my very first coding project and the starting point of my development journey.
+                  {t('cs.gamehub.tagline')}
                 </p>
 
                 {/* Metadata - clean typography, no boxes */}
                 <div className="pt-4 space-y-2 text-sm md:text-base">
                   <p>
-                    <span className="text-emerald-400 font-semibold">Role:</span>{' '}
-                    <span className="text-gray-300">Frontend Developer (Student)</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.role')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.gamehub.roleValue')}</span>
                   </p>
                   <p>
-                    <span className="text-emerald-400 font-semibold">Type:</span>{' '}
-                    <span className="text-gray-300">School Assignment</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.type')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.gamehub.typeValue')}</span>
                     <span className="text-gray-600 mx-3">•</span>
-                    <span className="text-emerald-400 font-semibold">Stack:</span>{' '}
-                    <span className="text-gray-300">HTML, CSS, JavaScript</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.stack')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.gamehub.stackValue')}</span>
                   </p>
                   <p>
-                    <span className="text-emerald-400 font-semibold">Context:</span>{' '}
-                    <span className="text-gray-300">First project at Noroff</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.context')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.gamehub.contextValue')}</span>
                   </p>
                 </div>
 
@@ -86,7 +89,7 @@ export default function GameHubCaseStudy() {
                 <div className="pt-4">
                   <div className="inline-block bg-amber-500/10 border border-amber-500/30 rounded-lg px-4 py-2">
                     <p className="text-amber-400 text-sm font-medium">
-                      My first project ever — included to show where I started, not where I am now.
+                      {t('cs.gamehub.noteBadge')}
                     </p>
                   </div>
                 </div>
@@ -101,12 +104,12 @@ export default function GameHubCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-4">
-              The Brief
+              {t('cs.common.theBrief')}
             </p>
 
             {/* Body text */}
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              Build an e-commerce website for video games using only HTML, CSS, and vanilla JavaScript. No frameworks, no libraries — just the fundamentals. It was a deep-end introduction to web development: structure pages, style them, make them interactive.
+              {t('cs.gamehub.briefText')}
             </p>
           </div>
         </section>
@@ -116,17 +119,17 @@ export default function GameHubCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-              What I Was Learning
+              {t('cs.common.whatIWasLearning')}
             </p>
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              The Fundamentals
+              {t('cs.gamehub.learningHeading')}
             </h2>
 
             {/* Intro paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-12">
-              This was day one. I was learning how the web actually works — how HTML structures content, how CSS styles it, and how JavaScript makes it respond to users.
+              {t('cs.gamehub.learningIntro')}
             </p>
 
             {/* Key lessons - 2x2 grid of cards */}
@@ -134,25 +137,25 @@ export default function GameHubCaseStudy() {
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">01</span>
                 <p className="text-white leading-relaxed text-lg">
-                  HTML structure — organizing content into semantic elements that make sense
+                  {t('cs.gamehub.lesson1')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">02</span>
                 <p className="text-white leading-relaxed text-lg">
-                  CSS styling — turning plain markup into something that looks intentional
+                  {t('cs.gamehub.lesson2')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">03</span>
                 <p className="text-white leading-relaxed text-lg">
-                  JavaScript basics — handling clicks, updating the cart, responding to user actions
+                  {t('cs.gamehub.lesson3')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">04</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Building without frameworks — understanding what's actually happening under the hood
+                  {t('cs.gamehub.lesson4')}
                 </p>
               </div>
             </div>
@@ -173,17 +176,17 @@ export default function GameHubCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-              Why It's Here
+              {t('cs.common.whyItsHere')}
             </p>
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Everyone Starts Somewhere
+              {t('cs.gamehub.journeyHeading')}
             </h2>
 
             {/* Body paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed">
-              The code isn't good. The design didn't match my vision. But that's exactly why it stays in my portfolio. Comparing GameHub to projects like Hobbyist or Timer & Planner shows what two years of learning looks like. Every developer has a first project — this was mine, and I'm not embarrassed by it. Growth requires a starting point.
+              {t('cs.gamehub.journeyText')}
             </p>
           </div>
         </section>
@@ -198,7 +201,7 @@ export default function GameHubCaseStudy() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
-                View Live Site
+                {t('cs.common.viewLiveSite')}
                 <span aria-hidden="true">→</span>
               </a>
               <a
@@ -207,7 +210,7 @@ export default function GameHubCaseStudy() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105"
               >
-                View GitHub
+                {t('cs.common.viewGithub')}
                 <span aria-hidden="true">→</span>
               </a>
               <a
@@ -216,7 +219,7 @@ export default function GameHubCaseStudy() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105"
               >
-                View Figma
+                {t('cs.common.viewFigma')}
                 <span aria-hidden="true">→</span>
               </a>
             </div>

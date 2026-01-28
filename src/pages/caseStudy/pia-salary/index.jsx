@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import PageTransition from '../../../components/pageTransition';
 import OptimizedImage from '../../../components/optimizedImage';
 import BackButton from '../../../components/backButton';
@@ -9,6 +10,8 @@ export default function PiaSalaryCaseStudy() {
     description: 'A privacy-first income tracking app with automatic tax calculations — all your financial data stays on your device, stored in Excel files you control.',
     url: 'https://hermanhylland.netlify.app/case-study/pia-salary',
   });
+
+  const { t } = useTranslation();
 
   return (
     <PageTransition>
@@ -50,7 +53,7 @@ export default function PiaSalaryCaseStudy() {
               <div className="lg:w-[45%] space-y-5 text-center lg:text-left">
                 {/* Tags - inline with separators */}
                 <p className="text-sm font-medium text-emerald-400 tracking-wide">
-                  UX Design • Frontend Development • Next.js
+                  {t('cs.piaSalary.tags')}
                 </p>
 
                 {/* Title */}
@@ -60,25 +63,25 @@ export default function PiaSalaryCaseStudy() {
 
                 {/* Tagline */}
                 <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-                  A privacy-first income tracking app with automatic tax calculations — all your financial data stays on your device, stored in Excel files you control.
+                  {t('cs.piaSalary.tagline')}
                 </p>
 
                 {/* Metadata - clean typography, no boxes */}
                 <div className="pt-4 space-y-2 text-sm md:text-base">
                   <p>
-                    <span className="text-emerald-400 font-semibold">Role:</span>{' '}
-                    <span className="text-gray-300">UX Designer & Frontend Developer</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.role')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.piaSalary.roleValue')}</span>
                   </p>
                   <p>
-                    <span className="text-emerald-400 font-semibold">Type:</span>{' '}
-                    <span className="text-gray-300">Personal Project</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.type')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.piaSalary.typeValue')}</span>
                     <span className="text-gray-600 mx-3">•</span>
-                    <span className="text-emerald-400 font-semibold">Status:</span>{' '}
-                    <span className="text-gray-300">Complete</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.status')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.piaSalary.statusValue')}</span>
                   </p>
                   <p>
-                    <span className="text-emerald-400 font-semibold">Stack:</span>{' '}
-                    <span className="text-gray-300">Next.js, React 19, TypeScript, Tailwind CSS</span>
+                    <span className="text-emerald-400 font-semibold">{t('cs.common.stack')}</span>{' '}
+                    <span className="text-gray-300">{t('cs.piaSalary.stackValue')}</span>
                   </p>
                 </div>
               </div>
@@ -92,12 +95,12 @@ export default function PiaSalaryCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-4">
-              The Challenge
+              {t('cs.common.theChallenge')}
             </p>
 
             {/* Body text */}
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              Tracking income across multiple sources shouldn't require trusting a company with your financial data. I needed a tool that could handle monthly earnings, calculate deductions automatically, and show trends over time — all while keeping sensitive information completely private and portable.
+              {t('cs.piaSalary.challengeText')}
             </p>
           </div>
         </section>
@@ -107,17 +110,17 @@ export default function PiaSalaryCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-              Discovery
+              {t('cs.common.discovery')}
             </p>
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Why Existing Tools Fall Short
+              {t('cs.piaSalary.discoveryHeading')}
             </h2>
 
             {/* Intro paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-12">
-              Most income tracking apps want your data in their cloud. For something as sensitive as salary information, that's a trade-off many people aren't comfortable making.
+              {t('cs.piaSalary.discoveryIntro')}
             </p>
 
             {/* Key insights - 2x2 grid of cards */}
@@ -125,25 +128,25 @@ export default function PiaSalaryCaseStudy() {
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">01</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Financial data is deeply personal — users shouldn't have to create accounts or trust cloud storage to track their income
+                  {t('cs.piaSalary.insight1')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">02</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Excel is familiar — people already know how to back up, organize, and share spreadsheet files
+                  {t('cs.piaSalary.insight2')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">03</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Automatic calculations save time — tax and social insurance deductions follow predictable rules that software should handle
+                  {t('cs.piaSalary.insight3')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">04</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Bilingual access matters — a tool built for Germany needs to work in both German and English
+                  {t('cs.piaSalary.insight4')}
                 </p>
               </div>
             </div>
@@ -164,17 +167,17 @@ export default function PiaSalaryCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-              Design Approach
+              {t('cs.common.designApproach')}
             </p>
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Simple, Private, and Portable
+              {t('cs.piaSalary.designHeading')}
             </h2>
 
             {/* Intro paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-16">
-              The design prioritized clarity and control. Users should understand their income at a glance and never wonder where their data lives.
+              {t('cs.piaSalary.designIntro')}
             </p>
           </div>
 
@@ -183,9 +186,9 @@ export default function PiaSalaryCaseStudy() {
             {/* Principle 1 */}
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-3">Clear Dashboard</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">{t('cs.piaSalary.principle1Title')}</h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                  Year-based income overview with trend charts lets users see patterns immediately. No digging through menus — the important numbers are front and center.
+                  {t('cs.piaSalary.principle1Desc')}
                 </p>
               </div>
               <div className="rounded-2xl overflow-hidden">
@@ -200,9 +203,9 @@ export default function PiaSalaryCaseStudy() {
             {/* Principle 2 */}
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-3">Local-First Data</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">{t('cs.piaSalary.principle2Title')}</h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                  All data lives in Excel files on your device. Load a file to continue, save when you're done. No accounts, no cloud, no wondering who has access.
+                  {t('cs.piaSalary.principle2Desc')}
                 </p>
               </div>
               <div className="flex justify-center">
@@ -219,9 +222,9 @@ export default function PiaSalaryCaseStudy() {
             {/* Principle 3 */}
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-3">Smart Defaults, Full Control</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">{t('cs.piaSalary.principle3Title')}</h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                  Social insurance rates are pre-configured but adjustable. Duplicate entry protection prevents mistakes. The app guides you while staying out of your way.
+                  {t('cs.piaSalary.principle3Desc')}
                 </p>
               </div>
               <div className="flex justify-center">
@@ -242,17 +245,17 @@ export default function PiaSalaryCaseStudy() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {/* Section label */}
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-              The Result
+              {t('cs.common.theResult')}
             </p>
 
             {/* Subheading */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              A Tool That Respects Its Users
+              {t('cs.piaSalary.resultHeading')}
             </h2>
 
             {/* Body paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-12">
-              PIA Salary Tracker is now a practical tool I use for my own income tracking. Building it reinforced that privacy-first design isn't a constraint — it's a feature that simplifies both the architecture and the user experience. The project also pushed me to implement internationalization properly, making the app accessible to both German and English speakers.
+              {t('cs.piaSalary.resultText')}
             </p>
 
             {/* Takeaway cards */}
@@ -260,19 +263,19 @@ export default function PiaSalaryCaseStudy() {
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6 text-left">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">01</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Privacy-first design builds trust and reduces complexity
+                  {t('cs.piaSalary.takeaway1')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6 text-left">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">02</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Familiar formats like Excel lower the learning curve
+                  {t('cs.piaSalary.takeaway2')}
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6 text-left">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">03</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Internationalization should be built in from the start, not bolted on later
+                  {t('cs.piaSalary.takeaway3')}
                 </p>
               </div>
             </div>
@@ -285,7 +288,7 @@ export default function PiaSalaryCaseStudy() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
-                View Live App
+                {t('cs.common.viewLiveApp')}
                 <span aria-hidden="true">→</span>
               </a>
             </div>

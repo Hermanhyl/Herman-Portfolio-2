@@ -1,5 +1,61 @@
 import { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { MessageCircle, X, Send, Loader2, Bot, User, Sparkles, RotateCcw } from 'lucide-react';
+
+// Parse message content and convert markdown links to clickable elements
+function parseMessageWithLinks(content, onLinkClick) {
+  // Match markdown links: [text](url)
+  const markdownLinkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const parts = [];
+  let lastIndex = 0;
+  let match;
+
+  while ((match = markdownLinkRegex.exec(content)) !== null) {
+    // Add text before the link
+    if (match.index > lastIndex) {
+      parts.push(content.slice(lastIndex, match.index));
+    }
+
+    const linkText = match[1];
+    const linkUrl = match[2];
+
+    // Check if it's an internal link (starts with /)
+    if (linkUrl.startsWith('/')) {
+      parts.push(
+        <Link
+          key={match.index}
+          to={linkUrl}
+          onClick={onLinkClick}
+          className="text-emerald-400 hover:text-emerald-300 underline underline-offset-2 font-medium transition-colors"
+        >
+          {linkText}
+        </Link>
+      );
+    } else {
+      // External link
+      parts.push(
+        <a
+          key={match.index}
+          href={linkUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-emerald-400 hover:text-emerald-300 underline underline-offset-2 font-medium transition-colors"
+        >
+          {linkText}
+        </a>
+      );
+    }
+
+    lastIndex = match.index + match[0].length;
+  }
+
+  // Add remaining text after last link
+  if (lastIndex < content.length) {
+    parts.push(content.slice(lastIndex));
+  }
+
+  return parts.length > 0 ? parts : content;
+}
 
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +65,7 @@ export default function ChatBot() {
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
-      content: "Hi! I'm Herman's AI assistant. I can help you learn about his skills, projects, and experience. What would you like to know?",
+      content: "Hi! I'm Herman's AI assistant. I can help you explore his [work](/work), learn about his [background](/about), or find ways to [get in touch](/contact). What would you like to know?",
     }
   ]);
   const [inputValue, setInputValue] = useState('');
@@ -82,12 +138,17 @@ export default function ChatBot() {
     }
   }, [isOpen]);
 
-  // Quick action buttons
+  // Quick action buttons - more useful navigation-focused questions
   const quickActions = [
-    "Tell me about Herman's skills",
-    "Show me his projects",
-    "What technologies does he use?",
+    "Where can I see Herman's work?",
+    "Tell me about his background",
+    "How can I contact Herman?",
   ];
+
+  // Close chat when user clicks a link (optional: navigate away)
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
 
   const handleQuickAction = (action) => {
     setInputValue(action);
@@ -150,7 +211,7 @@ export default function ChatBot() {
     setMessages([
       {
         role: 'assistant',
-        content: "Hi! I'm Herman's AI assistant. I can help you learn about his skills, projects, and experience. What would you like to know?",
+        content: "Hi! I'm Herman's AI assistant. I can help you explore his [work](/work), learn about his [background](/about), or find ways to [get in touch](/contact). What would you like to know?",
       }
     ]);
   };
@@ -309,7 +370,10 @@ export default function ChatBot() {
                       : 'bg-white/5 text-gray-200 border border-white/10 rounded-bl-md'
                   }`}>
                     <p className="text-sm leading-relaxed whitespace-pre-wrap break-words">
-                      {message.content}
+                      {message.role === 'assistant'
+                        ? parseMessageWithLinks(message.content, handleLinkClick)
+                        : message.content
+                      }
                     </p>
                   </div>
                 </div>

@@ -41,9 +41,13 @@ A modern, fully-featured portfolio website built with **React 19** and **Tailwin
 ### AI-Powered Portfolio Assistant
 - Interactive chatbot powered by **OpenAI GPT-4o-mini**
 - Answers questions about my skills, projects, and experience
+- **Clickable navigation links** - AI responses include links that navigate directly to relevant pages
+- Comprehensive knowledge of all 10 case studies, blog articles, and portfolio sections
 - Serverless backend using **Netlify Functions**
 - Real-time responses with conversation context
 - Beautiful gradient UI with smooth animations
+
+> **Note:** The AI chatbot requires Netlify Functions. Use `npm run dev:netlify` for local testing, or test on the live site.
 
 ### Comprehensive Case Studies
 10 detailed project case studies with:
@@ -214,11 +218,13 @@ Herman-Portfolio-2/
    ```bash
    npm run dev
    ```
+   > This starts only the Vite dev server. The AI chatbot won't work in this mode.
 
-5. **For local Netlify Functions testing:**
+5. **For full local development (with AI chatbot):**
    ```bash
    npm run dev:netlify
    ```
+   > This starts both Vite and Netlify Functions, enabling the AI chatbot locally.
 
 ### Build Commands
 

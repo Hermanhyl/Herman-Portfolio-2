@@ -319,18 +319,27 @@ export default function HobbyistCaseStudy() {
               </div>
             </div>
 
-            {/* CTA Button */}
-            <a
-              href="https://hobbyist.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-            >
-              {t('cs.common.viewLiveDemo')}
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
+            {/* Action buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
+              <a
+                href="https://hobbyist.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              >
+                {t('cs.common.viewLiveDemo')}
+                <span aria-hidden="true">→</span>
+              </a>
+              <a
+                href="https://github.com/Hermanhyl/Hobbyist"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105"
+              >
+                {t('cs.common.viewGithub')}
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
 
             {/* Back button - bottom */}
             <BackButton position="bottom" />

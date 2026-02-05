@@ -300,16 +300,7 @@ export default function GoneFishingCaseStudy() {
             </div>
 
             {/* Back button - bottom */}
-            <div className="mt-16 pt-8 border-t border-white/10">
-              <button
-                onClick={() => navigate(-1)}
-                className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300 group"
-                aria-label="Go back to previous page"
-              >
-                <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-300" />
-                <span className="font-medium">Back to previous page</span>
-              </button>
-            </div>
+            <BackButton position="bottom" />
           </div>
         </section>
 

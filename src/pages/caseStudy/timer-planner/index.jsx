@@ -280,8 +280,8 @@ export default function TimerPlannerCaseStudy() {
               </div>
             </div>
 
-            {/* Action button */}
-            <div className="flex justify-center">
+            {/* Action buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
               <a
                 href="https://time-planer.netlify.app/"
                 target="_blank"
@@ -289,6 +289,15 @@ export default function TimerPlannerCaseStudy() {
                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 {t('cs.common.viewLiveApp')}
+                <span aria-hidden="true">→</span>
+              </a>
+              <a
+                href="https://github.com/Hermanhyl/Timer-Planner"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105"
+              >
+                {t('cs.common.viewGithub')}
                 <span aria-hidden="true">→</span>
               </a>
             </div>

@@ -1,212 +1,312 @@
 # Herman Portfolio 2
 
-A modern, interactive portfolio website built with **React** and **Tailwind CSS**. This project showcases my work as a frontend developer and UI/UX designer, featuring an AI-powered assistant, dynamic blog system, and beautiful dark-themed design.
+A modern, fully-featured portfolio website built with **React 19** and **Tailwind CSS**. This project showcases my work as a UX Designer & Frontend Developer, featuring multilingual support, an AI-powered assistant, comprehensive case studies, animation portfolio, and a beautiful dark-themed design.
 
-![image](https://github.com/user-attachments/assets/32051128-875f-4171-bb7a-1f672e95337c)
+## Before & After
 
-## ✨ Features
+<table>
+<tr>
+<td width="50%">
 
-### 🤖 AI-Powered Portfolio Assistant
+**Original Design (2024)**
+
+![Original Design](https://github.com/user-attachments/assets/32051128-875f-4171-bb7a-1f672e95337c)
+
+</td>
+<td width="50%">
+
+**Current Design (2026)**
+
+![Current Design](public/portfolio-front-page-2026.jpg)
+
+</td>
+</tr>
+</table>
+
+## Live Site
+
+**[portfolio-herman-hylland.netlify.app](https://portfolio-herman-hylland.netlify.app/)**
+
+---
+
+## Features
+
+### Multilingual Support (i18n)
+- Full **Norwegian** and **English** translations
+- Automatic language detection based on browser settings
+- Language switcher accessible from the header
+- All content, pages, and case studies translated
+- Powered by **i18next** and **react-i18next**
+
+### AI-Powered Portfolio Assistant
 - Interactive chatbot powered by **OpenAI GPT-4o-mini**
 - Answers questions about my skills, projects, and experience
 - Serverless backend using **Netlify Functions**
 - Real-time responses with conversation context
 - Beautiful gradient UI with smooth animations
 
-### 📝 Dynamic Blog System
+### Comprehensive Case Studies
+10 detailed project case studies with:
+- Full project breakdowns with problem statements and solutions
+- Technology stack details
+- Design process documentation
+- Screenshots and visual galleries
+- Links to live sites and repositories
+
+**Featured Projects:**
+- **Holidaze** - Accommodation booking platform
+- **BrannVRn** - VR fire safety training
+- **Own the Bid (Auction)** - Online auction platform
+- **Hobbyist** - Social platform for hobby enthusiasts
+- **Gone Fishing** - Fishing blog platform
+- **Timer Planner** - Task scheduling application
+- **Pia Salary** - Salary tracking tool
+- **ClicketyCart** - E-commerce solution
+- **Community Science Museum** - Museum website
+- **GameHub** - Gaming community platform
+
+### Animation Portfolio
+8 animation showcases demonstrating:
+- **After Effects character rigging** with DUIK
+- Walk cycles, run cycles, and gesture animations
+- Environment animations with day/night transitions
+- **Unreal Engine 3D scenes** with VFX and cinematics
+- Interactive 3D gallery experiences
+
+### Dynamic Blog System
 - Markdown-based blog posts with full CMS integration
 - **Decap CMS** (formerly Netlify CMS) for easy content management
 - Dynamic post loading using **vite-plugin-markdown**
 - Rich text editor with frontmatter support
 - Featured posts, tags, and read time estimates
-- Automatic deployment when new posts are published
+- **RSS feed** auto-generation for subscribers
 
-### 🎨 Modern UI/UX
-- Dark-themed design with gradient accents
-- Smooth page transitions and animations
-- Responsive layout for all devices
-- Custom animated borders and glass-morphism effects
-- Accessible navigation and interactive elements
+### Modern UI/UX
+- Dark-themed design with gradient accents (emerald, cyan, purple)
+- Smooth page transitions and scroll animations
+- Responsive layout optimized for all devices
+- Glass-morphism effects and animated borders
+- Interactive starfield background
+- Accessible navigation and keyboard support
 
-### 📄 Core Pages
-- **Homepage** - Hero section with project showcase
-- **About** - Background, skills, and education statistics
-- **Projects** - Portfolio of work with detailed case studies
-- **Blog** - Technical articles and insights
-- **Contact** - Easy ways to get in touch
+### Additional Features
+- **CV Download** - PDF resume in both English and Norwegian
+- **Visitor Counter** - Anonymous visit tracking
+- **SEO Optimized** - sitemap.xml, robots.txt, Open Graph images
+- **Error Boundaries** - Graceful error handling
+- **Optimized Images** - Lazy loading and performance optimization
 
-### 🔐 Content Management
-- Secure authentication with **Netlify Identity**
-- Git-based workflow for version control
-- Invite-only admin access
-- Real-time preview and editing
+---
 
-## 🛠 Technologies Used
+## Tech Stack
 
 ### Frontend
-- **React** - UI framework
-- **Tailwind CSS** - Utility-first styling
-- **Vite** - Fast build tool and dev server
-- **React Router** - Client-side routing
-- **Lucide React** - Icon library
-- **React Markdown** - Markdown rendering with GitHub Flavored Markdown
+| Technology | Purpose |
+|------------|---------|
+| React 19 | UI framework |
+| Tailwind CSS 4 | Utility-first styling |
+| Vite 6 | Fast build tool and dev server |
+| React Router 7 | Client-side routing |
+| i18next | Internationalization |
+| Lucide React | Icon library |
+| React Markdown | Markdown rendering |
 
 ### Backend & Services
-- **Netlify Functions** - Serverless API endpoints
-- **OpenAI API** - GPT-4o-mini for AI chatbot
-- **Decap CMS** - Git-based content management
-- **Netlify Identity** - Authentication and user management
+| Technology | Purpose |
+|------------|---------|
+| Netlify Functions | Serverless API endpoints |
+| OpenAI API | GPT-4o-mini for AI chatbot |
+| Decap CMS | Git-based content management |
+| Netlify Identity | Authentication |
 
-### Build Tools & Plugins
-- **vite-plugin-markdown** - Build-time markdown processing
-- **@tailwindcss/vite** - Tailwind CSS integration
-- **Babel** - JavaScript transpilation
+### Build & Optimization
+| Technology | Purpose |
+|------------|---------|
+| vite-plugin-markdown | Build-time markdown processing |
+| Sharp | Image optimization |
+| gray-matter | Frontmatter parsing |
 
-### Deployment
-- **Netlify** - Hosting and continuous deployment
-- **Git Gateway** - CMS integration with GitHub
+---
 
-## 🚀 Getting Started
+## Project Structure
+
+```
+Herman-Portfolio-2/
+├── content/
+│   └── blog/                    # Markdown blog posts
+├── netlify/
+│   └── functions/               # Serverless functions (chatbot API)
+├── public/
+│   ├── admin/                   # Decap CMS admin interface
+│   ├── Animasjoner/             # Animation videos and assets
+│   ├── CV/                      # Downloadable CV files
+│   ├── Illustrasjoner portfolio/# Illustration gallery
+│   └── [project-folders]/       # Project screenshots and assets
+├── scripts/
+│   └── generate-rss.js          # RSS feed generation
+├── src/
+│   ├── components/              # 30+ reusable React components
+│   │   ├── chatBot/             # AI assistant
+│   │   ├── header/              # Navigation with language switcher
+│   │   ├── heroSection/         # Homepage hero
+│   │   ├── caseStudyHero/       # Case study headers
+│   │   └── ...                  # Many more components
+│   ├── data/                    # Static data and content
+│   │   ├── animations.js        # Animation portfolio data
+│   │   └── illustrations.js     # Illustration gallery data
+│   ├── i18n/                    # Internationalization
+│   │   ├── index.js             # i18next configuration
+│   │   └── locales/
+│   │       ├── en/              # English translations
+│   │       │   ├── common.json
+│   │       │   ├── features.json
+│   │       │   ├── pages.json
+│   │       │   └── content/     # Case studies & projects
+│   │       └── no/              # Norwegian translations
+│   │           └── ...
+│   ├── pages/                   # Page components
+│   │   ├── home/
+│   │   ├── work/
+│   │   ├── about/
+│   │   ├── contact/
+│   │   ├── blog/
+│   │   ├── projectDetails/
+│   │   ├── animationDetails/
+│   │   └── caseStudy/           # 10 case study pages
+│   │       ├── holidaze/
+│   │       ├── brannvrn/
+│   │       ├── auction/
+│   │       └── ...
+│   └── App.jsx                  # Main app with routing
+├── CLAUDE.md                    # Development style guide
+├── vite.config.js               # Vite configuration
+└── tailwind.config.js           # Tailwind CSS configuration
+```
+
+---
+
+## Getting Started
 
 ### Prerequisites
-
-- Node.js (v18 or higher recommended)
+- Node.js v18 or higher
 - npm or yarn
 - Git
 
 ### Installation
 
-1. Clone the repository:
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/Hermanhyl/Herman-Portfolio-2.git
-   ```
-
-2. Navigate to the project directory:
-   ```bash
    cd Herman-Portfolio-2
    ```
 
-3. Install dependencies:
+2. **Install dependencies:**
    ```bash
    npm install
    ```
 
-4. Create a `.env` file in the root directory and add your OpenAI API key:
+3. **Create environment file:**
    ```env
    VITE_OPENAI_API_KEY=your_openai_api_key_here
    ```
 
-5. Start the development server:
+4. **Start development server:**
    ```bash
    npm run dev
    ```
 
-6. For local Netlify Functions testing:
+5. **For local Netlify Functions testing:**
    ```bash
    npm run dev:netlify
    ```
 
-## 📝 Blog Management
+### Build Commands
 
-### Setting Up the CMS
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run dev:netlify` | Start with Netlify Functions |
+| `npm run build` | Build for production (includes RSS generation) |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
 
-After deploying to Netlify, follow these steps:
+---
 
-1. Enable **Netlify Identity** in your Netlify dashboard
-2. Enable **Git Gateway** in Identity settings
-3. Invite yourself as a user
-4. Set registration to "Invite only" for security
+## Content Management
 
-### Creating Blog Posts
+### Blog Posts
+1. Navigate to `/admin` on your deployed site
+2. Login with Netlify Identity
+3. Create, edit, or delete posts using the CMS interface
+4. Posts automatically deploy via Git Gateway
 
-1. Go to `/blog` on your deployed site
-2. Click the purple admin button in the bottom-left corner
-3. Login with Netlify Identity
-4. Create, edit, or delete posts using the CMS interface
-5. Posts are automatically committed to GitHub and deployed
+### Adding New Translations
+1. Add translation keys to both `src/i18n/locales/en/` and `src/i18n/locales/no/`
+2. Use the `useTranslation` hook in components
+3. Translations are organized by:
+   - `common.json` - Navigation, buttons, labels
+   - `features.json` - Feature descriptions
+   - `pages.json` - Page-specific content
+   - `content/` - Case studies and projects
 
-For detailed instructions, see [BLOG_CMS_SETUP.md](./BLOG_CMS_SETUP.md)
+---
 
-## 🌐 Live Site
+## Environment Variables
 
-🔗 [View the Live Site](https://portfolio-herman-hylland.netlify.app/)
+| Variable | Description | Where to Set |
+|----------|-------------|--------------|
+| `VITE_OPENAI_API_KEY` | OpenAI API key (development) | `.env` file |
+| `OPENAI_API_KEY` | OpenAI API key (production) | Netlify dashboard |
 
-## 📁 Project Structure
+---
 
-```
-Herman-Portfolio-2/
-├── content/
-│   └── blog/              # Markdown blog posts
-├── netlify/
-│   └── functions/         # Serverless functions (chatbot API)
-├── public/
-│   └── admin/             # Decap CMS admin interface
-├── src/
-│   ├── components/        # Reusable React components
-│   ├── data/              # Static data and blog post loader
-│   ├── pages/             # Page components
-│   └── App.jsx            # Main app component
-├── .env                   # Environment variables (not in repo)
-├── vite.config.js         # Vite configuration
-└── tailwind.config.js     # Tailwind CSS configuration
-```
+## Key Features Implemented
 
-## 🔑 Environment Variables
+- [x] Full i18n support (Norwegian & English)
+- [x] AI chatbot with OpenAI integration
+- [x] 10 comprehensive project case studies
+- [x] Animation portfolio with 8 showcases
+- [x] Dynamic markdown-based blog system
+- [x] CMS with authentication
+- [x] RSS feed generation
+- [x] CV download (bilingual)
+- [x] Responsive mobile-first design
+- [x] SEO optimization (sitemap, robots.txt, OG images)
+- [x] Smooth animations and page transitions
+- [x] Dark mode theme with gradient accents
+- [x] Accessibility compliance (ARIA labels, keyboard nav)
+- [x] Error boundaries for graceful error handling
+- [x] Image optimization with lazy loading
 
-The following environment variables are required:
+---
 
-- `VITE_OPENAI_API_KEY` - Your OpenAI API key for the chatbot
-- `OPENAI_API_KEY` - OpenAI API key for Netlify Functions (set in Netlify dashboard)
-
-## 📦 Build and Deploy
-
-### Local Build
-```bash
-npm run build
-npm run preview
-```
-
-### Deployment
-
-This project is configured for automatic deployment with Netlify:
-
-1. Push changes to the `main` branch
-2. Netlify automatically builds and deploys
-3. New blog posts trigger automatic rebuilds via Git Gateway
-
-## 🎯 Key Features Implemented
-
-- ✅ AI chatbot with OpenAI integration
-- ✅ Dynamic markdown-based blog system
-- ✅ CMS with authentication
-- ✅ Responsive design
-- ✅ SEO-friendly routing
-- ✅ Social sharing capabilities
-- ✅ Smooth animations and transitions
-- ✅ Dark mode theme
-- ✅ Project case studies
-- ✅ Contact integration
-
-## 👤 Author
+## Author
 
 **Herman Hylland**
-- Portfolio: [portfolio-herman-hylland.netlify.app](https://portfolio-herman-hylland.netlify.app/)
-- LinkedIn: [linkedin.com/in/herman-hylland](https://www.linkedin.com/in/herman-hylland/)
-- Email: hermanhyl@hotmail.com
-- GitHub: [github.com/Hermanhyl](https://github.com/Hermanhyl)
+UX Designer & Frontend Developer
 
-## 📄 License
+- **Portfolio:** [portfolio-herman-hylland.netlify.app](https://portfolio-herman-hylland.netlify.app/)
+- **LinkedIn:** [linkedin.com/in/herman-hylland](https://www.linkedin.com/in/herman-hylland/)
+- **GitHub:** [github.com/Hermanhyl](https://github.com/Hermanhyl)
+- **Email:** hermanhyl@hotmail.com
+
+---
+
+## License
 
 This project is open source and available for educational purposes.
 
-## 🙏 Acknowledgments
+---
 
-- Built with React and Tailwind CSS
+## Acknowledgments
+
+- Built with React 19 and Tailwind CSS 4
 - AI powered by OpenAI GPT-4o-mini
 - Icons by Lucide React
 - Hosted on Netlify
 - CMS by Decap CMS
+- Internationalization by i18next
 
 ---
 
-Made with ❤️ by Herman Hylland
+Made with passion by Herman Hylland

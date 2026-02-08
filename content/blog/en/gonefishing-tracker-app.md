@@ -18,7 +18,7 @@ GoneFishing started as a simple idea: what if anglers could easily track their c
 
 ## The Problem
 
-Fishing enthusiasts often want to remember details about their catches—where they were, what species they caught, the conditions that day. But traditional methods are unreliable. Notes get lost, memories fade, and there's no good way to analyze trends over time.
+Fishing enthusiasts often want to remember details about their catches-where they were, what species they caught, the conditions that day. But traditional methods are unreliable. Notes get lost, memories fade, and there's no good way to analyze trends over time.
 
 ## The Solution
 
@@ -32,7 +32,7 @@ GoneFishing provides a clean, intuitive interface for recording:
 ## Key Features
 
 ### Theme Management
-Users can switch between light and dark modes, with preferences saved for consistency. The dark mode uses a slate blue background that's easy on the eyes during early morning or late evening sessions—when many fishing trips happen.
+Users can switch between light and dark modes, with preferences saved for consistency. The dark mode uses a slate blue background that's easy on the eyes during early morning or late evening sessions-when many fishing trips happen.
 
 ### Flexible Measurements
 The unit system provider lets users choose between metric and imperial, making the app accessible worldwide regardless of preferred measurement systems.
@@ -53,7 +53,7 @@ Special attention was paid to applying theme settings immediately on page load, 
 
 ## Lessons Learned
 
-Building GoneFishing reinforced the importance of understanding your users' context. Fishing happens in various conditions—bright sunlight, low light, wet hands. Every design decision considered these real-world scenarios.
+Building GoneFishing reinforced the importance of understanding your users' context. Fishing happens in various conditions-bright sunlight, low light, wet hands. Every design decision considered these real-world scenarios.
 
 ## What's Next
 

@@ -15,7 +15,7 @@ projectLink: /project/project1
 projectLabel: Se BrannVRn-prosjektet
 ---
 
-BrannVRn var vårt avsluttende bachelorprosjekt—en Virtual Reality brannsikkerhetstrenings-simulator utviklet i samarbeid med Sykehuspartner. Prosjektet fikk karakteren A og lærte oss uvurderlige leksjoner om VR-utvikling, teamarbeid og pedagogisk design.
+BrannVRn var vårt avsluttende bachelorprosjekt-en Virtual Reality brannsikkerhetstrenings-simulator utviklet i samarbeid med Sykehuspartner. Prosjektet fikk karakteren A og lærte oss uvurderlige leksjoner om VR-utvikling, teamarbeid og pedagogisk design.
 
 ## Utfordringen
 
@@ -33,9 +33,9 @@ Som konseptkunstner og UI/UX-designer i vårt tremannsteam var jeg ansvarlig for
 
 ## Viktigheten av pedagogisk design
 
-En nøkkelinnsikt fra dette prosjektet var forståelsen av at en treningssimulator må være mer enn bare visuelt nøyaktig—den må effektivt lære bort. Jeg fokuserte på å lage intuitive visuelle elementer og UI-komponenter som ville hjelpe brukere å absorbere informasjon naturlig mens de var nedsenket i det virtuelle miljøet.
+En nøkkelinnsikt fra dette prosjektet var forståelsen av at en treningssimulator må være mer enn bare visuelt nøyaktig-den må effektivt lære bort. Jeg fokuserte på å lage intuitive visuelle elementer og UI-komponenter som ville hjelpe brukere å absorbere informasjon naturlig mens de var nedsenket i det virtuelle miljøet.
 
-Informasjonsgrafikken som forklarte brannsikkerhetsutstyr—brannslukningsapparater, brannslanger og alarmsystemer—ble nøye integrert i miljøet slik at brukere kunne lære i sitt eget tempo før de øvde praktisk.
+Informasjonsgrafikken som forklarte brannsikkerhetsutstyr-brannslukningsapparater, brannslanger og alarmsystemer-ble nøye integrert i miljøet slik at brukere kunne lære i sitt eget tempo før de øvde praktisk.
 
 ## Læring fra brannmenn
 

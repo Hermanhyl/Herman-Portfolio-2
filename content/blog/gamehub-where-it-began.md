@@ -2,7 +2,7 @@
 title: "GameHub: Where My Developer Journey Began"
 date: 2025-12-25T00:00:00.000Z
 featured: false
-excerpt: "My very first coding project—a reminder of humble beginnings and the growth that comes from persistence."
+excerpt: "My very first coding project-a reminder of humble beginnings and the growth that comes from persistence."
 readTime: 4 min read
 author: Herman Hylland
 tags:
@@ -14,11 +14,11 @@ projectLink: /project/project7
 projectLabel: View GameHub Project
 ---
 
-GameHub holds a special place in my portfolio—not because it's my best work, but because it's where everything started. This was my very first project as a developer, and I'm keeping it here as a reminder of how every journey begins somewhere.
+GameHub holds a special place in my portfolio-not because it's my best work, but because it's where everything started. This was my very first project as a developer, and I'm keeping it here as a reminder of how every journey begins somewhere.
 
 ## Honest Disclaimer
 
-This project does not reflect my skills or abilities as a developer today. The code is far from perfect, and the final result didn't match my original vision. But that's exactly why it stays in my portfolio—it's an honest representation of where I started.
+This project does not reflect my skills or abilities as a developer today. The code is far from perfect, and the final result didn't match my original vision. But that's exactly why it stays in my portfolio-it's an honest representation of where I started.
 
 ## What GameHub Was
 
@@ -29,7 +29,7 @@ A fictional e-commerce concept for video games, featuring:
 - Checkout flow
 - Basic user interactions
 
-All built with vanilla HTML, CSS, and JavaScript—no frameworks, no libraries, no shortcuts.
+All built with vanilla HTML, CSS, and JavaScript-no frameworks, no libraries, no shortcuts.
 
 ## What I Learned
 
@@ -49,7 +49,7 @@ The most valuable lesson: when something doesn't work, keep trying until it does
 
 ## My Design Process
 
-Even as my first project, I started with design in Figma—a practice that has become foundational to my workflow.
+Even as my first project, I started with design in Figma-a practice that has become foundational to my workflow.
 
 ### 1. Mind Mapping & Information Architecture
 I began by sketching out all the pages GameHub would need: homepage, product listings, individual game pages, cart, and checkout. Even without much experience, I understood the importance of planning the site structure and user navigation flow.
@@ -58,7 +58,7 @@ I began by sketching out all the pages GameHub would need: homepage, product lis
 During ideation, I explored what a gaming e-commerce site should feel like. Should it be dark and edgy? Bright and playful? I experimented with different directions before settling on the aesthetic I wanted to pursue.
 
 ### 3. Wireframing
-Basic wireframes helped me plan where content would live—hero sections, product grids, navigation placement. Simple boxes and placeholder text focused on structure before styling.
+Basic wireframes helped me plan where content would live-hero sections, product grids, navigation placement. Simple boxes and placeholder text focused on structure before styling.
 
 ### 4. Style Guide Development
 I created my first style guide with:
@@ -78,7 +78,7 @@ A simple prototype linked pages together to visualize the user journey.
 
 ## The Design Gap
 
-My Figma design was more ambitious than my implementation skills at the time. This taught me an important lesson about the gap between vision and execution—and the work required to close it.
+My Figma design was more ambitious than my implementation skills at the time. This taught me an important lesson about the gap between vision and execution-and the work required to close it.
 
 ## Growth Since Then
 
@@ -95,7 +95,7 @@ Each project since has built upon what I learned here.
 
 I believe in showing the full journey. Many developers hide their early work, presenting only polished portfolios. But there's value in demonstrating that everyone starts somewhere.
 
-If you're just beginning your coding journey, take heart. Your first project won't be perfect—and that's completely okay. What matters is that you keep building, keep learning, and keep growing.
+If you're just beginning your coding journey, take heart. Your first project won't be perfect-and that's completely okay. What matters is that you keep building, keep learning, and keep growing.
 
 ## A Message to Beginners
 

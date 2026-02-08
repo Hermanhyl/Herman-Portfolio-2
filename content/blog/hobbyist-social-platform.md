@@ -25,7 +25,7 @@ Hobbyist connects people through their hobbies. Looking for a hiking buddy? A bo
 One of my key goals was differentiating Hobbyist from the typical dating app aesthetic. The design choices reflect this:
 
 ### Warm Color Palette
-The coral and orange gradient creates an inviting, friendly atmosphere. These colors feel energetic and community-focused—perfect for a platform about shared activities.
+The coral and orange gradient creates an inviting, friendly atmosphere. These colors feel energetic and community-focused-perfect for a platform about shared activities.
 
 ### Inclusive Imagery
 All imagery emphasizes groups and activities rather than individuals. This reinforces that Hobbyist is about community, not romantic matchmaking.
@@ -56,7 +56,7 @@ Built with React and Vite for optimal performance, Hobbyist uses:
 - **Tailwind CSS** for responsive, consistent styling
 - **Component-driven architecture** for maintainability
 
-The real-time capabilities mean users can see updates instantly—new activity postings, messages, and connection requests appear without page refreshes.
+The real-time capabilities mean users can see updates instantly-new activity postings, messages, and connection requests appear without page refreshes.
 
 ## Future Plans
 

@@ -14,7 +14,7 @@ projectLink: /project/project4
 projectLabel: View Own The Bid Project
 ---
 
-Own The Bid started as my semester project—a web-based auction platform where users can list items, place bids, and compete in timed auctions. What made this project special was the iterative improvement process after submission.
+Own The Bid started as my semester project-a web-based auction platform where users can list items, place bids, and compete in timed auctions. What made this project special was the iterative improvement process after submission.
 
 ## The Platform
 
@@ -50,7 +50,7 @@ This made the app more reliable and user-friendly while improving the developmen
 
 ### Sticky Footer Fix
 
-A small but important visual fix—the footer now reliably stays at the bottom of the viewport, even on pages with little content. These details matter for professional presentation.
+A small but important visual fix-the footer now reliably stays at the bottom of the viewport, even on pages with little content. These details matter for professional presentation.
 
 ### Input Validation
 
@@ -78,13 +78,13 @@ These lessons made me a better developer, even as I've since moved to React for 
 Before writing any code, I followed a structured design workflow in Figma that I use for all my projects.
 
 ### 1. Mind Mapping & Information Architecture
-I started with a mind map to outline all the pages needed—home, listings, individual auction pages, user profiles, login/register—and how they interconnect. This helped identify the complete user journey from browsing to bidding to winning.
+I started with a mind map to outline all the pages needed-home, listings, individual auction pages, user profiles, login/register-and how they interconnect. This helped identify the complete user journey from browsing to bidding to winning.
 
 ### 2. Ideation & Concept Exploration
 During ideation, I explored different visual approaches for an auction platform. Should it feel exclusive and premium? Playful and exciting? I settled on a clean, professional look that builds trust while maintaining the excitement of competitive bidding.
 
 ### 3. Wireframing
-Simple wireframes came next—rough layouts showing where content would live without any styling. This phase focused on user flow and content hierarchy: where does the bid button go? How do users track their active bids? What information is most important on a listing card?
+Simple wireframes came next-rough layouts showing where content would live without any styling. This phase focused on user flow and content hierarchy: where does the bid button go? How do users track their active bids? What information is most important on a listing card?
 
 ### 4. Style Guide Development
 I created a comprehensive style guide including:
@@ -95,7 +95,7 @@ I created a comprehensive style guide including:
 - **Component Library**: Cards, forms, navigation elements
 
 ### 5. High-Fidelity Design (Mobile First)
-Following mobile-first principles, I designed the complete mobile experience first. Every screen—from browsing auctions on a phone to placing a bid—was designed to work perfectly on small screens before considering desktop.
+Following mobile-first principles, I designed the complete mobile experience first. Every screen-from browsing auctions on a phone to placing a bid-was designed to work perfectly on small screens before considering desktop.
 
 ### 6. Desktop Adaptation
 With mobile complete, I expanded to desktop layouts, utilizing the extra space for multi-column listing grids, sidebar filters, and enhanced auction detail views.

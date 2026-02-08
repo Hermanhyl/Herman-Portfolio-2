@@ -24,7 +24,7 @@ Instead of switching between a Pomodoro timer and a calendar app, Timer & Planne
 - Customizable session templates with work/break intervals
 - Weekly and monthly planning views
 - Drag-and-drop rescheduling
-- All data stored locally—no account required
+- All data stored locally-no account required
 
 ## Timer Features
 
@@ -75,6 +75,6 @@ This approach means you can use Timer & Planner without worrying about your sche
 
 ## Why I Built This
 
-As someone who values both focus time and organized planning, I wanted a tool that treated these as complementary rather than separate concerns. Timer & Planner reflects how I actually work—alternating between deep focus sessions and schedule management.
+As someone who values both focus time and organized planning, I wanted a tool that treated these as complementary rather than separate concerns. Timer & Planner reflects how I actually work-alternating between deep focus sessions and schedule management.
 
 *Try Timer & Planner and take control of your productivity!*

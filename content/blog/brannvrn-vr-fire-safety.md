@@ -15,7 +15,7 @@ projectLink: /project/project1
 projectLabel: View BrannVRn Project
 ---
 
-BrannVRn was our bachelor's degree final project—a Virtual Reality fire safety training simulator developed in collaboration with Sykehuspartner. The project earned an A grade and taught us invaluable lessons about VR development, teamwork, and educational design.
+BrannVRn was our bachelor's degree final project-a Virtual Reality fire safety training simulator developed in collaboration with Sykehuspartner. The project earned an A grade and taught us invaluable lessons about VR development, teamwork, and educational design.
 
 ## The Challenge
 
@@ -33,9 +33,9 @@ As the concept artist and UI/UX designer on our three-person team, I was respons
 
 ## The Importance of Pedagogical Design
 
-A key insight from this project was understanding that a training simulator needs to be more than just visually accurate—it must effectively teach. I focused on creating intuitive visuals and UI components that would help users absorb information naturally while immersed in the virtual environment.
+A key insight from this project was understanding that a training simulator needs to be more than just visually accurate-it must effectively teach. I focused on creating intuitive visuals and UI components that would help users absorb information naturally while immersed in the virtual environment.
 
-The informational graphics explaining fire safety equipment—extinguishers, fire hoses, and alarm systems—were carefully integrated into the environment so users could learn at their own pace before practicing hands-on.
+The informational graphics explaining fire safety equipment-extinguishers, fire hoses, and alarm systems-were carefully integrated into the environment so users could learn at their own pace before practicing hands-on.
 
 ## Learning from Firefighters
 

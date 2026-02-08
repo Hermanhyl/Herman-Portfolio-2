@@ -2,7 +2,7 @@
   "projectData": {
     "project1": {
       "title": "BrannVRn - VR Brannsikkerhetssimulator (A)",
-      "teaser": "UX-prosess & læringsdesign i praksis: En VR brannsikkerhetssimulator hvor jeg designet hele brukeropplevelsen og det pedagogiske rammeverket—transformerte komplekse sikkerhetsprosedyrer til intuitive, lærerike interaksjoner.",
+      "teaser": "UX-prosess & læringsdesign i praksis: En VR brannsikkerhetssimulator hvor jeg designet hele brukeropplevelsen og det pedagogiske rammeverket-transformerte komplekse sikkerhetsprosedyrer til intuitive, lærerike interaksjoner.",
       "description": "BrannVRn er en Virtual Reality brannsikkerhetstreningssimulator utviklet som et bachelorprosjekt i samarbeid med Sykehuspartner. Prosjektet gjenskaper Sykehuspartners Drammen-kontor i 1:1 skala, og gir oppslukende brannsikkerhetsopplæring.\n\nSom konseptkunstner og UI/UX-designer var jeg ansvarlig for å skape den visuelle identiteten, infografikk, UI-elementer, 3D-modellering, teksturering og utvikling av informasjonsinnhold om brannfarer og nødprosedyrer.",
       "article": {
         "0": {
@@ -11,15 +11,15 @@
         },
         "1": {
           "heading": "Min rolle: UI/UX-designer & Konseptkunstner",
-          "content": "Som UI/UX-designer og konseptkunstner i vårt tremannsteam, var mine ansvarsområder sentrert rundt den komplette brukeropplevelsen og visuell kommunikasjon:\n\n• Utvikle det visuelle konseptet og kunstnerisk retning for hele simulatoren\n• Designe alle brukergrensesnittelementer med fokus på VR-brukervennlighet og tilgjengelighet\n• Lage informative infografikker som kommuniserer komplekse sikkerhetsprosedyrer tydelig\n• Designe pedagogiske visninger som veileder brukere gjennom læring i eget tempo\n• Sikre visuell konsistens på tvers av alle interaktive elementer\n• Teksturere og skinnlegge 3D-ressurser for å skape et oppslukende miljø\n\nMin hovedutfordring var å oversette kompleks brannsikkerhetskunnskap til intuitive, lærbare interaksjoner—sikre at brukere ikke bare opplever simulatoren, men virkelig forstår og husker sikkerhetsprosedyrene."
+          "content": "Som UI/UX-designer og konseptkunstner i vårt tremannsteam, var mine ansvarsområder sentrert rundt den komplette brukeropplevelsen og visuell kommunikasjon:\n\n• Utvikle det visuelle konseptet og kunstnerisk retning for hele simulatoren\n• Designe alle brukergrensesnittelementer med fokus på VR-brukervennlighet og tilgjengelighet\n• Lage informative infografikker som kommuniserer komplekse sikkerhetsprosedyrer tydelig\n• Designe pedagogiske visninger som veileder brukere gjennom læring i eget tempo\n• Sikre visuell konsistens på tvers av alle interaktive elementer\n• Teksturere og skinnlegge 3D-ressurser for å skape et oppslukende miljø\n\nMin hovedutfordring var å oversette kompleks brannsikkerhetskunnskap til intuitive, lærbare interaksjoner-sikre at brukere ikke bare opplever simulatoren, men virkelig forstår og husker sikkerhetsprosedyrene."
         },
         "2": {
           "heading": "Læringsdesign: Hjertet av prosjektet",
-          "content": "Dette var ikke bare en visuell simulering—det var et pedagogisk verktøy som måtte genuint lære folk livreddende ferdigheter. Læringsdesign-tilnærmingen var sentral for hver beslutning jeg tok.\n\nViktige pedagogiske prinsipper jeg anvendte:\n\n• Progressiv avsløring: Informasjon avdekkes i etapper, forhindrer kognitiv overbelastning mens forståelse bygges systematisk\n• Lær-deretter-øv-flyt: Brukere leser først om utstyrsfunksjonalitet, deretter øver de umiddelbart praktisk—forsterker læring gjennom handling\n• Kontekstuell læring: Pedagogisk innhold plasseres nøyaktig der brukere trenger det, integrert naturlig i miljøet i stedet for å avbryte opplevelsen\n• Flere læringsmodaliteter: Visuelle diagrammer, tekstforklaringer og praktisk øvelse imøtekommer forskjellige læringsstiler\n\nMålet var å skape en opplevelse hvor brukere naturlig absorberer sikkerhetskunnskap mens de er nedsenket i det virtuelle miljøet, slik at læringen føles uanstrengt i stedet for tvunget."
+          "content": "Dette var ikke bare en visuell simulering-det var et pedagogisk verktøy som måtte genuint lære folk livreddende ferdigheter. Læringsdesign-tilnærmingen var sentral for hver beslutning jeg tok.\n\nViktige pedagogiske prinsipper jeg anvendte:\n\n• Progressiv avsløring: Informasjon avdekkes i etapper, forhindrer kognitiv overbelastning mens forståelse bygges systematisk\n• Lær-deretter-øv-flyt: Brukere leser først om utstyrsfunksjonalitet, deretter øver de umiddelbart praktisk-forsterker læring gjennom handling\n• Kontekstuell læring: Pedagogisk innhold plasseres nøyaktig der brukere trenger det, integrert naturlig i miljøet i stedet for å avbryte opplevelsen\n• Flere læringsmodaliteter: Visuelle diagrammer, tekstforklaringer og praktisk øvelse imøtekommer forskjellige læringsstiler\n\nMålet var å skape en opplevelse hvor brukere naturlig absorberer sikkerhetskunnskap mens de er nedsenket i det virtuelle miljøet, slik at læringen føles uanstrengt i stedet for tvunget."
         },
         "3": {
           "heading": "Hva vi lærte av brannmenn",
-          "content": "En av de mest verdifulle erfaringene var å tilbringe en dag på den lokale brannstasjonen, i direkte konsultasjon med brannmenn. Deres virkelige ekspertise formet fundamentalt vår designtilnærming.\n\nViktige innsikter som påvirket prosjektet:\n\n• Brannadferd: Forståelse av hvordan brann sprer seg, hvilke områder som blir farlige først, og hvorfor visse rømningsveier prioriteres over andre\n• Utstyrsprioriteter: Lære hvilket utstyr som skal brukes i forskjellige scenarioer og den kritiske beslutningsprosessen brannmenn følger\n• Vanlige feil: Oppdage hva utrent folk typisk gjør feil i nødsituasjoner—informasjon som direkte formet vårt veiledningsdesign\n• Psykologiske faktorer: Forstå hvordan panikk påvirker beslutningstaking og hvordan riktig trening kan overstyre fryktresponser\n\nDette samarbeidet sikret at simulatoren vår lærer det som faktisk betyr noe i nødsituasjoner—ikke bare lærebokprosedyrer, men den praktiske kunnskapen som redder liv."
+          "content": "En av de mest verdifulle erfaringene var å tilbringe en dag på den lokale brannstasjonen, i direkte konsultasjon med brannmenn. Deres virkelige ekspertise formet fundamentalt vår designtilnærming.\n\nViktige innsikter som påvirket prosjektet:\n\n• Brannadferd: Forståelse av hvordan brann sprer seg, hvilke områder som blir farlige først, og hvorfor visse rømningsveier prioriteres over andre\n• Utstyrsprioriteter: Lære hvilket utstyr som skal brukes i forskjellige scenarioer og den kritiske beslutningsprosessen brannmenn følger\n• Vanlige feil: Oppdage hva utrent folk typisk gjør feil i nødsituasjoner-informasjon som direkte formet vårt veiledningsdesign\n• Psykologiske faktorer: Forstå hvordan panikk påvirker beslutningstaking og hvordan riktig trening kan overstyre fryktresponser\n\nDette samarbeidet sikret at simulatoren vår lærer det som faktisk betyr noe i nødsituasjoner-ikke bare lærebokprosedyrer, men den praktiske kunnskapen som redder liv."
         },
         "4": {
           "heading": "Hovedfunksjoner",
@@ -35,26 +35,26 @@
         },
         "7": {
           "heading": "Viktige lærdommer",
-          "content": "Dette prosjektet ga dype lærdommer som fortsetter å forme min tilnærming til design:\n\n• Brukerundersøkelser er essensielle: Brannmannkonsultasjonen transformerte vår forståelse av hva brukere faktisk trenger å lære—antakelser er ikke nok\n• Læringsdesign krever empati: Å forstå hvordan folk absorberer og beholder informasjon er like viktig som informasjonen selv\n• Tverrfaglig samarbeid styrker resultater: Å jobbe med fageksperter (brannmenn), kunder (Sykehuspartner) og et teknisk team produserte resultater ingen av oss kunne oppnå alene\n• Design for impact, ikke bare estetikk: A-karakteren reflekterte at vi skapte noe som genuint underviser, ikke bare noe som ser imponerende ut\n\nDette prosjektet beviste at de beste pedagogiske verktøyene balanserer teknisk nøyaktighet med pedagogisk effektivitet—skaper opplevelser som ikke bare ser og føles realistiske, men genuint overfører verdifulle ferdigheter til brukere."
+          "content": "Dette prosjektet ga dype lærdommer som fortsetter å forme min tilnærming til design:\n\n• Brukerundersøkelser er essensielle: Brannmannkonsultasjonen transformerte vår forståelse av hva brukere faktisk trenger å lære-antakelser er ikke nok\n• Læringsdesign krever empati: Å forstå hvordan folk absorberer og beholder informasjon er like viktig som informasjonen selv\n• Tverrfaglig samarbeid styrker resultater: Å jobbe med fageksperter (brannmenn), kunder (Sykehuspartner) og et teknisk team produserte resultater ingen av oss kunne oppnå alene\n• Design for impact, ikke bare estetikk: A-karakteren reflekterte at vi skapte noe som genuint underviser, ikke bare noe som ser imponerende ut\n\nDette prosjektet beviste at de beste pedagogiske verktøyene balanserer teknisk nøyaktighet med pedagogisk effektivitet-skaper opplevelser som ikke bare ser og føles realistiske, men genuint overfører verdifulle ferdigheter til brukere."
         }
       }
     },
     "project-gonefishing": {
       "title": "GoneFishing - Fiskesporingsapp",
-      "teaser": "Brukerundersøkelser i praksis: En fiskesporingsapp bygget gjennom samtaler med ekte fiskere—adresserer smertepunkter i eksisterende apper gjennom iterativ design og tilbakemeldinger fra fellesskapet.",
-      "description": "GoneFishing er en omfattende fiskesporingsapplikasjon født fra ekte brukerundersøkelser innen fiskefellesskapet. Ved å snakke direkte med fiskere om deres frustrasjoner med eksisterende apper, identifiserte jeg viktige smertepunkter og designet løsninger som faktisk betyr noe for fiskere.\n\nBygget med Next.js og med et rent, responsivt grensesnitt, adresserer appen virkelige behov: bildelogging, detaljert værsoring, fangststatistikk og en samlet oversikt over fiskehistorikken din—funksjoner som fremkom direkte fra brukertilbakemeldinger.",
+      "teaser": "Brukerundersøkelser i praksis: En fiskesporingsapp bygget gjennom samtaler med ekte fiskere-adresserer smertepunkter i eksisterende apper gjennom iterativ design og tilbakemeldinger fra fellesskapet.",
+      "description": "GoneFishing er en omfattende fiskesporingsapplikasjon født fra ekte brukerundersøkelser innen fiskefellesskapet. Ved å snakke direkte med fiskere om deres frustrasjoner med eksisterende apper, identifiserte jeg viktige smertepunkter og designet løsninger som faktisk betyr noe for fiskere.\n\nBygget med Next.js og med et rent, responsivt grensesnitt, adresserer appen virkelige behov: bildelogging, detaljert værsoring, fangststatistikk og en samlet oversikt over fiskehistorikken din-funksjoner som fremkom direkte fra brukertilbakemeldinger.",
       "article": {
         "0": {
           "heading": "Prosjektoversikt",
-          "content": "GoneFishing startet med et enkelt spørsmål: hva trenger fiskere faktisk fra en fangstporingsapp? I stedet for å anta at jeg visste svaret, gikk jeg direkte til kilden—snakket med fiskere i fiskefellesskapet for å forstå deres virkelige erfaringer, frustrasjoner og ønsker.\n\nDenne brukersentrerte tilnærmingen formet hver funksjon i appen. I stedet for å bygge det jeg trodde var nyttig, bygde jeg det fiskere fortalte meg at de trengte."
+          "content": "GoneFishing startet med et enkelt spørsmål: hva trenger fiskere faktisk fra en fangstporingsapp? I stedet for å anta at jeg visste svaret, gikk jeg direkte til kilden-snakket med fiskere i fiskefellesskapet for å forstå deres virkelige erfaringer, frustrasjoner og ønsker.\n\nDenne brukersentrerte tilnærmingen formet hver funksjon i appen. I stedet for å bygge det jeg trodde var nyttig, bygde jeg det fiskere fortalte meg at de trengte."
         },
         "1": {
           "heading": "Brukerundersøkelser: Lære fra fellesskapet",
-          "content": "Den mest verdifulle delen av dette prosjektet var undersøkelsesfasen. Jeg hadde samtaler med flere fiskere—fra tilfeldige helgefiskere til dedikerte entusiaster—spurte om deres nåværende metoder for å spore fangster og hva som frustrerte dem med eksisterende løsninger.\n\nViktige innsikter fra disse samtalene:\n\n• Ingen bildestøtte: Flere fiskere nevnte at deres nåværende apper ikke tillot bildeopplastinger, noe som gjorde det umulig å dokumentere fangster visuelt\n• Dårlig værlogging: Eksisterende apper manglet enten værsoring helt eller gjorde det for tungvint å registrere forhold nøyaktig\n• Manglende statistikk: Fiskere ønsket å se mønstre i fangstene sine over tid, men de fleste apper tilbød ingen analyser\n• Ingen samlet oversikt: Brukere uttrykte frustrasjon over å ikke kunne se hele fiskehistorikken sin med ett blikk"
+          "content": "Den mest verdifulle delen av dette prosjektet var undersøkelsesfasen. Jeg hadde samtaler med flere fiskere-fra tilfeldige helgefiskere til dedikerte entusiaster-spurte om deres nåværende metoder for å spore fangster og hva som frustrerte dem med eksisterende løsninger.\n\nViktige innsikter fra disse samtalene:\n\n• Ingen bildestøtte: Flere fiskere nevnte at deres nåværende apper ikke tillot bildeopplastinger, noe som gjorde det umulig å dokumentere fangster visuelt\n• Dårlig værlogging: Eksisterende apper manglet enten værsoring helt eller gjorde det for tungvint å registrere forhold nøyaktig\n• Manglende statistikk: Fiskere ønsket å se mønstre i fangstene sine over tid, men de fleste apper tilbød ingen analyser\n• Ingen samlet oversikt: Brukere uttrykte frustrasjon over å ikke kunne se hele fiskehistorikken sin med ett blikk"
         },
         "2": {
           "heading": "Fra forskning til design",
-          "content": "Å oversette brukertilbakemeldinger til designbeslutninger krevde nøye prioritering. Ikke alle ønsker kunne implementeres umiddelbart, men kjernefrustrasjoner måtte adresseres.\n\nHvordan brukerundersøkelser formet designet:\n\n• Bildestøtte ble bygget inn fra starten, slik at fiskere kan legge ved bilder til hver fangstoppføring\n• Værforhold er enkle å logge med intuitive kontroller for temperatur, vind og forhold\n• Et statistikkdashbord gir oversikten brukere manglet—totale fangster, artsfordeling og trender over tid\n• Grensesnittet forblir rent og fokusert, respekterer brukernes tid når de er ute på vannet"
+          "content": "Å oversette brukertilbakemeldinger til designbeslutninger krevde nøye prioritering. Ikke alle ønsker kunne implementeres umiddelbart, men kjernefrustrasjoner måtte adresseres.\n\nHvordan brukerundersøkelser formet designet:\n\n• Bildestøtte ble bygget inn fra starten, slik at fiskere kan legge ved bilder til hver fangstoppføring\n• Værforhold er enkle å logge med intuitive kontroller for temperatur, vind og forhold\n• Et statistikkdashbord gir oversikten brukere manglet-totale fangster, artsfordeling og trender over tid\n• Grensesnittet forblir rent og fokusert, respekterer brukernes tid når de er ute på vannet"
         },
         "3": {
           "heading": "Hovedfunksjoner",
@@ -62,11 +62,11 @@
         },
         "4": {
           "heading": "Teknisk implementering",
-          "content": "Bygget med Next.js, utnytter applikasjonen Reacts komponentbaserte arkitektur for vedlikeholdbar og skalerbar kode. Supabase fungerer som backend, håndterer autentisering og datalagring med sanntidskapasiteter. Tailwind CSS gir et moderne, responsivt design som fungerer sømløst på tvers av enheter—avgjørende for en app som må fungere like bra på en telefon ved vannet eller en stasjonær PC hjemme."
+          "content": "Bygget med Next.js, utnytter applikasjonen Reacts komponentbaserte arkitektur for vedlikeholdbar og skalerbar kode. Supabase fungerer som backend, håndterer autentisering og datalagring med sanntidskapasiteter. Tailwind CSS gir et moderne, responsivt design som fungerer sømløst på tvers av enheter-avgjørende for en app som må fungere like bra på en telefon ved vannet eller en stasjonær PC hjemme."
         },
         "5": {
           "heading": "UX-lærdommer",
-          "content": "Dette prosjektet forsterket flere viktige UX-prinsipper:\n\n• Snakk med brukere tidlig: Antakelser om hva brukere trenger er ofte feil. Direkte samtaler avslørte smertepunkter jeg aldri ville ha gjettet\n• Prioriter basert på frekvens: Funksjonene brukere nevnte oftest ble høyeste prioritet—bildestøtte og statistikk kom opp i nesten hver samtale\n• Kontekst betyr noe: Forståelse av at fiskere logger fangster mens de fisker—ofte under utfordrende forhold—påvirket beslutninger om grensesnittets enkelhet"
+          "content": "Dette prosjektet forsterket flere viktige UX-prinsipper:\n\n• Snakk med brukere tidlig: Antakelser om hva brukere trenger er ofte feil. Direkte samtaler avslørte smertepunkter jeg aldri ville ha gjettet\n• Prioriter basert på frekvens: Funksjonene brukere nevnte oftest ble høyeste prioritet-bildestøtte og statistikk kom opp i nesten hver samtale\n• Kontekst betyr noe: Forståelse av at fiskere logger fangster mens de fisker-ofte under utfordrende forhold-påvirket beslutninger om grensesnittets enkelhet"
         },
         "6": {
           "heading": "Fremtidige forbedringer",
@@ -76,8 +76,8 @@
     },
     "project2": {
       "title": "Hobbyist - Sosial aktivitetsplattform",
-      "teaser": "UX-sentrert design: En sosial plattform formet av samtaler med venner og potensielle brukere—fokuserer på enkelhet, intuitiv navigasjon og ekte menneskelig tilknytning.",
-      "description": "Hobbyist er en sosial plattform designet for å hjelpe folk med å skape ekte forbindelser gjennom delte interesser og aktiviteter. Designprosessen involverte innsamling av innsikt fra venner og potensielle brukere om hva de ville ønske fra en slik plattform.\n\nTilbakemeldingene deres formet alt fra den enkle navigasjonsstrukturen til hvordan aktiviteter vises—resulterte i et rent, organisert grensesnitt som setter tilknytning først, ikke kompleksitet.",
+      "teaser": "UX-sentrert design: En sosial plattform formet av samtaler med venner og potensielle brukere-fokuserer på enkelhet, intuitiv navigasjon og ekte menneskelig tilknytning.",
+      "description": "Hobbyist er en sosial plattform designet for å hjelpe folk med å skape ekte forbindelser gjennom delte interesser og aktiviteter. Designprosessen involverte innsamling av innsikt fra venner og potensielle brukere om hva de ville ønske fra en slik plattform.\n\nTilbakemeldingene deres formet alt fra den enkle navigasjonsstrukturen til hvordan aktiviteter vises-resulterte i et rent, organisert grensesnitt som setter tilknytning først, ikke kompleksitet.",
       "article": {
         "0": {
           "heading": "Prosjektoversikt",
@@ -85,11 +85,11 @@
         },
         "1": {
           "heading": "Innsamling av brukerinnsikt",
-          "content": "Selv om dette ikke var en formell brukerstudie, viste de uformelle samtalene seg uvurderlige. Jeg spurte folk om deres erfaringer med sosiale apper, hva som frustrerte dem, og hva de ville håpe å finne i en hobbyfokusert plattform.\n\nFellesnevnere dukket opp:\n\n• Enkelhet over kompleksitet: Folk ønsket å finne aktiviteter raskt uten å navigere gjennom endeløse menyer\n• Tydelig informasjonshierarki: Brukere uttrykte ønske om å se de viktigste detaljene—hva, når, hvor—med ett blikk\n• Meldinger som føles naturlige: Kommunikasjonsfunksjoner bør være enkle, ikke begravd eller overkompliserte\n• Organisert presentasjon: Aktiviteter bør være enkle å bla gjennom og filtrere uten å føles overveldende"
+          "content": "Selv om dette ikke var en formell brukerstudie, viste de uformelle samtalene seg uvurderlige. Jeg spurte folk om deres erfaringer med sosiale apper, hva som frustrerte dem, og hva de ville håpe å finne i en hobbyfokusert plattform.\n\nFellesnevnere dukket opp:\n\n• Enkelhet over kompleksitet: Folk ønsket å finne aktiviteter raskt uten å navigere gjennom endeløse menyer\n• Tydelig informasjonshierarki: Brukere uttrykte ønske om å se de viktigste detaljene-hva, når, hvor-med ett blikk\n• Meldinger som føles naturlige: Kommunikasjonsfunksjoner bør være enkle, ikke begravd eller overkompliserte\n• Organisert presentasjon: Aktiviteter bør være enkle å bla gjennom og filtrere uten å føles overveldende"
         },
         "2": {
           "heading": "Design for enkelhet",
-          "content": "En av de klareste lærdommene fra samtalene mine var ønsket om enkelhet. Folk ønsket ikke enda en app full av knapper, varsler og funksjoner som konkurrerer om oppmerksomhet.\n\nDette formet grensesnittet på flere måter:\n\n• Ren navigasjon: Essensielle funksjoner er enkle å finne uten å lete gjennom menyer\n• Fokuserte skjermer: Hver visning har et klart formål uten unødvendige distraksjoner\n• Intuitiv flyt: Å bevege seg gjennom appen føles naturlig—bla gjennom aktiviteter, se detaljer, koble med folk\n• Minimale klikk: Å gå fra oppdagelse til tilknytning krever så få steg som mulig"
+          "content": "En av de klareste lærdommene fra samtalene mine var ønsket om enkelhet. Folk ønsket ikke enda en app full av knapper, varsler og funksjoner som konkurrerer om oppmerksomhet.\n\nDette formet grensesnittet på flere måter:\n\n• Ren navigasjon: Essensielle funksjoner er enkle å finne uten å lete gjennom menyer\n• Fokuserte skjermer: Hver visning har et klart formål uten unødvendige distraksjoner\n• Intuitiv flyt: Å bevege seg gjennom appen føles naturlig-bla gjennom aktiviteter, se detaljer, koble med folk\n• Minimale klikk: Å gå fra oppdagelse til tilknytning krever så få steg som mulig"
         },
         "3": {
           "heading": "Informasjonsvisning",
@@ -109,13 +109,13 @@
         },
         "7": {
           "heading": "Fremtidig utvikling",
-          "content": "Planlagte funksjoner—informert av pågående tilbakemeldinger—inkluderer aktivitetsplanlegging og RSVP-funksjonalitet, gruppechat-kapasiteter for aktivitetsdeltakere, integrasjon med kalenderapper og lokasjonsbaserte aktivitetsanbefalinger.\n\nMålet er å fortsette å utvikle Hobbyist basert på virkelige brukerbehov mens vi opprettholder enkelheten og varmen som definerer den nåværende opplevelsen."
+          "content": "Planlagte funksjoner-informert av pågående tilbakemeldinger-inkluderer aktivitetsplanlegging og RSVP-funksjonalitet, gruppechat-kapasiteter for aktivitetsdeltakere, integrasjon med kalenderapper og lokasjonsbaserte aktivitetsanbefalinger.\n\nMålet er å fortsette å utvikle Hobbyist basert på virkelige brukerbehov mens vi opprettholder enkelheten og varmen som definerer den nåværende opplevelsen."
         }
       }
     },
     "project3": {
       "title": "Holidaze - Prosjekteksamen (A)",
-      "teaser": "Holidaze er en koselig bookingapp for slow-living-opphold—bla, book og slapp av i håndplukkede hytter og retreater.",
+      "teaser": "Holidaze er en koselig bookingapp for slow-living-opphold-bla, book og slapp av i håndplukkede hytter og retreater.",
       "description": "Holidaze er et samarbeidsprosjekt bygget på Noroff API, utviklet av Veronika Aas, Herman Hylland og Madelen Sletteberg.\n\nDen tilbyr en koselig, responsiv bookingopplevelse for håndplukkede opphold fokusert på slow living fra skogshytter til fjellretretter. Brukere kan bla, booke og administrere steder med letthet gjennom et varmt, brukervennlig grensesnitt.",
       "article": {
         "0": {
@@ -170,7 +170,7 @@
     "project-timer-planner": {
       "title": "Timer & Planner - Produktivitetsapp",
       "teaser": "En produktivitetsapplikasjon som kombinerer en tilpassbar fokustimer med fleksible ukentlige og månedlige planleggingsverktøy, med dra-og-slipp-planlegging.",
-      "description": "Timer & Planner er en produktivitetsapplikasjon som kombinerer en tilpassbar fokustimer med fleksible planleggingsverktøy. Lag øktmaler med konfigurerbare arbeids-/pauseintervaller, administrer timeplanen din på tvers av ukentlige og månedlige visninger, og hold deg organisert med fargekodede aktiviteter.\n\nBygget med React 19 og TypeScript, har appen dra-og-slipp-omplanlegging, gjentakende aktivitetsalternativer og lokal lagringsutholdighet—alt uten å kreve en konto eller skylagring.",
+      "description": "Timer & Planner er en produktivitetsapplikasjon som kombinerer en tilpassbar fokustimer med fleksible planleggingsverktøy. Lag øktmaler med konfigurerbare arbeids-/pauseintervaller, administrer timeplanen din på tvers av ukentlige og månedlige visninger, og hold deg organisert med fargekodede aktiviteter.\n\nBygget med React 19 og TypeScript, har appen dra-og-slipp-omplanlegging, gjentakende aktivitetsalternativer og lokal lagringsutholdighet-alt uten å kreve en konto eller skylagring.",
       "article": {
         "0": {
           "heading": "Prosjektoversikt",
@@ -196,12 +196,12 @@
     },
     "project-pia-salary": {
       "title": "PIA Lønnssporer - Inntektshåndteringsapp",
-      "teaser": "En personvernfokusert inntektsporingsapplikasjon med automatiske skatteberegninger, Excel import/eksport og tospråklig støtte—all data lagres lokalt.",
+      "teaser": "En personvernfokusert inntektsporingsapplikasjon med automatiske skatteberegninger, Excel import/eksport og tospråklig støtte-all data lagres lokalt.",
       "description": "PIA Lønnssporer er en nettbasert inntektsporingsapplikasjon designet for å administrere månedlige inntekter med automatiske skatte- og trygdeberegninger. Bygget med et sterkt fokus på personvern, lagres all data lokalt i Excel-filer uten å kreve skytjenester.",
       "article": {
         "0": {
           "heading": "Prosjektoversikt",
-          "content": "PIA Lønnssporer ble bygget for å løse et virkelig behov—spore inntekt på tvers av flere kilder samtidig som fullstendig personvern opprettholdes. I motsetning til skybaserte løsninger lagrer denne appen all data lokalt i Excel-filer, noe som gir brukere full kontroll over finansiell informasjon."
+          "content": "PIA Lønnssporer ble bygget for å løse et virkelig behov-spore inntekt på tvers av flere kilder samtidig som fullstendig personvern opprettholdes. I motsetning til skybaserte løsninger lagrer denne appen all data lokalt i Excel-filer, noe som gir brukere full kontroll over finansiell informasjon."
         },
         "1": {
           "heading": "Hovedfunksjoner",
@@ -213,7 +213,7 @@
         },
         "3": {
           "heading": "Personvernførst-design",
-          "content": "Et kjerneprinsipp i dette prosjektet var personvern. All finansiell data forblir på brukerens enhet—det er ingen skylagring, ingen kontoer å opprette, og ingen data forlater nettleseren."
+          "content": "Et kjerneprinsipp i dette prosjektet var personvern. All finansiell data forblir på brukerens enhet-det er ingen skylagring, ingen kontoer å opprette, og ingen data forlater nettleseren."
         },
         "4": {
           "heading": "Hvordan det fungerer",
@@ -232,7 +232,7 @@
     "project5": {
       "title": "CliketyCart - Prosjektoppgave",
       "teaser": "ClicketyCart er en retro-stil nettbutikk med rask utsjekking, umiddelbar levering og jevn shopping drevet av Noroff API.",
-      "description": "ClicketyCart gjør shopping raskt, morsomt og uanstrengt. Med en turboladet utsjekking og lynrask levering, får du det du trenger—umiddelbart.\n\nDette er frontenden for en fiktiv nettbutikk drevet av Noroff API, med et retro-inspirert design og bygget med moderne React-funksjonalitet.",
+      "description": "ClicketyCart gjør shopping raskt, morsomt og uanstrengt. Med en turboladet utsjekking og lynrask levering, får du det du trenger-umiddelbart.\n\nDette er frontenden for en fiktiv nettbutikk drevet av Noroff API, med et retro-inspirert design og bygget med moderne React-funksjonalitet.",
       "article": {
         "0": {
           "heading": "Forbedringer",
@@ -252,18 +252,18 @@
         },
         "4": {
           "heading": "Forbedret skjematilgjengelighet",
-          "content": "Et av tilgjengelighetsproblemene jeg oppdaget i den opprinnelige versjonen var at noen interaktive elementer—spesielt skjemainput—ikke var riktig pakket inn i <form>-elementer. Vi korrigerte dette ved å sikre at alle inputfelt er riktig strukturert innenfor semantiske skjematagger."
+          "content": "Et av tilgjengelighetsproblemene jeg oppdaget i den opprinnelige versjonen var at noen interaktive elementer-spesielt skjemainput-ikke var riktig pakket inn i <form>-elementer. Vi korrigerte dette ved å sikre at alle inputfelt er riktig strukturert innenfor semantiske skjematagger."
         }
       }
     },
     "project6": {
       "title": "Community Science Museum - Andre skritt",
-      "teaser": "Mitt andre prosjekt som student—ikke en refleksjon av mine ferdigheter i dag, men en annen milepæl i min utviklingsreise.",
-      "description": "Community Science Museum-nettstedet var min andre obligatoriske oppgave ved Noroff. Viktig merknad: DETTE PROSJEKTET REFLEKTERER IKKE MINE EVNER SOM UTVIKLER I DAG—det er inkludert for å vise min læringskurve og reisen jeg har vært gjennom.\n\nBygget med HTML og CSS, fokuserte dette prosjektet på å lage et tilgjengelig, responsivt nettsted for et vitenskapsmuseum rettet mot yngre publikum samtidig som profesjonalitet opprettholdes.",
+      "teaser": "Mitt andre prosjekt som student-ikke en refleksjon av mine ferdigheter i dag, men en annen milepæl i min utviklingsreise.",
+      "description": "Community Science Museum-nettstedet var min andre obligatoriske oppgave ved Noroff. Viktig merknad: DETTE PROSJEKTET REFLEKTERER IKKE MINE EVNER SOM UTVIKLER I DAG-det er inkludert for å vise min læringskurve og reisen jeg har vært gjennom.\n\nBygget med HTML og CSS, fokuserte dette prosjektet på å lage et tilgjengelig, responsivt nettsted for et vitenskapsmuseum rettet mot yngre publikum samtidig som profesjonalitet opprettholdes.",
       "article": {
         "0": {
           "heading": "Viktig merknad",
-          "content": "Dette prosjektet reflekterer ikke mine ferdigheter eller evner som utvikler i dag. Som GameHub er det inkludert i porteføljen min for å demonstrere min vekst og reise—viser min progresjon mens jeg fortsatte å lære."
+          "content": "Dette prosjektet reflekterer ikke mine ferdigheter eller evner som utvikler i dag. Som GameHub er det inkludert i porteføljen min for å demonstrere min vekst og reise-viser min progresjon mens jeg fortsatte å lære."
         },
         "1": {
           "heading": "Det andre steget",
@@ -271,7 +271,7 @@
         },
         "2": {
           "heading": "Prosjektmål",
-          "content": "Oppdraget var å lage et moderne, tilgjengelig nettsted for et vitenskapsmuseum. Utfordringen var å appellere til yngre publikum uten å være nedlatende—finne riktig balanse mellom spenning og profesjonalitet."
+          "content": "Oppdraget var å lage et moderne, tilgjengelig nettsted for et vitenskapsmuseum. Utfordringen var å appellere til yngre publikum uten å være nedlatende-finne riktig balanse mellom spenning og profesjonalitet."
         },
         "3": {
           "heading": "Hva jeg lærte",
@@ -285,16 +285,16 @@
     },
     "project7": {
       "title": "GameHub - Der det hele startet",
-      "teaser": "Mitt aller første webutviklingsprosjekt—ikke en refleksjon av mine ferdigheter i dag, men en påminnelse om hvor reisen min begynte.",
-      "description": "GameHub var mitt aller første kodeprosjekt, laget som en obligatorisk oppgave tidlig i studiene mine. Viktig merknad: DETTE PROSJEKTET REFLEKTERER IKKE MINE EVNER SOM UTVIKLER I DAG—det er inkludert utelukkende for å vise hvor jeg startet og hvor langt jeg har kommet siden.\n\nBygget med vanilla HTML, CSS og JavaScript, lærte dette e-handelskonseptet for videospill meg det grunnleggende innen webutvikling.",
+      "teaser": "Mitt aller første webutviklingsprosjekt-ikke en refleksjon av mine ferdigheter i dag, men en påminnelse om hvor reisen min begynte.",
+      "description": "GameHub var mitt aller første kodeprosjekt, laget som en obligatorisk oppgave tidlig i studiene mine. Viktig merknad: DETTE PROSJEKTET REFLEKTERER IKKE MINE EVNER SOM UTVIKLER I DAG-det er inkludert utelukkende for å vise hvor jeg startet og hvor langt jeg har kommet siden.\n\nBygget med vanilla HTML, CSS og JavaScript, lærte dette e-handelskonseptet for videospill meg det grunnleggende innen webutvikling.",
       "article": {
         "0": {
           "heading": "Viktig merknad",
-          "content": "Dette prosjektet reflekterer ikke mine ferdigheter eller evner som utvikler i dag. Det er inkludert i porteføljen min utelukkende for å demonstrere min vekst og reise—viser hvor jeg startet versus hvor jeg er nå."
+          "content": "Dette prosjektet reflekterer ikke mine ferdigheter eller evner som utvikler i dag. Det er inkludert i porteføljen min utelukkende for å demonstrere min vekst og reise-viser hvor jeg startet versus hvor jeg er nå."
         },
         "1": {
           "heading": "Begynnelsen",
-          "content": "GameHub har en spesiell plass i porteføljen min—ikke fordi det er mitt beste arbeid, men fordi det er hvor alt startet. Dette var mitt aller første prosjekt som utvikler, en obligatorisk oppgave som kastet oss ut på dypt vann tidlig i studiene."
+          "content": "GameHub har en spesiell plass i porteføljen min-ikke fordi det er mitt beste arbeid, men fordi det er hvor alt startet. Dette var mitt aller første prosjekt som utvikler, en obligatorisk oppgave som kastet oss ut på dypt vann tidlig i studiene."
         },
         "2": {
           "heading": "En ydmyk start",

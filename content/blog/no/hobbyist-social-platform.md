@@ -25,7 +25,7 @@ Hobbyist kobler folk gjennom hobbyene deres. Leter du etter en turkamerat? En br
 Et av mine hovedmål var å skille Hobbyist fra den typiske datingapp-estetikken. Designvalgene reflekterer dette:
 
 ### Varm fargepalett
-Korall- og oransjegradienten skaper en innbydende, vennlig atmosfære. Disse fargene føles energiske og fellesskapsfokuserte—perfekt for en plattform om delte aktiviteter.
+Korall- og oransjegradienten skaper en innbydende, vennlig atmosfære. Disse fargene føles energiske og fellesskapsfokuserte-perfekt for en plattform om delte aktiviteter.
 
 ### Inkluderende bildebruk
 All bildebruk vektlegger grupper og aktiviteter fremfor enkeltpersoner. Dette forsterker at Hobbyist handler om fellesskap, ikke romantisk matchmaking.
@@ -56,7 +56,7 @@ Bygget med React og Vite for optimal ytelse, bruker Hobbyist:
 - **Tailwind CSS** for responsiv, konsistent styling
 - **Komponentdrevet arkitektur** for vedlikeholdbarhet
 
-Sanntidskapasitetene betyr at brukere kan se oppdateringer umiddelbart—nye aktivitetsposter, meldinger og forbindelsesforespørsler vises uten sideoppdateringer.
+Sanntidskapasitetene betyr at brukere kan se oppdateringer umiddelbart-nye aktivitetsposter, meldinger og forbindelsesforespørsler vises uten sideoppdateringer.
 
 ## Fremtidsplaner
 

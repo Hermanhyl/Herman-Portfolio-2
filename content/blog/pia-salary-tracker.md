@@ -19,7 +19,7 @@ PIA Salary Tracker was built to solve a real problem: tracking income across mul
 
 ## The Privacy Challenge
 
-Most income tracking apps require accounts and store your financial data on remote servers. For something as sensitive as salary information, this felt unnecessary. PIA Salary Tracker takes a different approach—all data lives in Excel files that you control.
+Most income tracking apps require accounts and store your financial data on remote servers. For something as sensitive as salary information, this felt unnecessary. PIA Salary Tracker takes a different approach-all data lives in Excel files that you control.
 
 ## How It Works
 
@@ -81,6 +81,6 @@ Built initially for users in German-speaking regions, the bilingual support make
 
 ## What I Learned
 
-PIA Salary Tracker demonstrated that not every app needs cloud infrastructure. Sometimes the simplest solution—local storage with universal file formats—is the most powerful. Users appreciate having complete control over their data.
+PIA Salary Tracker demonstrated that not every app needs cloud infrastructure. Sometimes the simplest solution-local storage with universal file formats-is the most powerful. Users appreciate having complete control over their data.
 
 *Start tracking your income with complete privacy!*

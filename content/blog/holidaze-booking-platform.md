@@ -15,7 +15,7 @@ projectLink: /project/project3
 projectLabel: View Holidaze Project
 ---
 
-Holidaze represents the culmination of our frontend development studies at Noroff—a collaborative project that earned an A grade and taught us invaluable lessons about teamwork, code quality, and building real-world applications.
+Holidaze represents the culmination of our frontend development studies at Noroff-a collaborative project that earned an A grade and taught us invaluable lessons about teamwork, code quality, and building real-world applications.
 
 ## The Project
 
@@ -26,7 +26,7 @@ Working with Veronika Aas and Madelen Sletteberg, we created a booking platform 
 From day one, we prioritized collaboration and communication:
 
 ### Clear Task Division
-We divided responsibilities based on our strengths while ensuring everyone participated in all aspects—planning, design, and implementation.
+We divided responsibilities based on our strengths while ensuring everyone participated in all aspects-planning, design, and implementation.
 
 ### GitHub Workflow
 Version control with clear commit messages kept us organized. We could track progress, review each other's code, and collaborate efficiently even when working asynchronously.
@@ -49,10 +49,10 @@ Every project I work on follows a structured design workflow that ensures the fi
 I start by creating a mind map to gather all the pages needed and visualize how they interconnect. For Holidaze, this meant mapping out the user journey from landing page to venue discovery to booking confirmation, identifying which pages link to others and which stand alone.
 
 ### 2. Ideation & Concept Exploration
-Next comes the ideation phase where we bounced ideas around—exploring different approaches for the booking flow, considering various visual directions that could evoke that "cozy cabin" feeling. We discussed what would work best for our target audience seeking slow-living getaways.
+Next comes the ideation phase where we bounced ideas around-exploring different approaches for the booking flow, considering various visual directions that could evoke that "cozy cabin" feeling. We discussed what would work best for our target audience seeking slow-living getaways.
 
 ### 3. Wireframing
-With our direction set, I moved to simple wireframes—low-fidelity layouts focusing purely on structure and content hierarchy. No colors, no fancy fonts—just boxes and placeholder text to nail down the user flow and page layouts.
+With our direction set, I moved to simple wireframes-low-fidelity layouts focusing purely on structure and content hierarchy. No colors, no fancy fonts-just boxes and placeholder text to nail down the user flow and page layouts.
 
 ### 4. Style Guide Development
 Before diving into high-fidelity designs, I established a comprehensive style guide including:
@@ -69,7 +69,7 @@ Following the mobile-first concept, I designed the complete mobile experience fi
 Once mobile was solid, I expanded the designs to desktop, taking advantage of the extra screen real estate for multi-column layouts, larger imagery, and enhanced navigation.
 
 ### 7. Prototyping
-Finally, I created an interactive prototype in Figma simulating the user journey—page transitions, button interactions, form behaviors, and animations. This let us test the experience before writing any code.
+Finally, I created an interactive prototype in Figma simulating the user journey-page transitions, button interactions, form behaviors, and animations. This let us test the experience before writing any code.
 
 ## Key Features
 

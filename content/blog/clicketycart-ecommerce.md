@@ -18,7 +18,7 @@ ClicketyCart is what happens when you combine modern React development with retr
 
 ## The Concept
 
-The tagline says it all: "Turbo-charged checkout and lightning-fast delivery—quicker than you can say add to cart." The entire design embraces speed and playfulness while maintaining full e-commerce functionality.
+The tagline says it all: "Turbo-charged checkout and lightning-fast delivery-quicker than you can say add to cart." The entire design embraces speed and playfulness while maintaining full e-commerce functionality.
 
 ## Features
 
@@ -47,7 +47,7 @@ The original code had no function documentation. Adding JSDoc comments to all co
 JSDoc is standard practice in professional environments, and this update brought ClicketyCart in line with industry expectations.
 
 ### Clickable Logo
-A simple but important UX improvement—the header logo now links back to the homepage. Users expect this behavior, and the original version was missing it.
+A simple but important UX improvement-the header logo now links back to the homepage. Users expect this behavior, and the original version was missing it.
 
 ### README Enhancement
 Adding a screenshot to the README gives visitors a quick visual overview on GitHub. This makes the project more portfolio-friendly and accessible.
@@ -66,10 +66,10 @@ Before any development began, I followed my structured design workflow to ensure
 The process started with mapping out the complete e-commerce flow: homepage, product listings, individual product pages, shopping cart, checkout, and confirmation. I identified how users would navigate between pages and what paths lead to conversion.
 
 ### 2. Ideation & Concept Exploration
-For ClicketyCart, ideation focused on finding the right balance between retro aesthetics and modern e-commerce UX. We explored different visual directions—neon signs, pixel art, vintage typography—before landing on our playful, speed-focused concept.
+For ClicketyCart, ideation focused on finding the right balance between retro aesthetics and modern e-commerce UX. We explored different visual directions-neon signs, pixel art, vintage typography-before landing on our playful, speed-focused concept.
 
 ### 3. Wireframing
-Low-fidelity wireframes mapped out the structure: product grid layouts, cart functionality placement, checkout form flow. No styling yet—just boxes and content hierarchy to get the user experience right.
+Low-fidelity wireframes mapped out the structure: product grid layouts, cart functionality placement, checkout form flow. No styling yet-just boxes and content hierarchy to get the user experience right.
 
 ### 4. Style Guide Development
 The retro theme required a carefully crafted style guide:
@@ -94,6 +94,6 @@ Working with Madelen Sletteberg meant combining different perspectives and skill
 
 ## Lessons Learned
 
-ClicketyCart reinforced that projects don't end at submission. The improvements we made afterward—documentation, accessibility, UX refinements—represent the kind of continuous improvement that professional projects require.
+ClicketyCart reinforced that projects don't end at submission. The improvements we made afterward-documentation, accessibility, UX refinements-represent the kind of continuous improvement that professional projects require.
 
 *Check out ClicketyCart and experience turbo-charged shopping!*

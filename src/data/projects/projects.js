@@ -2,7 +2,7 @@ export const projects = [
   {
     id: "project1",
     title: "BrannVRn",
-    teaser: "UX Process & Learning Design in action: A VR fire safety simulator where I designed the complete user experience and pedagogical framework—transforming complex safety procedures into intuitive, educational interactions.",
+    teaser: "UX Process & Learning Design in action: A VR fire safety simulator where I designed the complete user experience and pedagogical framework-transforming complex safety procedures into intuitive, educational interactions.",
     description:
       "BrannVRn is a Virtual Reality fire safety training simulator developed as a bachelor's degree project in collaboration with Sykehuspartner. The project recreates Sykehuspartner's Drammen office in a 1:1 scale, providing immersive fire safety training experiences.\n\nAs the concept artist and UI/UX designer, I was responsible for creating the visual identity, infographics, UI elements, 3D modeling, texturing, and developing informational content about fire hazards and emergency procedures.",
     images: ["/BrannVRn/Thumbnail/HighresScreenshot00005.png"],
@@ -59,15 +59,15 @@ export const projects = [
       },
       {
         heading: "My Role: UI/UX Designer & Concept Artist",
-        content: "As the UI/UX designer and concept artist on our three-person team, my responsibilities centered on the complete user experience and visual communication:\n\n• Developing the visual concept and art direction for the entire simulator\n• Designing all user interface elements with a focus on VR usability and accessibility\n• Creating informational infographics that communicate complex safety procedures clearly\n• Designing educational displays that guide users through learning at their own pace\n• Ensuring visual consistency across all interactive elements\n• Texturing and skinning 3D assets to create an immersive environment\n\nMy core challenge was translating complex fire safety knowledge into intuitive, learnable interactions—ensuring users don't just experience the simulator, but genuinely understand and retain the safety procedures.",
+        content: "As the UI/UX designer and concept artist on our three-person team, my responsibilities centered on the complete user experience and visual communication:\n\n• Developing the visual concept and art direction for the entire simulator\n• Designing all user interface elements with a focus on VR usability and accessibility\n• Creating informational infographics that communicate complex safety procedures clearly\n• Designing educational displays that guide users through learning at their own pace\n• Ensuring visual consistency across all interactive elements\n• Texturing and skinning 3D assets to create an immersive environment\n\nMy core challenge was translating complex fire safety knowledge into intuitive, learnable interactions-ensuring users don't just experience the simulator, but genuinely understand and retain the safety procedures.",
       },
       {
         heading: "Learning Design: The Heart of the Project",
-        content: "This wasn't just a visual simulation—it was an educational tool that needed to genuinely teach people life-saving skills. The learning design approach was central to every decision I made.\n\nKey pedagogical principles I applied:\n\n• Progressive disclosure: Information is revealed in stages, preventing cognitive overload while building understanding systematically\n• Learn-then-practice flow: Users first read about equipment functionality, then immediately practice hands-on—reinforcing learning through action\n• Contextual learning: Educational content is placed exactly where users need it, integrated naturally into the environment rather than interrupting the experience\n• Multiple learning modalities: Visual diagrams, text explanations, and hands-on practice accommodate different learning styles\n\nThe goal was creating an experience where users naturally absorb safety knowledge while immersed in the virtual environment, making the learning feel effortless rather than forced.",
+        content: "This wasn't just a visual simulation-it was an educational tool that needed to genuinely teach people life-saving skills. The learning design approach was central to every decision I made.\n\nKey pedagogical principles I applied:\n\n• Progressive disclosure: Information is revealed in stages, preventing cognitive overload while building understanding systematically\n• Learn-then-practice flow: Users first read about equipment functionality, then immediately practice hands-on-reinforcing learning through action\n• Contextual learning: Educational content is placed exactly where users need it, integrated naturally into the environment rather than interrupting the experience\n• Multiple learning modalities: Visual diagrams, text explanations, and hands-on practice accommodate different learning styles\n\nThe goal was creating an experience where users naturally absorb safety knowledge while immersed in the virtual environment, making the learning feel effortless rather than forced.",
       },
       {
         heading: "What We Learned from Firefighters",
-        content: "One of the most valuable experiences was spending a day at the local fire station, consulting directly with firefighters. Their real-world expertise fundamentally shaped our design approach.\n\nKey insights that influenced the project:\n\n• Fire behavior: Understanding how fire spreads, which areas become dangerous first, and why certain escape routes are prioritized over others\n• Equipment priorities: Learning which equipment to use in different scenarios and the critical decision-making process firefighters follow\n• Common mistakes: Discovering what untrained people typically do wrong in emergencies—information that directly shaped our tutorial design\n• Psychological factors: Understanding how panic affects decision-making and how proper training can override fear responses\n\nThis collaboration ensured our simulator teaches what actually matters in emergencies—not just textbook procedures, but the practical knowledge that saves lives. The firefighters' feedback on our early designs helped us prioritize the most critical learning objectives.",
+        content: "One of the most valuable experiences was spending a day at the local fire station, consulting directly with firefighters. Their real-world expertise fundamentally shaped our design approach.\n\nKey insights that influenced the project:\n\n• Fire behavior: Understanding how fire spreads, which areas become dangerous first, and why certain escape routes are prioritized over others\n• Equipment priorities: Learning which equipment to use in different scenarios and the critical decision-making process firefighters follow\n• Common mistakes: Discovering what untrained people typically do wrong in emergencies-information that directly shaped our tutorial design\n• Psychological factors: Understanding how panic affects decision-making and how proper training can override fear responses\n\nThis collaboration ensured our simulator teaches what actually matters in emergencies-not just textbook procedures, but the practical knowledge that saves lives. The firefighters' feedback on our early designs helped us prioritize the most critical learning objectives.",
       },
       {
         heading: "Key Features",
@@ -83,7 +83,7 @@ export const projects = [
       },
       {
         heading: "Key Takeaways",
-        content: "This project delivered profound lessons that continue to shape my approach to design:\n\n• User research is essential: The firefighter consultation transformed our understanding of what users actually need to learn—assumptions aren't enough\n• Learning design requires empathy: Understanding how people absorb and retain information is as important as the information itself\n• Cross-functional collaboration strengthens outcomes: Working with subject matter experts (firefighters), clients (Sykehuspartner), and a technical team produced results none of us could achieve alone\n• Design for impact, not just aesthetics: The A grade reflected that we created something that genuinely teaches, not just something that looks impressive\n\nThis project proved that the best educational tools balance technical accuracy with pedagogical effectiveness—creating experiences that don't just look and feel realistic, but genuinely transfer valuable skills to users.",
+        content: "This project delivered profound lessons that continue to shape my approach to design:\n\n• User research is essential: The firefighter consultation transformed our understanding of what users actually need to learn-assumptions aren't enough\n• Learning design requires empathy: Understanding how people absorb and retain information is as important as the information itself\n• Cross-functional collaboration strengthens outcomes: Working with subject matter experts (firefighters), clients (Sykehuspartner), and a technical team produced results none of us could achieve alone\n• Design for impact, not just aesthetics: The A grade reflected that we created something that genuinely teaches, not just something that looks impressive\n\nThis project proved that the best educational tools balance technical accuracy with pedagogical effectiveness-creating experiences that don't just look and feel realistic, but genuinely transfer valuable skills to users.",
       },
     ],
   },
@@ -91,9 +91,9 @@ export const projects = [
   {
     id: "project-gonefishing",
     title: "GoneFishing - Fishing Tracker App",
-    teaser: "User Research in Practice: A fishing tracker app built through conversations with real anglers—addressing pain points in existing apps through iterative design and community feedback.",
+    teaser: "User Research in Practice: A fishing tracker app built through conversations with real anglers-addressing pain points in existing apps through iterative design and community feedback.",
     description:
-      "GoneFishing is a comprehensive fishing tracking application born from real user research within the fishing community. By talking directly with fishermen about their frustrations with existing apps, I identified key pain points and designed solutions that actually matter to anglers.\n\nBuilt with Next.js and featuring a clean, responsive interface, the app addresses real needs: photo logging, detailed weather tracking, catch statistics, and an overall view of your fishing history—features that emerged directly from user feedback.",
+      "GoneFishing is a comprehensive fishing tracking application born from real user research within the fishing community. By talking directly with fishermen about their frustrations with existing apps, I identified key pain points and designed solutions that actually matter to anglers.\n\nBuilt with Next.js and featuring a clean, responsive interface, the app addresses real needs: photo logging, detailed weather tracking, catch statistics, and an overall view of your fishing history-features that emerged directly from user feedback.",
     images: ["/gonefishing.png"],
     blogPost: "/blog/gonefishing-tracker-app",
     github: "https://github.com/Hermanhyl/gonefishing",
@@ -104,31 +104,31 @@ export const projects = [
     article: [
       {
         heading: "Project Overview",
-        content: "GoneFishing started with a simple question: what do fishermen actually need from a catch tracking app? Rather than assuming I knew the answer, I went directly to the source—talking with anglers in the fishing community to understand their real experiences, frustrations, and wishes.\n\nThis user-centered approach shaped every feature in the app. Instead of building what I thought was useful, I built what fishermen told me they needed. The result is an application designed around genuine pain points rather than assumptions.",
+        content: "GoneFishing started with a simple question: what do fishermen actually need from a catch tracking app? Rather than assuming I knew the answer, I went directly to the source-talking with anglers in the fishing community to understand their real experiences, frustrations, and wishes.\n\nThis user-centered approach shaped every feature in the app. Instead of building what I thought was useful, I built what fishermen told me they needed. The result is an application designed around genuine pain points rather than assumptions.",
       },
       {
         heading: "User Research: Learning from the Community",
-        content: "The most valuable part of this project was the research phase. I had conversations with multiple fishermen—from casual weekend anglers to dedicated enthusiasts—asking about their current methods for tracking catches and what frustrated them about existing solutions.\n\nKey insights from these conversations:\n\n• No photo support: Several anglers mentioned that their current apps didn't allow image uploads, making it impossible to document catches visually—a feature many considered essential\n• Poor weather logging: Existing apps either lacked weather tracking entirely or made it too cumbersome to record conditions accurately\n• Missing statistics: Fishermen wanted to see patterns in their catches over time, but most apps offered no analytics or overview features\n• No comprehensive view: Users expressed frustration at not being able to see their complete fishing history at a glance\n• Cluttered interfaces: Many existing apps were overloaded with features that got in the way of the core task—quickly logging a catch\n\nThese pain points became the foundation for GoneFishing's feature set.",
+        content: "The most valuable part of this project was the research phase. I had conversations with multiple fishermen-from casual weekend anglers to dedicated enthusiasts-asking about their current methods for tracking catches and what frustrated them about existing solutions.\n\nKey insights from these conversations:\n\n• No photo support: Several anglers mentioned that their current apps didn't allow image uploads, making it impossible to document catches visually-a feature many considered essential\n• Poor weather logging: Existing apps either lacked weather tracking entirely or made it too cumbersome to record conditions accurately\n• Missing statistics: Fishermen wanted to see patterns in their catches over time, but most apps offered no analytics or overview features\n• No comprehensive view: Users expressed frustration at not being able to see their complete fishing history at a glance\n• Cluttered interfaces: Many existing apps were overloaded with features that got in the way of the core task-quickly logging a catch\n\nThese pain points became the foundation for GoneFishing's feature set.",
       },
       {
         heading: "From Research to Design",
-        content: "Translating user feedback into design decisions required careful prioritization. Not every wish could be implemented immediately, but the core frustrations needed addressing.\n\nHow user research shaped the design:\n\n• Image support was built in from the start, allowing anglers to attach photos to each catch entry\n• Weather conditions are easy to log with intuitive controls for temperature, wind, and conditions\n• A statistics dashboard provides the overview users were missing—total catches, species breakdown, and trends over time\n• The interface stays clean and focused, respecting users' time when they're out on the water\n• Both metric and imperial units accommodate the international fishing community\n\nThis wasn't about adding features for the sake of it—every capability traces back to something a real user expressed needing.",
+        content: "Translating user feedback into design decisions required careful prioritization. Not every wish could be implemented immediately, but the core frustrations needed addressing.\n\nHow user research shaped the design:\n\n• Image support was built in from the start, allowing anglers to attach photos to each catch entry\n• Weather conditions are easy to log with intuitive controls for temperature, wind, and conditions\n• A statistics dashboard provides the overview users were missing-total catches, species breakdown, and trends over time\n• The interface stays clean and focused, respecting users' time when they're out on the water\n• Both metric and imperial units accommodate the international fishing community\n\nThis wasn't about adding features for the sake of it-every capability traces back to something a real user expressed needing.",
       },
       {
         heading: "Key Features",
-        content: "The application includes features that directly address the pain points discovered during research:\n\n• Photo logging: Document your catches visually with image uploads for each entry\n• Comprehensive weather tracking: Record temperature, wind conditions, and weather state easily\n• Catch statistics: View your fishing history with meaningful analytics and trends\n• Overall catch view: See all your catches in an organized, filterable format\n• Theme management: Light and dark modes for different conditions—the dark theme using a slate blue background that's easy on the eyes during early morning or late evening sessions\n• Unit flexibility: Switch between metric and imperial measurements based on your preference\n• Secure authentication: Your data stays private with Supabase-powered authentication",
+        content: "The application includes features that directly address the pain points discovered during research:\n\n• Photo logging: Document your catches visually with image uploads for each entry\n• Comprehensive weather tracking: Record temperature, wind conditions, and weather state easily\n• Catch statistics: View your fishing history with meaningful analytics and trends\n• Overall catch view: See all your catches in an organized, filterable format\n• Theme management: Light and dark modes for different conditions-the dark theme using a slate blue background that's easy on the eyes during early morning or late evening sessions\n• Unit flexibility: Switch between metric and imperial measurements based on your preference\n• Secure authentication: Your data stays private with Supabase-powered authentication",
       },
       {
         heading: "Technical Implementation",
-        content: "Built with Next.js, the application leverages React's component-based architecture for maintainable and scalable code. Supabase serves as the backend, handling authentication and data storage with real-time capabilities. Tailwind CSS provides a modern, responsive design that works seamlessly across devices—crucial for an app that needs to work equally well on a phone by the water or a desktop at home.\n\nSpecial attention was paid to the mobile experience, recognizing that most catch logging happens in the field. The interface is optimized for quick entries with minimal taps, respecting the context in which it's used.",
+        content: "Built with Next.js, the application leverages React's component-based architecture for maintainable and scalable code. Supabase serves as the backend, handling authentication and data storage with real-time capabilities. Tailwind CSS provides a modern, responsive design that works seamlessly across devices-crucial for an app that needs to work equally well on a phone by the water or a desktop at home.\n\nSpecial attention was paid to the mobile experience, recognizing that most catch logging happens in the field. The interface is optimized for quick entries with minimal taps, respecting the context in which it's used.",
       },
       {
         heading: "UX Lessons Learned",
-        content: "This project reinforced several important UX principles:\n\n• Talk to users early: Assumptions about what users need are often wrong. Direct conversations revealed pain points I never would have guessed\n• Prioritize based on frequency: The features users mentioned most often became the highest priority—photo support and statistics came up in nearly every conversation\n• Context matters: Understanding that anglers log catches while fishing—often in challenging conditions—influenced decisions about interface simplicity and button sizes\n• Existing solutions aren't sacred: Just because other apps do something a certain way doesn't mean it's right. User frustrations with competitors became opportunities for differentiation\n\nThe research-first approach took more time upfront but resulted in a more focused, useful application.",
+        content: "This project reinforced several important UX principles:\n\n• Talk to users early: Assumptions about what users need are often wrong. Direct conversations revealed pain points I never would have guessed\n• Prioritize based on frequency: The features users mentioned most often became the highest priority-photo support and statistics came up in nearly every conversation\n• Context matters: Understanding that anglers log catches while fishing-often in challenging conditions-influenced decisions about interface simplicity and button sizes\n• Existing solutions aren't sacred: Just because other apps do something a certain way doesn't mean it's right. User frustrations with competitors became opportunities for differentiation\n\nThe research-first approach took more time upfront but resulted in a more focused, useful application.",
       },
       {
         heading: "Future Enhancements",
-        content: "Based on ongoing feedback from users, planned improvements include:\n\n• Advanced data visualization showing catch trends over seasons and locations\n• Social features to share catches with the fishing community\n• Integration with weather APIs for automatic condition logging\n• Location-based insights showing your most successful fishing spots\n• Export functionality for backing up your fishing history\n\nThe goal is to continue evolving GoneFishing based on real user needs—maintaining the research-driven approach that shaped its foundation.",
+        content: "Based on ongoing feedback from users, planned improvements include:\n\n• Advanced data visualization showing catch trends over seasons and locations\n• Social features to share catches with the fishing community\n• Integration with weather APIs for automatic condition logging\n• Location-based insights showing your most successful fishing spots\n• Export functionality for backing up your fishing history\n\nThe goal is to continue evolving GoneFishing based on real user needs-maintaining the research-driven approach that shaped its foundation.",
       },
     ],
   },
@@ -136,9 +136,9 @@ export const projects = [
   {
     id: "project2",
     title: "Hobbyist - Social Activity Platform",
-    teaser: "UX-Centered Design: A social platform shaped by conversations with friends and potential users—focusing on simplicity, intuitive navigation, and genuine human connection.",
+    teaser: "UX-Centered Design: A social platform shaped by conversations with friends and potential users-focusing on simplicity, intuitive navigation, and genuine human connection.",
     description:
-      "Hobbyist is a social platform designed to help people make real connections through shared interests and activities. The design process involved gathering insights from friends and potential users about what they'd want from such a platform.\n\nTheir feedback shaped everything from the simple navigation structure to how activities are displayed—resulting in a clean, organized interface that puts connection first, not complexity.",
+      "Hobbyist is a social platform designed to help people make real connections through shared interests and activities. The design process involved gathering insights from friends and potential users about what they'd want from such a platform.\n\nTheir feedback shaped everything from the simple navigation structure to how activities are displayed-resulting in a clean, organized interface that puts connection first, not complexity.",
     images: ["/hobbyist.jpg"],
     blogPost: "/blog/hobbyist-social-platform",
     github: "https://github.com/Hermanhyl/Hobbyist",
@@ -149,23 +149,23 @@ export const projects = [
     article: [
       {
         heading: "Project Overview",
-        content: "Hobbyist was born from the idea that meaningful connections come from shared experiences. In a world where digital interactions often feel shallow, this platform brings people together through activities they genuinely enjoy.\n\nBefore diving into development, I spent time talking with friends and people in my network about what they'd actually want from a platform like this. These conversations shaped the direction of the project—not just what features to include, but how to present them in a way that feels natural and welcoming.",
+        content: "Hobbyist was born from the idea that meaningful connections come from shared experiences. In a world where digital interactions often feel shallow, this platform brings people together through activities they genuinely enjoy.\n\nBefore diving into development, I spent time talking with friends and people in my network about what they'd actually want from a platform like this. These conversations shaped the direction of the project-not just what features to include, but how to present them in a way that feels natural and welcoming.",
       },
       {
         heading: "Gathering User Insights",
-        content: "While this wasn't a formal user study, the informal conversations I had proved invaluable. I asked people about their experiences with social apps, what frustrated them, and what they'd hope to find in a hobby-focused platform.\n\nCommon themes emerged:\n\n• Simplicity over complexity: People wanted to find activities quickly without navigating through endless menus and options\n• Clear information hierarchy: Users expressed wanting to see the most important details—what, when, where—at a glance\n• Messaging that feels natural: Communication features should be straightforward, not buried or overcomplicated\n• Organized presentation: Activities should be easy to browse and filter without feeling overwhelming\n• Welcoming atmosphere: The platform should feel friendly and approachable, not intimidating for newcomers\n\nThese insights became guiding principles for every design decision.",
+        content: "While this wasn't a formal user study, the informal conversations I had proved invaluable. I asked people about their experiences with social apps, what frustrated them, and what they'd hope to find in a hobby-focused platform.\n\nCommon themes emerged:\n\n• Simplicity over complexity: People wanted to find activities quickly without navigating through endless menus and options\n• Clear information hierarchy: Users expressed wanting to see the most important details-what, when, where-at a glance\n• Messaging that feels natural: Communication features should be straightforward, not buried or overcomplicated\n• Organized presentation: Activities should be easy to browse and filter without feeling overwhelming\n• Welcoming atmosphere: The platform should feel friendly and approachable, not intimidating for newcomers\n\nThese insights became guiding principles for every design decision.",
       },
       {
         heading: "Designing for Simplicity",
-        content: "One of the clearest takeaways from my conversations was the desire for simplicity. People didn't want another app cluttered with buttons, notifications, and features competing for attention.\n\nThis shaped the interface in several ways:\n\n• Clean navigation: Essential functions are easy to find without hunting through menus\n• Focused screens: Each view has a clear purpose without unnecessary distractions\n• Intuitive flow: Moving through the app feels natural—browse activities, see details, connect with people\n• Minimal clicks: Getting from discovery to connection requires as few steps as possible\n\nThe goal was an app that feels effortless to use, where users spend their energy on connecting with others rather than figuring out the interface.",
+        content: "One of the clearest takeaways from my conversations was the desire for simplicity. People didn't want another app cluttered with buttons, notifications, and features competing for attention.\n\nThis shaped the interface in several ways:\n\n• Clean navigation: Essential functions are easy to find without hunting through menus\n• Focused screens: Each view has a clear purpose without unnecessary distractions\n• Intuitive flow: Moving through the app feels natural-browse activities, see details, connect with people\n• Minimal clicks: Getting from discovery to connection requires as few steps as possible\n\nThe goal was an app that feels effortless to use, where users spend their energy on connecting with others rather than figuring out the interface.",
       },
       {
         heading: "Information Display",
-        content: "How information is presented matters as much as what information is shown. Based on feedback about wanting key details visible immediately, I designed activity cards and profiles to surface the essentials:\n\n• Activity type and description front and center\n• Date, time, and location clearly visible\n• Participant count and availability at a glance\n• User interests displayed prominently on profiles\n\nThe warm coral and orange color scheme wasn't just an aesthetic choice—it creates visual hierarchy and helps guide users' attention to what matters most.",
+        content: "How information is presented matters as much as what information is shown. Based on feedback about wanting key details visible immediately, I designed activity cards and profiles to surface the essentials:\n\n• Activity type and description front and center\n• Date, time, and location clearly visible\n• Participant count and availability at a glance\n• User interests displayed prominently on profiles\n\nThe warm coral and orange color scheme wasn't just an aesthetic choice-it creates visual hierarchy and helps guide users' attention to what matters most.",
       },
       {
         heading: "Key Features",
-        content: "The platform includes features that emerged from understanding what users actually need:\n\n• Activity browsing with intuitive filtering by category, location, and availability\n• User profiles showcasing interests and preferred activities\n• Clean dashboard for managing connections and upcoming events\n• Straightforward messaging for coordinating with activity partners\n• Wide range of hobby categories from outdoor adventures to creative pursuits\n\nEach feature was evaluated against the simplicity principle—if it added complexity without clear value, it didn't make the cut.",
+        content: "The platform includes features that emerged from understanding what users actually need:\n\n• Activity browsing with intuitive filtering by category, location, and availability\n• User profiles showcasing interests and preferred activities\n• Clean dashboard for managing connections and upcoming events\n• Straightforward messaging for coordinating with activity partners\n• Wide range of hobby categories from outdoor adventures to creative pursuits\n\nEach feature was evaluated against the simplicity principle-if it added complexity without clear value, it didn't make the cut.",
       },
       {
         heading: "Design Philosophy",
@@ -173,11 +173,11 @@ export const projects = [
       },
       {
         heading: "UX Lessons Applied",
-        content: "This project reinforced important UX principles:\n\n• Listen before building: Even informal conversations reveal insights you wouldn't discover on your own\n• Simplicity requires discipline: It's tempting to add features, but restraint often serves users better\n• Context shapes design: Understanding how and why people would use the platform influenced everything from button placement to color choices\n• Warmth can be designed: Visual design choices—colors, typography, spacing—contribute to how welcoming an app feels\n\nThe feedback-informed approach resulted in a more focused, user-friendly platform than I would have created based on assumptions alone.",
+        content: "This project reinforced important UX principles:\n\n• Listen before building: Even informal conversations reveal insights you wouldn't discover on your own\n• Simplicity requires discipline: It's tempting to add features, but restraint often serves users better\n• Context shapes design: Understanding how and why people would use the platform influenced everything from button placement to color choices\n• Warmth can be designed: Visual design choices-colors, typography, spacing-contribute to how welcoming an app feels\n\nThe feedback-informed approach resulted in a more focused, user-friendly platform than I would have created based on assumptions alone.",
       },
       {
         heading: "Future Development",
-        content: "Planned features—informed by ongoing feedback—include activity scheduling and RSVP functionality, group chat capabilities for activity participants, integration with calendar apps, and location-based activity recommendations.\n\nThe goal is to continue evolving Hobbyist based on real user needs while maintaining the simplicity and warmth that define the current experience.",
+        content: "Planned features-informed by ongoing feedback-include activity scheduling and RSVP functionality, group chat capabilities for activity participants, integration with calendar apps, and location-based activity recommendations.\n\nThe goal is to continue evolving Hobbyist based on real user needs while maintaining the simplicity and warmth that define the current experience.",
       },
     ],
   },
@@ -259,7 +259,7 @@ export const projects = [
     title: "Timer & Planner - Productivity App",
     teaser: "A productivity application combining a customizable focus timer with flexible weekly and monthly planning tools, featuring drag-and-drop scheduling.",
     description:
-      "Timer & Planner is a productivity application that combines a customizable focus timer with flexible planning tools. Create session templates with configurable work/break intervals, manage your schedule across weekly and monthly views, and stay organized with color-coded activities.\n\nBuilt with React 19 and TypeScript, the app features drag-and-drop rescheduling, recurring activity options, and local storage persistence—all without requiring an account or cloud storage.",
+      "Timer & Planner is a productivity application that combines a customizable focus timer with flexible planning tools. Create session templates with configurable work/break intervals, manage your schedule across weekly and monthly views, and stay organized with color-coded activities.\n\nBuilt with React 19 and TypeScript, the app features drag-and-drop rescheduling, recurring activity options, and local storage persistence-all without requiring an account or cloud storage.",
     images: ["/ScheduelPlaner.jpg"],
     blogPost: "/blog/timer-planner-productivity",
     github: "https://github.com/Hermanhyl/Timer-Planner",
@@ -294,7 +294,7 @@ export const projects = [
   {
     id: "project-pia-salary",
     title: "PIA Salary Tracker - Income Management App",
-    teaser: "A privacy-focused income tracking application with automatic tax calculations, Excel import/export, and bilingual support—all data stored locally.",
+    teaser: "A privacy-focused income tracking application with automatic tax calculations, Excel import/export, and bilingual support-all data stored locally.",
     description:
       "PIA Salary Tracker is a web-based income tracking application designed for managing monthly earnings with automatic tax and social insurance calculations. Built with a strong focus on privacy, all data is stored locally in Excel files without requiring cloud services.\n\nThe app features a clean dashboard with year-based income overview, data visualization charts, dark mode support, and a bilingual interface supporting both German and English.",
     images: ["/SaleryTracker.jpg"],
@@ -307,7 +307,7 @@ export const projects = [
     article: [
       {
         heading: "Project Overview",
-        content: "PIA Salary Tracker was built to solve a real-world need—tracking income across multiple sources while maintaining complete privacy. Unlike cloud-based solutions, this app stores all data locally in Excel files, giving users full control over their financial information.",
+        content: "PIA Salary Tracker was built to solve a real-world need-tracking income across multiple sources while maintaining complete privacy. Unlike cloud-based solutions, this app stores all data locally in Excel files, giving users full control over their financial information.",
       },
       {
         heading: "Key Features",
@@ -319,11 +319,11 @@ export const projects = [
       },
       {
         heading: "Privacy-First Design",
-        content: "A core principle of this project was privacy. All financial data stays on the user's device—there's no cloud storage, no accounts to create, and no data leaving the browser. Users can save their data to Excel files and load them back whenever needed, maintaining full ownership of their sensitive financial information.",
+        content: "A core principle of this project was privacy. All financial data stays on the user's device-there's no cloud storage, no accounts to create, and no data leaving the browser. Users can save their data to Excel files and load them back whenever needed, maintaining full ownership of their sensitive financial information.",
       },
       {
         heading: "How It Works",
-        content: "The app offers flexible file management for your income tracking. You can start fresh by creating a new Excel file from scratch, or load an existing Excel file to continue where you left off. When you load an existing file, all your previous entries are imported and displayed in the dashboard.\n\nAs you add new income entries—specifying the source, amount, and month—the app automatically calculates social insurance deductions and updates your totals. The dashboard reflects changes in real-time with updated charts and summaries.\n\nWhen you're done, you have full control over saving your data. You can save changes back to the same Excel file you loaded, overwriting it with your updates, or save to a new file to keep different versions. The Excel files are stored wherever you choose on your device, giving you complete ownership of your financial records. This means you can back them up, move them between devices, or organize them however you prefer.",
+        content: "The app offers flexible file management for your income tracking. You can start fresh by creating a new Excel file from scratch, or load an existing Excel file to continue where you left off. When you load an existing file, all your previous entries are imported and displayed in the dashboard.\n\nAs you add new income entries-specifying the source, amount, and month-the app automatically calculates social insurance deductions and updates your totals. The dashboard reflects changes in real-time with updated charts and summaries.\n\nWhen you're done, you have full control over saving your data. You can save changes back to the same Excel file you loaded, overwriting it with your updates, or save to a new file to keep different versions. The Excel files are stored wherever you choose on your device, giving you complete ownership of your financial records. This means you can back them up, move them between devices, or organize them however you prefer.",
       },
       {
         heading: "Bilingual Support",
@@ -331,7 +331,7 @@ export const projects = [
       },
       {
         heading: "Summary",
-        content: "PIA Salary Tracker combines modern web technologies with a privacy-first approach to create a practical income management tool. Built with Next.js, React, and TypeScript, it demonstrates my ability to develop full-featured applications that solve real-world problems while respecting user privacy. The project showcases skills in data visualization, file handling, responsive design, and internationalization—all wrapped in a clean, intuitive interface.",
+        content: "PIA Salary Tracker combines modern web technologies with a privacy-first approach to create a practical income management tool. Built with Next.js, React, and TypeScript, it demonstrates my ability to develop full-featured applications that solve real-world problems while respecting user privacy. The project showcases skills in data visualization, file handling, responsive design, and internationalization-all wrapped in a clean, intuitive interface.",
       },
     ],
   },
@@ -341,7 +341,7 @@ export const projects = [
     title: "CliketyCart - project assignment",
     teaser: "ClicketyCart is a retro-style eCom store with fast checkout, instant delivery, and smooth shopping powered by the Noroff API.",
     description:
-      "ClicketyCart makes shopping fast, fun, and effortless. With a turbo-charged checkout and lightning-fast delivery, you get what you need—instantly. Whether you're browsing or buying on the go, we're quicker than you can say add to cart. 🛒💨 \n\nThis is the frontend for a fictional e-commerce store powered by the Noroff API, featuring a retro-inspired design and built with modern React functionality.",
+      "ClicketyCart makes shopping fast, fun, and effortless. With a turbo-charged checkout and lightning-fast delivery, you get what you need-instantly. Whether you're browsing or buying on the go, we're quicker than you can say add to cart. 🛒💨 \n\nThis is the frontend for a fictional e-commerce store powered by the Noroff API, featuring a retro-inspired design and built with modern React functionality.",
     images: ["/ClicketyCart.png"],
     blogPost: "/blog/clicketycart-ecommerce",
     github: "https://github.com/Hermanhyl/Semester-Project-2-Auction",
@@ -368,7 +368,7 @@ export const projects = [
       },
       {
         heading: "Improved Form Accessibility",
-        content: "One of the accessibility issues I discovered in the original version was that some interactive elements — particularly form inputs — were not properly wrapped in <form> elements. This could lead to inconsistent behaviour and decreased accessibility, especially for users relying on screen readers or keyboard navigation. We corrected this by ensuring all input fields are properly structured within semantic form tags, improving both functionality and compliance with accessibility standards.",
+        content: "One of the accessibility issues I discovered in the original version was that some interactive elements - particularly form inputs - were not properly wrapped in <form> elements. This could lead to inconsistent behaviour and decreased accessibility, especially for users relying on screen readers or keyboard navigation. We corrected this by ensuring all input fields are properly structured within semantic form tags, improving both functionality and compliance with accessibility standards.",
       },
     ],
   },
@@ -376,9 +376,9 @@ export const projects = [
   {
     id: "project6",
     title: "Community Science Museum - Second Steps",
-    teaser: "My second project as a student—not a reflection of my skills today, but another milestone in my development journey.",
+    teaser: "My second project as a student-not a reflection of my skills today, but another milestone in my development journey.",
     description:
-      "The Community Science Museum website was my second compulsory assignment at Noroff. Important note: THIS PROJECT DOES NOT REFLECT MY ABILITIES AS A DEVELOPER TODAY—it's included to showcase my learning curve and the journey I've been through.\n\nBuilt with HTML and CSS, this project focused on creating an accessible, responsive website for a science museum targeting younger audiences while maintaining professionalism.",
+      "The Community Science Museum website was my second compulsory assignment at Noroff. Important note: THIS PROJECT DOES NOT REFLECT MY ABILITIES AS A DEVELOPER TODAY-it's included to showcase my learning curve and the journey I've been through.\n\nBuilt with HTML and CSS, this project focused on creating an accessible, responsive website for a science museum targeting younger audiences while maintaining professionalism.",
     images: ["/SCM.jpg"],
     blogPost: "/blog/community-science-museum",
     github: "https://github.com/Hermanhyl/Semester-Project",
@@ -389,7 +389,7 @@ export const projects = [
     article: [
       {
         heading: "Important Note",
-        content: "This project does not reflect my skills or abilities as a developer today. Like GameHub, it is included in my portfolio to demonstrate my growth and journey—showing my progression as I continued learning. Please view my other projects to see my current capabilities as a frontend developer and UI/UX designer.",
+        content: "This project does not reflect my skills or abilities as a developer today. Like GameHub, it is included in my portfolio to demonstrate my growth and journey-showing my progression as I continued learning. Please view my other projects to see my current capabilities as a frontend developer and UI/UX designer.",
       },
       {
         heading: "The Second Step",
@@ -397,7 +397,7 @@ export const projects = [
       },
       {
         heading: "Project Goals",
-        content: "The brief was to create a modern, accessible website for a community science museum. The challenge was to appeal to younger audiences without being patronizing—finding the right balance between excitement and professionalism. This taught me early lessons about considering the target audience when making design decisions.",
+        content: "The brief was to create a modern, accessible website for a community science museum. The challenge was to appeal to younger audiences without being patronizing-finding the right balance between excitement and professionalism. This taught me early lessons about considering the target audience when making design decisions.",
       },
       {
         heading: "What I Learned",
@@ -413,9 +413,9 @@ export const projects = [
   {
     id: "project7",
     title: "GameHub - Where It All Began",
-    teaser: "My very first web development project—not a reflection of my skills today, but a reminder of where my journey began.",
+    teaser: "My very first web development project-not a reflection of my skills today, but a reminder of where my journey began.",
     description:
-      "GameHub was my first ever coding project, created as a compulsory assignment early in my studies. Important note: THIS PROJECT DOES NOT REFLECT MY ABILITIES AS A DEVELOPER TODAY—it's included purely to show where I started and how far I've come since.\n\nBuilt with vanilla HTML, CSS, and JavaScript, this e-commerce concept for video games taught me the fundamentals of web development—from structuring pages to handling user interactions.",
+      "GameHub was my first ever coding project, created as a compulsory assignment early in my studies. Important note: THIS PROJECT DOES NOT REFLECT MY ABILITIES AS A DEVELOPER TODAY-it's included purely to show where I started and how far I've come since.\n\nBuilt with vanilla HTML, CSS, and JavaScript, this e-commerce concept for video games taught me the fundamentals of web development-from structuring pages to handling user interactions.",
     images: ["/GameHub.jpg"],
     blogPost: "/blog/gamehub-where-it-began",
     github: "https://github.com/Hermanhyl/GameHub-CA-Project",
@@ -426,27 +426,27 @@ export const projects = [
     article: [
       {
         heading: "Important Note",
-        content: "This project does not reflect my skills or abilities as a developer today. It is included in my portfolio solely to demonstrate my growth and journey—showing where I started versus where I am now. Please view my other projects to see my current capabilities as a frontend developer and UI/UX designer.",
+        content: "This project does not reflect my skills or abilities as a developer today. It is included in my portfolio solely to demonstrate my growth and journey-showing where I started versus where I am now. Please view my other projects to see my current capabilities as a frontend developer and UI/UX designer.",
       },
       {
         heading: "The Beginning",
-        content: "GameHub holds a special place in my portfolio—not because it's my best work, but because it's where everything started. This was my very first project as a developer, a compulsory assignment that threw us into the deep end of coding early in our studies. We were quickly made to try things out, experiment, and write our first lines of code.",
+        content: "GameHub holds a special place in my portfolio-not because it's my best work, but because it's where everything started. This was my very first project as a developer, a compulsory assignment that threw us into the deep end of coding early in our studies. We were quickly made to try things out, experiment, and write our first lines of code.",
       },
       {
         heading: "A Humble Start",
-        content: "Looking back at this project now, I can clearly see how far I've come. The code is far from perfect, and the final result didn't match the original design I had envisioned. But that's exactly why I keep it in my portfolio—it's an honest representation of where I started. Every developer has a beginning, and this was mine.",
+        content: "Looking back at this project now, I can clearly see how far I've come. The code is far from perfect, and the final result didn't match the original design I had envisioned. But that's exactly why I keep it in my portfolio-it's an honest representation of where I started. Every developer has a beginning, and this was mine.",
       },
       {
         heading: "What I Learned",
-        content: "Despite its imperfections, GameHub taught me fundamental skills that I still use today. I learned how to structure HTML pages, style them with CSS, and add interactivity with JavaScript. I built features like a shopping cart, product pages, and checkout flow—all from scratch without any frameworks. These foundational concepts became the building blocks for everything that followed.",
+        content: "Despite its imperfections, GameHub taught me fundamental skills that I still use today. I learned how to structure HTML pages, style them with CSS, and add interactivity with JavaScript. I built features like a shopping cart, product pages, and checkout flow-all from scratch without any frameworks. These foundational concepts became the building blocks for everything that followed.",
       },
       {
         heading: "Growth as a Developer",
-        content: "Comparing GameHub to my recent projects shows the progression I've made in frontend development and UI/UX design. From vanilla JavaScript to React, from basic CSS to Tailwind, from simple layouts to complex interactive experiences—each project since has built upon what I learned here. This growth is something I'm proud of, and GameHub serves as a reminder of how far dedication and continuous learning can take you.",
+        content: "Comparing GameHub to my recent projects shows the progression I've made in frontend development and UI/UX design. From vanilla JavaScript to React, from basic CSS to Tailwind, from simple layouts to complex interactive experiences-each project since has built upon what I learned here. This growth is something I'm proud of, and GameHub serves as a reminder of how far dedication and continuous learning can take you.",
       },
       {
         heading: "Why It's Still Here",
-        content: "I believe in showing the full journey, not just the highlights. GameHub demonstrates that everyone starts somewhere, and improvement comes through practice and persistence. If you're just starting out as a developer, take heart—your first project won't be perfect either, and that's completely okay. What matters is that you keep building, keep learning, and keep growing.",
+        content: "I believe in showing the full journey, not just the highlights. GameHub demonstrates that everyone starts somewhere, and improvement comes through practice and persistence. If you're just starting out as a developer, take heart-your first project won't be perfect either, and that's completely okay. What matters is that you keep building, keep learning, and keep growing.",
       },
     ],
   },

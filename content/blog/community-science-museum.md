@@ -2,7 +2,7 @@
 title: "Community Science Museum: My Second Step in Web Development"
 date: 2025-12-28T00:00:00.000Z
 featured: false
-excerpt: "Reflecting on my second major project at Noroff—an early milestone that taught me about accessibility and responsive design."
+excerpt: "Reflecting on my second major project at Noroff-an early milestone that taught me about accessibility and responsive design."
 readTime: 4 min read
 author: Herman Hylland
 tags:
@@ -14,11 +14,11 @@ projectLink: /project/project6
 projectLabel: View Science Museum Project
 ---
 
-The Community Science Museum website was my second compulsory assignment at Noroff. I want to be upfront: this project does not reflect my abilities as a developer today. It's included in my portfolio to show my learning journey—where I came from and how far I've traveled since.
+The Community Science Museum website was my second compulsory assignment at Noroff. I want to be upfront: this project does not reflect my abilities as a developer today. It's included in my portfolio to show my learning journey-where I came from and how far I've traveled since.
 
 ## The Brief
 
-Create a modern, accessible website for a community science museum. The challenge was appealing to younger audiences without being patronizing—finding the balance between excitement and professionalism.
+Create a modern, accessible website for a community science museum. The challenge was appealing to younger audiences without being patronizing-finding the balance between excitement and professionalism.
 
 ## What I Built
 
@@ -44,20 +44,20 @@ The brief emphasized accessibility, introducing me to concepts like:
 These early lessons planted seeds that continue to influence my work today.
 
 ### Design Considerations
-Thinking about the target audience (young visitors to a science museum) taught me that design isn't just about aesthetics—it's about communication and appropriateness.
+Thinking about the target audience (young visitors to a science museum) taught me that design isn't just about aesthetics-it's about communication and appropriateness.
 
 ## My Design Process
 
 Even as an early project, I followed a design-first approach in Figma that established habits I still use today.
 
 ### 1. Mind Mapping & Information Architecture
-I started by mapping out all the pages the museum website would need—homepage, exhibitions, events, about, contact—and how visitors would navigate between them. This helped me understand the complete site structure before designing anything.
+I started by mapping out all the pages the museum website would need-homepage, exhibitions, events, about, contact-and how visitors would navigate between them. This helped me understand the complete site structure before designing anything.
 
 ### 2. Ideation & Concept Exploration
 The ideation phase involved exploring how to make science exciting for young audiences without being childish. I considered different visual directions: bright and playful vs. sleek and futuristic, settling on an approach that felt educational yet engaging.
 
 ### 3. Wireframing
-Simple wireframes helped me plan content placement: where the hero section would be, how to display exhibition cards, what information visitors need most prominently. Just basic shapes and text—no styling yet.
+Simple wireframes helped me plan content placement: where the hero section would be, how to display exhibition cards, what information visitors need most prominently. Just basic shapes and text-no styling yet.
 
 ### 4. Style Guide Development
 I created a basic style guide including:
@@ -67,7 +67,7 @@ I created a basic style guide including:
 - **Spacing Rules**: Consistent margins and padding
 
 ### 5. High-Fidelity Design (Mobile First)
-Following mobile-first principles, I designed the mobile experience first—ensuring content was accessible on phones before scaling up. This was one of my first experiences with this methodology.
+Following mobile-first principles, I designed the mobile experience first-ensuring content was accessible on phones before scaling up. This was one of my first experiences with this methodology.
 
 ### 6. Desktop Adaptation
 Desktop designs expanded the layouts with multi-column grids and larger imagery while maintaining the same content hierarchy.
@@ -88,7 +88,7 @@ This project came after GameHub, my first-ever project. Comparing the two showed
 
 ## The Bigger Picture
 
-I believe in showing the full learning process. Not every project needs to be a masterpiece—some are stepping stones. This project, along with GameHub, demonstrates that growth takes time and every step matters.
+I believe in showing the full learning process. Not every project needs to be a masterpiece-some are stepping stones. This project, along with GameHub, demonstrates that growth takes time and every step matters.
 
 Looking at my recent work compared to these early projects shows the value of persistence. Every developer starts somewhere, and continued learning makes all the difference.
 

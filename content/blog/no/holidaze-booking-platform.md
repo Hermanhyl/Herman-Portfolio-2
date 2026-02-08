@@ -15,7 +15,7 @@ projectLink: /project/project3
 projectLabel: Se Holidaze-prosjektet
 ---
 
-Holidaze representerer kulminasjonen av våre frontend-utviklingsstudier ved Noroff—et samarbeidsprosjekt som fikk karakteren A og lærte oss uvurderlige leksjoner om teamarbeid, kodekvalitet og bygging av virkelige applikasjoner.
+Holidaze representerer kulminasjonen av våre frontend-utviklingsstudier ved Noroff-et samarbeidsprosjekt som fikk karakteren A og lærte oss uvurderlige leksjoner om teamarbeid, kodekvalitet og bygging av virkelige applikasjoner.
 
 ## Prosjektet
 
@@ -26,7 +26,7 @@ I samarbeid med Veronika Aas og Madelen Sletteberg skapte vi en bookingplattform
 Fra dag én prioriterte vi samarbeid og kommunikasjon:
 
 ### Tydelig oppgavefordeling
-Vi fordelte ansvar basert på våre styrker samtidig som vi sikret at alle deltok i alle aspekter—planlegging, design og implementering.
+Vi fordelte ansvar basert på våre styrker samtidig som vi sikret at alle deltok i alle aspekter-planlegging, design og implementering.
 
 ### GitHub-arbeidsflyt
 Versjonskontroll med tydelige commit-meldinger holdt oss organisert. Vi kunne spore fremgang, gjennomgå hverandres kode og samarbeide effektivt selv når vi jobbet asynkront.
@@ -49,10 +49,10 @@ Hvert prosjekt jeg jobber med følger en strukturert designarbeidsflyt som sikre
 Jeg starter med å lage et tankekart for å samle alle sidene som trengs og visualisere hvordan de henger sammen. For Holidaze betydde dette å kartlegge brukerreisen fra landingsside til oppdagelse av steder til bookingbekreftelse, identifisere hvilke sider som lenker til andre og hvilke som står alene.
 
 ### 2. Idéfase og konseptutforskning
-Deretter kommer idéfasen hvor vi kastet ideer frem og tilbake—utforsket forskjellige tilnærminger for bookingflyten, vurderte ulike visuelle retninger som kunne fremkalle den «koselige hytte»-følelsen. Vi diskuterte hva som ville fungere best for vår målgruppe som søker slow-living-opphold.
+Deretter kommer idéfasen hvor vi kastet ideer frem og tilbake-utforsket forskjellige tilnærminger for bookingflyten, vurderte ulike visuelle retninger som kunne fremkalle den «koselige hytte»-følelsen. Vi diskuterte hva som ville fungere best for vår målgruppe som søker slow-living-opphold.
 
 ### 3. Wireframing
-Med retningen satt, gikk jeg videre til enkle wireframes—low-fidelity-layouter som fokuserte rent på struktur og innholdshierarki. Ingen farger, ingen fancy fonter—bare bokser og plassholdertekst for å få brukerflyt og sidelayouter på plass.
+Med retningen satt, gikk jeg videre til enkle wireframes-low-fidelity-layouter som fokuserte rent på struktur og innholdshierarki. Ingen farger, ingen fancy fonter-bare bokser og plassholdertekst for å få brukerflyt og sidelayouter på plass.
 
 ### 4. Stilguideutvikling
 Før jeg dykket inn i high-fidelity-design, etablerte jeg en omfattende stilguide inkludert:
@@ -69,7 +69,7 @@ Etter mobile-first-konseptet designet jeg den komplette mobilopplevelsen først.
 Når mobil var solid, utvidet jeg designene til skrivebord, og utnyttet det ekstra skjermområdet for flerkolonnelayouter, større bilder og forbedret navigasjon.
 
 ### 7. Prototyping
-Til slutt laget jeg en interaktiv prototype i Figma som simulerte brukerreisen—sideoverganger, knappinteraksjoner, skjemaatferd og animasjoner. Dette lot oss teste opplevelsen før vi skrev noe kode.
+Til slutt laget jeg en interaktiv prototype i Figma som simulerte brukerreisen-sideoverganger, knappinteraksjoner, skjemaatferd og animasjoner. Dette lot oss teste opplevelsen før vi skrev noe kode.
 
 ## Hovedfunksjoner
 

@@ -69,10 +69,10 @@ function Header() {
             <div className="absolute inset-0 blur-lg bg-emerald-400/20 group-hover:bg-cyan-400/30 transition-all duration-300"></div>
           </div>
           <span className="text-xl md:text-2xl font-bold">
-            <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text">
+            <span className="text-white group-hover:text-gray-300 transition-colors duration-300">
               Herman
             </span>
-            <span className="text-white group-hover:text-gray-300 transition-colors duration-300">
+            <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text">
               Hylland
             </span>
           </span>

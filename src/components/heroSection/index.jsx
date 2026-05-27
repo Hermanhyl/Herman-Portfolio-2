@@ -1,13 +1,120 @@
+import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, Github, Linkedin, Mail, Instagram } from 'lucide-react';
+import { motion } from 'framer-motion';
 import OptimizedImage from '../optimizedImage';
+import useMagnetic from '../../hooks/useMagnetic';
+import { ease, duration } from '../../utils/motion';
+
+// Variants kept inline so the cascade timing reads top-to-bottom in source.
+const container = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.08, delayChildren: 0.1 },
+  },
+};
+
+const rise = {
+  hidden: { opacity: 0, y: 28 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: duration.slow, ease: ease.out },
+  },
+};
+
+const word = {
+  hidden: { opacity: 0, y: '110%' },
+  visible: {
+    opacity: 1,
+    y: '0%',
+    transition: { duration: duration.hero, ease: ease.out },
+  },
+};
+
+function MagneticCTA({ to, variant = 'primary', children, ariaLabel }) {
+  const { ref, style, handleMouseMove, handleMouseLeave } = useMagnetic(6);
+
+  const className =
+    variant === 'primary'
+      ? 'group inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black'
+      : 'inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-black';
+
+  return (
+    <div
+      ref={ref}
+      style={style}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className="inline-block"
+    >
+      <Link to={to} className={className} aria-label={ariaLabel}>
+        {children}
+      </Link>
+    </div>
+  );
+}
+
+function HeadlineWords({ text }) {
+  const words = text.split(' ');
+  return (
+    <span className="inline-flex flex-wrap gap-x-[0.25em] justify-center md:justify-start">
+      {words.map((w, i) => (
+        <span
+          key={`${w}-${i}`}
+          className="inline-block overflow-hidden pb-[0.1em]"
+        >
+          <motion.span
+            variants={word}
+            // bg-fixed makes the gradient sample from the viewport, so each
+            // word stays part of one continuous emerald→cyan→purple sweep
+            // rather than restarting per word.
+            className={
+              w === '&'
+                ? 'inline-block italic text-white/80'
+                : 'inline-block bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text bg-fixed'
+            }
+          >
+            {w}
+          </motion.span>
+        </span>
+      ))}
+    </span>
+  );
+}
 
 export default function Hero() {
   const { t } = useTranslation();
+  const sectionRef = useRef(null);
+  const [parallax, setParallax] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e) => {
+    if (!sectionRef.current) return;
+    const rect = sectionRef.current.getBoundingClientRect();
+    const nx = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+    const ny = ((e.clientY - rect.top) / rect.height) * 2 - 1;
+    setParallax({ x: nx, y: ny });
+  };
+
+  // Smoothed via CSS transition on the elements themselves
+  const portraitStyle = {
+    transform: `translate(${parallax.x * 10}px, ${parallax.y * 10}px)`,
+    transition: 'transform 350ms cubic-bezier(0.22, 1, 0.36, 1)',
+    willChange: 'transform',
+  };
+  const glowStyle = {
+    transform: `translate(${parallax.x * 20}px, ${parallax.y * 20}px)`,
+    transition: 'transform 500ms cubic-bezier(0.22, 1, 0.36, 1)',
+    willChange: 'transform',
+  };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black overflow-hidden pt-20 pb-28 md:pb-24 px-4 sm:px-6 lg:px-8">
+    <section
+      ref={sectionRef}
+      onMouseMove={handleMouseMove}
+      className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black overflow-hidden pt-20 pb-28 md:pb-24 px-4 sm:px-6 lg:px-8"
+    >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -15,13 +122,18 @@ export default function Hero() {
         <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="visible"
+        className="relative z-10 max-w-7xl mx-auto w-full"
+      >
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16">
 
           {/* Text Section */}
           <div className="flex-1 min-w-0 text-center md:text-left space-y-5 md:space-y-6">
             {/* Available badge */}
-            <div className="flex justify-center md:justify-start">
+            <motion.div variants={rise} className="flex justify-center md:justify-start">
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500/30 to-cyan-500/30 border-2 border-emerald-400/60 px-4 py-2 rounded-full backdrop-blur-sm shadow-lg shadow-emerald-500/20 transform transition-all duration-300 hover:scale-105">
                 <span className="relative flex h-3 w-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
@@ -29,57 +141,63 @@ export default function Hero() {
                 </span>
                 <span className="text-emerald-100 text-sm md:text-base font-bold">{t('hero.available')}</span>
               </div>
-            </div>
+            </motion.div>
 
-            {/* Primary Headline - Role/Title */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
-              <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text">
-                {t('hero.headline')}
-              </span>
+            {/* Primary Headline - editorial display face, word-by-word reveal */}
+            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[1.02] tracking-[-0.03em]">
+              <HeadlineWords text={t('hero.headline')} />
             </h1>
 
-            {/* Subheadline - Value Proposition */}
-            <p className="text-xl sm:text-2xl md:text-3xl text-white font-medium leading-relaxed max-w-2xl mx-auto md:mx-0">
+            {/* Subheadline */}
+            <motion.p
+              variants={rise}
+              className="text-xl sm:text-2xl md:text-3xl text-white font-medium leading-relaxed max-w-2xl mx-auto md:mx-0"
+            >
               {t('hero.subheadline')}
-            </p>
+            </motion.p>
 
             {/* Credibility Line */}
-            <p className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-xl mx-auto md:mx-0">
+            <motion.p
+              variants={rise}
+              className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-xl mx-auto md:mx-0"
+            >
               {t('hero.credibility')}
-            </p>
+            </motion.p>
 
-            {/* CTA Buttons - Primary & Secondary only */}
-            <div className="flex flex-wrap gap-4 justify-center md:justify-start pt-2">
-              <Link
-                to="/projects"
-                className="group inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black"
-              >
+            {/* CTA Buttons */}
+            <motion.div variants={rise} className="flex flex-wrap gap-4 justify-center md:justify-start pt-2">
+              <MagneticCTA to="/projects" variant="primary">
                 {t('hero.cta')}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-black"
-              >
+              </MagneticCTA>
+              <MagneticCTA to="/contact" variant="secondary">
                 {t('hero.ctaSecondary')}
-              </Link>
-            </div>
+              </MagneticCTA>
+            </motion.div>
           </div>
 
-          {/* Image Section - shows first on mobile (order-first), second on desktop (md:order-last) */}
-          <div className="order-first md:order-last flex-shrink-0 flex justify-center p-2">
-            {/* Fixed aspect ratio container for perfect circle - scales down on small screens */}
-            <div className="relative group w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96">
-              {/* Glowing effect behind image */}
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+          {/* Image Section */}
+          <motion.div
+            variants={rise}
+            className="order-first md:order-last flex-shrink-0 flex justify-center p-2"
+          >
+            <div
+              style={portraitStyle}
+              className="relative group w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96"
+            >
+              {/* Glowing aura — moves a touch more than the portrait for depth */}
+              <div
+                style={glowStyle}
+                className="absolute inset-0 bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"
+              />
 
-              {/* Rotating gradient border - slightly larger than container */}
+              {/* Rotating gradient border */}
               <div className="absolute -inset-1 rounded-full bg-conic-gradient animate-spin-slow opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               {/* Static dark background circle */}
               <div className="absolute inset-0 rounded-full bg-gray-900"></div>
 
-              {/* Profile Image - inset to show border */}
+              {/* Profile Image */}
               <div className="absolute inset-[6px] rounded-full overflow-hidden">
                 <OptimizedImage
                   src="/Profil/Bruk_denne.jpg"
@@ -89,7 +207,7 @@ export default function Hero() {
                 />
               </div>
 
-              {/* Social Links - positioned around the image */}
+              {/* Social Links */}
               <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3 z-20">
                 <a
                   href="https://github.com/Hermanhyl"
@@ -127,17 +245,22 @@ export default function Hero() {
                 </Link>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
 
-      {/* Scroll indicator - positioned at bottom of section, visible on medium screens and up */}
-      <div className="hidden md:flex absolute bottom-6 left-1/2 transform -translate-x-1/2 flex-col items-center gap-2 animate-bounce z-20">
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.2, duration: duration.slow, ease: ease.out }}
+        className="hidden md:flex absolute bottom-6 left-1/2 transform -translate-x-1/2 flex-col items-center gap-2 z-20"
+      >
         <span className="text-gray-400 text-sm">{t('hero.scrollToExplore')}</span>
-        <div className="w-6 h-10 border-2 border-gray-600 rounded-full flex items-start justify-center p-2">
+        <div className="w-6 h-10 border-2 border-gray-600 rounded-full flex items-start justify-center p-2 animate-bounce">
           <div className="w-1.5 h-3 bg-emerald-400 rounded-full"></div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

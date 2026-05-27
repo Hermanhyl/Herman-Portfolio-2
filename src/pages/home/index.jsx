@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect, useRef } from "react";
 import { useSearchParams, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Hero from "../../components/heroSection";
+import GrainOverlay from "../../components/grainOverlay";
 import FeaturedProjects from "../../components/featuredProjects";
 import ProjectCard from "../../components/projectCard";
 import PageTransition from "../../components/pageTransition";
@@ -145,7 +146,8 @@ function Home() {
 
   return (
     <PageTransition>
-      <div className="bg-gradient-to-b from-black via-gray-900 to-black min-h-screen">
+      <div className="relative bg-gradient-to-b from-black via-gray-900 to-black min-h-screen">
+        <GrainOverlay />
         <Hero />
 
         {/* Featured Projects Section */}

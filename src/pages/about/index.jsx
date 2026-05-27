@@ -66,10 +66,19 @@ function About() {
     }
   ];
 
-  // Timeline data - using translations
+  // Timeline data - using translations.
+  // Order: most recent first. Foundever ended in 2026 (no longer current).
   const timeline = [
     {
-      year: 'Feb 2025 - Present',
+      year: '2026',
+      title: t('about.timeline.hubroUx'),
+      company: 'Hubro Digital',
+      description: t('about.timeline.hubroUxDesc'),
+      icon: Briefcase,
+      type: 'work'
+    },
+    {
+      year: 'Feb 2025 - 2026',
       title: t('about.timeline.customerService'),
       company: 'Foundever',
       description: t('about.timeline.customerServiceDesc'),

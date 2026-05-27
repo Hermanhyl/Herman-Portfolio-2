@@ -94,8 +94,10 @@
       "aiTools": "AI & Tools"
     },
     "timeline": {
+      "hubroUx": "UX Designer (Freelance / Internship)",
+      "hubroUxDesc": "UX audits on real client projects. Heuristic review, usability findings, and prioritized recommendations delivered to the client team.",
       "customerService": "Customer Service Agent",
-      "customerServiceDesc": "Handling insurance cases via phone support. Using Salesforce CRM for case management.",
+      "customerServiceDesc": "Handled insurance cases via phone support. Used Salesforce CRM for case management.",
       "frontendDev": "Front-End Development",
       "frontendDevDesc": "2-year vocational degree. Specialized in React, JavaScript, modern web development, and UI/UX design.",
       "visualDesigner": "Visual Designer",

@@ -94,8 +94,10 @@
       "aiTools": "AI & Verktøy"
     },
     "timeline": {
+      "hubroUx": "UX-designer (Freelance / Praksis)",
+      "hubroUxDesc": "UX-audits på reelle kundeprosjekter. Heuristisk gjennomgang, brukbarhetsfunn og prioriterte anbefalinger levert til kundens team.",
       "customerService": "Kundeserviceagent",
-      "customerServiceDesc": "Håndtering av forsikringssaker via telefonstøtte. Bruker Salesforce CRM for sakshåndtering.",
+      "customerServiceDesc": "Håndterte forsikringssaker via telefonstøtte. Brukte Salesforce CRM for sakshåndtering.",
       "frontendDev": "Frontend-utvikling",
       "frontendDevDesc": "2-årig yrkesfaglig utdanning. Spesialisert i React, JavaScript, moderne webutvikling og UI/UX-design.",
       "visualDesigner": "Visuell designer",

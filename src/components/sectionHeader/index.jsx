@@ -31,7 +31,7 @@ function SectionHeader({ icon: Icon, badge, badgeColor = 'emerald', title, descr
         </div>
       )}
 
-      <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text pb-2">
+      <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-[-0.025em] leading-[1.05] bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text pb-2">
         {title}
       </h2>
 

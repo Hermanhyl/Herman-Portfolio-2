@@ -123,8 +123,9 @@ function BlogPost() {
                 ))}
               </div>
 
-              {/* Title */}
-              <h1 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold tracking-[-0.03em] bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text leading-[1.05]">
+              {/* Title — solid bone, no per-word accent: reading typography
+                  on long-form posts stays clean per the spec. */}
+              <h1 className="font-display text-bone text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold tracking-[-0.03em] leading-[1.08]">
                 {post.title}
               </h1>
 

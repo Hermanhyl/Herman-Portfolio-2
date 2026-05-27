@@ -122,7 +122,7 @@ function AnimationDetail() {
             {/* Title and Actions */}
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-8">
               <div className="flex-1">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 pb-2 bg-gradient-to-r from-purple-400 via-pink-400 to-rose-500 text-transparent bg-clip-text">
+                <h1 className="font-display text-bone text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-[-0.025em] leading-[1.05] mb-4 pb-2">
                   {title}
                 </h1>
                 <p className="text-xl text-gray-300 mb-4">{description}</p>

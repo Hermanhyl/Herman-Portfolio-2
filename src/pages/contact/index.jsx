@@ -144,6 +144,7 @@ function Contact() {
                   icon={Sparkles}
                   title={t('contact.title')}
                   description={t('contact.subtitle')}
+                  accentLastWord
                 />
                 {/* Animated underline drawing under the title on load */}
                 <motion.div

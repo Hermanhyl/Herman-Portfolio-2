@@ -166,10 +166,19 @@ function Work() {
         <section className="relative px-4 sm:px-6 lg:px-8 pt-32 pb-8">
           <div className="max-w-4xl mx-auto text-center">
             <ScrollReveal>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text pb-4">
-                {t('work.title')}
-              </h1>
-              <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
+              {(() => {
+                const title = t('work.title');
+                const words = title.split(' ');
+                const lead = words.length > 1 ? words.slice(0, -1).join(' ') : '';
+                const last = words[words.length - 1];
+                return (
+                  <h1 className="font-display text-bone text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-[-0.025em] leading-[1.05] pb-4">
+                    {lead && <>{lead} </>}
+                    <span className="italic text-accent">{last}</span>
+                  </h1>
+                );
+              })()}
+              <p className="text-lg sm:text-xl text-bone-muted max-w-2xl mx-auto leading-relaxed">
                 {t('work.description')}
               </p>
             </ScrollReveal>

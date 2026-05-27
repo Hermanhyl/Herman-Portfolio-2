@@ -132,8 +132,8 @@ function About() {
                   <MapPin className="w-4 h-4" />
                   {t('about.location')}
                 </p>
-                <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-[-0.03em] bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text leading-[1.02]">
-                  Herman Hylland
+                <h1 className="font-display text-bone text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-[-0.03em] leading-[1.05]">
+                  Herman <span className="italic text-accent">Hylland</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300">
                   {t('about.role')}
@@ -170,7 +170,7 @@ function About() {
               className="group relative bg-white/5 backdrop-blur-sm border border-white/10 hover:border-emerald-500/30 p-6 rounded-2xl text-center transition-all duration-300 hover:transform hover:scale-105 hover:bg-white/10"
             >
               <stat.icon className="w-8 h-8 mx-auto mb-3 text-emerald-400 group-hover:scale-110 transition-transform" />
-              <div className="font-display text-4xl md:text-5xl font-bold tracking-tight mb-1 tabular-nums bg-gradient-to-r from-emerald-400 to-cyan-400 text-transparent bg-clip-text">
+              <div className="font-display italic text-accent text-5xl md:text-6xl font-bold tracking-tight mb-1 tabular-nums leading-none">
                 <AnimatedCounter value={stat.value} />
               </div>
               <div className="text-gray-400 text-sm md:text-base">{stat.label}</div>

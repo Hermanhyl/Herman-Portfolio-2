@@ -86,6 +86,7 @@ function Blog() {
               badgeColor="emerald"
               title={t('blog.pageTitle')}
               description={t('blog.description')}
+              accentLastWord
             />
           </ScrollReveal>
 

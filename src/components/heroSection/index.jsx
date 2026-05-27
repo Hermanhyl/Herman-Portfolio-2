@@ -56,30 +56,42 @@ function MagneticCTA({ to, variant = 'primary', children, ariaLabel }) {
   );
 }
 
-function HeadlineWords({ text }) {
+function HeadlineWords({ text, accentLast = true }) {
   const words = text.split(' ');
+  // Index of the last non-punctuation word — picks up "Developer" /
+  // "utvikler" regardless of language.
+  const accentIndex = accentLast ? words.length - 1 : -1;
+
   return (
-    <span className="inline-flex flex-wrap gap-x-[0.25em] justify-center md:justify-start">
-      {words.map((w, i) => (
-        <span
-          key={`${w}-${i}`}
-          className="inline-block overflow-hidden pb-[0.1em]"
-        >
-          <motion.span
-            variants={word}
-            // bg-fixed makes the gradient sample from the viewport, so each
-            // word stays part of one continuous emerald→cyan→purple sweep
-            // rather than restarting per word.
-            className={
-              w === '&'
-                ? 'inline-block italic text-white/80'
-                : 'inline-block bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text bg-fixed'
-            }
+    <span className="inline-flex flex-wrap gap-x-[0.2em] justify-center md:justify-start">
+      {words.map((w, i) => {
+        const isAmpersand = w === '&';
+        const isAccent = i === accentIndex;
+        return (
+          <span
+            key={`${w}-${i}`}
+            /* Wrapper clips for the curtain reveal. leading-[1.25] +
+               py/-my pattern fully contains glyph bbox (descenders on
+               g/p, italic overhang on &), then claws back the visual
+               stacking via negative margin. px gives horizontal room
+               for the italic ampersand. */
+            className="inline-block overflow-hidden leading-[1.25] py-[0.04em] -my-[0.12em] px-[0.06em]"
           >
-            {w}
-          </motion.span>
-        </span>
-      ))}
+            <motion.span
+              variants={word}
+              className={
+                isAmpersand
+                  ? 'inline-block italic text-bone-muted'
+                  : isAccent
+                  ? 'inline-block italic text-accent'
+                  : 'inline-block text-bone'
+              }
+            >
+              {w}
+            </motion.span>
+          </span>
+        );
+      })}
     </span>
   );
 }
@@ -145,7 +157,7 @@ export default function Hero() {
             </motion.div>
 
             {/* Primary Headline - editorial display face, word-by-word reveal */}
-            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[1.02] tracking-[-0.03em]">
+            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[1.18] tracking-[-0.03em]">
               <HeadlineWords text={t('hero.headline')} />
             </h1>
 

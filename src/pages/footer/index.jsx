@@ -53,10 +53,8 @@ function Footer() {
             <div className="flex items-center justify-center md:justify-start gap-2">
               <Code2 className="w-6 h-6 lg:w-7 lg:h-7 text-emerald-400" />
               <span className="text-xl lg:text-2xl font-bold">
-                <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text">
-                  Herman
-                </span>
-                <span className="text-white">Hylland</span>
+                <span className="text-bone">Herman</span>
+                <span className="font-display italic text-accent">Hylland</span>
               </span>
             </div>
             <p className="text-gray-400 text-sm lg:text-base leading-relaxed">

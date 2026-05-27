@@ -344,6 +344,22 @@ html {
   animation-delay: 0.5s;
 }
 
+/* Marquee — single-row infinite horizontal scroll.
+   Animates -50% because the content is duplicated; after one cycle the
+   second copy is exactly where the first started, looping seamlessly. */
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.group:hover .marquee-track {
+  animation-play-state: paused;
+}
+
 /* Editorial accent — colored word with a thin gradient underline that draws
    in from left to right. Used on inline highlights in About story paragraphs. */
 .accent-underline {

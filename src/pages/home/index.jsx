@@ -5,6 +5,7 @@ import Hero from "../../components/heroSection";
 import GrainOverlay from "../../components/grainOverlay";
 import FeaturedProjects from "../../components/featuredProjects";
 import SectionMarker from "../../components/sectionMarker";
+import Marquee from "../../components/marquee";
 import ProjectCard from "../../components/projectCard";
 import PageTransition from "../../components/pageTransition";
 import ScrollReveal from "../../components/scrollReveal";
@@ -150,6 +151,18 @@ function Home() {
       <div className="relative bg-gradient-to-b from-black via-gray-900 to-black min-h-screen">
         <GrainOverlay />
         <Hero />
+
+        {/* Marquee — services / skills strip below the hero */}
+        <Marquee
+          items={[
+            'Frontend Development',
+            'UI / UX Design',
+            'Animation',
+            'Visual Storytelling',
+            'Based in Norway',
+            'Available for Work',
+          ]}
+        />
 
         {/* Featured Projects Section */}
         <FeaturedProjects />

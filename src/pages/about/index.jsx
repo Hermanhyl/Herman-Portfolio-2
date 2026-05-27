@@ -14,14 +14,17 @@ import ProjectsButton from '../../components/projectsButton';
 import TimelineLine from '../../components/timelineLine';
 import { fadeUp, staggerContainer, viewportOnce } from '../../utils/motion';
 
-// Skills data (not translatable - technical terms)
+// Skills data (not translatable - technical terms).
+// All bars use a unified accent fill — differentiation comes from the
+// level value, not from rainbow color coding.
+const SKILL_BAR_COLOR = 'from-accent to-accent-soft';
 const skills = [
-  { name: 'React', level: 90, color: 'from-cyan-400 to-blue-500' },
-  { name: 'JavaScript', level: 85, color: 'from-yellow-400 to-orange-400' },
-  { name: 'Tailwind CSS', level: 92, color: 'from-cyan-400 to-emerald-400' },
-  { name: 'HTML/CSS', level: 95, color: 'from-orange-400 to-red-400' },
-  { name: 'Figma / UI Design', level: 88, color: 'from-purple-400 to-pink-400' },
-  { name: 'API Integration', level: 80, color: 'from-emerald-400 to-cyan-400' },
+  { name: 'React', level: 90, color: SKILL_BAR_COLOR },
+  { name: 'JavaScript', level: 85, color: SKILL_BAR_COLOR },
+  { name: 'Tailwind CSS', level: 92, color: SKILL_BAR_COLOR },
+  { name: 'HTML/CSS', level: 95, color: SKILL_BAR_COLOR },
+  { name: 'Figma / UI Design', level: 88, color: SKILL_BAR_COLOR },
+  { name: 'API Integration', level: 80, color: SKILL_BAR_COLOR },
 ];
 
 function About() {
@@ -42,30 +45,23 @@ function About() {
     { icon: GraduationCap, value: '2', label: t('about.stats.degrees') },
   ];
 
-  // Skill categories - using translations
+  // Skill categories - using translations.
+  // Unified on-palette treatment across all three cards; the lucide icon
+  // (Terminal / Layers / Brain) provides visual distinction.
   const skillCategories = [
     {
       title: t('about.skillCategories.development'),
       icon: Terminal,
-      gradient: 'from-emerald-400 to-cyan-400',
-      bgGradient: 'from-emerald-500/10 to-cyan-500/10',
-      borderColor: 'border-emerald-500/30 hover:border-emerald-400/50',
       skills: ['React', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'HTML/CSS', 'REST APIs']
     },
     {
       title: t('about.skillCategories.design'),
       icon: Layers,
-      gradient: 'from-purple-400 to-pink-400',
-      bgGradient: 'from-purple-500/10 to-pink-500/10',
-      borderColor: 'border-purple-500/30 hover:border-purple-400/50',
       skills: ['UI/UX Design', 'Figma', 'Adobe Suite', 'Digital Illustration', '3D & Animation']
     },
     {
       title: t('about.skillCategories.aiTools'),
       icon: Brain,
-      gradient: 'from-cyan-400 to-blue-400',
-      bgGradient: 'from-cyan-500/10 to-blue-500/10',
-      borderColor: 'border-cyan-500/30 hover:border-cyan-400/50',
       skills: ['Claude API', 'OpenAI API', 'AI Integration', 'Prompt Engineering', 'Git/GitHub']
     }
   ];
@@ -230,50 +226,30 @@ function About() {
                 />
               </motion.div>
 
-              {/* Explore My Work Buttons */}
-              <div className="pt-6 border-t border-white/10 mt-8">
-                <h3 className="text-lg font-semibold text-white mb-4">{t('about.exploreMyWork')}</h3>
-                <div className="flex flex-wrap gap-4">
-                  <Link
-                    to="/work"
-                    className="group inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 hover:from-emerald-500/30 hover:to-cyan-500/30 border border-emerald-500/30 hover:border-emerald-400/50 px-5 py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
-                  >
-                    <div className="p-2 bg-emerald-500/20 rounded-lg group-hover:bg-emerald-500/30 transition-colors">
-                      <Briefcase className="w-5 h-5 text-emerald-400" />
-                    </div>
-                    <span className="text-white font-medium">{t('about.myWork')}</span>
-                    <ArrowRight className="w-4 h-4 text-emerald-400 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                  <Link
-                    to="/work?view=articles"
-                    className="group inline-flex items-center gap-3 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 hover:from-blue-500/30 hover:to-indigo-500/30 border border-blue-500/30 hover:border-blue-400/50 px-5 py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
-                  >
-                    <div className="p-2 bg-blue-500/20 rounded-lg group-hover:bg-blue-500/30 transition-colors">
-                      <BookOpen className="w-5 h-5 text-blue-400" />
-                    </div>
-                    <span className="text-white font-medium">{t('about.myArticles')}</span>
-                    <ArrowRight className="w-4 h-4 text-blue-400 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                  <Link
-                    to="/work?view=illustrations"
-                    className="group inline-flex items-center gap-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 hover:from-purple-500/30 hover:to-pink-500/30 border border-purple-500/30 hover:border-purple-400/50 px-5 py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
-                  >
-                    <div className="p-2 bg-purple-500/20 rounded-lg group-hover:bg-purple-500/30 transition-colors">
-                      <PenTool className="w-5 h-5 text-purple-400" />
-                    </div>
-                    <span className="text-white font-medium">{t('about.myIllustrations')}</span>
-                    <ArrowRight className="w-4 h-4 text-purple-400 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                  <Link
-                    to="/work?view=animations"
-                    className="group inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 hover:from-cyan-500/30 hover:to-blue-500/30 border border-cyan-500/30 hover:border-cyan-400/50 px-5 py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
-                  >
-                    <div className="p-2 bg-cyan-500/20 rounded-lg group-hover:bg-cyan-500/30 transition-colors">
-                      <Film className="w-5 h-5 text-cyan-400" />
-                    </div>
-                    <span className="text-white font-medium">{t('about.myAnimations')}</span>
-                    <ArrowRight className="w-4 h-4 text-cyan-400 group-hover:translate-x-1 transition-transform" />
-                  </Link>
+              {/* Explore My Work Buttons — unified on-palette treatment.
+                  Visual differentiation comes from the four lucide icons,
+                  not from color. */}
+              <div className="pt-6 border-t border-border mt-8">
+                <h3 className="text-lg font-semibold text-bone mb-4">{t('about.exploreMyWork')}</h3>
+                <div className="flex flex-wrap gap-3">
+                  {[
+                    { to: '/work', icon: Briefcase, label: t('about.myWork') },
+                    { to: '/work?view=articles', icon: BookOpen, label: t('about.myArticles') },
+                    { to: '/work?view=illustrations', icon: PenTool, label: t('about.myIllustrations') },
+                    { to: '/work?view=animations', icon: Film, label: t('about.myAnimations') },
+                  ].map(({ to, icon: Icon, label }) => (
+                    <Link
+                      key={to}
+                      to={to}
+                      className="group inline-flex items-center gap-3 bg-ink-elevated hover:bg-ink-elevated-2 border border-border hover:border-accent px-5 py-3 rounded-xl transition-colors duration-300"
+                    >
+                      <div className="p-2 bg-accent/15 group-hover:bg-accent/25 rounded-lg transition-colors">
+                        <Icon className="w-5 h-5 text-accent" />
+                      </div>
+                      <span className="text-bone font-medium">{label}</span>
+                      <ArrowRight className="w-4 h-4 text-accent group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
@@ -292,25 +268,25 @@ function About() {
             </div>
           </ScrollReveal>
 
-          {/* Skill Categories */}
+          {/* Skill Categories — unified on-palette treatment. */}
           <div className="grid md:grid-cols-3 gap-6">
             {skillCategories.map((category, index) => {
               const Icon = category.icon;
               return (
                 <ScrollReveal key={index} delay={index * 100}>
-                  <div className={`group h-full relative bg-gradient-to-br ${category.bgGradient} p-6 rounded-2xl border ${category.borderColor} transition-all duration-300 hover:transform hover:scale-[1.02]`}>
-                    <div className={`inline-flex p-3 mb-4 rounded-xl bg-gradient-to-br ${category.gradient}`}>
-                      <Icon className="w-6 h-6 text-white" />
+                  <div className="group h-full relative bg-ink-elevated p-6 rounded-2xl border border-border hover:border-accent transition-colors duration-300">
+                    <div className="inline-flex p-3 mb-4 rounded-xl bg-accent/15 group-hover:bg-accent/25 transition-colors">
+                      <Icon className="w-6 h-6 text-accent" />
                     </div>
 
-                    <h3 className={`text-xl font-bold mb-4 bg-gradient-to-r ${category.gradient} text-transparent bg-clip-text`}>
+                    <h3 className="font-display text-2xl font-bold tracking-tight mb-4 text-bone">
                       {category.title}
                     </h3>
 
                     <ul className="space-y-2">
                       {category.skills.map((skill, skillIndex) => (
-                        <li key={skillIndex} className="flex items-center gap-2 text-gray-300 group-hover:text-gray-200 transition-colors">
-                          <span className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${category.gradient}`}></span>
+                        <li key={skillIndex} className="flex items-center gap-2 text-bone-muted group-hover:text-bone transition-colors">
+                          <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
                           {skill}
                         </li>
                       ))}
@@ -323,12 +299,12 @@ function About() {
 
           {/* Skill Bars */}
           <ScrollReveal>
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+            <div className="bg-ink-elevated border border-border rounded-2xl p-8">
               <div className="flex items-center gap-3 mb-8">
-                <div className="p-2 bg-cyan-500/20 rounded-lg">
-                  <Code className="w-6 h-6 text-cyan-400" />
+                <div className="p-2 bg-accent/15 rounded-lg">
+                  <Code className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="text-xl font-bold">{t('about.proficiencyLevels')}</h3>
+                <h3 className="font-display text-2xl font-bold tracking-tight text-bone">{t('about.proficiencyLevels')}</h3>
               </div>
 
               <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">

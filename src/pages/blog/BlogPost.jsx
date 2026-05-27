@@ -4,6 +4,7 @@ import { ArrowLeft, Calendar, Clock, Share2, Linkedin, Twitter, Link2, BookOpen,
 import { getPostById, getBlogPosts } from '../../data/blog/posts';
 import PageTransition from '../../components/pageTransition';
 import ScrollReveal from '../../components/scrollReveal';
+import ScrollProgress from '../../components/scrollProgress';
 import BlogPostCard from '../../components/blogPostCard';
 import GradientButton from '../../components/gradientButton';
 import { useState, useMemo } from 'react';
@@ -79,8 +80,9 @@ function BlogPost() {
 
   return (
     <PageTransition>
+      <ScrollProgress />
       <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white">
-        <article className="max-w-4xl mx-auto px-4 py-20">
+        <article className="max-w-3xl mx-auto px-4 py-20">
           {/* Navigation */}
           <ScrollReveal>
             <Link
@@ -122,18 +124,18 @@ function BlogPost() {
               </div>
 
               {/* Title */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text leading-tight">
+              <h1 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold tracking-[-0.03em] bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text leading-[1.05]">
                 {post.title}
               </h1>
 
               {/* Meta Information */}
-              <div className="flex flex-wrap items-center gap-6 text-gray-400">
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-gray-400 text-sm uppercase tracking-[0.08em] tabular-nums">
                 <div className="flex items-center gap-2">
-                  <Calendar className="w-5 h-5" />
+                  <Calendar className="w-4 h-4" />
                   <span>{formatDateLong(post.date, currentLang)}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Clock className="w-5 h-5" />
+                  <Clock className="w-4 h-4" />
                   <span>{post.readTime}</span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -158,31 +160,32 @@ function BlogPost() {
 
           {/* Post Content */}
           <ScrollReveal delay={300}>
-            <div className="prose prose-invert prose-lg max-w-none mb-12">
+            <div className="prose prose-invert prose-lg max-w-[68ch] mb-12">
               {post.content && post.content.includes('<') ? (
                 <div
-                  className="blog-content text-gray-300 leading-relaxed [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:mt-8 [&>h2]:mb-4 [&>h2]:text-emerald-400 [&>h3]:text-2xl [&>h3]:font-bold [&>h3]:mt-6 [&>h3]:mb-3 [&>h3]:text-cyan-400 [&>p]:mb-4 [&>p]:text-gray-300 [&>p]:leading-relaxed [&>ul]:list-disc [&>ul]:list-inside [&>ul]:mb-4 [&>ul]:space-y-2 [&>ol]:list-decimal [&>ol]:list-inside [&>ol]:mb-4 [&>ol]:space-y-2 [&>li]:text-gray-300 [&_code]:bg-white/10 [&_code]:px-2 [&_code]:py-1 [&_code]:rounded [&_code]:text-emerald-300 [&_code]:text-sm [&>pre]:bg-white/5 [&>pre]:p-4 [&>pre]:rounded-xl [&>pre]:overflow-x-auto [&_strong]:font-bold [&_strong]:text-white [&_a]:text-emerald-400 [&_a:hover]:text-cyan-400 [&_a]:underline [&_a]:transition-colors"
+                  className="blog-content text-gray-200 text-lg leading-[1.8] [&>h2]:font-display [&>h2]:text-3xl md:[&>h2]:text-4xl [&>h2]:font-bold [&>h2]:tracking-tight [&>h2]:mt-12 [&>h2]:mb-5 [&>h2]:text-white [&>h2]:leading-[1.2] [&>h3]:font-display [&>h3]:text-2xl md:[&>h3]:text-3xl [&>h3]:font-semibold [&>h3]:tracking-tight [&>h3]:mt-10 [&>h3]:mb-4 [&>h3]:text-emerald-300 [&>p]:mb-5 [&>p]:text-gray-200 [&>p]:leading-[1.8] [&>ul]:list-disc [&>ul]:pl-6 [&>ul]:mb-5 [&>ul]:space-y-2 [&>ol]:list-decimal [&>ol]:pl-6 [&>ol]:mb-5 [&>ol]:space-y-2 [&>li]:text-gray-200 [&>blockquote]:font-display [&>blockquote]:italic [&>blockquote]:text-2xl md:[&>blockquote]:text-3xl [&>blockquote]:leading-[1.4] [&>blockquote]:my-10 [&>blockquote]:pl-6 [&>blockquote]:border-l-2 [&>blockquote]:border-emerald-400/60 [&>blockquote]:text-white [&_code]:bg-white/10 [&_code]:px-2 [&_code]:py-1 [&_code]:rounded [&_code]:text-emerald-300 [&_code]:text-sm [&_code]:font-mono [&>pre]:bg-white/5 [&>pre]:p-5 [&>pre]:rounded-xl [&>pre]:overflow-x-auto [&>pre]:my-6 [&_strong]:font-semibold [&_strong]:text-white [&_a]:text-emerald-400 [&_a:hover]:text-cyan-300 [&_a]:underline [&_a]:underline-offset-4 [&_a]:decoration-emerald-400/40 [&_a]:transition-colors"
                   dangerouslySetInnerHTML={{ __html: post.content }}
                 />
               ) : (
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
-                  className="text-gray-300 leading-relaxed"
+                  className="text-gray-200 leading-[1.8] text-lg"
                   components={{
-                    h2: ({node, ...props}) => <h2 className="text-3xl font-bold mt-8 mb-4 text-emerald-400" {...props} />,
-                    h3: ({node, ...props}) => <h3 className="text-2xl font-bold mt-6 mb-3 text-cyan-400" {...props} />,
-                    p: ({node, ...props}) => <p className="mb-4 text-gray-300 leading-relaxed" {...props} />,
-                    ul: ({node, ...props}) => <ul className="list-disc list-inside mb-4 space-y-2 text-gray-300" {...props} />,
-                    ol: ({node, ...props}) => <ol className="list-decimal list-inside mb-4 space-y-2 text-gray-300" {...props} />,
-                    li: ({node, ...props}) => <li className="text-gray-300" {...props} />,
+                    h2: ({node, ...props}) => <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight mt-12 mb-5 text-white leading-[1.2]" {...props} />,
+                    h3: ({node, ...props}) => <h3 className="font-display text-2xl md:text-3xl font-semibold tracking-tight mt-10 mb-4 text-emerald-300" {...props} />,
+                    p: ({node, ...props}) => <p className="mb-5 text-gray-200 leading-[1.8]" {...props} />,
+                    ul: ({node, ...props}) => <ul className="list-disc pl-6 mb-5 space-y-2 text-gray-200" {...props} />,
+                    ol: ({node, ...props}) => <ol className="list-decimal pl-6 mb-5 space-y-2 text-gray-200" {...props} />,
+                    li: ({node, ...props}) => <li className="text-gray-200" {...props} />,
+                    blockquote: ({node, ...props}) => <blockquote className="font-display italic text-2xl md:text-3xl leading-[1.4] my-10 pl-6 border-l-2 border-emerald-400/60 text-white" {...props} />,
                     code: ({node, inline, ...props}) =>
                       inline ? (
-                        <code className="bg-white/10 px-2 py-1 rounded text-emerald-300 text-sm" {...props} />
+                        <code className="bg-white/10 px-2 py-1 rounded text-emerald-300 text-sm font-mono" {...props} />
                       ) : (
-                        <code className="block bg-white/5 p-4 rounded-xl text-emerald-300 text-sm overflow-x-auto" {...props} />
+                        <code className="block bg-white/5 p-5 rounded-xl text-emerald-300 text-sm overflow-x-auto font-mono" {...props} />
                       ),
-                    strong: ({node, ...props}) => <strong className="font-bold text-white" {...props} />,
-                    a: ({node, ...props}) => <a className="text-emerald-400 hover:text-cyan-400 underline transition-colors" {...props} />,
+                    strong: ({node, ...props}) => <strong className="font-semibold text-white" {...props} />,
+                    a: ({node, ...props}) => <a className="text-emerald-400 hover:text-cyan-300 underline underline-offset-4 decoration-emerald-400/40 transition-colors" {...props} />,
                   }}
                 >
                   {post.content}

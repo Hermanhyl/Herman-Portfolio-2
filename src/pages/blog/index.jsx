@@ -1,12 +1,14 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { BookOpen, Plus, UserPlus, Search, X } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { getBlogPosts, getFeaturedPost } from '../../data/blog/posts';
 import PageTransition from '../../components/pageTransition';
 import ScrollReveal from '../../components/scrollReveal';
 import SectionHeader from '../../components/sectionHeader';
 import BlogPostCard from '../../components/blogPostCard';
 import useDocumentMeta from '../../hooks/useDocumentMeta';
+import { fadeUp, staggerContainer, viewportOnce } from '../../utils/motion';
 
 function Blog() {
   const { t, i18n } = useTranslation();
@@ -134,17 +136,23 @@ function Blog() {
           {filteredPosts.length > 0 && (
             <div className="space-y-6">
               <ScrollReveal delay={200}>
-                <h2 className="text-2xl font-bold">
+                <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight">
                   {searchQuery ? t('blog.searchResults') : t('blog.recentPosts')}
                 </h2>
               </ScrollReveal>
-              <div className="grid md:grid-cols-2 gap-6">
-                {filteredPosts.map((post, index) => (
-                  <ScrollReveal key={post.id} delay={250 + index * 50}>
+              <motion.div
+                variants={staggerContainer(0.08)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={viewportOnce}
+                className="grid md:grid-cols-2 gap-6"
+              >
+                {filteredPosts.map((post) => (
+                  <motion.div key={post.id} variants={fadeUp}>
                     <BlogPostCard post={post} variant="minimal" colorScheme="purple" />
-                  </ScrollReveal>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
             </div>
           )}
 

@@ -45,12 +45,12 @@ function BlogPostCard({ post, variant = 'default', colorScheme = 'emerald' }) {
     return (
       <Link
         to={`/blog/${post.id}`}
-        className="group block animated-border backdrop-blur-md bg-white/10 rounded-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black"
+        className="group block animated-border backdrop-blur-md bg-white/10 rounded-2xl overflow-hidden hover:bg-white/[0.13] transition-colors duration-500 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black"
       >
         <div className="grid md:grid-cols-2 gap-6">
           {/* Image */}
           <div className={`relative h-64 md:h-full bg-gradient-to-br ${colorSet.iconBg} flex items-center justify-center`}>
-            <BookOpen className={`w-24 h-24 ${colorSet.icon}/50`} />
+            <BookOpen className={`w-24 h-24 ${colorSet.icon}/50 transition-transform duration-700 ease-out group-hover:scale-110`} />
           </div>
 
           {/* Content */}
@@ -67,11 +67,11 @@ function BlogPostCard({ post, variant = 'default', colorScheme = 'emerald' }) {
               ))}
             </div>
 
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 group-hover:text-emerald-400 transition-colors">
+            <h3 className="font-display text-3xl md:text-4xl font-bold tracking-tight mb-4 leading-[1.1] group-hover:text-emerald-400 transition-colors duration-300">
               {post.title}
             </h3>
 
-            <p className="text-gray-300 mb-6 line-clamp-3">
+            <p className="text-gray-300 mb-6 line-clamp-3 leading-relaxed">
               {post.excerpt}
             </p>
 
@@ -102,11 +102,11 @@ function BlogPostCard({ post, variant = 'default', colorScheme = 'emerald' }) {
     return (
       <Link
         to={`/blog/${post.id}`}
-        className="group block h-full animated-border backdrop-blur-md bg-white/10 rounded-xl overflow-hidden hover:bg-white/15 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black"
+        className="group block h-full animated-border backdrop-blur-md bg-white/10 rounded-xl overflow-hidden hover:bg-white/[0.13] transition-[background-color,box-shadow] duration-500 hover:shadow-lg hover:shadow-emerald-500/5 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black"
       >
         {/* Image */}
-        <div className={`relative h-48 bg-gradient-to-br ${colorSet.iconBg} flex items-center justify-center`}>
-          <BookOpen className={`w-16 h-16 ${colorSet.icon}/50`} />
+        <div className={`relative h-48 bg-gradient-to-br ${colorSet.iconBg} flex items-center justify-center overflow-hidden`}>
+          <BookOpen className={`w-16 h-16 ${colorSet.icon}/50 transition-transform duration-700 ease-out group-hover:scale-110`} />
         </div>
 
         {/* Content */}
@@ -116,23 +116,23 @@ function BlogPostCard({ post, variant = 'default', colorScheme = 'emerald' }) {
             {post.tags.slice(0, 2).map((tag, index) => (
               <span
                 key={index}
-                className={`px-2 py-1 border rounded-full text-xs font-medium transition-colors ${colorSet.tag}`}
+                className={`px-2 py-1 border rounded-full text-[11px] font-medium uppercase tracking-wider transition-colors ${colorSet.tag}`}
               >
-                #{tag}
+                {tag}
               </span>
             ))}
           </div>
 
-          <h3 className="text-xl font-bold mb-3 group-hover:text-emerald-400 transition-colors line-clamp-2">
+          <h3 className="font-display text-2xl font-bold tracking-tight mb-3 leading-[1.15] group-hover:text-emerald-400 transition-colors line-clamp-2">
             {post.title}
           </h3>
 
-          <p className="text-gray-300 text-sm mb-4 line-clamp-2">
+          <p className="text-gray-300 text-sm mb-4 line-clamp-2 leading-relaxed">
             {post.excerpt}
           </p>
 
           {/* Meta */}
-          <div className="flex items-center gap-4 text-xs text-gray-400">
+          <div className="flex items-center gap-4 text-xs text-gray-400 tabular-nums">
             <div className="flex items-center gap-1">
               <Clock className="w-3 h-3" />
               {post.readTime}

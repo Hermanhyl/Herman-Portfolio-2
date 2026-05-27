@@ -63,19 +63,21 @@ function HeadlineWords({ text, accentLast = true }) {
   const accentIndex = accentLast ? words.length - 1 : -1;
 
   return (
-    <span className="inline-flex flex-wrap gap-x-[0.2em] justify-center md:justify-start">
+    <span className="inline-flex flex-wrap justify-center md:justify-start">
       {words.map((w, i) => {
         const isAmpersand = w === '&';
         const isAccent = i === accentIndex;
         return (
           <span
             key={`${w}-${i}`}
-            /* Wrapper clips for the curtain reveal. leading-[1.25] +
-               py/-my pattern fully contains glyph bbox (descenders on
-               g/p, italic overhang on &), then claws back the visual
-               stacking via negative margin. px gives horizontal room
-               for the italic ampersand. */
-            className="inline-block overflow-hidden leading-[1.25] py-[0.04em] -my-[0.12em] px-[0.06em]"
+            /* Wrapper clips for the curtain reveal. Asymmetric padding:
+               top is largest because italic Fraunces ampersand has a curl
+               that extends above the ascender line; bottom covers g/p
+               descenders; horizontal covers italic slant overhang on both
+               edges (& curls right, accent word leans). Negative -my
+               claws vertical layout back; horizontal padding doubles as
+               the inter-word gap so we don't need flex gap-x. */
+            className="inline-block overflow-hidden leading-[1.3] pt-[0.2em] pb-[0.12em] px-[0.13em] -mt-[0.2em] -mb-[0.12em]"
           >
             <motion.span
               variants={word}
@@ -173,7 +175,7 @@ export default function Hero() {
             </motion.div>
 
             {/* Primary Headline - editorial display face, word-by-word reveal */}
-            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[1.18] tracking-[-0.03em]">
+            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[1.32] tracking-[-0.03em]">
               <HeadlineWords text={t('hero.headline')} />
             </h1>
 

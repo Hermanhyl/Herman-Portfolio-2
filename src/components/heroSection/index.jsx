@@ -132,6 +132,20 @@ export default function Hero() {
         <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+
+        {/* Asymmetric: hairline bleeding off the right edge behind the
+            portrait — a grid-breaking decorative mark. */}
+        <div
+          aria-hidden="true"
+          className="hidden lg:block absolute top-[42%] right-[-15%] h-px w-[55%] bg-accent/40"
+        />
+        {/* Decorative off-axis mark, top-right area */}
+        <div
+          aria-hidden="true"
+          className="hidden md:block absolute top-28 right-10 font-display italic text-accent/40 text-2xl select-none rotate-12"
+        >
+          ✦
+        </div>
       </div>
 
       <motion.div
@@ -147,7 +161,8 @@ export default function Hero() {
             {/* Available badge — uses semantic green for "live" status,
                 deliberately off-brand so it reads as a state indicator. */}
             <motion.div variants={rise} className="flex justify-center md:justify-start">
-              <div className="inline-flex items-center gap-2 bg-green-500/15 border border-green-400/50 px-4 py-2 rounded-full backdrop-blur-sm transition-transform duration-300 hover:scale-105">
+              {/* Slight -2deg tilt: intentional grid-break */}
+              <div className="inline-flex items-center gap-2 bg-green-500/15 border border-green-400/50 px-4 py-2 rounded-full backdrop-blur-sm transition-transform duration-300 hover:scale-105 -rotate-2 origin-left">
                 <span className="relative flex h-2.5 w-2.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400"></span>

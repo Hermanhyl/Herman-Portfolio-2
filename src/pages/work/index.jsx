@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, Briefcase, BookOpen, PenTool, Play } from 'lucide-react';
+import { motion } from 'framer-motion';
 import PageTransition from '../../components/pageTransition';
 import ScrollReveal from '../../components/scrollReveal';
 import OptimizedImage from '../../components/optimizedImage';
@@ -11,6 +12,7 @@ import IllustrationLightbox from '../../components/illustrationLightbox';
 import { projects } from '../../data/projects/projects';
 import { illustrations, illustrationCategories } from '../../data/illustrations';
 import { animations } from '../../data/animations';
+import { fadeUp, staggerContainer, viewportOnce } from '../../utils/motion';
 
 // Map project IDs to their case study paths
 const caseStudyPaths = {
@@ -58,23 +60,23 @@ function WorkCard({ project, index }) {
   const teaser = translationKey ? t(`work.cards.${translationKey}.teaser`) : (project.teaser || project.description);
 
   return (
-    <ScrollReveal delay={index * 100}>
+    <motion.div variants={fadeUp}>
       <Link
         to={caseStudyPath}
         className="group block"
         aria-label={`View case study for ${project.title}`}
       >
-        <div className={`flex flex-col ${isReversed ? 'md:flex-row-reverse' : 'md:flex-row'} gap-6 md:gap-8 lg:gap-12 items-center bg-white/5 hover:bg-white/[0.07] border border-white/10 hover:border-emerald-500/30 rounded-2xl p-6 md:p-8 lg:p-10 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/5 hover:-translate-y-1`}>
+        <div className={`flex flex-col ${isReversed ? 'md:flex-row-reverse' : 'md:flex-row'} gap-6 md:gap-8 lg:gap-12 items-center bg-white/5 hover:bg-white/[0.07] border border-white/10 hover:border-emerald-500/30 rounded-2xl p-6 md:p-8 lg:p-10 transition-[background-color,border-color,box-shadow,transform] duration-500 ease-out hover:shadow-lg hover:shadow-emerald-500/5 hover:-translate-y-1`}>
           {/* Image Side */}
           <div className="w-full md:w-1/2 lg:w-[55%] flex-shrink-0">
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-800">
               <OptimizedImage
                 src={projectImage}
                 alt={project.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-[700ms] ease-out group-hover:scale-[1.04]"
               />
               {/* Subtle gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
           </div>
 
@@ -85,7 +87,7 @@ function WorkCard({ project, index }) {
               {project.technologies?.slice(0, 4).map((tech) => (
                 <span
                   key={tech}
-                  className="text-sm font-medium text-emerald-400 bg-emerald-500/10 px-4 py-1.5 rounded-full"
+                  className="text-sm font-medium text-emerald-400 bg-emerald-500/10 px-4 py-1.5 rounded-full transition-transform duration-300 group-hover:-translate-y-0.5"
                 >
                   {tech}
                 </span>
@@ -93,7 +95,7 @@ function WorkCard({ project, index }) {
             </div>
 
             {/* Title */}
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white group-hover:text-emerald-400 transition-colors duration-300">
+            <h3 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-bold tracking-tight text-white group-hover:text-emerald-400 transition-colors duration-300 leading-[1.1]">
               {project.title}
             </h3>
 
@@ -106,13 +108,13 @@ function WorkCard({ project, index }) {
             <div className="pt-3">
               <span className="inline-flex items-center gap-2 text-lg text-emerald-400 font-semibold group-hover:text-emerald-300 transition-colors duration-300">
                 {t('featuredProjects.viewCaseStudy')}
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1.5" />
               </span>
             </div>
           </div>
         </div>
       </Link>
-    </ScrollReveal>
+    </motion.div>
   );
 }
 
@@ -211,7 +213,13 @@ function Work() {
         {/* Case Studies View */}
         {activeView === 'case-studies' && (
           <section className="relative px-4 sm:px-6 lg:px-8 xl:px-12 pb-20 flex flex-col items-center w-full mx-auto" style={{ maxWidth: '1200px' }}>
-            <div className="w-full space-y-8 md:space-y-12">
+            <motion.div
+              variants={staggerContainer(0.1)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewportOnce}
+              className="w-full space-y-8 md:space-y-12"
+            >
               {projects.map((project, index) => (
                 <WorkCard
                   key={project.id}
@@ -219,7 +227,7 @@ function Work() {
                   index={index}
                 />
               ))}
-            </div>
+            </motion.div>
           </section>
         )}
 
@@ -231,11 +239,19 @@ function Work() {
                 {projects.length} {t('projects.projectsLabel')}
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 xl:gap-12 w-full">
+            <motion.div
+              variants={staggerContainer(0.06)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewportOnce}
+              className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 xl:gap-12 w-full"
+            >
               {projects.map((project) => (
-                <ProjectCard key={project.id} project={project} />
+                <motion.div key={project.id} variants={fadeUp}>
+                  <ProjectCard project={project} />
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </section>
         )}
 
@@ -268,10 +284,17 @@ function Work() {
             </div>
 
             {/* Illustration Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-3 md:gap-4 w-full px-1 sm:px-0">
+            <motion.div
+              key={selectedCategory}
+              variants={staggerContainer(0.03)}
+              initial="hidden"
+              animate="visible"
+              className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-3 md:gap-4 w-full px-1 sm:px-0"
+            >
               {filteredIllustrations.map((illustration, index) => (
-                <button
+                <motion.button
                   key={illustration.id}
+                  variants={fadeUp}
                   onClick={() => openLightbox(index)}
                   onContextMenu={(e) => e.preventDefault()}
                   aria-label={`View ${illustration.title} in fullscreen`}
@@ -294,9 +317,9 @@ function Work() {
                     <span className="text-white font-medium text-[10px] sm:text-xs md:text-sm line-clamp-2">{illustration.title}</span>
                   </div>
                   <div className="absolute inset-0 ring-2 ring-emerald-400/0 group-hover:ring-emerald-400/50 rounded-lg sm:rounded-xl transition-all duration-300" />
-                </button>
+                </motion.button>
               ))}
-            </div>
+            </motion.div>
 
             {/* Lightbox */}
             <IllustrationLightbox
@@ -319,11 +342,19 @@ function Work() {
                     {animations.length} {t('animations.animationsCount')}
                   </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 w-full">
+                <motion.div
+                  variants={staggerContainer(0.08)}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={viewportOnce}
+                  className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 w-full"
+                >
                   {animations.map((animation) => (
-                    <AnimationCard key={animation.id} animation={animation} />
+                    <motion.div key={animation.id} variants={fadeUp}>
+                      <AnimationCard animation={animation} />
+                    </motion.div>
                   ))}
-                </div>
+                </motion.div>
               </>
             ) : (
               <div className="text-center py-16">

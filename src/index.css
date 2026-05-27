@@ -428,6 +428,89 @@ html {
   animation: chatbot-dot-pulse 1.4s ease-in-out infinite;
 }
 
+/* === BackToTop button ===
+   Sibling to the chatbot button (same shape/size/shadow/spacing) but
+   inverted: ink bg + accent ring + accent icon. The icon is a stacked
+   double chevron with three distinct motion states. */
+
+/* Idle: very subtle 4s vertical bob. 4s deliberately offset from the
+   chatbot's 3s breathing so the two buttons don't sync into a beat. */
+@keyframes back-to-top-bob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+.back-to-top-bob {
+  animation: back-to-top-bob 4s ease-in-out infinite;
+}
+
+/* Suppress idle bob during hover/active/focus so manual interactions win. */
+.back-to-top-bob:hover,
+.back-to-top-bob:active,
+.back-to-top-bob:focus-visible {
+  animation: none;
+}
+
+/* Hover "tick-up" loop on the chevron stack: chevrons translate up and
+   fade out at the top, fresh pair fades in from below. Pure transform
+   + opacity so it stays on the compositor. Two siblings share the
+   animation but are offset so one is always entering as the other exits. */
+@keyframes back-to-top-tick-up {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-150%);
+    opacity: 0;
+  }
+}
+
+.back-to-top-tick {
+  animation: back-to-top-tick-up 0.7s linear infinite;
+}
+
+.back-to-top-tick-delay {
+  animation: back-to-top-tick-up 0.7s linear infinite;
+  animation-delay: -0.35s;
+}
+
+/* Click launch: chevrons fly up and fade once, then a fresh pair
+   re-enters from below. Triggered by adding .back-to-top-launching
+   for ~600ms. */
+@keyframes back-to-top-launch {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  35% {
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+  36% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.back-to-top-launching .back-to-top-icon {
+  animation: back-to-top-launch 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 /* Editorial accent — colored word with a thin gradient underline that draws
    in from left to right. Used on inline highlights in About story paragraphs. */
 .accent-underline {

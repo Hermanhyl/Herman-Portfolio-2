@@ -132,14 +132,15 @@ export default function Hero() {
 
           {/* Text Section */}
           <div className="flex-1 min-w-0 text-center md:text-left space-y-5 md:space-y-6">
-            {/* Available badge */}
+            {/* Available badge — uses semantic green for "live" status,
+                deliberately off-brand so it reads as a state indicator. */}
             <motion.div variants={rise} className="flex justify-center md:justify-start">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500/30 to-cyan-500/30 border-2 border-emerald-400/60 px-4 py-2 rounded-full backdrop-blur-sm shadow-lg shadow-emerald-500/20 transform transition-all duration-300 hover:scale-105">
-                <span className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-400"></span>
+              <div className="inline-flex items-center gap-2 bg-green-500/15 border border-green-400/50 px-4 py-2 rounded-full backdrop-blur-sm transition-transform duration-300 hover:scale-105">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400"></span>
                 </span>
-                <span className="text-emerald-100 text-sm md:text-base font-bold">{t('hero.available')}</span>
+                <span className="text-green-200 text-xs font-semibold uppercase tracking-[0.12em]">{t('hero.available')}</span>
               </div>
             </motion.div>
 

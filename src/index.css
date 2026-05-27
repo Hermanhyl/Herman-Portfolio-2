@@ -7,10 +7,76 @@
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-display:
     'Fraunces', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+
+  /* === Brand palette: warm ink + vermilion-tangerine ===
+     Single source of truth. Override the default Tailwind color ramps for
+     emerald/cyan/purple/pink (used 588× across the codebase as brand) so
+     existing class names pick up the new palette without component sweeps.
+     The "green" ramp is intentionally NOT overridden — it stays the
+     semantic "live/success" color for Available badges and success alerts. */
+
+  /* The accent: vermilion-tangerine. Mapped onto the emerald ramp because
+     emerald-* is the most-used brand utility across the codebase. */
+  --color-emerald-300: #ff8b65;
+  --color-emerald-400: #ff7847;
+  --color-emerald-500: #ff5c2c;
+  --color-emerald-600: #e54213;
+  --color-emerald-700: #b8330d;
+
+  /* Cyan → cream/bone. Used in the now-killed multi-color gradient; tinted
+     so any residual cyan classes read as soft warm light instead of cold. */
+  --color-cyan-300: #efe7d8;
+  --color-cyan-400: #e5dcc8;
+  --color-cyan-500: #d5cab2;
+  --color-cyan-600: #b8ad95;
+
+  /* Purple → warm muted gray. Same logic — purple was a gradient stop;
+     this turns any residual purple into a subdued warm tone. */
+  --color-purple-300: #8b8275;
+  --color-purple-400: #6e6557;
+  --color-purple-500: #5a5247;
+  --color-purple-600: #463f36;
+
+  /* Pink → secondary tangerine. Rare in the codebase, kept on-palette. */
+  --color-pink-300: #ff9d7e;
+  --color-pink-400: #ff7847;
+  --color-pink-500: #ff5c2c;
+  --color-pink-600: #e54213;
+
+  /* Gray ramp warmed up. Default Tailwind gray is cool/blue-leaning;
+     these are bone-warm so the dark surfaces read as ink, not slate. */
+  --color-gray-300: #d1cbbf;
+  --color-gray-400: #b5ac9d;
+  --color-gray-500: #8e8675;
+  --color-gray-600: #5a5247;
+  --color-gray-700: #2f2922;
+  --color-gray-800: #25201a;
+  --color-gray-900: #1a1612;
+
+  /* New semantic tokens — prefer these in new components.
+     `bone` is the new white, `ink` is the new black. */
+  --color-ink: #0f0d0b;
+  --color-ink-elevated: #1a1612;
+  --color-ink-elevated-2: #25201a;
+  --color-border: #2f2922;
+  --color-border-strong: #3d362d;
+  --color-bone: #f5efe6;
+  --color-bone-muted: #b5ac9d;
+  --color-bone-faded: #6e6557;
+  --color-accent: #ff5c2c;
+  --color-accent-soft: #dd3f12;
+  --color-accent-ink: #14110d;
 }
 
 * {
   scroll-behavior: smooth;
+}
+
+/* Page baseline */
+html,
+body {
+  background-color: var(--color-ink);
+  color: var(--color-bone);
 }
 
 /* Inter is the default body face; opt in to Fraunces with `font-display` */
@@ -54,7 +120,7 @@ html {
   }
 }
 .animated-bg {
-  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e);
+  background: linear-gradient(-45deg, #0f0d0b, #1a1612, #25201a);
   background-size: 400% 400%;
   animation: gradient-move 15s ease infinite;
 }
@@ -85,16 +151,16 @@ html {
 .animated-border::before {
   content: '';
   position: absolute;
-  top: -4px;    /* increased from -2px */
-  left: -4px;   /* increased from -2px */
-  right: -4px;  /* increased from -2px */
-  bottom: -4px; /* increased from -2px */
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
   background: linear-gradient(
     270deg,
-    #10b981,
-    #ec4899,
-    #8b5cf6,
-    #10b981
+    #ff5c2c,
+    #f5efe6,
+    #6e6557,
+    #ff5c2c
   );
   background-size: 600% 600%;
   border-radius: 1.25rem; /* increased slightly to keep rounded corners smooth */
@@ -121,7 +187,7 @@ html {
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #10b981 #1f2937;
+  scrollbar-color: #ff5c2c #1a1612;
 }
 
 /* Webkit browsers (Chrome, Safari, Edge) */
@@ -131,18 +197,18 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1f2937;
+  background: #1a1612;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #10b981, #06b6d4);
+  background: #ff5c2c;
   border-radius: 5px;
-  border: 2px solid #1f2937;
+  border: 2px solid #1a1612;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #059669, #0891b2);
+  background: #dd3f12;
 }
 
 /* Slow spin animation for profile image border */
@@ -159,15 +225,16 @@ html {
   animation: spin-slow 8s linear infinite;
 }
 
-/* Conic gradient for rotating border effect */
+/* Conic gradient for rotating border effect — the one gradient moment
+   that survives the palette swap. Recolored to tangerine → bone → muted
+   → tangerine so it stays alive but reads warm. */
 .bg-conic-gradient {
   background: conic-gradient(
     from 0deg,
-    #10b981,
-    #06b6d4,
-    #8b5cf6,
-    #ec4899,
-    #10b981
+    #ff5c2c,
+    #f5efe6,
+    #6e6557,
+    #ff5c2c
   );
 }
 
@@ -291,11 +358,11 @@ html {
 }
 
 .accent-emerald {
-  color: #34d399;
+  color: var(--color-accent);
 }
 
 .accent-cyan {
-  color: #22d3ee;
+  color: var(--color-bone);
 }
 
 @keyframes accent-draw {

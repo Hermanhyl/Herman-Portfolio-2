@@ -132,12 +132,12 @@ function Contact() {
             {/* Header */}
             <motion.div variants={fadeUp}>
               <div className="text-center">
-                <div className="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-500/50 px-4 py-2 rounded-full mb-6 backdrop-blur-sm">
-                  <span className="relative flex h-3 w-3">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                <div className="inline-flex items-center gap-2 bg-green-500/15 border border-green-400/50 px-4 py-2 rounded-full mb-6 backdrop-blur-sm">
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400"></span>
                   </span>
-                  <span className="text-emerald-300 text-sm font-medium">{t('contact.available')}</span>
+                  <span className="text-green-200 text-xs font-semibold uppercase tracking-[0.12em]">{t('contact.available')}</span>
                 </div>
 
                 <SectionHeader
@@ -171,11 +171,11 @@ function Contact() {
                       initial={{ opacity: 0, y: -8 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.3, ease: ease.out }}
-                      className="mb-4 p-4 bg-emerald-500/20 border border-emerald-500/50 rounded-lg flex items-center gap-3"
+                      className="mb-4 p-4 bg-green-500/15 border border-green-500/50 rounded-lg flex items-center gap-3"
                       role="alert"
                     >
-                      <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                      <p className="text-emerald-300">{t('contact.successMessage')}</p>
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <p className="text-green-200">{t('contact.successMessage')}</p>
                     </motion.div>
                   )}
 

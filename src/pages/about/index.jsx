@@ -1,6 +1,8 @@
+import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Code, Palette, Rocket, GraduationCap, Briefcase, Award, Sparkles, Terminal, Layers, Brain, ArrowRight, MapPin, Calendar, FolderKanban, PenTool, Film, BookOpen } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import useDocumentMeta from '../../hooks/useDocumentMeta';
 import OptimizedImage from '../../components/optimizedImage';
 import ScrollReveal from '../../components/scrollReveal';
@@ -9,6 +11,8 @@ import CVDownloadButton from '../../components/cvDownloadButton';
 import AnimatedCounter from '../../components/animatedCounter';
 import AnimatedSkillBar from '../../components/animatedSkillBar';
 import ProjectsButton from '../../components/projectsButton';
+import TimelineLine from '../../components/timelineLine';
+import { fadeUp, staggerContainer, viewportOnce } from '../../utils/motion';
 
 // Skills data (not translatable - technical terms)
 const skills = [
@@ -22,6 +26,7 @@ const skills = [
 
 function About() {
   const { t } = useTranslation();
+  const timelineRef = useRef(null);
 
   useDocumentMeta({
     title: 'About Me',
@@ -127,7 +132,7 @@ function About() {
                   <MapPin className="w-4 h-4" />
                   {t('about.location')}
                 </p>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text leading-tight">
+                <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-[-0.03em] bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 text-transparent bg-clip-text leading-[1.02]">
                   Herman Hylland
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300">
@@ -151,22 +156,27 @@ function About() {
         </ScrollReveal>
 
         {/* Stats Section */}
-        <ScrollReveal>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            {stats.map((stat, index) => (
-              <div
-                key={index}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 hover:border-emerald-500/30 p-6 rounded-2xl text-center transition-all duration-300 hover:transform hover:scale-105 hover:bg-white/10"
-              >
-                <stat.icon className="w-8 h-8 mx-auto mb-3 text-emerald-400 group-hover:scale-110 transition-transform" />
-                <div className="text-3xl md:text-4xl font-bold mb-1 bg-gradient-to-r from-emerald-400 to-cyan-400 text-transparent bg-clip-text">
-                  <AnimatedCounter value={stat.value} />
-                </div>
-                <div className="text-gray-400 text-sm md:text-base">{stat.label}</div>
+        <motion.div
+          variants={staggerContainer(0.08)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
+        >
+          {stats.map((stat, index) => (
+            <motion.div
+              key={index}
+              variants={fadeUp}
+              className="group relative bg-white/5 backdrop-blur-sm border border-white/10 hover:border-emerald-500/30 p-6 rounded-2xl text-center transition-all duration-300 hover:transform hover:scale-105 hover:bg-white/10"
+            >
+              <stat.icon className="w-8 h-8 mx-auto mb-3 text-emerald-400 group-hover:scale-110 transition-transform" />
+              <div className="font-display text-4xl md:text-5xl font-bold tracking-tight mb-1 tabular-nums bg-gradient-to-r from-emerald-400 to-cyan-400 text-transparent bg-clip-text">
+                <AnimatedCounter value={stat.value} />
               </div>
-            ))}
-          </div>
-        </ScrollReveal>
+              <div className="text-gray-400 text-sm md:text-base">{stat.label}</div>
+            </motion.div>
+          ))}
+        </motion.div>
 
         {/* My Story Section */}
         <ScrollReveal>
@@ -178,38 +188,47 @@ function About() {
                 <div className="p-2 bg-emerald-500/20 rounded-lg">
                   <Rocket className="w-6 h-6 text-emerald-400" />
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold">{t('about.myStory')}</h2>
+                <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight">{t('about.myStory')}</h2>
               </div>
 
-              <div className="space-y-4 text-gray-300 text-lg leading-relaxed">
-                <p
+              <motion.div
+                variants={staggerContainer(0.15)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={viewportOnce}
+                className="space-y-5 text-gray-300 text-lg leading-[1.75] max-w-[68ch]"
+              >
+                <motion.p
+                  variants={fadeUp}
                   dangerouslySetInnerHTML={{
                     __html: t('about.storyP1')
                       .replace(/<highlight>/g, '<span class="text-white font-medium">')
                       .replace(/<\/highlight>/g, '</span>')
-                      .replace(/<accent1>/g, '<span class="text-emerald-400">')
+                      .replace(/<accent1>/g, '<span class="accent-underline accent-emerald">')
                       .replace(/<\/accent1>/g, '</span>')
                   }}
                 />
-                <p
+                <motion.p
+                  variants={fadeUp}
                   dangerouslySetInnerHTML={{
                     __html: t('about.storyP2')
                       .replace(/<highlight>/g, '<span class="text-white font-medium">')
                       .replace(/<\/highlight>/g, '</span>')
-                      .replace(/<accent2>/g, '<span class="text-cyan-400">')
+                      .replace(/<accent2>/g, '<span class="accent-underline accent-cyan">')
                       .replace(/<\/accent2>/g, '</span>')
                   }}
                 />
-                <p
+                <motion.p
+                  variants={fadeUp}
                   dangerouslySetInnerHTML={{
                     __html: t('about.storyP3')
-                      .replace(/<accent1>/g, '<span class="text-emerald-400">')
+                      .replace(/<accent1>/g, '<span class="accent-underline accent-emerald">')
                       .replace(/<\/accent1>/g, '</span>')
-                      .replace(/<accent2>/g, '<span class="text-cyan-400">')
+                      .replace(/<accent2>/g, '<span class="accent-underline accent-cyan">')
                       .replace(/<\/accent2>/g, '</span>')
                   }}
                 />
-              </div>
+              </motion.div>
 
               {/* Explore My Work Buttons */}
               <div className="pt-6 border-t border-white/10 mt-8">
@@ -269,7 +288,7 @@ function About() {
                 <Sparkles className="w-4 h-4 text-purple-400" />
                 <span className="text-purple-300 text-sm font-medium">{t('about.whatIWorkWith')}</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold">{t('about.skillsExpertise')}</h2>
+              <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight">{t('about.skillsExpertise')}</h2>
             </div>
           </ScrollReveal>
 
@@ -335,13 +354,12 @@ function About() {
                 <Calendar className="w-4 h-4 text-cyan-400" />
                 <span className="text-cyan-300 text-sm font-medium">{t('about.careerPath')}</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold">{t('about.experienceEducation')}</h2>
+              <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight">{t('about.experienceEducation')}</h2>
             </div>
           </ScrollReveal>
 
-          <div className="relative">
-            {/* Timeline line - hidden on mobile, shown from md up */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-emerald-500 via-cyan-500 to-purple-500 opacity-30"></div>
+          <div ref={timelineRef} className="relative">
+            <TimelineLine parentRef={timelineRef} />
 
             <div className="space-y-6 md:space-y-8">
               {timeline.map((item, index) => {
@@ -362,7 +380,7 @@ function About() {
                         <div className={`w-px h-4 ${isWork ? 'bg-emerald-500/50' : 'bg-purple-500/50'}`}></div>
                         {/* Card */}
                         <div className={`w-full group bg-white/5 hover:bg-white/10 backdrop-blur-sm border ${isWork ? 'border-emerald-500/20 hover:border-emerald-500/40' : 'border-purple-500/20 hover:border-purple-500/40'} rounded-2xl p-5 transition-all duration-300`}>
-                          <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium mb-3 ${isWork ? 'bg-emerald-500/20 text-emerald-300' : 'bg-purple-500/20 text-purple-300'}`}>
+                          <span className={`inline-block px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-[0.08em] tabular-nums mb-3 ${isWork ? 'bg-emerald-500/20 text-emerald-300' : 'bg-purple-500/20 text-purple-300'}`}>
                             {item.year}
                           </span>
                           <h3 className="text-lg font-bold text-white mb-1">{item.title}</h3>
@@ -377,7 +395,7 @@ function About() {
                       {/* Content */}
                       <div className={`flex-1 w-1/2 ${isLeft ? 'pr-12 text-right' : 'pl-12'}`}>
                         <div className={`group bg-white/5 hover:bg-white/10 backdrop-blur-sm border ${isWork ? 'border-emerald-500/20 hover:border-emerald-500/40' : 'border-purple-500/20 hover:border-purple-500/40'} rounded-2xl p-6 transition-all duration-300`}>
-                          <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium mb-3 ${isWork ? 'bg-emerald-500/20 text-emerald-300' : 'bg-purple-500/20 text-purple-300'}`}>
+                          <span className={`inline-block px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-[0.08em] tabular-nums mb-3 ${isWork ? 'bg-emerald-500/20 text-emerald-300' : 'bg-purple-500/20 text-purple-300'}`}>
                             {item.year}
                           </span>
                           <h3 className="text-xl font-bold text-white mb-1">{item.title}</h3>

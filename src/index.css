@@ -276,3 +276,30 @@ html {
   animation: glow-pulse-delayed 2s ease-in-out infinite;
   animation-delay: 0.5s;
 }
+
+/* Editorial accent — colored word with a thin gradient underline that draws
+   in from left to right. Used on inline highlights in About story paragraphs. */
+.accent-underline {
+  position: relative;
+  font-weight: 500;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-size: 0% 1.5px;
+  background-position: 0 100%;
+  padding-bottom: 0.15em;
+  animation: accent-draw 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.4s forwards;
+}
+
+.accent-emerald {
+  color: #34d399;
+}
+
+.accent-cyan {
+  color: #22d3ee;
+}
+
+@keyframes accent-draw {
+  to {
+    background-size: 100% 1.5px;
+  }
+}

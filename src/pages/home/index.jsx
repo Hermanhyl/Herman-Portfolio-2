@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import Hero from "../../components/heroSection";
 import GrainOverlay from "../../components/grainOverlay";
 import FeaturedProjects from "../../components/featuredProjects";
+import SectionMarker from "../../components/sectionMarker";
 import ProjectCard from "../../components/projectCard";
 import PageTransition from "../../components/pageTransition";
 import ScrollReveal from "../../components/scrollReveal";
@@ -155,7 +156,9 @@ function Home() {
 
         {/* Projects Section */}
         <section ref={sectionRef} id="projects" className="relative px-4 sm:px-6 lg:px-8 xl:px-12 py-20 flex flex-col items-center w-full mx-auto" style={{ maxWidth: '1600px' }}>
-          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-px h-20 bg-gradient-to-b from-transparent via-emerald-500 to-transparent opacity-50"></div>
+          <ScrollReveal className="w-full mb-10">
+            <SectionMarker number="02" label={t("projects.badge", { defaultValue: "Selected output" })} />
+          </ScrollReveal>
 
           <ScrollReveal className="mb-12">
             {/* Toggle Buttons with attention-grabbing animation */}
@@ -216,6 +219,7 @@ function Home() {
                   ? t("illustrations.description")
                   : ""
               }
+              accentLastWord
             />
           </ScrollReveal>
 
@@ -542,13 +546,14 @@ function Home() {
 
         {/* Latest Insights Section */}
         <section className="relative px-4 sm:px-6 lg:px-8 xl:px-12 py-20 flex flex-col items-center w-full mx-auto" style={{ maxWidth: '1400px' }}>
+          <ScrollReveal className="w-full mb-10">
+            <SectionMarker number="03" label={t("blog.badge")} />
+          </ScrollReveal>
           <ScrollReveal className="w-full mb-12">
             <SectionHeader
-              icon={BookOpen}
-              badge={t("blog.badge")}
-              badgeColor="emerald"
               title={t("blog.title")}
               description={t("blog.description")}
+              accentLastWord
             />
           </ScrollReveal>
 

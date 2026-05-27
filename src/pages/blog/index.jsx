@@ -6,6 +6,7 @@ import { getBlogPosts, getFeaturedPost } from '../../data/blog/posts';
 import PageTransition from '../../components/pageTransition';
 import ScrollReveal from '../../components/scrollReveal';
 import SectionHeader from '../../components/sectionHeader';
+import SectionMarker from '../../components/sectionMarker';
 import BlogPostCard from '../../components/blogPostCard';
 import useDocumentMeta from '../../hooks/useDocumentMeta';
 import { fadeUp, staggerContainer, viewportOnce } from '../../utils/motion';
@@ -126,8 +127,8 @@ function Blog() {
           {/* Featured Post */}
           {showFeaturedPost && (
             <ScrollReveal delay={100}>
-              <div className="space-y-4">
-                <h2 className="text-2xl font-bold text-emerald-400">{t('blog.featuredPost')}</h2>
+              <div className="space-y-6">
+                <SectionMarker number="01" label={t('blog.featuredPost')} align="left" />
                 <BlogPostCard post={featuredPost} variant="featured" />
               </div>
             </ScrollReveal>
@@ -137,9 +138,11 @@ function Blog() {
           {filteredPosts.length > 0 && (
             <div className="space-y-6">
               <ScrollReveal delay={200}>
-                <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight">
-                  {searchQuery ? t('blog.searchResults') : t('blog.recentPosts')}
-                </h2>
+                <SectionMarker
+                  number="02"
+                  label={searchQuery ? t('blog.searchResults') : t('blog.recentPosts')}
+                  align="left"
+                />
               </ScrollReveal>
               <motion.div
                 variants={staggerContainer(0.08)}

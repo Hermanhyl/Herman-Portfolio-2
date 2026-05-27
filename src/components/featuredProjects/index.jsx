@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { ArrowRight, ChevronRight, BookOpen } from 'lucide-react';
 import OptimizedImage from '../optimizedImage';
 import ScrollReveal from '../scrollReveal';
+import SectionMarker from '../sectionMarker';
 
 /**
  * Single featured project card with alternating layout
@@ -116,12 +117,22 @@ export default function FeaturedProjects() {
     <section className="relative px-4 sm:px-6 lg:px-8 xl:px-12 py-20 flex flex-col items-center w-full mx-auto" style={{ maxWidth: '1200px' }}>
       {/* Section Header */}
       <ScrollReveal className="w-full mb-12 md:mb-16">
-        <div className="text-center space-y-4">
-          <span className="inline-block text-sm font-semibold text-emerald-400 tracking-wider uppercase">
-            {t('featuredProjects.badge')}
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-            {t('featuredProjects.title')}
+        <div className="text-center space-y-5">
+          <SectionMarker number="01" label={t('featuredProjects.badge')} />
+          <h2 className="font-display text-bone text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-[-0.025em] leading-[1.05]">
+            {(() => {
+              const title = t('featuredProjects.title');
+              const words = title.split(' ');
+              if (words.length < 2) return title;
+              const lead = words.slice(0, -1).join(' ');
+              const last = words[words.length - 1];
+              return (
+                <>
+                  {lead}{' '}
+                  <span className="italic text-accent">{last}</span>
+                </>
+              );
+            })()}
           </h2>
         </div>
       </ScrollReveal>

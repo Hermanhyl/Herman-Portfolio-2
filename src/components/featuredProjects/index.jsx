@@ -4,6 +4,7 @@ import { ArrowRight, ChevronRight, BookOpen } from 'lucide-react';
 import OptimizedImage from '../optimizedImage';
 import ScrollReveal from '../scrollReveal';
 import SectionMarker from '../sectionMarker';
+import CardCursor from '../cardCursor';
 
 /**
  * Single featured project card with alternating layout
@@ -14,6 +15,7 @@ function FeaturedProjectCard({ project, index }) {
 
   return (
     <ScrollReveal delay={index * 100}>
+      <CardCursor>
       <Link
         to={project.path || `/project/${project.id}`}
         className="group block"
@@ -72,6 +74,7 @@ function FeaturedProjectCard({ project, index }) {
           </div>
         </div>
       </Link>
+      </CardCursor>
     </ScrollReveal>
   );
 }

@@ -8,6 +8,7 @@ import ScrollReveal from '../../components/scrollReveal';
 import OptimizedImage from '../../components/optimizedImage';
 import ProjectCard from '../../components/projectCard';
 import AnimationCard from '../../components/animationCard';
+import CardCursor from '../../components/cardCursor';
 import IllustrationLightbox from '../../components/illustrationLightbox';
 import { projects } from '../../data/projects/projects';
 import { illustrations, illustrationCategories } from '../../data/illustrations';
@@ -61,6 +62,7 @@ function WorkCard({ project, index }) {
 
   return (
     <motion.div variants={fadeUp}>
+      <CardCursor>
       <Link
         to={caseStudyPath}
         className="group block"
@@ -114,6 +116,7 @@ function WorkCard({ project, index }) {
           </div>
         </div>
       </Link>
+      </CardCursor>
     </motion.div>
   );
 }

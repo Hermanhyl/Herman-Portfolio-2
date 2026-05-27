@@ -8,6 +8,7 @@ import ScrollReveal from '../../components/scrollReveal';
 import SectionHeader from '../../components/sectionHeader';
 import SectionMarker from '../../components/sectionMarker';
 import BlogPostCard from '../../components/blogPostCard';
+import CardCursor from '../../components/cardCursor';
 import useDocumentMeta from '../../hooks/useDocumentMeta';
 import { fadeUp, staggerContainer, viewportOnce } from '../../utils/motion';
 
@@ -129,7 +130,9 @@ function Blog() {
             <ScrollReveal delay={100}>
               <div className="space-y-6">
                 <SectionMarker number="01" label={t('blog.featuredPost')} align="left" />
-                <BlogPostCard post={featuredPost} variant="featured" />
+                <CardCursor label="READ →">
+                  <BlogPostCard post={featuredPost} variant="featured" />
+                </CardCursor>
               </div>
             </ScrollReveal>
           )}
@@ -153,7 +156,9 @@ function Blog() {
               >
                 {filteredPosts.map((post) => (
                   <motion.div key={post.id} variants={fadeUp}>
-                    <BlogPostCard post={post} variant="minimal" colorScheme="purple" />
+                    <CardCursor label="READ →">
+                      <BlogPostCard post={post} variant="minimal" colorScheme="purple" />
+                    </CardCursor>
                   </motion.div>
                 ))}
               </motion.div>

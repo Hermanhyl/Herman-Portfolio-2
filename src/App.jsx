@@ -18,6 +18,7 @@ import PiaSalaryCaseStudy from './pages/caseStudy/pia-salary';
 import ClicketyCartCaseStudy from './pages/caseStudy/clicketycart';
 import CommunityScienceMuseumCaseStudy from './pages/caseStudy/community-science-museum';
 import GameHubCaseStudy from './pages/caseStudy/gamehub';
+import HalcyonAtelierCaseStudy from './pages/caseStudy/halcyon-atelier';
 import Layout from './components/layout';
 import ErrorBoundary from './components/errorBoundary';
 
@@ -45,6 +46,7 @@ function App() {
           <Route path='/case-study/clicketycart' element={<ClicketyCartCaseStudy />} />
           <Route path='/case-study/community-science-museum' element={<CommunityScienceMuseumCaseStudy />} />
           <Route path='/case-study/gamehub' element={<GameHubCaseStudy />} />
+          <Route path='/case-study/halcyon-atelier' element={<HalcyonAtelierCaseStudy />} />
         </Route>
       </Routes>
     </ErrorBoundary>

@@ -1,4 +1,50 @@
 import { useState, useRef, useEffect } from 'react';
+
+/**
+ * Tracks how many times the popup has been dismissed AND the last dismissal
+ * time. Persisted in localStorage so the suppression survives navigation.
+ *
+ * Rules:
+ *   - Less than 30 min since last dismissal → suppress
+ *   - 2+ dismissals total this session → suppress for the rest of the session
+ *   - Otherwise → show after the normal idle delay
+ */
+const POPUP_STORAGE_KEY = 'chatbot:popup-suppression';
+const SUPPRESS_DURATION_MS = 30 * 60 * 1000; // 30 minutes
+
+function readPopupSuppression() {
+  if (typeof window === 'undefined') return { lastDismissedAt: 0, count: 0 };
+  try {
+    const raw = window.localStorage.getItem(POPUP_STORAGE_KEY);
+    if (!raw) return { lastDismissedAt: 0, count: 0 };
+    const parsed = JSON.parse(raw);
+    return {
+      lastDismissedAt: Number(parsed.lastDismissedAt) || 0,
+      count: Number(parsed.count) || 0,
+    };
+  } catch {
+    return { lastDismissedAt: 0, count: 0 };
+  }
+}
+
+function writePopupSuppression(state) {
+  if (typeof window === 'undefined') return;
+  try {
+    window.localStorage.setItem(POPUP_STORAGE_KEY, JSON.stringify(state));
+  } catch {
+    /* localStorage unavailable (private mode, quota) — silently ignore */
+  }
+}
+
+/** True if the popup should be suppressed right now. */
+function shouldSuppressPopup(sessionDismissCount) {
+  // Per-session: 2 dismissals in this session → done for the session
+  if (sessionDismissCount >= 2) return true;
+  // Cross-navigation: within 30 minutes of last dismissal
+  const { lastDismissedAt } = readPopupSuppression();
+  if (!lastDismissedAt) return false;
+  return Date.now() - lastDismissedAt < SUPPRESS_DURATION_MS;
+}
 import { Link } from 'react-router-dom';
 import { MessageSquare, X, Send, Loader2, Bot, User, Sparkles, RotateCcw } from 'lucide-react';
 
@@ -62,6 +108,9 @@ export default function ChatBot() {
   const [isVisible, setIsVisible] = useState(false);
   const [showPromptBubble, setShowPromptBubble] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
+  // Session dismissal count — resets on full page reload (intentional).
+  // localStorage holds the time-based suppression that survives navigation.
+  const sessionDismissCountRef = useRef(0);
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
@@ -81,12 +130,15 @@ export default function ChatBot() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Show prompt bubble after 30 seconds if user hasn't interacted with chat
+  // Show prompt bubble after 30 seconds — but only if not currently
+  // suppressed by a recent dismissal (cross-navigation via localStorage)
+  // or by 2+ dismissals in this session.
   useEffect(() => {
     if (hasInteracted) return;
+    if (shouldSuppressPopup(sessionDismissCountRef.current)) return;
 
     const promptTimer = setTimeout(() => {
-      if (!isOpen && !hasInteracted) {
+      if (!isOpen && !hasInteracted && !shouldSuppressPopup(sessionDismissCountRef.current)) {
         setShowPromptBubble(true);
       }
     }, 30000); // 30 seconds
@@ -101,11 +153,20 @@ export default function ChatBot() {
     setHasInteracted(true);
   };
 
-  // Dismiss prompt bubble
+  // Dismiss prompt bubble. Persist the dismissal: 30-min cooldown
+  // (cross-navigation via localStorage) and a per-session counter so 2+
+  // dismissals in one session suppress for the whole session.
   const dismissPromptBubble = (e) => {
     e.stopPropagation();
     setShowPromptBubble(false);
     setHasInteracted(true);
+
+    sessionDismissCountRef.current += 1;
+    const prev = readPopupSuppression();
+    writePopupSuppression({
+      lastDismissedAt: Date.now(),
+      count: prev.count + 1,
+    });
   };
 
   // Prevent body scroll when chat is open on mobile

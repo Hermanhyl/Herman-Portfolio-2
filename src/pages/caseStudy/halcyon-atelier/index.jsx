@@ -38,11 +38,11 @@ export default function HalcyonAtelierCaseStudy() {
   // Section-by-section tour entries. Each renders a label + heading +
   // body paragraph + screenshot, alternating image position.
   const tour = [
-    { key: 'tourHero', image: '/Halcyon/section-hero.png', imageRight: true },
-    { key: 'tourAbout', image: '/Halcyon/section-about.png', imageRight: false },
-    { key: 'tourWork', image: '/Halcyon/section-work.png', imageRight: true },
-    { key: 'tourPractice', image: '/Halcyon/section-practice.png', imageRight: false },
-    { key: 'tourContact', image: '/Halcyon/section-contact.png', imageRight: true },
+    { key: 'tourHero', image: '/Halcyon/section-hero.jpg', imageRight: true },
+    { key: 'tourAbout', image: '/Halcyon/section-about.jpg', imageRight: false },
+    { key: 'tourWork', image: '/Halcyon/section-work.jpg', imageRight: true },
+    { key: 'tourPractice', image: '/Halcyon/section-practice.jpg', imageRight: false },
+    { key: 'tourContact', image: '/Halcyon/section-contact.jpg', imageRight: true },
   ];
 
   return (
@@ -67,7 +67,7 @@ export default function HalcyonAtelierCaseStudy() {
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/50">
                   <div className="relative rounded-2xl overflow-hidden bg-ink-elevated">
                     <OptimizedImage
-                      src="/Halcyon/hero.png"
+                      src="/Halcyon/hero.jpg"
                       alt="Halcyon Atelier — folio cover with the studio name and a live Lisbon clock"
                       eager={true}
                       className="w-full h-auto"

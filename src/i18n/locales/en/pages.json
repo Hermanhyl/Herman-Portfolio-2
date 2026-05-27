@@ -52,6 +52,9 @@
       },
       "gamehub": {
         "teaser": "My very first web development project—not a reflection of my skills today, but a reminder of where my journey began."
+      },
+      "halcyonAtelier": {
+        "teaser": "A single-page editorial showcase for a fictional Lisbon studio. A deliberate craft exercise in committing to one strong aesthetic, with motion treated as a design language and every visual built as SVG."
       }
     }
   },

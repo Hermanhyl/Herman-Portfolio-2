@@ -25,6 +25,7 @@
       "viewLiveDemo": "View Live Demo",
       "viewOnGithub": "View on GitHub",
       "viewGithub": "View GitHub",
+      "viewRepository": "View Repository",
       "viewFigma": "View Figma"
     },
     "brannvrn": {
@@ -291,6 +292,98 @@
       "lesson4": "Building without frameworks - understanding what's actually happening under the hood",
       "journeyHeading": "Everyone Starts Somewhere",
       "journeyText": "The code isn't good. The design didn't match my vision. But that's exactly why it stays in my portfolio. Comparing GameHub to projects like Hobbyist or Timer & Planner shows what two years of learning looks like. Every developer has a first project - this was mine, and I'm not embarrassed by it. Growth requires a starting point."
+    },
+    "halcyonAtelier": {
+      "tags": "React · Framer Motion · Vite · SVG · Variable fonts",
+      "tagline": "A single-page editorial showcase for a fictional Lisbon design studio.",
+      "roleValue": "Design and development (solo)",
+      "yearLabel": "Year:",
+      "yearValue": "2026",
+      "statusValue": "Personal project",
+
+      "briefLabel": "The Brief",
+      "briefHeading": "A studio that doesn't exist",
+      "briefP1": "Halcyon Atelier is a fictional Lisbon-based hospitality branding studio, treated as if it were a real working business: portfolio, services, address, a live local clock. The point was to commit fully to one strong aesthetic point of view instead of producing the kind of templated, generic agency site you can find anywhere.",
+      "briefP2": "I wrote my own brief with explicit constraints: no Inter, no Roboto, no Space Grotesk; no purple-on-white gradients; distinctive typography or it doesn't ship; motion treated as a design language, not decoration; atmospheric detail mandatory; production-grade code throughout.",
+
+      "aestheticLabel": "Aesthetic direction",
+      "aestheticHeading": "Lisbon Sun",
+      "aestheticP1": "The internal nickname was Lisbon Sun. The references were Aesop's product and store typography, 1970s Italian editorial magazines like Domus and Casabella, sun-bleached Lisbon walls and azulejo-era ceramics, and the texture of letterpress printed matter. The intent: a page that feels printed on uncoated stock, not displayed on a screen.",
+
+      "paletteLabel": "Palette",
+      "paletteHeading": "Six colours, used surgically",
+      "paletteRole1": "Paper",
+      "paletteRole2": "Ink",
+      "paletteRole3": "Terracotta",
+      "paletteRole4": "Warm shadow",
+      "paletteRole5": "Muted slate",
+      "paletteRole6": "Soft sand",
+      "paletteCaption": "Terracotta is the only chromatic colour in the system and it's treated like a precious resource: never as gradient, never bulk-applied. It appears on the dot after the studio name, on the italic emphasis words, on the Roman numerals, on the cycling farewell, on the status dot. Everywhere else is paper and ink.",
+
+      "typeLabel": "Typography",
+      "typeHeading": "Editorial serif, technical mono",
+      "typeP1": "Two faces only. No sans-serif body font — that decision alone removed the default-template feel from the page. The body voice is a serif; the supporting voice is a monospace.",
+      "typeFrauncesLabel": "Display",
+      "typeFraunces": "Variable serif used for headlines, project names, and italic emphasis. The SOFT and WONK axes are pushed deliberately to pick up the 1970s magazine masthead character that a default Fraunces setting would miss.",
+      "typePlexMonoLabel": "Supporting",
+      "typePlexMono": "Technical voice. Metadata, addresses, the live clock, deliverables under each discipline, anything that wants to read as caption or machine-readable detail.",
+
+      "tourLabel": "Section by section",
+      "tourHeading": "Five sections, one rhythm",
+
+      "tourHeroEyebrow": "I.",
+      "tourHeroHeading": "An editorial folio cover",
+      "tourHeroBody": "The hero behaves like the front of a printed folio: studio name set at display scale with a deliberate letter-by-letter entrance, two drifting blurred terracotta washes behind the type, a slow-running marquee at the bottom edge, and a live Lisbon clock ticking in the corner. The page never freezes — there are always two pieces of ambient motion present.",
+
+      "tourAboutEyebrow": "II.",
+      "tourAboutHeading": "Asymmetry, signature, restraint",
+      "tourAboutBody": "About is a two-column asymmetric layout: the text sits left, a hand-drawn SVG signature draws itself across the right column as you scroll past. Body type animates in word by word, with three italic terracotta accents on the words slowly, hand, and long — the only places colour appears in the section.",
+
+      "tourWorkEyebrow": "III.",
+      "tourWorkHeading": "Hand-placed specimens, not a grid",
+      "tourWorkBody": "Five fictional projects on an asymmetric grid that was hand-placed, not auto-fit. Every visual is a bespoke SVG specimen built from scratch — no stock photos, no mockups, no raster anywhere. Hovering a tile fires three things at once: the project name flips letter by letter, a terracotta slab rises with the description, and the specimen itself starts moving with its own ambient motion.",
+
+      "tourPracticeEyebrow": "IV.",
+      "tourPracticeHeading": "Disciplines as Roman numerals",
+      "tourPracticeBody": "Practice is a typographic list. Five disciplines set as Roman numerals at oversized scale. On hover, the discipline name flips into a hairline outline with a ghost italic terracotta echo behind it; an accordion expands to reveal numbered deliverables in mono. The list reads as a contents page from a printed monograph.",
+
+      "tourContactEyebrow": "V.",
+      "tourContactHeading": "A closing in italic terracotta",
+      "tourContactBody": "Contact opens with a single italic terracotta headline — correspond. — sits over four monospace-typeset meta columns, and closes with an SVG sine wave that draws itself across the page as it scrolls into view. A cycling localised farewell rotates beneath the wave; a reverse-direction marquee bookends the one at the top of the hero. Then the page ends.",
+
+      "motionLabel": "Motion principles",
+      "motionHeading": "Motion as a design language",
+      "motionP1": "Three easing curves, used deliberately. Expo-out for entrances — slow start, decisive arrival. Quart in-out for hover and exit states — mechanical symmetry. Linear is reserved for the two marquees and nothing else. Scroll-triggered reveals fire once and don't replay on scroll-back. Two pieces of continuous ambient motion are always present so the page never feels frozen. prefers-reduced-motion is respected globally — every animation falls back cleanly.",
+
+      "techLabel": "Technical detail",
+      "techHeading": "Production-grade, no shortcuts",
+      "techP1": "The build is restrained on purpose: no utility-class framework, no component library, no design-token generator. Every component file owns its own CSS. Every visual on the page is either an SVG or a pure CSS construction. The result is a site that ships small, renders crisp at any zoom level, and contains no raster image weight at all.",
+      "techBuildLabel": "Build",
+      "techBuildValue": "Vite + React 19",
+      "techAnimationLabel": "Animation",
+      "techAnimationValue": "Framer Motion 12",
+      "techCssLabel": "CSS",
+      "techCssValue": "Hand-written, one file per component",
+      "techImagesLabel": "Images",
+      "techImagesValue": "100% SVG and CSS — zero raster",
+      "techTypeLabel": "Type",
+      "techTypeValue": "Variable fonts via Google Fonts",
+      "techResponsiveLabel": "Responsive",
+      "techResponsiveValue": "Asymmetric grid collapses cleanly on small screens",
+
+      "closingLabel": "What this project demonstrates",
+      "closingHeading": "Committing to a point of view",
+      "closing1": "Picking one aesthetic direction and following it the whole way through, without hedging or fallbacks.",
+      "closing2": "Editorial typography held to print-level discipline: variable axis manipulation, italic emphasis with intent, mono-as-caption, no sans-serif anywhere.",
+      "closing3": "Motion treated as a language with its own grammar — easing curves chosen per purpose, ambient layers under content, restraint with what loops.",
+      "closing4": "Production-grade React and Framer Motion: composed variants, AnimatePresence, useInView, a custom infinite-marquee, SVG path-drawing on view, working with variable font axes.",
+      "closing5": "Discipline with colour. Six in the system, only one of them chromatic, and that one used like punctuation rather than fill.",
+      "closing6": "Doing all of the above in one continuous craft pass — design and development running together, not handed off between them.",
+
+      "resultHeading": "Experience the work yourself",
+      "resultText": "The case study describes the project. The live site is the project. The repository is open if you want to see how it's built.",
+
+      "disclosure": "The studio, address, founder, team, and projects are fictional. The Lisbon location and the clock are real. This is a craft exercise, not a misrepresentation."
     }
   }
 }

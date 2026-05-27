@@ -25,6 +25,7 @@
       "viewLiveDemo": "Se demo",
       "viewOnGithub": "Se på GitHub",
       "viewGithub": "Se GitHub",
+      "viewRepository": "Se kodebase",
       "viewFigma": "Se Figma"
     },
     "brannvrn": {
@@ -291,6 +292,98 @@
       "lesson4": "Bygge uten rammeverk - forstå hva som faktisk skjer under panseret",
       "journeyHeading": "Alle starter et sted",
       "journeyText": "Koden er ikke god. Designet matchet ikke min visjon. Men det er nettopp derfor den forblir i porteføljen min. Å sammenligne GameHub med prosjekter som Hobbyist eller Timer & Planner viser hvordan to års læring ser ut. Hver utvikler har et første prosjekt - dette var mitt, og jeg er ikke flau over det. Vekst krever et utgangspunkt."
+    },
+    "halcyonAtelier": {
+      "tags": "React · Framer Motion · Vite · SVG · Variable fonter",
+      "tagline": "Et editorial enkeltsidet showcase for et fiktivt designstudio i Lisboa.",
+      "roleValue": "Design og utvikling (alene)",
+      "yearLabel": "År:",
+      "yearValue": "2026",
+      "statusValue": "Personlig prosjekt",
+
+      "briefLabel": "Oppgaven",
+      "briefHeading": "Et studio som ikke finnes",
+      "briefP1": "Halcyon Atelier er et fiktivt branding-studio fra Lisboa, behandlet som om det var en reell virksomhet: portefølje, tjenester, adresse, en live lokalklokke. Poenget var å forplikte seg fullt og helt til ett tydelig estetisk uttrykk i stedet for å lage den typen mal-aktige, generiske byråside man finner overalt.",
+      "briefP2": "Jeg skrev min egen brief med klare begrensninger: ingen Inter, ingen Roboto, ingen Space Grotesk; ingen lilla-på-hvitt-gradienter; distinkt typografi eller så skipper jeg ikke; bevegelse behandlet som et designspråk, ikke som dekorasjon; atmosfæriske detaljer obligatorisk; produksjonsmoden kode hele veien.",
+
+      "aestheticLabel": "Estetisk retning",
+      "aestheticHeading": "Lisbon Sun",
+      "aestheticP1": "Det interne kallenavnet var Lisbon Sun. Referansene var Aesops produkt- og butikktypografi, italienske editorial-magasiner fra 1970-tallet som Domus og Casabella, solbleikte Lisboa-vegger og azulejo-keramikk, og teksturen til boktrykk-trykksaker. Intensjonen: en side som føles trykket på ubestrøket papir, ikke vist på en skjerm.",
+
+      "paletteLabel": "Palett",
+      "paletteHeading": "Seks farger, brukt kirurgisk",
+      "paletteRole1": "Papir",
+      "paletteRole2": "Trykksverte",
+      "paletteRole3": "Terrakotta",
+      "paletteRole4": "Varm skygge",
+      "paletteRole5": "Dempet skifer",
+      "paletteRole6": "Mykt sand",
+      "paletteCaption": "Terrakotta er den eneste kromatiske fargen i systemet, og den behandles som en knapp ressurs: aldri som gradient, aldri brukt i mengde. Den dukker opp på prikken etter studionavnet, på de kursive nøkkelordene, på de romerske tallene, på det syklende farvelet, på status-prikken. Alt annet er papir og trykksverte.",
+
+      "typeLabel": "Typografi",
+      "typeHeading": "Editorial serif, teknisk mono",
+      "typeP1": "Bare to skrifter. Ingen sans-serif som brødtekst — den ene beslutningen fjernet det mal-aktige preget fra siden. Brødstemmen er en serif; den støttende stemmen er en monospace.",
+      "typeFrauncesLabel": "Display",
+      "typeFraunces": "Variabel serif brukt på overskrifter, prosjektnavn og kursive nøkkelord. SOFT- og WONK-aksene er bevisst presset for å hente fram den 1970-talls-magasinaktige karakteren en standardinnstilling ville glatte ut.",
+      "typePlexMonoLabel": "Støtte",
+      "typePlexMono": "Teknisk stemme. Metadata, adresser, live-klokken, leveranser under hver disiplin — alt som vil leses som bildetekst eller maskinlesbar detalj.",
+
+      "tourLabel": "Seksjon for seksjon",
+      "tourHeading": "Fem seksjoner, én rytme",
+
+      "tourHeroEyebrow": "I.",
+      "tourHeroHeading": "Et editorial folioomslag",
+      "tourHeroBody": "Heroen oppfører seg som forsiden på en trykt folio: studionavnet i display-skala med en bevisst bokstav-for-bokstav-inngang, to drivende, slørete terrakottafelt i bakgrunnen, en saktegående marquee langs nedre kant, og en live Lisboa-klokke som tikker i hjørnet. Siden står aldri stille — det er alltid to lag med atmosfærisk bevegelse aktivt.",
+
+      "tourAboutEyebrow": "II.",
+      "tourAboutHeading": "Asymmetri, signatur, tilbakeholdenhet",
+      "tourAboutBody": "About er et asymmetrisk tospaltet oppsett: teksten ligger til venstre, en håndtegnet SVG-signatur tegner seg selv over høyre kolonne mens du scroller forbi. Brødteksten animeres inn ord for ord, med tre kursive terrakotta-aksenter på ordene slowly, hand og long — de eneste stedene fargen får vises i seksjonen.",
+
+      "tourWorkEyebrow": "III.",
+      "tourWorkHeading": "Håndplasserte specimens, ikke et rutenett",
+      "tourWorkBody": "Fem fiktive prosjekter på et asymmetrisk rutenett som er håndplassert, ikke auto-fit. Hver visuell er en spesiallaget SVG-specimen bygget fra bunnen — ingen stockbilder, ingen mockups, ingen raster noe sted. Når du holder musen over en flis, skjer tre ting samtidig: prosjektnavnet flipper bokstav for bokstav, et terrakotta-felt stiger fram med beskrivelsen, og specimen-en selv begynner å bevege seg med sin egen atmosfæriske rytme.",
+
+      "tourPracticeEyebrow": "IV.",
+      "tourPracticeHeading": "Disipliner som romertall",
+      "tourPracticeBody": "Practice er en typografisk liste. Fem disipliner satt som romertall i overdreven skala. Når du hover, flipper disiplinnavnet over til en hårfin omriss-versjon med et kursivt terrakotta-spøkelse bak; et trekkspill ekspanderer og avslører nummererte leveranser i mono. Listen leses som en innholdsfortegnelse fra en trykt monografi.",
+
+      "tourContactEyebrow": "V.",
+      "tourContactHeading": "En avslutning i kursiv terrakotta",
+      "tourContactBody": "Contact åpner med én kursiv terrakotta-overskrift — correspond. — over fire mono-satte metakolonner, og avsluttes med en SVG-sinusbølge som tegner seg selv tvers over siden idet den scrolles inn. Et syklende lokalisert farvel roterer under bølgen; en motgående marquee bokstaverer den øverst i heroen. Så er siden slutt.",
+
+      "motionLabel": "Bevegelsesprinsipper",
+      "motionHeading": "Bevegelse som designspråk",
+      "motionP1": "Tre easing-kurver, brukt bevisst. Expo-out på inngang — rolig start, bestemt ankomst. Quart in-out på hover og avgang — mekanisk symmetri. Linear er reservert for de to marquee-ene og ingenting annet. Scroll-utløste avsløringer går av én gang og spilles ikke om når du scroller tilbake. To lag med kontinuerlig atmosfærisk bevegelse er alltid aktivt, slik at siden aldri føles frossen. prefers-reduced-motion respekteres globalt — alle animasjoner faller pent tilbake.",
+
+      "techLabel": "Teknisk detalj",
+      "techHeading": "Produksjonsmoden kode, ingen snarveier",
+      "techP1": "Byggingen er bevisst tilbakeholden: ingen utility-class-rammeverk, ingen komponentbibliotek, ingen design-token-generator. Hver komponent eier sin egen CSS-fil. Hver visuell på siden er enten en SVG eller en ren CSS-konstruksjon. Resultatet er et nettsted som skipper lett, gjengir skarpt på alle zoomnivåer, og inneholder null rasterbildevekt.",
+      "techBuildLabel": "Build",
+      "techBuildValue": "Vite + React 19",
+      "techAnimationLabel": "Animasjon",
+      "techAnimationValue": "Framer Motion 12",
+      "techCssLabel": "CSS",
+      "techCssValue": "Håndskrevet, én fil per komponent",
+      "techImagesLabel": "Bilder",
+      "techImagesValue": "100 % SVG og CSS — null raster",
+      "techTypeLabel": "Skrift",
+      "techTypeValue": "Variable fonter via Google Fonts",
+      "techResponsiveLabel": "Responsiv",
+      "techResponsiveValue": "Det asymmetriske rutenettet kollapser rent på små skjermer",
+
+      "closingLabel": "Hva dette prosjektet viser",
+      "closingHeading": "Å forplikte seg til et standpunkt",
+      "closing1": "Velge én estetisk retning og følge den hele veien, uten å pulverisere med fallbacks.",
+      "closing2": "Editorial typografi holdt til trykk-disiplin: manipulasjon av variable akser, kursiv brukt med intensjon, mono som bildetekst, ingen sans-serif noe sted.",
+      "closing3": "Bevegelse behandlet som et språk med egen grammatikk — easing-kurver valgt etter formål, atmosfæriske lag under innholdet, tilbakeholdenhet med hva som looper.",
+      "closing4": "Produksjonsmoden React og Framer Motion: komponerte varianter, AnimatePresence, useInView, en egen uendelig marquee, SVG-pathtegning ved scroll, arbeid med variable skriftakser.",
+      "closing5": "Disiplin med farge. Seks i systemet, kun én av dem kromatisk, og den brukt som tegnsetting heller enn som flate.",
+      "closing6": "Å gjøre alt det ovenfor i ett sammenhengende håndverkspass — design og utvikling som går side om side, ikke overlevert mellom dem.",
+
+      "resultHeading": "Opplev arbeidet selv",
+      "resultText": "Case-studien beskriver prosjektet. Live-siden er prosjektet. Repoet er åpent om du vil se hvordan det er bygget.",
+
+      "disclosure": "Studioet, adressen, grunnleggeren, teamet og prosjektene er fiktive. Lisboa-lokasjonen og klokken er ekte. Dette er en håndverksøvelse, ikke en feilrepresentasjon."
     }
   }
 }

@@ -164,7 +164,7 @@ function BlogPost() {
             <div className="prose prose-invert prose-lg max-w-[68ch] mb-12">
               {post.content && post.content.includes('<') ? (
                 <div
-                  className="blog-content text-gray-200 text-lg leading-[1.8] [&>h2]:font-display [&>h2]:text-3xl md:[&>h2]:text-4xl [&>h2]:font-bold [&>h2]:tracking-tight [&>h2]:mt-12 [&>h2]:mb-5 [&>h2]:text-white [&>h2]:leading-[1.2] [&>h3]:font-display [&>h3]:text-2xl md:[&>h3]:text-3xl [&>h3]:font-semibold [&>h3]:tracking-tight [&>h3]:mt-10 [&>h3]:mb-4 [&>h3]:text-emerald-300 [&>p]:mb-5 [&>p]:text-gray-200 [&>p]:leading-[1.8] [&>ul]:list-disc [&>ul]:pl-6 [&>ul]:mb-5 [&>ul]:space-y-2 [&>ol]:list-decimal [&>ol]:pl-6 [&>ol]:mb-5 [&>ol]:space-y-2 [&>li]:text-gray-200 [&>blockquote]:font-display [&>blockquote]:italic [&>blockquote]:text-2xl md:[&>blockquote]:text-3xl [&>blockquote]:leading-[1.4] [&>blockquote]:my-10 [&>blockquote]:pl-6 [&>blockquote]:border-l-2 [&>blockquote]:border-emerald-400/60 [&>blockquote]:text-white [&_code]:bg-white/10 [&_code]:px-2 [&_code]:py-1 [&_code]:rounded [&_code]:text-emerald-300 [&_code]:text-sm [&_code]:font-mono [&>pre]:bg-white/5 [&>pre]:p-5 [&>pre]:rounded-xl [&>pre]:overflow-x-auto [&>pre]:my-6 [&_strong]:font-semibold [&_strong]:text-white [&_a]:text-emerald-400 [&_a:hover]:text-cyan-300 [&_a]:underline [&_a]:underline-offset-4 [&_a]:decoration-emerald-400/40 [&_a]:transition-colors"
+                  className="blog-content text-gray-200 text-lg leading-[1.8] [&>h2]:font-display [&>h2]:text-3xl md:[&>h2]:text-4xl [&>h2]:font-bold [&>h2]:tracking-tight [&>h2]:mt-12 [&>h2]:mb-5 [&>h2]:text-white [&>h2]:leading-[1.2] [&>h3]:font-display [&>h3]:text-2xl md:[&>h3]:text-3xl [&>h3]:font-semibold [&>h3]:tracking-tight [&>h3]:mt-10 [&>h3]:mb-4 [&>h3]:text-emerald-300 [&>p]:mb-5 [&>p]:text-gray-200 [&>p]:leading-[1.8] [&>ul]:list-disc [&>ul]:pl-6 [&>ul]:mb-5 [&>ul]:space-y-2 [&>ol]:list-decimal [&>ol]:pl-6 [&>ol]:mb-5 [&>ol]:space-y-2 [&>li]:text-gray-200 [&>blockquote]:font-display [&>blockquote]:italic [&>blockquote]:text-2xl md:[&>blockquote]:text-3xl [&>blockquote]:leading-[1.4] [&>blockquote]:my-10 [&>blockquote]:pl-6 [&>blockquote]:border-l-2 [&>blockquote]:border-emerald-400/60 [&>blockquote]:text-white [&_code]:bg-white/10 [&_code]:px-2 [&_code]:py-1 [&_code]:rounded [&_code]:text-emerald-300 [&_code]:text-sm [&_code]:font-mono [&>pre]:bg-white/5 [&>pre]:p-5 [&>pre]:rounded-xl [&>pre]:overflow-x-auto [&>pre]:my-6 [&_strong]:font-semibold [&_strong]:text-white [&_a]:link-underline"
                   dangerouslySetInnerHTML={{ __html: post.content }}
                 />
               ) : (
@@ -186,7 +186,7 @@ function BlogPost() {
                         <code className="block bg-white/5 p-5 rounded-xl text-emerald-300 text-sm overflow-x-auto font-mono" {...props} />
                       ),
                     strong: ({node, ...props}) => <strong className="font-semibold text-white" {...props} />,
-                    a: ({node, ...props}) => <a className="text-emerald-400 hover:text-cyan-300 underline underline-offset-4 decoration-emerald-400/40 transition-colors" {...props} />,
+                    a: ({node, ...props}) => <a className="link-underline" {...props} />,
                   }}
                 >
                   {post.content}

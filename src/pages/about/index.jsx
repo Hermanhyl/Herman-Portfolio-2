@@ -380,7 +380,7 @@ function About() {
                         <div className={`w-px h-4 ${isWork ? 'bg-emerald-500/50' : 'bg-purple-500/50'}`}></div>
                         {/* Card */}
                         <div className={`w-full group bg-white/5 hover:bg-white/10 backdrop-blur-sm border ${isWork ? 'border-emerald-500/20 hover:border-emerald-500/40' : 'border-purple-500/20 hover:border-purple-500/40'} rounded-2xl p-5 transition-all duration-300`}>
-                          <span className={`inline-block px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-[0.08em] tabular-nums mb-3 ${isWork ? 'bg-emerald-500/20 text-emerald-300' : 'bg-purple-500/20 text-purple-300'}`}>
+                          <span className={`block font-display italic tabular-nums text-2xl md:text-3xl tracking-tight mb-2 leading-none ${isWork ? 'text-accent' : 'text-bone-muted'}`}>
                             {item.year}
                           </span>
                           <h3 className="text-lg font-bold text-white mb-1">{item.title}</h3>
@@ -395,7 +395,7 @@ function About() {
                       {/* Content */}
                       <div className={`flex-1 w-1/2 ${isLeft ? 'pr-12 text-right' : 'pl-12'}`}>
                         <div className={`group bg-white/5 hover:bg-white/10 backdrop-blur-sm border ${isWork ? 'border-emerald-500/20 hover:border-emerald-500/40' : 'border-purple-500/20 hover:border-purple-500/40'} rounded-2xl p-6 transition-all duration-300`}>
-                          <span className={`inline-block px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-[0.08em] tabular-nums mb-3 ${isWork ? 'bg-emerald-500/20 text-emerald-300' : 'bg-purple-500/20 text-purple-300'}`}>
+                          <span className={`block font-display italic tabular-nums text-2xl md:text-3xl tracking-tight mb-2 leading-none ${isWork ? 'text-accent' : 'text-bone-muted'}`}>
                             {item.year}
                           </span>
                           <h3 className="text-xl font-bold text-white mb-1">{item.title}</h3>

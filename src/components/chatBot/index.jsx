@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { MessageCircle, X, Send, Loader2, Bot, User, Sparkles, RotateCcw } from 'lucide-react';
+import { MessageSquare, X, Send, Loader2, Bot, User, Sparkles, RotateCcw } from 'lucide-react';
 
 // Parse message content and convert markdown links to clickable elements
 function parseMessageWithLinks(content, onLinkClick) {
@@ -263,20 +263,36 @@ export default function ChatBot() {
             </div>
           )}
 
-          {/* Chat Button */}
+          {/* Chat Button — solid tangerine, speech bubble with typing dots,
+              small bone ✦ AI mark, gentle 3s breathing scale. */}
           <button
             onClick={handleOpenChat}
-            className="p-3 sm:p-4 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white rounded-full shadow-2xl transition-all duration-500 transform hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 group animate-in fade-in slide-in-from-bottom-8 duration-700 cursor-pointer"
+            className="relative h-12 w-12 sm:h-14 sm:w-14 bg-accent text-accent-ink rounded-full shadow-2xl shadow-accent/20 transition-transform duration-300 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-ink group animate-in fade-in slide-in-from-bottom-8 duration-700 chatbot-breathing cursor-pointer flex items-center justify-center"
             aria-label="Open AI chat assistant"
             style={{ animationDelay: '200ms' }}
           >
+            {/* Speech bubble + animated typing dots inside */}
             <div className="relative">
-              <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
-              <Sparkles className="w-2.5 h-2.5 sm:w-3 sm:h-3 absolute -top-1 -right-1 text-yellow-300 animate-pulse" />
+              <MessageSquare className="w-6 h-6 sm:w-7 sm:h-7" strokeWidth={2.25} />
+              {/* Three dots inside the bubble (positioned absolutely over icon) */}
+              <span className="absolute inset-0 flex items-center justify-center gap-[3px] -mt-[2px]" aria-hidden="true">
+                <span className="block h-[3px] w-[3px] rounded-full bg-accent-ink chatbot-dot" />
+                <span className="block h-[3px] w-[3px] rounded-full bg-accent-ink chatbot-dot" style={{ animationDelay: '0.18s' }} />
+                <span className="block h-[3px] w-[3px] rounded-full bg-accent-ink chatbot-dot" style={{ animationDelay: '0.36s' }} />
+              </span>
             </div>
+
+            {/* Bone ✦ AI mark, top-right */}
+            <span
+              aria-hidden="true"
+              className="absolute -top-1 -right-1 flex items-center justify-center h-4 w-4 sm:h-5 sm:w-5 bg-ink-elevated border border-bone/30 rounded-full text-bone font-display italic text-[10px] sm:text-xs leading-none"
+            >
+              ✦
+            </span>
+
             {/* Tooltip - hidden on mobile and when prompt bubble is shown */}
             {!showPromptBubble && (
-              <span className="hidden sm:block absolute bottom-full right-0 mb-2 px-3 py-1 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+              <span className="hidden sm:block absolute bottom-full right-0 mb-2 px-3 py-1 bg-ink-elevated border border-border-strong text-bone text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
                 Ask AI about Herman
               </span>
             )}

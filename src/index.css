@@ -390,6 +390,44 @@ html {
   transform: scaleX(1);
 }
 
+/* Chatbot button — gentle 3s scale breathing.
+   Subtle (1.0 → 1.03), continuous, not aggressive. */
+@keyframes chatbot-breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+.chatbot-breathing {
+  animation: chatbot-breathe 3s ease-in-out infinite;
+}
+
+/* Hover and active take precedence — disable breathe while interacted with */
+.chatbot-breathing:hover,
+.chatbot-breathing:active,
+.chatbot-breathing:focus-visible {
+  animation: none;
+}
+
+/* Typing-dot pulse used inside the chatbot button */
+@keyframes chatbot-dot-pulse {
+  0%, 60%, 100% {
+    opacity: 0.35;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-1.5px);
+  }
+}
+
+.chatbot-dot {
+  animation: chatbot-dot-pulse 1.4s ease-in-out infinite;
+}
+
 /* Editorial accent — colored word with a thin gradient underline that draws
    in from left to right. Used on inline highlights in About story paragraphs. */
 .accent-underline {

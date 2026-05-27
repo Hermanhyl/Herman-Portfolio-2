@@ -1,5 +1,38 @@
 export const projects = [
   {
+    id: "project-halcyon-atelier",
+    title: "Halcyon Atelier",
+    teaser:
+      "A single-page editorial showcase for a fictional Lisbon design studio. A deliberate craft exercise in committing to one strong aesthetic, with motion treated as a design language and every visual built as SVG.",
+    description:
+      "Halcyon Atelier is a single-page React + Framer Motion site for a fictional Lisbon-based hospitality branding studio. Treated as if it were a real working business — portfolio, services, address, a live local clock — the project is an exercise in committing fully to one strong aesthetic direction rather than producing a generic agency template.\n\nThe site is built around an editorial 'Lisbon Sun' palette and the variable serif Fraunces paired with IBM Plex Mono. Every visual on the page is SVG or pure CSS — no raster images — and motion is treated as a design language: expo-out entrances, quart in-out hovers, linear reserved for marquees, with two layers of ambient motion always present so the page never feels frozen.",
+    images: ["/Halcyon/hero.png"],
+    blogPost: "",
+    github: "https://github.com/Hermanhyl/Single-page-showcase-Halcyon-Atelier-",
+    live: "https://halcyonateliershowcase.netlify.app/",
+    figma: "",
+    technologies: ["React", "Framer Motion", "Branding", "Editorial", "Motion Design"],
+    authers: "Herman Hylland",
+    article: [
+      {
+        heading: "Project Overview",
+        content:
+          "Halcyon Atelier is a personal project: a fully realized fictional studio site, built from scratch with React, Framer Motion and Vite. The brief was self-imposed and explicit — no Inter, no Roboto, no Space Grotesk, no purple-on-white gradients, distinctive typography or it doesn't ship, motion treated as a design language rather than decoration, atmospheric detail required throughout, and production-grade code from end to end.",
+      },
+      {
+        heading: "My Role: Design and Development",
+        content:
+          "Solo project, from aesthetic direction to production code. Typographic system (Fraunces variable display with deliberately pushed SOFT and WONK axes, paired with IBM Plex Mono as the technical voice), palette ('Lisbon Sun' — six colours with terracotta used surgically), every section's motion grammar, and the underlying React + Framer Motion implementation.",
+      },
+      {
+        heading: "Why This Project Is Here",
+        content:
+          "This is the case study that demonstrates what's possible when there's full creative control: an aesthetic point of view committed to without hedging, editorial typography at print-level discipline, motion treated as a language with its own grammar, and production-grade React + Framer Motion underneath it all — composed variants, AnimatePresence, useInView, a custom infinite-marquee, SVG path-drawing on view, working with variable font axes. The studio, address, founder, team and projects are fictional; the Lisbon location and the clock are real.",
+      },
+    ],
+  },
+
+  {
     id: "project1",
     title: "BrannVRn",
     teaser: "UX Process & Learning Design in action: A VR fire safety simulator where I designed the complete user experience and pedagogical framework-transforming complex safety procedures into intuitive, educational interactions.",
@@ -450,4 +483,5 @@ export const projects = [
       },
     ],
   },
+
 ];

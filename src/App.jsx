@@ -19,6 +19,7 @@ import ClicketyCartCaseStudy from './pages/caseStudy/clicketycart';
 import CommunityScienceMuseumCaseStudy from './pages/caseStudy/community-science-museum';
 import GameHubCaseStudy from './pages/caseStudy/gamehub';
 import HalcyonAtelierCaseStudy from './pages/caseStudy/halcyon-atelier';
+import SoderqvistReutherCaseStudy from './pages/caseStudy/soderqvist-reuther';
 import Layout from './components/layout';
 import ErrorBoundary from './components/errorBoundary';
 
@@ -47,6 +48,7 @@ function App() {
           <Route path='/case-study/community-science-museum' element={<CommunityScienceMuseumCaseStudy />} />
           <Route path='/case-study/gamehub' element={<GameHubCaseStudy />} />
           <Route path='/case-study/halcyon-atelier' element={<HalcyonAtelierCaseStudy />} />
+          <Route path='/case-study/soderqvist-reuther' element={<SoderqvistReutherCaseStudy />} />
         </Route>
       </Routes>
     </ErrorBoundary>

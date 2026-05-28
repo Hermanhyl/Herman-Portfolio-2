@@ -73,13 +73,22 @@ function WorkCard({ project, index }) {
         aria-label={`View case study for ${project.title}`}
       >
         <div className={`flex flex-col ${isReversed ? 'md:flex-row-reverse' : 'md:flex-row'} gap-6 md:gap-8 lg:gap-12 items-center bg-white/5 hover:bg-white/[0.07] border border-white/10 hover:border-emerald-500/30 rounded-2xl p-6 md:p-8 lg:p-10 transition-[background-color,border-color,box-shadow,transform] duration-500 ease-out hover:shadow-lg hover:shadow-emerald-500/5 hover:-translate-y-1`}>
-          {/* Image Side */}
+          {/* Image Side. The aspect-[4/3] wrapper IS the card frame.
+              OptimizedImage's own intermediate wrapper is forced to fill
+              that frame via wrapperClassName="block w-full h-full" (we
+              avoid "absolute" because OptimizedImage hardcodes "relative"
+              and Tailwind's alphabetical class order makes "relative"
+              win). w-full h-full object-cover then crops every source
+              ratio consistently. cardImagePosition can be set per
+              project to nudge the crop anchor (default centre). */}
           <div className="w-full md:w-1/2 lg:w-[55%] flex-shrink-0">
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-800">
               <OptimizedImage
                 src={projectImage}
                 alt={project.title}
+                wrapperClassName="block w-full h-full"
                 className="w-full h-full object-cover transition-transform duration-[700ms] ease-out group-hover:scale-[1.04]"
+                style={{ objectPosition: project.cardImagePosition || 'center' }}
               />
               {/* Subtle gradient overlay on hover */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

@@ -307,9 +307,11 @@ export default function ChatBot() {
       {/* Floating Chat Button */}
       {!isOpen && isVisible && (
         <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
-          {/* Speech Bubble Prompt */}
+          {/* Speech Bubble Prompt. role="status" announces the bubble
+              to SR users when it appears after the idle delay
+              (WCAG 4.1.3). */}
           {showPromptBubble && (
-            <div className="absolute bottom-full right-0 mb-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
+            <div role="status" className="absolute bottom-full right-0 mb-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
               {/* Floating animation wrapper */}
               <div className="animate-float">
                 <div className="relative bg-ink-elevated border border-border-strong rounded-2xl px-4 py-3 sm:px-5 sm:py-4 shadow-2xl min-w-[140px] sm:min-w-[280px] md:min-w-[320px]">
@@ -440,8 +442,15 @@ export default function ChatBot() {
             </div>
           </div>
 
-          {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 overscroll-contain">
+          {/* Messages. aria-live="polite" so SR users hear assistant
+              replies as they arrive (WCAG 4.1.3). aria-atomic="false"
+              so only the new message is announced, not the whole log. */}
+          <div
+            className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 overscroll-contain"
+            aria-live="polite"
+            aria-atomic="false"
+            aria-relevant="additions"
+          >
             {messages.map((message, index) => (
               <div
                 key={index}
@@ -519,7 +528,13 @@ export default function ChatBot() {
           {/* Input Area */}
           <div className="p-3 sm:p-4 border-t border-white/10 bg-gray-900/80 backdrop-blur-sm shrink-0 safe-area-inset-bottom">
             <div className="flex gap-2">
+              {/* Visually-hidden label for voice-control / SR; the
+                  aria-label fallback stays for older AT (WCAG 3.3.2). */}
+              <label htmlFor="chatbot-message-input" className="sr-only">
+                Chat message
+              </label>
               <input
+                id="chatbot-message-input"
                 ref={inputRef}
                 type="text"
                 value={inputValue}

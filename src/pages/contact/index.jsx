@@ -170,31 +170,43 @@ function Contact() {
 
                   {submitStatus === 'success' && (
                     <motion.div
+                      id="contact-form-status"
                       initial={{ opacity: 0, y: -8 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.3, ease: ease.out }}
                       className="mb-4 p-4 bg-green-500/15 border border-green-500/50 rounded-lg flex items-center gap-3"
-                      role="alert"
+                      role="status"
+                      aria-live="polite"
                     >
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" aria-hidden="true" />
                       <p className="text-green-200">{t('contact.successMessage')}</p>
                     </motion.div>
                   )}
 
                   {submitStatus === 'error' && (
                     <motion.div
+                      id="contact-form-status"
                       initial={{ opacity: 0, y: -8 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.3, ease: ease.out }}
                       className="mb-4 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3"
                       role="alert"
+                      aria-live="assertive"
                     >
-                      <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0" />
+                      <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0" aria-hidden="true" />
                       <p className="text-red-300">{t('contact.errorMessage')}</p>
                     </motion.div>
                   )}
 
-                  <form onSubmit={handleSubmit} className="space-y-4" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                  <form
+                    onSubmit={handleSubmit}
+                    className="space-y-4"
+                    name="contact"
+                    method="POST"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                    aria-describedby={submitStatus === 'success' || submitStatus === 'error' ? 'contact-form-status' : undefined}
+                  >
                     <input type="hidden" name="form-name" value="contact" />
                     <p className="hidden">
                       <label>

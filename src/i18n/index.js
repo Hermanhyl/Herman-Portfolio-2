@@ -56,4 +56,17 @@ i18n
     },
   });
 
+// WCAG 3.1.1 Language of Page / 3.1.2 Language of Parts.
+// Keep <html lang> in sync with the active locale so screen readers
+// pick the right pronunciation rules. i18next normalizes detected
+// codes to the base language tag (e.g. nb-NO → no); we mirror it.
+function syncDocumentLang(lng) {
+  if (typeof document === 'undefined' || !lng) return;
+  const base = String(lng).split('-')[0];
+  document.documentElement.lang = base;
+}
+
+syncDocumentLang(i18n.language);
+i18n.on('languageChanged', syncDocumentLang);
+
 export default i18n;

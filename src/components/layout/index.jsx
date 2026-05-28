@@ -1,5 +1,6 @@
+import { useEffect, useRef } from "react";
 import Footer from "../../pages/footer";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Header from "../header";
 import ScrollToTop from "../scrollToTop";
 import BackToTop from "../backToTop";
@@ -14,6 +15,23 @@ import ChatBot from "../chatBot";
  */
 
 export default function Layout() {
+  const mainRef = useRef(null);
+  const location = useLocation();
+  const isFirstRenderRef = useRef(true);
+
+  // WCAG 2.4.3 Focus Order. On every client-side route change (but not
+  // the initial load), move keyboard focus to the main landmark so SR
+  // users hear the new page and keyboard users don't get stranded on
+  // the nav link they just clicked (which is now offscreen). The
+  // skip-link target reuses the same #main-content anchor.
+  useEffect(() => {
+    if (isFirstRenderRef.current) {
+      isFirstRenderRef.current = false;
+      return;
+    }
+    mainRef.current?.focus();
+  }, [location.pathname]);
+
   return (
     <div className="flex flex-col min-h-screen animated-bg text-white overflow-x-hidden">
   <ScrollToTop />
@@ -27,7 +45,12 @@ export default function Layout() {
     Skip to main content
   </a>
   <Header />
-  <main id="main-content" className="flex-grow backdrop-blur-sm bg-black/30">
+  <main
+    ref={mainRef}
+    id="main-content"
+    tabIndex={-1}
+    className="flex-grow backdrop-blur-sm bg-black/30 focus:outline-none"
+  >
     <Outlet />
   </main>
   <Footer />

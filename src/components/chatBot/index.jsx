@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import useFocusTrap from '../../hooks/useFocusTrap';
 
 /**
  * Tracks how many times the popup has been dismissed AND the last dismissal
@@ -121,6 +122,30 @@ export default function ChatBot() {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
+  const toggleButtonRef = useRef(null);
+  // Focus trap on the chat dialog. The hook also returns focus to the
+  // previously-focused element on close; we additionally pin the
+  // chatbot toggle button as the restore target via an effect below,
+  // because the toggle is unmounted while the dialog is open and the
+  // hook's automatic restore would miss it.
+  const dialogRef = useFocusTrap(isOpen, {
+    onEscape: () => setIsOpen(false),
+    initialFocusSelector: 'input[type="text"]',
+  });
+
+  // Restore focus to the toggle button when the dialog closes.
+  const wasOpenRef = useRef(false);
+  useEffect(() => {
+    if (wasOpenRef.current && !isOpen) {
+      // Defer so the toggle is mounted again before we focus it.
+      const id = window.setTimeout(() => {
+        toggleButtonRef.current?.focus();
+      }, 0);
+      wasOpenRef.current = false;
+      return () => window.clearTimeout(id);
+    }
+    if (isOpen) wasOpenRef.current = true;
+  }, [isOpen]);
 
   // Animate button entrance after page load
   useEffect(() => {
@@ -327,9 +352,12 @@ export default function ChatBot() {
           {/* Chat Button — solid tangerine, speech bubble with typing dots,
               small bone ✦ AI mark, gentle 3s breathing scale. */}
           <button
+            ref={toggleButtonRef}
             onClick={handleOpenChat}
             className="relative h-12 w-12 sm:h-14 sm:w-14 bg-accent text-accent-ink rounded-full shadow-2xl shadow-accent/20 transition-transform duration-300 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-ink group animate-in fade-in slide-in-from-bottom-8 duration-700 chatbot-breathing cursor-pointer flex items-center justify-center"
             aria-label="Open AI chat assistant"
+            aria-haspopup="dialog"
+            aria-expanded={isOpen}
             style={{ animationDelay: '200ms' }}
           >
             {/* Speech bubble + animated typing dots inside */}
@@ -364,14 +392,17 @@ export default function ChatBot() {
       {/* Chat Window - Full screen on mobile (below navbar), floating on desktop */}
       {isOpen && (
         <div
+          ref={dialogRef}
           className="fixed top-16 left-0 right-0 bottom-0 sm:inset-auto sm:top-auto sm:bottom-4 sm:right-4 md:bottom-6 md:right-6 z-40
                      w-full h-auto sm:w-[360px] sm:h-[500px] md:w-[380px] md:h-[550px] lg:h-[600px]
                      sm:max-h-[calc(100vh-2rem)] md:max-h-[calc(100vh-3rem)]
                      bg-gray-900 sm:border sm:border-white/10 sm:rounded-2xl shadow-2xl
-                     flex flex-col animate-in fade-in sm:slide-in-from-right-8 sm:zoom-in-95 duration-300"
+                     flex flex-col animate-in fade-in sm:slide-in-from-right-8 sm:zoom-in-95 duration-300 focus:outline-none"
           style={{ animationTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)' }}
           role="dialog"
+          aria-modal="true"
           aria-label="AI Chat Assistant"
+          tabIndex={-1}
         >
           {/* Header */}
           <div className="flex items-center justify-between p-3 sm:p-4 border-b border-white/10 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 shrink-0">

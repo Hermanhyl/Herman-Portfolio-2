@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { createPortal } from "react-dom";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import useFocusTrap from "../../hooks/useFocusTrap";
 
 /**
  * Lightbox component for viewing illustrations in fullscreen
@@ -8,6 +9,13 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 function IllustrationLightbox({ illustrations, currentIndex, isOpen, onClose, onNavigate }) {
   const [imageLoaded, setImageLoaded] = useState(false);
   const currentIllustration = illustrations[currentIndex];
+
+  // Focus trap inside the dialog. Initial focus goes to the close
+  // button. Hook restores focus to the trigger thumbnail on close.
+  const dialogRef = useFocusTrap(isOpen, {
+    onEscape: onClose,
+    initialFocusSelector: '[data-lightbox-close]',
+  });
 
   const handlePrevious = useCallback(() => {
     setImageLoaded(false);
@@ -59,10 +67,12 @@ function IllustrationLightbox({ illustrations, currentIndex, isOpen, onClose, on
 
   const modalContent = (
     <div
+      ref={dialogRef}
       role="dialog"
       aria-modal="true"
       aria-label={`Viewing ${currentIllustration?.title}`}
       onClick={onClose}
+      tabIndex={-1}
       style={{
         position: "fixed",
         top: 0,
@@ -84,6 +94,7 @@ function IllustrationLightbox({ illustrations, currentIndex, isOpen, onClose, on
       <button
         onClick={onClose}
         aria-label="Close lightbox"
+        data-lightbox-close
         style={{
           position: "fixed",
           top: 16,

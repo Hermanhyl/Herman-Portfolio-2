@@ -8,6 +8,7 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const menuRef = useRef();
+  const menuButtonRef = useRef();
   const location = useLocation();
   const { t } = useTranslation();
 
@@ -37,6 +38,22 @@ function Header() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
+  }, [menuOpen]);
+
+  // Keyboard support for the mobile menu (WCAG 2.1.2 / 2.4.3):
+  // Escape closes it and returns focus to the toggle button so the
+  // user does not lose their place in the tab order.
+  useEffect(() => {
+    if (!menuOpen) return;
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+        // Defer so the menu has unmounted before we move focus back.
+        window.setTimeout(() => menuButtonRef.current?.focus(), 0);
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
   }, [menuOpen]);
 
   const navItems = [
@@ -112,6 +129,7 @@ function Header() {
 
         {/* Mobile Menu Button */}
         <button
+          ref={menuButtonRef}
           className={`lg:hidden p-2 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-black cursor-pointer ${
             menuOpen
               ? 'bg-emerald-500/20 text-emerald-400'
@@ -120,6 +138,7 @@ function Header() {
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
+          aria-haspopup="menu"
         >
           {menuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
         </button>

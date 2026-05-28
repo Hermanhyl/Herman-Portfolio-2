@@ -68,7 +68,7 @@ function ProjectCard({ project }) {
 
           {/* CTA Button */}
           <div className="inline-flex mt-auto">
-            <span className="px-6 py-2.5 text-sm lg:text-base bg-gradient-to-r from-emerald-500 to-cyan-500 group-hover:from-emerald-600 group-hover:to-cyan-600 rounded-lg text-white transition-all duration-300 font-medium shadow-lg group-hover:shadow-emerald-500/25">
+            <span className="px-6 py-2.5 text-sm lg:text-base bg-gradient-to-r from-emerald-500 to-cyan-500 group-hover:from-emerald-600 group-hover:to-cyan-600 rounded-lg text-accent-ink transition-all duration-300 font-medium shadow-lg group-hover:shadow-emerald-500/25">
               {t('projects.viewArticle', { defaultValue: 'View Article' })} →
             </span>
           </div>

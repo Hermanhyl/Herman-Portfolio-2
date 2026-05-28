@@ -437,7 +437,7 @@ export default function ChatBot() {
                 }`}>
                   <div className={`inline-block p-2.5 sm:p-3 rounded-2xl ${
                     message.role === 'user'
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-br-md'
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-accent-ink rounded-br-md'
                       : 'bg-white/5 text-gray-200 border border-white/10 rounded-bl-md'
                   }`}>
                     <p className="text-sm leading-relaxed whitespace-pre-wrap break-words">
@@ -504,7 +504,7 @@ export default function ChatBot() {
               <button
                 onClick={() => handleSendMessage()}
                 disabled={!inputValue.trim() || isLoading}
-                className="px-3 sm:px-4 py-2.5 sm:py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 active:from-emerald-700 active:to-cyan-700 text-white rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none focus:outline-none focus:ring-2 focus:ring-emerald-500 shrink-0 cursor-pointer"
+                className="px-3 sm:px-4 py-2.5 sm:py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 active:from-emerald-700 active:to-cyan-700 text-accent-ink rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none focus:outline-none focus:ring-2 focus:ring-emerald-500 shrink-0 cursor-pointer"
                 aria-label="Send message"
               >
                 <Send className="w-4 h-4 sm:w-5 sm:h-5" />

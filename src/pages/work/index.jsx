@@ -220,7 +220,7 @@ function Work() {
                         aria-pressed={activeView === btn.id}
                         className={`flex items-center justify-center gap-2 px-3 sm:px-5 py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base cursor-pointer ${
                           activeView === btn.id
-                            ? 'bg-gradient-to-r from-emerald-500 to-cyan-500 text-white shadow-lg shadow-emerald-500/30'
+                            ? 'bg-gradient-to-r from-emerald-500 to-cyan-500 text-accent-ink shadow-lg shadow-emerald-500/30'
                             : 'text-gray-400 hover:text-white hover:bg-white/10'
                         }`}
                       >
@@ -292,7 +292,7 @@ function Work() {
                     onClick={() => setSelectedCategory(category)}
                     className={`px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-lg font-medium text-xs sm:text-sm md:text-base transition-all duration-300 transform hover:scale-105 cursor-pointer ${
                       selectedCategory === category
-                        ? 'bg-gradient-to-r from-emerald-500 to-cyan-500 text-white shadow-lg'
+                        ? 'bg-gradient-to-r from-emerald-500 to-cyan-500 text-accent-ink shadow-lg'
                         : 'bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 hover:text-white'
                     }`}
                     aria-pressed={selectedCategory === category}

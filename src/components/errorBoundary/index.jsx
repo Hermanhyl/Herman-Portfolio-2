@@ -50,7 +50,7 @@ class ErrorBoundary extends Component {
 
               <Link
                 to="/"
-                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-accent-ink font-semibold px-6 py-3 rounded-xl transition-all duration-300"
               >
                 <Home className="w-5 h-5" />
                 Go Home

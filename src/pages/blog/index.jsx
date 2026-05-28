@@ -176,7 +176,7 @@ function Blog() {
                 <p className="text-gray-400 mb-4">{t('blog.tryDifferentKeywords')}</p>
                 <button
                   onClick={clearSearch}
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-accent-ink font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
                 >
                   {t('blog.viewAllPosts')}
                 </button>

@@ -66,7 +66,7 @@ function ProjectDetail() {
           <h2 className="text-2xl font-bold text-red-400 mb-4">{t('projectDetails.notFound', { defaultValue: 'Project not found' })}</h2>
           <button
             onClick={() => navigate("/")}
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 cursor-pointer"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-accent-ink font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 cursor-pointer"
           >
             <ArrowLeft className="w-5 h-5" />
             {t('common.backToHome')}
@@ -180,7 +180,7 @@ function ProjectDetail() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`View live demo of ${title} (opens in new tab)`}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-accent-ink font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900"
               >
                 <ExternalLink className="w-5 h-5" aria-hidden="true" />
                 {t('projectDetails.liveDemo', { defaultValue: 'Live Demo' })}

@@ -233,7 +233,7 @@ function Contact() {
                       type="submit"
                       disabled={submitStatus === 'loading'}
                       aria-label={submitStatus === 'loading' ? t('contact.form.sending') : t('contact.form.send')}
-                      className="group relative w-full overflow-hidden bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-semibold px-6 py-3.5 rounded-lg shadow-lg shadow-emerald-500/20 transition-[transform,box-shadow] duration-300 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:translate-y-0 cursor-pointer"
+                      className="group relative w-full overflow-hidden bg-gradient-to-r from-emerald-500 to-cyan-500 text-accent-ink font-semibold px-6 py-3.5 rounded-lg shadow-lg shadow-emerald-500/20 transition-[transform,box-shadow] duration-300 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:translate-y-0 cursor-pointer"
                     >
                       {/* Sweep highlight on hover */}
                       <span

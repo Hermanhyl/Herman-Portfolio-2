@@ -141,6 +141,7 @@ function Contact() {
                 </div>
 
                 <SectionHeader
+                  as="h1"
                   icon={Sparkles}
                   title={t('contact.title')}
                   description={t('contact.subtitle')}

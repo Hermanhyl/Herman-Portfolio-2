@@ -13,9 +13,12 @@
  * @param {string} props.description - Optional sub-headline
  * @param {boolean} props.accentLastWord - Emphasize the final word in
  *   italic tangerine. Default false; opt in per page.
+ * @param {'h1'|'h2'} props.as - Heading element to render (default 'h2').
+ *   Pass 'h1' when this section serves as the page's primary heading
+ *   (Blog index, Contact) — WCAG 2.4.6 requires exactly one h1 per page.
  * @param {string} props.className - Extra classes for the outer container
  */
-function SectionHeader({ icon: Icon, badge, badgeColor = 'emerald', title, description, accentLastWord = false, className = '' }) {
+function SectionHeader({ icon: Icon, badge, badgeColor = 'emerald', title, description, accentLastWord = false, as = 'h2', className = '' }) {
   const colorVariants = {
     emerald: 'bg-emerald-500/15 border-emerald-500/40 text-emerald-300',
     purple: 'bg-purple-500/20 border-purple-500/50 text-purple-300',
@@ -51,9 +54,14 @@ function SectionHeader({ icon: Icon, badge, badgeColor = 'emerald', title, descr
         </div>
       )}
 
-      <h2 className="font-display text-bone text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-[-0.025em] leading-[1.05] pb-2">
-        {renderTitle()}
-      </h2>
+      {(() => {
+        const Heading = as;
+        return (
+          <Heading className="font-display text-bone text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-[-0.025em] leading-[1.05] pb-2">
+            {renderTitle()}
+          </Heading>
+        );
+      })()}
 
       {description && (
         <p className="text-lg sm:text-xl text-bone-muted max-w-2xl mx-auto leading-relaxed">

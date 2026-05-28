@@ -83,6 +83,7 @@ function Blog() {
           {/* Header */}
           <ScrollReveal>
             <SectionHeader
+              as="h1"
               icon={BookOpen}
               badge={t('blog.badge')}
               badgeColor="emerald"

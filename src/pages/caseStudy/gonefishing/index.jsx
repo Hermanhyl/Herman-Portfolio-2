@@ -6,7 +6,7 @@ import useDocumentMeta from '../../../hooks/useDocumentMeta';
 export default function GoneFishingCaseStudy() {
   useDocumentMeta({
     title: 'GoneFishing Case Study',
-    description: 'A personal logbook for anglers — track catches, locations, and conditions, available offline on the water.',
+    description: 'A personal logbook for anglers: track catches, locations, and conditions, available offline on the water.',
     url: 'https://hermanhylland.netlify.app/case-study/gonefishing',
   });
 
@@ -60,7 +60,7 @@ export default function GoneFishingCaseStudy() {
 
                 {/* Tagline */}
                 <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-                  A personal logbook for anglers — track catches, locations, and conditions, available offline on the water.
+                  A personal logbook for anglers: track catches, locations, and conditions, available offline on the water.
                 </p>
 
                 {/* Metadata - clean typography, no boxes */}
@@ -97,7 +97,7 @@ export default function GoneFishingCaseStudy() {
 
             {/* Body text */}
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              Anglers want to remember their catches — where, when, what conditions, what worked. But on the water, you don't have reliable internet, and most apps aren't designed for wet hands and quick logging. GoneFishing needed to work offline-first and be fast enough to use between casts.
+              Anglers want to remember their catches: where, when, what conditions, what worked. But on the water, you don't have reliable internet, and most apps aren't designed for wet hands and quick logging. GoneFishing needed to work offline-first and be fast enough to use between casts.
             </p>
           </div>
         </section>
@@ -117,7 +117,7 @@ export default function GoneFishingCaseStudy() {
 
             {/* Intro paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-12">
-              I drew on my own experience as a freediver and fisherman, plus conversations with other anglers. The key wasn't just logging fish — it was capturing the context that helps you learn and improve.
+              I drew on my own experience as a freediver and fisherman, plus conversations with other anglers. The key wasn't just logging fish; it was capturing the context that helps you learn and improve.
             </p>
 
             {/* Key insights - 2x2 grid of cards */}
@@ -125,25 +125,25 @@ export default function GoneFishingCaseStudy() {
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">01</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Location matters more than species — anglers want to remember exact spots, not just "the lake"
+                  Location matters more than species. Anglers want to remember exact spots, not just "the lake"
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">02</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Conditions tell the story — weather, water temperature, time of day all affect what works
+                  Conditions tell the story. Weather, water temperature, time of day all affect what works
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">03</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Photos are essential — a catch without a photo might as well not have happened
+                  Photos are essential. A catch without a photo might as well not have happened
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white/10 to-white/5 border border-emerald-500/20 rounded-xl p-6">
                 <span className="text-3xl font-bold text-emerald-400 mb-3 block">04</span>
                 <p className="text-white leading-relaxed text-lg">
-                  Offline is non-negotiable — cell signal is unreliable on the water, the app must work without it
+                  Offline is non-negotiable. Cell signal is unreliable on the water, the app must work without it
                 </p>
               </div>
             </div>
@@ -219,7 +219,7 @@ export default function GoneFishingCaseStudy() {
               <div className="text-center">
                 <h3 className="text-2xl font-bold text-white mb-3">Rich Context Capture</h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                  Location, weather, water conditions, and photos are all captured — building a personal database that helps you fish smarter over time.
+                  Location, weather, water conditions, and photos are all captured, building a personal database that helps you fish smarter over time.
                 </p>
               </div>
               <div className="rounded-2xl overflow-hidden max-w-xs mx-auto">
@@ -248,7 +248,7 @@ export default function GoneFishingCaseStudy() {
 
             {/* Body paragraph */}
             <p className="text-lg text-gray-400 leading-relaxed mb-12">
-              GoneFishing started as a personal project to solve my own problem, and it's become a genuine tool I use on fishing trips. Building it pushed me to solve real technical challenges — offline storage, image handling on mobile, syncing across devices. It's a project that combines everything I enjoy: designing for a specific user need and building the solution myself.
+              GoneFishing started as a personal project to solve my own problem, and it's become a genuine tool I use on fishing trips. Building it pushed me to solve real technical challenges: offline storage, image handling on mobile, syncing across devices. It's a project that combines everything I enjoy: designing for a specific user need and building the solution myself.
             </p>
 
             {/* Key takeaways */}

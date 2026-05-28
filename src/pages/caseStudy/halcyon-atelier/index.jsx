@@ -19,7 +19,7 @@ export default function HalcyonAtelierCaseStudy() {
 
   useDocumentMeta({
     title: 'Halcyon Atelier Case Study',
-    description: 'A single-page editorial showcase for a fictional Lisbon design studio — an exercise in committing to one aesthetic point of view.',
+    description: 'A single-page editorial showcase for a fictional Lisbon design studio: an exercise in committing to one aesthetic point of view.',
     url: 'https://hermanhylland.netlify.app/case-study/halcyon-atelier',
   });
 
@@ -68,7 +68,7 @@ export default function HalcyonAtelierCaseStudy() {
                   <div className="relative rounded-2xl overflow-hidden bg-ink-elevated">
                     <OptimizedImage
                       src="/Halcyon/hero.jpg"
-                      alt="Halcyon Atelier — folio cover with the studio name and a live Lisbon clock"
+                      alt="Halcyon Atelier folio cover with the studio name and a live Lisbon clock"
                       eager={true}
                       className="w-full h-auto"
                     />

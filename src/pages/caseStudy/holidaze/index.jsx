@@ -9,7 +9,7 @@ export default function HolidazeCaseStudy() {
 
   useDocumentMeta({
     title: 'Holidaze Case Study',
-    description: 'A cozy booking app for slow-living getaways — browse, book, and unwind in handpicked cabins and retreats.',
+    description: 'A cozy booking app for slow-living getaways. Browse, book, and unwind in handpicked cabins and retreats.',
     url: 'https://hermanhylland.netlify.app/case-study/holidaze',
   });
 

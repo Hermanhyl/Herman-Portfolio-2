@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 export default function HobbyistCaseStudy() {
   useDocumentMeta({
     title: 'Hobbyist Case Study',
-    description: 'A social platform that helps people find others who share their hobbies — no swiping, just genuine connections.',
+    description: 'A social platform that helps people find others who share their hobbies. No swiping, just genuine connections.',
     url: 'https://hermanhylland.netlify.app/case-study/hobbyist',
   });
 

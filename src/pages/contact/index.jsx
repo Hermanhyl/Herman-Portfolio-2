@@ -33,7 +33,7 @@ function FloatingField({ id, name, type = 'text', value, onChange, disabled, lab
       >
         {label}
         {placeholder && (
-          <span className="hidden peer-focus:inline text-gray-500"> — {placeholder}</span>
+          <span className="hidden peer-focus:inline text-gray-500"> · {placeholder}</span>
         )}
       </label>
     </div>

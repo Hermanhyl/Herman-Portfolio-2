@@ -9,7 +9,7 @@ export default function TimerPlannerCaseStudy() {
 
   useDocumentMeta({
     title: 'Timer & Planner Case Study',
-    description: 'A privacy-first productivity app that combines focus timers and scheduling in one seamless interface — no accounts, no cloud, your data stays yours.',
+    description: 'A privacy-first productivity app that combines focus timers and scheduling in one seamless interface. No accounts, no cloud, your data stays yours.',
     url: 'https://hermanhylland.netlify.app/case-study/timer-planner',
   });
 

@@ -5,7 +5,7 @@ export const projects = [
     teaser:
       "A single-page editorial showcase for a fictional Lisbon design studio. A deliberate craft exercise in committing to one strong aesthetic, with motion treated as a design language and every visual built as SVG.",
     description:
-      "Halcyon Atelier is a single-page React + Framer Motion site for a fictional Lisbon-based hospitality branding studio. Treated as if it were a real working business — portfolio, services, address, a live local clock — the project is an exercise in committing fully to one strong aesthetic direction rather than producing a generic agency template.\n\nThe site is built around an editorial 'Lisbon Sun' palette and the variable serif Fraunces paired with IBM Plex Mono. Every visual on the page is SVG or pure CSS — no raster images — and motion is treated as a design language: expo-out entrances, quart in-out hovers, linear reserved for marquees, with two layers of ambient motion always present so the page never feels frozen.",
+      "Halcyon Atelier is a single-page React + Framer Motion site for a fictional Lisbon-based hospitality branding studio. Treated as if it were a real working business (portfolio, services, address, a live local clock), the project is an exercise in committing fully to one strong aesthetic direction rather than producing a generic agency template.\n\nThe site is built around an editorial 'Lisbon Sun' palette and the variable serif Fraunces paired with IBM Plex Mono. Every visual on the page is SVG or pure CSS, no raster images, and motion is treated as a design language: expo-out entrances, quart in-out hovers, linear reserved for marquees, with two layers of ambient motion always present so the page never feels frozen.",
     images: ["/Halcyon/hero.jpg"],
     blogPost: "",
     github: "https://github.com/Hermanhyl/Single-page-showcase-Halcyon-Atelier-",
@@ -17,17 +17,17 @@ export const projects = [
       {
         heading: "Project Overview",
         content:
-          "Halcyon Atelier is a personal project: a fully realized fictional studio site, built from scratch with React, Framer Motion and Vite. The brief was self-imposed and explicit — no Inter, no Roboto, no Space Grotesk, no purple-on-white gradients, distinctive typography or it doesn't ship, motion treated as a design language rather than decoration, atmospheric detail required throughout, and production-grade code from end to end.",
+          "Halcyon Atelier is a personal project: a fully realized fictional studio site, built from scratch with React, Framer Motion and Vite. The brief was self-imposed and explicit. No Inter, no Roboto, no Space Grotesk, no purple-on-white gradients, distinctive typography or it doesn't ship, motion treated as a design language rather than decoration, atmospheric detail required throughout, and production-grade code from end to end.",
       },
       {
         heading: "My Role: Design and Development",
         content:
-          "Solo project, from aesthetic direction to production code. Typographic system (Fraunces variable display with deliberately pushed SOFT and WONK axes, paired with IBM Plex Mono as the technical voice), palette ('Lisbon Sun' — six colours with terracotta used surgically), every section's motion grammar, and the underlying React + Framer Motion implementation.",
+          "Solo project, from aesthetic direction to production code. Typographic system (Fraunces variable display with deliberately pushed SOFT and WONK axes, paired with IBM Plex Mono as the technical voice), palette ('Lisbon Sun', six colours with terracotta used surgically), every section's motion grammar, and the underlying React + Framer Motion implementation.",
       },
       {
         heading: "Why This Project Is Here",
         content:
-          "This is the case study that demonstrates what's possible when there's full creative control: an aesthetic point of view committed to without hedging, editorial typography at print-level discipline, motion treated as a language with its own grammar, and production-grade React + Framer Motion underneath it all — composed variants, AnimatePresence, useInView, a custom infinite-marquee, SVG path-drawing on view, working with variable font axes. The studio, address, founder, team and projects are fictional; the Lisbon location and the clock are real.",
+          "This is the case study that demonstrates what's possible when there's full creative control: an aesthetic point of view committed to without hedging, editorial typography at print-level discipline, motion treated as a language with its own grammar, and production-grade React + Framer Motion underneath it all (composed variants, AnimatePresence, useInView, a custom infinite-marquee, SVG path-drawing on view, working with variable font axes). The studio, address, founder, team and projects are fictional; the Lisbon location and the clock are real.",
       },
     ],
   },
@@ -36,9 +36,9 @@ export const projects = [
     id: "project-soderqvist-reuther",
     title: "Söderqvist & Reuther",
     teaser:
-      "A multi-page React + Framer Motion site for a fictional high-end Stockholm law firm. The counterpoint to Halcyon Atelier in this portfolio — dark, restrained, quietly expensive, with a brass accent used like a precious resource.",
+      "A multi-page React + Framer Motion site for a fictional high-end Stockholm law firm. The counterpoint to Halcyon Atelier in this portfolio: dark, restrained, quietly expensive, with a brass accent used like a precious resource.",
     description:
-      "Söderqvist & Reuther is a fictional high-end law firm based in Stockholm — a six-page React + Framer Motion + React Router site invented from scratch, including firm name, partners, practice areas, and editorial notes. The brief was to build something that reads unambiguously as a serious working law firm at the top of its market, not as a designer's playground.\n\nIt is the deliberate counterpoint to Halcyon Atelier in this portfolio: where Halcyon was expressive, editorial, and craft-obsessed, this firm site is restrained, dark, and quietly expensive. A near-black palette with a single surgical brass accent, Cormorant Garamond serif paired with IBM Plex Sans for tracked-out chrome, AnimatePresence transitions between routes, no contact form. Same author, different register.",
+      "Söderqvist & Reuther is a fictional high-end law firm based in Stockholm: a six-page React + Framer Motion + React Router site invented from scratch, including firm name, partners, practice areas, and editorial notes. The brief was to build something that reads unambiguously as a serious working law firm at the top of its market, not as a designer's playground.\n\nIt is the deliberate counterpoint to Halcyon Atelier in this portfolio: where Halcyon was expressive, editorial, and craft-obsessed, this firm site is restrained, dark, and quietly expensive. A near-black palette with a single surgical brass accent, Cormorant Garamond serif paired with IBM Plex Sans for tracked-out chrome, AnimatePresence transitions between routes, no contact form. Same hand, different register.",
     images: ["/SoderqvistReuther/hero.jpg"],
     blogPost: "",
     github: "",
@@ -50,17 +50,17 @@ export const projects = [
       {
         heading: "Project Overview",
         content:
-          "A multi-page website for a fictional high-end Stockholm law firm. Six routes — Home, The Firm, Practice, People, Insights, Contact — invented from scratch and held to a single restrained aesthetic register across all of them. Built with React, React Router, Framer Motion, and hand-written CSS (no utility framework, no component library).",
+          "A multi-page website for a fictional high-end Stockholm law firm. Six routes (Home, The Firm, Practice, People, Insights, Contact) invented from scratch and held to a single restrained aesthetic register across all of them. Built with React, React Router, Framer Motion, and hand-written CSS (no utility framework, no component library).",
       },
       {
         heading: "My Role: Design and Development",
         content:
-          "Solo project. Aesthetic direction ('quiet authority' — private banks and high-end watchmakers, not SaaS), six-colour dark palette with surgical brass accent, custom SVG logo (SR monogram → full lockup), typographic system (Cormorant Garamond + IBM Plex Sans), every section's motion grammar, and the underlying React + Framer Motion implementation including AnimatePresence route transitions.",
+          "Solo project. Aesthetic direction ('quiet authority': private banks and high-end watchmakers, not SaaS), six-colour dark palette with surgical brass accent, custom SVG logo (SR monogram, full lockup), typographic system (Cormorant Garamond + IBM Plex Sans), every section's motion grammar, and the underlying React + Framer Motion implementation including AnimatePresence route transitions.",
       },
       {
         heading: "Why This Project Is Here",
         content:
-          "Range. This case study sits in the portfolio explicitly as the counterpoint to Halcyon Atelier: the same designer-developer can shift register from expressive editorial work to discreet high-end professional work and execute both with conviction. The honest iteration story (the first pass leaned too close to Halcyon, the revamp pivoted to dark high-end) is part of the case — restraint and willingness to iterate are part of the craft. The firm, partners, address, and editorial content are fictional; Stockholm is real.",
+          "Range. This case study sits in the portfolio explicitly as the counterpoint to Halcyon Atelier: I can shift register from expressive editorial work to discreet high-end professional work and execute both with conviction. The honest iteration story (the first pass leaned too close to Halcyon, the revamp pivoted to dark high-end) is part of the case; restraint and willingness to iterate are part of the craft. The firm, partners, address, and editorial content are fictional; Stockholm is real.",
       },
     ],
   },

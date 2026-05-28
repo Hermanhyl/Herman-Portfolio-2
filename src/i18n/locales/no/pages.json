@@ -6,15 +6,15 @@
     "viewAll": "Se alt mitt arbeid",
     "brannvrn": {
       "tagline": "VR-brannsikkerhetstrening for sykehusansatte",
-      "description": "Designet en VR-simulering som lærer sykehusansatte hvordan de skal reagere på brannkrisesituasjoner — uten risiko. Utviklet gjennom brukerundersøkelser med brannfolk og helsearbeidere."
+      "description": "Designet en VR-simulering som lærer sykehusansatte hvordan de skal reagere på brannkrisesituasjoner, uten risiko. Utviklet gjennom brukerundersøkelser med brannfolk og helsearbeidere."
     },
     "hobbyist": {
       "tagline": "Sosial plattform for hobbybaserte forbindelser",
-      "description": "Designet og bygget en sosial app som hjelper folk med å finne andre som deler hobbyene deres — enten det er fotturer, brettspill eller matlaging. Ingen swiping, bare ekte forbindelser."
+      "description": "Designet og bygget en sosial app som hjelper folk med å finne andre som deler hobbyene deres, enten det er fotturer, brettspill eller matlaging. Ingen swiping, bare ekte forbindelser."
     },
     "gonefishing": {
       "tagline": "En personlig loggbok for sportsfiskere",
-      "description": "Designet og utviklet en PWA som lar fiskere logge fangster, spore steder og registrere forhold — tilgjengelig offline for bruk på vannet."
+      "description": "Designet og utviklet en PWA som lar fiskere logge fangster, spore steder og registrere forhold, tilgjengelig offline for bruk på vannet."
     }
   },
   "work": {
@@ -57,7 +57,7 @@
         "teaser": "Et editorial enkeltsidet showcase for et fiktivt studio i Lisboa. En bevisst håndverksøvelse i å forplikte seg til ett tydelig estetisk uttrykk, med bevegelse som designspråk og alle visuelle elementer bygget som SVG."
       },
       "soderqvistReuther": {
-        "teaser": "Et flersidet React + Framer Motion-nettsted for et fiktivt high-end advokatfirma i Stockholm. Motstykket til Halcyon Atelier i denne porteføljen — mørkt, tilbakeholdent, stille kostbart, med en messing-aksent brukt som en knapp ressurs."
+        "teaser": "Et flersidet React + Framer Motion-nettsted for et fiktivt high-end advokatfirma i Stockholm. Motstykket til Halcyon Atelier i denne porteføljen: mørkt, tilbakeholdent, stille kostbart, med en messing-aksent brukt som en knapp ressurs."
       }
     }
   },
@@ -70,7 +70,7 @@
     "heroDescription": "Brobygger mellom teknologi og kunst med 2+ års erfaring innen frontend-utvikling og 3+ års erfaring innen digital design. Skaper tilgjengelige, interaktive nettopplevelser.",
     "getInTouch": "Ta kontakt",
     "myStory": "Min historie",
-    "storyP1": "Jeg er <highlight>UX/UI-designer og frontend-utvikler</highlight> — kombinasjonen er bevisst. Bachelorgraden min ved Høgskolen i Innlandet dekket animasjon, illustrasjon, motion og 3D, og startet UX-praksisen min. Jeg har bygget videre på det med <accent1>reelt UX-auditarbeid gjennom Hubro Digital</accent1> og sertifikater fra Interaction Design Foundation, blant annet Don Normans Design for the 21st Century.",
+    "storyP1": "Jeg er <highlight>UX/UI-designer og frontend-utvikler</highlight>, og kombinasjonen er bevisst. Bachelorgraden min ved Høgskolen i Innlandet dekket animasjon, illustrasjon, motion og 3D, og startet UX-praksisen min. Jeg har bygget videre på det med <accent1>reelt UX-auditarbeid gjennom Hubro Digital</accent1> og sertifikater fra Interaction Design Foundation, blant annet Don Normans Design for the 21st Century.",
     "storyP2": "På byggesiden jobber jeg i <highlight>React, TypeScript, Next.js, Tailwind og Supabase</highlight>, med Figma oppstrøms og WordPress når prosjektet krever det. <accent2>AI-assistert utvikling</accent2> hjelper meg å levere raskere uten å miste designintensjonen.",
     "storyP3": "Verdien er ikke i én side alene. Det er å kjøre hele løypa uten tap i overleveringer: <accent1>forstå brukeren, designe løsningen, og bygge den.</accent1>",
     "skillsExpertise": "Ferdigheter & Ekspertise",

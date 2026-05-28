@@ -322,7 +322,7 @@
 
       "typeLabel": "Typography",
       "typeHeading": "Editorial serif, technical mono",
-      "typeP1": "Two faces only. No sans-serif body font — that decision alone removed the default-template feel from the page. The body voice is a serif; the supporting voice is a monospace.",
+      "typeP1": "Two faces only. No sans-serif body font: that decision alone removed the default-template feel from the page. The body voice is a serif; the supporting voice is a monospace.",
       "typeFrauncesLabel": "Display",
       "typeFraunces": "Variable serif used for headlines, project names, and italic emphasis. The SOFT and WONK axes are pushed deliberately to pick up the 1970s magazine masthead character that a default Fraunces setting would miss.",
       "typePlexMonoLabel": "Supporting",
@@ -333,15 +333,15 @@
 
       "tourHeroEyebrow": "I.",
       "tourHeroHeading": "An editorial folio cover",
-      "tourHeroBody": "The hero behaves like the front of a printed folio: studio name set at display scale with a deliberate letter-by-letter entrance, two drifting blurred terracotta washes behind the type, a slow-running marquee at the bottom edge, and a live Lisbon clock ticking in the corner. The page never freezes — there are always two pieces of ambient motion present.",
+      "tourHeroBody": "The hero behaves like the front of a printed folio: studio name set at display scale with a deliberate letter-by-letter entrance, two drifting blurred terracotta washes behind the type, a slow-running marquee at the bottom edge, and a live Lisbon clock ticking in the corner. The page never freezes. There are always two pieces of ambient motion present.",
 
       "tourAboutEyebrow": "II.",
       "tourAboutHeading": "Asymmetry, signature, restraint",
-      "tourAboutBody": "About is a two-column asymmetric layout: the text sits left, a hand-drawn SVG signature draws itself across the right column as you scroll past. Body type animates in word by word, with three italic terracotta accents on the words slowly, hand, and long — the only places colour appears in the section.",
+      "tourAboutBody": "About is a two-column asymmetric layout: the text sits left, a hand-drawn SVG signature draws itself across the right column as you scroll past. Body type animates in word by word, with three italic terracotta accents on the words slowly, hand, and long. Those are the only places colour appears in the section.",
 
       "tourWorkEyebrow": "III.",
       "tourWorkHeading": "Hand-placed specimens, not a grid",
-      "tourWorkBody": "Five fictional projects on an asymmetric grid that was hand-placed, not auto-fit. Every visual is a bespoke SVG specimen built from scratch — no stock photos, no mockups, no raster anywhere. Hovering a tile fires three things at once: the project name flips letter by letter, a terracotta slab rises with the description, and the specimen itself starts moving with its own ambient motion.",
+      "tourWorkBody": "Five fictional projects on an asymmetric grid that was hand-placed, not auto-fit. Every visual is a bespoke SVG specimen built from scratch (no stock photos, no mockups, no raster anywhere). Hovering a tile fires three things at once: the project name flips letter by letter, a terracotta slab rises with the description, and the specimen itself starts moving with its own ambient motion.",
 
       "tourPracticeEyebrow": "IV.",
       "tourPracticeHeading": "Disciplines as Roman numerals",
@@ -349,11 +349,11 @@
 
       "tourContactEyebrow": "V.",
       "tourContactHeading": "A closing in italic terracotta",
-      "tourContactBody": "Contact opens with a single italic terracotta headline — correspond. — sits over four monospace-typeset meta columns, and closes with an SVG sine wave that draws itself across the page as it scrolls into view. A cycling localised farewell rotates beneath the wave; a reverse-direction marquee bookends the one at the top of the hero. Then the page ends.",
+      "tourContactBody": "Contact opens with a single italic terracotta headline (correspond.) sitting over four monospace-typeset meta columns, and closes with an SVG sine wave that draws itself across the page as it scrolls into view. A cycling localised farewell rotates beneath the wave; a reverse-direction marquee bookends the one at the top of the hero. Then the page ends.",
 
       "motionLabel": "Motion principles",
       "motionHeading": "Motion as a design language",
-      "motionP1": "Three easing curves, used deliberately. Expo-out for entrances — slow start, decisive arrival. Quart in-out for hover and exit states — mechanical symmetry. Linear is reserved for the two marquees and nothing else. Scroll-triggered reveals fire once and don't replay on scroll-back. Two pieces of continuous ambient motion are always present so the page never feels frozen. prefers-reduced-motion is respected globally — every animation falls back cleanly.",
+      "motionP1": "Three easing curves, used deliberately. Expo-out for entrances: slow start, decisive arrival. Quart in-out for hover and exit states: mechanical symmetry. Linear is reserved for the two marquees and nothing else. Scroll-triggered reveals fire once and don't replay on scroll-back. Two pieces of continuous ambient motion are always present so the page never feels frozen. prefers-reduced-motion is respected globally, so every animation falls back cleanly.",
 
       "techLabel": "Technical detail",
       "techHeading": "Production-grade, no shortcuts",
@@ -365,7 +365,7 @@
       "techCssLabel": "CSS",
       "techCssValue": "Hand-written, one file per component",
       "techImagesLabel": "Images",
-      "techImagesValue": "100% SVG and CSS — zero raster",
+      "techImagesValue": "100% SVG and CSS, zero raster",
       "techTypeLabel": "Type",
       "techTypeValue": "Variable fonts via Google Fonts",
       "techResponsiveLabel": "Responsive",
@@ -375,10 +375,10 @@
       "closingHeading": "Committing to a point of view",
       "closing1": "Picking one aesthetic direction and following it the whole way through, without hedging or fallbacks.",
       "closing2": "Editorial typography held to print-level discipline: variable axis manipulation, italic emphasis with intent, mono-as-caption, no sans-serif anywhere.",
-      "closing3": "Motion treated as a language with its own grammar — easing curves chosen per purpose, ambient layers under content, restraint with what loops.",
+      "closing3": "Motion treated as a language with its own grammar: easing curves chosen per purpose, ambient layers under content, restraint with what loops.",
       "closing4": "Production-grade React and Framer Motion: composed variants, AnimatePresence, useInView, a custom infinite-marquee, SVG path-drawing on view, working with variable font axes.",
       "closing5": "Discipline with colour. Six in the system, only one of them chromatic, and that one used like punctuation rather than fill.",
-      "closing6": "Doing all of the above in one continuous craft pass — design and development running together, not handed off between them.",
+      "closing6": "Doing all of the above in one continuous craft pass: design and development running together, not handed off between them.",
 
       "resultHeading": "Experience the work yourself",
       "resultText": "The case study describes the project. The live site is the project. The repository is open if you want to see how it's built.",
@@ -395,13 +395,13 @@
 
       "briefLabel": "The Brief",
       "briefHeading": "A firm that does not exist",
-      "briefP1": "Söderqvist & Reuther is a fictional Stockholm law firm — six pages of site invented from scratch: firm name, partners, practice areas, editorial notes. The brief was to build something that reads unambiguously as a serious working law firm at the top of its market, not as a designer's playground.",
+      "briefP1": "Söderqvist & Reuther is a fictional Stockholm law firm: six pages of site invented from scratch, including firm name, partners, practice areas, and editorial notes. The brief was to build something that reads unambiguously as a serious working law firm at the top of its market, not as a designer's playground.",
       "briefP2": "Self-imposed constraints: no SaaS landing-page conventions, no card grids, no stock photography, no gavels or scales of justice, no contact forms, no marketing-speak in the copy. The site has to feel like an instrument of the firm, not an advertisement.",
 
       "aestheticLabel": "Aesthetic direction",
       "aestheticHeading": "Ink & Brass",
-      "aestheticP1": "The final identity is named Ink & Brass. Reference points: Pictet, Lombard Odier, and Julius Baer at their most restrained; Patek Philippe, Aman, and Rosewood; dark editorial magazines with metallic detailing. The mood is a wood-panelled office at dusk — soft lamp light, leather, brass — not a sunlit reading room. A visitor should feel they are looking at a firm at the top of its market, and that no part of the page is selling them on that.",
-      "aestheticP2": "The honest version of the process: the first pass — internal name Warm Editorial Paper — used a bone background (#F4F1EA), slate ink (#1C1F25), oxidised brass, and Spectral. It shipped and read as a boutique editorial studio, too close to Halcyon Atelier. The revamp was a full pivot from warm paper to dark — Ink & Brass replaced it. Same author, same instincts, different register. The pivot sharpened the direction more than any single design decision did.",
+      "aestheticP1": "The final identity is named Ink & Brass. Reference points: Pictet, Lombard Odier, and Julius Baer at their most restrained; Patek Philippe, Aman, and Rosewood; dark editorial magazines with metallic detailing. The mood is a wood-panelled office at dusk (soft lamp light, leather, brass), not a sunlit reading room. A visitor should feel they are looking at a firm at the top of its market, and that no part of the page is selling them on that.",
+      "aestheticP2": "The honest version of the process: the first pass, internally named Warm Editorial Paper, used a bone background (#F4F1EA), slate ink (#1C1F25), oxidised brass, and Spectral. It shipped and read as a boutique editorial studio, too close to Halcyon Atelier. The revamp was a full pivot from warm paper to dark; Ink & Brass replaced it. Same hand, same instincts, different register. The pivot sharpened the direction more than any single design decision did.",
 
       "paletteLabel": "Palette",
       "paletteHeading": "Mostly dark, surgical brass",
@@ -411,20 +411,20 @@
       "paletteRole4": "Brass accent",
       "paletteRole5": "Meta",
       "paletteRole6": "Hairline",
-      "paletteCaption": "The full system has thirteen tones — base ink, deeper ink, surface and surface-lift, bone and bone-soft, meta and meta-soft, two hairline tones, and three brass tones. Five of the six shown here are the working set; the brass is the only chromatic note. Treated as a precious resource: surgical, never as a gradient, never on large surfaces. It appears on the logo, the active nav indicator, the hero hairline, the brass clock dot, milestone years, and hover underlines. Hairlines use the dedicated hairline tone (#2E2C28), never the brass.",
+      "paletteCaption": "The full system has thirteen tones: base ink, deeper ink, surface and surface-lift, bone and bone-soft, meta and meta-soft, two hairline tones, and three brass tones. Five of the six shown here are the working set; the brass is the only chromatic note. Treated as a precious resource: surgical, never as a gradient, never on large surfaces. It appears on the logo, the active nav indicator, the hero hairline, the brass clock dot, milestone years, and hover underlines. Hairlines use the dedicated hairline tone (#2E2C28), never the brass.",
 
       "typeLabel": "Typography",
       "typeHeading": "A serif with presence on dark",
-      "typeP1": "Cormorant Garamond was picked specifically because it holds weight on a near-black surface — lighter serifs like Spectral and EB Garamond at 400 felt anemic against the ink base in the first pass. The system pairs Cormorant (display) with Cormorant SC (small caps used for the firm name lockup), and IBM Plex Sans and IBM Plex Mono for the chrome: navigation, meta lines, clock, dates, document references.",
+      "typeP1": "Cormorant Garamond was picked specifically because it holds weight on a near-black surface. Lighter serifs like Spectral and EB Garamond at 400 felt anemic against the ink base in the first pass. The system pairs Cormorant (display) with Cormorant SC (small caps used for the firm name lockup), and IBM Plex Sans and IBM Plex Mono for the chrome: navigation, meta lines, clock, dates, document references.",
       "typeCormorantLabel": "Display",
       "typeCormorantCaption": "Display",
       "typeCormorant": "Cormorant Garamond at weights 400, 500, 600, with matching italics. The display serif everywhere the firm wants you to remember the content: firm name, page titles, practice area headings, partner names. Cormorant SC (500) is its small-caps companion, used on the firm name lockup in the navigation.",
       "typePlexLabel": "Supporting",
-      "typePlex": "IBM Plex Sans (400, 500) for tracked-out small-caps on navigation labels, meta lines, and city/clock pairing — 0.24em standard meta, 0.32em on larger meta. IBM Plex Mono (300, 400) handles the Stockholm clock, dates, and document references. Set wide, the tracking does the work — restraint without raising its voice.",
+      "typePlex": "IBM Plex Sans (400, 500) for tracked-out small-caps on navigation labels, meta lines, and city/clock pairing (0.24em standard meta, 0.32em on larger meta). IBM Plex Mono (300, 400) handles the Stockholm clock, dates, and document references. Set wide, the tracking does the work. Restraint without raising its voice.",
 
       "logoLabel": "Logo",
       "logoHeading": "An interlocking S+R ligature",
-      "logoP1": "The mark is a hand-drawn interlocking S+R ligature, picked over a cartouche option during exploration. Built as SVG paths in a 64×64 viewBox, hairline-traced at stroke-width 1.4 with rounded caps and joins. The S is a two-arc construction with a diagonal spine; the R is a vertical stem with an upper bowl and diagonal leg. The R's stem visually kisses the right edge of the S, and a small brass dot (radius 1.4) sits at the meeting point — the only chromatic detail in the whole mark. The mark scales cleanly to favicon size, anchors the navigation lockup, and reappears as a discreet seal at the bottom of the legal pages.",
+      "logoP1": "The mark is a hand-drawn interlocking S+R ligature, picked over a cartouche option during exploration. Built as SVG paths in a 64×64 viewBox, hairline-traced at stroke-width 1.4 with rounded caps and joins. The S is a two-arc construction with a diagonal spine; the R is a vertical stem with an upper bowl and diagonal leg. The R's stem visually kisses the right edge of the S, and a small brass dot (radius 1.4) sits at the meeting point. That's the only chromatic detail in the whole mark. The mark scales cleanly to favicon size, anchors the navigation lockup, and reappears as a discreet seal at the bottom of the legal pages.",
       "logoLockupCaption": "Navigation lockup",
 
       "tourLabel": "Page by page",
@@ -432,23 +432,23 @@
 
       "tourHomeEyebrow": "I.",
       "tourHomeHeading": "An opening, not a landing page",
-      "tourHomeBody": "A full-bleed dark hero, the lockup and firm name introduced at display scale with the italic ampersand carrying the only chromatic mark on the screen. Below the headline, the firm's positioning line — italic, brief. The navigational entry points are presented as numbered editorial links (01 The Firm, 02 Practice...) rather than as a card grid. The page transitions between routes happen quietly under AnimatePresence.",
+      "tourHomeBody": "A full-bleed dark hero, the lockup and firm name introduced at display scale with the italic ampersand carrying the only chromatic mark on the screen. Below the headline, the firm's positioning line sits italic and brief. The navigational entry points are presented as numbered editorial links (01 The Firm, 02 Practice…) rather than as a card grid. The page transitions between routes happen quietly under AnimatePresence.",
 
       "tourFirmEyebrow": "II.",
       "tourFirmHeading": "A page that doesn't oversell",
-      "tourFirmBody": "Short positioning copy written in the voice of a senior partner — clear, sober, no marketing-speak. Below the prose, the firm's history is rendered as a dated list with hairline rules between entries: founding, key milestones, the relocation to current premises. The page assumes the reader is already serious.",
+      "tourFirmBody": "Short positioning copy written in the voice of a senior partner: clear, sober, no marketing-speak. Below the prose, the firm's history is rendered as a dated list with hairline rules between entries (founding, key milestones, the relocation to current premises). The page assumes the reader is already serious.",
 
       "tourPracticeEyebrow": "III.",
       "tourPracticeHeading": "The work, named plainly",
-      "tourPracticeBody": "Practice areas presented in a refined editorial arrangement rather than a feature grid. Each area gets a confident sentence in plain language: what the work is, who it tends to be for, how the firm approaches it. No client names anywhere — discretion is part of the aesthetic.",
+      "tourPracticeBody": "Practice areas presented in a refined editorial arrangement rather than a feature grid. Each area gets a confident sentence in plain language: what the work is, who it tends to be for, how the firm approaches it. No client names anywhere; discretion is part of the aesthetic.",
 
       "tourPeopleEyebrow": "IV.",
       "tourPeopleHeading": "Partners, set typographically",
-      "tourPeopleBody": "The partner roster reads as an editorial spread, not a team page. Names in display serif, roles in tracked small-caps, qualifications and admissions in a quiet supporting line. Where a photograph would normally sit, a typographic monogram in brass holds the position — same logic as the firm mark, applied per-person. Stock photography of suited people would have broken the register; this doesn't.",
+      "tourPeopleBody": "The partner roster reads as an editorial spread, not a team page. Names in display serif, roles in tracked small-caps, qualifications and admissions in a quiet supporting line. Where a photograph would normally sit, a typographic monogram in brass holds the position (same logic as the firm mark, applied per-person). Stock photography of suited people would have broken the register; this doesn't.",
 
       "tourInsightsEyebrow": "V.",
       "tourInsightsHeading": "An editorial register",
-      "tourInsightsBody": "Insights is the firm's publishing voice — invented notes and bulletins on topics the practice touches, dated, attributed to partners by initials. At least one entry opens into a full article under a sub-route so the section feels like a real publication rather than a stub. The register matches the rest of the site: serif body, considered measure, no images.",
+      "tourInsightsBody": "Insights is the firm's publishing voice: invented notes and bulletins on topics the practice touches, dated, attributed to partners by initials. At least one entry opens into a full article under a sub-route so the section feels like a real publication rather than a stub. The register matches the rest of the site: serif body, considered measure, no images.",
 
       "tourContactEyebrow": "VI.",
       "tourContactHeading": "Address, telephone, hours",
@@ -456,15 +456,15 @@
 
       "navLabel": "Navigation & atmosphere",
       "navHeading": "Restraint in the chrome",
-      "navP1": "The navigation does most of the quiet work. The lockup sits left, tracked small-caps route labels run across the top, the active route is marked by a single brass underline rather than a colour fill. Top-right carries a Stockholm timezone clock with a brass status dot — the firm operates on Stockholm hours, and the site says so without saying so. Hero imagery is darkened toward the page edges so type holds without competition; hairline rules in deep stone do the dividing work that a colour scheme would normally handle. Subtle grain across dark surfaces keeps them from going flat.",
+      "navP1": "The navigation does most of the quiet work. The lockup sits left, tracked small-caps route labels run across the top, the active route is marked by a single brass underline rather than a colour fill. Top-right carries a Stockholm timezone clock with a brass status dot: the firm operates on Stockholm hours, and the site says so without saying so. Hero imagery is darkened toward the page edges so type holds without competition; hairline rules in deep stone do the dividing work that a colour scheme would normally handle. Subtle grain across dark surfaces keeps them from going flat.",
 
       "motionLabel": "Motion principles",
       "motionHeading": "Motion you barely notice",
-      "motionP1": "Three named motions hold the site together. The logo enters on first load with a stroke-draw across the S and R paths (1.4s); the brass dot fades in last. The Stockholm clock carries a 2.6s ease-in-out brass-dot pulse with a soft box-shadow halo — the project's one infinite ambient motion. The hero scales between 1.02 and 1.025 over 28s, mirrored, barely perceptible. Page transitions use AnimatePresence with mode=\"wait\": 180ms fade out, 320ms fade + 8px translate up in, custom cubic-bezier easing — under 400ms total. No bounces, no staggered cascades, no marquees. prefers-reduced-motion is respected globally through a CSS rule that disables all transitions and animations, plus Framer Motion's useReducedMotion gating the ambient hero loop.",
+      "motionP1": "Three named motions hold the site together. The logo enters on first load with a stroke-draw across the S and R paths (1.4s); the brass dot fades in last. The Stockholm clock carries a 2.6s ease-in-out brass-dot pulse with a soft box-shadow halo, the project's one infinite ambient motion. The hero scales between 1.02 and 1.025 over 28s, mirrored, barely perceptible. Page transitions use AnimatePresence with mode=\"wait\": 180ms fade out, 320ms fade + 8px translate up in, custom cubic-bezier easing, under 400ms total. No bounces, no staggered cascades, no marquees. prefers-reduced-motion is respected globally through a CSS rule that disables all transitions and animations, plus Framer Motion's useReducedMotion gating the ambient hero loop.",
 
       "techLabel": "Technical detail",
       "techHeading": "Restraint in the build, too",
-      "techP1": "Vite 8 + React 19 with TypeScript, React Router v6, Framer Motion. Hand-written CSS — one file per component, no utility framework, no component library beyond uipro-cli scaffolding used minimally. The system ships thirteen routes including practice sub-routes, four partner biographies, a fully-written six-paragraph note under /insights, legal pages, and a 404. Custom components do the heavy lifting: a Header with scroll-condense and a Stockholm-time Clock (Intl.DateTimeFormat, 15s polling), a HeroImage with two darkening overlays and an ambient scale loop, a Logo with three tonal variants, and four Monogram variants standing in for partner portraits.",
+      "techP1": "Vite 8 + React 19 with TypeScript, React Router v6, Framer Motion. Hand-written CSS, one file per component, no utility framework, no component library beyond uipro-cli scaffolding used minimally. The system ships thirteen routes including practice sub-routes, four partner biographies, a fully-written six-paragraph note under /insights, legal pages, and a 404. Custom components do the heavy lifting: a Header with scroll-condense and a Stockholm-time Clock (Intl.DateTimeFormat, 15s polling), a HeroImage with two darkening overlays and an ambient scale loop, a Logo with three tonal variants, and four Monogram variants standing in for partner portraits.",
       "techBuildLabel": "Build",
       "techBuildValue": "Vite 8 + React 19 + TypeScript",
       "techAnimationLabel": "Animation",
@@ -481,14 +481,14 @@
       "closingLabel": "What this project demonstrates",
       "closingHeading": "Range",
       "closing1": "Range as a designer-developer: the same author who built Halcyon's expressive editorial pass also built this restrained dark high-end firm site, in the same year, to the same level of craft.",
-      "closing2": "The discipline of restraint — a six-page site delivered without contact forms, card grids, stock photography, or marketing copy.",
+      "closing2": "The discipline of restraint: a six-page site delivered without contact forms, card grids, stock photography, or marketing copy.",
       "closing3": "Willingness to iterate honestly. The first pass leaned editorial-print; the revamp into dark high-end was a deliberate pivot, not a polish.",
       "closing4": "Production-grade React and Framer Motion at a sober register: client-side routing, AnimatePresence, scroll-triggered reveals, ambient motion under content.",
-      "closing5": "Editorial typography held to print-level discipline on a dark surface — serif with enough weight to read at scale, tracked small-caps doing the chrome work, italic emphasis carrying the only chromatic note.",
-      "closing6": "Building a believable fictional identity end to end: firm name, partners, practice, address, voice, atmosphere — all invented, all consistent.",
+      "closing5": "Editorial typography held to print-level discipline on a dark surface: serif with enough weight to read at scale, tracked small-caps doing the chrome work, italic emphasis carrying the only chromatic note.",
+      "closing6": "Building a believable fictional identity end to end: firm name, partners, practice, address, voice, atmosphere, all invented, all consistent.",
 
       "resultHeading": "Experience the work yourself",
-      "resultText": "The case study describes the firm. The live site is the firm. Walk through the six routes — the work is in the restraint as much as in the typography.",
+      "resultText": "The case study describes the firm. The live site is the firm. Walk through the six routes; the work is in the restraint as much as in the typography.",
 
       "disclosure": "The firm, partners, address, and all editorial content are fictional. Stockholm is real. This is a craft exercise, not a misrepresentation of any working law practice."
     }

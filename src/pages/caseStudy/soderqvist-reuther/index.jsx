@@ -54,7 +54,7 @@ export default function SoderqvistReutherCaseStudy() {
   useDocumentMeta({
     title: 'Söderqvist & Reuther Case Study',
     description:
-      'A multi-page React + Framer Motion site for a fictional high-end Stockholm law firm — an exercise in quiet authority, restrained dark UI, and editorial typography on dark.',
+      'A multi-page React + Framer Motion site for a fictional high-end Stockholm law firm: an exercise in quiet authority, restrained dark UI, and editorial typography on dark.',
     url: 'https://hermanhylland.netlify.app/case-study/soderqvist-reuther',
   });
 
@@ -102,7 +102,7 @@ export default function SoderqvistReutherCaseStudy() {
                   <div className="relative rounded-2xl overflow-hidden bg-ink-elevated">
                     <OptimizedImage
                       src="/SoderqvistReuther/hero.jpg"
-                      alt="Söderqvist & Reuther — dark editorial home page with the firm name and Stockholm clock"
+                      alt="Söderqvist & Reuther dark editorial home page with the firm name and Stockholm clock"
                       eager={true}
                       className="w-full h-auto"
                     />

@@ -16,7 +16,7 @@ function LanguageSwitcher() {
   return (
     <button
       onClick={toggleLanguage}
-      className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 hover:bg-white/20 border border-white/20 text-gray-300 hover:text-white transition-all duration-300 text-sm font-medium cursor-pointer"
+      className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 hover:bg-white/20 border border-white/20 text-gray-300 hover:text-white transition-all duration-300 text-sm font-medium cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
       aria-label={`Switch to ${currentLang === 'en' ? 'Norwegian' : 'English'}`}
     >
       <Globe className="w-4 h-4" />

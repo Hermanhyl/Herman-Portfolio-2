@@ -70,7 +70,7 @@ function Footer() {
                 <Link
                   key={link.to}
                   to={link.to}
-                  className="group text-gray-400 hover:text-emerald-400 transition-all duration-300 text-sm lg:text-base focus:outline-none focus:text-emerald-400 rounded inline-flex items-center justify-center gap-1"
+                  className="group text-gray-400 hover:text-emerald-400 transition-all duration-300 text-sm lg:text-base focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black focus:text-emerald-400 rounded inline-flex items-center justify-center gap-1 px-2 py-1"
                 >
                   <span className="group-hover:translate-x-1 transition-transform duration-300">{link.label}</span>
                 </Link>
@@ -100,7 +100,7 @@ function Footer() {
             </div>
             <a
               href="mailto:hermanhyl@hotmail.com"
-              className="group inline-flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-all duration-300 text-sm lg:text-base mt-4 focus:outline-none focus:text-emerald-400 rounded"
+              className="group inline-flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-all duration-300 text-sm lg:text-base mt-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black focus:text-emerald-400 rounded px-2 py-1"
             >
               <Mail className="w-4 h-4 lg:w-5 lg:h-5 group-hover:scale-110 transition-transform duration-300" />
               <span className="group-hover:underline underline-offset-4">hermanhyl@hotmail.com</span>

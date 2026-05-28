@@ -15,7 +15,7 @@ export default function BackButton({ position = 'top' }) {
       <div className="mt-16 pt-8 border-t border-white/10">
         <button
           onClick={() => navigate(-1)}
-          className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300 group"
+          className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300 group rounded px-2 py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black cursor-pointer"
           aria-label="Go back to previous page"
         >
           <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-300" />
@@ -31,7 +31,7 @@ export default function BackButton({ position = 'top' }) {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-28 pb-6 z-20">
       <button
         onClick={() => navigate(-1)}
-        className="inline-flex items-center gap-2.5 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-gray-300 hover:text-white transition-all duration-300 group"
+        className="inline-flex items-center gap-2.5 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-gray-300 hover:text-white transition-all duration-300 group focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black cursor-pointer"
         aria-label="Go back to previous page"
       >
         <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-300" />

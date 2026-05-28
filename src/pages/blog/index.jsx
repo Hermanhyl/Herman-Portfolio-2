@@ -132,7 +132,7 @@ function Blog() {
               <div className="space-y-6">
                 <SectionMarker number="01" label={t('blog.featuredPost')} align="left" />
                 <CardCursor label="READ →">
-                  <BlogPostCard post={featuredPost} variant="featured" />
+                  <BlogPostCard post={featuredPost} variant="featured" headingLevel="h2" />
                 </CardCursor>
               </div>
             </ScrollReveal>
@@ -158,7 +158,7 @@ function Blog() {
                 {filteredPosts.map((post) => (
                   <motion.div key={post.id} variants={fadeUp}>
                     <CardCursor label="READ →">
-                      <BlogPostCard post={post} variant="minimal" colorScheme="purple" />
+                      <BlogPostCard post={post} variant="minimal" colorScheme="purple" headingLevel="h2" />
                     </CardCursor>
                   </motion.div>
                 ))}

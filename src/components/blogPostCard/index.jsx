@@ -16,8 +16,13 @@ import { formatDate } from '../../utils/formatDate';
  * @param {string[]} props.post.tags - Post tags
  * @param {string} props.variant - Card variant: 'default' | 'featured' | 'compact' | 'minimal'
  * @param {string} props.colorScheme - Color scheme: 'emerald' | 'purple'
+ * @param {'h2'|'h3'|'h4'} props.headingLevel - Heading element used for
+ *   the post title. Default 'h3'. Use 'h2' when the card sits directly
+ *   under the page's h1 (WCAG 1.3.1 / 2.4.6 — heading levels must not
+ *   skip).
  */
-function BlogPostCard({ post, variant = 'default', colorScheme = 'emerald' }) {
+function BlogPostCard({ post, variant = 'default', colorScheme = 'emerald', headingLevel = 'h3' }) {
+  const Heading = headingLevel;
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language?.startsWith('no') ? 'no' : 'en';
 
@@ -67,9 +72,9 @@ function BlogPostCard({ post, variant = 'default', colorScheme = 'emerald' }) {
               ))}
             </div>
 
-            <h3 className="font-display text-3xl md:text-4xl font-bold tracking-tight mb-4 leading-[1.1] group-hover:text-emerald-400 transition-colors duration-300">
+            <Heading className="font-display text-3xl md:text-4xl font-bold tracking-tight mb-4 leading-[1.1] group-hover:text-emerald-400 transition-colors duration-300">
               {post.title}
-            </h3>
+            </Heading>
 
             <p className="text-gray-300 mb-6 line-clamp-3 leading-relaxed">
               {post.excerpt}
@@ -123,9 +128,9 @@ function BlogPostCard({ post, variant = 'default', colorScheme = 'emerald' }) {
             ))}
           </div>
 
-          <h3 className="font-display text-2xl font-bold tracking-tight mb-3 leading-[1.15] group-hover:text-emerald-400 transition-colors line-clamp-2">
+          <Heading className="font-display text-2xl font-bold tracking-tight mb-3 leading-[1.15] group-hover:text-emerald-400 transition-colors line-clamp-2">
             {post.title}
-          </h3>
+          </Heading>
 
           <p className="text-gray-300 text-sm mb-4 line-clamp-2 leading-relaxed">
             {post.excerpt}
@@ -166,9 +171,9 @@ function BlogPostCard({ post, variant = 'default', colorScheme = 'emerald' }) {
           ))}
         </div>
 
-        <h3 className="text-xl font-bold mb-3 text-white group-hover:text-emerald-400 transition-colors line-clamp-2">
+        <Heading className="text-xl font-bold mb-3 text-white group-hover:text-emerald-400 transition-colors line-clamp-2">
           {post.title}
-        </h3>
+        </Heading>
 
         <p className="text-gray-300 text-sm mb-4 line-clamp-2 group-hover:text-gray-200 transition-colors">
           {post.excerpt}
@@ -232,9 +237,9 @@ function BlogPostCard({ post, variant = 'default', colorScheme = 'emerald' }) {
           ))}
         </div>
 
-        <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-emerald-400 transition-colors line-clamp-2">
+        <Heading className="text-2xl font-bold mb-3 text-white group-hover:text-emerald-400 transition-colors line-clamp-2">
           {post.title}
-        </h3>
+        </Heading>
 
         <p className="text-gray-300 text-base mb-4 line-clamp-3 group-hover:text-gray-200 transition-colors">
           {post.excerpt}

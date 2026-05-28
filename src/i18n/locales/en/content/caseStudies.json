@@ -384,6 +384,113 @@
       "resultText": "The case study describes the project. The live site is the project. The repository is open if you want to see how it's built.",
 
       "disclosure": "The studio, address, founder, team, and projects are fictional. The Lisbon location and the clock are real. This is a craft exercise, not a misrepresentation."
+    },
+    "soderqvistReuther": {
+      "tags": "React · Framer Motion · React Router · SVG · Custom CSS",
+      "tagline": "A multi-page site for a fictional high-end Stockholm law firm. The counterpoint to Halcyon Atelier in this portfolio.",
+      "roleValue": "Design and development (solo)",
+      "yearLabel": "Year:",
+      "yearValue": "2026",
+      "statusValue": "Personal project",
+
+      "briefLabel": "The Brief",
+      "briefHeading": "A firm that does not exist",
+      "briefP1": "Söderqvist & Reuther is a fictional Stockholm law firm — six pages of site invented from scratch: firm name, partners, practice areas, editorial notes. The brief was to build something that reads unambiguously as a serious working law firm at the top of its market, not as a designer's playground.",
+      "briefP2": "Self-imposed constraints: no SaaS landing-page conventions, no card grids, no stock photography, no gavels or scales of justice, no contact forms, no marketing-speak in the copy. The site has to feel like an instrument of the firm, not an advertisement.",
+
+      "aestheticLabel": "Aesthetic direction",
+      "aestheticHeading": "Quiet authority",
+      "aestheticP1": "The reference set is private banking and wealth management at their most restrained, high-end watchmaker and hotel websites, and the mood of a wood-panelled office at dusk rather than a sunlit reading room. A visitor should feel they are looking at a firm that operates at the top of its market — and that no part of the page is trying to sell them on that.",
+      "aestheticP2": "The honest version of the process: the first pass leaned too close to Halcyon Atelier — warm paper, editorial print feel, a touch too expressive for a law firm. The revamp was a deliberate pivot into a dark, sleek high-end identity. Same author, same craft instincts, different register. The pivot sharpened the direction more than any single design decision did.",
+
+      "paletteLabel": "Palette",
+      "paletteHeading": "Six tones, mostly dark",
+      "paletteRole1": "Ink",
+      "paletteRole2": "Tonal lift",
+      "paletteRole3": "Parchment",
+      "paletteRole4": "Brass accent",
+      "paletteRole5": "Warm muted",
+      "paletteRole6": "Deep stone",
+      "paletteCaption": "Five of the six tones live in dark territory. The brass accent is the only chromatic note in the system and it is treated like a precious resource — surgical, never as gradient, never on large surfaces. It appears on the italic ampersand in the firm name, on the monogram mark, on the active route indicator in the navigation, on hairline accents, on a single status pulse. Everywhere else is ink and parchment.",
+
+      "typeLabel": "Typography",
+      "typeHeading": "A serif with presence on dark",
+      "typeP1": "Two faces, no third. The display serif has to hold its weight on near-black without going thin or precious; the supporting voice has to read as refined and quiet, not as a Silicon Valley sans. The pairing logic across the site is: serif for the content the firm wants you to remember, mono-feeling sans for the chrome that keeps you oriented.",
+      "typeCormorantLabel": "Display",
+      "typeCormorantCaption": "Display",
+      "typeCormorant": "Cormorant Garamond, drawn with enough contrast to feel hand-set rather than UI-default. Used for the firm name at display scale, page titles, practice area headings, and the italic emphasis that carries the only chromatic note on the page.",
+      "typePlexLabel": "Supporting",
+      "typePlex": "IBM Plex Sans for tracked-out small-caps on navigation labels, meta lines, the city/clock pairing, and any text that wants to read as a quiet caption. Set wide, the tracking does the heavy lifting — it signals restraint without raising its voice.",
+
+      "logoLabel": "Logo",
+      "logoHeading": "From favicon to lockup",
+      "logoP1": "The mark started as a favicon — an SR ligature in brass on near-black — and grew into a lockup once the navigation needed more presence. The monogram sits left of a thin vertical rule, then the full firm name in tracked small caps. The mark scales down to favicon-size cleanly; the lockup carries the navigation. The two forms read as the same identity rather than two different ones.",
+      "logoLockupCaption": "Navigation lockup",
+
+      "tourLabel": "Page by page",
+      "tourHeading": "Six routes, one register",
+
+      "tourHomeEyebrow": "I.",
+      "tourHomeHeading": "An opening, not a landing page",
+      "tourHomeBody": "A full-bleed dark hero, the lockup and firm name introduced at display scale with the italic ampersand carrying the only chromatic mark on the screen. Below the headline, the firm's positioning line — italic, brief. The navigational entry points are presented as numbered editorial links (01 The Firm, 02 Practice...) rather than as a card grid. The page transitions between routes happen quietly under AnimatePresence.",
+
+      "tourFirmEyebrow": "II.",
+      "tourFirmHeading": "A page that doesn't oversell",
+      "tourFirmBody": "Short positioning copy written in the voice of a senior partner — clear, sober, no marketing-speak. Below the prose, the firm's history is rendered as a dated list with hairline rules between entries: founding, key milestones, the relocation to current premises. The page assumes the reader is already serious.",
+
+      "tourPracticeEyebrow": "III.",
+      "tourPracticeHeading": "The work, named plainly",
+      "tourPracticeBody": "Practice areas presented in a refined editorial arrangement rather than a feature grid. Each area gets a confident sentence in plain language: what the work is, who it tends to be for, how the firm approaches it. No client names anywhere — discretion is part of the aesthetic.",
+
+      "tourPeopleEyebrow": "IV.",
+      "tourPeopleHeading": "Partners, set typographically",
+      "tourPeopleBody": "The partner roster reads as an editorial spread, not a team page. Names in display serif, roles in tracked small-caps, qualifications and admissions in a quiet supporting line. Where a photograph would normally sit, a typographic monogram in brass holds the position — same logic as the firm mark, applied per-person. Stock photography of suited people would have broken the register; this doesn't.",
+
+      "tourInsightsEyebrow": "V.",
+      "tourInsightsHeading": "An editorial register",
+      "tourInsightsBody": "Insights is the firm's publishing voice — invented notes and bulletins on topics the practice touches, dated, attributed to partners by initials. At least one entry opens into a full article under a sub-route so the section feels like a real publication rather than a stub. The register matches the rest of the site: serif body, considered measure, no images.",
+
+      "tourContactEyebrow": "VI.",
+      "tourContactHeading": "Address, telephone, hours",
+      "tourContactBody": "Contact is deliberately quiet: postal address, telephone, an email, office hours, a single discreet line about how the firm takes on new matters. No contact form. The page operates on the assumption that anyone who is actually meant to be in touch already knows how a serious firm is approached.",
+
+      "navLabel": "Navigation & atmosphere",
+      "navHeading": "Restraint in the chrome",
+      "navP1": "The navigation does most of the quiet work. The lockup sits left, tracked small-caps route labels run across the top, the active route is marked by a single brass underline rather than a colour fill. Top-right carries a Stockholm timezone clock with a brass status dot — the firm operates on Stockholm hours, and the site says so without saying so. Hero imagery is darkened toward the page edges so type holds without competition; hairline rules in deep stone do the dividing work that a colour scheme would normally handle. Subtle grain across dark surfaces keeps them from going flat.",
+
+      "motionLabel": "Motion principles",
+      "motionHeading": "Motion you barely notice",
+      "motionP1": "Individually, almost no animation on the site is loud enough to pull attention. Cumulatively, the site feels alive. Scroll-triggered reveals fade in once and don't replay; page transitions move through AnimatePresence with a quiet cross-fade rather than slide effects; the hero carries a slow ambient scale that's hard to catch unless you look for it. No bounces, no staggered cascades, no marquees. The easing is chosen to feel decisive rather than playful. prefers-reduced-motion is respected globally — every reveal falls back cleanly.",
+
+      "techLabel": "Technical detail",
+      "techHeading": "Restraint in the build, too",
+      "techP1": "React with React Router for client-side routing, Framer Motion for transitions and reveals. Hand-written CSS — one file per component, no utility framework, no component library beyond the uipro-cli scaffolding. The custom SVG logo lives at the source and is composed at multiple scales rather than rasterised. The whole site is one project, no monorepo overhead.",
+      "techBuildLabel": "Build",
+      "techBuildValue": "Vite + React",
+      "techAnimationLabel": "Animation",
+      "techAnimationValue": "Framer Motion (AnimatePresence + scroll reveals)",
+      "techRoutingLabel": "Routing",
+      "techRoutingValue": "React Router, six routes",
+      "techCssLabel": "CSS",
+      "techCssValue": "Hand-written, one file per component",
+      "techLogoLabel": "Logo",
+      "techLogoValue": "Custom SVG monogram + lockup",
+      "techResponsiveLabel": "Responsive",
+      "techResponsiveValue": "Editorial layout reflows cleanly on small screens",
+
+      "closingLabel": "What this project demonstrates",
+      "closingHeading": "Range",
+      "closing1": "Range as a designer-developer: the same author who built Halcyon's expressive editorial pass also built this restrained dark high-end firm site, in the same year, to the same level of craft.",
+      "closing2": "The discipline of restraint — a six-page site delivered without contact forms, card grids, stock photography, or marketing copy.",
+      "closing3": "Willingness to iterate honestly. The first pass leaned editorial-print; the revamp into dark high-end was a deliberate pivot, not a polish.",
+      "closing4": "Production-grade React and Framer Motion at a sober register: client-side routing, AnimatePresence, scroll-triggered reveals, ambient motion under content.",
+      "closing5": "Editorial typography held to print-level discipline on a dark surface — serif with enough weight to read at scale, tracked small-caps doing the chrome work, italic emphasis carrying the only chromatic note.",
+      "closing6": "Building a believable fictional identity end to end: firm name, partners, practice, address, voice, atmosphere — all invented, all consistent.",
+
+      "resultHeading": "Experience the work yourself",
+      "resultText": "The case study describes the firm. The live site is the firm. Walk through the six routes — the work is in the restraint as much as in the typography.",
+
+      "disclosure": "The firm, partners, address, and all editorial content are fictional. Stockholm is real. This is a craft exercise, not a misrepresentation of any working law practice."
     }
   }
 }

@@ -384,6 +384,113 @@
       "resultText": "Case-studien beskriver prosjektet. Live-siden er prosjektet. Repoet er åpent om du vil se hvordan det er bygget.",
 
       "disclosure": "Studioet, adressen, grunnleggeren, teamet og prosjektene er fiktive. Lisboa-lokasjonen og klokken er ekte. Dette er en håndverksøvelse, ikke en feilrepresentasjon."
+    },
+    "soderqvistReuther": {
+      "tags": "React · Framer Motion · React Router · SVG · Egen CSS",
+      "tagline": "Et flersidet nettsted for et fiktivt high-end advokatfirma i Stockholm. Motstykket til Halcyon Atelier i denne porteføljen.",
+      "roleValue": "Design og utvikling (alene)",
+      "yearLabel": "År:",
+      "yearValue": "2026",
+      "statusValue": "Personlig prosjekt",
+
+      "briefLabel": "Oppgaven",
+      "briefHeading": "Et firma som ikke finnes",
+      "briefP1": "Söderqvist & Reuther er et fiktivt advokatfirma i Stockholm — seks sider av et nettsted oppfunnet fra bunnen av: firmanavn, partnere, praksisområder, redaksjonelle notater. Briefen var å bygge noe som leses utvetydig som et seriøst, fungerende advokatfirma i toppen av sitt marked, ikke som en designers lekegrind.",
+      "briefP2": "Selvpålagte begrensninger: ingen SaaS-landingssidekonvensjoner, ingen kortrutenett, ingen stockfoto, ingen klubber eller rettferdighetsvekter, ingen kontaktskjemaer, ingen markedsføringsspråk i teksten. Siden skal føles som et arbeidsverktøy for firmaet, ikke som en annonse.",
+
+      "aestheticLabel": "Estetisk retning",
+      "aestheticHeading": "Stille autoritet",
+      "aestheticP1": "Referansene er privatbank og kapitalforvaltning i sin mest tilbakeholdne form, high-end urmaker- og hotellnettsteder, og stemningen i et trepanelt advokatkontor i skumring heller enn et solfylt lesesal. En besøkende skal føle at hen ser på et firma som opererer i toppen av sitt marked — og at ingen del av siden prøver å selge dem på det.",
+      "aestheticP2": "Den ærlige versjonen av prosessen: første pass lente seg for nærme Halcyon Atelier — varmt papir, redaksjonell trykkfølelse, et hakk for ekspressivt for et advokatfirma. Revampen var en bevisst pivot inn i en mørk, sleek high-end-identitet. Samme forfatter, samme håndverksinstinkt, annet register. Pivoten skjerpet retningen mer enn noen enkelt designbeslutning gjorde.",
+
+      "paletteLabel": "Palett",
+      "paletteHeading": "Seks toner, det meste mørkt",
+      "paletteRole1": "Trykksverte",
+      "paletteRole2": "Tonal løft",
+      "paletteRole3": "Pergament",
+      "paletteRole4": "Messing-aksent",
+      "paletteRole5": "Varm dempet",
+      "paletteRole6": "Dyp stein",
+      "paletteCaption": "Fem av de seks tonene lever i mørkt territorium. Messing-aksenten er det eneste kromatiske innslaget i systemet og behandles som en knapp ressurs — kirurgisk, aldri som gradient, aldri på store flater. Den dukker opp på den kursive ampersanden i firmanavnet, på monogrammet, på den aktive rutemarkøren i navigasjonen, på hårfine aksenter, på én statuspuls. Alt annet er trykksverte og pergament.",
+
+      "typeLabel": "Typografi",
+      "typeHeading": "En serif som holder på mørkt",
+      "typeP1": "To skrifter, ingen tredje. Display-serifen må holde vekten sin på nær-svart uten å bli tynn eller pyntelig; den støttende stemmen må leses som forfinet og stille, ikke som en Silicon Valley-sans. Pairing-logikken: serif for innholdet firmaet vil at du skal huske, mono-følelses-sans for chrome-en som holder deg orientert.",
+      "typeCormorantLabel": "Display",
+      "typeCormorantCaption": "Display",
+      "typeCormorant": "Cormorant Garamond, tegnet med nok kontrast til å føles håndsatt heller enn UI-standard. Brukt på firmanavnet i display-skala, sidetitler, praksisområdeoverskrifter, og den kursive emfasen som bærer det eneste kromatiske innslaget på siden.",
+      "typePlexLabel": "Støtte",
+      "typePlex": "IBM Plex Sans for tracket-out small-caps på navigasjonsmerker, metalinjer, by/klokke-paret, og enhver tekst som vil leses som en stille bildetekst. Satt vidt, det er trackingen som gjør jobben — den signaliserer tilbakeholdenhet uten å heve stemmen.",
+
+      "logoLabel": "Logo",
+      "logoHeading": "Fra favicon til lockup",
+      "logoP1": "Merket startet som en favicon — en SR-ligatur i messing på nær-svart — og vokste til en lockup da navigasjonen trengte mer tilstedeværelse. Monogrammet sitter til venstre for en tynn vertikal regel, deretter hele firmanavnet i tracket small-caps. Merket skalerer rent ned til favicon-størrelse; lockup-en bærer navigasjonen. De to formene leses som samme identitet, ikke som to forskjellige.",
+      "logoLockupCaption": "Navigasjonens lockup",
+
+      "tourLabel": "Side for side",
+      "tourHeading": "Seks ruter, ett register",
+
+      "tourHomeEyebrow": "I.",
+      "tourHomeHeading": "En åpning, ikke en landingsside",
+      "tourHomeBody": "En full-bredde mørk hero, lockup-en og firmanavnet introdusert i display-skala med den kursive ampersanden som bærer det eneste kromatiske merket på skjermen. Under overskriften, firmaets posisjoneringslinje — kursiv, kort. De navigasjonsmessige inngangspunktene presenteres som nummererte redaksjonelle lenker (01 The Firm, 02 Practice…) heller enn som et kortrutenett. Overgangene mellom ruter skjer stille under AnimatePresence.",
+
+      "tourFirmEyebrow": "II.",
+      "tourFirmHeading": "En side som ikke selger seg inn",
+      "tourFirmBody": "Kort posisjoneringstekst skrevet i stemmen til en senior partner — klar, edru, ingen markedsføringstone. Under prosaen rendres firmaets historie som en datert liste med hårfine regler mellom innslagene: grunnleggelse, viktige milepæler, flytting til nåværende lokaler. Siden tar for gitt at leseren allerede er seriøs.",
+
+      "tourPracticeEyebrow": "III.",
+      "tourPracticeHeading": "Arbeidet, navngitt klart",
+      "tourPracticeBody": "Praksisområder presentert i et forfinet redaksjonelt arrangement heller enn et feature-rutenett. Hvert område får en trygg setning på enkelt språk: hva arbeidet er, hvem det vanligvis er for, hvordan firmaet nærmer seg det. Ingen klientnavn noe sted — diskresjon er en del av estetikken.",
+
+      "tourPeopleEyebrow": "IV.",
+      "tourPeopleHeading": "Partnere, satt typografisk",
+      "tourPeopleBody": "Partnerlisten leses som et redaksjonelt oppslag, ikke en team-side. Navn i display-serif, roller i tracket small-caps, kvalifikasjoner og advokatbevillinger på en stille støttelinje. Der et fotografi normalt ville sittet, holder et typografisk monogram i messing posisjonen — samme logikk som firmamerket, anvendt per person. Stockfoto av folk i dress ville brutt registeret; dette gjør ikke det.",
+
+      "tourInsightsEyebrow": "V.",
+      "tourInsightsHeading": "Et redaksjonelt register",
+      "tourInsightsBody": "Insights er firmaets publiseringsstemme — oppfunnede notater og bulletiner om emner praksisen berører, datert, attribuert til partnere ved initialer. Minst ett innslag åpner inn til en fullskreven artikkel under en sub-rute slik at seksjonen føles som en reell publikasjon heller enn en stump. Registeret matcher resten av siden: serifkropp, gjennomtenkt linjelengde, ingen bilder.",
+
+      "tourContactEyebrow": "VI.",
+      "tourContactHeading": "Adresse, telefon, åpningstider",
+      "tourContactBody": "Contact er bevisst stille: postadresse, telefon, en e-post, åpningstider, en enkelt diskret linje om hvordan firmaet tar opp nye saker. Ingen kontaktskjema. Siden opererer på antakelsen om at den som faktisk skal være i kontakt allerede vet hvordan et seriøst firma henvender seg.",
+
+      "navLabel": "Navigasjon og atmosfære",
+      "navHeading": "Tilbakeholdenhet i chrome-en",
+      "navP1": "Navigasjonen gjør det meste av det stille arbeidet. Lockup-en sitter til venstre, tracket small-caps rutemerker går tvers over toppen, den aktive ruten markeres av en enkelt understreking i messing heller enn en fargefylling. Øverst til høyre bærer en Stockholm-tidssone-klokke med en messing-statusprikk — firmaet opererer på Stockholm-tid, og siden sier det uten å si det. Hero-bildene mørknes mot sidekantene slik at typen holder uten konkurranse; hårfine regler i dyp stein gjør delingsarbeidet et fargeskjema vanligvis ville håndtert. Subtil grain over mørke flater holder dem fra å bli flate.",
+
+      "motionLabel": "Bevegelsesprinsipper",
+      "motionHeading": "Bevegelse du knapt merker",
+      "motionP1": "Individuelt er nesten ingen animasjon på siden høy nok til å dra oppmerksomhet. Kumulativt føles siden levende. Scroll-utløste avsløringer fader inn én gang og spilles ikke om; rute-overganger går gjennom AnimatePresence med en stille cross-fade heller enn slide-effekter; heroen bærer en sakte ambient skalering som er vanskelig å fange opp med mindre du leter etter den. Ingen sprett, ingen forskjøvne kaskader, ingen marquees. Easing-en er valgt for å føles besluttsom heller enn lekent. prefers-reduced-motion respekteres globalt — alle avsløringer faller pent tilbake.",
+
+      "techLabel": "Teknisk detalj",
+      "techHeading": "Tilbakeholdenhet i bygget også",
+      "techP1": "React med React Router for client-side routing, Framer Motion for overganger og avsløringer. Håndskrevet CSS — én fil per komponent, intet utility-rammeverk, ingen komponentbibliotek utover uipro-cli-scaffoldingen. Det egne SVG-logoen lever på kilden og komponeres i flere skalaer heller enn å rasteres. Hele siden er ett prosjekt, ingen monorepo-overhead.",
+      "techBuildLabel": "Build",
+      "techBuildValue": "Vite + React",
+      "techAnimationLabel": "Animasjon",
+      "techAnimationValue": "Framer Motion (AnimatePresence + scroll-avsløringer)",
+      "techRoutingLabel": "Routing",
+      "techRoutingValue": "React Router, seks ruter",
+      "techCssLabel": "CSS",
+      "techCssValue": "Håndskrevet, én fil per komponent",
+      "techLogoLabel": "Logo",
+      "techLogoValue": "Egen SVG-monogram + lockup",
+      "techResponsiveLabel": "Responsiv",
+      "techResponsiveValue": "Det redaksjonelle oppsettet flyter rent på små skjermer",
+
+      "closingLabel": "Hva dette prosjektet viser",
+      "closingHeading": "Bredde",
+      "closing1": "Bredde som designer-utvikler: samme forfatter som bygde Halcyons ekspressive redaksjonelle pass bygde også denne tilbakeholdne mørke high-end-firmasiden, samme år, til samme nivå av håndverk.",
+      "closing2": "Disiplinen i tilbakeholdenhet — et seks-siders nettsted levert uten kontaktskjemaer, kortrutenett, stockfoto eller markedsføringstekst.",
+      "closing3": "Vilje til å iterere ærlig. Første pass lente seg redaksjonelt-trykk; revampen inn i mørk high-end var en bevisst pivot, ikke en polering.",
+      "closing4": "Produksjonsmoden React og Framer Motion i et edru register: client-side routing, AnimatePresence, scroll-utløste avsløringer, ambient bevegelse under innholdet.",
+      "closing5": "Editorial typografi holdt til trykk-disiplin på en mørk flate — serif med nok vekt til å lese i skala, tracket small-caps som gjør chrome-arbeidet, kursiv emfase som bærer det eneste kromatiske innslaget.",
+      "closing6": "Å bygge en troverdig fiktiv identitet fra ende til annen: firmanavn, partnere, praksis, adresse, stemme, atmosfære — alt oppfunnet, alt konsekvent.",
+
+      "resultHeading": "Opplev arbeidet selv",
+      "resultText": "Case-studien beskriver firmaet. Live-siden er firmaet. Gå gjennom de seks rutene — arbeidet ligger i tilbakeholdenheten like mye som i typografien.",
+
+      "disclosure": "Firmaet, partnerne, adressen og alt redaksjonelt innhold er fiktivt. Stockholm er ekte. Dette er en håndverksøvelse, ikke en feilrepresentasjon av noen fungerende advokatpraksis."
     }
   }
 }

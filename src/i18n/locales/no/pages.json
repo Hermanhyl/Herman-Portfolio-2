@@ -55,6 +55,9 @@
       },
       "halcyonAtelier": {
         "teaser": "Et editorial enkeltsidet showcase for et fiktivt studio i Lisboa. En bevisst håndverksøvelse i å forplikte seg til ett tydelig estetisk uttrykk, med bevegelse som designspråk og alle visuelle elementer bygget som SVG."
+      },
+      "soderqvistReuther": {
+        "teaser": "Et flersidet React + Framer Motion-nettsted for et fiktivt high-end advokatfirma i Stockholm. Motstykket til Halcyon Atelier i denne porteføljen — mørkt, tilbakeholdent, stille kostbart, med en messing-aksent brukt som en knapp ressurs."
       }
     }
   },

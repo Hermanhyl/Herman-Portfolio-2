@@ -55,6 +55,9 @@
       },
       "halcyonAtelier": {
         "teaser": "A single-page editorial showcase for a fictional Lisbon studio. A deliberate craft exercise in committing to one strong aesthetic, with motion treated as a design language and every visual built as SVG."
+      },
+      "soderqvistReuther": {
+        "teaser": "A multi-page React + Framer Motion site for a fictional high-end Stockholm law firm. The counterpoint to Halcyon Atelier in this portfolio — dark, restrained, quietly expensive, with a brass accent used like a precious resource."
       }
     }
   },

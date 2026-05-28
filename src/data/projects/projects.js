@@ -33,6 +33,39 @@ export const projects = [
   },
 
   {
+    id: "project-soderqvist-reuther",
+    title: "Söderqvist & Reuther",
+    teaser:
+      "A multi-page React + Framer Motion site for a fictional high-end Stockholm law firm. The counterpoint to Halcyon Atelier in this portfolio — dark, restrained, quietly expensive, with a brass accent used like a precious resource.",
+    description:
+      "Söderqvist & Reuther is a fictional high-end law firm based in Stockholm — a six-page React + Framer Motion + React Router site invented from scratch, including firm name, partners, practice areas, and editorial notes. The brief was to build something that reads unambiguously as a serious working law firm at the top of its market, not as a designer's playground.\n\nIt is the deliberate counterpoint to Halcyon Atelier in this portfolio: where Halcyon was expressive, editorial, and craft-obsessed, this firm site is restrained, dark, and quietly expensive. A near-black palette with a single surgical brass accent, Cormorant Garamond serif paired with IBM Plex Sans for tracked-out chrome, AnimatePresence transitions between routes, no contact form. Same author, different register.",
+    images: ["/SoderqvistReuther/hero.jpg"],
+    blogPost: "",
+    github: "",
+    live: "https://adorable-llama-48b630.netlify.app/",
+    figma: "",
+    technologies: ["React", "Framer Motion", "Branding", "Dark UI", "Editorial"],
+    authers: "Herman Hylland",
+    article: [
+      {
+        heading: "Project Overview",
+        content:
+          "A multi-page website for a fictional high-end Stockholm law firm. Six routes — Home, The Firm, Practice, People, Insights, Contact — invented from scratch and held to a single restrained aesthetic register across all of them. Built with React, React Router, Framer Motion, and hand-written CSS (no utility framework, no component library).",
+      },
+      {
+        heading: "My Role: Design and Development",
+        content:
+          "Solo project. Aesthetic direction ('quiet authority' — private banks and high-end watchmakers, not SaaS), six-colour dark palette with surgical brass accent, custom SVG logo (SR monogram → full lockup), typographic system (Cormorant Garamond + IBM Plex Sans), every section's motion grammar, and the underlying React + Framer Motion implementation including AnimatePresence route transitions.",
+      },
+      {
+        heading: "Why This Project Is Here",
+        content:
+          "Range. This case study sits in the portfolio explicitly as the counterpoint to Halcyon Atelier: the same designer-developer can shift register from expressive editorial work to discreet high-end professional work and execute both with conviction. The honest iteration story (the first pass leaned too close to Halcyon, the revamp pivoted to dark high-end) is part of the case — restraint and willingness to iterate are part of the craft. The firm, partners, address, and editorial content are fictional; Stockholm is real.",
+      },
+    ],
+  },
+
+  {
     id: "project1",
     title: "BrannVRn",
     teaser: "UX Process & Learning Design in action: A VR fire safety simulator where I designed the complete user experience and pedagogical framework-transforming complex safety procedures into intuitive, educational interactions.",

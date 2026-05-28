@@ -6,7 +6,7 @@ export const projects = [
       "A single-page editorial showcase for a fictional Lisbon design studio. A deliberate craft exercise in committing to one strong aesthetic, with motion treated as a design language and every visual built as SVG.",
     description:
       "Halcyon Atelier is a single-page React + Framer Motion site for a fictional Lisbon-based hospitality branding studio. Treated as if it were a real working business (portfolio, services, address, a live local clock), the project is an exercise in committing fully to one strong aesthetic direction rather than producing a generic agency template.\n\nThe site is built around an editorial 'Lisbon Sun' palette and the variable serif Fraunces paired with IBM Plex Mono. Every visual on the page is SVG or pure CSS, no raster images, and motion is treated as a design language: expo-out entrances, quart in-out hovers, linear reserved for marquees, with two layers of ambient motion always present so the page never feels frozen.",
-    images: ["/Halcyon/hero.jpg"],
+    images: ["/Halcyon/card-thumb.jpg"],
     blogPost: "",
     github: "https://github.com/Hermanhyl/Single-page-showcase-Halcyon-Atelier-",
     live: "https://halcyonateliershowcase.netlify.app/",
@@ -39,7 +39,7 @@ export const projects = [
       "A multi-page React + Framer Motion site for a fictional high-end Stockholm law firm. The counterpoint to Halcyon Atelier in this portfolio: dark, restrained, quietly expensive, with a brass accent used like a precious resource.",
     description:
       "Söderqvist & Reuther is a fictional high-end law firm based in Stockholm: a six-page React + Framer Motion + React Router site invented from scratch, including firm name, partners, practice areas, and editorial notes. The brief was to build something that reads unambiguously as a serious working law firm at the top of its market, not as a designer's playground.\n\nIt is the deliberate counterpoint to Halcyon Atelier in this portfolio: where Halcyon was expressive, editorial, and craft-obsessed, this firm site is restrained, dark, and quietly expensive. A near-black palette with a single surgical brass accent, Cormorant Garamond serif paired with IBM Plex Sans for tracked-out chrome, AnimatePresence transitions between routes, no contact form. Same hand, different register.",
-    images: ["/SoderqvistReuther/hero.jpg"],
+    images: ["/SoderqvistReuther/card-thumb.jpg"],
     blogPost: "",
     github: "",
     live: "https://adorable-llama-48b630.netlify.app/",

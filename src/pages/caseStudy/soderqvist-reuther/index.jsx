@@ -8,6 +8,40 @@ import { fadeUp, staggerContainer, viewportOnce } from '../../../utils/motion';
 
 const LIVE_URL = 'https://adorable-llama-48b630.netlify.app/';
 
+// The actual S+R interlocking ligature mark from the live site, pulled
+// from the running app's DOM. ViewBox 0 0 64 64, hairline stroke 1.4,
+// rounded caps/joins. The brass dot (#B8945A, r 1.4) sits at the
+// meeting point of the S and R. We render it here at two scales to
+// demonstrate the mark — the same SVG, just scaled.
+function SoderqvistReutherMark({ size = 64, color = '#B8945A', strokeWidth = 1.4 }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 64 64"
+      fill="none"
+      stroke={color}
+      strokeWidth={strokeWidth}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      {/* S — upper bowl + diagonal spine + lower bowl */}
+      <path d="M 30 16 C 26 13 18 13 14 16 C 10 19 10 24 14 27 L 22 30 C 26 31 28 33 28 36 C 28 41 22 43 16 41 C 13 40 11 38 10 36" />
+      {/* R — vertical stem */}
+      <path d="M 36 16 L 36 48" />
+      {/* R — upper bowl */}
+      <path d="M 36 16 L 46 16 C 52 16 54 19 54 23 C 54 27 52 30 46 30 L 36 30" />
+      {/* R — diagonal leg */}
+      <path d="M 44 30 L 54 48" />
+      {/* S — meeting curve into the R */}
+      <path d="M 28 36 C 28 33 26 31 22 30" />
+      {/* Brass dot at the meeting point */}
+      <circle cx="33" cy="22" r="1.4" fill="#B8945A" stroke="none" />
+    </svg>
+  );
+}
+
 /**
  * Söderqvist & Reuther — multi-page React + Framer Motion site for a
  * fictional high-end Stockholm law firm. Counterpoint to Halcyon
@@ -24,15 +58,15 @@ export default function SoderqvistReutherCaseStudy() {
     url: 'https://hermanhylland.netlify.app/case-study/soderqvist-reuther',
   });
 
-  // Six-colour palette extracted from the live S&R site. Hardcoded
-  // because these describe the project, not the portfolio.
+  // Six representative tones from the project's full thirteen-tone
+  // Ink & Brass system. Hex values are the actual project values.
   const firmPalette = [
-    { hex: '#0E0F12', roleKey: 'paletteRole1' }, // Ink / background
-    { hex: '#1A1B1E', roleKey: 'paletteRole2' }, // Tonal lift (cards, hairlines bg)
-    { hex: '#E8E2D2', roleKey: 'paletteRole3' }, // Parchment cream (body)
+    { hex: '#0E0F12', roleKey: 'paletteRole1' }, // Base ink (page bg)
+    { hex: '#16171B', roleKey: 'paletteRole2' }, // Surface (header/footer band)
+    { hex: '#E8E2D2', roleKey: 'paletteRole3' }, // Bone (primary type)
     { hex: '#B8945A', roleKey: 'paletteRole4' }, // Brass accent (surgical)
-    { hex: '#7E776B', roleKey: 'paletteRole5' }, // Warm muted gray (inactive nav, meta)
-    { hex: '#4A453E', roleKey: 'paletteRole6' }, // Deep stone (hairlines, dividers)
+    { hex: '#7E776B', roleKey: 'paletteRole5' }, // Meta (labels, dates)
+    { hex: '#2E2C28', roleKey: 'paletteRole6' }, // Hairline
   ];
 
   // The six routes of the live site.
@@ -326,14 +360,10 @@ export default function SoderqvistReutherCaseStudy() {
                 variants={fadeUp}
                 className="bg-ink-elevated border border-border rounded-2xl p-10 flex items-center justify-center"
                 style={{ backgroundColor: '#0E0F12' }}
+                role="img"
+                aria-label="Söderqvist & Reuther S+R monogram in brass"
               >
-                <span
-                  className="font-display text-7xl tracking-tight"
-                  style={{ color: '#B8945A' }}
-                  aria-label="S R monogram in brass"
-                >
-                  SR
-                </span>
+                <SoderqvistReutherMark size={140} />
               </motion.div>
               <motion.div
                 variants={fadeUp}
@@ -341,11 +371,11 @@ export default function SoderqvistReutherCaseStudy() {
                 style={{ backgroundColor: '#0E0F12' }}
               >
                 <div className="flex items-center gap-4">
-                  <span className="font-display text-2xl" style={{ color: '#B8945A' }}>SR</span>
-                  <span className="block w-px h-7" style={{ backgroundColor: '#4A453E' }} aria-hidden="true" />
+                  <SoderqvistReutherMark size={44} strokeWidth={1.6} />
+                  <span className="block w-px h-7" style={{ backgroundColor: '#2E2C28' }} aria-hidden="true" />
                   <span
-                    className="font-sans text-sm uppercase"
-                    style={{ color: '#E8E2D2', letterSpacing: '0.16em' }}
+                    className="font-display text-sm uppercase"
+                    style={{ color: '#E8E2D2', letterSpacing: '0.16em', fontVariant: 'small-caps' }}
                   >
                     Söderqvist &amp; Reuther
                   </span>

@@ -41,7 +41,7 @@ export const projects = [
       "Söderqvist & Reuther is a fictional high-end law firm based in Stockholm: a six-page React + Framer Motion + React Router site invented from scratch, including firm name, partners, practice areas, and editorial notes. The brief was to build something that reads unambiguously as a serious working law firm at the top of its market, not as a designer's playground.\n\nIt is the deliberate counterpoint to Halcyon Atelier in this portfolio: where Halcyon was expressive, editorial, and craft-obsessed, this firm site is restrained, dark, and quietly expensive. A near-black palette with a single surgical brass accent, Cormorant Garamond serif paired with IBM Plex Sans for tracked-out chrome, AnimatePresence transitions between routes, no contact form. Same hand, different register.",
     images: ["/SoderqvistReuther/card-thumb.jpg"],
     blogPost: "",
-    github: "",
+    github: "https://github.com/Hermanhyl/LayerWebShowcase",
     live: "https://adorable-llama-48b630.netlify.app/",
     figma: "",
     technologies: ["React", "Framer Motion", "Branding", "Dark UI", "Editorial"],

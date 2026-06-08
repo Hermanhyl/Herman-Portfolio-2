@@ -12,6 +12,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { formatDateLong } from '../../utils/formatDate';
 import useDocumentMeta from '../../hooks/useDocumentMeta';
+import JsonLd, { buildBlogPostingSchema } from '../../components/jsonLd';
 
 function BlogPost() {
   const { id } = useParams();
@@ -80,6 +81,9 @@ function BlogPost() {
 
   return (
     <PageTransition>
+      {/* BlogPosting structured data — lets Google build rich
+          search results (headline, date, author, image). */}
+      <JsonLd data={buildBlogPostingSchema(post)} />
       <ScrollProgress />
       <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white">
         <article className="max-w-3xl mx-auto px-4 py-20">

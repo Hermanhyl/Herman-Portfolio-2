@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Code, Palette, Rocket, GraduationCap, Briefcase, Award, Sparkles, Terminal, Layers, Brain, ArrowRight, MapPin, Calendar, FolderKanban, PenTool, Film, BookOpen } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import useDocumentMeta from '../../hooks/useDocumentMeta';
+import JsonLd, { personSchema } from '../../components/jsonLd';
 import OptimizedImage from '../../components/optimizedImage';
 import ScrollReveal from '../../components/scrollReveal';
 import GradientButton from '../../components/gradientButton';
@@ -113,6 +114,10 @@ function About() {
 
   return (
     <div className="relative min-h-screen w-full bg-gradient-to-b from-black via-gray-900 to-black px-4 py-20 text-white">
+      {/* Person structured data — the About page is the canonical
+          source of truth for who Herman is, so the schema sits
+          here as well as the lighter copy on the homepage. */}
+      <JsonLd data={personSchema} />
       <div className="max-w-6xl mx-auto space-y-20">
 
         {/* Hero Section */}

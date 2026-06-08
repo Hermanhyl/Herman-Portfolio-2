@@ -14,6 +14,7 @@ import BlogPostCard from "../../components/blogPostCard";
 import GradientButton from "../../components/gradientButton";
 import IllustrationLightbox from "../../components/illustrationLightbox";
 import AnimationCard from "../../components/animationCard";
+import JsonLd, { personSchema, websiteSchema } from "../../components/jsonLd";
 import { projects } from "../../data/projects/projects";
 import { illustrations, illustrationCategories } from "../../data/illustrations";
 import { animations } from "../../data/animations";
@@ -148,6 +149,11 @@ function Home() {
 
   return (
     <PageTransition>
+      {/* Structured data: Person + WebSite for the homepage, helps
+          Google build a knowledge panel and recognise the site
+          identity. */}
+      <JsonLd data={personSchema} />
+      <JsonLd data={websiteSchema} />
       <div className="relative bg-gradient-to-b from-black via-gray-900 to-black min-h-screen">
         <GrainOverlay />
         <Hero />

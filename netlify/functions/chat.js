@@ -104,12 +104,52 @@ You can:
 - Encourage visitors to explore the portfolio and reach out
 `;
 
+// Defensive caps. Anyone who finds the function URL can hit it with
+// curl; without limits a hostile caller could burn OpenAI credits.
+// These caps are loose enough not to interfere with normal chat use
+// (a few back-and-forth turns of natural-language questions) but
+// tight enough that abuse stops mattering.
+const MAX_MESSAGES = 20;            // total conversation turns
+const MAX_TOTAL_INPUT_CHARS = 12000; // sum of all message content
+const MAX_SINGLE_MESSAGE_CHARS = 4000;
+
+// Allowlist of origins that may call this function. Production
+// deployment URL, plus localhost and Netlify preview URLs for
+// development. Any other origin (someone running curl, an
+// embedded iframe on a different domain, a hostile script) is
+// rejected before we spend tokens.
+const ALLOWED_ORIGIN_PATTERNS = [
+  /^https:\/\/portfolio-herman-hylland\.netlify\.app$/,
+  /^https:\/\/.*--portfolio-herman-hylland\.netlify\.app$/, // PR previews
+  /^https?:\/\/localhost(:\d+)?$/,
+  /^https?:\/\/127\.0\.0\.1(:\d+)?$/,
+];
+
+function isOriginAllowed(origin) {
+  if (!origin) return false;
+  return ALLOWED_ORIGIN_PATTERNS.some((pattern) => pattern.test(origin));
+}
+
 export const handler = async (event) => {
   // Only allow POST requests
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
       body: JSON.stringify({ error: 'Method not allowed' }),
+    };
+  }
+
+  // Reject calls from origins that are not this site. Origin is
+  // set by browsers on cross-origin fetches; if it's missing or
+  // unrecognised, fall back to Referer. Casual abuse via curl
+  // (which sends neither) is blocked.
+  const origin = event.headers.origin || event.headers.Origin;
+  const referer = event.headers.referer || event.headers.Referer;
+  const refererOrigin = referer ? (() => { try { return new URL(referer).origin; } catch { return null; } })() : null;
+  if (!isOriginAllowed(origin) && !isOriginAllowed(refererOrigin)) {
+    return {
+      statusCode: 403,
+      body: JSON.stringify({ error: 'Forbidden' }),
     };
   }
 
@@ -121,6 +161,33 @@ export const handler = async (event) => {
       return {
         statusCode: 400,
         body: JSON.stringify({ error: 'Invalid request: messages array required' }),
+      };
+    }
+
+    // Cap message count.
+    if (messages.length > MAX_MESSAGES) {
+      return {
+        statusCode: 413,
+        body: JSON.stringify({ error: 'Conversation too long. Please clear and start again.' }),
+      };
+    }
+
+    // Cap individual + total input length.
+    let totalChars = 0;
+    for (const msg of messages) {
+      const content = typeof msg.content === 'string' ? msg.content : '';
+      if (content.length > MAX_SINGLE_MESSAGE_CHARS) {
+        return {
+          statusCode: 413,
+          body: JSON.stringify({ error: 'Message too long.' }),
+        };
+      }
+      totalChars += content.length;
+    }
+    if (totalChars > MAX_TOTAL_INPUT_CHARS) {
+      return {
+        statusCode: 413,
+        body: JSON.stringify({ error: 'Conversation history too large. Please clear and start again.' }),
       };
     }
 

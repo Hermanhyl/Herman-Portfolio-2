@@ -10,6 +10,7 @@ import ProjectCard from '../../components/projectCard';
 import AnimationCard from '../../components/animationCard';
 import CardCursor from '../../components/cardCursor';
 import IllustrationLightbox from '../../components/illustrationLightbox';
+import useDocumentMeta from '../../hooks/useDocumentMeta';
 import { projects } from '../../data/projects/projects';
 import { illustrations, illustrationCategories } from '../../data/illustrations';
 import { animations } from '../../data/animations';
@@ -140,6 +141,12 @@ function WorkCard({ project, index }) {
 function Work() {
   const { t } = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
+
+  useDocumentMeta({
+    title: t('meta.work.title'),
+    description: t('meta.work.description'),
+    url: 'https://portfolio-herman-hylland.netlify.app/work'
+  });
 
   // Illustration-specific state
   const [lightboxOpen, setLightboxOpen] = useState(false);

@@ -69,8 +69,8 @@ function Contact() {
   const { t } = useTranslation();
 
   useDocumentMeta({
-    title: 'Contact',
-    description: 'Get in touch with Herman Hylland for frontend development, UI/UX design projects, or collaboration opportunities.',
+    title: t('meta.contact.title'),
+    description: t('meta.contact.description'),
     url: 'https://portfolio-herman-hylland.netlify.app/contact'
   });
 

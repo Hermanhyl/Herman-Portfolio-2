@@ -17,8 +17,8 @@ function Blog() {
   const currentLang = i18n.language?.startsWith('no') ? 'no' : 'en';
 
   useDocumentMeta({
-    title: t('blog.title'),
-    description: t('blog.description'),
+    title: t('meta.blog.title'),
+    description: t('meta.blog.description'),
     url: 'https://portfolio-herman-hylland.netlify.app/blog'
   });
 

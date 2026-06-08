@@ -138,6 +138,28 @@
     "availability": "For tiden tilgjengelig for frilansarbeid og heltidsstillinger.",
     "location": "Basert i Norge"
   },
+  "meta": {
+    "home": {
+      "title": "Frontend-utvikler & UI/UX-designer",
+      "description": "Portefølje for Herman Hylland — frontend-utvikler og UI/UX-designer basert i Norge. React, TypeScript, motion design og tilgjengelige nettopplevelser."
+    },
+    "work": {
+      "title": "Arbeid",
+      "description": "Case-studier, artikler, illustrasjoner og animasjoner fra Herman Hyllands portefølje. React-prosjekter, UX-arbeid og visuell design."
+    },
+    "about": {
+      "title": "Om meg",
+      "description": "Bli kjent med Herman Hylland — en frontend-utvikler og UI/UX-designer som kombinerer bachelor i animasjon med frontend-utvikling ved Noroff. 2+ års frontend, 3+ års design."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "Ta kontakt med Herman Hylland for frontend-utvikling, UI/UX-designprosjekter eller samarbeid."
+    },
+    "blog": {
+      "title": "Blogg",
+      "description": "Tanker om frontend-utvikling, React-mønstre, UX-design og AI-arbeidsflyter fra Herman Hylland."
+    }
+  },
   "notFound": {
     "title": "Siden finnes ikke",
     "description": "Siden du leter etter finnes ikke, eller har blitt flyttet. Prøv en av lenkene under.",

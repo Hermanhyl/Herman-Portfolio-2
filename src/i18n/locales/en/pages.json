@@ -138,6 +138,28 @@
     "availability": "Currently available for freelance work and full-time positions.",
     "location": "Based in Norway"
   },
+  "meta": {
+    "home": {
+      "title": "Frontend Developer & UI/UX Designer",
+      "description": "Portfolio of Herman Hylland — frontend developer and UI/UX designer based in Norway. React, TypeScript, motion design, and accessible web experiences."
+    },
+    "work": {
+      "title": "Work",
+      "description": "Case studies, articles, illustrations, and animations from Herman Hylland's portfolio. React projects, UX work, and visual design."
+    },
+    "about": {
+      "title": "About",
+      "description": "Learn about Herman Hylland — a frontend developer and UI/UX designer combining a Bachelor in Animation with frontend development at Noroff. 2+ years frontend, 3+ years design."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Get in touch with Herman Hylland for frontend development, UI/UX design projects, or collaboration opportunities."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Thoughts on frontend development, React patterns, UX design, and AI workflows from Herman Hylland."
+    }
+  },
   "notFound": {
     "title": "Page not found",
     "description": "The page you were looking for doesn't exist or has moved. Try one of the links below.",

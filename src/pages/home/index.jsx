@@ -15,6 +15,7 @@ import GradientButton from "../../components/gradientButton";
 import IllustrationLightbox from "../../components/illustrationLightbox";
 import AnimationCard from "../../components/animationCard";
 import JsonLd, { personSchema, websiteSchema } from "../../components/jsonLd";
+import useDocumentMeta from "../../hooks/useDocumentMeta";
 import { projects } from "../../data/projects/projects";
 import { illustrations, illustrationCategories } from "../../data/illustrations";
 import { animations } from "../../data/animations";
@@ -24,6 +25,12 @@ import { ChevronRight, Search, X, Palette, BookOpen, ArrowRight, PenTool, Instag
 function Home() {
   const { t } = useTranslation();
   const location = useLocation();
+
+  useDocumentMeta({
+    title: t('meta.home.title'),
+    description: t('meta.home.description'),
+    url: 'https://portfolio-herman-hylland.netlify.app/'
+  });
 
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState("");

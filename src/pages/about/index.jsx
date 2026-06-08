@@ -33,8 +33,8 @@ function About() {
   const timelineRef = useRef(null);
 
   useDocumentMeta({
-    title: 'About Me',
-    description: 'Learn about Herman Hylland - a frontend developer and UI/UX designer with 2+ years of experience building modern web applications with React and Tailwind CSS.',
+    title: t('meta.about.title'),
+    description: t('meta.about.description'),
     url: 'https://portfolio-herman-hylland.netlify.app/about'
   });
 

@@ -8,7 +8,7 @@ export default function PiaSalaryCaseStudy() {
   useDocumentMeta({
     title: 'PIA Salary Tracker Case Study',
     description: 'A privacy-first income tracking app with automatic tax calculations. All your financial data stays on your device, stored in Excel files you control.',
-    url: 'https://hermanhylland.netlify.app/case-study/pia-salary',
+    url: 'https://portfolio-herman-hylland.netlify.app/case-study/pia-salary',
   });
 
   const { t } = useTranslation();

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Herman Hylland Blog</title>
-    <link>https://hermanhylland.netlify.app/blog</link>
+    <link>https://portfolio-herman-hylland.netlify.app/blog</link>
     <description>Insights on frontend development, React patterns, UI/UX design, and project case studies from Herman Hylland.</description>
     <language>en-us</language>
     <lastBuildDate>Thu, 05 Feb 2026 12:45:06 GMT</lastBuildDate>
-    <atom:link href="https://hermanhylland.netlify.app/rss.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://portfolio-herman-hylland.netlify.app/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
-      <url>https://hermanhylland.netlify.app/favicon.ico</url>
+      <url>https://portfolio-herman-hylland.netlify.app/favicon.ico</url>
       <title>Herman Hylland Blog</title>
-      <link>https://hermanhylland.netlify.app/blog</link>
+      <link>https://portfolio-herman-hylland.netlify.app/blog</link>
     </image>
     <item>
       <title>My Creative Side: Digital Illustration as Passion and Purpose</title>
-      <link>https://hermanhylland.netlify.app/blog/digital-illustrations-gallery</link>
-      <guid isPermaLink="true">https://hermanhylland.netlify.app/blog/digital-illustrations-gallery</guid>
+      <link>https://portfolio-herman-hylland.netlify.app/blog/digital-illustrations-gallery</link>
+      <guid isPermaLink="true">https://portfolio-herman-hylland.netlify.app/blog/digital-illustrations-gallery</guid>
       <pubDate>Wed, 07 Jan 2026 12:00:00 GMT</pubDate>
       <description>Showcasing my creative and illustrative side—a lifelong passion I always return to, and my dream of combining illustration with my professional work.</description>
       <author>herman@hermanhylland.com (Herman Hylland)</author>
@@ -27,8 +27,8 @@
     </item>
     <item>
       <title>BrannVRn: Building a VR Fire Safety Training Simulator</title>
-      <link>https://hermanhylland.netlify.app/blog/brannvrn-vr-fire-safety</link>
-      <guid isPermaLink="true">https://hermanhylland.netlify.app/blog/brannvrn-vr-fire-safety</guid>
+      <link>https://portfolio-herman-hylland.netlify.app/blog/brannvrn-vr-fire-safety</link>
+      <guid isPermaLink="true">https://portfolio-herman-hylland.netlify.app/blog/brannvrn-vr-fire-safety</guid>
       <pubDate>Wed, 07 Jan 2026 00:00:00 GMT</pubDate>
       <description>How our team developed an A-graded VR fire safety training simulator for Sykehuspartner, combining immersive technology with educational design.</description>
       <author>herman@hermanhylland.com (Herman Hylland)</author>
@@ -40,8 +40,8 @@
     </item>
     <item>
       <title>GoneFishing: Building a Modern Fishing Tracker App</title>
-      <link>https://hermanhylland.netlify.app/blog/gonefishing-tracker-app</link>
-      <guid isPermaLink="true">https://hermanhylland.netlify.app/blog/gonefishing-tracker-app</guid>
+      <link>https://portfolio-herman-hylland.netlify.app/blog/gonefishing-tracker-app</link>
+      <guid isPermaLink="true">https://portfolio-herman-hylland.netlify.app/blog/gonefishing-tracker-app</guid>
       <pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate>
       <description>Creating a comprehensive fishing tracking application with Next.js, Supabase, and a focus on user experience across all devices.</description>
       <author>herman@hermanhylland.com (Herman Hylland)</author>
@@ -52,8 +52,8 @@
     </item>
     <item>
       <title>Hobbyist: Designing a Social Platform for Genuine Connections</title>
-      <link>https://hermanhylland.netlify.app/blog/hobbyist-social-platform</link>
-      <guid isPermaLink="true">https://hermanhylland.netlify.app/blog/hobbyist-social-platform</guid>
+      <link>https://portfolio-herman-hylland.netlify.app/blog/hobbyist-social-platform</link>
+      <guid isPermaLink="true">https://portfolio-herman-hylland.netlify.app/blog/hobbyist-social-platform</guid>
       <pubDate>Mon, 05 Jan 2026 00:00:00 GMT</pubDate>
       <description>Building a social platform that connects people through shared hobbies and activities, focusing on friendship rather than dating.</description>
       <author>herman@hermanhylland.com (Herman Hylland)</author>
@@ -64,8 +64,8 @@
     </item>
     <item>
       <title>Holidaze: A Collaborative Journey to an A-Grade Booking Platform</title>
-      <link>https://hermanhylland.netlify.app/blog/holidaze-booking-platform</link>
-      <guid isPermaLink="true">https://hermanhylland.netlify.app/blog/holidaze-booking-platform</guid>
+      <link>https://portfolio-herman-hylland.netlify.app/blog/holidaze-booking-platform</link>
+      <guid isPermaLink="true">https://portfolio-herman-hylland.netlify.app/blog/holidaze-booking-platform</guid>
       <pubDate>Sun, 04 Jan 2026 00:00:00 GMT</pubDate>
       <description>How our team of three built a cozy booking platform for slow-living getaways, earning an A on our final exam project.</description>
       <author>herman@hermanhylland.com (Herman Hylland)</author>
@@ -77,8 +77,8 @@
     </item>
     <item>
       <title>Own The Bid: Building an Auction Platform with Vanilla JavaScript</title>
-      <link>https://hermanhylland.netlify.app/blog/own-the-bid-auction</link>
-      <guid isPermaLink="true">https://hermanhylland.netlify.app/blog/own-the-bid-auction</guid>
+      <link>https://portfolio-herman-hylland.netlify.app/blog/own-the-bid-auction</link>
+      <guid isPermaLink="true">https://portfolio-herman-hylland.netlify.app/blog/own-the-bid-auction</guid>
       <pubDate>Sat, 03 Jan 2026 00:00:00 GMT</pubDate>
       <description>Creating a full-featured auction platform using vanilla JavaScript, and the improvements I made after initial feedback.</description>
       <author>herman@hermanhylland.com (Herman Hylland)</author>
@@ -89,8 +89,8 @@
     </item>
     <item>
       <title>Timer &amp; Planner: Combining Focus Sessions with Smart Scheduling</title>
-      <link>https://hermanhylland.netlify.app/blog/timer-planner-productivity</link>
-      <guid isPermaLink="true">https://hermanhylland.netlify.app/blog/timer-planner-productivity</guid>
+      <link>https://portfolio-herman-hylland.netlify.app/blog/timer-planner-productivity</link>
+      <guid isPermaLink="true">https://portfolio-herman-hylland.netlify.app/blog/timer-planner-productivity</guid>
       <pubDate>Fri, 02 Jan 2026 00:00:00 GMT</pubDate>
       <description>Building a privacy-focused productivity app that combines customizable timers with drag-and-drop weekly and monthly planning.</description>
       <author>herman@hermanhylland.com (Herman Hylland)</author>
@@ -102,8 +102,8 @@
     </item>
     <item>
       <title>PIA Salary Tracker: Privacy-First Income Management</title>
-      <link>https://hermanhylland.netlify.app/blog/pia-salary-tracker</link>
-      <guid isPermaLink="true">https://hermanhylland.netlify.app/blog/pia-salary-tracker</guid>
+      <link>https://portfolio-herman-hylland.netlify.app/blog/pia-salary-tracker</link>
+      <guid isPermaLink="true">https://portfolio-herman-hylland.netlify.app/blog/pia-salary-tracker</guid>
       <pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate>
       <description>Building an income tracking app that stores all data locally in Excel files, with automatic tax calculations and bilingual support.</description>
       <author>herman@hermanhylland.com (Herman Hylland)</author>
@@ -115,8 +115,8 @@
     </item>
     <item>
       <title>ClicketyCart: A Retro-Styled E-Commerce Experience</title>
-      <link>https://hermanhylland.netlify.app/blog/clicketycart-ecommerce</link>
-      <guid isPermaLink="true">https://hermanhylland.netlify.app/blog/clicketycart-ecommerce</guid>
+      <link>https://portfolio-herman-hylland.netlify.app/blog/clicketycart-ecommerce</link>
+      <guid isPermaLink="true">https://portfolio-herman-hylland.netlify.app/blog/clicketycart-ecommerce</guid>
       <pubDate>Tue, 30 Dec 2025 00:00:00 GMT</pubDate>
       <description>Building a fun, retro-inspired e-commerce frontend with React, and the improvements made after submission.</description>
       <author>herman@hermanhylland.com (Herman Hylland)</author>
@@ -127,8 +127,8 @@
     </item>
     <item>
       <title>Community Science Museum: My Second Step in Web Development</title>
-      <link>https://hermanhylland.netlify.app/blog/community-science-museum</link>
-      <guid isPermaLink="true">https://hermanhylland.netlify.app/blog/community-science-museum</guid>
+      <link>https://portfolio-herman-hylland.netlify.app/blog/community-science-museum</link>
+      <guid isPermaLink="true">https://portfolio-herman-hylland.netlify.app/blog/community-science-museum</guid>
       <pubDate>Sun, 28 Dec 2025 00:00:00 GMT</pubDate>
       <description>Reflecting on my second major project at Noroff—an early milestone that taught me about accessibility and responsive design.</description>
       <author>herman@hermanhylland.com (Herman Hylland)</author>
@@ -139,8 +139,8 @@
     </item>
     <item>
       <title>GameHub: Where My Developer Journey Began</title>
-      <link>https://hermanhylland.netlify.app/blog/gamehub-where-it-began</link>
-      <guid isPermaLink="true">https://hermanhylland.netlify.app/blog/gamehub-where-it-began</guid>
+      <link>https://portfolio-herman-hylland.netlify.app/blog/gamehub-where-it-began</link>
+      <guid isPermaLink="true">https://portfolio-herman-hylland.netlify.app/blog/gamehub-where-it-began</guid>
       <pubDate>Thu, 25 Dec 2025 00:00:00 GMT</pubDate>
       <description>My very first coding project—a reminder of humble beginnings and the growth that comes from persistence.</description>
       <author>herman@hermanhylland.com (Herman Hylland)</author>
@@ -151,8 +151,8 @@
     </item>
     <item>
       <title>Building an AI-Powered Portfolio Assistant</title>
-      <link>https://hermanhylland.netlify.app/blog/ai-powered-chatbot</link>
-      <guid isPermaLink="true">https://hermanhylland.netlify.app/blog/ai-powered-chatbot</guid>
+      <link>https://portfolio-herman-hylland.netlify.app/blog/ai-powered-chatbot</link>
+      <guid isPermaLink="true">https://portfolio-herman-hylland.netlify.app/blog/ai-powered-chatbot</guid>
       <pubDate>Tue, 24 Dec 2024 00:00:00 GMT</pubDate>
       <description>How I integrated OpenAI GPT-4o-mini into my portfolio to create an interactive AI assistant that answers questions about my skills and experience.</description>
       <author>herman@hermanhylland.com (Herman Hylland)</author>
@@ -163,8 +163,8 @@
     </item>
     <item>
       <title>Modern React Patterns I Use Daily</title>
-      <link>https://hermanhylland.netlify.app/blog/modern-react-patterns</link>
-      <guid isPermaLink="true">https://hermanhylland.netlify.app/blog/modern-react-patterns</guid>
+      <link>https://portfolio-herman-hylland.netlify.app/blog/modern-react-patterns</link>
+      <guid isPermaLink="true">https://portfolio-herman-hylland.netlify.app/blog/modern-react-patterns</guid>
       <pubDate>Mon, 23 Dec 2024 00:00:00 GMT</pubDate>
       <description>A look at the React patterns and practices that have improved my development workflow and code quality.</description>
       <author>herman@hermanhylland.com (Herman Hylland)</author>
@@ -174,8 +174,8 @@
     </item>
     <item>
       <title>From Figma to Code: My Workflow</title>
-      <link>https://hermanhylland.netlify.app/blog/design-to-development</link>
-      <guid isPermaLink="true">https://hermanhylland.netlify.app/blog/design-to-development</guid>
+      <link>https://portfolio-herman-hylland.netlify.app/blog/design-to-development</link>
+      <guid isPermaLink="true">https://portfolio-herman-hylland.netlify.app/blog/design-to-development</guid>
       <pubDate>Sun, 22 Dec 2024 00:00:00 GMT</pubDate>
       <description>How I bridge the gap between design and development to create pixel-perfect, responsive web interfaces.</description>
       <author>herman@hermanhylland.com (Herman Hylland)</author>

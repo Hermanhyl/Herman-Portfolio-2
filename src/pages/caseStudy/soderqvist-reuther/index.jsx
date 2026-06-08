@@ -55,7 +55,7 @@ export default function SoderqvistReutherCaseStudy() {
     title: 'Söderqvist & Reuther Case Study',
     description:
       'A multi-page React + Framer Motion site for a fictional high-end Stockholm law firm: an exercise in quiet authority, restrained dark UI, and editorial typography on dark.',
-    url: 'https://hermanhylland.netlify.app/case-study/soderqvist-reuther',
+    url: 'https://portfolio-herman-hylland.netlify.app/case-study/soderqvist-reuther',
   });
 
   // Six representative tones from the project's full thirteen-tone

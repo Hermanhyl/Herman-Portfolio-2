@@ -12,7 +12,7 @@ import { useEffect } from 'react';
 function useDocumentMeta({
   title,
   description,
-  image = 'https://hermanhylland.netlify.app/profile-picture.jpg',
+  image = 'https://portfolio-herman-hylland.netlify.app/profile-picture.jpg',
   url,
   type = 'website'
 }) {

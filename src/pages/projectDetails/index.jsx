@@ -45,8 +45,8 @@ function ProjectDetail() {
   useDocumentMeta({
     title: title || 'Project',
     description: teaser || 'View this project by Herman Hylland.',
-    url: `https://hermanhylland.netlify.app/project/${id}`,
-    image: project?.images?.[0] ? `https://hermanhylland.netlify.app${project.images[0]}` : undefined
+    url: `https://portfolio-herman-hylland.netlify.app/project/${id}`,
+    image: project?.images?.[0] ? `https://portfolio-herman-hylland.netlify.app${project.images[0]}` : undefined
   });
 
   const currentIndex = projects.findIndex((p) => p.id === id);

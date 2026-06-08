@@ -19,7 +19,7 @@ function Blog() {
   useDocumentMeta({
     title: t('blog.title'),
     description: t('blog.description'),
-    url: 'https://hermanhylland.netlify.app/blog'
+    url: 'https://portfolio-herman-hylland.netlify.app/blog'
   });
 
   const [user, setUser] = useState(null);

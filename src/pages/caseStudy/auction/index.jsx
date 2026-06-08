@@ -8,7 +8,7 @@ export default function AuctionCaseStudy() {
   useDocumentMeta({
     title: 'Own The Bid Case Study',
     description: 'A web-based auction platform where users can create listings, place bids, and manage their credits in real-time.',
-    url: 'https://hermanhylland.netlify.app/case-study/auction',
+    url: 'https://portfolio-herman-hylland.netlify.app/case-study/auction',
   });
 
   const { t } = useTranslation();

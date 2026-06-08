@@ -20,7 +20,7 @@ export default function HalcyonAtelierCaseStudy() {
   useDocumentMeta({
     title: 'Halcyon Atelier Case Study',
     description: 'A single-page editorial showcase for a fictional Lisbon design studio: an exercise in committing to one aesthetic point of view.',
-    url: 'https://hermanhylland.netlify.app/case-study/halcyon-atelier',
+    url: 'https://portfolio-herman-hylland.netlify.app/case-study/halcyon-atelier',
   });
 
   // Six-colour palette of the Halcyon project. Hex values are hardcoded

@@ -8,7 +8,7 @@ export default function BrannVRnCaseStudy() {
   useDocumentMeta({
     title: 'BrannVRn Case Study',
     description: 'A VR fire safety simulator that teaches hospital staff to respond to emergencies, without the risk.',
-    url: 'https://hermanhylland.netlify.app/case-study/brannvrn',
+    url: 'https://portfolio-herman-hylland.netlify.app/case-study/brannvrn',
   });
 
   const { t } = useTranslation();

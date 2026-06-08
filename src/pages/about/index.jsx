@@ -34,7 +34,7 @@ function About() {
   useDocumentMeta({
     title: 'About Me',
     description: 'Learn about Herman Hylland - a frontend developer and UI/UX designer with 2+ years of experience building modern web applications with React and Tailwind CSS.',
-    url: 'https://hermanhylland.netlify.app/about'
+    url: 'https://portfolio-herman-hylland.netlify.app/about'
   });
 
   // Stats data - using translations

@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const SITE_URL = 'https://hermanhylland.netlify.app';
+const SITE_URL = 'https://portfolio-herman-hylland.netlify.app';
 const SITE_TITLE = 'Herman Hylland Blog';
 const SITE_DESCRIPTION = 'Insights on frontend development, React patterns, UI/UX design, and project case studies from Herman Hylland.';
 

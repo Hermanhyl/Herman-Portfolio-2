@@ -71,7 +71,7 @@ function Contact() {
   useDocumentMeta({
     title: 'Contact',
     description: 'Get in touch with Herman Hylland for frontend development, UI/UX design projects, or collaboration opportunities.',
-    url: 'https://hermanhylland.netlify.app/contact'
+    url: 'https://portfolio-herman-hylland.netlify.app/contact'
   });
 
   const [formData, setFormData] = useState({

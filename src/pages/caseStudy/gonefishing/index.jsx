@@ -7,7 +7,7 @@ export default function GoneFishingCaseStudy() {
   useDocumentMeta({
     title: 'GoneFishing Case Study',
     description: 'A personal logbook for anglers: track catches, locations, and conditions, available offline on the water.',
-    url: 'https://hermanhylland.netlify.app/case-study/gonefishing',
+    url: 'https://portfolio-herman-hylland.netlify.app/case-study/gonefishing',
   });
 
   return (

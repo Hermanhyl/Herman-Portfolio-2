@@ -8,7 +8,7 @@ export default function CommunityScienceMuseumCaseStudy() {
   useDocumentMeta({
     title: 'Community Science Museum Case Study',
     description: 'An accessible, responsive museum website designed for younger audiences, my second project at Noroff and an early step in my development journey.',
-    url: 'https://hermanhylland.netlify.app/case-study/community-science-museum',
+    url: 'https://portfolio-herman-hylland.netlify.app/case-study/community-science-museum',
   });
 
   const { t } = useTranslation();

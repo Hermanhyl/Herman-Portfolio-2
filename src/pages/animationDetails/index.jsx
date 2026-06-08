@@ -33,8 +33,8 @@ function AnimationDetail() {
   useDocumentMeta({
     title: title || 'Animation',
     description: teaser || 'View this animation by Herman Hylland.',
-    url: `https://hermanhylland.netlify.app/animation/${id}`,
-    image: animation?.thumbnail ? `https://hermanhylland.netlify.app${animation.thumbnail}` : undefined
+    url: `https://portfolio-herman-hylland.netlify.app/animation/${id}`,
+    image: animation?.thumbnail ? `https://portfolio-herman-hylland.netlify.app${animation.thumbnail}` : undefined
   });
 
   const currentIndex = animations.findIndex((a) => a.id === id);

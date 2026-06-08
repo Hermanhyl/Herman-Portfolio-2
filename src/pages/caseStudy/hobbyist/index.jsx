@@ -8,7 +8,7 @@ export default function HobbyistCaseStudy() {
   useDocumentMeta({
     title: 'Hobbyist Case Study',
     description: 'A social platform that helps people find others who share their hobbies. No swiping, just genuine connections.',
-    url: 'https://hermanhylland.netlify.app/case-study/hobbyist',
+    url: 'https://portfolio-herman-hylland.netlify.app/case-study/hobbyist',
   });
 
   const { t } = useTranslation();

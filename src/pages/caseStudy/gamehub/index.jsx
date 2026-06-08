@@ -10,7 +10,7 @@ export default function GameHubCaseStudy() {
   useDocumentMeta({
     title: 'GameHub Case Study',
     description: 'My very first web development project, where it all began.',
-    url: 'https://hermanhylland.netlify.app/case-study/gamehub',
+    url: 'https://portfolio-herman-hylland.netlify.app/case-study/gamehub',
   });
 
   return (

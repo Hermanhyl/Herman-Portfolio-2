@@ -25,7 +25,7 @@ function BlogPost() {
   useDocumentMeta({
     title: post?.title || t('blog.postNotFoundTitle'),
     description: post?.excerpt || t('blog.postNotFoundDescription'),
-    url: `https://hermanhylland.netlify.app/blog/${id}`,
+    url: `https://portfolio-herman-hylland.netlify.app/blog/${id}`,
     type: 'article'
   });
 

@@ -10,7 +10,7 @@ export default function ClicketyCartCaseStudy() {
   useDocumentMeta({
     title: 'ClicketyCart Case Study',
     description: 'A retro-inspired e-commerce storefront with a fast, playful checkout experience, built to make online shopping feel effortless.',
-    url: 'https://hermanhylland.netlify.app/case-study/clicketycart',
+    url: 'https://portfolio-herman-hylland.netlify.app/case-study/clicketycart',
   });
 
   return (

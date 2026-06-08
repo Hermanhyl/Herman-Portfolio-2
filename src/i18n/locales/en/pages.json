@@ -138,6 +138,14 @@
     "availability": "Currently available for freelance work and full-time positions.",
     "location": "Based in Norway"
   },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you were looking for doesn't exist or has moved. Try one of the links below.",
+    "backHome": "Go to homepage",
+    "viewWork": "Browse my work",
+    "metaTitle": "Page not found",
+    "metaDescription": "The page you were looking for could not be found."
+  },
   "blog": {
     "title": "From the Blog",
     "pageTitle": "My Insights",

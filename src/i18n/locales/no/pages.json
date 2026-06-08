@@ -138,6 +138,14 @@
     "availability": "For tiden tilgjengelig for frilansarbeid og heltidsstillinger.",
     "location": "Basert i Norge"
   },
+  "notFound": {
+    "title": "Siden finnes ikke",
+    "description": "Siden du leter etter finnes ikke, eller har blitt flyttet. Prøv en av lenkene under.",
+    "backHome": "Gå til forsiden",
+    "viewWork": "Se mitt arbeid",
+    "metaTitle": "Siden finnes ikke",
+    "metaDescription": "Siden du leter etter kunne ikke bli funnet."
+  },
   "blog": {
     "title": "Fra bloggen",
     "pageTitle": "Mine innsikter",

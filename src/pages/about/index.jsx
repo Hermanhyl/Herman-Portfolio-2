@@ -350,7 +350,16 @@ function About() {
               {timeline.map((item, index) => {
                 const isLeft = index % 2 === 0;
                 const Icon = item.icon;
-                const isWork = item.type === 'work';
+
+                // Uniform on-palette treatment across every card.
+                // Previously work entries were tangerine and education
+                // entries were warm-muted (the remapped purple), which
+                // made the column read as hit-or-miss orange/grey and
+                // signaled "education is less important". Differentiation
+                // now lives entirely in the lucide icon choice
+                // (Briefcase / GraduationCap / Palette) carried in the
+                // timeline data, which already distinguishes type
+                // without dropping any card to a muted treatment.
 
                 return (
                   <ScrollReveal key={index} delay={index * 100}>
@@ -358,18 +367,18 @@ function About() {
                     <div className="md:hidden">
                       <div className="flex flex-col items-center">
                         {/* Icon */}
-                        <div className={`p-3 rounded-full border-2 ${isWork ? 'bg-emerald-500/20 border-emerald-500' : 'bg-purple-500/20 border-purple-500'} mb-3`}>
-                          <Icon className={`w-5 h-5 ${isWork ? 'text-emerald-400' : 'text-purple-400'}`} />
+                        <div className="p-3 rounded-full border-2 bg-emerald-500/20 border-emerald-500 mb-3">
+                          <Icon className="w-5 h-5 text-emerald-400" />
                         </div>
                         {/* Connecting line */}
-                        <div className={`w-px h-4 ${isWork ? 'bg-emerald-500/50' : 'bg-purple-500/50'}`}></div>
+                        <div className="w-px h-4 bg-emerald-500/50"></div>
                         {/* Card */}
-                        <div className={`w-full group bg-white/5 hover:bg-white/10 backdrop-blur-sm border ${isWork ? 'border-emerald-500/20 hover:border-emerald-500/40' : 'border-purple-500/20 hover:border-purple-500/40'} rounded-2xl p-5 transition-all duration-300`}>
-                          <span className={`block font-display italic tabular-nums text-2xl md:text-3xl tracking-tight mb-2 leading-none ${isWork ? 'text-accent' : 'text-bone-muted'}`}>
+                        <div className="w-full group bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-emerald-500/20 hover:border-emerald-500/40 rounded-2xl p-5 transition-all duration-300">
+                          <span className="block font-display italic tabular-nums text-2xl md:text-3xl tracking-tight mb-2 leading-none text-accent">
                             {item.year}
                           </span>
                           <h3 className="text-lg font-bold text-white mb-1">{item.title}</h3>
-                          <p className={`font-medium mb-2 text-sm ${isWork ? 'text-emerald-400' : 'text-purple-400'}`}>{item.company}</p>
+                          <p className="font-medium mb-2 text-sm text-emerald-400">{item.company}</p>
                           <p className="text-gray-400 text-sm">{item.description}</p>
                         </div>
                       </div>
@@ -379,20 +388,20 @@ function About() {
                     <div className={`hidden md:flex relative items-start ${isLeft ? 'flex-row' : 'flex-row-reverse'}`}>
                       {/* Content */}
                       <div className={`flex-1 w-1/2 ${isLeft ? 'pr-12 text-right' : 'pl-12'}`}>
-                        <div className={`group bg-white/5 hover:bg-white/10 backdrop-blur-sm border ${isWork ? 'border-emerald-500/20 hover:border-emerald-500/40' : 'border-purple-500/20 hover:border-purple-500/40'} rounded-2xl p-6 transition-all duration-300`}>
-                          <span className={`block font-display italic tabular-nums text-2xl md:text-3xl tracking-tight mb-2 leading-none ${isWork ? 'text-accent' : 'text-bone-muted'}`}>
+                        <div className="group bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-emerald-500/20 hover:border-emerald-500/40 rounded-2xl p-6 transition-all duration-300">
+                          <span className="block font-display italic tabular-nums text-2xl md:text-3xl tracking-tight mb-2 leading-none text-accent">
                             {item.year}
                           </span>
                           <h3 className="text-xl font-bold text-white mb-1">{item.title}</h3>
-                          <p className={`font-medium mb-2 ${isWork ? 'text-emerald-400' : 'text-purple-400'}`}>{item.company}</p>
+                          <p className="font-medium mb-2 text-emerald-400">{item.company}</p>
                           <p className="text-gray-400 text-sm">{item.description}</p>
                         </div>
                       </div>
 
                       {/* Icon */}
                       <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
-                        <div className={`p-3 rounded-full border-2 ${isWork ? 'bg-emerald-500/20 border-emerald-500' : 'bg-purple-500/20 border-purple-500'} transition-transform hover:scale-110`}>
-                          <Icon className={`w-5 h-5 ${isWork ? 'text-emerald-400' : 'text-purple-400'}`} />
+                        <div className="p-3 rounded-full border-2 bg-emerald-500/20 border-emerald-500 transition-transform hover:scale-110">
+                          <Icon className="w-5 h-5 text-emerald-400" />
                         </div>
                       </div>
 

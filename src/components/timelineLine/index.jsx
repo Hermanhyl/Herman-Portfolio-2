@@ -21,11 +21,19 @@ export default function TimelineLine({ parentRef }) {
   });
   const scaleY = useTransform(smoothed, [0, 1], [0, 1]);
 
+  // Solid accent. The earlier emerald → cyan → purple gradient looked
+  // like a clean rainbow stripe in the old palette, but after the
+  // palette swap it reads as tangerine fading to cream and then to a
+  // warm muted gray. Combined with the per-card colour toggle that
+  // was just unified, the column felt split into "orange at the top,
+  // grey at the bottom." A single accent ribbon keeps the editorial
+  // draw-in animation as the moment of interest while the timeline
+  // colour stays on-brand the whole way down.
   return (
     <motion.div
       aria-hidden="true"
       style={{ scaleY, transformOrigin: 'top' }}
-      className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-emerald-500 via-cyan-500 to-purple-500 opacity-60"
+      className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-accent opacity-60"
     />
   );
 }

@@ -66,7 +66,7 @@ function WorkCard({ project, index }) {
 
   return (
     <motion.div variants={fadeUp}>
-      <CardCursor>
+      <CardCursor label={t('cursor.view')}>
       <Link
         to={caseStudyPath}
         className="group block"

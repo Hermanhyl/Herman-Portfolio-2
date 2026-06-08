@@ -43,5 +43,9 @@
     "tagline": "Front-End Developer & Digital Designer crafting beautiful web experiences.",
     "rights": "All rights reserved",
     "builtWith": "Built with"
+  },
+  "cursor": {
+    "view": "VIEW →",
+    "read": "READ →"
   }
 }

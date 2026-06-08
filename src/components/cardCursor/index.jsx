@@ -15,7 +15,10 @@ import { useState, useRef, useEffect } from 'react';
  *   index.css that zeros out transitions.
  *
  * @param {React.ReactNode} props.children
- * @param {string} props.label - Disc label. Default "VIEW →".
+ * @param {string} props.label - Disc label. Default "VIEW →". Callers
+ *   should pass a translated value via t('cursor.view') or
+ *   t('cursor.read') so the disc honours the active locale. The
+ *   English default is kept as a defensive fallback only.
  * @param {string} props.className
  */
 function CardCursor({ children, label = 'VIEW →', className = '' }) {

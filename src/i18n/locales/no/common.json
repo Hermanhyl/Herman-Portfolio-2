@@ -43,5 +43,9 @@
     "tagline": "Frontend-utvikler & Digital designer som skaper vakre nettopplevelser.",
     "rights": "Alle rettigheter forbeholdt",
     "builtWith": "Bygget med"
+  },
+  "cursor": {
+    "view": "SE →",
+    "read": "LES →"
   }
 }

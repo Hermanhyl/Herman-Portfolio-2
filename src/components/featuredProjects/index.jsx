@@ -15,7 +15,7 @@ function FeaturedProjectCard({ project, index }) {
 
   return (
     <ScrollReveal delay={index * 100}>
-      <CardCursor>
+      <CardCursor label={t('cursor.view')}>
       <Link
         to={project.path || `/project/${project.id}`}
         className="group block"

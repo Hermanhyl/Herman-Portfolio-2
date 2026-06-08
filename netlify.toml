@@ -9,3 +9,41 @@
   to = "/index.html"
   status = 200
   force = false
+
+# Security headers applied to every response. CSP is intentionally
+# omitted here — it requires per-source tuning (Tailwind inline
+# styles, Framer Motion transforms, Google Fonts, Netlify Identity,
+# OpenAI proxy) and is best added in a follow-up pass using
+# Content-Security-Policy-Report-Only to find a working ruleset.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Force HTTPS for one year on all subdomains. Submit-ready for
+    # the HSTS preload list once the custom domain is final.
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    # Block clickjacking — refuse to be rendered in an iframe from
+    # any origin other than this one.
+    X-Frame-Options = "SAMEORIGIN"
+    # Browsers must trust the Content-Type header instead of
+    # sniffing the response body. Blocks a class of XSS where an
+    # attacker uploads a text file the browser interprets as HTML.
+    X-Content-Type-Options = "nosniff"
+    # Send the full URL to same-origin requests; for cross-origin
+    # send only the origin (scheme + host). Strips query and path
+    # from outbound links to third parties.
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # Disable browser features the site does not use. Keeps a
+    # compromised script from quietly asking for camera or
+    # geolocation.
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()"
+    # Block legacy DNS prefetch leakage to third parties the user
+    # never asked about.
+    X-DNS-Prefetch-Control = "off"
+
+# Long-cache static assets — they are content-hashed by Vite, so
+# safe to cache for a year. HTML stays short-cached to ensure
+# clients pick up new builds quickly.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

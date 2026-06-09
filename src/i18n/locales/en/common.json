@@ -47,5 +47,9 @@
   "cursor": {
     "view": "VIEW →",
     "read": "READ →"
+  },
+  "marquee": {
+    "pause": "Pause moving text",
+    "play": "Resume moving text"
   }
 }

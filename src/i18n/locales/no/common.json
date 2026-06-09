@@ -47,5 +47,9 @@
   "cursor": {
     "view": "SE →",
     "read": "LES →"
+  },
+  "marquee": {
+    "pause": "Pause rullende tekst",
+    "play": "Start rullende tekst"
   }
 }

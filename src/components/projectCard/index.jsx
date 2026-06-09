@@ -2,8 +2,17 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LivePreview from "../livePreview";
 
-function ProjectCard({ project }) {
+/**
+ * @param {Object} props
+ * @param {Object} props.project
+ * @param {'h2'|'h3'|'h4'} [props.headingLevel='h3'] - Heading element
+ *   used for the card title. Pass 'h2' when the card sits directly
+ *   under the page's h1 with no other heading in between (WCAG 1.3.1
+ *   — heading levels must not skip).
+ */
+function ProjectCard({ project, headingLevel = 'h3' }) {
   const { t } = useTranslation();
+  const Heading = headingLevel;
 
   // Get translated content, falling back to static data if translation doesn't exist
   const title = t(`projectData.${project.id}.title`, { defaultValue: project.title });
@@ -29,9 +38,9 @@ function ProjectCard({ project }) {
           </div>
 
           {/* Title */}
-          <h3 className="text-xl lg:text-2xl font-semibold text-white group-hover:text-emerald-400 transition-colors duration-300 mb-3">
+          <Heading className="text-xl lg:text-2xl font-semibold text-white group-hover:text-emerald-400 transition-colors duration-300 mb-3">
             {title}
-          </h3>
+          </Heading>
 
           {/* Technology badges */}
           <div className="flex flex-wrap gap-2 mb-4">

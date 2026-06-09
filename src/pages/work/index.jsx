@@ -110,10 +110,13 @@ function WorkCard({ project, index }) {
               ))}
             </div>
 
-            {/* Title */}
-            <h3 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-bold tracking-tight text-white group-hover:text-emerald-400 transition-colors duration-300 leading-[1.1]">
+            {/* Title — h2 because it sits directly under the page
+                h1 with no intermediate section heading. Previously
+                h3, which created a level skip (WCAG 1.3.1, flagged
+                by external test F6). */}
+            <h2 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-bold tracking-tight text-white group-hover:text-emerald-400 transition-colors duration-300 leading-[1.1]">
               {project.title}
-            </h3>
+            </h2>
 
             {/* Teaser/Description */}
             <p className="text-base md:text-lg text-gray-300 leading-relaxed line-clamp-4">
@@ -280,7 +283,7 @@ function Work() {
             >
               {projects.map((project) => (
                 <motion.div key={project.id} variants={fadeUp}>
-                  <ProjectCard project={project} />
+                  <ProjectCard project={project} headingLevel="h2" />
                 </motion.div>
               ))}
             </motion.div>

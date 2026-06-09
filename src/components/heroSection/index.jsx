@@ -135,12 +135,6 @@ export default function Hero() {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
 
-        {/* Asymmetric: hairline bleeding off the right edge behind the
-            portrait — a grid-breaking decorative mark. */}
-        <div
-          aria-hidden="true"
-          className="hidden lg:block absolute top-[42%] right-[-15%] h-px w-[55%] bg-accent/40"
-        />
         {/* Decorative off-axis mark, top-right area */}
         <div
           aria-hidden="true"

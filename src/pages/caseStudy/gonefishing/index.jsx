@@ -1,6 +1,7 @@
 import PageTransition from '../../../components/pageTransition';
 import OptimizedImage from '../../../components/optimizedImage';
 import BackButton from '../../../components/backButton';
+import ExternalLinkHint from '../../../components/externalLinkHint';
 import useDocumentMeta from '../../../hooks/useDocumentMeta';
 
 export default function GoneFishingCaseStudy() {

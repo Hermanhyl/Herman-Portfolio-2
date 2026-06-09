@@ -1,6 +1,7 @@
 import PageTransition from '../../../components/pageTransition';
 import OptimizedImage from '../../../components/optimizedImage';
 import BackButton from '../../../components/backButton';
+import ExternalLinkHint from '../../../components/externalLinkHint';
 import useDocumentMeta from '../../../hooks/useDocumentMeta';
 import { useTranslation } from 'react-i18next';
 
@@ -203,6 +204,7 @@ export default function CommunityScienceMuseumCaseStudy() {
               >
                 {t('cs.common.viewLiveSite')}
                 <span aria-hidden="true">→</span>
+                <ExternalLinkHint />
               </a>
               <a
                 href="https://github.com/Hermanhyl/Semester-Project"
@@ -212,6 +214,7 @@ export default function CommunityScienceMuseumCaseStudy() {
               >
                 {t('cs.common.viewGithub')}
                 <span aria-hidden="true">→</span>
+                <ExternalLinkHint />
               </a>
               <a
                 href="https://www.figma.com/design/1yLOguDPoCrwqg3vVzLV5B/Semester-Project-1?t=VVdJeGinDyZeJPV7-0"
@@ -221,6 +224,7 @@ export default function CommunityScienceMuseumCaseStudy() {
               >
                 {t('cs.common.viewFigma')}
                 <span aria-hidden="true">→</span>
+                <ExternalLinkHint />
               </a>
             </div>
 

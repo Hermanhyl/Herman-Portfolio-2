@@ -35,7 +35,8 @@
     "copied": "Link Copied!",
     "next": "Next",
     "previous": "Previous",
-    "more": "more"
+    "more": "more",
+    "opensInNewTab": "opens in new tab"
   },
   "footer": {
     "quickLinks": "Quick Links",

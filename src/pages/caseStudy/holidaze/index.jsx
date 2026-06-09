@@ -1,6 +1,7 @@
 import PageTransition from '../../../components/pageTransition';
 import OptimizedImage from '../../../components/optimizedImage';
 import BackButton from '../../../components/backButton';
+import ExternalLinkHint from '../../../components/externalLinkHint';
 import useDocumentMeta from '../../../hooks/useDocumentMeta';
 import { useTranslation } from 'react-i18next';
 
@@ -281,6 +282,7 @@ export default function HolidazeCaseStudy() {
               >
                 {t('cs.common.viewLiveSite')}
                 <span aria-hidden="true">→</span>
+                <ExternalLinkHint />
               </a>
               <a
                 href="https://github.com/maddipaddi/Fireside-Holidaze"
@@ -290,6 +292,7 @@ export default function HolidazeCaseStudy() {
               >
                 {t('cs.common.viewGithub')}
                 <span aria-hidden="true">→</span>
+                <ExternalLinkHint />
               </a>
               <a
                 href="https://www.figma.com/design/thqoG8jMTmJWJ0xvjoWJFX/PE2-Fireside-Holidaze?node-id=97-2&p=f&t=WNVw9oV9YS4fXdlk-0"
@@ -299,6 +302,7 @@ export default function HolidazeCaseStudy() {
               >
                 {t('cs.common.viewFigma')}
                 <span aria-hidden="true">→</span>
+                <ExternalLinkHint />
               </a>
             </div>
 

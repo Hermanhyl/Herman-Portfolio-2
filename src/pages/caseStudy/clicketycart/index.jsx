@@ -1,6 +1,7 @@
 import PageTransition from '../../../components/pageTransition';
 import OptimizedImage from '../../../components/optimizedImage';
 import BackButton from '../../../components/backButton';
+import ExternalLinkHint from '../../../components/externalLinkHint';
 import useDocumentMeta from '../../../hooks/useDocumentMeta';
 import { useTranslation } from 'react-i18next';
 
@@ -292,6 +293,7 @@ export default function ClicketyCartCaseStudy() {
               >
                 {t('cs.common.viewLiveSite')}
                 <span aria-hidden="true">→</span>
+                <ExternalLinkHint />
               </a>
               <a
                 href="https://github.com/Hermanhyl/ClicketyCart"
@@ -301,6 +303,7 @@ export default function ClicketyCartCaseStudy() {
               >
                 {t('cs.common.viewGithub')}
                 <span aria-hidden="true">→</span>
+                <ExternalLinkHint />
               </a>
               <a
                 href="https://www.figma.com/design/R8wGWrRexwOTDaQnpFKNmn/Ecom-store?node-id=0-1&p=f&t=UlgGs9y5P55UgOu2-0"
@@ -310,6 +313,7 @@ export default function ClicketyCartCaseStudy() {
               >
                 {t('cs.common.viewFigma')}
                 <span aria-hidden="true">→</span>
+                <ExternalLinkHint />
               </a>
             </div>
 

@@ -1,6 +1,7 @@
 import PageTransition from '../../../components/pageTransition';
 import OptimizedImage from '../../../components/optimizedImage';
 import BackButton from '../../../components/backButton';
+import ExternalLinkHint from '../../../components/externalLinkHint';
 import useDocumentMeta from '../../../hooks/useDocumentMeta';
 import { useTranslation } from 'react-i18next';
 
@@ -290,6 +291,7 @@ export default function TimerPlannerCaseStudy() {
               >
                 {t('cs.common.viewLiveApp')}
                 <span aria-hidden="true">→</span>
+                <ExternalLinkHint />
               </a>
               <a
                 href="https://github.com/Hermanhyl/Timer-Planner"
@@ -299,6 +301,7 @@ export default function TimerPlannerCaseStudy() {
               >
                 {t('cs.common.viewGithub')}
                 <span aria-hidden="true">→</span>
+                <ExternalLinkHint />
               </a>
             </div>
 

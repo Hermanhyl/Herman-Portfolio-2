@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import PageTransition from '../../../components/pageTransition';
 import OptimizedImage from '../../../components/optimizedImage';
 import BackButton from '../../../components/backButton';
+import ExternalLinkHint from '../../../components/externalLinkHint';
 import useDocumentMeta from '../../../hooks/useDocumentMeta';
 
 export default function PiaSalaryCaseStudy() {
@@ -290,6 +291,7 @@ export default function PiaSalaryCaseStudy() {
               >
                 {t('cs.common.viewLiveApp')}
                 <span aria-hidden="true">→</span>
+                <ExternalLinkHint />
               </a>
               <a
                 href="https://github.com/Hermanhyl/PIA_Salary_Tracker"
@@ -299,6 +301,7 @@ export default function PiaSalaryCaseStudy() {
               >
                 {t('cs.common.viewGithub')}
                 <span aria-hidden="true">→</span>
+                <ExternalLinkHint />
               </a>
             </div>
 

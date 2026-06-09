@@ -1,6 +1,7 @@
 import PageTransition from '../../../components/pageTransition';
 import OptimizedImage from '../../../components/optimizedImage';
 import BackButton from '../../../components/backButton';
+import ExternalLinkHint from '../../../components/externalLinkHint';
 import useDocumentMeta from '../../../hooks/useDocumentMeta';
 import { useTranslation } from 'react-i18next';
 
@@ -285,6 +286,7 @@ export default function AuctionCaseStudy() {
               >
                 {t('cs.common.viewLiveSite')}
                 <span aria-hidden="true">→</span>
+                <ExternalLinkHint />
               </a>
               <a
                 href="https://github.com/Hermanhyl/Own-The-Bid-Semester-Project-2"
@@ -294,6 +296,7 @@ export default function AuctionCaseStudy() {
               >
                 {t('cs.common.viewGithub')}
                 <span aria-hidden="true">→</span>
+                <ExternalLinkHint />
               </a>
               <a
                 href="https://www.figma.com/design/8AhvLrYMu6VoQhHefNQpUz/Semester-Project-2-auction?t=RmAPyAmZq0TLngla-0"
@@ -303,6 +306,7 @@ export default function AuctionCaseStudy() {
               >
                 {t('cs.common.viewFigma')}
                 <span aria-hidden="true">→</span>
+                <ExternalLinkHint />
               </a>
             </div>
 

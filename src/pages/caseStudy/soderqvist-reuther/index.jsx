@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import PageTransition from '../../../components/pageTransition';
 import OptimizedImage from '../../../components/optimizedImage';
 import BackButton from '../../../components/backButton';
+import ExternalLinkHint from '../../../components/externalLinkHint';
 import useDocumentMeta from '../../../hooks/useDocumentMeta';
 import { fadeUp, staggerContainer, viewportOnce } from '../../../utils/motion';
 
@@ -149,6 +150,7 @@ export default function SoderqvistReutherCaseStudy() {
                   >
                     {t('cs.common.viewLiveSite')}
                     <span aria-hidden="true">→</span>
+                <ExternalLinkHint />
                   </a>
                 </div>
               </div>
@@ -573,6 +575,7 @@ export default function SoderqvistReutherCaseStudy() {
               >
                 {t('cs.common.viewLiveSite')}
                 <span aria-hidden="true">→</span>
+                <ExternalLinkHint />
               </a>
             </div>
 

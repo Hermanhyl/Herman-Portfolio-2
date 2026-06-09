@@ -311,7 +311,15 @@ function Work() {
                   </button>
                 ))}
               </div>
-              <div className="text-center mt-3 sm:mt-4 text-gray-400 text-xs sm:text-sm">
+              {/* Live region so SR users hear the result count
+                  update when they pick a different category
+                  (WCAG 4.1.3 Status Messages). */}
+              <div
+                className="text-center mt-3 sm:mt-4 text-gray-400 text-xs sm:text-sm"
+                role="status"
+                aria-live="polite"
+                aria-atomic="true"
+              >
                 {selectedCategory === 'All'
                   ? `${illustrations.length} ${t('illustrations.illustrationsCount')}`
                   : `${filteredIllustrations.length} ${t('illustrations.illustrationsIn')} ${selectedCategory}`}

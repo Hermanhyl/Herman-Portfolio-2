@@ -51,5 +51,8 @@
   "marquee": {
     "pause": "Pause moving text",
     "play": "Resume moving text"
+  },
+  "languageSwitcher": {
+    "changed": "Language changed to English"
   }
 }

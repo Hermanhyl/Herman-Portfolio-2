@@ -116,8 +116,18 @@ function Blog() {
                   </button>
                 )}
               </div>
+              {/* Result count is a live region so SR users hear it
+                  update as they type (WCAG 4.1.3 Status Messages).
+                  role="status" + aria-live="polite" + aria-atomic
+                  "true" so the whole sentence is re-announced when
+                  the count changes. */}
               {searchQuery && (
-                <p className="text-sm text-gray-400 text-center">
+                <p
+                  className="text-sm text-gray-400 text-center"
+                  role="status"
+                  aria-live="polite"
+                  aria-atomic="true"
+                >
                   {resultCount === 0
                     ? t('blog.noResults')
                     : t('blog.resultsFound', { count: resultCount })}

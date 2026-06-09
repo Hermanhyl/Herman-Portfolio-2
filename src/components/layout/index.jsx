@@ -37,10 +37,15 @@ export default function Layout() {
   <ScrollToTop />
   <BackToTop />
   <ChatBot />
-  {/* Skip to main content link for keyboard navigation */}
+  {/* Skip to main content link for keyboard navigation.
+      Foreground was text-white on bg-emerald-500 (which is now
+      tangerine #ff5c2c in the active palette), measured at 3.08:1.
+      Switched to text-accent-ink (#14110d) which gives 5.5:1 and
+      passes WCAG 1.4.3 for body text. Same fix pattern used on
+      every gradient button on the site. */}
   <a
     href="#main-content"
-    className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 bg-emerald-500 text-white px-6 py-3 rounded-lg font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black"
+    className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 bg-emerald-500 text-accent-ink px-6 py-3 rounded-lg font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black"
   >
     Skip to main content
   </a>

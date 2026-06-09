@@ -191,7 +191,7 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <motion.div variants={rise} className="flex flex-wrap gap-4 justify-center md:justify-start pt-2">
-              <MagneticCTA to="/projects" variant="primary">
+              <MagneticCTA to="/work" variant="primary">
                 {t('hero.cta')}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </MagneticCTA>

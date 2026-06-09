@@ -9,7 +9,7 @@ import NetworkBackground from '../../components/networkBackground';
 import useDocumentMeta from '../../hooks/useDocumentMeta';
 import { fadeUp, staggerContainer, ease, duration } from '../../utils/motion';
 
-function FloatingField({ id, name, type = 'text', value, onChange, disabled, label, placeholder, required = true }) {
+function FloatingField({ id, name, type = 'text', value, onChange, disabled, label, placeholder, required = true, autoComplete = 'off', requiredLabel }) {
   // Trick: keep a single space as the placeholder so the input is never
   // "placeholder-shown" once the user types — peer-[:not(:placeholder-shown)]
   // then drives the floating-label state via pure CSS.
@@ -23,6 +23,7 @@ function FloatingField({ id, name, type = 'text', value, onChange, disabled, lab
         onChange={onChange}
         required={required}
         aria-required={required}
+        autoComplete={autoComplete}
         disabled={disabled}
         placeholder=" "
         className="peer w-full px-4 pt-6 pb-2.5 bg-white/5 border border-white/10 rounded-lg text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition disabled:opacity-50 disabled:cursor-not-allowed"
@@ -32,6 +33,12 @@ function FloatingField({ id, name, type = 'text', value, onChange, disabled, lab
         className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-base transition-all duration-200 ease-out peer-focus:top-2 peer-focus:translate-y-0 peer-focus:text-xs peer-focus:text-emerald-400 peer-focus:font-medium peer-[:not(:placeholder-shown)]:top-2 peer-[:not(:placeholder-shown)]:translate-y-0 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-emerald-300"
       >
         {label}
+        {required && (
+          <>
+            <span aria-hidden="true" className="text-accent ml-1">*</span>
+            <span className="sr-only"> ({requiredLabel})</span>
+          </>
+        )}
         {placeholder && (
           <span className="hidden peer-focus:inline text-gray-500"> · {placeholder}</span>
         )}
@@ -40,7 +47,7 @@ function FloatingField({ id, name, type = 'text', value, onChange, disabled, lab
   );
 }
 
-function FloatingTextarea({ id, name, value, onChange, disabled, label, rows = 5, required = true }) {
+function FloatingTextarea({ id, name, value, onChange, disabled, label, rows = 5, required = true, autoComplete = 'off', requiredLabel }) {
   return (
     <div className="relative">
       <textarea
@@ -50,6 +57,7 @@ function FloatingTextarea({ id, name, value, onChange, disabled, label, rows = 5
         onChange={onChange}
         required={required}
         aria-required={required}
+        autoComplete={autoComplete}
         disabled={disabled}
         rows={rows}
         placeholder=" "
@@ -60,6 +68,12 @@ function FloatingTextarea({ id, name, value, onChange, disabled, label, rows = 5
         className="pointer-events-none absolute left-4 top-4 text-gray-400 text-base transition-all duration-200 ease-out peer-focus:top-2 peer-focus:text-xs peer-focus:text-emerald-400 peer-focus:font-medium peer-[:not(:placeholder-shown)]:top-2 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-emerald-300"
       >
         {label}
+        {required && (
+          <>
+            <span aria-hidden="true" className="text-accent ml-1">*</span>
+            <span className="sr-only"> ({requiredLabel})</span>
+          </>
+        )}
       </label>
     </div>
   );
@@ -205,13 +219,24 @@ function Contact() {
                     method="POST"
                     data-netlify="true"
                     data-netlify-honeypot="bot-field"
-                    aria-describedby={submitStatus === 'success' || submitStatus === 'error' ? 'contact-form-status' : undefined}
+                    aria-describedby={
+                      submitStatus === 'success' || submitStatus === 'error'
+                        ? 'contact-form-status contact-required-hint'
+                        : 'contact-required-hint'
+                    }
                   >
                     <input type="hidden" name="form-name" value="contact" />
                     <p className="hidden">
                       <label>
                         Don't fill this out if you're human: <input name="bot-field" />
                       </label>
+                    </p>
+
+                    {/* Visible hint that asterisk-marked fields are required
+                        (WCAG 3.3.2). Referenced via aria-describedby on the
+                        form so SR users hear it on first focus. */}
+                    <p id="contact-required-hint" className="text-xs text-gray-400 mb-2">
+                      {t('contact.form.requiredHint')}
                     </p>
 
                     <FloatingField
@@ -221,6 +246,8 @@ function Contact() {
                       onChange={handleChange}
                       disabled={submitStatus === 'loading'}
                       label={t('contact.form.name')}
+                      autoComplete="name"
+                      requiredLabel={t('contact.form.required')}
                     />
 
                     <FloatingField
@@ -231,6 +258,8 @@ function Contact() {
                       onChange={handleChange}
                       disabled={submitStatus === 'loading'}
                       label={t('contact.form.email')}
+                      autoComplete="email"
+                      requiredLabel={t('contact.form.required')}
                     />
 
                     <FloatingTextarea
@@ -240,6 +269,8 @@ function Contact() {
                       onChange={handleChange}
                       disabled={submitStatus === 'loading'}
                       label={t('contact.form.message')}
+                      autoComplete="off"
+                      requiredLabel={t('contact.form.required')}
                     />
 
                     <button

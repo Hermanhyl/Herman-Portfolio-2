@@ -133,7 +133,9 @@
       "send": "Send melding",
       "sending": "Sender...",
       "success": "Meldingen ble sendt!",
-      "error": "Kunne ikke sende meldingen. Vennligst prøv igjen."
+      "error": "Kunne ikke sende meldingen. Vennligst prøv igjen.",
+      "required": "påkrevd",
+      "requiredHint": "Felter merket med * er påkrevd."
     },
     "availability": "For tiden tilgjengelig for frilansarbeid og heltidsstillinger.",
     "location": "Basert i Norge"

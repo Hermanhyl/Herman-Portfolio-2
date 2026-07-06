@@ -12,7 +12,7 @@ const caseStudySchema = {
   '@type': 'CreativeWork',
   name: 'Connecta website redesign',
   headline: 'Connecta: a trust-first redesign for an online therapy practice',
-  about: 'UX analysis, information architecture, WordPress build, and SEO for a small online therapy practice.',
+  about: 'UX analysis, information architecture, React build, and SEO for a small online therapy practice.',
   author: { '@type': 'Person', name: 'Herman Hylland' },
   url: 'https://portfolio-herman-hylland.netlify.app/case-study/connecta',
   inLanguage: ['en', 'no'],
@@ -24,7 +24,7 @@ export default function ConnectaCaseStudy() {
   useDocumentMeta({
     title: 'Connecta Case Study',
     description:
-      'A trust-first redesign of an online therapy practice. UX analysis, information architecture, WordPress build, and SEO, delivered solo. Ranks top locally for "terapi Drammen".',
+      'A trust-first redesign of an online therapy practice. UX analysis, information architecture, React build, and SEO, delivered solo. Ranks top locally for "terapi Drammen".',
     url: 'https://portfolio-herman-hylland.netlify.app/case-study/connecta',
   });
 
@@ -210,12 +210,12 @@ export default function ConnectaCaseStudy() {
           </div>
         </section>
 
-        {/* Section 6: Where It Got Hard (friction) */}
+        {/* Section 6: Under the Hood (engineering decisions) */}
         <section className="relative py-16 md:py-24">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-                {t('cs.common.theFriction')}
+                {t('cs.common.underTheHood')}
               </p>
               <p className="text-lg text-gray-400 leading-relaxed">
                 {t('cs.connecta.frictionIntro')}

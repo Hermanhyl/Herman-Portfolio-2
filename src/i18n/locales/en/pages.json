@@ -23,6 +23,9 @@
     "viewProject": "View Project",
     "caseStudies": "Case Studies",
     "cards": {
+      "connecta": {
+        "teaser": "My first real client project. A therapy practice stuck with a site they weren't proud of; I found where it fell short, rebuilt the structure around trust, and shipped a fast site that now ranks top locally for \"terapi Drammen\"."
+      },
       "brannvrn": {
         "teaser": "UX Process & Learning Design in action. A VR fire safety simulator where I designed the complete user experience and pedagogical framework, transforming complex safety procedures into intuitive, educational interactions."
       },

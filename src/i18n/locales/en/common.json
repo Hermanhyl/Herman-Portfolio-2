@@ -55,5 +55,11 @@
   },
   "languageSwitcher": {
     "changed": "Language changed to English"
+  },
+  "beforeAfter": {
+    "before": "Before",
+    "after": "After",
+    "caption": "Drag the handle, or use arrow keys, to compare before and after.",
+    "ariaLabel": "Compare the before and after versions of the homepage"
   }
 }

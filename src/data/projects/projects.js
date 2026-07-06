@@ -1,5 +1,38 @@
 export const projects = [
   {
+    id: "project-connecta",
+    title: "Connecta",
+    teaser:
+      "My first real client project. A therapy practice stuck with a site they weren't proud of. I found where it fell short, rebuilt the structure around trust, and shipped a fast site that now ranks top locally for \"terapi Drammen\".",
+    description:
+      "Connecta is a small online therapy practice. The client had a site from a previous vendor they weren't happy with, and the audience (people considering therapy, often for the first time) needed a site that felt safe and made it simple to reach out.\n\nWorking solo with close client dialogue, I ran a UX analysis of the old site, restructured the information architecture around trust, redesigned and rebuilt in WordPress + Elementor, fixed a set of thorny technical bugs, and handled the SEO. The site launched, the client is proud of it, and it now sits among the top organic results for local therapy searches.",
+    images: ["/Connecta/card-thumb.jpg"],
+    blogPost: "",
+    github: "",
+    live: "https://connecta.no/",
+    figma: "",
+    technologies: ["WordPress", "Elementor", "UX Analysis", "SEO", "Client Work"],
+    authers: "Herman Hylland",
+    article: [
+      {
+        heading: "Project Overview",
+        content:
+          "A real client project for Connecta, a small online therapy practice. The brief was not to build a new site from scratch, but to find where the existing site fell short, break its information down into something more digestible, and rebuild it as a clear, modern, trustworthy experience. Delivered solo, from UX analysis through design, build, and SEO.",
+      },
+      {
+        heading: "My Role: UX, Design, Build and SEO",
+        content:
+          "Solo delivery with close client dialogue throughout. UX analysis of the previous site, information architecture (dedicated service pages, FAQ, clear contact flow), UI design and build in WordPress + Elementor, technical bug-fixing (an Elementor CSS regeneration failure, a post-grid height problem solved with custom flexbox CSS, a sticky navbar scroll bug), and the full SEO pass (per-page meta, keywords, XML sitemap, Google Search Console, image optimisation).",
+      },
+      {
+        heading: "Why This Project Is Here",
+        content:
+          "This is the case study that shows how I work with a real paying client: hearing the actual problem (a site they weren't proud of), diagnosing it, and rebuilding around a single guiding principle (trust, because the audience is people considering therapy for the first time). It launched, the client is proud of it, and it ranks among the top organic results for local therapy searches like \"terapi Drammen\".",
+      },
+    ],
+  },
+
+  {
     id: "project-halcyon-atelier",
     title: "Halcyon Atelier",
     teaser:

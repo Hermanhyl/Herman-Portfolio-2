@@ -55,5 +55,11 @@
   },
   "languageSwitcher": {
     "changed": "Språket er endret til norsk"
+  },
+  "beforeAfter": {
+    "before": "Før",
+    "after": "Etter",
+    "caption": "Dra i håndtaket, eller bruk piltastene, for å sammenligne før og etter.",
+    "ariaLabel": "Sammenlign før- og etter-versjonen av forsiden"
   }
 }

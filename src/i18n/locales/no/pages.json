@@ -23,6 +23,9 @@
     "viewProject": "Se prosjekt",
     "caseStudies": "Case studier",
     "cards": {
+      "connecta": {
+        "teaser": "Mitt første ekte kundeprosjekt. En terapipraksis satt med en side de ikke var stolte av; jeg fant hvor den kom til kort, bygde strukturen på nytt rundt tillit, og leverte en rask side som nå rangerer øverst lokalt på \"terapi Drammen\"."
+      },
       "brannvrn": {
         "teaser": "UX-prosess og læringsdesign i praksis: En VR-brannsikkerhetssimulator der jeg designet hele brukeropplevelsen og det pedagogiske rammeverket – og omgjorde komplekse sikkerhetsprosedyrer til intuitive, lærerike interaksjoner."
       },

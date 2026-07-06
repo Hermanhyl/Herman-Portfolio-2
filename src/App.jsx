@@ -20,6 +20,7 @@ import CommunityScienceMuseumCaseStudy from './pages/caseStudy/community-science
 import GameHubCaseStudy from './pages/caseStudy/gamehub';
 import HalcyonAtelierCaseStudy from './pages/caseStudy/halcyon-atelier';
 import SoderqvistReutherCaseStudy from './pages/caseStudy/soderqvist-reuther';
+import ConnectaCaseStudy from './pages/caseStudy/connecta';
 import NotFound from './pages/notFound';
 import Layout from './components/layout';
 import ErrorBoundary from './components/errorBoundary';
@@ -50,6 +51,7 @@ function App() {
           <Route path='/case-study/gamehub' element={<GameHubCaseStudy />} />
           <Route path='/case-study/halcyon-atelier' element={<HalcyonAtelierCaseStudy />} />
           <Route path='/case-study/soderqvist-reuther' element={<SoderqvistReutherCaseStudy />} />
+          <Route path='/case-study/connecta' element={<ConnectaCaseStudy />} />
           {/* Catch-all 404. Netlify rewrites all unknown URLs to
               /index.html with status 200, so without this every
               typo URL would render a blank layout and Google would

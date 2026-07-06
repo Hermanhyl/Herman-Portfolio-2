@@ -18,6 +18,7 @@ import { fadeUp, staggerContainer, viewportOnce } from '../../utils/motion';
 
 // Map project IDs to their case study paths
 const caseStudyPaths = {
+  'project-connecta': '/case-study/connecta',
   'project-halcyon-atelier': '/case-study/halcyon-atelier',
   'project-soderqvist-reuther': '/case-study/soderqvist-reuther',
   'project1': '/case-study/brannvrn',
@@ -34,6 +35,7 @@ const caseStudyPaths = {
 
 // Map project IDs to translation keys for teasers
 const projectTranslationKeys = {
+  'project-connecta': 'connecta',
   'project-halcyon-atelier': 'halcyonAtelier',
   'project-soderqvist-reuther': 'soderqvistReuther',
   'project1': 'brannvrn',

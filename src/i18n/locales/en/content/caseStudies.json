@@ -11,6 +11,7 @@
       "underTheHood": "Under the Hood",
       "theResult": "The Result",
       "reflection": "Reflection",
+      "howItWasBuilt": "How It Was Built",
       "aiIntegration": "AI Integration",
       "theBrief": "The Brief",
       "whatIWasLearning": "What I Was Learning",
@@ -67,13 +68,14 @@
       "friction3Desc": "Accessibility was built in, not bolted on: visible focus states, keyboard-operable widgets, and reduced-motion support throughout, in keeping with the WCAG work I do elsewhere.",
       "resultHeading": "A calm, fast site built to last",
       "resultText": "The site launched at connecta.no as a static React app. The SEO work ran in parallel: per-page titles and descriptions, an XML sitemap and Google Search Console, JSON-LD structured data, and Open Graph images generated at build time.",
-      "metric1Value": "8 pages",
-      "metric1Label": "Designed and built",
+      "metric1Value": "11 pages",
+      "metric1Label": "7 main, 4 subpages",
       "metric2Value": "~3 weeks",
       "metric2Label": "First commit to launch",
       "metric3Value": "Launched 2026",
       "metric3Label": "Live at connecta.no",
-      "reflectionText": "The thing that cost the most time was content. Some of the copy the client is writing about themselves is still outstanding on their side, wrapping up over the summer. Next time I'd get the content in place earlier in the process, so design and copy can be polished together rather than separately."
+      "reflectionText": "The thing that cost the most time was content. Some of the copy the client is writing about themselves is still outstanding on their side, wrapping up over the summer. Next time I'd get the content in place earlier in the process, so design and copy can be polished together rather than separately.",
+      "aiNote": "I'm open about using AI-assisted tooling as part of building this site. I direct and validate the work rather than hand it off: the judgment, the decisions, and the debugging (like the redirect loop above) are mine. Grounded in my education, I treat these tools the way any developer treats a new part of the stack. They are fast becoming part of how frontend work gets done, and staying fluent in them is how I stay current."
     },
     "brannvrn": {
       "tags": "UX Design • User Research • VR",

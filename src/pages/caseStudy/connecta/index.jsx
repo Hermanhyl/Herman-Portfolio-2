@@ -264,12 +264,22 @@ export default function ConnectaCaseStudy() {
             </div>
 
             {/* Reflection */}
-            <div className="max-w-2xl mx-auto mb-12 text-left bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8">
+            <div className="max-w-2xl mx-auto mb-6 text-left bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8">
               <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
                 {t('cs.common.reflection')}
               </p>
               <p className="text-gray-300 leading-relaxed">
                 {t('cs.connecta.reflectionText')}
+              </p>
+            </div>
+
+            {/* How it was built — owning the AI-assisted workflow openly */}
+            <div className="max-w-2xl mx-auto mb-12 text-left bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8">
+              <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
+                {t('cs.common.howItWasBuilt')}
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                {t('cs.connecta.aiNote')}
               </p>
             </div>
 

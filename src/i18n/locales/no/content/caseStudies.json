@@ -11,6 +11,7 @@
       "underTheHood": "Under panseret",
       "theResult": "Resultatet",
       "reflection": "Refleksjon",
+      "howItWasBuilt": "Slik ble den bygget",
       "aiIntegration": "AI-integrasjon",
       "theBrief": "Oppgaven",
       "whatIWasLearning": "Hva jeg lærte",
@@ -67,13 +68,14 @@
       "friction3Desc": "Tilgjengelighet ble bygget inn, ikke lagt på til slutt: synlige fokus-tilstander, tastaturstyrte widgets og reduced-motion-støtte gjennomgående, i tråd med WCAG-arbeidet jeg gjør ellers.",
       "resultHeading": "En rolig, rask side bygget for å vare",
       "resultText": "Siden ble lansert på connecta.no som en statisk React-app. SEO-arbeidet gikk parallelt: titler og beskrivelser per side, XML-sitemap og Google Search Console, JSON-LD structured data, og Open Graph-bilder generert ved build.",
-      "metric1Value": "8 sider",
-      "metric1Label": "Designet og bygget",
+      "metric1Value": "11 sider",
+      "metric1Label": "7 hoved, 4 undersider",
       "metric2Value": "~3 uker",
       "metric2Label": "Første commit til lansering",
       "metric3Value": "Lansert 2026",
       "metric3Label": "Live på connecta.no",
-      "reflectionText": "Det som kostet mest tid var innhold. Noe av teksten kunden skal skrive om seg selv gjenstår fortsatt på deres side, og sluttføres i løpet av sommeren. Neste gang ville jeg fått innholdet på plass tidligere i løpet, så design og tekst kan finpusses sammen i stedet for hver for seg."
+      "reflectionText": "Det som kostet mest tid var innhold. Noe av teksten kunden skal skrive om seg selv gjenstår fortsatt på deres side, og sluttføres i løpet av sommeren. Neste gang ville jeg fått innholdet på plass tidligere i løpet, så design og tekst kan finpusses sammen i stedet for hver for seg.",
+      "aiNote": "Jeg er åpen om at AI-assistert verktøy var en del av å bygge denne siden. Jeg styrer og validerer arbeidet i stedet for å overlate det: dømmekraften, beslutningene og feilrettingen (som redirect-loopen over) er mine. Med grunnlag i utdannelsen min behandler jeg disse verktøyene slik enhver utvikler behandler en ny del av stacken. De er raskt i ferd med å bli en del av hvordan frontend-arbeid gjøres, og å holde meg flytende i dem er måten jeg holder meg oppdatert på."
     },
     "brannvrn": {
       "tags": "UX Design • Brukerundersøkelser • VR",

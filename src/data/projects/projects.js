@@ -3,9 +3,9 @@ export const projects = [
     id: "project-connecta",
     title: "Connecta",
     teaser:
-      "My first real client project. A therapy practice stuck with a site they weren't proud of. I found where it fell short, rebuilt the structure around trust, and shipped a fast site that now ranks top locally for \"terapi Drammen\".",
+      "My first real client project. A therapy practice stuck with a site they weren't proud of. I found where it fell short and rebuilt it as a fast, secure React single-page app structured around trust.",
     description:
-      "Connecta is a small online therapy practice. The client had a site from a previous vendor they weren't happy with, and the audience (people considering therapy, often for the first time) needed a site that felt safe and made it simple to reach out.\n\nWorking solo with close client dialogue, I ran a UX analysis of the old site, restructured the information architecture around trust, and designed and built the new site as a static React + TypeScript single-page app (Vite, Tailwind, Framer Motion) with deliberate engineering decisions for SEO and security. The site launched, the client is proud of it, and it now sits among the top organic results for local therapy searches.",
+      "Connecta is a small online therapy practice. The client had a site from a previous vendor they weren't happy with, and the audience (people considering therapy, often for the first time) needed a site that felt safe and made it simple to reach out.\n\nWorking solo with close client dialogue, I ran a UX analysis of the old site, restructured the information architecture around trust, and designed and built the new site as a static React + TypeScript single-page app (Vite, Tailwind, Framer Motion) with deliberate engineering decisions for SEO and security. It launched at connecta.no as a fast, secure static site.",
     images: ["/Connecta/card-thumb.jpg"],
     blogPost: "",
     github: "",
@@ -22,12 +22,12 @@ export const projects = [
       {
         heading: "My Role: UX, Design, Build and SEO",
         content:
-          "Solo delivery with close client dialogue throughout. UX analysis of the previous site, information architecture (dedicated service pages, FAQ, clear contact flow), UI design and build as a static React + TypeScript single-page app (Vite, Tailwind CSS, Framer Motion), engineering decisions for SEO and security (a route allowlist that returns real 404s for stale URLs, security headers and a content security policy, a single typed source of truth for content), and the full SEO pass (per-page meta, keywords, XML sitemap, Google Search Console, image optimisation).",
+          "Solo delivery with close client dialogue throughout. UX analysis of the previous site, information architecture (dedicated service pages, FAQ, clear contact flow), UI design and build as a static React + TypeScript single-page app (Vite, Tailwind CSS, Framer Motion), every route code-split and lazy-loaded, a Netlify Forms contact flow with a honeypot, accessibility built in (visible focus, keyboard-operable widgets, reduced-motion support), engineering decisions for SEO and security (a route allowlist that returns real 404s for stale URLs, security headers and a content security policy, a single typed source of truth for content), and the full SEO pass (per-page meta, XML sitemap, Google Search Console, JSON-LD, build-time Open Graph images).",
       },
       {
         heading: "Why This Project Is Here",
         content:
-          "This is the case study that shows how I work with a real paying client: hearing the actual problem (a site they weren't proud of), diagnosing it, and rebuilding around a single guiding principle (trust, because the audience is people considering therapy for the first time). It launched, the client is proud of it, and it ranks among the top organic results for local therapy searches like \"terapi Drammen\".",
+          "This is the case study that shows how I work with a real paying client: hearing the actual problem (a site they weren't proud of), diagnosing it, and rebuilding around a single guiding principle (trust, because the audience is people considering therapy for the first time). It launched at connecta.no, built as a fast, accessible, secure React single-page app.",
       },
     ],
   },

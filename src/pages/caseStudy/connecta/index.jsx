@@ -210,12 +210,12 @@ export default function ConnectaCaseStudy() {
           </div>
         </section>
 
-        {/* Section 6: Under the Hood (engineering decisions) */}
+        {/* Section 6: Where It Got Hard (real friction: the redirect loop) */}
         <section className="relative py-16 md:py-24">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">
-                {t('cs.common.underTheHood')}
+                {t('cs.common.theFriction')}
               </p>
               <p className="text-lg text-gray-400 leading-relaxed">
                 {t('cs.connecta.frictionIntro')}

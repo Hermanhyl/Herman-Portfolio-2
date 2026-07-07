@@ -143,10 +143,42 @@
     "availability": "Currently available for freelance work and full-time positions.",
     "location": "Based in Norway"
   },
+  "ai": {
+    "toggleLabel": "AI",
+    "badge": "How I work with AI",
+    "heading": "AI in my workflow",
+    "intro": "AI is changing how frontend work gets done, and I use it daily: deliberately, openly, and with judgment. This is an honest look at the tools I work with, how I direct them, and the principles I follow when I do.",
+    "toolsLabel": "The toolbox",
+    "toolsHeading": "Tools I actually use",
+    "tool1Title": "Claude Code",
+    "tool1Desc": "Production work. This portfolio and the Connecta client site were both built with Claude Code as the assistant: I direct the work, review every change, and stay responsible for the result. The technical depth on this site, from WCAG passes to SEO hardening and security headers, was all driven through it.",
+    "tool2Title": "Claude",
+    "tool2Desc": "My main thinking partner. Breaking down problems, drafting bilingual copy, exploring design directions, and pressure-testing ideas before they reach code.",
+    "tool3Title": "Skills and agents",
+    "tool3Desc": "I build custom skills and agent workflows (Claude Code, Cowork) that encode how I want to work: interview frameworks, writing standards, audit checklists. My case studies are written with a skill I made for exactly that. Process as code, so quality is repeatable instead of accidental.",
+    "tool4Title": "ChatGPT",
+    "tool4Desc": "Quick research, second opinions, and comparing how different models reason about the same problem. Knowing more than one tool keeps me honest about the strengths and limits of each.",
+    "tool5Title": "MidJourney",
+    "tool5Desc": "Image generation through Discord: moodboards, concept exploration, and visual starting points for creative work.",
+    "galleryNote": "A selection of generated pieces is coming to this page soon.",
+    "promptingLabel": "Prompting",
+    "promptingHeading": "Prompting is a craft",
+    "promptingIntro": "Good output starts with a good brief. These are the principles I hold myself to when the work matters.",
+    "principle1": "Context before questions. A model can only reason with what it is given: role, goal, constraints, and examples come first.",
+    "principle2": "Specific beats clever. Concrete asks with clear acceptance criteria outperform vague, open-ended prompts every time.",
+    "principle3": "Iterate in small steps. Short feedback loops, one change at a time, and verify before building on top.",
+    "principle4": "Never trust, always verify. AI output gets the same treatment as any code review: tested, cross-checked, corrected.",
+    "honestyNote": "Full honesty: in quick personal experiments I cut corners like everyone else. Knowing the standard is what lets me apply it when it counts, and professional work always counts.",
+    "closingLabel": "The point of it all",
+    "closingHeading": "AI-assisted, human-directed",
+    "closingText": "Every AI-assisted project on this site says so openly. The judgment, the decisions, and the responsibility stay with me. Staying fluent in these tools is part of staying current as a developer, and I treat them the way I treat the rest of my stack: something to master, not something to hide.",
+    "closingCtaCase": "See it in practice: Connecta",
+    "closingCtaContact": "Get in touch"
+  },
   "meta": {
     "home": {
       "title": "Frontend Developer & UI/UX Designer",
-      "description": "Portfolio of Herman Hylland — frontend developer and UI/UX designer based in Norway. React, TypeScript, motion design, and accessible web experiences."
+      "description": "Portfolio of Herman Hylland, frontend developer and UI/UX designer based in Norway. React, TypeScript, motion design, and accessible web experiences."
     },
     "work": {
       "title": "Work",
@@ -154,7 +186,7 @@
     },
     "about": {
       "title": "About",
-      "description": "Learn about Herman Hylland — a frontend developer and UI/UX designer combining a Bachelor in Animation with frontend development at Noroff. 2+ years frontend, 3+ years design."
+      "description": "Learn about Herman Hylland, a frontend developer and UI/UX designer combining a Bachelor in Animation with frontend development at Noroff. 2+ years frontend, 3+ years design."
     },
     "contact": {
       "title": "Contact",

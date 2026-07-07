@@ -143,10 +143,42 @@
     "availability": "For tiden tilgjengelig for frilansarbeid og heltidsstillinger.",
     "location": "Basert i Norge"
   },
+  "ai": {
+    "toggleLabel": "AI",
+    "badge": "Slik jobber jeg med AI",
+    "heading": "AI i min arbeidsflyt",
+    "intro": "AI endrer hvordan frontend-arbeid gjøres, og jeg bruker det daglig: bevisst, åpent og med dømmekraft. Dette er et ærlig innblikk i verktøyene jeg jobber med, hvordan jeg styrer dem, og prinsippene jeg følger når jeg gjør det.",
+    "toolsLabel": "Verktøykassen",
+    "toolsHeading": "Verktøy jeg faktisk bruker",
+    "tool1Title": "Claude Code",
+    "tool1Desc": "Produksjonsarbeid. Både denne porteføljen og kundesiden Connecta ble bygget med Claude Code som assistent: jeg styrer arbeidet, gjennomgår hver endring og står ansvarlig for resultatet. Den tekniske dybden på denne siden, fra WCAG-runder til SEO-herding og sikkerhetsheadere, ble drevet gjennom det.",
+    "tool2Title": "Claude",
+    "tool2Desc": "Min viktigste tenkepartner. Bryte ned problemer, skrive tospråklig tekst, utforske designretninger og teste ideer før de når koden.",
+    "tool3Title": "Skills og agenter",
+    "tool3Desc": "Jeg bygger egne skills og agent-arbeidsflyter (Claude Code, Cowork) som koder inn hvordan jeg vil jobbe: intervjurammeverk, skrivestandarder og sjekklister. Case-studiene mine skrives med en skill jeg laget for akkurat det. Prosess som kode, så kvalitet blir repeterbar i stedet for tilfeldig.",
+    "tool4Title": "ChatGPT",
+    "tool4Desc": "Rask research, second opinions og sammenligning av hvordan ulike modeller resonnerer rundt samme problem. Å kjenne mer enn ett verktøy holder meg ærlig om styrkene og begrensningene til hvert av dem.",
+    "tool5Title": "MidJourney",
+    "tool5Desc": "Bildegenerering gjennom Discord: moodboards, konseptutforskning og visuelle utgangspunkt for kreativt arbeid.",
+    "galleryNote": "Et utvalg genererte bilder kommer på denne siden snart.",
+    "promptingLabel": "Prompting",
+    "promptingHeading": "Prompting er et håndverk",
+    "promptingIntro": "God output starter med en god brief. Dette er prinsippene jeg holder meg til når arbeidet betyr noe.",
+    "principle1": "Kontekst før spørsmål. En modell kan bare resonnere med det den får: rolle, mål, begrensninger og eksempler kommer først.",
+    "principle2": "Spesifikt slår smart. Konkrete bestillinger med tydelige akseptkriterier slår vage, åpne prompts hver gang.",
+    "principle3": "Iterer i små steg. Korte feedback-løkker, én endring om gangen, og verifiser før du bygger videre.",
+    "principle4": "Aldri stol, alltid verifiser. AI-output får samme behandling som enhver code review: testet, kryssjekket, korrigert.",
+    "honestyNote": "Helt ærlig: i raske private eksperimenter tar jeg snarveier som alle andre. Å kjenne standarden er det som gjør at jeg kan følge den når det gjelder, og profesjonelt arbeid gjelder alltid.",
+    "closingLabel": "Poenget med alt",
+    "closingHeading": "AI-assistert, menneskestyrt",
+    "closingText": "Hvert AI-assisterte prosjekt på denne siden sier det åpent. Dømmekraften, beslutningene og ansvaret ligger hos meg. Å holde meg flytende i disse verktøyene er en del av å holde meg oppdatert som utvikler, og jeg behandler dem som resten av stacken min: noe å mestre, ikke noe å skjule.",
+    "closingCtaCase": "Se det i praksis: Connecta",
+    "closingCtaContact": "Ta kontakt"
+  },
   "meta": {
     "home": {
       "title": "Frontend-utvikler & UI/UX-designer",
-      "description": "Portefølje for Herman Hylland — frontend-utvikler og UI/UX-designer basert i Norge. React, TypeScript, motion design og tilgjengelige nettopplevelser."
+      "description": "Portefølje for Herman Hylland, frontend-utvikler og UI/UX-designer basert i Norge. React, TypeScript, motion design og tilgjengelige nettopplevelser."
     },
     "work": {
       "title": "Arbeid",
@@ -154,7 +186,7 @@
     },
     "about": {
       "title": "Om meg",
-      "description": "Bli kjent med Herman Hylland — en frontend-utvikler og UI/UX-designer som kombinerer bachelor i animasjon med frontend-utvikling ved Noroff. 2+ års frontend, 3+ års design."
+      "description": "Bli kjent med Herman Hylland, en frontend-utvikler og UI/UX-designer som kombinerer bachelor i animasjon med frontend-utvikling ved Noroff. 2+ års frontend, 3+ års design."
     },
     "contact": {
       "title": "Kontakt",

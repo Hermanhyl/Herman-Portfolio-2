@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowRight, Briefcase, BookOpen, PenTool, Play } from 'lucide-react';
+import { ArrowRight, Briefcase, BookOpen, PenTool, Play, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import PageTransition from '../../components/pageTransition';
 import ScrollReveal from '../../components/scrollReveal';
@@ -10,6 +10,7 @@ import ProjectCard from '../../components/projectCard';
 import AnimationCard from '../../components/animationCard';
 import CardCursor from '../../components/cardCursor';
 import IllustrationLightbox from '../../components/illustrationLightbox';
+import AiShowcase from '../../components/aiShowcase';
 import useDocumentMeta from '../../hooks/useDocumentMeta';
 import { projects } from '../../data/projects/projects';
 import { illustrations, illustrationCategories } from '../../data/illustrations';
@@ -185,6 +186,7 @@ function Work() {
     { id: 'articles', label: t('projects.articles'), icon: BookOpen },
     { id: 'illustrations', label: t('projects.illustrations'), icon: PenTool },
     { id: 'animations', label: t('projects.animations'), icon: Play },
+    { id: 'ai', label: t('ai.toggleLabel'), icon: Sparkles },
   ];
 
   return (
@@ -412,6 +414,13 @@ function Work() {
                 </div>
               </div>
             )}
+          </section>
+        )}
+
+        {/* AI View — scroll-driven showcase of the AI workflow */}
+        {activeView === 'ai' && (
+          <section className="relative px-4 sm:px-6 lg:px-8 xl:px-12 pb-20 w-full mx-auto" style={{ maxWidth: '1200px' }}>
+            <AiShowcase />
           </section>
         )}
       </div>

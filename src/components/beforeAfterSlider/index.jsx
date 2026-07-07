@@ -91,10 +91,13 @@ export default function BeforeAfterSlider({
           className="block w-full h-auto pointer-events-none"
         />
 
-        {/* After image clipped to the divider position */}
+        {/* After image, revealed on the RIGHT of the divider. Clip the
+            left `pos%` so "before" (the base image) stays on the left
+            under the Before label, and "after" shows on the right under
+            the After label. */}
         <div
           className="absolute inset-0"
-          style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
+          style={{ clipPath: `inset(0 0 0 ${pos}%)` }}
           aria-hidden="true"
         >
           <OptimizedImage

@@ -2,8 +2,20 @@ import { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion, useReducedMotion } from 'framer-motion';
-import { Sparkles, Bot, Terminal, Puzzle, MessageSquare, Image as ImageIcon, ArrowRight } from 'lucide-react';
+import { Sparkles, Bot, Terminal, Puzzle, MessageSquare, Image as ImageIcon, ArrowRight, Maximize2 } from 'lucide-react';
 import AiNeuralBackground from '../aiNeuralBackground';
+import OptimizedImage from '../optimizedImage';
+import IllustrationLightbox from '../illustrationLightbox';
+
+/**
+ * AI-generated / AI-assisted visual pieces. Data-driven: drop more
+ * entries here (and the webp into public/AiGallery/) and the grid +
+ * lightbox pick them up automatically. `titleKey` points at an i18n
+ * alt/label string.
+ */
+const aiGallery = [
+  { src: '/AiGallery/peson-elvebat.webp', titleKey: 'ai.image1Alt' },
+];
 
 /**
  * AiShowcase — the "AI" view on the Work page.
@@ -113,6 +125,10 @@ const inViewOnce = { once: true, margin: '-80px' };
 function AiShowcase() {
   const { t } = useTranslation();
 
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+  const galleryImages = aiGallery.map((g) => ({ src: g.src, title: t(g.titleKey) }));
+
   const tools = [
     { icon: Bot, key: 'tool2' },
     { icon: Puzzle, key: 'tool3' },
@@ -217,16 +233,39 @@ function AiShowcase() {
             ))}
           </div>
 
-          {/* MidJourney gallery placeholder */}
+          {/* Generated visuals gallery */}
           <motion.div
             variants={rise}
             initial="hidden"
             whileInView="visible"
             viewport={inViewOnce}
-            className="mt-6 border border-dashed border-accent/25 rounded-2xl p-8 text-center bg-ink-elevated/40 backdrop-blur-sm"
+            className="mt-10"
           >
-            <ImageIcon className="w-8 h-8 text-accent/60 mx-auto mb-3" aria-hidden="true" />
-            <p className="text-bone-muted text-sm">{t('ai.galleryNote')}</p>
+            <div className="text-center mb-6">
+              <p className="text-xs font-semibold text-accent uppercase tracking-[0.18em] mb-2">{t('ai.galleryLabel')}</p>
+              <p className="text-bone-muted text-sm">{t('ai.galleryNote')}</p>
+            </div>
+            <div className={`grid gap-4 ${galleryImages.length === 1 ? 'grid-cols-1 max-w-4xl mx-auto' : 'grid-cols-1 sm:grid-cols-2'}`}>
+              {galleryImages.map((img, i) => (
+                <button
+                  key={img.src}
+                  onClick={() => { setLightboxIndex(i); setLightboxOpen(true); }}
+                  aria-label={img.title}
+                  className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-accent/40 bg-ink-elevated/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-ink cursor-pointer transition-colors duration-300"
+                >
+                  <OptimizedImage
+                    src={img.src}
+                    alt={img.title}
+                    className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4 pointer-events-none">
+                    <span className="inline-flex items-center gap-1.5 text-white text-sm font-medium bg-black/50 backdrop-blur px-3 py-1.5 rounded-lg">
+                      <Maximize2 className="w-4 h-4" aria-hidden="true" />
+                    </span>
+                  </div>
+                </button>
+              ))}
+            </div>
           </motion.div>
         </div>
 
@@ -298,6 +337,15 @@ function AiShowcase() {
         </motion.div>
 
       </div>
+
+      {/* Fullscreen viewer for the generated visuals */}
+      <IllustrationLightbox
+        illustrations={galleryImages}
+        currentIndex={lightboxIndex}
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        onNavigate={setLightboxIndex}
+      />
     </div>
   );
 }

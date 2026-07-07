@@ -36,6 +36,7 @@
     "connecta": {
       "tags": "UX-analyse • React • TypeScript • SEO",
       "tagline": "En terapipraksis satt med en nettside de ikke var stolte av. Oppdraget: gjøre det trygt og enkelt å ta kontakt.",
+      "outcome": "Bygget om fra bunnen som en rask, sikker React-SPA. 11 sider, designet og bygget alene, lansert og live på connecta.no.",
       "roleValue": "UX-analyse, IA, design, bygging og SEO (alene)",
       "clientValue": "Connecta, terapi og veiledning online",
       "timelineValue": "2026",

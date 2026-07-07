@@ -36,6 +36,7 @@
     "connecta": {
       "tags": "UX Analysis • React • TypeScript • SEO",
       "tagline": "A therapy practice stuck with a site they weren't proud of. The brief: make it feel safe and simple to reach out.",
+      "outcome": "Rebuilt from scratch as a fast, secure React single-page app. 11 pages, designed and built solo, launched and live at connecta.no.",
       "roleValue": "UX analysis, IA, design, build and SEO (solo)",
       "clientValue": "Connecta, online therapy and counselling",
       "timelineValue": "2026",

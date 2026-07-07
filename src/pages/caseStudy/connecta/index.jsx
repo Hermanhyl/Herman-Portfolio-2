@@ -87,6 +87,13 @@ export default function ConnectaCaseStudy() {
                   {t('cs.connecta.tagline')}
                 </p>
 
+                {/* Headline result, stated up front (results-first, per
+                    the case-study skill). A hiring manager sees the
+                    payoff in the first few seconds. */}
+                <p className="border-l-2 border-accent pl-4 text-base md:text-lg text-bone font-medium leading-relaxed text-left mx-auto lg:mx-0 max-w-md">
+                  {t('cs.connecta.outcome')}
+                </p>
+
                 <div className="pt-4 space-y-2 text-sm md:text-base">
                   <p>
                     <span className="text-emerald-400 font-semibold">{t('cs.common.client')}</span>{' '}

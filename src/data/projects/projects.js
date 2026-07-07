@@ -6,7 +6,7 @@ export const projects = [
       "My first real client project. A therapy practice stuck with a site they weren't proud of. I found where it fell short and rebuilt it as a fast, secure React single-page app structured around trust.",
     description:
       "Connecta is a small online therapy practice. The client had a site from a previous vendor they weren't happy with, and the audience (people considering therapy, often for the first time) needed a site that felt safe and made it simple to reach out.\n\nWorking solo with close client dialogue, I ran a UX analysis of the old site, restructured the information architecture around trust, and designed and built the new site as a static React + TypeScript single-page app (Vite, Tailwind, Framer Motion) with deliberate engineering decisions for SEO and security. It launched at connecta.no as a fast, secure static site.",
-    images: ["/Connecta/card-thumb.jpg"],
+    images: ["/Connecta/card-thumb.webp"],
     blogPost: "",
     github: "",
     live: "https://connecta.no/",

@@ -24,7 +24,7 @@ export default function ConnectaCaseStudy() {
   useDocumentMeta({
     title: 'Connecta Case Study',
     description:
-      'A trust-first redesign of an online therapy practice. UX analysis, information architecture, React build, and SEO, delivered solo. Ranks top locally for "terapi Drammen".',
+      'A trust-first redesign of an online therapy practice. UX analysis, information architecture, React build, and SEO, delivered solo, and built as a fast, secure React single-page app.',
     url: 'https://portfolio-herman-hylland.netlify.app/case-study/connecta',
   });
 
@@ -64,7 +64,7 @@ export default function ConnectaCaseStudy() {
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 via-cyan-500 to-purple-500 rounded-2xl opacity-50 blur-sm" />
                   <div className="relative rounded-2xl overflow-hidden bg-gray-900">
                     <OptimizedImage
-                      src="/Connecta/hero.jpg"
+                      src="/Connecta/hero.webp"
                       alt="The redesigned Connecta homepage"
                       eager={true}
                       className="w-full h-auto"
@@ -181,7 +181,7 @@ export default function ConnectaCaseStudy() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-14">
             <div className="rounded-2xl overflow-hidden">
               <OptimizedImage
-                src="/Connecta/approach.jpg"
+                src="/Connecta/approach.webp"
                 alt="Connecta service pages and FAQ, structured to answer questions before contact"
                 className="w-full h-auto"
               />
@@ -202,8 +202,8 @@ export default function ConnectaCaseStudy() {
             </div>
 
             <BeforeAfterSlider
-              beforeSrc="/Connecta/before.jpg"
-              afterSrc="/Connecta/after.jpg"
+              beforeSrc="/Connecta/before.webp"
+              afterSrc="/Connecta/after.webp"
               beforeAlt={t('cs.connecta.beforeAlt')}
               afterAlt={t('cs.connecta.afterAlt')}
             />
